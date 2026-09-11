@@ -1,0 +1,92 @@
+<div class="modal-content">
+    <div class="p-6">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-lg font-semibold">{% trans "Merge Summary" %}</h2>
+            <button
+                type="button"
+                onclick="closeContentModalSecond()"
+                class="text-gray-500 hover:text-red-500 text-xl cursor-pointer"
+            >
+                <img src="{% static 'assets/icons/close.svg' %}" alt="{% trans 'Close' %}">
+            </button>
+        </div>
+
+        <div class="mb-4 p-4 bg-yellow-50 rounded-md">
+            <p class="text-sm text-yellow-800">
+                {% trans "You're about to merge these records. You can't undo merging." %}
+            </p>
+        </div>
+
+        <div class="mb-4">
+            <h3 class="text-md font-semibold mb-2">{% trans "Master Record" %}</h3>
+            <p class="text-sm text-gray-700">{{ master_record }}</p>
+        </div>
+
+        <div class="mb-4">
+            <h3 class="text-md font-semibold mb-2">{% trans "Selected Values" %}</h3>
+            <div
+                class="custom-scroll relative overflow-hidden overflow-y-auto overflow-x-auto [box-shadow:0px_0px_20px_0px_rgb(0_0_0_/_5%)] bg-white rounded-lg"
+                style="max-height: 50vh"
+            >
+                <table class="w-full border-separate border-spacing-0">
+                    <thead class="sticky top-0 bg-primary-300 text-primary-600 z-50">
+                        <tr>
+                            <th class="sticky left-0 bg-primary-300 z-50 top-0 font-bold text-sm text-left p-3 border-[1px] border-[solid] border-[#efefef]">
+                                {% trans "Field" %}
+                            </th>
+                            <th class="sticky top-0 bg-primary-300 z-50 font-bold text-sm text-left p-3 border-[1px] border-[solid] border-[#efefef]">
+                                {% trans "Selected Value" %}
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in summary_data %}
+                            <tr>
+                                <td class="text-sm border-[1px] border-[solid] border-[#efefef] text-left p-3 bg-white">
+                                    {{ item.field_name }}
+                                </td>
+                                <td class="text-sm border-[1px] border-[solid] border-[#efefef] text-left p-3 bg-white">
+                                    {{ item.field_value }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <form method="post" action="{% url 'duplicates:merge_duplicates' %}" id="merge-final-form">
+            {% csrf_token %}
+            <input type="hidden" name="object_id" value="{{ object_id }}">
+            <input type="hidden" name="content_type_id" value="{{ content_type_id }}">
+            {% for dup_id in duplicate_ids %}
+                <input type="hidden" name="duplicate_ids" value="{{ dup_id }}">
+            {% endfor %}
+            <input type="hidden" name="master_record_select" value="{{ master_record_selection }}">
+            {% for key, value in field_selections.items %}
+                <input type="hidden" name="row_user_select{{ key }}" value="{{ value }}">
+            {% endfor %}
+
+            <div class="flex justify-end gap-2 mt-4">
+                <button
+                    type="button"
+                    onclick="closeContentModalSecond()"
+                    class="px-4 py-2 text-sm font-medium text-primary-600 bg-white border border-primary-600 rounded-md"
+                >
+                    {% trans "Cancel" %}
+                </button>
+                <button
+                    type="submit"
+                    class="px-4 py-2 text-sm font-medium text-white bg-primary-600 rounded-md"
+                    hx-post="{% url 'duplicates:merge_duplicates' %}"
+                    hx-include="#merge-final-form"
+                    hx-target="#inner-tab-potential-duplicates-content"
+                    hx-swap="innerHTML"
+                    hx-on::after-request="closeContentModalSecond(); closeContentModal();"
+                >
+                    {% trans "Merge" %}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

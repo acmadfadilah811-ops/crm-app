@@ -1,0 +1,764 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Approvals"
+msgstr "Persetujuan"
+
+#, python-format
+msgid ""
+"'%(name)s' is already the active approval process for this module. "
+"Deactivate it before activating another."
+msgstr ""
+"'%(name)s' sudah menjadi proses persetujuan aktif untuk modul "
+"ini.Nonaktifkan sebelum mengaktifkan yang lain."
+
+msgid "Select action"
+msgstr "Pilih tindakan"
+
+msgid "Update field"
+msgstr "Bidang pembaruan"
+
+msgid "Assign task"
+msgstr "Tetapkan tugas"
+
+msgid "Mail"
+msgstr "Surat"
+
+msgid "Notification"
+msgstr "Pemberitahuan"
+
+msgid "Approval: field to update"
+msgstr "Persetujuan: bidang untuk diperbarui"
+
+msgid "Ex: status"
+msgstr "Contoh: status"
+
+msgid "Approval: updated value"
+msgstr "Persetujuan: nilai yang diperbarui"
+
+msgid "Ex: Approved"
+msgstr "Contoh: Disetujui"
+
+msgid "Approval: task title"
+msgstr "Persetujuan: judul tugas"
+
+msgid "Follow up with requester"
+msgstr "Tindak lanjuti dengan pemohon"
+
+msgid "Approval: task description"
+msgstr "Persetujuan: deskripsi tugas"
+
+msgid "Rejection: field to update"
+msgstr "Penolakan: bidang yang akan diperbarui"
+
+msgid "Rejection: updated value"
+msgstr "Penolakan: nilai yang diperbarui"
+
+msgid "Ex: Rejected"
+msgstr "Contoh: Ditolak"
+
+msgid "Rejection: task title"
+msgstr "Penolakan: judul tugas"
+
+msgid "Resolve and resubmit"
+msgstr "Selesaikan dan kirim ulang"
+
+msgid "Rejection: task description"
+msgstr "Penolakan: deskripsi tugas"
+
+msgid "Approval: email subject"
+msgstr "Persetujuan: subjek email"
+
+msgid "Approval: email body"
+msgstr "Persetujuan: isi email"
+
+msgid "Rejection: email subject"
+msgstr "Penolakan: subjek email"
+
+msgid "Rejection: email body"
+msgstr "Penolakan: isi email"
+
+msgid "Ex: manager"
+msgstr "Contoh: manajer"
+
+msgid "User"
+msgstr "Pengguna"
+
+msgid "Role"
+msgstr "Peran"
+
+msgid "Record owner"
+msgstr "Pemilik rekaman"
+
+msgid "Select role"
+msgstr "Pilih peran"
+
+msgid "Approval Processes"
+msgstr "Proses Persetujuan"
+
+msgid "Approval Jobs"
+msgstr "Pekerjaan Persetujuan"
+
+msgid "Name"
+msgstr "Nama"
+
+msgid "Model this process applies to."
+msgstr "Model yang diterapkan pada proses ini."
+
+msgid "Module"
+msgstr "Modul"
+
+msgid "When record is created"
+msgstr "Saat rekaman dibuat"
+
+msgid "Run this process when a new record is created."
+msgstr "Jalankan proses ini ketika rekor baru dibuat."
+
+msgid "When record is edited"
+msgstr "Saat rekaman diedit"
+
+msgid "Run this process when a record is edited."
+msgstr "Jalankan proses ini ketika catatan diedit."
+
+msgid "Create and Edit"
+msgstr "Buat dan Edit"
+
+msgid "Create only"
+msgstr "Buat saja"
+
+msgid "Edit only"
+msgstr "Sunting saja"
+
+msgid "Not set"
+msgstr "Tidak disetel"
+
+msgid "Approval process"
+msgstr "Proses persetujuan"
+
+msgid "Approval processes"
+msgstr "Proses persetujuan"
+
+msgid ""
+"Per-rule JSON: approval_actions, rejection_actions, record_modification, "
+"process_admins (or rule-level admin overrides)."
+msgstr ""
+"JSON per aturan: persetujuan_aksi, penolakan_aksi, modifikasi_catatan, "
+"admin_proses (atau penggantian admin tingkat aturan)."
+
+msgid "Order"
+msgstr "Memesan"
+
+msgid "Sequence of this rule within the process."
+msgstr "Urutan aturan ini dalam proses."
+
+msgid "Approval process rule"
+msgstr "Aturan proses persetujuan"
+
+msgid "Approval process rules"
+msgstr "Aturan proses persetujuan"
+
+msgid "Rule"
+msgstr "Aturan"
+
+msgid "Specific user"
+msgstr "Pengguna tertentu"
+
+msgid "Manager of record owner"
+msgstr "Manajer pemilik rekaman"
+
+msgid "Sequence order of this step within the rule."
+msgstr "Urutan langkah ini dalam aturan."
+
+msgid "Identifier for the role (implementation-specific)."
+msgstr "Pengidentifikasi untuk peran tersebut (khusus implementasi)."
+
+msgid "Approval step"
+msgstr "Langkah persetujuan"
+
+msgid "Approval steps"
+msgstr "Langkah-langkah persetujuan"
+
+msgid "step"
+msgstr "melangkah"
+
+msgid "Process rule"
+msgstr "Aturan proses"
+
+msgid "Field Name"
+msgstr "Nama Bidang"
+
+msgid "Operator"
+msgstr "Operator"
+
+msgid "Value"
+msgstr "Nilai"
+
+msgid "AND"
+msgstr "DAN"
+
+msgid "OR"
+msgstr "ATAU"
+
+msgid "Logical Operator"
+msgstr "Operator Logis"
+
+msgid "Approval Condition"
+msgstr "Kondisi Persetujuan"
+
+msgid "Approval Conditions"
+msgstr "Ketentuan Persetujuan"
+
+msgid "Pending"
+msgstr "Tertunda"
+
+msgid "Approved"
+msgstr "Disetujui"
+
+msgid "Rejected"
+msgstr "Ditolak"
+
+msgid "Cancelled"
+msgstr "Dibatalkan"
+
+msgid "Primary key of the target object, stored as string."
+msgstr "Kunci utama dari objek target, disimpan sebagai string."
+
+msgid "Status"
+msgstr "Status"
+
+msgid "The step currently awaiting decision, if any."
+msgstr "Langkah yang sedang menunggu keputusan, jika ada."
+
+msgid ""
+"When set, overrides current_step's approver for this instance only, without "
+"altering the shared process rule's step configuration."
+msgstr ""
+"Jika disetel, ganti pemberi persetujuan current_step untuk instans ini saja,"
+" tanpa mengubah konfigurasi langkah aturan proses bersama."
+
+msgid "Approval instance"
+msgstr "Contoh persetujuan"
+
+msgid "Approval instances"
+msgstr "Contoh persetujuan"
+
+msgid "Approve"
+msgstr "Setujui"
+
+msgid "Reject"
+msgstr "Tolak"
+
+msgid "Approval decision"
+msgstr "Keputusan persetujuan"
+
+msgid "Approval decisions"
+msgstr "Keputusan persetujuan"
+
+msgid "This record is pending approval and cannot be edited."
+msgstr "Catatan ini menunggu persetujuan dan tidak dapat diedit."
+
+msgid "Record has been submitted for approval."
+msgstr "Catatan telah diserahkan untuk disetujui."
+
+msgid "Configure approval action"
+msgstr "Konfigurasikan tindakan persetujuan"
+
+msgid "Configure rejection action"
+msgstr "Konfigurasikan tindakan penolakan"
+
+msgid "Field"
+msgstr "Bidang"
+
+msgid "Select field"
+msgstr "Pilih bidang"
+
+msgid "Task title"
+msgstr "Judul tugas"
+
+msgid "Due basis"
+msgstr "Dasar jatuh tempo"
+
+msgid "Record submission date"
+msgstr "Catat tanggal penyerahan"
+
+msgid "Approval date"
+msgstr "Tanggal persetujuan"
+
+msgid "Rejection date"
+msgstr "Tanggal penolakan"
+
+msgid "Due in days"
+msgstr "Jatuh tempo dalam beberapa hari"
+
+msgid "Not Started"
+msgstr "Belum Dimulai"
+
+msgid "In Progress"
+msgstr "Sedang Berlangsung"
+
+msgid "Completed"
+msgstr "Selesai"
+
+msgid "Priority"
+msgstr "Prioritas"
+
+msgid "Low"
+msgstr "Rendah"
+
+msgid "Medium"
+msgstr "Sedang"
+
+msgid "High"
+msgstr "Tinggi"
+
+msgid "Task description"
+msgstr "Deskripsi tugas"
+
+msgid "Mail template"
+msgstr "Templat surat"
+
+msgid "Select template"
+msgstr "Pilih templat"
+
+msgid "To (email field / email / self)"
+msgstr "Ke (bidang email / email / diri sendiri)"
+
+msgid "Also send to"
+msgstr "Kirim juga ke"
+
+msgid "Notification template"
+msgstr "Templat pemberitahuan"
+
+msgid "To (record field / self)"
+msgstr "Kepada (bidang rekaman / diri sendiri)"
+
+msgid "Also notify to"
+msgstr "Beritahukan juga kepada"
+
+msgid "Custom message (optional, overrides template)"
+msgstr "Pesan khusus (opsional, menggantikan template)"
+
+msgid "Cancel"
+msgstr "Batal"
+
+msgid "Apply"
+msgstr "Terapkan"
+
+msgid "Select value"
+msgstr "Pilih nilai"
+
+msgid "Approval History"
+msgstr "Riwayat Persetujuan"
+
+msgid "Resubmit this record for approval?"
+msgstr "Kirim ulang data ini untuk disetujui?"
+
+msgid "Resubmit"
+msgstr "Kirim ulang"
+
+msgid "Process"
+msgstr "Proses"
+
+msgid "Requested By"
+msgstr "Diminta Oleh"
+
+msgid "Respond"
+msgstr "Menanggapi"
+
+msgid "Current Step"
+msgstr "Langkah Saat Ini"
+
+msgid "Completed Steps"
+msgstr "Langkah Selesai"
+
+msgid "Progress"
+msgstr "Kemajuan"
+
+msgid "Respond to Approval"
+msgstr "Menanggapi Persetujuan"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Decision"
+msgstr "Keputusan"
+
+msgid "Delegate"
+msgstr "Melimpahkan"
+
+msgid "Delegate To"
+msgstr "Delegasikan Kepada"
+
+msgid "Select user"
+msgstr "Pilih pengguna"
+
+msgid "Response Note (Optional)"
+msgstr "Catatan Tanggapan (Opsional)"
+
+msgid "Add comments for your decision"
+msgstr "Tambahkan komentar untuk keputusan Anda"
+
+msgid "Submit Response"
+msgstr "Kirim Tanggapan"
+
+msgid "Execute on"
+msgstr "Jalankan pada"
+
+msgid "Edit"
+msgstr "Sunting"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Conditions"
+msgstr "Kondisi"
+
+msgid "Approver"
+msgstr "Pemberi persetujuan"
+
+msgid "Notify approver"
+msgstr "Beritahu pemberi persetujuan"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "On approval"
+msgstr "Atas persetujuan"
+
+msgid "Actions"
+msgstr "Tindakan"
+
+msgid "Template"
+msgstr "Templat"
+
+msgid "To"
+msgstr "Ke"
+
+msgid "Custom message"
+msgstr "Pesan khusus"
+
+msgid "On rejection"
+msgstr "Tentang penolakan"
+
+msgid "Record modification"
+msgstr "Rekam modifikasi"
+
+msgid "Stage"
+msgstr "Panggung"
+
+msgid "While waiting for approval"
+msgstr "Sambil menunggu persetujuan"
+
+msgid "All Fields"
+msgstr "Semua Bidang"
+
+msgid "No Fields"
+msgstr "Tidak Ada Bidang"
+
+msgid "When record is in rejected state"
+msgstr "Saat rekaman dalam keadaan ditolak"
+
+msgid "No process rules yet. Use Add rule in the header above."
+msgstr "Belum ada aturan proses.Gunakan Tambahkan aturan pada header di atas."
+
+msgid "Are you sure you want to deactivate this approval process?"
+msgstr "Apakah Anda yakin ingin menonaktifkan proses persetujuan ini?"
+
+#, python-format
+msgid ""
+"Activating this will deactivate any other active approval process for the "
+"%(module)s module. Do you want to continue?"
+msgstr ""
+"Mengaktifkan ini akan menonaktifkan proses persetujuan aktif lainnya untuk "
+"modul%(module)s.Apakah Anda ingin melanjutkan?"
+
+msgid "Action on approval"
+msgstr "Tindakan atas persetujuan"
+
+msgid "Selected:"
+msgstr "Terpilih:"
+
+msgid "Update Field"
+msgstr "Perbarui Bidang"
+
+msgid "Assign Task"
+msgstr "Tetapkan Tugas"
+
+msgid "Action on rejection"
+msgstr "Tindakan atas penolakan"
+
+msgid "Who should approve"
+msgstr "Siapa yang harus menyetujui"
+
+msgid "Approver type"
+msgstr "Jenis pemberi persetujuan"
+
+msgid "Approver will be resolved from the record owner at runtime."
+msgstr "Penyetuju akan diselesaikan dari pemilik rekaman saat runtime."
+
+msgid "Add More Approvers"
+msgstr "Tambahkan Lebih Banyak Penyetuju"
+
+msgid "Set overall approval method"
+msgstr "Tetapkan metode persetujuan keseluruhan"
+
+msgid "Anyone"
+msgstr "Siapa pun"
+
+msgid "Everyone"
+msgstr "Setiap orang"
+
+msgid "Specify the order"
+msgstr "Tentukan pesanannya"
+
+msgid "Sequential"
+msgstr "Berurutan"
+
+msgid "Parallel"
+msgstr "Paralel"
+
+msgid "Record Modification"
+msgstr "Modifikasi Rekam"
+
+msgid "Configure field access per approval stage (sequential approval)."
+msgstr ""
+"Konfigurasikan akses lapangan per tahap persetujuan (persetujuan berurutan)."
+
+msgid "Field access"
+msgstr "Akses lapangan"
+
+msgid "Specific Fields"
+msgstr "Bidang Tertentu"
+
+msgid ""
+"One setting applies to the whole process (Anyone, Parallel, or a single "
+"approver)."
+msgstr ""
+"Satu pengaturan berlaku untuk keseluruhan proses (Siapapun, Paralel, atau "
+"satu pemberi persetujuan)."
+
+msgid "Edit Policy While Waiting"
+msgstr "Edit Kebijakan Sambil Menunggu"
+
+msgid "All fields are editable."
+msgstr "Semua bidang dapat diedit."
+
+msgid "Only specific fields are editable"
+msgstr "Hanya bidang tertentu yang dapat diedit"
+
+msgid "No fields are editable while waiting."
+msgstr "Tidak ada bidang yang dapat diedit saat menunggu."
+
+msgid "Select fields"
+msgstr "Pilih bidang"
+
+msgid "No fields available"
+msgstr "Tidak ada kolom yang tersedia"
+
+msgid "This approval no longer exists."
+msgstr "Persetujuan ini sudah tidak ada lagi."
+
+msgid ""
+"Module not found: the linked record no longer exists. The approval entry has"
+" been removed."
+msgstr ""
+"Modul tidak ditemukan: catatan tertaut tidak ada lagi.Entri persetujuan "
+"telah dihapus."
+
+msgid "Only the original requester can resubmit this record."
+msgstr "Hanya pemohon asli yang dapat mengirimkan ulang data ini."
+
+msgid "No approver step configured."
+msgstr "Tidak ada langkah pemberi persetujuan yang dikonfigurasi."
+
+msgid "Record resubmitted for approval."
+msgstr "Catatan dikirim ulang untuk disetujui."
+
+msgid "Only the original requester can update this task."
+msgstr "Hanya pemohon asli yang dapat memperbarui tugas ini."
+
+msgid "Invalid task status."
+msgstr "Status tugas tidak valid."
+
+msgid "Invalid related record."
+msgstr "Catatan terkait tidak valid."
+
+msgid "Task status updated successfully."
+msgstr "Status tugas berhasil diperbarui."
+
+msgid "Details"
+msgstr "Detail"
+
+msgid "Decision Timeline"
+msgstr "Garis Waktu Keputusan"
+
+msgid "Tasks"
+msgstr "Tugas"
+
+msgid "Step"
+msgstr "Melangkah"
+
+msgid "Cycle"
+msgstr "Siklus"
+
+msgid "Decided By"
+msgstr "Diputuskan Oleh"
+
+msgid "Comment"
+msgstr "Komentar"
+
+msgid "Decided At"
+msgstr "Memutuskan Pada"
+
+msgid "Current (After Resubmit)"
+msgstr "Saat Ini (Setelah Pengiriman Ulang)"
+
+msgid "Previous"
+msgstr "Sebelumnya"
+
+msgid "Current"
+msgstr "Saat ini"
+
+msgid "Subject"
+msgstr "Subjek"
+
+msgid "Due Date"
+msgstr "Tenggat waktu"
+
+msgid "My Approval Jobs"
+msgstr "Pekerjaan Persetujuan Saya"
+
+msgid "You are not an approver for this job."
+msgstr "Anda bukan pemberi persetujuan untuk pekerjaan ini."
+
+msgid "Module not found: the record linked to this approval no longer exists."
+msgstr ""
+"Modul tidak ditemukan: catatan yang terkait dengan persetujuan ini tidak ada"
+" lagi."
+
+msgid "You are not the approver for this job."
+msgstr "Anda bukan pemberi persetujuan untuk pekerjaan ini."
+
+msgid "Invalid decision."
+msgstr "Keputusan tidak valid."
+
+msgid "No pending step found."
+msgstr "Tidak ditemukan langkah yang tertunda."
+
+msgid "Approval delegated successfully."
+msgstr "Persetujuan berhasil didelegasikan."
+
+msgid "Approval rejected."
+msgstr "Persetujuan ditolak."
+
+msgid "Approved. Waiting for other approvers."
+msgstr "Disetujui.Menunggu pemberi persetujuan lainnya."
+
+msgid "Approval completed."
+msgstr "Persetujuan selesai."
+
+msgid "Approved and moved to next approver."
+msgstr "Disetujui dan dipindahkan ke pemberi persetujuan berikutnya."
+
+msgid "You are not the approver for this pending job."
+msgstr "Anda bukan pemberi persetujuan untuk pekerjaan yang tertunda ini."
+
+msgid "Only the original requester can edit this rejected record."
+msgstr "Hanya pemohon asli yang dapat mengedit data yang ditolak ini."
+
+msgid "Only the original requester can edit this approved record."
+msgstr "Hanya pemohon asli yang dapat mengedit catatan yang disetujui ini."
+
+msgid "This record's approval status does not allow edits."
+msgstr "Status persetujuan rekaman ini tidak mengizinkan pengeditan."
+
+msgid "Record not found."
+msgstr "Catatan tidak ditemukan."
+
+msgid "Invalid field."
+msgstr "Bidang tidak valid."
+
+msgid "Field is not editable."
+msgstr "Bidang tidak dapat diedit."
+
+msgid "Unknown field."
+msgstr "Bidang tidak diketahui."
+
+msgid "Invalid value."
+msgstr "Nilai tidak valid."
+
+msgid "Failed to update field."
+msgstr "Gagal memperbarui bidang."
+
+msgid "Field updated successfully."
+msgstr "Bidang berhasil diperbarui."
+
+msgid "Model"
+msgstr "Model"
+
+msgid "Active"
+msgstr "Aktif"
+
+msgid "Approval Process"
+msgstr "Proses Persetujuan"
+
+msgid "Rule criteria"
+msgstr "Kriteria aturan"
+
+msgid "When should this rule apply?"
+msgstr "Kapan aturan ini berlaku?"
+
+#, python-format
+msgid "Rule %(order)s — Criteria"
+msgstr "Aturan%(order)s— Kriteria"
+
+msgid "Add process rule"
+msgstr "Tambahkan aturan proses"
+
+msgid "Edit process rule"
+msgstr "Edit aturan proses"
+
+msgid "A rule with this order already exists for this process."
+msgstr "Aturan dengan urutan ini sudah ada untuk proses ini."
+
+msgid "Process rule updated successfully."
+msgstr "Aturan proses berhasil diperbarui."
+
+msgid "Process rule created successfully."
+msgstr "Aturan proses berhasil dibuat."
+
+msgid "activated"
+msgstr "diaktifkan"
+
+msgid "deactivated"
+msgstr "dinonaktifkan"
+
+#, python-format
+msgid ""
+"%(name)s %(status)s successfully. %(deactivated)s deactivated for this "
+"module."
+msgstr ""
+"%(name)s%(status)sberhasil.%(deactivated)sdinonaktifkan untuk modul ini."
+
+msgid "Add Rule"
+msgstr "Tambahkan Aturan"
+
+msgid "Edit Process"
+msgstr "Sunting Proses"

@@ -1,0 +1,1185 @@
+# Arabic translations for Horilla Generics module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+msgid "Contains"
+msgstr ""
+
+msgid "Equals"
+msgstr ""
+
+msgid "Not Equals"
+msgstr ""
+
+#, fuzzy
+#| msgid "Start"
+msgid "Starts with"
+msgstr "البداية"
+
+msgid "Ends with"
+msgstr ""
+
+#, fuzzy
+#| msgid "(empty)"
+msgid "Is empty"
+msgstr "(فارغ)"
+
+msgid "Is not empty"
+msgstr ""
+
+#, fuzzy
+#| msgid "Created At"
+msgid "Greater than"
+msgstr "تاريخ الإنشاء"
+
+msgid "Less than"
+msgstr ""
+
+msgid "Greater than or equal"
+msgstr ""
+
+msgid "Less than or equal"
+msgstr ""
+
+msgid "Between"
+msgstr ""
+
+msgid "After"
+msgstr ""
+
+msgid "Before"
+msgstr ""
+
+msgid "Today"
+msgstr ""
+
+msgid "Yesterday"
+msgstr ""
+
+msgid "This Week"
+msgstr ""
+
+#, fuzzy
+#| msgid "Months"
+msgid "This Month"
+msgstr "أشهر"
+
+#, python-format
+msgid "Select %(field)s"
+msgstr "اختر %(field)s"
+
+#, python-format
+msgid "Enter %(field)s"
+msgstr "أدخل %(field)s"
+
+msgid "Operator is required when a field is selected."
+msgstr "المعامل مطلوب عند اختيار حقل."
+
+msgid "Select a valid field. That choice is not one of the available fields."
+msgstr "اختر حقلاً صالحاً. هذا الاختيار ليس من الحقول المتاحة."
+
+msgid "Value is required when a field and operator are selected."
+msgstr "القيمة مطلوبة عند اختيار حقل ومعامل."
+
+msgid "This field is read-only and cannot be modified."
+msgstr "هذا الحقل للقراءة فقط ولا يمكن تعديله."
+
+msgid "List View Name"
+msgstr "اسم عرض القائمة"
+
+#, fuzzy
+#| msgid "Select an item from the list to view details"
+msgid "Specify the list view name"
+msgstr "اختر عنصراً من القائمة لعرض التفاصيل"
+
+msgid "Make as public"
+msgstr "جعله عاماً"
+
+#, fuzzy
+#| msgid "Select Fields to Display"
+msgid "Select date to filter"
+msgstr "اختر الحقول لعرضها"
+
+#, fuzzy
+#| msgid "Enter Number"
+msgid "Enter phone number"
+msgstr "أدخل رقماً"
+
+msgid "Enter a valid phone number."
+msgstr ""
+
+#, fuzzy
+#| msgid "Enter value"
+msgid "Enter title"
+msgstr "أدخل قيمة"
+
+#, python-format
+msgid "Upload %(field)s"
+msgstr "رفع %(field)s"
+
+#, python-format
+msgid "Enter %(field)s here..."
+msgstr "أدخل %(field)s هنا..."
+
+msgid "Select Fields to Display"
+msgstr "اختر الحقول لعرضها"
+
+msgid "Close"
+msgstr "إغلاق"
+
+msgid "Available Fields"
+msgstr "الحقول المتاحة"
+
+msgid "Search fields..."
+msgstr "البحث في الحقول..."
+
+msgid "Visible Fields"
+msgstr "الحقول المرئية"
+
+msgid "Reset to Default"
+msgstr "إعادة تعيين إلى الافتراضي"
+
+msgid "Save"
+msgstr "حفظ"
+
+msgid "Change Detail View Fields"
+msgstr "تغيير حقول عرض التفاصيل"
+
+msgid "Header Portion Fields"
+msgstr "حقول قسم الرأس"
+
+msgid "Search..."
+msgstr "بحث..."
+
+msgid "All fields added"
+msgstr "تمت إضافة جميع الحقول"
+
+msgid "No fields"
+msgstr "لا توجد حقول"
+
+msgid "Details Tab Fields"
+msgstr "حقول تبويب التفاصيل"
+
+#, python-format
+msgid ""
+"\n"
+"                            Nothing to show yet. The %(view)s list doesn't "
+"have any data.\n"
+"                        "
+msgstr ""
+"\n"
+"                            لا يوجد شيء لعرضه بعد. قائمة %(view)s لا تحتوي "
+"على أي بيانات.\n"
+"                        "
+
+msgid "Nothing to show yet. Please add your"
+msgstr "لا يوجد شيء لعرضه بعد. يرجى إضافة"
+
+msgid "Delete List"
+msgstr "حذف القائمة"
+
+msgid "Add New"
+msgstr "إضافة جديد"
+
+msgid "Chart view"
+msgstr "عرض المخطط"
+
+msgid "X-axis (Group by)"
+msgstr "المحور السيني (تجميع حسب)"
+
+msgid "Y-axis (Value)"
+msgstr "المحور الصادي (القيمة)"
+
+msgid "Stack by"
+msgstr "تكديس حسب"
+
+msgid "Single dimension"
+msgstr "بُعد واحد"
+
+msgid "Chart type"
+msgstr "نوع المخطط"
+
+msgid "Actions"
+msgstr "الإجراءات"
+
+msgid "Export as PDF"
+msgstr "تصدير كـ PDF"
+
+msgid "Export as PNG"
+msgstr "تصدير كـ PNG"
+
+msgid "Add to Dashboard"
+msgstr "إضافة إلى لوحة التحكم"
+
+msgid "Fields"
+msgstr "الحقول"
+
+msgid "Previous"
+msgstr "السابق"
+
+msgid "Next"
+msgstr "التالي"
+
+msgid "Menu"
+msgstr "القائمة"
+
+msgid "Edit"
+msgstr "تعديل"
+
+msgid "Read Only"
+msgstr "للقراءة فقط"
+
+msgid "Drag to move"
+msgstr "اسحب للتحريك"
+
+msgid "Filters"
+msgstr "الفلاتر"
+
+msgid "Shrink panel"
+msgstr "تصغير اللوحة"
+
+msgid "Expand panel"
+msgstr "توسيع اللوحة"
+
+msgid "Filter"
+msgstr "فلتر"
+
+msgid "Add more filter"
+msgstr "إضافة فلتر آخر"
+
+msgid "Applied Filters"
+msgstr "الفلاتر المطبقة"
+
+msgid "Clear All"
+msgstr "مسح الكل"
+
+msgid "Save to List"
+msgstr "حفظ في القائمة"
+
+msgid "Cancel"
+msgstr "إلغاء"
+
+msgid "OR"
+msgstr ""
+
+msgid "AND"
+msgstr ""
+
+msgid "Drag to resize width (left)"
+msgstr "اسحب لتغيير العرض (يسار)"
+
+msgid "Resize width left"
+msgstr "تغيير العرض يساراً"
+
+msgid "Drag to resize width (right)"
+msgstr "اسحب لتغيير العرض (يمين)"
+
+msgid "Resize width right"
+msgstr "تغيير العرض يميناً"
+
+msgid "Drag to resize height"
+msgstr "اسحب لتغيير الارتفاع"
+
+msgid "Resize height"
+msgstr "تغيير الارتفاع"
+
+msgid "Multi-Step Form"
+msgstr "نموذج متعدد الخطوات"
+
+msgid "Single-Step Form"
+msgstr "نموذج خطوة واحدة"
+
+msgid "JPG or PNG"
+msgstr ""
+
+#, fuzzy
+#| msgid "Remove"
+msgid "Remove photo"
+msgstr "إزالة"
+
+msgid "Choose File"
+msgstr "اختر ملفاً"
+
+msgid "No file chosen"
+msgstr "لم يتم اختيار ملف"
+
+msgid "Clear"
+msgstr "مسح"
+
+msgid "Add"
+msgstr "إضافة"
+
+msgid "Save & New"
+msgstr "حفظ وجديد"
+
+msgid "Add Notes and Attachment"
+msgstr "إضافة ملاحظات ومرفق"
+
+msgid "Upload File"
+msgstr "رفع ملف"
+
+msgid "File already uploaded"
+msgstr "تم رفع الملف بالفعل"
+
+msgid "Click to upload or drag & drop"
+msgstr "انقر للرفع أو اسحب وأفلت"
+
+msgid "Any file (Max 10MB)"
+msgstr "أي ملف (الحد الأقصى 10 ميغابايت)"
+
+msgid "Clear file"
+msgstr "مسح الملف"
+
+msgid "File selected"
+msgstr "تم اختيار الملف"
+
+msgid "We searched for"
+msgstr "بحثنا عن"
+
+msgid "No search results found"
+msgstr "لم يتم العثور على نتائج بحث"
+
+msgid "Select Visible Items"
+msgstr "اختيار العناصر المرئية"
+
+msgid "No items in this group."
+msgstr "لا توجد عناصر في هذه المجموعة."
+
+msgid "Clear Filters"
+msgstr "مسح الفلاتر"
+
+msgid "Call"
+msgstr "مكالمة"
+
+msgid "Email"
+msgstr "بريد إلكتروني"
+
+msgid "Status"
+msgstr "الحالة"
+
+msgid "Initiated"
+msgstr "بدأ"
+
+msgid "New"
+msgstr "جديد"
+
+msgid "created"
+msgstr "تم الإنشاء"
+
+msgid "status"
+msgstr "الحالة"
+
+msgid "Added call task to this"
+msgstr "تمت إضافة مهمة مكالمة إلى هذا"
+
+msgid "Send email to this"
+msgstr "إرسال بريد إلكتروني إلى هذا"
+
+msgid "Activity logged for this"
+msgstr "تم تسجيل نشاط لهذا"
+
+msgid "Event scheduled for this"
+msgstr "تم جدولة حدث لهذا"
+
+msgid "Meeting scheduled with this"
+msgstr "تم جدولة اجتماع مع هذا"
+
+msgid "Action performed by"
+msgstr "الإجراء المنفّذ بواسطة"
+
+msgid "No history available for this object."
+msgstr "لا يوجد سجل متاح لهذا الكائن."
+
+msgid "Kanban Settings"
+msgstr "إعدادات كانبان"
+
+msgid "Select Columns to Export (Optional)"
+msgstr "اختر الأعمدة للتصدير (اختياري)"
+
+msgid "Export Format"
+msgstr "تنسيق التصدير"
+
+msgid "Excel"
+msgstr "Excel"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Available Columns"
+msgstr "الأعمدة المتاحة"
+
+msgid "Select which columns to export"
+msgstr "اختر الأعمدة المراد تصديرها"
+
+msgid "Add Additional Columns"
+msgstr "إضافة أعمدة إضافية"
+
+msgid "Select more fields you want to export"
+msgstr "اختر المزيد من الحقول التي تريد تصديرها"
+
+msgid "Export"
+msgstr "تصدير"
+
+msgid "Select"
+msgstr "اختيار"
+
+msgid "Unselect"
+msgstr "إلغاء الاختيار"
+
+msgid "Export Selected"
+msgstr "تصدير المختار"
+
+msgid "Bulk Update"
+msgstr "تحديث مجمّع"
+
+msgid "Bulk Delete"
+msgstr "حذف مجمّع"
+
+msgid "Edit List"
+msgstr "تعديل القائمة"
+
+#, python-format
+msgid ""
+"\n"
+"                        Nothing to show yet. The %(view)s list does not have "
+"any data.\n"
+"                    "
+msgstr ""
+"\n"
+"                        لا يوجد شيء لعرضه بعد. قائمة %(view)s لا تحتوي على "
+"أي بيانات.\n"
+"                    "
+
+msgid " Nothing to show yet. Please add your"
+msgstr " لا يوجد شيء لعرضه بعد. يرجى إضافة"
+
+msgid "All Items"
+msgstr "جميع العناصر"
+
+msgid "Recently Viewed"
+msgstr "تمت مشاهدته مؤخراً"
+
+msgid "Recently Created"
+msgstr "تم إنشاؤه مؤخراً"
+
+msgid "Recently Modified"
+msgstr "تم تعديله مؤخراً"
+
+msgid "List View"
+msgstr "عرض القائمة"
+
+msgid "Unpin default view"
+msgstr "إلغاء تثبيت العرض الافتراضي"
+
+msgid "Unpin"
+msgstr "إلغاء التثبيت"
+
+msgid "Set as default view"
+msgstr "تعيين كعرض افتراضي"
+
+msgid "Pin as default"
+msgstr "تثبيت كافتراضي"
+
+msgid "Search"
+msgstr "بحث"
+
+msgid "Reload"
+msgstr "إعادة تحميل"
+
+msgid "Applied filters"
+msgstr "الفلاتر المطبقة"
+
+msgid "Views"
+msgstr "طرق العرض"
+
+msgid "Layout"
+msgstr "التخطيط"
+
+msgid "Split View"
+msgstr "عرض مقسّم"
+
+msgid "Chart"
+msgstr "مخطط"
+
+msgid "List"
+msgstr "قائمة"
+
+msgid "Card"
+msgstr "بطاقة"
+
+msgid "Kanban"
+msgstr "كانبان"
+
+msgid "Timeline"
+msgstr "الجدول الزمني"
+
+msgid "Group By"
+msgstr "تجميع حسب"
+
+msgid "Chart View"
+msgstr "عرض المخطط"
+
+msgid "Notes and Attachments"
+msgstr "الملاحظات والمرفقات"
+
+msgid "Open file in new tab"
+msgstr "فتح الملف في تبويب جديد"
+
+msgid "Notes"
+msgstr "الملاحظات"
+
+msgid "Created By"
+msgstr "أُنشئ بواسطة"
+
+msgid "Created At"
+msgstr "تاريخ الإنشاء"
+
+msgid "File Size"
+msgstr "حجم الملف"
+
+msgid "Related To"
+msgstr "مرتبط بـ"
+
+msgid "Delete Attachment"
+msgstr "حذف المرفق"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Add Quick Filter"
+msgstr "إضافة فلتر سريع"
+
+msgid "Select Fields"
+msgstr "اختر الحقول"
+
+msgid "No available fields to add as quick filter."
+msgstr "لا توجد حقول متاحة لإضافتها كفلتر سريع."
+
+msgid "Loading..."
+msgstr "جارٍ التحميل..."
+
+msgid "Hard Delete Confirmation"
+msgstr "تأكيد الحذف النهائي"
+
+msgid "Are you sure you want to hard delete the selected"
+msgstr "هل أنت متأكد من الحذف النهائي للمحدد"
+
+msgid "Deletable Records"
+msgstr "السجلات القابلة للحذف"
+
+msgid "Protected Records"
+msgstr "السجلات المحمية"
+
+msgid "Delete All"
+msgstr "حذف الكل"
+
+msgid " Confirm"
+msgstr " تأكيد"
+
+msgid "Bulk Update Selected"
+msgstr "تحديث المحدد مجمّعاً"
+
+msgid "Yes"
+msgstr "نعم"
+
+msgid "No"
+msgstr "لا"
+
+#, python-format
+msgid ""
+"Select\n"
+"                                            %(field)s"
+msgstr ""
+"اختر\n"
+"                                            %(field)s"
+
+#, python-format
+msgid ""
+"Select\n"
+"                                                %(field)s"
+msgstr ""
+"اختر\n"
+"                                                %(field)s"
+
+msgid "No fields available for bulk update."
+msgstr "لا توجد حقول متاحة للتحديث المجمّع."
+
+msgid "Update"
+msgstr "تحديث"
+
+msgid "Remove"
+msgstr "إزالة"
+
+msgid "Select Delete Mode"
+msgstr "اختر وضع الحذف"
+
+msgid "Choose the deletion mode for the selected records"
+msgstr "اختر وضع الحذف للسجلات المحددة"
+
+msgid "Hard Delete will permanently delete data."
+msgstr "الحذف النهائي سيحذف البيانات بشكل دائم."
+
+msgid "Soft Delete allows you to restore deleted records."
+msgstr "الحذف الناعم يتيح لك استعادة السجلات المحذوفة."
+
+msgid "Hard Delete"
+msgstr "حذف نهائي"
+
+msgid "Soft Delete"
+msgstr "حذف ناعم"
+
+msgid "Select Field"
+msgstr "اختر حقلاً"
+
+msgid "No value needed"
+msgstr "لا قيمة مطلوبة"
+
+msgid "Start"
+msgstr "البداية"
+
+msgid "End"
+msgstr "النهاية"
+
+msgid "and"
+msgstr "و"
+
+msgid "True"
+msgstr "صحيح"
+
+msgid "False"
+msgstr "خطأ"
+
+msgid "Enter value"
+msgstr "أدخل قيمة"
+
+msgid "Remove filter"
+msgstr "إزالة الفلتر"
+
+msgid "Apply"
+msgstr "تطبيق"
+
+msgid "Drag"
+msgstr "سحب"
+
+msgid "More actions"
+msgstr "المزيد من الإجراءات"
+
+msgid "Select Operator"
+msgstr "اختر المعامل"
+
+msgid "All"
+msgstr "الكل"
+
+msgid "Are you sure you want to delete this quick filter"
+msgstr "هل أنت متأكد من حذف هذا الفلتر السريع"
+
+msgid "Bulk Reassign Dependencies"
+msgstr "إعادة تعيين التبعيات مجمّعاً"
+
+msgid "Reassign all dependent"
+msgstr "إعادة تعيين جميع التابع"
+
+msgid "to a new target before deleting"
+msgstr "إلى هدف جديد قبل الحذف"
+
+msgid "New Target"
+msgstr "هدف جديد"
+
+msgid "No other targets available"
+msgstr "لا توجد أهداف أخرى متاحة"
+
+msgid "Confirm"
+msgstr "تأكيد"
+
+msgid "Confirm Deletion"
+msgstr "تأكيد الحذف"
+
+msgid "Soft deleting this"
+msgstr "الحذف الناعم لهذا"
+
+msgid "will also soft delete all its related"
+msgstr "سيحذف أيضاً بشكل ناعم جميع المرتبط به"
+
+msgid "Permanently deleting this"
+msgstr "الحذف الدائم لهذا"
+
+msgid "will also permanently delete all its related"
+msgstr "سيحذف أيضاً بشكل دائم جميع المرتبط به"
+
+msgid "Are you sure you want to proceed ?"
+msgstr "هل أنت متأكد من المتابعة؟"
+
+msgid "with Dependencies"
+msgstr "مع التبعيات"
+
+msgid "Confirm Delete"
+msgstr "تأكيد الحذف"
+
+msgid "The"
+msgstr "الـ"
+
+msgid "has dependencies and cannot be deleted directly."
+msgstr "لديه تبعيات ولا يمكن حذفه مباشرة."
+
+msgid "Reassign All"
+msgstr "إعادة تعيين الكل"
+
+msgid "Reassign Individually"
+msgstr "إعادة تعيين بشكل فردي"
+
+msgid "Are you sure you want to delete the"
+msgstr "هل أنت متأكد من حذف الـ"
+
+msgid "Choose the deletion mode for"
+msgstr "اختر وضع الحذف لـ"
+
+msgid "Individual Reassign or Delete Dependencies"
+msgstr "إعادة تعيين أو حذف التبعيات بشكل فردي"
+
+msgid "Choose actions for each dependent"
+msgstr "اختر الإجراءات لكل تابع"
+
+msgid "before deleting"
+msgstr "قبل الحذف"
+
+msgid "Dependent Data"
+msgstr "البيانات التابعة"
+
+msgid "Select Target"
+msgstr "اختر الهدف"
+
+msgid "Set null for all"
+msgstr "تعيين null للكل"
+
+msgid "Set to Null"
+msgstr "تعيين إلى Null"
+
+msgid "Delete all"
+msgstr "حذف الكل"
+
+msgid "Set Null"
+msgstr "تعيين Null"
+
+msgid "Are you sure you want to soft delete this dependency ? "
+msgstr "هل أنت متأكد من الحذف الناعم لهذه التبعية؟ "
+
+msgid "Are you sure you want to hard delete this dependency ? "
+msgstr "هل أنت متأكد من الحذف النهائي لهذه التبعية؟ "
+
+msgid "No dependent records found."
+msgstr "لم يتم العثور على سجلات تابعة."
+
+msgid "Soft Delete Confirmation"
+msgstr "تأكيد الحذف الناعم"
+
+msgid "Are you sure you want to soft delete the selected"
+msgstr "هل أنت متأكد من الحذف الناعم للمحدد"
+
+msgid "Are you sure you want to soft delete all dependencies of this record ? "
+msgstr "هل أنت متأكد من الحذف الناعم لجميع تبعيات هذا السجل؟ "
+
+msgid "No Records to Delete"
+msgstr "لا توجد سجلات للحذف"
+
+msgid "Value"
+msgstr "القيمة"
+
+msgid "No results found"
+msgstr "لم يتم العثور على نتائج"
+
+msgid "Select All"
+msgstr "تحديد الكل"
+
+msgid "Select an option"
+msgstr "اختر خياراً"
+
+msgid "From"
+msgstr "من"
+
+msgid "To"
+msgstr "إلى"
+
+msgid "No related lists found for this"
+msgstr "لم يتم العثور على قوائم مرتبطة بهذا"
+
+msgid "Add Column to List"
+msgstr "إضافة عمود إلى القائمة"
+
+msgid "Edit List View"
+msgstr "تعديل عرض القائمة"
+
+msgid "New List View"
+msgstr "عرض قائمة جديد"
+
+msgid "Add filter"
+msgstr "إضافة فلتر"
+
+msgid "No filter parameters available."
+msgstr "لا توجد معاملات فلتر متاحة."
+
+msgid "Conditions"
+msgstr "الشروط"
+
+msgid "Add More"
+msgstr "إضافة المزيد"
+
+msgid "Select an item from the list to view details"
+msgstr "اختر عنصراً من القائمة لعرض التفاصيل"
+
+msgid "Timeline settings"
+msgstr "إعدادات الجدول الزمني"
+
+msgid "Group by"
+msgstr "تجميع حسب"
+
+msgid "View"
+msgstr "عرض"
+
+msgid "Timeline bar start and end are taken from these record fields."
+msgstr "يُؤخذ بداية ونهاية شريط الجدول الزمني من حقول السجل هذه."
+
+msgid "Enter Value"
+msgstr "أدخل قيمة"
+
+msgid "Task added"
+msgstr "تمت إضافة المهمة"
+
+msgid "Event added"
+msgstr "تمت إضافة الحدث"
+
+msgid "Meeting added"
+msgstr "تمت إضافة الاجتماع"
+
+msgid "Call added"
+msgstr "تمت إضافة المكالمة"
+
+msgid "Email sent"
+msgstr "تم إرسال البريد الإلكتروني"
+
+msgid "Draft saved"
+msgstr "تم حفظ المسودة"
+
+msgid "Scheduled mail"
+msgstr "بريد مجدول"
+
+msgid "Mail failed"
+msgstr "فشل إرسال البريد"
+
+msgid "Notes and Attachment"
+msgstr "الملاحظات والمرفق"
+
+msgid "You don't have permission to edit this attachment."
+msgstr "ليس لديك صلاحية لتعديل هذا المرفق."
+
+msgid "The requested attachment does not exist."
+msgstr "المرفق المطلوب غير موجود."
+
+msgid "You don't have permission to add attachments to this record."
+msgstr "ليس لديك صلاحية لإضافة مرفقات إلى هذا السجل."
+
+msgid "Invalid related object."
+msgstr "كائن مرتبط غير صالح."
+
+#, fuzzy
+#| msgid "You don't have permission to edit this attachment."
+msgid "You don't have permission to delete this attachment."
+msgstr "ليس لديك صلاحية لتعديل هذا المرفق."
+
+msgid "Column Chart"
+msgstr "مخطط أعمدة"
+
+msgid "Line Chart"
+msgstr "مخطط خطي"
+
+msgid "Pie Chart"
+msgstr "مخطط دائري"
+
+msgid "Funnel"
+msgstr "قمع"
+
+msgid "Bar Chart"
+msgstr "مخطط شريطي"
+
+msgid "Donut"
+msgstr "مخطط حلقي"
+
+msgid "Stacked Vertical"
+msgstr "عمودي متراكم"
+
+msgid "Stacked Horizontal"
+msgstr "أفقي متراكم"
+
+msgid "Scatter"
+msgstr "مخطط تشتت"
+
+msgid "Treemap"
+msgstr "خريطة شجرية"
+
+msgid "Area Chart"
+msgstr "مخطط مساحة"
+
+msgid "Heatmap"
+msgstr "خريطة حرارية"
+
+msgid "Sankey"
+msgstr "سانكي"
+
+msgid "Radar Chart"
+msgstr "مخطط رادار"
+
+msgid "Sum"
+msgstr "المجموع"
+
+msgid "Average"
+msgstr "المتوسط"
+
+msgid "Minimum"
+msgstr "الحد الأدنى"
+
+msgid "Maximum"
+msgstr "الحد الأقصى"
+
+msgid "Record count"
+msgstr "عدد السجلات"
+
+#, python-format
+msgid "%(metric)s of %(field)s"
+msgstr "%(metric)s من %(field)s"
+
+msgid "(empty)"
+msgstr "(فارغ)"
+
+msgid "This field cannot be used as chart dimension."
+msgstr "لا يمكن استخدام هذا الحقل كبُعد مخطط."
+
+msgid "Selected Y-axis field must be numeric."
+msgstr "يجب أن يكون حقل محور Y المحدد رقمياً."
+
+msgid "Both fields must support chart grouping."
+msgstr "يجب أن يدعم كلا الحقلين تجميع المخطط."
+
+msgid "Not enough data for stacked chart."
+msgstr "لا توجد بيانات كافية للمخطط المتراكم."
+
+msgid ""
+"No suitable field for chart grouping (need a choice, foreign key, or boolean "
+"field)."
+msgstr ""
+"لا يوجد حقل مناسب لتجميع المخطط (يلزم حقل اختيار أو مفتاح خارجي أو حقل "
+"منطقي)."
+
+msgid ""
+"Selected record is not associated with any company. Activate a company to "
+"proceed with deletion."
+msgstr "السجل المحدد غير مرتبط بأي شركة. قم بتنشيط شركة للمتابعة في الحذف."
+
+#, fuzzy
+#| msgid "Invalid saved list ID."
+msgid "Invalid target ID"
+msgstr "معرّف القائمة المحفوظة غير صالح."
+
+msgid "Details"
+msgstr "التفاصيل"
+
+msgid "Activity"
+msgstr "النشاط"
+
+msgid "Cadence"
+msgstr "الإيقاع"
+
+msgid "Related Lists"
+msgstr "القوائم المرتبطة"
+
+msgid "Notes & Attachments"
+msgstr "الملاحظات والمرفقات"
+
+msgid "History"
+msgstr "السجل"
+
+msgid "View full detail"
+msgstr "عرض التفاصيل الكاملة"
+
+msgid "You don't have permission to update this record."
+msgstr "ليس لديك صلاحية لتحديث هذا السجل."
+
+msgid "Invalid choice"
+msgstr "اختيار غير صالح"
+
+msgid "Detailed View"
+msgstr "عرض تفصيلي"
+
+msgid "The requested record does not exist."
+msgstr "السجل المطلوب غير موجود."
+
+msgid ""
+"No grouping field specified or you don't have permission to view any "
+"grouping fields."
+msgstr "لم يتم تحديد حقل تجميع أو ليس لديك صلاحية لعرض أي حقول تجميع."
+
+#, python-format
+msgid "Field '%(field)s' is not a Choice field or ForeignKey field."
+msgstr "الحقل '%(field)s' ليس حقل اختيار أو مفتاح خارجي."
+
+msgid "None"
+msgstr "لا شيء"
+
+#, python-format
+msgid "Invalid grouping field '%(field)s': %(err)s"
+msgstr "حقل تجميع غير صالح '%(field)s': %(err)s"
+
+#, python-format
+msgid "Error grouping by field '%(field)s': %(err)s"
+msgstr "خطأ في التجميع حسب الحقل '%(field)s': %(err)s"
+
+msgid "Select value(s)"
+msgstr "اختر قيمة/قيم"
+
+msgid "Enter Number"
+msgstr "أدخل رقماً"
+
+msgid "Enter Email"
+msgstr "أدخل البريد الإلكتروني"
+
+msgid "Enter URL"
+msgstr "أدخل الرابط"
+
+msgid "You do not have permission to edit this."
+msgstr "ليس لديك صلاحية لتعديل هذا."
+
+#, fuzzy, python-format
+#| msgid "Error grouping by field '%(field)s': %(err)s"
+msgid "Error updating field: %(message)s"
+msgstr "خطأ في التجميع حسب الحقل '%(field)s': %(err)s"
+
+#, python-format
+msgid "Invalid decimal value: %(value)s"
+msgstr ""
+
+#, python-format
+msgid "Invalid datetime format: %(value)s"
+msgstr ""
+
+#, python-format
+msgid "Invalid date format: %(value)s"
+msgstr ""
+
+msgid "You do not have permission to view this."
+msgstr "ليس لديك صلاحية لعرض هذا."
+
+msgid "Invalid saved list ID."
+msgstr "معرّف القائمة المحفوظة غير صالح."
+
+msgid "Group By Settings"
+msgstr "إعدادات التجميع حسب"
+
+#, fuzzy
+#| msgid "You do not have permission to view this."
+msgid "You don't have permission to configure columns for this list."
+msgstr "ليس لديك صلاحية لعرض هذا."
+
+msgid "Equals (case insensitive)"
+msgstr ""
+
+msgid "Greater than or equal to"
+msgstr ""
+
+msgid "Less than or equal to"
+msgstr ""
+
+msgid "Create"
+msgstr "إنشاء"
+
+msgid "Import"
+msgstr "استيراد"
+
+msgid "duplicated"
+msgstr "تم النسخ"
+
+msgid "updated"
+msgstr "تم التحديث"
+
+#, python-format
+msgid "%(model)s %(action)s successfully."
+msgstr "%(model)s %(action)s بنجاح."
+
+#, python-format
+msgid "A %(model)s with this %(field)s already exists."
+msgstr "%(model)s بهذا %(field)s موجود بالفعل."
+
+#, python-format
+msgid "A %(model)s with this combination of %(fields)s already exists."
+msgstr "%(model)s بهذا التركيب من %(fields)s موجود بالفعل."
+
+#, python-format
+msgid ""
+"This %(model)s could not be saved due to a duplicate entry. Please check "
+"your input and try again."
+msgstr ""
+"تعذّر حفظ %(model)s بسبب إدخال مكرر. يرجى التحقق من المدخلات والمحاولة مرة "
+"أخرى."
+
+msgid "An error occurred while saving. Please try again or contact support."
+msgstr "حدث خطأ أثناء الحفظ. يرجى المحاولة مرة أخرى أو التواصل مع الدعم."
+
+msgid "Timeline view requires timeline_start_field to be set."
+msgstr "يتطلب عرض الجدول الزمني تعيين timeline_start_field."
+
+#, python-format
+msgid "Invalid timeline_start_field: %(field)s."
+msgstr "timeline_start_field غير صالح: %(field)s."
+
+msgid "Days"
+msgstr "أيام"
+
+msgid "Weeks"
+msgstr "أسابيع"
+
+msgid "Months"
+msgstr "أشهر"
+
+msgid "Quarters"
+msgstr "أرباع السنة"
+
+#, python-format
+msgid "Bars use: %(field)s"
+msgstr "الأشرطة تستخدم: %(field)s"
+
+#, python-format
+msgid "From %(start)s → %(end)s"
+msgstr "من %(start)s ← %(end)s"
+
+msgid "No rows selected for deletion."
+msgstr "لم يتم اختيار صفوف للحذف."
+
+#, fuzzy
+#| msgid "You do not have permission to edit this."
+msgid "You do not have permission to delete this data."
+msgstr "ليس لديك صلاحية لتعديل هذا."
+
+msgid "Please select a valid choice for the operator field."
+msgstr "يرجى اختيار خيار صالح لحقل المعامل."
+
+msgid "Please select a valid choice for the field."
+msgstr "يرجى اختيار خيار صالح للحقل."
+
+#, python-brace-format
+#~ msgid "{self.model._meta.verbose_name} Stage Updated Successfully"
+#~ msgstr "تم تحديث مرحلة {self.model._meta.verbose_name} بنجاح"

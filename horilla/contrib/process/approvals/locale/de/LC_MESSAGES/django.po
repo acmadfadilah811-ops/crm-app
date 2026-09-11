@@ -1,0 +1,788 @@
+# German translations for Horilla Approvals module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Approvals"
+msgstr "Genehmigungen"
+
+#, python-format
+msgid ""
+"'%(name)s' is already the active approval process for this module. "
+"Deactivate it before activating another."
+msgstr ""
+"'%(name)s' ist bereits der aktive Genehmigungsprozess fuer dieses Modul. "
+"Deaktivieren Sie ihn, bevor Sie einen anderen aktivieren."
+
+msgid "Select action"
+msgstr "Aktion auswaehlen"
+
+msgid "Update field"
+msgstr "Feld aktualisieren"
+
+msgid "Assign task"
+msgstr "Aufgabe zuweisen"
+
+msgid "Mail"
+msgstr "E-Mail"
+
+msgid "Notification"
+msgstr "Benachrichtigung"
+
+msgid "Approval: field to update"
+msgstr "Genehmigung: zu aktualisierendes Feld"
+
+msgid "Ex: status"
+msgstr "Bsp: Status"
+
+msgid "Approval: updated value"
+msgstr "Genehmigung: aktualisierter Wert"
+
+msgid "Ex: Approved"
+msgstr "Bsp: Genehmigt"
+
+msgid "Approval: task title"
+msgstr "Genehmigung: Aufgabentitel"
+
+msgid "Follow up with requester"
+msgstr "Nachverfolgung mit dem Antragsteller"
+
+msgid "Approval: task description"
+msgstr "Genehmigung: Aufgabenbeschreibung"
+
+msgid "Rejection: field to update"
+msgstr "Ablehnung: zu aktualisierendes Feld"
+
+msgid "Rejection: updated value"
+msgstr "Ablehnung: aktualisierter Wert"
+
+msgid "Ex: Rejected"
+msgstr "Bsp: Abgelehnt"
+
+msgid "Rejection: task title"
+msgstr "Ablehnung: Aufgabentitel"
+
+msgid "Resolve and resubmit"
+msgstr "Loesen und erneut einreichen"
+
+msgid "Rejection: task description"
+msgstr "Ablehnung: Aufgabenbeschreibung"
+
+msgid "Approval: email subject"
+msgstr "Genehmigung: E-Mail-Betreff"
+
+msgid "Approval: email body"
+msgstr "Genehmigung: E-Mail-Text"
+
+msgid "Rejection: email subject"
+msgstr "Ablehnung: E-Mail-Betreff"
+
+msgid "Rejection: email body"
+msgstr "Ablehnung: E-Mail-Text"
+
+msgid "Ex: manager"
+msgstr ""
+
+msgid "User"
+msgstr "Benutzer"
+
+msgid "Role"
+msgstr "Rolle"
+
+msgid "Record owner"
+msgstr "Datensatzinhaber"
+
+msgid "Select role"
+msgstr "Rolle auswaehlen"
+
+msgid "Approval Processes"
+msgstr "Genehmigungsprozesse"
+
+msgid "Approval Jobs"
+msgstr "Genehmigungsaufgaben"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Model this process applies to."
+msgstr "Das Modell, auf das dieser Prozess angewendet wird."
+
+msgid "Module"
+msgstr "Modul"
+
+msgid "When record is created"
+msgstr "Bei Erstellung des Datensatzes"
+
+msgid "Run this process when a new record is created."
+msgstr "Diesen Prozess ausfuehren, wenn ein neuer Datensatz erstellt wird."
+
+msgid "When record is edited"
+msgstr "Bei Bearbeitung des Datensatzes"
+
+msgid "Run this process when a record is edited."
+msgstr "Diesen Prozess ausfuehren, wenn ein Datensatz bearbeitet wird."
+
+msgid "Create and Edit"
+msgstr "Erstellen und Bearbeiten"
+
+msgid "Create only"
+msgstr "Nur erstellen"
+
+msgid "Edit only"
+msgstr "Nur bearbeiten"
+
+msgid "Not set"
+msgstr "Nicht festgelegt"
+
+msgid "Approval process"
+msgstr "Genehmigungsprozess"
+
+msgid "Approval processes"
+msgstr "Genehmigungsprozesse"
+
+msgid ""
+"Per-rule JSON: approval_actions, rejection_actions, record_modification, "
+"process_admins (or rule-level admin overrides)."
+msgstr ""
+"JSON pro Regel: approval_actions, rejection_actions, record_modification, "
+"process_admins (oder Regel-Ebene Admin-Ueberschreibungen)."
+
+msgid "Order"
+msgstr "Reihenfolge"
+
+msgid "Sequence of this rule within the process."
+msgstr "Sequenz dieser Regel innerhalb des Prozesses."
+
+msgid "Approval process rule"
+msgstr "Genehmigungsprozessregel"
+
+msgid "Approval process rules"
+msgstr "Genehmigungsprozessregeln"
+
+msgid "Rule"
+msgstr "Regel"
+
+msgid "Specific user"
+msgstr "Bestimmter Benutzer"
+
+msgid "Manager of record owner"
+msgstr "Vorgesetzter des Datensatzinhabers"
+
+msgid "Sequence order of this step within the rule."
+msgstr "Sequenzreihenfolge dieses Schritts innerhalb der Regel."
+
+msgid "Identifier for the role (implementation-specific)."
+msgstr "Bezeichner fuer die Rolle (implementierungsspezifisch)."
+
+msgid "Approval step"
+msgstr "Genehmigungsschritt"
+
+msgid "Approval steps"
+msgstr "Genehmigungsschritte"
+
+msgid "step"
+msgstr ""
+
+msgid "Process rule"
+msgstr "Prozessregel"
+
+msgid "Field Name"
+msgstr "Feldname"
+
+msgid "Operator"
+msgstr "Operator"
+
+msgid "Value"
+msgstr "Wert"
+
+msgid "AND"
+msgstr "UND"
+
+msgid "OR"
+msgstr "ODER"
+
+msgid "Logical Operator"
+msgstr "Logischer Operator"
+
+msgid "Approval Condition"
+msgstr "Genehmigungsbedingung"
+
+msgid "Approval Conditions"
+msgstr "Genehmigungsbedingungen"
+
+msgid "Pending"
+msgstr "Ausstehend"
+
+msgid "Approved"
+msgstr "Genehmigt"
+
+msgid "Rejected"
+msgstr "Abgelehnt"
+
+msgid "Cancelled"
+msgstr "Abgebrochen"
+
+msgid "Primary key of the target object, stored as string."
+msgstr "Primaerschluessel des Zielobjekts, als Zeichenkette gespeichert."
+
+msgid "Status"
+msgstr "Status"
+
+msgid "The step currently awaiting decision, if any."
+msgstr ""
+"Der Schritt, der derzeit auf eine Entscheidung wartet, falls vorhanden."
+
+msgid ""
+"When set, overrides current_step's approver for this instance only, without "
+"altering the shared process rule's step configuration."
+msgstr ""
+
+msgid "Approval instance"
+msgstr "Genehmigungsinstanz"
+
+msgid "Approval instances"
+msgstr "Genehmigungsinstanzen"
+
+msgid "Approve"
+msgstr "Genehmigen"
+
+msgid "Reject"
+msgstr "Ablehnen"
+
+msgid "Approval decision"
+msgstr "Genehmigungsentscheidung"
+
+msgid "Approval decisions"
+msgstr "Genehmigungsentscheidungen"
+
+msgid "This record is pending approval and cannot be edited."
+msgstr ""
+"Dieser Datensatz wartet auf Genehmigung und kann nicht bearbeitet werden."
+
+msgid "Record has been submitted for approval."
+msgstr "Datensatz wurde zur Genehmigung eingereicht."
+
+msgid "Configure approval action"
+msgstr "Genehmigungsaktion konfigurieren"
+
+msgid "Configure rejection action"
+msgstr "Ablehnungsaktion konfigurieren"
+
+msgid "Field"
+msgstr "Feld"
+
+msgid "Select field"
+msgstr "Feld auswaehlen"
+
+msgid "Task title"
+msgstr "Aufgabentitel"
+
+msgid "Due basis"
+msgstr "Faelligkeitsbasis"
+
+msgid "Record submission date"
+msgstr "Einreichungsdatum des Datensatzes"
+
+msgid "Approval date"
+msgstr "Genehmigungsdatum"
+
+msgid "Rejection date"
+msgstr "Ablehnungsdatum"
+
+msgid "Due in days"
+msgstr "Faellig in Tagen"
+
+msgid "Not Started"
+msgstr "Nicht begonnen"
+
+msgid "In Progress"
+msgstr "In Bearbeitung"
+
+msgid "Completed"
+msgstr "Abgeschlossen"
+
+msgid "Priority"
+msgstr "Prioritaet"
+
+msgid "Low"
+msgstr "Niedrig"
+
+msgid "Medium"
+msgstr "Mittel"
+
+msgid "High"
+msgstr "Hoch"
+
+msgid "Task description"
+msgstr "Aufgabenbeschreibung"
+
+msgid "Mail template"
+msgstr "E-Mail-Vorlage"
+
+msgid "Select template"
+msgstr "Vorlage auswaehlen"
+
+msgid "To (email field / email / self)"
+msgstr "An (E-Mail-Feld / E-Mail / Selbst)"
+
+msgid "Also send to"
+msgstr "Auch senden an"
+
+msgid "Notification template"
+msgstr "Benachrichtigungsvorlage"
+
+msgid "To (record field / self)"
+msgstr "An (Datensatzfeld / Selbst)"
+
+msgid "Also notify to"
+msgstr "Auch benachrichtigen"
+
+msgid "Custom message (optional, overrides template)"
+msgstr "Benutzerdefinierte Nachricht (optional, ueberschreibt Vorlage)"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "Apply"
+msgstr "Anwenden"
+
+msgid "Select value"
+msgstr "Wert auswaehlen"
+
+msgid "Approval History"
+msgstr "Genehmigungsverlauf"
+
+msgid "Resubmit this record for approval?"
+msgstr "Diesen Datensatz erneut zur Genehmigung einreichen?"
+
+msgid "Resubmit"
+msgstr "Erneut einreichen"
+
+msgid "Process"
+msgstr "Prozess"
+
+msgid "Requested By"
+msgstr "Angefordert von"
+
+msgid "Respond"
+msgstr "Antworten"
+
+#, fuzzy
+#| msgid "Current"
+msgid "Current Step"
+msgstr "Aktuell"
+
+#, fuzzy
+#| msgid "Completed"
+msgid "Completed Steps"
+msgstr "Abgeschlossen"
+
+#, fuzzy
+#| msgid "In Progress"
+msgid "Progress"
+msgstr "In Bearbeitung"
+
+msgid "Respond to Approval"
+msgstr "Auf Genehmigung antworten"
+
+msgid "Close"
+msgstr "Schliessen"
+
+msgid "Decision"
+msgstr "Entscheidung"
+
+msgid "Delegate"
+msgstr "Delegieren"
+
+msgid "Delegate To"
+msgstr "Delegieren an"
+
+msgid "Select user"
+msgstr "Benutzer auswaehlen"
+
+msgid "Response Note (Optional)"
+msgstr "Antwortnotiz (optional)"
+
+msgid "Add comments for your decision"
+msgstr "Kommentare zu Ihrer Entscheidung hinzufuegen"
+
+msgid "Submit Response"
+msgstr "Antwort einreichen"
+
+msgid "Execute on"
+msgstr "Ausfuehren bei"
+
+msgid "Edit"
+msgstr "Bearbeiten"
+
+msgid "Delete"
+msgstr "Loeschen"
+
+msgid "Conditions"
+msgstr "Bedingungen"
+
+msgid "Approver"
+msgstr "Genehmiger"
+
+msgid "Notify approver"
+msgstr "Genehmiger benachrichtigen"
+
+msgid "Email"
+msgstr "E-Mail"
+
+msgid "On approval"
+msgstr "Bei Genehmigung"
+
+msgid "Actions"
+msgstr "Aktionen"
+
+msgid "Template"
+msgstr "Vorlage"
+
+msgid "To"
+msgstr "An"
+
+msgid "Custom message"
+msgstr "Benutzerdefinierte Nachricht"
+
+msgid "On rejection"
+msgstr "Bei Ablehnung"
+
+msgid "Record modification"
+msgstr "Datensatzaenderung"
+
+msgid "Stage"
+msgstr "Stufe"
+
+msgid "While waiting for approval"
+msgstr "Waehrend der Wartezeit auf Genehmigung"
+
+msgid "All Fields"
+msgstr "Alle Felder"
+
+msgid "No Fields"
+msgstr "Keine Felder"
+
+msgid "When record is in rejected state"
+msgstr "Wenn der Datensatz im abgelehnten Zustand ist"
+
+msgid "No process rules yet. Use Add rule in the header above."
+msgstr ""
+"Noch keine Prozessregeln. Verwenden Sie Regel hinzufuegen im Kopfbereich "
+"oben."
+
+msgid "Are you sure you want to deactivate this approval process?"
+msgstr ""
+"Sind Sie sicher, dass Sie diesen Genehmigungsprozess deaktivieren moechten?"
+
+#, python-format
+msgid ""
+"Activating this will deactivate any other active approval process for the "
+"%(module)s module. Do you want to continue?"
+msgstr ""
+"Die Aktivierung deaktiviert jeden anderen aktiven Genehmigungsprozess fuer "
+"das Modul %(module)s. Moechten Sie fortfahren?"
+
+msgid "Action on approval"
+msgstr "Aktion bei Genehmigung"
+
+msgid "Selected:"
+msgstr "Ausgewaehlt:"
+
+msgid "Update Field"
+msgstr "Feld aktualisieren"
+
+msgid "Assign Task"
+msgstr "Aufgabe zuweisen"
+
+msgid "Action on rejection"
+msgstr "Aktion bei Ablehnung"
+
+msgid "Who should approve"
+msgstr "Wer soll genehmigen"
+
+msgid "Approver type"
+msgstr "Genehmigertyp"
+
+msgid "Approver will be resolved from the record owner at runtime."
+msgstr "Der Genehmiger wird zur Laufzeit aus dem Datensatzinhaber ermittelt."
+
+msgid "Add More Approvers"
+msgstr "Weitere Genehmiger hinzufuegen"
+
+msgid "Set overall approval method"
+msgstr "Gesamte Genehmigungsmethode festlegen"
+
+msgid "Anyone"
+msgstr "Jeder"
+
+msgid "Everyone"
+msgstr "Alle"
+
+msgid "Specify the order"
+msgstr "Reihenfolge festlegen"
+
+msgid "Sequential"
+msgstr "Sequenziell"
+
+msgid "Parallel"
+msgstr "Parallel"
+
+msgid "Record Modification"
+msgstr "Datensatzaenderung"
+
+msgid "Configure field access per approval stage (sequential approval)."
+msgstr ""
+"Feldzugriff pro Genehmigungsstufe konfigurieren (sequenzielle Genehmigung)."
+
+msgid "Field access"
+msgstr "Feldzugriff"
+
+msgid "Specific Fields"
+msgstr "Bestimmte Felder"
+
+msgid ""
+"One setting applies to the whole process (Anyone, Parallel, or a single "
+"approver)."
+msgstr ""
+"Eine Einstellung gilt fuer den gesamten Prozess (Jeder, Parallel oder ein "
+"einzelner Genehmiger)."
+
+msgid "Edit Policy While Waiting"
+msgstr "Bearbeitungsrichtlinie waehrend des Wartens"
+
+msgid "All fields are editable."
+msgstr "Alle Felder sind bearbeitbar."
+
+msgid "Only specific fields are editable"
+msgstr "Nur bestimmte Felder sind bearbeitbar"
+
+msgid "No fields are editable while waiting."
+msgstr "Keine Felder sind waehrend des Wartens bearbeitbar."
+
+msgid "Select fields"
+msgstr "Felder auswaehlen"
+
+msgid "No fields available"
+msgstr "Keine Felder verfuegbar"
+
+msgid "This approval no longer exists."
+msgstr "Diese Genehmigung existiert nicht mehr."
+
+msgid ""
+"Module not found: the linked record no longer exists. The approval entry has "
+"been removed."
+msgstr ""
+"Modul nicht gefunden: Der verknuepfte Datensatz existiert nicht mehr. Der "
+"Genehmigungseintrag wurde entfernt."
+
+msgid "Only the original requester can resubmit this record."
+msgstr ""
+
+msgid "No approver step configured."
+msgstr ""
+
+msgid "Record resubmitted for approval."
+msgstr "Datensatz erneut zur Genehmigung eingereicht."
+
+msgid "Only the original requester can update this task."
+msgstr ""
+
+msgid "Invalid task status."
+msgstr ""
+
+msgid "Invalid related record."
+msgstr ""
+
+msgid "Task status updated successfully."
+msgstr "Aufgabenstatus erfolgreich aktualisiert."
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Decision Timeline"
+msgstr "Entscheidungszeitachse"
+
+msgid "Tasks"
+msgstr "Aufgaben"
+
+msgid "Step"
+msgstr "Schritt"
+
+msgid "Cycle"
+msgstr "Zyklus"
+
+msgid "Decided By"
+msgstr "Entschieden von"
+
+msgid "Comment"
+msgstr "Kommentar"
+
+msgid "Decided At"
+msgstr "Entschieden am"
+
+msgid "Current (After Resubmit)"
+msgstr "Aktuell (nach erneuter Einreichung)"
+
+msgid "Previous"
+msgstr "Vorherig"
+
+msgid "Current"
+msgstr "Aktuell"
+
+msgid "Subject"
+msgstr "Betreff"
+
+msgid "Due Date"
+msgstr "Faelligkeitsdatum"
+
+msgid "My Approval Jobs"
+msgstr "Meine Genehmigungsaufgaben"
+
+msgid "You are not an approver for this job."
+msgstr "Sie sind kein Genehmiger fuer diese Aufgabe."
+
+msgid "Module not found: the record linked to this approval no longer exists."
+msgstr ""
+"Modul nicht gefunden: Der mit dieser Genehmigung verknuepfte Datensatz "
+"existiert nicht mehr."
+
+#, fuzzy
+#| msgid "You are not an approver for this job."
+msgid "You are not the approver for this job."
+msgstr "Sie sind kein Genehmiger fuer diese Aufgabe."
+
+#, fuzzy
+#| msgid "Approval decision"
+msgid "Invalid decision."
+msgstr "Genehmigungsentscheidung"
+
+msgid "No pending step found."
+msgstr ""
+
+msgid "Approval delegated successfully."
+msgstr "Genehmigung erfolgreich delegiert."
+
+msgid "Approval rejected."
+msgstr "Genehmigung abgelehnt."
+
+msgid "Approved. Waiting for other approvers."
+msgstr "Genehmigt. Warten auf andere Genehmiger."
+
+msgid "Approval completed."
+msgstr "Genehmigung abgeschlossen."
+
+msgid "Approved and moved to next approver."
+msgstr "Genehmigt und zum naechsten Genehmiger verschoben."
+
+#, fuzzy
+#| msgid "You are not an approver for this job."
+msgid "You are not the approver for this pending job."
+msgstr "Sie sind kein Genehmiger fuer diese Aufgabe."
+
+msgid "Only the original requester can edit this rejected record."
+msgstr ""
+
+msgid "Only the original requester can edit this approved record."
+msgstr ""
+
+#, fuzzy
+#| msgid "This record is pending approval and cannot be edited."
+msgid "This record's approval status does not allow edits."
+msgstr ""
+"Dieser Datensatz wartet auf Genehmigung und kann nicht bearbeitet werden."
+
+#, fuzzy
+#| msgid "Record owner"
+msgid "Record not found."
+msgstr "Datensatzinhaber"
+
+msgid "Invalid field."
+msgstr ""
+
+#, fuzzy
+#| msgid "All fields are editable."
+msgid "Field is not editable."
+msgstr "Alle Felder sind bearbeitbar."
+
+msgid "Unknown field."
+msgstr ""
+
+msgid "Invalid value."
+msgstr ""
+
+#, fuzzy
+#| msgid "Update field"
+msgid "Failed to update field."
+msgstr "Feld aktualisieren"
+
+msgid "Field updated successfully."
+msgstr "Feld erfolgreich aktualisiert."
+
+msgid "Model"
+msgstr "Modell"
+
+msgid "Active"
+msgstr "Aktiv"
+
+msgid "Approval Process"
+msgstr "Genehmigungsprozess"
+
+msgid "Rule criteria"
+msgstr "Regelkriterien"
+
+msgid "When should this rule apply?"
+msgstr "Wann soll diese Regel gelten?"
+
+#, python-format
+msgid "Rule %(order)s — Criteria"
+msgstr "Regel %(order)s — Kriterien"
+
+msgid "Add process rule"
+msgstr "Prozessregel hinzufuegen"
+
+msgid "Edit process rule"
+msgstr "Prozessregel bearbeiten"
+
+msgid "A rule with this order already exists for this process."
+msgstr ""
+"Eine Regel mit dieser Reihenfolge existiert bereits fuer diesen Prozess."
+
+msgid "Process rule updated successfully."
+msgstr "Prozessregel erfolgreich aktualisiert."
+
+msgid "Process rule created successfully."
+msgstr "Prozessregel erfolgreich erstellt."
+
+msgid "activated"
+msgstr "aktiviert"
+
+msgid "deactivated"
+msgstr "deaktiviert"
+
+#, python-format
+msgid ""
+"%(name)s %(status)s successfully. %(deactivated)s deactivated for this "
+"module."
+msgstr ""
+"%(name)s %(status)s erfolgreich. %(deactivated)s fuer dieses Modul "
+"deaktiviert."
+
+msgid "Add Rule"
+msgstr "Regel hinzufuegen"
+
+msgid "Edit Process"
+msgstr "Prozess bearbeiten"

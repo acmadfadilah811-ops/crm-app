@@ -1,0 +1,211 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-18 14:05+0000\n"
+"PO-Revision-Date: 2026-08-01 12:00+0330\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Contacts"
+msgstr "مخاطبین"
+
+msgid ""
+"Invalid parent contact. This relationship would create a circular hierarchy."
+msgstr ""
+
+msgid "Select Contact"
+msgstr "انتخاب مخاطب"
+
+msgid "Select the contact to assign as a child contact."
+msgstr "مخاطبی را که می‌خواهید به عنوان مخاطب فرزند تخصیص دهید انتخاب کنید."
+
+msgid "Please select contact."
+msgstr "لطفاً مخاطب را انتخاب کنید."
+
+msgid "This contact already has a parent contact assigned."
+msgstr "این مخاطب قبلاً یک مخاطب والد به آن تخصیص داده شده است."
+
+msgid "An contact cannot be its own parent."
+msgstr "یک مخاطب نمی‌تواند والد خود باشد."
+
+msgid "Please select a valid contact."
+msgstr "لطفاً یک مخاطب معتبر انتخاب کنید."
+
+msgid "Web"
+msgstr "وب"
+
+msgid "Phone Inquiry"
+msgstr "استعلام تلفنی"
+
+msgid "Partner Referral"
+msgstr "معرفی شریک"
+
+msgid "Purchased List"
+msgstr "لیست خریداری شده"
+
+msgid "Other"
+msgstr "سایر"
+
+msgid "Contact Owner"
+msgstr "مالک مخاطب"
+
+msgid "Title"
+msgstr "عنوان"
+
+msgid "First Name"
+msgstr "نام"
+
+msgid "Last Name"
+msgstr "نام خانوادگی"
+
+msgid "Email"
+msgstr "ایمیل"
+
+#| msgid "Contact Owner"
+msgid "Contact Number"
+msgstr "شماره تماس"
+
+#| msgid "Secondary Phone"
+msgid "Secondary Contact Number"
+msgstr "شماره تماس ثانویه"
+
+msgid "City"
+msgstr "شهر"
+
+msgid "State"
+msgstr "استان"
+
+msgid "Country"
+msgstr "کشور"
+
+msgid "Zip"
+msgstr "کد پستی"
+
+msgid "Parent Contact"
+msgstr "مخاطب والد"
+
+msgid "Contact Source"
+msgstr "منبع مخاطب"
+
+msgid "Description"
+msgstr "توضیحات"
+
+msgid "Birth Date"
+msgstr "تاریخ تولد"
+
+msgid "Assistant"
+msgstr "دستیار"
+
+#| msgid "Assistant Phone"
+msgid "Assistant Contact Number"
+msgstr "شماره تماس دستیار"
+
+msgid "Languages"
+msgstr "زبان‌ها"
+
+msgid "Is Primary"
+msgstr "اصلی است"
+
+msgid "Contact Score"
+msgstr "امتیاز مخاطب"
+
+msgid "Contact"
+msgstr "مخاطب"
+
+msgid "Account"
+msgstr "حساب"
+
+msgid "Role"
+msgstr "نقش"
+
+msgid "Contact Account Relationship"
+msgstr "رابطه مخاطب و حساب"
+
+msgid "Contact Account Relationships"
+msgstr "روابط مخاطب و حساب"
+
+msgid "contact Hierarchy"
+msgstr "سلسله‌مراتب مخاطب"
+
+msgid "Close"
+msgstr "بستن"
+
+msgid "Contact Information"
+msgstr "اطلاعات مخاطب"
+
+msgid "Address Information"
+msgstr "اطلاعات آدرس"
+
+msgid "Additional Information"
+msgstr "اطلاعات اضافی"
+
+msgid "Change Owner"
+msgstr "تغییر مالک"
+
+msgid "Add Account Contact Relationships"
+msgstr "افزودن روابط حساب و مخاطب"
+
+msgid "Add Child Contact"
+msgstr "افزودن مخاطب فرزند"
+
+msgid "You must be logged in to perform this action."
+msgstr "برای انجام این اقدام باید وارد سیستم شوید."
+
+msgid "No parent contact specified in the request."
+msgstr "هیچ مخاطب والد در درخواست مشخص نشده است."
+
+msgid "A contact cannot be its own parent."
+msgstr "یک مخاطب نمی‌تواند والد خود باشد."
+
+msgid "This contact already has a parent contact."
+msgstr "این مخاطب قبلاً یک مخاطب والد دارد."
+
+msgid "Child contact assigned successfully."
+msgstr "مخاطب فرزند با موفقیت تخصیص یافت."
+
+msgid "Invalid parent contact ID format."
+msgstr "فرمت شناسه مخاطب والد نامعتبر است."
+
+msgid "You don't have permission to perform this action."
+msgstr "شما مجوز انجام این اقدام را ندارید."
+
+msgid "This contact doesn't have a parent contact."
+msgstr "این مخاطب مخاطب والد ندارد."
+
+msgid "An error occurred while removing the child contact."
+msgstr "در حین حذف مخاطب فرزند خطایی رخ داد."
+
+msgid "Edit"
+msgstr "ویرایش"
+
+msgid "Duplicate"
+msgstr "تکراری"
+
+msgid "Related Campaigns"
+msgstr "کمپین‌های مرتبط"
+
+msgid "Related Opportunities"
+msgstr "فرصت‌های مرتبط"
+
+msgid "Related Accounts"
+msgstr "حساب‌های مرتبط"
+
+msgid "Child Contacts"
+msgstr "مخاطبین فرزند"
+
+msgid "Are you sure you want to remove this child contact relationship?"
+msgstr ""
+
+msgid "View Hierarchy"
+msgstr "مشاهده سلسله‌مراتب"

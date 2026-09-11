@@ -1,0 +1,73 @@
+<script>
+    (function () {
+        var saved = localStorage.getItem("sidebarCollapsed");
+        if (saved === "true" && window.innerWidth >= 992) {
+            document.documentElement.setAttribute("data-sidebar-collapsed", "true");
+        }
+    })();
+</script>
+<style>
+    html[data-sidebar-collapsed='true'] #sideMenu {
+        width: 0 !important;
+        transition: none !important;
+    }
+    html[data-sidebar-collapsed='true'] #mainContent {
+        padding-inline-start: 0 !important;
+    }
+    html[data-sidebar-collapsed='true'] #arrowIcon {
+        transform: scaleX(-1) !important;
+    }
+    html[data-sidebar-collapsed='true'] #toggleSideMenu {
+        inset-inline-start: calc(5rem - 10px) !important;
+    }
+</style>
+<div class="relative h-full" id="sideMenuContainer">
+    <button
+        id="toggleSideMenu"
+        class="fixed top-[3.9375rem] {% if LANGUAGE_BIDI %}right-[calc(5rem+230px-10px)]{% else %}left-[calc(5rem+230px-10px)]{% endif %} w-[20px] z-40 transition-all duration-300 ease-in-out focus-visible:outline-0"
+    >
+        <i
+            id="arrowIcon"
+            class="fa-solid {% if LANGUAGE_BIDI %}fa-chevron-right{% else %}fa-chevron-left{% endif %} transition-transform duration-300 leading-none"
+            aria-hidden="true"
+            style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: var(--menu-arrow-bg); color: var(--menu-arrow-fg); font-size: 10px; line-height: 1; -webkit-text-stroke: 0.9px currentColor; paint-order: stroke fill"
+        ></i>
+    </button>
+    <div
+        id="sideMenu"
+        class="w-[230px] fixed {% if LANGUAGE_BIDI %}right-[5rem] border-l border-l-primary-100{% else %}left-[5rem] border-r border-r-primary-100{% endif %} transition-all duration-300 bg-white overflow-hidden h-[calc(100vh-60px)] z-30"
+    >
+        <button id="hiddenReloadSidebar" type="button" class="hidden" data-app-label="{{ current_app_label }}">
+            Reload Sidebar
+        </button>
+        {% with current_items=sub_section_menu|get_item:current_section %}
+            {% if current_items %}
+                <ul class="flex flex-col gap-[5px] p-5 pt-8" id="subSidebar" hx-swap-oob="true">
+                    {% for item in current_items %}
+                        {% if not item.perm or request.user|has_super_user:item.perm %}
+                            <li class="subSidebarItem">
+                                <a
+                                    id="{{ item.id }}"
+                                    href="{{ item.url }}?section={{ current_section }}"
+                                    data-section="{{ current_section }}"
+                                    {% for attr, value in item.attrs.items %}
+                                        {{ attr }}="{{ value }}"
+                                    {% endfor %}
+                                    class="sidebar-link group flex items-center gap-3 text-sm px-3 py-2 rounded-md transition duration-300"
+                                >
+                                    {% if item.icon %}
+                                        <span
+                                            class="sidebar-link-icon transition duration-300"
+                                            style="--icon-url: url('{% static item.icon %}')"
+                                        ></span>
+                                    {% endif %}
+                                    {{ item.label }}
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </div>
+</div>

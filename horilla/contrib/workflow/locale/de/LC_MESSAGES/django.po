@@ -1,0 +1,492 @@
+# German translations for Horilla Workflow module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Workflow"
+msgstr "Workflow"
+
+msgid ""
+"Record-triggered workflow rules with field conditions, immediate actions "
+"(update field, assign task, email, notification), and time-based triggers "
+"scheduled relative to record or rule dates."
+msgstr ""
+"Datensatz-ausgeloeste Workflow-Regeln mit Feldbedingungen, sofortigen "
+"Aktionen (Feld aktualisieren, Aufgabe zuweisen, E-Mail, Benachrichtigung) "
+"und zeitbasierten Ausloesern, die relativ zu Datensatz- oder Regeldaten "
+"geplant sind."
+
+msgid ""
+"Re-raise HttpNotFound with exception chaining in workflow detail views to "
+"preserve context."
+msgstr ""
+
+msgid ""
+"Migrated workflow execution engine transaction imports from django.db to "
+"horilla.db."
+msgstr ""
+
+msgid ""
+"Migrated signal imports to the horilla.db.models.signals shim and "
+"standardized first-party import groups; behavior unchanged."
+msgstr ""
+"Signal-Imports zum horilla.db.models.signals-Shim migriert und interne "
+"Importgruppen standardisiert; Verhalten unveraendert."
+
+#, fuzzy
+#| msgid ""
+#| "Workflow automation engine: WorkflowRule / WorkflowCondition / "
+#| "WorkflowAction models, dynamic condition evaluation, immediate dispatch "
+#| "on record saves, Celery WorkflowTimeTriggerAction and "
+#| "ScheduledWorkflowExecution, execution history modal, FilterSet support, "
+#| "auto-registration for workflow-enabled CRM models (leads, accounts, "
+#| "campaigns, contacts, opportunities), modular views, hidden-field action "
+#| "configuration fixes, restored workflow detail pages, and improved routing "
+#| "namespaces."
+msgid ""
+"Workflow automation engine: WorkflowRule / WorkflowCondition / "
+"WorkflowAction models, dynamic condition evaluation, immediate dispatch on "
+"record saves, Celery WorkflowTimeTriggerAction and "
+"ScheduledWorkflowExecution, execution history modal, FilterSet support, auto-"
+"registration for workflow-enabled models via feature registration (e.g. "
+"users, departments, holidays), modular views, hidden-field action "
+"configuration fixes, restored workflow detail pages, and improved routing "
+"namespaces."
+msgstr ""
+"Workflow-Automatisierungsmotor: WorkflowRule / WorkflowCondition / "
+"WorkflowAction-Modelle, dynamische Bedingungsauswertung, sofortige "
+"Verteilung beim Speichern von Datensaetzen, Celery WorkflowTimeTriggerAction "
+"und ScheduledWorkflowExecution, Ausfuehrungsverlaufs-Modal, FilterSet-"
+"Unterstuetzung, automatische Registrierung fuer Workflow-faehige CRM-Modelle."
+
+msgid ""
+"WorkflowRuleForm aligned with HorillaModelForm layout: field_order, "
+"Meta.fields = \"__all__\", and keep_on_form for is_active; action forms "
+"unchanged."
+msgstr ""
+"WorkflowRuleForm am HorillaModelForm-Layout ausgerichtet: field_order, "
+"Meta.fields und keep_on_form fuer is_active; Aktionsformulare unveraendert."
+
+#, fuzzy
+#| msgid ""
+#| "Initial release: workflow rules per ContentType with create/edit "
+#| "triggers, AND/OR conditions, ordered immediate actions, time-trigger "
+#| "actions with Celery scheduling and execution history, Settings → "
+#| "Automations → Workflow Rules, and integration with registered CRM models "
+#| "via feature registration."
+msgid ""
+"Initial release: workflow rules per ContentType with create/edit triggers, "
+"AND/OR conditions, ordered immediate actions, time-trigger actions with "
+"Celery scheduling and execution history, Settings → Automations → Workflow "
+"Rules, and integration with registered models via feature registration."
+msgstr ""
+"Erstveroeffentlichung: Workflow-Regeln pro ContentType mit Erstell-/"
+"Bearbeitungs-Ausloesern, AND/OR-Bedingungen, geordneten sofortigen Aktionen, "
+"Zeitausloeser-Aktionen mit Celery-Planung und Ausfuehrungsverlauf, "
+"Einstellungen → Automatisierungen → Workflow-Regeln."
+
+msgid "Rule Trigger Date"
+msgstr "Regelausloese-Datum"
+
+msgid "Workflow Rules"
+msgstr "Workflow-Regeln"
+
+msgid "Rule Name"
+msgstr "Regelname"
+
+msgid "Module"
+msgstr "Modul"
+
+msgid "The module (record type) this rule applies to."
+msgstr "Das Modul (Datensatztyp), auf das diese Regel angewendet wird."
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "When record is created"
+msgstr "Bei Erstellung des Datensatzes"
+
+msgid "Run this workflow when a new record is created."
+msgstr "Diesen Workflow ausfuehren, wenn ein neuer Datensatz erstellt wird."
+
+msgid "When record is edited"
+msgstr "Bei Bearbeitung des Datensatzes"
+
+msgid "Run this workflow when an existing record is edited."
+msgstr ""
+"Diesen Workflow ausfuehren, wenn ein bestehender Datensatz bearbeitet wird."
+
+msgid "Workflow Rule"
+msgstr "Workflow-Regel"
+
+msgid "Create and Edit"
+msgstr "Erstellen und Bearbeiten"
+
+msgid "Create only"
+msgstr "Nur erstellen"
+
+msgid "Edit only"
+msgstr "Nur bearbeiten"
+
+msgid "Not set"
+msgstr "Nicht festgelegt"
+
+msgid "Field Name"
+msgstr "Feldname"
+
+msgid "Operator"
+msgstr "Operator"
+
+msgid "Value"
+msgstr "Wert"
+
+msgid "AND"
+msgstr "UND"
+
+msgid "OR"
+msgstr "ODER"
+
+msgid "Logical Operator"
+msgstr "Logischer Operator"
+
+msgid "Order"
+msgstr "Reihenfolge"
+
+msgid "Workflow Condition"
+msgstr "Workflow-Bedingung"
+
+msgid "Workflow Conditions"
+msgstr "Workflow-Bedingungen"
+
+msgid "Update Field"
+msgstr "Feld aktualisieren"
+
+msgid "Assign Task"
+msgstr "Aufgabe zuweisen"
+
+msgid "Email"
+msgstr "E-Mail"
+
+msgid "Notification"
+msgstr "Benachrichtigung"
+
+msgid "Action"
+msgstr "Aktion"
+
+msgid ""
+"Type-specific configuration. update_field: {field, value}. assign_task: "
+"{subject, due_days, priority, owner_id}. email: {template_id, to}. "
+"notification: {message, user_ids}."
+msgstr ""
+"Typspezifische Konfiguration. update_field: {field, value}. assign_task: "
+"{subject, due_days, priority, owner_id}. email: {template_id, to}. "
+"notification: {message, user_ids}."
+
+msgid "Workflow Action"
+msgstr "Workflow-Aktion"
+
+msgid "Workflow Actions"
+msgstr "Workflow-Aktionen"
+
+msgid "Minutes"
+msgstr "Minuten"
+
+msgid "Hours"
+msgstr "Stunden"
+
+msgid "Days"
+msgstr "Tage"
+
+msgid "After"
+msgstr "Nach"
+
+msgid "Before"
+msgstr "Vor"
+
+msgid "Delay"
+msgstr "Verzoegerung"
+
+msgid "Unit"
+msgstr "Einheit"
+
+msgid "Direction"
+msgstr "Richtung"
+
+msgid "Trigger Date"
+msgstr "Ausloesedatum"
+
+msgid ""
+"Use 'rule_trigger_date' to fire relative to when the rule triggered, or "
+"enter a date field name from the target model."
+msgstr ""
+"Verwenden Sie 'rule_trigger_date', um relativ zum Zeitpunkt der "
+"Regelauslosung auszufuehren, oder geben Sie den Namen eines Datumsfelds aus "
+"dem Zielmodell ein."
+
+msgid "Action Type"
+msgstr "Aktionstyp"
+
+msgid "Action Config"
+msgstr "Aktionskonfiguration"
+
+msgid "Workflow Time Trigger Action"
+msgstr "Workflow-Zeitausloeser-Aktion"
+
+msgid "Workflow Time Trigger Actions"
+msgstr "Workflow-Zeitausloeser-Aktionen"
+
+msgid "Pending"
+msgstr "Ausstehend"
+
+msgid "Completed"
+msgstr "Abgeschlossen"
+
+msgid "Failed"
+msgstr "Fehlgeschlagen"
+
+msgid "Time Trigger"
+msgstr "Zeitausloeser"
+
+msgid "Record ID"
+msgstr "Datensatz-ID"
+
+msgid "Scheduled At"
+msgstr "Geplant am"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Executed At"
+msgstr "Ausgefuehrt am"
+
+msgid "Error"
+msgstr "Fehler"
+
+msgid "Scheduled Workflow Execution"
+msgstr "Geplante Workflow-Ausfuehrung"
+
+msgid "Scheduled Workflow Executions"
+msgstr "Geplante Workflow-Ausfuehrungen"
+
+msgid "Field"
+msgstr "Feld"
+
+msgid "Select field"
+msgstr "Feld auswaehlen"
+
+msgid "Task title"
+msgstr "Aufgabentitel"
+
+msgid "Due basis"
+msgstr "Faelligkeitsbasis"
+
+msgid "Record submission date"
+msgstr "Einreichungsdatum des Datensatzes"
+
+msgid "Record update date"
+msgstr "Aktualisierungsdatum des Datensatzes"
+
+msgid "Due in days"
+msgstr "Faellig in Tagen"
+
+msgid "Not Started"
+msgstr "Nicht begonnen"
+
+msgid "In Progress"
+msgstr "In Bearbeitung"
+
+msgid "Priority"
+msgstr "Prioritaet"
+
+msgid "Low"
+msgstr "Niedrig"
+
+msgid "Medium"
+msgstr "Mittel"
+
+msgid "High"
+msgstr "Hoch"
+
+msgid "Task description"
+msgstr "Aufgabenbeschreibung"
+
+msgid "Mail template"
+msgstr "E-Mail-Vorlage"
+
+msgid "Select template"
+msgstr "Vorlage auswaehlen"
+
+msgid "To (email field / email / self)"
+msgstr "An (E-Mail-Feld / E-Mail / Selbst)"
+
+msgid "Also send to"
+msgstr "Auch senden an"
+
+msgid "Notification template"
+msgstr "Benachrichtigungsvorlage"
+
+msgid "To (record field / self)"
+msgstr "An (Datensatzfeld / Selbst)"
+
+msgid "Also notify to"
+msgstr "Auch benachrichtigen"
+
+msgid "Custom message (optional, overrides template)"
+msgstr "Benutzerdefinierte Nachricht (optional, ueberschreibt Vorlage)"
+
+msgid "Edit Action"
+msgstr "Aktion bearbeiten"
+
+msgid "Add Action"
+msgstr "Aktion hinzufuegen"
+
+msgid "Close"
+msgstr "Schliessen"
+
+msgid "Action type"
+msgstr "Aktionstyp"
+
+msgid "Select action type"
+msgstr "Aktionstyp auswaehlen"
+
+msgid "Mail"
+msgstr "E-Mail"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Select value"
+msgstr "Wert auswaehlen"
+
+msgid "Edit Condition"
+msgstr "Bedingung bearbeiten"
+
+msgid "Add Condition"
+msgstr "Bedingung hinzufuegen"
+
+msgid "---------"
+msgstr "---------"
+
+msgid "Logical Operator (join with next condition)"
+msgstr "Logischer Operator (mit naechster Bedingung verbinden)"
+
+msgid "Are you sure you want to deactivate this workflow rule?"
+msgstr "Sind Sie sicher, dass Sie diese Workflow-Regel deaktivieren moechten?"
+
+msgid "Are you sure you want to activate this workflow rule?"
+msgstr "Sind Sie sicher, dass Sie diese Workflow-Regel aktivieren moechten?"
+
+msgid "Entry Criteria"
+msgstr "Eingabekriterien"
+
+msgid "No conditions set."
+msgstr "Keine Bedingungen festgelegt."
+
+msgid "Immediate Actions"
+msgstr "Sofortige Aktionen"
+
+msgid "Add"
+msgstr "Hinzufuegen"
+
+msgid "Delete Action"
+msgstr "Aktion loeschen"
+
+msgid "No actions added yet"
+msgstr "Noch keine Aktionen hinzugefuegt"
+
+msgid "Use the Add button to configure what happens when this rule fires."
+msgstr ""
+"Verwenden Sie die Schaltflaeche Hinzufuegen, um zu konfigurieren, was "
+"passiert, wenn diese Regel ausgeloest wird."
+
+msgid "Time Trigger Actions"
+msgstr "Zeitausloeser-Aktionen"
+
+msgid "Execution History"
+msgstr "Ausfuehrungsverlauf"
+
+msgid "Edit"
+msgstr "Bearbeiten"
+
+msgid "Delete"
+msgstr "Loeschen"
+
+msgid "No time triggers added yet"
+msgstr "Noch keine Zeitausloeser hinzugefuegt"
+
+msgid "Use the Add button to schedule actions after a delay."
+msgstr ""
+"Verwenden Sie die Schaltflaeche Hinzufuegen, um Aktionen nach einer "
+"Verzoegerung zu planen."
+
+msgid "Edit Time Trigger"
+msgstr "Zeitausloeser bearbeiten"
+
+msgid "Add Time Trigger"
+msgstr "Zeitausloeser hinzufuegen"
+
+msgid "Trigger Timing"
+msgstr "Ausloese-Timing"
+
+msgid "Time Trigger Execution History"
+msgstr "Ausfuehrungsverlauf des Zeitausloesers"
+
+msgid "activated"
+msgstr "aktiviert"
+
+msgid "deactivated"
+msgstr "deaktiviert"
+
+msgid "When should this rule apply?"
+msgstr "Wann soll diese Regel gelten?"
+
+msgid "At least one condition is required."
+msgstr "Mindestens eine Bedingung ist erforderlich."
+
+msgid "Model"
+msgstr "Modell"
+
+msgid "Execute on"
+msgstr "Ausfuehren bei"
+
+msgid "Active"
+msgstr "Aktiv"
+
+msgid "Record"
+msgstr "Datensatz"
+
+msgid "Workflow rule not found."
+msgstr "Workflow-Regel nicht gefunden."
+
+msgid "Condition saved."
+msgstr "Bedingung gespeichert."
+
+msgid "Action saved."
+msgstr "Aktion gespeichert."
+
+msgid "Time trigger action saved."
+msgstr "Zeitausloeser-Aktion gespeichert."
+
+#, python-brace-format
+#~ msgid "Workflow rule \"{rule.name}\" has been {status}."
+#~ msgstr "Workflow-Regel \"{rule.name}\" wurde {status}."
+
+#~ msgid "An error occurred while toggling the workflow rule: {str(e)}"
+#~ msgstr ""
+#~ "Beim Umschalten der Workflow-Regel ist ein Fehler aufgetreten: {str(e)}"

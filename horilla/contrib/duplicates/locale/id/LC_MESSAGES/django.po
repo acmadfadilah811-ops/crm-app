@@ -1,0 +1,388 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid ""
+"Module for detecting potential duplicate records and supporting merge "
+"workflows."
+msgstr ""
+"Modul untuk mendeteksi potensi rekaman duplikat dan mendukung alur kerja "
+"penggabungan."
+
+msgid ""
+"Avoid RelatedObjectDoesNotExist in DuplicateRule.clean when related objects "
+"are missing."
+msgstr ""
+"Hindari AssociatedObjectDoesNotExist di DuplikatRule.clean ketika objek "
+"terkait hilang."
+
+msgid "Removed deprecated merge_views compatibility shim."
+msgstr "Menghapus shim kompatibilitas merge_views yang tidak digunakan lagi."
+
+msgid ""
+"Standardized first-party import groups and aligned with the platform 1.11.1 "
+"release; rules, criteria, and merge behavior unchanged."
+msgstr ""
+"Grup impor pihak pertama yang terstandarisasi dan selaras dengan rilis "
+"platform 1.11.1;aturan, kriteria, dan perilaku penggabungan tidak berubah."
+
+msgid ""
+"Duplicate rule forms aligned with HorillaModelForm layout: field_order and "
+"Meta.fields = \"__all__\"; criteria rows and validation unchanged."
+msgstr ""
+"Formulir aturan duplikat yang selaras dengan tata letak HorillaModelForm: "
+"field_order dan Meta.fields = \"__all__\";baris kriteria dan validasi tidak "
+"berubah."
+
+msgid ""
+"Release 1.10: duplicate control ships under contrib with app label "
+"duplicates. Feature registration, merge flows, and cross-model references "
+"use contrib paths and matching app labels for clone and duplicate tooling."
+msgstr ""
+"Rilis 1.10: kontrol duplikat dikirimkan di bawah kontrib dengan duplikat "
+"label aplikasi.Pendaftaran fitur, alur penggabungan, dan referensi lintas "
+"model menggunakan jalur kontribusi dan label aplikasi yang cocok untuk alat "
+"kloning dan duplikat."
+
+msgid ""
+"Renamed Clone Management to Duplicate Control. Added duplicate validation "
+"for inline field edits with warning modal for duplicate conflicts. Fixed "
+"duplicate detail tab injection issue and improved merge flow handling for "
+"edge cases."
+msgstr ""
+"Mengganti nama Manajemen Klon menjadi Kontrol Duplikat.Menambahkan validasi "
+"duplikat untuk pengeditan bidang sebaris dengan modal peringatan untuk "
+"konflik duplikat.Memperbaiki masalah injeksi tab detail duplikat dan "
+"meningkatkan penanganan aliran penggabungan untuk kasus edge."
+
+msgid ""
+"Introduced duplicate management capabilities with matching rules, potential "
+"duplicate detection, and merge comparison and summary workflows."
+msgstr ""
+"Memperkenalkan kemampuan manajemen duplikat dengan aturan pencocokan, "
+"potensi deteksi duplikat, dan menggabungkan alur kerja perbandingan dan "
+"ringkasan."
+
+msgid "Clone Management"
+msgstr "Manajemen Klon"
+
+msgid "Potential Duplicates"
+msgstr "Potensi Duplikat"
+
+msgid "Similar records were found. Do you want to proceed?"
+msgstr "Catatan serupa juga ditemukan.Apakah Anda ingin melanjutkan?"
+
+#, python-format
+msgid ""
+"Each matching criterion must use a different field. The following field(s) "
+"appear more than once: %(fields)s"
+msgstr ""
+"Setiap kriteria yang cocok harus menggunakan kolom yang berbeda.Bidang "
+"berikut muncul lebih dari sekali:%(fields)s"
+
+msgid "Matching Criteria row has missing required field: Field."
+msgstr ""
+"Bidang yang wajib diisi pada baris Kriteria Pencocokan tidak ada: Bidang."
+
+msgid "At least one matching criterion is required."
+msgstr "Setidaknya diperlukan satu kriteria yang cocok."
+
+msgid ""
+"Matching rule must apply to the same content type as duplicate rule. Please "
+"select a matching rule for the selected module."
+msgstr ""
+"Aturan pencocokan harus berlaku untuk tipe konten yang sama dengan aturan "
+"duplikat.Silakan pilih aturan yang cocok untuk modul yang dipilih."
+
+msgid "Duplicate Control"
+msgstr "Kontrol Duplikat"
+
+msgid "Matching Rules"
+msgstr "Aturan Pencocokan"
+
+msgid "Duplicate Rules"
+msgstr "Aturan Duplikat"
+
+msgid "Exact Match"
+msgstr "Pencocokan Tepat"
+
+msgid "Fuzzy Match"
+msgstr "Pertandingan Kabur"
+
+msgid "Phonetic Match"
+msgstr "Kecocokan Fonetik"
+
+msgid "Edit Distance"
+msgstr "Sunting Jarak"
+
+msgid "Name"
+msgstr "Nama"
+
+msgid "Description"
+msgstr "Keterangan"
+
+msgid "The model this matching rule applies to"
+msgstr "Model yang menerapkan aturan pencocokan ini"
+
+msgid "Module"
+msgstr "Modul"
+
+msgid "Matching Rule"
+msgstr "Aturan Pencocokan"
+
+msgid "Exact"
+msgstr "Akurat"
+
+msgid "Fuzzy"
+msgstr "Kusut"
+
+msgid "Field"
+msgstr "Bidang"
+
+msgid "Field name to match on"
+msgstr "Nama bidang yang akan dicocokkan"
+
+msgid "Matching Method"
+msgstr "Metode Pencocokan"
+
+msgid "Match Blank Fields"
+msgstr "Cocokkan Bidang Kosong"
+
+msgid "If checked, blank fields will be considered a match"
+msgstr "Jika dicentang, kolom kosong akan dianggap cocok"
+
+msgid "Order of evaluation"
+msgstr "Urutan evaluasi"
+
+msgid "Matching Criterion"
+msgstr "Kriteria Pencocokan"
+
+msgid "Matching Criteria"
+msgstr "Kriteria Pencocokan"
+
+msgid "Allow"
+msgstr "Mengizinkan"
+
+msgid "Block"
+msgstr "Memblokir"
+
+msgid "The model this duplicate rule applies to"
+msgstr "Model yang menerapkan aturan duplikat ini"
+
+msgid "The matching rule to use for detection"
+msgstr "Aturan pencocokan yang digunakan untuk deteksi"
+
+msgid "Action on Create"
+msgstr "Tindakan pada Buat"
+
+msgid "Action on Edit"
+msgstr "Tindakan pada Sunting"
+
+msgid "Title shown in the alert dialog"
+msgstr "Judul ditampilkan dalam dialog peringatan"
+
+msgid "Alert Title"
+msgstr "Judul Peringatan"
+
+msgid "Message to show in alert when duplicates are detected"
+msgstr "Pesan untuk ditampilkan dalam peringatan ketika duplikat terdeteksi"
+
+msgid "Alert Message"
+msgstr "Pesan Peringatan"
+
+msgid "Show list of potential duplicates in the alert"
+msgstr "Tampilkan daftar potensi duplikat dalam peringatan"
+
+msgid "Show Duplicate Records"
+msgstr "Tampilkan Catatan Duplikat"
+
+msgid "Duplicate Rule"
+msgstr "Aturan Duplikat"
+
+msgid "Field Name"
+msgstr "Nama Bidang"
+
+msgid "Field name to evaluate"
+msgstr "Nama bidang yang akan dievaluasi"
+
+msgid "Operator"
+msgstr "Operator"
+
+msgid "Value"
+msgstr "Nilai"
+
+msgid "Value to compare against"
+msgstr "Nilai untuk dibandingkan"
+
+msgid "Logical Operator"
+msgstr "Operator Logis"
+
+msgid "How to combine with next condition"
+msgstr "Cara menggabungkannya dengan kondisi selanjutnya"
+
+msgid "Duplicate Rule Condition"
+msgstr "Kondisi Aturan Duplikat"
+
+msgid "Duplicate Rule Conditions"
+msgstr "Ketentuan Aturan Duplikat"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Potential Duplicate Records:"
+msgstr "Catatan Duplikat Potensial:"
+
+msgid "Cancel"
+msgstr "Batal"
+
+msgid "Continue"
+msgstr "Lanjutkan"
+
+msgid "Edit"
+msgstr "Sunting"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Nothing to show yet. Please add your Matching Rules."
+msgstr ""
+"Belum ada yang bisa ditampilkan.Silakan tambahkan Aturan Pencocokan Anda."
+
+msgid "Potential Duplicate Records"
+msgstr "Potensi Duplikat Catatan"
+
+msgid "Compare"
+msgstr "Membandingkan"
+
+msgid ""
+"When you merge, the master record is updated with the values you choose, and"
+" relationships to other items are shifted to the master record."
+msgstr ""
+"Saat Anda menggabungkan, rekaman master diperbarui dengan nilai yang Anda "
+"pilih, dan hubungan ke item lainnya dialihkan ke rekaman master."
+
+msgid "Master Record"
+msgstr "Catatan Utama"
+
+msgid "Use as master record"
+msgstr "Gunakan sebagai catatan utama"
+
+msgid "Next"
+msgstr "Berikutnya"
+
+msgid "Merge Summary"
+msgstr "Gabungkan Ringkasan"
+
+msgid "You're about to merge these records. You can't undo merging."
+msgstr ""
+"Anda akan menggabungkan data ini.Anda tidak dapat membatalkan penggabungan."
+
+msgid "Selected Values"
+msgstr "Nilai yang Dipilih"
+
+msgid "Selected Value"
+msgstr "Nilai yang Dipilih"
+
+msgid "Merge"
+msgstr "Gabungkan"
+
+msgid "Select"
+msgstr "Pilih"
+
+msgid "of"
+msgstr "dari"
+
+msgid "Unselect"
+msgstr "Batalkan pilihan"
+
+msgid "Clear Session"
+msgstr "Hapus Sesi"
+
+msgid "Select Visible Items"
+msgstr "Pilih Item yang Terlihat"
+
+msgid "No potential duplicates found."
+msgstr "Tidak ada potensi duplikat yang ditemukan."
+
+msgid "You can only merge up to"
+msgstr "Anda hanya dapat menggabungkan hingga"
+
+msgid "items at a time"
+msgstr "item pada suatu waktu"
+
+msgid "Set how duplicate records are handled once matched."
+msgstr "Tetapkan cara rekaman duplikat ditangani setelah cocok."
+
+msgid "Conditions"
+msgstr "Kondisi"
+
+msgid "Details"
+msgstr "Detail"
+
+msgid "Define which fields are compared to detect matching records."
+msgstr ""
+"Tentukan bidang mana yang dibandingkan untuk mendeteksi catatan yang cocok."
+
+msgid "You do not have permission to view this."
+msgstr "Anda tidak memiliki izin untuk melihat ini."
+
+msgid "Invalid request for potential duplicates."
+msgstr "Permintaan tidak valid untuk potensi duplikat."
+
+msgid "Missing required parameters."
+msgstr "Parameter yang diperlukan tidak ada."
+
+msgid "Model not found."
+msgstr "Model tidak ditemukan."
+
+msgid "No duplicates selected."
+msgstr "Tidak ada duplikat yang dipilih."
+
+#, python-brace-format
+msgid "Error loading merge comparison: {error}"
+msgstr "Kesalahan saat memuat perbandingan gabungan:{error}"
+
+#, python-brace-format
+msgid "Error: {error}"
+msgstr "Kesalahan:{error}"
+
+#, python-brace-format
+msgid "Error loading merge summary: {error}"
+msgstr "Kesalahan saat memuat ringkasan penggabungan:{error}"
+
+#, python-brace-format
+msgid "Successfully merged {count} duplicate(s) into master record."
+msgstr "Berhasil menggabungkan{count}duplikat ke dalam data master."
+
+msgid ""
+"The master record is different from the current record. You will be "
+"redirected to the master record."
+msgstr ""
+"Catatan master berbeda dengan catatan saat ini.Anda akan diarahkan ke "
+"catatan master."
+
+#, python-brace-format
+msgid "Error merging duplicates: {error}"
+msgstr "Kesalahan saat menggabungkan duplikat:{error}"
+
+msgid "Merge Selected"
+msgstr "Gabungkan yang Dipilih"
+
+msgid "Record"
+msgstr "Catatan"

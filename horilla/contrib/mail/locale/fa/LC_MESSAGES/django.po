@@ -1,0 +1,788 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-18 14:05+0000\n"
+"PO-Revision-Date: 2026-08-01 12:00+0330\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid ""
+"Module for managing incoming and outgoing emails through mail servers and "
+"Outlook."
+msgstr ""
+"ماژول برای مدیریت ایمیل‌های ورودی و خروجی از طریق سرورهای ایمیل و Outlook."
+
+msgid ""
+"Email pills and suggestions templates accept override URLs so non-Mail "
+"callers are not forced through Mail permission checks. Clear the suggestions"
+" dropdown on blur regardless of whether the typed value is a valid email."
+msgstr ""
+
+msgid "Registered Mail for export_data."
+msgstr ""
+
+msgid ""
+"Added send_by ForeignKey on Mail to record the sending user. Introduced Mail"
+" History settings view with filter, navbar, and list actions for sent, "
+"scheduled, and draft mails. Parent-record access gates mail compose, draft "
+"save/discard, and delete flows. Standardized exception chaining across "
+"serializers, backends, and template views."
+msgstr ""
+
+msgid ""
+"Fixed mail preview context leak, false-positive XSS block, and IDOR access "
+"check. Corrected MailTemplateListView permissions and row-attr shape. "
+"Persist rendered subject and body snapshot at send time. Fixed mail preview "
+"modal styling inconsistencies."
+msgstr ""
+
+msgid ""
+"Fixed mail and notification template creation by assigning created_by and "
+"updated_by before save when _thread_local.request is unavailable. Added mail"
+" configuration detail modal with list row click-through and channel-specific"
+" edit and delete URLs. Sanitize mail subject and body XSS with shared "
+"helpers and centralized sanitize_html in preview and detail views. Clear "
+"mail template body on validation errors to prevent re-displaying rejected "
+"content."
+msgstr ""
+
+#| msgid ""
+#| "Security: fixed SSTI information disclosure and IDOR in the preview endpoint"
+#| " by blocking dangerous template paths and adding a per-object permission "
+#| "check. HorillaMail permissions replaced admin-config perms with correct "
+#| "add/view/change/delete own-record permissions across all mail views and the "
+#| "activity email tab. Standardized first-party imports and added docstrings "
+#| "for pylint compliance."
+msgid ""
+"Security: fixed SSTI information disclosure and IDOR in the preview endpoint"
+" by blocking dangerous template paths and adding a per-object permission "
+"check. Mail permissions replaced admin-config perms with correct "
+"add/view/change/delete own-record permissions across all mail views and the "
+"activity email tab. Standardized first-party imports and added docstrings "
+"for pylint compliance."
+msgstr ""
+"امنیت: افشای اطلاعات SSTI و IDOR در نقطه پایانی پیش‌نمایش با مسدود کردن "
+"مسیرهای قالب خطرناک و افزودن بررسی مجوز هر شیء برطرف شد. مجوزهای HorillaMail"
+" با مجوزهای add/view/change/delete رکورد خود در تمام نمایش‌های ایمیل و برگه "
+"ایمیل فعالیت جایگزین شدند. واردات طرف اول استاندارد شدند و مستندسازی برای "
+"انطباق با pylint اضافه شد."
+
+#| msgid ""
+#| "Mail forms aligned with HorillaModelForm / ModelForm layout: field_order, "
+#| "Meta.fields = \"__all__\", Meta.exclude, and keep_on_form on configuration "
+#| "forms."
+msgid ""
+"Mail forms aligned with ModelForm layout: field_order, Meta.fields = "
+"\"__all__\", Meta.exclude, and keep_on_form on configuration forms."
+msgstr ""
+"فرم‌های ایمیل با چیدمان HorillaModelForm / ModelForm هماهنگ شدند: "
+"field_order، Meta.fields = \"__all__\"، Meta.exclude و keep_on_form در "
+"فرم‌های پیکربندی."
+
+msgid ""
+"Release 1.10: mail ships under the contrib package tree with Django app "
+"label mail. Imports, API routes, URLs, permissions, templates, and static "
+"asset paths updated to drop the legacy prefixed mail app name."
+msgstr ""
+"نسخه ۱.۱۰: ایمیل تحت درخت بسته contrib با برچسب برنامه mail ارائه می‌شود. "
+"واردات، مسیرهای API، URLها، مجوزها، قالب‌ها و مسیرهای دارایی استاتیک برای "
+"حذف نام برنامه ایمیل دارای پیشوند قدیمی به‌روزرسانی شدند."
+
+msgid ""
+"Improved mail template standardization, async mail handling with background "
+"thread execution, and enhanced notification and mail action separation for "
+"approval workflows."
+msgstr ""
+"استانداردسازی قالب ایمیل، مدیریت ایمیل ناهمگام با اجرای نخ پس‌زمینه و "
+"جداسازی بهبودیافته اعلان و اقدام ایمیل برای گردش‌های کاری تأیید بهبود یافت."
+
+msgid ""
+"Minor compatibility improvements and internal stability updates to align "
+"with the enhanced generics framework and visualization system."
+msgstr ""
+"بهبودهای سازگاری جزئی و به‌روزرسانی‌های پایداری داخلی برای هماهنگی با چارچوب"
+" عمومی پیشرفته و سیستم نمایش."
+
+#| msgid ""
+#| "Migrated from Django AppConfig to Horilla AppLauncher and and replacedDjango"
+#| " utilities with horilla.utils.decorators, horilla.utils.translation, and "
+#| "horilla.shortcuts where applicable."
+msgid ""
+"Migrated from AppConfig to AppLauncher and and replacedutilities with "
+"utils.decorators, utils.translation, and shortcuts where applicable."
+msgstr ""
+"از Django AppConfig به Horilla AppLauncher مهاجرت داده شد و ابزارهای Django "
+"با horilla.utils.decorators، horilla.utils.translation و horilla.shortcuts "
+"در صورت لزوم جایگزین شدند."
+
+msgid "Mail System"
+msgstr "سیستم ایمیل"
+
+msgid "To Email"
+msgstr "به ایمیل"
+
+msgid "Enter email address to send test email"
+msgstr "آدرس ایمیل را برای ارسال ایمیل آزمایشی وارد کنید"
+
+msgid "Enter the email address where you want to send the test email."
+msgstr "آدرس ایمیلی که می‌خواهید ایمیل آزمایشی را به آن ارسال کنید وارد کنید."
+
+msgid "Please enter a valid email address."
+msgstr "لطفاً یک آدرس ایمیل معتبر وارد کنید."
+
+msgid "Template title is required."
+msgstr "عنوان قالب الزامی است."
+
+msgid "Template body is required."
+msgstr "بدنه قالب الزامی است."
+
+msgid "Select Mail Template"
+msgstr "انتخاب قالب ایمیل"
+
+msgid "Choose a template"
+msgstr "یک قالب انتخاب کنید"
+
+msgid "Body content cannot be empty."
+msgstr "محتوای بدنه نمی‌تواند خالی باشد."
+
+msgid "Enter app password"
+msgstr "رمز عبور برنامه را وارد کنید"
+
+msgid "Enter the app-specific password for your mail account."
+msgstr "رمز عبور مخصوص برنامه را برای حساب ایمیل خود وارد کنید."
+
+msgid "Enter the app-specific password  for your mail account."
+msgstr "رمز عبور مخصوص برنامه را برای حساب ایمیل خود وارد کنید."
+
+msgid "Enter client secret"
+msgstr "راز کلاینت را وارد کنید"
+
+msgid ""
+"Enter the client secret generated from your Microsoft Azure app "
+"registration. This secret is used to authenticate your Outlook integration "
+"securely."
+msgstr ""
+"راز کلاینت تولید شده از ثبت برنامه Microsoft Azure خود را وارد کنید. این راز"
+" برای احراز هویت امن یکپارچه‌سازی Outlook شما استفاده می‌شود."
+
+msgid "Mail"
+msgstr "ایمیل"
+
+msgid "Outgoing Mail Server"
+msgstr "سرور ایمیل خروجی"
+
+msgid "Incoming Mail Server"
+msgstr "سرور ایمیل ورودی"
+
+msgid "Mail Template"
+msgstr "قالب ایمیل"
+
+msgid "Mail History"
+msgstr "تاریخچه ایمیل"
+
+msgid "Outlook"
+msgstr "آوت‌لوک"
+
+msgid "Incoming"
+msgstr "ورودی"
+
+msgid "Outgoing"
+msgstr "خروجی"
+
+msgid "Type"
+msgstr "نوع"
+
+msgid "Mail Channel"
+msgstr "کانال ایمیل"
+
+msgid ""
+"Specifies whether this configuration handles incoming,outgoing, or both "
+"types of emails."
+msgstr ""
+"مشخص می‌کند که این پیکربندی ایمیل‌های ورودی، خروجی یا هر دو نوع را مدیریت "
+"می‌کند."
+
+msgid "Host"
+msgstr "میزبان"
+
+msgid "Port"
+msgstr "پورت"
+
+msgid "Default From Mail"
+msgstr "ایمیل پیش‌فرض فرستنده"
+
+msgid "Email Host Username"
+msgstr "نام کاربری میزبان ایمیل"
+
+msgid "Display Name"
+msgstr "نام نمایشی"
+
+msgid "Email Authentication Password"
+msgstr "رمز عبور احراز هویت ایمیل"
+
+msgid "Use TLS"
+msgstr "استفاده از TLS"
+
+msgid "Use SSL"
+msgstr "استفاده از SSL"
+
+msgid "Fail Silently"
+msgstr "شکست بی‌صدا"
+
+msgid "Primary Mail Server"
+msgstr "سرور ایمیل اصلی"
+
+msgid ""
+"By enabling this the display name will take from who triggered the mail"
+msgstr ""
+"با فعال کردن این، نام نمایشی از کسی که ایمیل را راه‌اندازی کرده است گرفته "
+"می‌شود"
+
+msgid "Email Send Timeout (seconds)"
+msgstr "زمان انتظار ارسال ایمیل (ثانیه)"
+
+msgid "Client ID"
+msgstr "شناسه کلاینت"
+
+msgid "Client Secret"
+msgstr "راز کلاینت"
+
+msgid "Tenant ID"
+msgstr "شناسه مستأجر"
+
+msgid "Redirect URi"
+msgstr "URI بازگردانی"
+
+msgid "OAuth authorization endpoint"
+msgstr "نقطه پایانی مجوز OAuth"
+
+msgid "OAuth token endpoint"
+msgstr "نقطه پایانی توکن OAuth"
+
+msgid "Microsoft Graph API endpoint"
+msgstr "نقطه پایانی Microsoft Graph API"
+
+msgid "This field is required"
+msgstr "این فیلد الزامی است"
+
+msgid "Mail Configuration"
+msgstr "پیکربندی ایمیل"
+
+msgid "Mail Configurations"
+msgstr "پیکربندی‌های ایمیل"
+
+msgid "Draft"
+msgstr "پیش‌نویس"
+
+msgid "Scheduled"
+msgstr "زمان‌بندی شده"
+
+msgid "Sent"
+msgstr "ارسال شد"
+
+msgid "Delivered"
+msgstr "تحویل داده شد"
+
+msgid "Bounced"
+msgstr "برگشت خورد"
+
+msgid "Opened"
+msgstr "باز شد"
+
+msgid "Failed"
+msgstr "ناموفق"
+
+msgid "From"
+msgstr "از"
+
+msgid "Comma separated recipient email addresses"
+msgstr "آدرس‌های ایمیل گیرنده با کاما جدا شده"
+
+msgid "To"
+msgstr "به"
+
+msgid "Cc"
+msgstr "رونوشت"
+
+msgid "Bcc"
+msgstr "رونوشت پنهان"
+
+msgid "Subject"
+msgstr "موضوع"
+
+msgid "Body"
+msgstr "بدنه"
+
+msgid "Rendered subject saved at send time."
+msgstr ""
+
+msgid "Rendered body saved at send time."
+msgstr ""
+
+msgid "When the mail should be sent (for scheduled mails)."
+msgstr "زمانی که ایمیل باید ارسال شود (برای ایمیل‌های زمان‌بندی شده)."
+
+#| msgid "Sent"
+msgid "Sent By"
+msgstr "ارسال شده توسط"
+
+msgid "Mails"
+msgstr "ایمیل‌ها"
+
+msgid "Mail Attachment"
+msgstr "پیوست ایمیل"
+
+msgid "Mail Attachments"
+msgstr "پیوست‌های ایمیل"
+
+msgid "Template title"
+msgstr "عنوان قالب"
+
+msgid "Related Model"
+msgstr "مدل مرتبط"
+
+msgid "Mail Templates"
+msgstr "قالب‌های ایمیل"
+
+msgid "Save Changes?"
+msgstr "تغییرات ذخیره شوند؟"
+
+msgid "Do you want to save your changes as a draft or discard them?"
+msgstr ""
+"آیا می‌خواهید تغییرات خود را به عنوان پیش‌نویس ذخیره کنید یا آنها را کنار "
+"بگذارید؟"
+
+msgid "Discard"
+msgstr "کنار گذاشتن"
+
+msgid "Save as Draft"
+msgstr "ذخیره به عنوان پیش‌نویس"
+
+msgid "No emails found for"
+msgstr "هیچ ایمیلی برای یافت نشد"
+
+msgid "Start typing to search emails..."
+msgstr "برای جستجوی ایمیل‌ها تایپ کنید..."
+
+msgid "Insert Fields"
+msgstr "درج فیلدها"
+
+msgid "Close"
+msgstr "بستن"
+
+msgid "Select fields to insert into your email template."
+msgstr "فیلدهایی را برای درج در قالب ایمیل خود انتخاب کنید."
+
+msgid "Instance"
+msgstr "نمونه"
+
+msgid "User"
+msgstr "کاربر"
+
+msgid "Company"
+msgstr "شرکت"
+
+msgid "Request"
+msgstr "درخواست"
+
+msgid "Direct Fields"
+msgstr "فیلدهای مستقیم"
+
+msgid "User Fields"
+msgstr "فیلدهای کاربر"
+
+msgid "Company Fields"
+msgstr "فیلدهای شرکت"
+
+msgid "Request Fields"
+msgstr "فیلدهای درخواست"
+
+msgid "Related Fields"
+msgstr "فیلدهای مرتبط"
+
+msgid "Reverse Related Fields"
+msgstr "فیلدهای مرتبط معکوس"
+
+msgid "No fields available for this model"
+msgstr "هیچ فیلدی برای این مدل در دسترس نیست"
+
+msgid "Insert Selected Fields"
+msgstr "درج فیلدهای انتخاب شده"
+
+msgid "Test Email Configuration"
+msgstr "پیکربندی ایمیل آزمایشی"
+
+msgid "Loading..."
+msgstr "در حال بارگذاری..."
+
+msgid "Send Test Email"
+msgstr "ارسال ایمیل آزمایشی"
+
+msgid "Select Mail Server Type"
+msgstr "انتخاب نوع سرور ایمیل"
+
+msgid "Outlook Mail Server"
+msgstr "سرور ایمیل آوت‌لوک"
+
+msgid "Configure using Microsoft Azure/Office 365 OAuth authentication"
+msgstr "پیکربندی با استفاده از احراز هویت Microsoft Azure/Office 365 OAuth"
+
+msgid "Select Outlook"
+msgstr "انتخاب آوت‌لوک"
+
+msgid "mail"
+msgstr "ایمیل"
+
+msgid "Other Mail Servers"
+msgstr "سایر سرورهای ایمیل"
+
+msgid "Configure SMTP, Gmail, Yahoo, or any other mail server"
+msgstr "پیکربندی SMTP، Gmail، Yahoo یا هر سرور ایمیل دیگر"
+
+msgid "Select Other"
+msgstr "انتخاب سایر"
+
+msgid "Refresh Token"
+msgstr "تجدید توکن"
+
+msgid "Login"
+msgstr "ورود"
+
+msgid "Send Test Mail"
+msgstr "ارسال ایمیل آزمایشی"
+
+msgid "Edit"
+msgstr "ویرایش"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Mail Configuration Required"
+msgstr "پیکربندی ایمیل الزامی است"
+
+msgid "Cannot send email"
+msgstr "امکان ارسال ایمیل وجود ندارد"
+
+msgid "Mail can only be sent after outgoing mail is configured."
+msgstr "ایمیل فقط پس از پیکربندی ایمیل خروجی قابل ارسال است."
+
+msgid "Configure Outgoing Mail"
+msgstr "پیکربندی ایمیل خروجی"
+
+msgid "Please contact your administrator to configure outgoing mail settings."
+msgstr "لطفاً برای پیکربندی تنظیمات ایمیل خروجی با مدیر خود تماس بگیرید."
+
+msgid "Send Mail"
+msgstr "ارسال ایمیل"
+
+msgid "No mail server configured"
+msgstr "هیچ سرور ایمیلی پیکربندی نشده است"
+
+msgid "Enter Subject"
+msgstr "موضوع را وارد کنید"
+
+msgid "Related to"
+msgstr "مرتبط با"
+
+msgid "Message"
+msgstr "پیام"
+
+msgid "Insert Field"
+msgstr "درج فیلد"
+
+msgid "Add mail template"
+msgstr "افزودن قالب ایمیل"
+
+msgid "Save as template"
+msgstr "ذخیره به عنوان قالب"
+
+msgid "Preview"
+msgstr "پیش‌نمایش"
+
+msgid "Preview Error"
+msgstr "خطای پیش‌نمایش"
+
+msgid "Error generating preview:"
+msgstr "خطا در تولید پیش‌نمایش:"
+
+msgid "Mail Preview"
+msgstr "پیش‌نمایش ایمیل"
+
+msgid "Email Snapshot"
+msgstr "تصویر لحظه‌ای ایمیل"
+
+msgid "From:"
+msgstr "از:"
+
+msgid "No sender configured"
+msgstr "هیچ فرستنده‌ای پیکربندی نشده است"
+
+msgid "To:"
+msgstr "به:"
+
+msgid "No recipient specified"
+msgstr ""
+
+msgid "No subject"
+msgstr "بدون موضوع"
+
+msgid "No message content"
+msgstr "بدون محتوای پیام"
+
+msgid "This is how your email will look when sent"
+msgstr "ایمیلی شما هنگام ارسال به این شکل خواهد بود"
+
+msgid "Enter template title"
+msgstr "عنوان قالب را وارد کنید"
+
+msgid "Enter email subject (optional)"
+msgstr "موضوع ایمیل را وارد کنید (اختیاری)"
+
+msgid "Select content type (optional)"
+msgstr "نوع محتوا را انتخاب کنید (اختیاری)"
+
+msgid "Save as mail template"
+msgstr "ذخیره به عنوان قالب ایمیل"
+
+msgid "Title"
+msgstr "عنوان"
+
+msgid "Enter title"
+msgstr "عنوان را وارد کنید"
+
+msgid "Save Template"
+msgstr "ذخیره قالب"
+
+msgid "Select Template"
+msgstr "انتخاب قالب"
+
+msgid "Email Template Preview"
+msgstr "پیش‌نمایش قالب ایمیل"
+
+msgid "No content to preview"
+msgstr "هیچ محتوایی برای پیش‌نمایش وجود ندارد"
+
+msgid "Schedule Email"
+msgstr "زمان‌بندی ایمیل"
+
+msgid "Schedule Date"
+msgstr "تاریخ زمان‌بندی"
+
+msgid "Schedule"
+msgstr "زمان‌بندی"
+
+msgid "Cannot send email. Outgoing mail must be configured first."
+msgstr "امکان ارسال ایمیل وجود ندارد. ابتدا باید ایمیل خروجی پیکربندی شود."
+
+msgid "To email is required"
+msgstr "ایمیل مقصد الزامی است"
+
+msgid "From mail configuration is required"
+msgstr "پیکربندی ایمیل فرستنده الزامی است"
+
+msgid ""
+"Both model_name and object_id are required to send mail related to an "
+"object."
+msgstr ""
+"برای ارسال ایمیل مرتبط با یک شیء، هم model_name و هم object_id الزامی هستند."
+
+msgid ""
+"Cannot send mail: model information is missing. Please try again from the "
+"opportunity page."
+msgstr ""
+"امکان ارسال ایمیل وجود ندارد: اطلاعات مدل缺失 است. لطفاً از صفحه فرصت دوباره "
+"امتحان کنید."
+
+msgid "Mail sent successfully"
+msgstr "ایمیل با موفقیت ارسال شد"
+
+msgid "Mail bounced: "
+msgstr "ایمیل برگشت خورد: "
+
+msgid "Failed to send mail: "
+msgstr "ارسال ایمیل ناموفق بود: "
+
+msgid "Error sending mail: "
+msgstr "خطا در ارسال ایمیل: "
+
+msgid "Subject contains dangerous content."
+msgstr "موضوع حاوی محتوای خطرناک است."
+
+msgid "Message body contains dangerous content."
+msgstr "بدنه پیام حاوی محتوای خطرناک است."
+
+msgid "You do not have permission to access this record."
+msgstr "شما مجوز دسترسی به این رکورد را ندارید."
+
+msgid "Draft saved successfully"
+msgstr "پیش‌نویس با موفقیت ذخیره شد"
+
+msgid "Error saving draft: "
+msgstr "خطا در ذخیره پیش‌نویس: "
+
+msgid "Draft discarded"
+msgstr "پیش‌نویس کنار گذاشته شد"
+
+msgid "Error discarding draft: "
+msgstr "خطا در کنار گذاشتن پیش‌نویس: "
+
+#| msgid "Mail sent successfully"
+msgid "Mail deleted successfully."
+msgstr "ایمیل با موفقیت حذف شد."
+
+msgid "Schedule time is required"
+msgstr "زمان زمان‌بندی الزامی است"
+
+msgid "Scheduled time must be in the future"
+msgstr "زمان زمان‌بندی شده باید در آینده باشد"
+
+msgid "Invalid date/time format"
+msgstr "قالب تاریخ/زمان نامعتبر است"
+
+msgid "Scheduled mail not found or you don't have permission"
+msgstr "ایمیل زمان‌بندی شده یافت نشد یا شما مجوز ندارید"
+
+msgid "You do not have permission to reschedule this mail."
+msgstr "شما مجوز تغییر زمان این ایمیل را ندارید."
+
+msgid "Mail rescheduled successfully for "
+msgstr "ایمیل با موفقیت برای زمان‌بندی مجدد شد "
+
+msgid "Invalid mail configuration selected"
+msgstr "پیکربندی ایمیل انتخاب شده نامعتبر است"
+
+msgid "You do not have permission to send mail for this record."
+msgstr "شما مجوز ارسال ایمیل برای این رکورد را ندارید."
+
+msgid "Mail scheduled successfully for "
+msgstr "ایمیل با موفقیت برای زمان‌بندی شد "
+
+msgid "Error scheduling mail: "
+msgstr "خطا در زمان‌بندی ایمیل: "
+
+msgid "Incoming Mail Configurations"
+msgstr "پیکربندی‌های ایمیل ورودی"
+
+msgid "Configure the IMAP server used to receive incoming emails."
+msgstr "پیکربندی سرور IMAP مورد استفاده برای دریافت ایمیل‌های ورودی."
+
+msgid "Channel"
+msgstr "کانال"
+
+msgid "Primary"
+msgstr "اصلی"
+
+msgid "From Email"
+msgstr "از ایمیل"
+
+msgid "Dynamic Display Name"
+msgstr "نام نمایشی پویا"
+
+msgid "Timeout (seconds)"
+msgstr "زمان انتظار (ثانیه)"
+
+msgid "Redirect URI"
+msgstr "URI بازگردانی"
+
+msgid "Authorization URL"
+msgstr "URL مجوز"
+
+msgid "Token URL"
+msgstr "URL توکن"
+
+msgid "API Endpoint"
+msgstr "نقطه پایانی API"
+
+msgid "Token Last Refreshed"
+msgstr "آخرین تجدید توکن"
+
+msgid "Review emails sent and received through Horilla."
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+#| msgid "Sent"
+msgid "Sent At"
+msgstr "ارسال شده در"
+
+msgid "Create reusable email templates for common messages."
+msgstr "ایجاد قالب‌های ایمیل قابل استفاده مجدد برای پیام‌های رایج."
+
+#| msgid "Update Mail Template"
+msgid "Edit Mail Template"
+msgstr "ویرایش قالب ایمیل"
+
+#| msgid "Update Template"
+msgid "Edit Template"
+msgstr "ویرایش قالب"
+
+msgid "Create Mail Template"
+msgstr "ایجاد قالب ایمیل"
+
+msgid "Mail template \"{}\" updated successfully."
+msgstr "قالب ایمیل \"{}\" با موفقیت به‌روزرسانی شد."
+
+msgid "Mail template \"{}\" created successfully."
+msgstr "قالب ایمیل \"{}\" با موفقیت ایجاد شد."
+
+msgid "Outgoing Mail Configurations"
+msgstr "پیکربندی‌های ایمیل خروجی"
+
+msgid "Configure the SMTP server used to send outgoing emails."
+msgstr "پیکربندی سرور SMTP مورد استفاده برای ارسال ایمیل‌های خروجی."
+
+msgid "Outgoing Mail Server Configuration"
+msgstr "پیکربندی سرور ایمیل خروجی"
+
+msgid "Something went wrong:"
+msgstr ""
+
+msgid "Not configured outlook"
+msgstr "آوت‌لوک پیکربندی نشده است"
+
+msgid "Outlook Client ID is not configured"
+msgstr "شناسه کلاینت آوت‌لوک پیکربندی نشده است"
+
+msgid "Outlook Redirect URI is not configured"
+msgstr "URI بازگردانی آوت‌لوک پیکربندی نشده است"
+
+msgid "Outlook Authorization URL is not configured"
+msgstr "URL مجوز آوت‌لوک پیکربندی نشده است"
+
+msgid "Invalid Outlook configuration"
+msgstr "پیکربندی آوت‌لوک نامعتبر است"
+
+msgid "Outlook Token URL is not configured"
+msgstr "URL توکن آوت‌لوک پیکربندی نشده است"
+
+msgid "Outlook Client Secret is not configured"
+msgstr "راز کلاینت آوت‌لوک پیکربندی نشده است"
+
+msgid "Unable to build authorization response URI"
+msgstr "امکان ساخت URI پاسخ مجوز وجود ندارد"
+
+msgid "Token not refreshed, Login required"
+msgstr "توکن تجدید نشد، ورود الزامی است"
+
+msgid "Token refreshed successfully"
+msgstr "توکن با موفقیت تجدید شد"
+
+#, python-brace-format
+msgid "Token refresh failed: {error}. Please re-authenticate."
+msgstr "تجدید توکن ناموفق بود: {error}. لطفاً دوباره احراز هویت کنید."
+
+#, python-brace-format
+msgid "Token refresh failed: {error}"
+msgstr "تجدید توکن ناموفق بود: {error}"

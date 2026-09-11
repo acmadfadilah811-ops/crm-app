@@ -1,0 +1,250 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Campaigns"
+msgstr "Kampanye"
+
+msgid "Campaigns by Type"
+msgstr "Kampanye berdasarkan Jenis"
+
+msgid "Campaigns by Status"
+msgstr "Kampanye berdasarkan Status"
+
+msgid "Campaign Activity Status"
+msgstr "Status Kegiatan Kampanye"
+
+msgid ""
+"Invalid parent campaign. This relationship would create a circular "
+"hierarchy."
+msgstr ""
+"Kampanye induk tidak valid.Hubungan ini akan menciptakan hierarki melingkar."
+
+msgid "Select Campaign"
+msgstr "Pilih Kampanye"
+
+msgid "Select campaign"
+msgstr "Pilih kampanye"
+
+msgid "Please select campaign."
+msgstr "Silakan pilih kampanye."
+
+msgid "This campaign already has a parent campaign assigned."
+msgstr "Kampanye ini telah menetapkan kampanye induk."
+
+msgid "An campaign cannot be its own parent."
+msgstr "Sebuah kampanye tidak bisa menjadi induknya sendiri."
+
+msgid "Please select a valid campaign."
+msgstr "Silakan pilih kampanye yang valid."
+
+msgid "Planned"
+msgstr "Berencana"
+
+msgid "Sent"
+msgstr "Terkirim"
+
+msgid "Recieved"
+msgstr "Diterima"
+
+msgid "Responded"
+msgstr "Menanggapi"
+
+msgid "Lead"
+msgstr "Memimpin"
+
+msgid "Contact"
+msgstr "Kontak"
+
+msgid "Campaign"
+msgstr "Kampanye"
+
+msgid "Member Status"
+msgstr "Status Anggota"
+
+msgid "Type"
+msgstr "Jenis"
+
+msgid "Campaign Member"
+msgstr "Anggota Kampanye"
+
+msgid "Campaign Members"
+msgstr "Anggota Kampanye"
+
+msgid "This lead already has this campaign."
+msgstr "Pemimpin ini sudah memiliki kampanye ini."
+
+msgid "This contact already has this campaign."
+msgstr "Kontak ini sudah memiliki kampanye ini."
+
+msgid "New"
+msgstr "Baru"
+
+msgid "In Progress"
+msgstr "Sedang Berlangsung"
+
+msgid "Completed"
+msgstr "Selesai"
+
+msgid "Aborted"
+msgstr "Dibatalkan"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Event"
+msgstr "Peristiwa"
+
+msgid "Social Media"
+msgstr "Media Sosial"
+
+msgid "Other"
+msgstr "Lainnya"
+
+msgid "Webinar"
+msgstr "webinar"
+
+msgid "Referral"
+msgstr "Rujukan"
+
+msgid "Advertisement"
+msgstr "Iklan"
+
+msgid "Campaign Name"
+msgstr "Nama Kampanye"
+
+msgid "Campaign Owner"
+msgstr "Pemilik Kampanye"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Start Date"
+msgstr "Tanggal Mulai"
+
+msgid "End Date"
+msgstr "Tanggal Berakhir"
+
+msgid "Expected Revenue"
+msgstr "Pendapatan yang Diharapkan"
+
+msgid "Budget Cost"
+msgstr "Biaya Anggaran"
+
+msgid "Actual Cost"
+msgstr "Biaya Sebenarnya"
+
+msgid "Expected Response (%)"
+msgstr "Respon yang Diharapkan (%)"
+
+msgid "Number Sent in Campaign"
+msgstr "Nomor Terkirim dalam Kampanye"
+
+msgid "Description"
+msgstr "Keterangan"
+
+msgid "Parent Campaign"
+msgstr "Kampanye Orang Tua"
+
+msgid "Leads in Campaign"
+msgstr "Memimpin dalam Kampanye"
+
+msgid "Converted Leads in Campaign"
+msgstr "Prospek yang Dikonversi dalam Kampanye"
+
+msgid "Contacts in Campaign"
+msgstr "Kontak dalam Kampanye"
+
+msgid "Opportunities in Campaign"
+msgstr "Peluang dalam Kampanye"
+
+msgid "Won Opportunities in Campaign"
+msgstr "Memenangkan Peluang dalam Kampanye"
+
+msgid "Value Opportunities in Campaign"
+msgstr "Nilai Peluang dalam Kampanye"
+
+msgid "Value Won Opportunities in Campaign"
+msgstr "Nilai Peluang yang Dimenangkan dalam Kampanye"
+
+msgid "Responses in Campaign"
+msgstr "Tanggapan dalam Kampanye"
+
+msgid "ROI %"
+msgstr "% ROI"
+
+msgid "Campaign Hierarchy"
+msgstr "Hierarki Kampanye"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Campaign Information"
+msgstr "Informasi Kampanye"
+
+msgid "Financial Information"
+msgstr "Informasi Keuangan"
+
+msgid "Additional Information"
+msgstr "Informasi Tambahan"
+
+msgid "Change Owner"
+msgstr "Ganti Pemilik"
+
+msgid "Add Child Campaign"
+msgstr "Tambahkan Kampanye Anak"
+
+msgid "You must be logged in to perform this action."
+msgstr "Anda harus masuk untuk melakukan tindakan ini."
+
+msgid "No parent campaign specified in the request."
+msgstr "Tidak ada kampanye induk yang ditentukan dalam permintaan."
+
+msgid "A campaign cannot be its own parent."
+msgstr "Sebuah kampanye tidak bisa menjadi induknya sendiri."
+
+msgid "This campaign already has a parent campaign."
+msgstr "Kampanye ini sudah memiliki kampanye induk."
+
+msgid "Child campaign assigned successfully."
+msgstr "Kampanye anak berhasil ditetapkan."
+
+msgid "Invalid parent campaign ID format."
+msgstr "Format ID kampanye induk tidak valid."
+
+msgid "You don't have permission to perform this action."
+msgstr "Anda tidak memiliki izin untuk melakukan tindakan ini."
+
+msgid "This campaign doesn't have a parent campaign."
+msgstr "Kampanye ini tidak memiliki kampanye induk."
+
+msgid "An error occurred while removing the child campaign."
+msgstr "Terjadi error saat menghapus kampanye turunan."
+
+msgid "Add to Campaign"
+msgstr "Tambahkan ke Kampanye"
+
+msgid "Add Campaign Members"
+msgstr "Tambahkan Anggota Kampanye"
+
+msgid "Duplicate"
+msgstr "Duplikat"
+
+msgid "View Hierarchy"
+msgstr "Lihat Hirarki"

@@ -1,0 +1,442 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+
+msgid "Workflow"
+msgstr ""
+
+msgid ""
+"Record-triggered workflow rules with field conditions, immediate actions "
+"(update field, assign task, email, notification), and time-based triggers "
+"scheduled relative to record or rule dates."
+msgstr ""
+
+msgid ""
+"Re-raise HttpNotFound with exception chaining in workflow detail views to "
+"preserve context."
+msgstr ""
+
+msgid ""
+"Migrated workflow execution engine transaction imports from django.db to "
+"horilla.db."
+msgstr ""
+
+msgid ""
+"Migrated signal imports to the horilla.db.models.signals shim and "
+"standardized first-party import groups; behavior unchanged."
+msgstr ""
+
+msgid ""
+"Workflow automation engine: WorkflowRule / WorkflowCondition / "
+"WorkflowAction models, dynamic condition evaluation, immediate dispatch on "
+"record saves, Celery WorkflowTimeTriggerAction and "
+"ScheduledWorkflowExecution, execution history modal, FilterSet support, auto-"
+"registration for workflow-enabled models via feature registration (e.g. "
+"users, departments, holidays), modular views, hidden-field action "
+"configuration fixes, restored workflow detail pages, and improved routing "
+"namespaces."
+msgstr ""
+
+msgid ""
+"WorkflowRuleForm aligned with HorillaModelForm layout: field_order, "
+"Meta.fields = \"__all__\", and keep_on_form for is_active; action forms "
+"unchanged."
+msgstr ""
+
+msgid ""
+"Initial release: workflow rules per ContentType with create/edit triggers, "
+"AND/OR conditions, ordered immediate actions, time-trigger actions with "
+"Celery scheduling and execution history, Settings → Automations → Workflow "
+"Rules, and integration with registered models via feature registration."
+msgstr ""
+
+msgid "Rule Trigger Date"
+msgstr ""
+
+msgid "Workflow Rules"
+msgstr ""
+
+msgid "Rule Name"
+msgstr ""
+
+msgid "Module"
+msgstr ""
+
+msgid "The module (record type) this rule applies to."
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "When record is created"
+msgstr ""
+
+msgid "Run this workflow when a new record is created."
+msgstr ""
+
+msgid "When record is edited"
+msgstr ""
+
+msgid "Run this workflow when an existing record is edited."
+msgstr ""
+
+msgid "Workflow Rule"
+msgstr ""
+
+msgid "Create and Edit"
+msgstr ""
+
+msgid "Create only"
+msgstr ""
+
+msgid "Edit only"
+msgstr ""
+
+msgid "Not set"
+msgstr ""
+
+msgid "Field Name"
+msgstr ""
+
+msgid "Operator"
+msgstr ""
+
+msgid "Value"
+msgstr ""
+
+msgid "AND"
+msgstr ""
+
+msgid "OR"
+msgstr ""
+
+msgid "Logical Operator"
+msgstr ""
+
+msgid "Order"
+msgstr ""
+
+msgid "Workflow Condition"
+msgstr ""
+
+msgid "Workflow Conditions"
+msgstr ""
+
+msgid "Update Field"
+msgstr ""
+
+msgid "Assign Task"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Notification"
+msgstr ""
+
+msgid "Action"
+msgstr ""
+
+msgid ""
+"Type-specific configuration. update_field: {field, value}. assign_task: "
+"{subject, due_days, priority, owner_id}. email: {template_id, to}. "
+"notification: {message, user_ids}."
+msgstr ""
+
+msgid "Workflow Action"
+msgstr ""
+
+msgid "Workflow Actions"
+msgstr ""
+
+msgid "Minutes"
+msgstr ""
+
+msgid "Hours"
+msgstr ""
+
+msgid "Days"
+msgstr ""
+
+msgid "After"
+msgstr ""
+
+msgid "Before"
+msgstr ""
+
+msgid "Delay"
+msgstr ""
+
+msgid "Unit"
+msgstr ""
+
+msgid "Direction"
+msgstr ""
+
+msgid "Trigger Date"
+msgstr ""
+
+msgid ""
+"Use 'rule_trigger_date' to fire relative to when the rule triggered, or "
+"enter a date field name from the target model."
+msgstr ""
+
+msgid "Action Type"
+msgstr ""
+
+msgid "Action Config"
+msgstr ""
+
+msgid "Workflow Time Trigger Action"
+msgstr ""
+
+msgid "Workflow Time Trigger Actions"
+msgstr ""
+
+msgid "Pending"
+msgstr ""
+
+msgid "Completed"
+msgstr ""
+
+msgid "Failed"
+msgstr ""
+
+msgid "Time Trigger"
+msgstr ""
+
+msgid "Record ID"
+msgstr ""
+
+msgid "Scheduled At"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Executed At"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Scheduled Workflow Execution"
+msgstr ""
+
+msgid "Scheduled Workflow Executions"
+msgstr ""
+
+msgid "Field"
+msgstr ""
+
+msgid "Select field"
+msgstr ""
+
+msgid "Task title"
+msgstr ""
+
+msgid "Due basis"
+msgstr ""
+
+msgid "Record submission date"
+msgstr ""
+
+msgid "Record update date"
+msgstr ""
+
+msgid "Due in days"
+msgstr ""
+
+msgid "Not Started"
+msgstr ""
+
+msgid "In Progress"
+msgstr ""
+
+msgid "Priority"
+msgstr ""
+
+msgid "Low"
+msgstr ""
+
+msgid "Medium"
+msgstr ""
+
+msgid "High"
+msgstr ""
+
+msgid "Task description"
+msgstr ""
+
+msgid "Mail template"
+msgstr ""
+
+msgid "Select template"
+msgstr ""
+
+msgid "To (email field / email / self)"
+msgstr ""
+
+msgid "Also send to"
+msgstr ""
+
+msgid "Notification template"
+msgstr ""
+
+msgid "To (record field / self)"
+msgstr ""
+
+msgid "Also notify to"
+msgstr ""
+
+msgid "Custom message (optional, overrides template)"
+msgstr ""
+
+msgid "Edit Action"
+msgstr ""
+
+msgid "Add Action"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Action type"
+msgstr ""
+
+msgid "Select action type"
+msgstr ""
+
+msgid "Mail"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Select value"
+msgstr ""
+
+msgid "Edit Condition"
+msgstr ""
+
+msgid "Add Condition"
+msgstr ""
+
+msgid "---------"
+msgstr ""
+
+msgid "Logical Operator (join with next condition)"
+msgstr ""
+
+msgid "Are you sure you want to deactivate this workflow rule?"
+msgstr ""
+
+msgid "Are you sure you want to activate this workflow rule?"
+msgstr ""
+
+msgid "Entry Criteria"
+msgstr ""
+
+msgid "No conditions set."
+msgstr ""
+
+msgid "Immediate Actions"
+msgstr ""
+
+msgid "Add"
+msgstr ""
+
+msgid "Delete Action"
+msgstr ""
+
+msgid "No actions added yet"
+msgstr ""
+
+msgid "Use the Add button to configure what happens when this rule fires."
+msgstr ""
+
+msgid "Time Trigger Actions"
+msgstr ""
+
+msgid "Execution History"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "No time triggers added yet"
+msgstr ""
+
+msgid "Use the Add button to schedule actions after a delay."
+msgstr ""
+
+msgid "Edit Time Trigger"
+msgstr ""
+
+msgid "Add Time Trigger"
+msgstr ""
+
+msgid "Trigger Timing"
+msgstr ""
+
+msgid "Time Trigger Execution History"
+msgstr ""
+
+msgid "activated"
+msgstr ""
+
+msgid "deactivated"
+msgstr ""
+
+msgid "When should this rule apply?"
+msgstr ""
+
+msgid "At least one condition is required."
+msgstr ""
+
+msgid "Model"
+msgstr ""
+
+msgid "Execute on"
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Record"
+msgstr ""
+
+msgid "Workflow rule not found."
+msgstr ""
+
+msgid "Condition saved."
+msgstr ""
+
+msgid "Action saved."
+msgstr ""
+
+msgid "Time trigger action saved."
+msgstr ""

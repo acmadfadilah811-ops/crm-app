@@ -1,0 +1,250 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-18 14:05+0000\n"
+"PO-Revision-Date: 2026-08-01 12:00+0330\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Campaigns"
+msgstr "کمپین‌ها"
+
+msgid "Campaigns by Type"
+msgstr "کمپین‌ها بر اساس نوع"
+
+msgid "Campaigns by Status"
+msgstr "کمپین‌ها بر اساس وضعیت"
+
+msgid "Campaign Activity Status"
+msgstr "وضعیت فعالیت کمپین"
+
+msgid ""
+"Invalid parent campaign. This relationship would create a circular hierarchy."
+msgstr ""
+
+msgid "Select Campaign"
+msgstr "انتخاب کمپین"
+
+msgid "Select campaign"
+msgstr "انتخاب کمپین"
+
+msgid "Please select campaign."
+msgstr "لطفاً کمپین را انتخاب کنید."
+
+msgid "This campaign already has a parent campaign assigned."
+msgstr "این کمپین قبلاً یک کمپین والد به آن تخصیص داده شده است."
+
+msgid "An campaign cannot be its own parent."
+msgstr "یک کمپین نمی‌تواند والد خود باشد."
+
+msgid "Please select a valid campaign."
+msgstr "لطفاً یک کمپین معتبر انتخاب کنید."
+
+msgid "Planned"
+msgstr "برنامه‌ریزی شده"
+
+msgid "Sent"
+msgstr "ارسال شده"
+
+msgid "Recieved"
+msgstr "دریافت شده"
+
+msgid "Responded"
+msgstr "پاسخ داده شده"
+
+msgid "Lead"
+msgstr "سرنخ"
+
+msgid "Contact"
+msgstr "مخاطب"
+
+msgid "Campaign"
+msgstr "کمپین"
+
+msgid "Member Status"
+msgstr "وضعیت عضو"
+
+msgid "Type"
+msgstr "نوع"
+
+msgid "Campaign Member"
+msgstr "عضو کمپین"
+
+msgid "Campaign Members"
+msgstr "اعضای کمپین"
+
+msgid "This lead already has this campaign."
+msgstr "این سرنخ قبلاً این کمپین را دارد."
+
+msgid "This contact already has this campaign."
+msgstr "این مخاطب قبلاً این کمپین را دارد."
+
+msgid "New"
+msgstr "جدید"
+
+msgid "In Progress"
+msgstr "در حال انجام"
+
+msgid "Completed"
+msgstr "تکمیل شده"
+
+msgid "Aborted"
+msgstr "لغو شده"
+
+msgid "Email"
+msgstr "ایمیل"
+
+msgid "Event"
+msgstr "رویداد"
+
+msgid "Social Media"
+msgstr "رسانه‌های اجتماعی"
+
+msgid "Other"
+msgstr "سایر"
+
+msgid "Webinar"
+msgstr "وبینار"
+
+msgid "Referral"
+msgstr "معرفی"
+
+msgid "Advertisement"
+msgstr "تبلیغات"
+
+msgid "Campaign Name"
+msgstr "نام کمپین"
+
+msgid "Campaign Owner"
+msgstr "مالک کمپین"
+
+msgid "Status"
+msgstr "وضعیت"
+
+msgid "Start Date"
+msgstr "تاریخ شروع"
+
+msgid "End Date"
+msgstr "تاریخ پایان"
+
+msgid "Expected Revenue"
+msgstr "درآمد مورد انتظار"
+
+msgid "Budget Cost"
+msgstr "هزینه بودجه"
+
+msgid "Actual Cost"
+msgstr "هزینه واقعی"
+
+msgid "Expected Response (%)"
+msgstr "پاسخ مورد انتظار (درصد)"
+
+msgid "Number Sent in Campaign"
+msgstr "تعداد ارسال شده در کمپین"
+
+msgid "Description"
+msgstr "توضیحات"
+
+msgid "Parent Campaign"
+msgstr "کمپین والد"
+
+msgid "Leads in Campaign"
+msgstr "سرنخ‌های موجود در کمپین"
+
+msgid "Converted Leads in Campaign"
+msgstr "سرنخ‌های تبدیل شده در کمپین"
+
+msgid "Contacts in Campaign"
+msgstr "مخاطبین موجود در کمپین"
+
+msgid "Opportunities in Campaign"
+msgstr "فرصت‌های موجود در کمپین"
+
+msgid "Won Opportunities in Campaign"
+msgstr "فرصت‌های برنده در کمپین"
+
+msgid "Value Opportunities in Campaign"
+msgstr "ارزش فرصت‌ها در کمپین"
+
+msgid "Value Won Opportunities in Campaign"
+msgstr "ارزش فرصت‌های برنده در کمپین"
+
+msgid "Responses in Campaign"
+msgstr "پاسخ‌های دریافت شده در کمپین"
+
+msgid "ROI %"
+msgstr ""
+
+msgid "Campaign Hierarchy"
+msgstr "سلسله‌مراتب کمپین"
+
+msgid "Close"
+msgstr "بستن"
+
+msgid "Campaign Information"
+msgstr "اطلاعات کمپین"
+
+msgid "Financial Information"
+msgstr "اطلاعات مالی"
+
+msgid "Additional Information"
+msgstr "اطلاعات اضافی"
+
+msgid "Change Owner"
+msgstr "تغییر مالک"
+
+msgid "Add Child Campaign"
+msgstr "افزودن کمپین فرزند"
+
+msgid "You must be logged in to perform this action."
+msgstr "برای انجام این اقدام باید وارد سیستم شوید."
+
+msgid "No parent campaign specified in the request."
+msgstr "هیچ کمپین والد در درخواست مشخص نشده است."
+
+msgid "A campaign cannot be its own parent."
+msgstr "یک کمپین نمی‌تواند والد خود باشد."
+
+msgid "This campaign already has a parent campaign."
+msgstr "این کمپین قبلاً یک کمپین والد دارد."
+
+msgid "Child campaign assigned successfully."
+msgstr "کمپین فرزند با موفقیت تخصیص یافت."
+
+msgid "Invalid parent campaign ID format."
+msgstr "فرمت شناسه کمپین والد نامعتبر است."
+
+msgid "You don't have permission to perform this action."
+msgstr "شما مجوز انجام این اقدام را ندارید."
+
+msgid "This campaign doesn't have a parent campaign."
+msgstr "این کمپین کمپین والد ندارد."
+
+msgid "An error occurred while removing the child campaign."
+msgstr "در حین حذف کمپین فرزند خطایی رخ داد."
+
+msgid "Add to Campaign"
+msgstr "افزودن به کمپین"
+
+msgid "Add Campaign Members"
+msgstr "افزودن اعضای کمپین"
+
+msgid "Duplicate"
+msgstr "تکراری"
+
+msgid "Are you sure you want to remove this child campaign relationship?"
+msgstr ""
+
+msgid "View Hierarchy"
+msgstr "مشاهده سلسله‌مراتب"

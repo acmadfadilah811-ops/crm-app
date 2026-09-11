@@ -1,0 +1,3623 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-02 12:37+0530\n"
+"PO-Revision-Date: 2026-08-01 12:00+0330\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Core System"
+msgstr "سیستم هسته"
+
+msgid ""
+"Core system providing authentication, configuration, utilities, and platform-"
+"level services."
+msgstr ""
+"سیستم هسته که خدمات احراز هویت، پیکربندی، ابزارهای کمکی و سرویس‌های سطح "
+"پلتفرم را ارائه می‌دهد."
+
+msgid ""
+"Generics: stretch list columns on wide viewports; collapsible day-accordion "
+"history tab with cleaned rich-text and long values in diffs; Add button on "
+"empty-state list views; fix column sort in tab and related-list fragments; "
+"show and edit state as subdivision name not code; fix drag-handle visibility "
+"on permissioned columns. Core: shared settings_list_shell for settings list "
+"pages; Initialize Database Go To Home with default lead and opportunity "
+"stages via initialize_database_go_home; view-driven company and branch "
+"detail fields; normalize Title Case verbose_name labels; exclude extension "
+"model classes from permission listings; fix Role init Next Step button wrap; "
+"horilla.views.generic View/FormView/ListView/DetailView re-exports; f-"
+"strings in get_object_or_404. UI: dark-mode contrast fixes in history and "
+"detail surfaces; keep multi-select dropdowns open after selection; djangofmt "
+"on shared layout and template partials."
+msgstr "Generics: کشیده شدن ستون‌های فهرست در نمایشگرهای عریض؛ زبانه تاریخچه به شکل آکاردئون روزانه و قابل جمع‌شدن، با متن غنی پاک‌سازی‌شده و مقادیر طولانی در تفاوت‌ها؛ دکمه افزودن در نمای فهرست‌های بدون داده؛ رفع مرتب‌سازی ستون‌ها در قطعه‌های زبانه و فهرست‌های مرتبط؛ نمایش و ویرایش استان به‌صورت نام بخش اداری و نه کد آن؛ رفع مشکل نمایان‌بودن دستگیره جابه‌جایی در ستون‌های نیازمند مجوز. Core: استفاده از settings_list_shell مشترک برای صفحات فهرست تنظیمات؛ «راه‌اندازی پایگاه داده و رفتن به صفحه اصلی» با مراحل پیش‌فرض سرنخ و فرصت از طریق initialize_database_go_home؛ فیلدهای جزئیات شرکت و شعبه برخاسته از نما؛ یکدست‌سازی برچسب‌های verbose_name به شکل Title Case؛ حذف کلاس‌های مدل افزونه‌ها از فهرست مجوزها؛ رفع شکستن خط دکمه Next Step در راه‌اندازی نقش؛ صدور مجدد View/FormView/ListView/DetailView از horilla.views.generic؛ استفاده از f-string در get_object_or_404. رابط کاربری: رفع مشکلات کنتراست در حالت تاریک در بخش‌های تاریخچه و جزئیات؛ باز ماندن فهرست‌های کشویی چندانتخابی پس از انتخاب؛ اعمال djangofmt بر چیدمان مشترک و قطعه‌های قالب."
+
+msgid ""
+"Generics: nested multi-level group-by with lazy-loaded subtrees; distinguish "
+"empty list vs no filter matches; restore empty groups, company-scope FK "
+"groups, and Group By Settings; reuse list empty-state markup in chart/split "
+"views; restrict quick filters to plain list layout; viewport-fit list and "
+"detail tables; open-in-new-tab only for previewable attachments; delete-"
+"modal Cancel contrast; navbar second_button font size. Core: Horilla "
+"DetailView wrapper and package re-export; TemplateView fieldsets for My "
+"Profile; settings fieldsets via shared includes; user number_format drives "
+"currency/number display; gate Regional Formatting behind can_change_profile; "
+"company-scope User Kanban/Group-By; avoid N+1 in permission utils and role "
+"hierarchy; scope import/export and settings-search spinners; stepper theming "
+"and Excel sample-data fixes; demo user departments; SHORT_TO_DAY_PREFIX in "
+"BusinessHourForm. UI: full-page Connection Lost on HTMX sendError / "
+"ERR_CONNECTION_REFUSED with Retry; runtime viewport fit for settings lists; "
+"center read-only field lock icon. I18N: Persian catalog expansion with bulk-"
+"update and RTL breadcrumb fixes."
+msgstr "Generics: گروه‌بندی تودرتو و چندسطحی با زیردرخت‌های بارگذاری‌شده به‌صورت تنبل؛ تفکیک فهرست خالی از نبود نتیجه برای فیلتر؛ بازگرداندن گروه‌های خالی، گروه‌های کلید خارجی در دامنه شرکت و تنظیمات گروه‌بندی؛ استفاده مجدد از نشانه‌گذاری حالت خالی فهرست در نماهای نمودار و دوبخشی؛ محدود کردن فیلترهای سریع به چیدمان فهرست ساده؛ متناسب‌سازی جدول‌های فهرست و جزئیات با اندازه نمایش؛ باز کردن در زبانه جدید تنها برای پیوست‌های قابل پیش‌نمایش؛ کنتراست دکمه انصراف در پنجره حذف؛ اندازه قلم second_button در نوار ناوبری. Core: پوشش DetailView هوریلا و صدور مجدد بسته؛ fieldset‌های TemplateView برای «پروفایل من»؛ fieldset‌های تنظیمات از طریق include‌های مشترک؛ مقدار number_format کاربر نمایش ارز و اعداد را تعیین می‌کند؛ محدود کردن «قالب‌بندی منطقه‌ای» به مجوز can_change_profile؛ کانبان و گروه‌بندی کاربران در دامنه شرکت؛ پرهیز از پرس‌وجوهای N+1 در ابزارهای مجوز و سلسله‌مراتب نقش‌ها؛ محدود کردن دامنه چرخنده‌های ورود/خروج داده و جست‌وجوی تنظیمات؛ قالب‌بندی رنگ گام‌نما و اصلاح داده‌های نمونه اکسل؛ دپارتمان کاربران نمونه؛ SHORT_TO_DAY_PREFIX در BusinessHourForm. رابط کاربری: صفحه کامل «اتصال قطع شد» در پی sendError در HTMX یا ERR_CONNECTION_REFUSED همراه با دکمه تلاش دوباره؛ تنظیم خودکار اندازه نمایش در زمان اجرا برای فهرست تنظیمات؛ وسط‌چین کردن نماد قفل فیلدهای فقط‌خواندنی. بومی‌سازی: گسترش کاتالوگ فارسی همراه با اصلاح به‌روزرسانی گروهی و مسیر راهنما در حالت راست‌به‌چپ."
+
+msgid ""
+"Extension: DateTimeFormatter with _inherit_formatter; _inherit_view "
+"composition for View/ListView (including EditFieldView); FormView applies "
+"_inherit_form; fieldsets_insert on _inherit_detail; form fieldsets merge so "
+"extensions can inject fields. Generics: parse edit/list/bulk dates through "
+"DateTimeFormatter; preserve image uploads across single-step validation "
+"errors; scope list-view navigation session keys per model with opt-out; "
+"populate Available Fields for mixed-column views; list-cell-border CSS "
+"classes; user detail sections driven by HorillaDetailView fieldsets. Core: "
+"demo fixtures for contrib and CRM apps (batched password derivation, roles, "
+"country-coded phones); AuditlogMiddleware; Add Column to List on branches; "
+"regional formatting rendered from form fieldsets; shared accent-color "
+"default for color inputs; rename Update to Edit; remove settings-search "
+"spinner; fix duplicate Core System version card and Export Data after Esc or "
+"HTMX tab navigation. API: enforce HorillaModelPermissions on main-table "
+"endpoints. UI: RTL foundation and main-shell mirroring."
+msgstr "Extension: کلاس DateTimeFormatter همراه با _inherit_formatter؛ ترکیب _inherit_view برای View/ListView (از جمله EditFieldView)؛ اعمال _inherit_form در FormView؛ fieldsets_insert در _inherit_detail؛ ادغام fieldset‌های فرم تا افزونه‌ها بتوانند فیلد اضافه کنند. Generics: تجزیه تاریخ‌های ویرایش، فهرست و عملیات گروهی از طریق DateTimeFormatter؛ حفظ تصاویر بارگذاری‌شده در صورت خطای اعتبارسنجی در فرم‌های یک‌مرحله‌ای؛ محدود کردن کلیدهای نشست ناوبری نمای فهرست به هر مدل، با امکان غیرفعال‌سازی؛ پر کردن «فیلدهای موجود» برای نماهای با ستون‌های ترکیبی؛ کلاس‌های CSS با نام list-cell-border؛ بخش‌های جزئیات کاربر برخاسته از fieldset‌های HorillaDetailView. Core: داده‌های نمونه برای اپلیکیشن‌های contrib و CRM (استخراج گروهی گذرواژه، نقش‌ها، شماره تلفن با کد کشور)؛ AuditlogMiddleware؛ «افزودن ستون به فهرست» در شعبه‌ها؛ نمایش قالب‌بندی منطقه‌ای بر پایه fieldset‌های فرم؛ رنگ تأکید پیش‌فرض مشترک برای فیلدهای رنگ؛ تغییر نام Update به Edit؛ حذف چرخنده جست‌وجوی تنظیمات؛ رفع تکرار کارت نسخه Core System و مشکل Export Data پس از Esc یا ناوبری زبانه‌ها با HTMX. API: اعمال HorillaModelPermissions بر نقاط انتهایی جدول اصلی. رابط کاربری: زیرساخت راست‌به‌چپ و آینه‌سازی پوسته اصلی."
+
+msgid ""
+"Generics: multi-select choice and foreign-key filters; permission-gated user "
+"chips for User FK fields (without leaking raw HTML into the details tab); "
+"live avatar preview on image fields; navbar descriptions; prioritize the "
+"full-detail action; deny bulk update and hard-delete when the user lacks "
+"change/delete permission; refine navbar, tab, and settings layouts. Utils: "
+"add horilla.utils.html, text, and functional shims. API: move shared docs, "
+"mixins, and permissions to horilla.api. Core: require permission before "
+"toggling cross-company visibility; prefer profile image in get_avatar; store "
+"relative referer URLs with full-nav fallback; extract template BUILTINS and "
+"LOADERS. UI: mask-image nav/sidebar icons and restore theme-colored hover "
+"states in dark mode. Added Persian (fa) language support."
+msgstr "Generics: فیلترهای چندانتخابی و فیلترهای کلید خارجی؛ نشان‌های کاربر مبتنی بر مجوز برای فیلدهای کلید خارجی User (بدون درج HTML خام در زبانه جزئیات)؛ پیش‌نمایش زنده آواتار در فیلدهای تصویر؛ توضیحات در نوار ناوبری؛ اولویت‌دادن به کنش نمایش جزئیات کامل؛ جلوگیری از به‌روزرسانی گروهی و حذف قطعی هنگامی که کاربر مجوز تغییر یا حذف ندارد؛ بازآرایی چیدمان نوار ناوبری، زبانه‌ها و تنظیمات. Utils: افزودن واسط‌های horilla.utils.html و text و functional. API: انتقال مستندات، mixin‌ها و مجوزهای مشترک به horilla.api. Core: الزام مجوز پیش از تغییر وضعیت نمایش میان‌شرکتی؛ ترجیح تصویر پروفایل در get_avatar؛ ذخیره نشانی‌های ارجاع نسبی با بازگشت به ناوبری کامل؛ استخراج BUILTINS و LOADERS قالب‌ها. رابط کاربری: نمادهای ناوبری و نوار کناری با mask-image و بازگرداندن حالت‌های شناور با رنگ پوسته در حالت تاریک. افزودن پشتیبانی از زبان فارسی (fa)."
+
+msgid ""
+"Generics: AND/OR logic between filter rows; default new-record time zone to "
+"the user's zone; CheckboxGridSelect for weekday/multi-option grids; stop "
+"hidden multi-step fields from reappearing on other steps; cap form modal "
+"body height with max-h instead of fixed h-[500px]. Settings: content search "
+"over the Settings sidebar; fiscal year modal body can shrink below its max "
+"height; Business Hour per-day times grouped into day cards. UI: move header "
+"notification/theme script into global.js; stop Select2 multi-select clipping "
+"of wrapped choices; realign viewport-height offsets with the 60px header."
+msgstr "Generics: منطق «و/یا» میان سطرهای فیلتر؛ اعمال منطقه زمانی کاربر به‌صورت پیش‌فرض برای رکوردهای جدید؛ CheckboxGridSelect برای شبکه‌های روزهای هفته و گزینه‌های چندگانه؛ جلوگیری از ظاهر شدن دوباره فیلدهای پنهان فرم‌های چندمرحله‌ای در مراحل دیگر؛ محدود کردن ارتفاع بدنه پنجره با max-h به جای h-[500px] ثابت. تنظیمات: جست‌وجوی محتوا در نوار کناری تنظیمات؛ امکان کوچک شدن بدنه پنجره سال مالی به کمتر از بیشینه ارتفاع آن؛ گروه‌بندی زمان‌های روزانه ساعات کاری در کارت‌های هر روز. رابط کاربری: انتقال اسکریپت اعلان و پوسته سرصفحه به global.js؛ رفع بریدگی گزینه‌های چندسطری در فهرست‌های چندانتخابی Select2؛ همسان‌سازی مجدد فاصله‌های ارتفاع نمایش با سرصفحه ۶۰ پیکسلی."
+
+msgid ""
+"Export: added export/export_own permissions with optional column selection "
+"for one-off and scheduled exports, plus get_export_queryset and "
+"is_exportable_field helpers used by core, bulk, list, and report export "
+"paths. Generics: relative date filter operators (Today, Yesterday, This "
+"Week, This Month); PhoneField validation; inline edit validation errors; "
+"preserve export modal content on Escape; keep MultiWidget structure on "
+"hidden multi-step fields; replace delete-view alert() with the message "
+"framework; fix related-list no-else-continue; update split-view detail tab "
+"width. UI: compact header to 60px with refined search and action buttons; "
+"replace dots.svg menus with consistent SVG icons. Core: wrap form "
+"placeholders with gettext_lazy."
+msgstr "خروجی: افزودن مجوزهای export و export_own با امکان انتخاب اختیاری ستون‌ها برای خروجی‌های یک‌باره و زمان‌بندی‌شده، همراه با توابع کمکی get_export_queryset و is_exportable_field که در مسیرهای خروجی هسته، گروهی، فهرست و گزارش به کار می‌روند. Generics: عملگرهای فیلتر تاریخ نسبی (امروز، دیروز، این هفته، این ماه)؛ اعتبارسنجی PhoneField؛ خطاهای اعتبارسنجی در ویرایش درجا؛ حفظ محتوای پنجره خروجی هنگام فشردن Esc؛ حفظ ساختار MultiWidget در فیلدهای پنهان چندمرحله‌ای؛ جایگزینی alert() در نمای حذف با چارچوب پیام‌ها؛ رفع no-else-continue در فهرست مرتبط؛ اصلاح عرض زبانه جزئیات در نمای دوبخشی. رابط کاربری: سرصفحه جمع‌وجور ۶۰ پیکسلی با دکمه‌های جست‌وجو و کنش بازآراسته؛ جایگزینی منوهای dots.svg با نمادهای SVG یکدست. Core: پوشاندن متن‌های راهنمای فرم با gettext_lazy."
+
+msgid ""
+"Added ScriptResponse and HxTriggerResponse for shared HTMX modal, reload, "
+"and htmx.trigger script returns. Generics: show a loading spinner on the "
+"Save & New button. Core: guard missing model on field-permission save, "
+"validate recycle-bin retention days, and return 405 for POST on fiscal-year "
+"HTMX field endpoints."
+msgstr "افزودن ScriptResponse و HxTriggerResponse برای بازگرداندن اسکریپت‌های مشترک پنجره‌های HTMX، بارگذاری مجدد و htmx.trigger. Generics: نمایش چرخنده بارگذاری روی دکمه «ذخیره و جدید». Core: محافظت در برابر نبود مدل هنگام ذخیره مجوزهای فیلد، اعتبارسنجی روزهای نگهداری سبد بازیافت و بازگرداندن کد ۴۰۵ برای درخواست‌های POST به نقاط انتهایی فیلدهای سال مالی در HTMX."
+
+msgid ""
+"Registered the Calls app in INSTALLED_APPS and wired calls WebSocket routes "
+"into ASGI. Generics: inline edit supports phone fields with the country-code "
+"widget. Trusted X-Forwarded-Proto and X-Forwarded-Host so "
+"request.is_secure() and build_absolute_uri() work behind reverse proxies and "
+"dev tunnels."
+msgstr "ثبت اپلیکیشن Calls در INSTALLED_APPS و افزودن مسیرهای WebSocket آن به ASGI. Generics: ویرایش درجا از فیلدهای تلفن با ابزاره کد کشور پشتیبانی می‌کند. سرصفحه‌های X-Forwarded-Proto و X-Forwarded-Host مورد اعتماد شدند تا request.is_secure() و build_absolute_uri() در پشت پراکسی معکوس و تونل‌های توسعه درست کار کنند."
+
+msgid ""
+"Core: added get_allowed_user_ids() for subordinate-aware ownership and fixed "
+"sync_role_permissions_on_role_change to assign role permissions to new users "
+"via transaction.on_commit. Generics: unified record-level access with "
+"check_record_access(), check_record_change_access(), and "
+"check_record_delete_access(); extended view_own filtering to global search, "
+"detail tabs, mail compose and drafts, notes and attachments, related lists, "
+"and activity sections. Parent-record change and delete access now gates tab "
+"actions, add buttons, and col_attr row links; callable action labels, icons, "
+"and hidden_if supported in render_action_button. HorillaModelForm skips "
+"ownership filtering when the user has global view permission. Fixed "
+"HorillaSingleDeleteView model resolution, ColumnSelectionForm self.data "
+"access, sanitize_html font-colour passthrough, and related-list add-column "
+"permission and URL handling."
+msgstr "Core: افزودن get_allowed_user_ids() برای مالکیتی که کاربران زیرمجموعه را در نظر می‌گیرد و اصلاح sync_role_permissions_on_role_change تا مجوزهای نقش از طریق transaction.on_commit به کاربران جدید اختصاص یابد. Generics: یکدست‌سازی دسترسی در سطح رکورد با check_record_access() و check_record_change_access() و check_record_delete_access()؛ گسترش پالایش view_own به جست‌وجوی سراسری، زبانه‌های جزئیات، نوشتن و پیش‌نویس نامه، یادداشت‌ها و پیوست‌ها، فهرست‌های مرتبط و بخش‌های فعالیت. دسترسی تغییر و حذف رکورد والد اکنون کنش‌های زبانه، دکمه‌های افزودن و پیوندهای سطر col_attr را کنترل می‌کند؛ در render_action_button برچسب‌ها، نمادها و hidden_if به‌صورت فراخوانی‌پذیر نیز پشتیبانی می‌شوند. HorillaModelForm در صورتی که کاربر مجوز مشاهده سراسری داشته باشد پالایش مالکیت را نادیده می‌گیرد. تعیین مدل در HorillaSingleDeleteView، دسترسی به self.data در ColumnSelectionForm، عبور رنگ قلم در sanitize_html و همچنین مجوز افزودن ستون و مدیریت نشانی در فهرست‌های مرتبط اصلاح شد."
+
+msgid ""
+"Redesigned sidebar to a fixed-width icon-nav with text labels and corrected "
+"the sub-sidebar toggle button position when collapsed. Extension framework: "
+"renamed model _inherit to _inherit_model across metaclass, registry, and "
+"migration ops. Core: auto-sync user permissions when a role changes via "
+"signals; filter allowed_users by active company in OwnerQuerysetMixin. "
+"Generics: fixed Add Column to List in tabbed list views."
+msgstr "بازطراحی نوار کناری به ناوبری نمادی با عرض ثابت و برچسب متنی، و اصلاح موقعیت دکمه تغییر وضعیت نوار کناری فرعی در حالت جمع‌شده. چارچوب افزونه: تغییر نام _inherit مدل به _inherit_model در فراکلاس، رجیستری و عملیات مهاجرت. Core: همگام‌سازی خودکار مجوزهای کاربر در پی تغییر نقش از طریق سیگنال‌ها؛ پالایش allowed_users بر پایه شرکت فعال در OwnerQuerysetMixin. Generics: رفع «افزودن ستون به فهرست» در نماهای فهرست زبانه‌دار."
+
+msgid ""
+"Added IP-based brute-force lockout on login and uniform forgot-password "
+"responses to prevent user enumeration. Fixed local settings to apply after "
+"app extensions. Generics: fixed filter-panel toggle in tabbed views with "
+"duplicate element IDs; sanitized notes-and-attachments fields against XSS "
+"and updated delete-button styling with themed icons. Menu: improved sub-"
+"sidebar active-link detection and unique item IDs."
+msgstr "افزودن قفل مبتنی بر نشانی IP در برابر حملات جست‌وجوی فراگیر هنگام ورود و پاسخ‌های یکسان برای فراموشی گذرواژه به‌منظور جلوگیری از شناسایی کاربران. اصلاح تنظیمات محلی تا پس از افزونه‌های اپلیکیشن اعمال شوند. Generics: رفع تغییر وضعیت پنل فیلتر در نماهای زبانه‌دار با شناسه‌های تکراری عناصر؛ پاک‌سازی فیلدهای یادداشت و پیوست در برابر XSS و به‌روزرسانی ظاهر دکمه حذف با نمادهای هم‌رنگ پوسته. Menu: بهبود تشخیص پیوند فعال در نوار کناری فرعی و شناسه‌های یکتا برای آیتم‌ها."
+
+msgid ""
+"Extension tests now use contrib.core examples instead of CRM-specific "
+"modules. Added centralized sanitize_html and sanitize_plain_text helpers "
+"with bleach CSS allowlisting, Summernote DOMPurify mirroring, CSV/XLSX cell "
+"sanitization against formula injection, and notification template XSS "
+"sanitization with validation-error field clearing. Fixed generics Select2 "
+"edit-mode FK filtering by loading parent instances via all_objects and "
+"scoping request.active_company to the record tenant; fixed navbar search "
+"losing focus by removing hx-select-oob/hx-preserve. Core: restricted login "
+"history to the current user, improved role empty state, refined User and "
+"RegionalFormatting forms, showed company on ChangeUserCompanyForm, debounced "
+"saveActiveTab for SQLite, and rendered readable user-agent details in login "
+"history. Registered static, i18n, and horilla_tags as template builtins."
+msgstr ""
+"آزمون‌های افزونه اکنون از نمونه‌های contrib.core به جای ماژول‌های خاص CRM "
+"استفاده می‌کنند. کمک‌گیرنده‌های متمرکز sanitize_html و sanitize_plain_text با "
+"لیست سفید CSS bleach، بازتاب DOMPurify سامرنوت، پالایش سلول‌های CSV/XLSX در "
+"برابر تزریق فرمول، و پالایش XSS قالب اعلان با پاکسازی فیلد خطای اعتبارسنجی "
+"اضافه شد. فیلتر کردن FK حالت ویرایش Select2 عمومی با بارگذاری نمونه‌های والد "
+"از طریق all_objects و محدود کردن request.active_company به مستأجر رکورد "
+"اصلاح شد؛ جستجوی نوار ناوبری با حذف hx-select-oob/hx-preserve از دست دادن "
+"فوکوس اصلاح شد. هسته: تاریخچه ورود به کاربر فعلی محدود شد، وضعیت خالی نقش "
+"بهبود یافت، فرم‌های User و RegionalFormatting اصلاح شدند، شرکت در "
+"ChangeUserCompanyForm نمایش داده شد، saveActiveTab برای SQLite کاهش سرعت "
+"داده شد، و جزئیات user-agent قابل خواندن در تاریخچه ورود نمایش داده شد. "
+"static، i18n و horilla_tags به عنوان توکارهای قالب ثبت شدند."
+
+msgid ""
+"Expanded extension framework with _inherit_form, _inherit_list, "
+"_inherit_card, _inherit_filter, _inherit_nav, _inherit_kanban, and "
+"_inherit_detail composition with caching and per-request resolution. "
+"Introduced PhoneWidget and PhoneField for international phone numbers. Fixed "
+"generics bulk-delete Prefetch slicing, action button text wrapping, and "
+"HolidayForm user-selection defaults. Centralized horilla.db transaction and "
+"connection imports and standardized first-party import groups."
+msgstr ""
+"چارچوب افزونه با _inherit_form، _inherit_list، _inherit_card، "
+"_inherit_filter، _inherit_nav، _inherit_kanban و _inherit_detail با کش و "
+"وضوح در هر درخواست گسترش یافت. PhoneWidget و PhoneField برای شماره تلفن‌های "
+"بین‌المللی معرفی شدند. برش Prefetch حذف گروهی عمومی، پیچش متن دکمه اقدام، و "
+"پیش‌فرض‌های انتخاب کاربر HolidayForm اصلاح شدند. واردات تراکنش و اتصال "
+"horilla.db متمرکز و گروه‌های واردات طرف اول استاندارد شدند."
+
+msgid ""
+"Custom CSRF failure view and csrf_failure.html for DEBUG=False. CSRF "
+"protection restored on state-mutating stage and calendar-preference views. "
+"FiscalYear, RegionalFormatting, Company, and User forms switched to "
+"fields=\"__all__\" with field_order and keep_on_form so HorillaModelForm "
+"base fields are no longer dropped, with sensitive user fields excluded. "
+"Business Hour add-button hides without reload, and "
+"BusinessHourHolidayModalView is guarded for deleted records. Generics skip "
+"M2M relations in bulk-delete to avoid ProtectedError and add cursor-pointer "
+"to note, attachment, and related-list actions. Added horilla.utils.timezone "
+"and horilla.db.models.signals shims, standardized first-party import groups, "
+"and broad docstring coverage for pylint compliance."
+msgstr ""
+"نمایش خطای CSRF سفارشی و csrf_failure.html برای DEBUG=False. محافظت CSRF در "
+"نمایش‌های مرحله تغییردهنده وضعیت و ترجیحات تقویم بازیابی شد. فرم‌های "
+"FiscalYear، RegionalFormatting، Company و User به fields=\"__all__\" با "
+"field_order و keep_on_form تغییر یافتند تا فیلدهای پایه HorillaModelForm "
+"دیگر حذف نشوند، با حذف فیلدهای حساس کاربر. دکمه افزودن Business Hour بدون "
+"بارگذاری مجدد پنهان می‌شود و BusinessHourHolidayModalView برای رکوردهای حذف "
+"شده محافظت می‌شود. عمومی‌ها روابط M2M را در حذف گروهی رد می‌کنند تا از "
+"ProtectedError جلوگیری شود و cursor-pointer به اقدامات یادداشت، پیوست و لیست "
+"مرتبط اضافه می‌شود. شیم‌های horilla.utils.timezone و horilla.db.models.signals "
+"اضافه شدند، گروه‌های واردات طرف اول استاندارد شدند و پوشش گسترده مستندسازی "
+"برای انطباق با pylint انجام شد."
+
+msgid ""
+"Workflow automation engine (rules, conditions, actions, Celery time "
+"triggers, execution history). Public booking platform with slots, public "
+"pages, reminders, and booking/activity integration. ERP-style _inherit model "
+"extensions with InjectField and extension-owned migrations. ShiftHour "
+"scheduling and BusinessHour enhancements with holiday support. HTMX-first "
+"UX, multi-step form refactors, django-countries subdivisions, permission "
+"inheritance fixes, activity/booking mail templates, and Django 6.0 generics "
+"stability improvements."
+msgstr ""
+"موتور اتوماسیون گردش کار (قوانین، شرایط، اقدامات، محرک‌های زمانی Celery، "
+"تاریخچه اجرا). پلتفرم رزرو عمومی با زمان‌بندی، صفحات عمومی، یادآوری‌ها و "
+"یکپارچه‌سازی رزرو/فعالیت. افزونه‌های مدل _inherit به سبک ERP با InjectField و "
+"مهاجرت‌های متعلق به افزونه. زمان‌بندی ShiftHour و بهبودهای BusinessHour با "
+"پشتیبانی از تعطیلات. تجربه کاربری HTMX-first، بازسازی فرم‌های چندمرحله‌ای، "
+"زیربخش‌های django-countries، اصلاحات وراثت مجوز، قالب‌های ایمیل فعالیت/رزرو، و "
+"بهبودهای پایداری عمومی‌های جنگو ۶.۰."
+
+msgid ""
+"Meeting Integration contrib app (Zoom/Teams OAuth, meeting links, activity "
+"hooks). Generics export and JSONField display improvements. My Profile panel "
+"scrolls within a fixed viewport. Calendar Google settings respect active "
+"company on POST. Scheduled automations use corrected Celery task paths."
+msgstr ""
+"برنامه مشارکتی یکپارچه‌سازی جلسات (Zoom/Teams OAuth، لینک‌های جلسه، قلاب‌های "
+"فعالیت). بهبودهای خروجی عمومی و نمایش JSONField. پنل نمایه من در یک نمای "
+"ثابت پیمایش می‌کند. تنظیمات Google Calendar به شرکت فعال در POST احترام "
+"می‌گذارد. اتوماسیون‌های زمان‌بندی شده از مسیرهای تصحیح شده وظایف Celery استفاده "
+"می‌کنند."
+
+msgid ""
+"Major platform 1.10 layout: support apps consolidated under the contrib "
+"namespace with short Django app labels (activity, core, mail, theme, and "
+"related modules). AppLauncher configs, imports, URL namespaces, static "
+"paths, and permission or content-type strings updated to match the new "
+"labels. Added sync tooling to align migration records, content types, audit "
+"log references, and related data when upgrading existing databases."
+msgstr ""
+"چیدمان اصلی پلتفرم ۱.۱۰: برنامه‌های پشتیبانی در زیر فضای نام contrib با "
+"برچسب‌های کوتاه برنامه جنگو (activity، core، mail، theme و ماژول‌های مرتبط) "
+"تثبیت شدند. پیکربندی‌های AppLauncher، واردات، فضای نام URL، مسیرهای استاتیک و "
+"رشته‌های مجوز یا content-type برای مطابقت با برچسب‌های جدید به‌روزرسانی شدند. "
+"ابزار همگام‌سازی برای هماهنگ‌سازی رکوردهای مهاجرت، انواع محتوا، ارجاعات لاگ "
+"حسابرسی و داده‌های مرتبط هنگام ارتقاء پایگاه‌های داده موجود اضافه شد."
+
+msgid ""
+"Added Google Calendar integration with sync, service, and settings support. "
+"Implemented cadence signals for runtime activities. Centralized HorillaView "
+"layout resolution with get_layout_url() for backend-driven layout selection."
+msgstr ""
+"یکپارچه‌سازی Google Calendar با پشتیبانی همگام‌سازی، سرویس و تنظیمات اضافه شد. "
+"سیگنال‌های cadence برای فعالیت‌های زمان اجرا پیاده‌سازی شدند. وضوح چیدمان "
+"HorillaView با get_layout_url() برای انتخاب چیدمان مبتنی بر بک‌اند متمرکز شد."
+
+msgid ""
+"Switched Channels backend from InMemoryChannelLayer to RedisChannelLayer. "
+"Moved Holiday model to dedicated holidays.py. Improved branch list layout, "
+"business hour and holiday bulk select, and viewport-based table heights. "
+"Added SECURITY.md documentation."
+msgstr ""
+"بک‌اند Channels از InMemoryChannelLayer به RedisChannelLayer تغییر یافت. مدل "
+"Holiday به holidays.py اختصاصی منتقل شد. چیدمان لیست شعبه، انتخاب گروهی ساعت "
+"کاری و تعطیلات، و ارتفاع جدول مبتنی بر نمای بهبود یافت. مستندات SECURITY.md "
+"اضافه شد."
+
+msgid ""
+"Introduced unified Process Builder system combining reviews and approvals. "
+"Added async notification and mail handling with background thread execution. "
+"Improved health check endpoint and version changelog modal system. Updated "
+"assign_first_company_to_all_users signal to use User model directly."
+msgstr ""
+"سیستم یکپارچه Process Builder که بررسی‌ها و تأییدیه‌ها را ترکیب می‌کند معرفی "
+"شد. مدیریت اعلان و ایمیل ناهمگام با اجرای نخ پس‌زمینه اضافه شد. نقطه پایانی "
+"بررسی سلامت و سیستم مودال تغییرات نسخه بهبود یافت. سیگنال "
+"assign_first_company_to_all_users به‌روزرسانی شد تا مستقیماً از مدل User "
+"استفاده کند."
+
+msgid ""
+"Strengthened core validation with strict enforcement of include_models "
+"during feature registration, validation of subsection-to-section mappings, "
+"and export of StreamingHttpResponse via Horilla HTTP utilities."
+msgstr ""
+"اعتبارسنجی هسته با اعمال سخت‌گیرانه include_models در طول ثبت ویژگی، "
+"اعتبارسنجی نگاشت‌های زیربخش به بخش، و خروجی StreamingHttpResponse از طریق "
+"ابزارهای HTTP Horilla تقویت شد."
+
+msgid ""
+"Added health check endpoint, synced fiscal year and period logic, improved "
+"version changelog modal system, and switched Django Channels backend to "
+"Redis for better performance and reliability."
+msgstr ""
+"نقطه پایانی بررسی سلامت اضافه شد، منطق سال مالی و دوره همگام‌سازی شد، سیستم "
+"مودال تغییرات نسخه بهبود یافت و بک‌اند Django Channels برای عملکرد و قابلیت "
+"اطمینان بهتر به Redis تغییر یافت."
+
+msgid ""
+"Improved global search model registry loading, standardized error handling "
+"with dedicated 403, 404, 405, and 500 templates, strengthened authentication "
+"flow using Django authenticate(), and applied multiple security and "
+"stability improvements across internal views."
+msgstr ""
+"بارگذاری ثبت مدل جستجوی جهانی بهبود یافت، مدیریت خطا با قالب‌های اختصاصی ۴۰۳، "
+"۴۰۴، ۴۰۵ و ۵۰۰ استاندارد شد، جریان احراز هویت با استفاده از Django "
+"authenticate() تقویت شد و بهبودهای متعدد امنیتی و پایداری در سراسر نمایش‌های "
+"داخلی اعمال شد."
+
+msgid ""
+"Introduced the Horilla AppLauncher system for dynamic application "
+"registration. Added horilla.shortcuts, horilla.urls, and horilla.utils "
+"utilities. Refactored project URL handling and improved internal framework "
+"architecture for modular applications."
+msgstr ""
+"سیستم Horilla AppLauncher برای ثبت پویای برنامه معرفی شد. ابزارهای "
+"horilla.shortcuts، horilla.urls و horilla.utils اضافه شدند. مدیریت URL پروژه "
+"بازسازی شد و معماری چارچوب داخلی برای برنامه‌های ماژولار بهبود یافت."
+
+msgid ""
+"Improved system configuration handling, strengthened dashboard layout "
+"validation, enhanced filter processing reliability, and added multiple "
+"defensive validation improvements across core components."
+msgstr ""
+"مدیریت پیکربندی سیستم بهبود یافت، اعتبارسنجی چیدمان داشبورد تقویت شد، قابلیت "
+"اطمینان پردازش فیلتر افزایش یافت و بهبودهای متعدد اعتبارسنجی دفاعی در سراسر "
+"مؤلفه‌های هسته اضافه شد."
+
+msgid ""
+"Added an 'All Companies' option to the company dropdown, allowing users to "
+"view data irrespective of company selection."
+msgstr ""
+"گزینه 'همه شرکت‌ها' به منوی کشویی شرکت اضافه شد که به کاربران امکان می‌دهد "
+"داده‌ها را بدون توجه به انتخاب شرکت مشاهده کنند."
+
+msgid "Users"
+msgstr "کاربران"
+
+msgid "e.g. US Business Hours"
+msgstr "مثلاً ساعات کاری آمریکا"
+
+msgid "Start"
+msgstr "شروع"
+
+msgid "End"
+msgstr "پایان"
+
+msgid "You can only add one business hour per company."
+msgstr "شما فقط می‌توانید یک ساعت کاری در هر شرکت اضافه کنید."
+
+msgid "You can select a maximum of 5 days for 24x5 business hours."
+msgstr "شما می‌توانید حداکثر ۵ روز را برای ساعت کاری ۲۴×۵ انتخاب کنید."
+
+msgid "Date Time Format"
+msgstr "قالب تاریخ و زمان"
+
+msgid "Language and Time Zone"
+msgstr "زبان و منطقه زمانی"
+
+msgid "Currency"
+msgstr "ارز"
+
+msgid "Enter current password"
+msgstr "رمز عبور فعلی را وارد کنید"
+
+msgid "Current Password"
+msgstr "رمز عبور فعلی"
+
+msgid "Enter new password"
+msgstr "رمز عبور جدید را وارد کنید"
+
+msgid "New Password"
+msgstr "رمز عبور جدید"
+
+msgid "Confirm your password"
+msgstr "رمز عبور خود را تأیید کنید"
+
+msgid "Confirm New Password"
+msgstr "تأیید رمز عبور جدید"
+
+msgid "Current password is incorrect."
+msgstr "رمز عبور فعلی نادرست است."
+
+msgid "Confirm password and new password must be match"
+msgstr "رمز عبور تأیید و رمز عبور جدید باید مطابقت داشته باشند"
+
+msgid "New password must be different from current password."
+msgstr "رمز عبور جدید باید با رمز عبور فعلی متفاوت باشد."
+
+msgid "Select a currency"
+msgstr "یک ارز انتخاب کنید"
+
+msgid "New Currency"
+msgstr "ارز جدید"
+
+msgid "Select a new default currency"
+msgstr "یک ارز پیش‌فرض جدید انتخاب کنید"
+
+msgid "Change Default Currency"
+msgstr "تغییر ارز پیش‌فرض"
+
+msgid "Start Date"
+msgstr "تاریخ شروع"
+
+msgid "Effective date for these conversion rates"
+msgstr "تاریخ مؤثر برای این نرخ‌های تبدیل"
+
+msgid "Select one or more users to assign to the role."
+msgstr "یک یا چند کاربر را برای تخصیص به نقش انتخاب کنید."
+
+msgid "The following user(s) are already assigned to this role"
+msgstr "کاربر(های) زیر قبلاً به این نقش تخصیص داده شده‌اند"
+
+msgid "Select one or more users to grant superuser privileges."
+msgstr "یک یا چند کاربر را برای اعطای مجوزهای ابرکاربری انتخاب کنید."
+
+#, python-brace-format
+msgid "The following user(s) are already superusers: {users}"
+msgstr "کاربر(های) زیر قبلاً ابرکاربر هستند: {users}"
+
+msgid "Mon"
+msgstr "دوشنبه"
+
+msgid "Tue"
+msgstr "سه‌شنبه"
+
+msgid "Wed"
+msgstr "چهارشنبه"
+
+msgid "Thu"
+msgstr "پنج‌شنبه"
+
+msgid "Fri"
+msgstr "جمعه"
+
+msgid "Sat"
+msgstr "شنبه"
+
+msgid "Sun"
+msgstr "یک‌شنبه"
+
+msgid "B1"
+msgstr "استراحت ۱"
+
+msgid "B2"
+msgstr "استراحت ۲"
+
+msgid ""
+"Uses 24-hour time: morning stays 01:00–12:59; 5:30 PM is 17:30 (not 05:30, "
+"which is 5:30 AM)."
+msgstr ""
+"از زمان ۲۴ ساعته استفاده می‌کند: صبح ۰۱:۰۰ تا ۱۲:۵۹؛ ۵:۳۰ بعدازظهر برابر با "
+"۱۷:۳۰ است (نه ۰۵:۳۰ که ۵:۳۰ صبح است)."
+
+msgid ""
+"End time must be after start on the same day. Use 24-hour time (for example "
+"5:30 PM as 17:30, not 05:30)."
+msgstr ""
+"زمان پایان باید بعد از شروع در همان روز باشد. از زمان ۲۴ ساعته استفاده کنید "
+"(مثلاً ۵:۳۰ بعدازظهر به عنوان ۱۷:۳۰، نه ۰۵:۳۰)."
+
+msgid "e.g. US Shift, APAC Support"
+msgstr "مثلاً شیفت آمریکا، پشتیبانی APAC"
+
+msgid "Shift name"
+msgstr "نام شیفت"
+
+msgid "- start"
+msgstr "- شروع"
+
+msgid "- end"
+msgstr "- پایان"
+
+#, python-format
+msgid "%(slot)s %(day)s%(tail)s"
+msgstr "%(slot)s %(day)s%(tail)s"
+
+#, python-format
+msgid "You can define at most %(limit)s shift hours per company."
+msgstr "شما می‌توانید حداکثر %(limit)s ساعت شیفت در هر شرکت تعریف کنید."
+
+msgid "Select at least one weekday for the shift."
+msgstr "حداقل یک روز هفته برای شیفت انتخاب کنید."
+
+msgid "Start and end time are required when using the same hours every day."
+msgstr ""
+"زمان شروع و پایان در هنگام استفاده از ساعات یکسان در هر روز الزامی است."
+
+msgid "Set start and end times for at least one weekday for the shift."
+msgstr "زمان شروع و پایان را برای حداقل یک روز هفته برای شیفت تنظیم کنید."
+
+msgid "Start and end are required for each selected shift day."
+msgstr "شروع و پایان برای هر روز شیفت انتخاب شده الزامی است."
+
+msgid "Enter start and end for at least one break day."
+msgstr "شروع و پایان را برای حداقل یک روز استراحت وارد کنید."
+
+msgid "Select at least one weekday for this break."
+msgstr "حداقل یک روز هفته برای این استراحت انتخاب کنید."
+
+msgid "Break days must be among the shift working days."
+msgstr "روزهای استراحت باید جزو روزهای کاری شیفت باشند."
+
+msgid "Break start and end are required for this mode."
+msgstr "شروع و پایان استراحت برای این حالت الزامی است."
+
+msgid ""
+"Break end must be after break start. Use 24-hour time (5:30 PM is 17:30, not "
+"05:30)."
+msgstr ""
+"پایان استراحت باید بعد از شروع استراحت باشد. از زمان ۲۴ ساعته استفاده کنید "
+"(۵:۳۰ بعدازظهر برابر با ۱۷:۳۰ است، نه ۰۵:۳۰)."
+
+#, python-format
+msgid "Break on %(day)s must fall within the shift hours for that day."
+msgstr "استراحت در %(day)s باید در ساعات شیفت آن روز باشد."
+
+msgid "Invalid break time format."
+msgstr "قالب زمان استراحت نامعتبر است."
+
+msgid "A user with this email already exists."
+msgstr "کاربری با این ایمیل از قبل وجود دارد."
+
+msgid "Password"
+msgstr "رمز عبور"
+
+msgid "Enter a secure password"
+msgstr "یک رمز عبور امن وارد کنید"
+
+msgid "Confirm Password"
+msgstr "تأیید رمز عبور"
+
+msgid "Enter the same password again for verification"
+msgstr "برای تأیید، دوباره همان رمز عبور را وارد کنید"
+
+msgid "Enter username"
+msgstr "نام کاربری را وارد کنید"
+
+msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr "الزامی. ۱۵۰ کاراکتر یا کمتر. فقط حروف، اعداد و @/./+/-/_"
+
+msgid "Leave blank to keep current password"
+msgstr "برای حفظ رمز عبور فعلی خالی بگذارید"
+
+msgid "Username is required."
+msgstr "نام کاربری الزامی است."
+
+msgid "A user with this username already exists."
+msgstr "کاربری با این نام کاربری از قبل وجود دارد."
+
+msgid "The two password fields must match."
+msgstr "دو فیلد رمز عبور باید مطابقت داشته باشند."
+
+msgid "Password is required for new users."
+msgstr "رمز عبور برای کاربران جدید الزامی است."
+
+msgid "Profile"
+msgstr "نمایه"
+
+msgid "Regional & Formatting"
+msgstr "منطقه‌ای و قالب‌بندی"
+
+msgid "Change Password"
+msgstr "تغییر رمز عبور"
+
+msgid "Login History"
+msgstr "تاریخچه ورود"
+
+msgid "Holiday"
+msgstr "تعطیلات"
+
+msgid "General"
+msgstr "عمومی"
+
+msgid "Company Information"
+msgstr "اطلاعات شرکت"
+
+msgid "Roles and Permissions"
+msgstr "نقش‌ها و مجوزها"
+
+msgid "Base"
+msgstr "پایه"
+
+msgid "Branches"
+msgstr "شعب"
+
+msgid "Data Mangement"
+msgstr "مدیریت داده"
+
+msgid "Import Data"
+msgstr "ایمپورت داده"
+
+msgid "Export Data"
+msgstr "اکسپورت داده"
+
+msgid "Recycle Bin"
+msgstr "سطل بازیافت"
+
+msgid "About System"
+msgstr "درباره سیستم"
+
+msgid "Version Info"
+msgstr "اطلاعات نسخه"
+
+msgid "Integrations"
+msgstr "یکپارچه‌سازی‌ها"
+
+msgid "Title"
+msgstr "عنوان"
+
+msgid "Related Object Type"
+msgstr "نوع شیء مرتبط"
+
+msgid "The type of object this attachment is related to."
+msgstr "نوع شیء که این پیوست به آن مرتبط است."
+
+msgid "Related Object ID"
+msgstr "شناسه شیء مرتبط"
+
+msgid "The ID of the object this attachment is related to."
+msgstr "شناسه شیء که این پیوست به آن مرتبط است."
+
+msgid "File"
+msgstr "فایل"
+
+msgid "Optional file attached to this record."
+msgstr "فایل اختیاری پیوست شده به این رکورد."
+
+msgid "Notes"
+msgstr "یادداشت‌ها"
+
+msgid "Optional description or notes about the attachment."
+msgstr "توضیحات یا یادداشت‌های اختیاری درباره پیوست."
+
+msgid "Attachment"
+msgstr "پیوست"
+
+msgid "Attachments"
+msgstr "پیوست‌ها"
+
+msgid "Model"
+msgstr "مدل"
+
+msgid "Models"
+msgstr "مدل‌ها"
+
+msgid "Company Name"
+msgstr "نام شرکت"
+
+msgid "Email Address"
+msgstr "آدرس ایمیل"
+
+msgid "Website"
+msgstr "وب‌سایت"
+
+msgid "Company Icon"
+msgstr "آیکون شرکت"
+
+msgid "Contact Number"
+msgstr "شماره تماس"
+
+msgid "Fax Number"
+msgstr "شماره دورنگار"
+
+msgid "Annual Revenue"
+msgstr "درآمد سالانه"
+
+msgid "Number of Employees"
+msgstr "تعداد کارکنان"
+
+#| msgid "Head quarter"
+msgid "Head Quarter"
+msgstr "دفتر مرکزی"
+
+msgid "Country"
+msgstr "کشور"
+
+msgid "State/Province"
+msgstr "استان"
+
+msgid "City"
+msgstr "شهر"
+
+msgid "ZIP/Postal Code"
+msgstr "کد پستی"
+
+msgid "Language"
+msgstr "زبان"
+
+msgid "Time Zone"
+msgstr "منطقه زمانی"
+
+msgid "Select your preferred currency"
+msgstr "ارز مورد نظر خود را انتخاب کنید"
+
+msgid "Select your preferred time format."
+msgstr "قالب زمان مورد نظر خود را انتخاب کنید."
+
+msgid "Time Format"
+msgstr "قالب زمان"
+
+msgid "Select your preferred date format."
+msgstr "قالب تاریخ مورد نظر خود را انتخاب کنید."
+
+msgid "Date Format"
+msgstr "قالب تاریخ"
+
+msgid "Select your preferred date time format."
+msgstr "قالب تاریخ و زمان مورد نظر خود را انتخاب کنید."
+
+msgid "Activate Multiple Currencies"
+msgstr "فعال‌سازی ارزهای چندگانه"
+
+msgid "Created At"
+msgstr "ایجاد شده در"
+
+msgid "Updated At"
+msgstr "به‌روزرسانی شده در"
+
+msgid "Created By"
+msgstr "ایجاد شده توسط"
+
+msgid "Updated By"
+msgstr "به‌روزرسانی شده توسط"
+
+msgid "Branch"
+msgstr "شعبه"
+
+msgid "Is Active"
+msgstr "فعال است"
+
+#| msgid "Additional info"
+msgid "Additional Info"
+msgstr "اطلاعات تکمیلی"
+
+msgid "Company"
+msgstr "شرکت"
+
+msgid "Monday Start Time"
+msgstr "زمان شروع دوشنبه"
+
+msgid "Monday End Time"
+msgstr "زمان پایان دوشنبه"
+
+msgid "Tuesday Start Time"
+msgstr "زمان شروع سه‌شنبه"
+
+msgid "Tuesday End Time"
+msgstr "زمان پایان سه‌شنبه"
+
+msgid "Wednesday Start Time"
+msgstr "زمان شروع چهارشنبه"
+
+msgid "Wednesday End Time"
+msgstr "زمان پایان چهارشنبه"
+
+msgid "Thursday Start Time"
+msgstr "زمان شروع پنج‌شنبه"
+
+msgid "Thursday End Time"
+msgstr "زمان پایان پنج‌شنبه"
+
+msgid "Friday Start Time"
+msgstr "زمان شروع جمعه"
+
+msgid "Friday End Time"
+msgstr "زمان پایان جمعه"
+
+msgid "Saturday Start Time"
+msgstr "زمان شروع شنبه"
+
+msgid "Saturday End Time"
+msgstr "زمان پایان شنبه"
+
+msgid "Sunday Start Time"
+msgstr "زمان شروع یک‌شنبه"
+
+msgid "Sunday End Time"
+msgstr "زمان پایان یک‌شنبه"
+
+msgid "24 Hours x 7 days"
+msgstr "۲۴ ساعت × ۷ روز"
+
+msgid "24 Hours x 5 days"
+msgstr "۲۴ ساعت × ۵ روز"
+
+msgid "Custom Hours"
+msgstr "ساعات سفارشی"
+
+msgid "Name"
+msgstr "نام"
+
+msgid "Type of business hours"
+msgstr "نوع ساعت کاری"
+
+msgid "Business Hour Type"
+msgstr "نوع ساعت کاری"
+
+msgid "Week Start Day"
+msgstr "روز شروع هفته"
+
+#| msgid "Weekly Days"
+msgid "Week Days"
+msgstr "روزهای هفته"
+
+msgid "Same hours every day or different hours per day"
+msgstr "ساعات یکسان در هر روز یا ساعات متفاوت در هر روز"
+
+msgid "Timing Type"
+msgstr "نوع زمان‌بندی"
+
+msgid "Default start time"
+msgstr "زمان شروع پیش‌فرض"
+
+msgid "Default Start Time"
+msgstr "زمان شروع پیش‌فرض"
+
+msgid "Default end time"
+msgstr "زمان پایان پیش‌فرض"
+
+msgid "Default End Time"
+msgstr "زمان پایان پیش‌فرض"
+
+msgid "Default Business Hour"
+msgstr "ساعت کاری پیش‌فرض"
+
+msgid "Is Default"
+msgstr "پیش‌فرض است"
+
+msgid "Holidays"
+msgstr "تعطیلات"
+
+msgid "Company holidays associated with this business hour schedule."
+msgstr "تعطیلات شرکت مرتبط با این برنامه ساعت کاری."
+
+msgid "Business Hour"
+msgstr "ساعت کاری"
+
+msgid "Business Hours"
+msgstr "ساعات کاری"
+
+msgid "Closed"
+msgstr "بسته"
+
+msgid "None"
+msgstr "هیچ‌کدام"
+
+msgid "24 hours"
+msgstr "۲۴ ساعت"
+
+msgid "No break hours"
+msgstr "بدون ساعت استراحت"
+
+msgid "Same hours every day"
+msgstr "ساعات یکسان هر روز"
+
+msgid "Different hours every day"
+msgstr "ساعات متفاوت هر روز"
+
+#| msgid "Shift hours"
+msgid "Shift Hours"
+msgstr "ساعات شیفت"
+
+#| msgid "Break hours 1"
+msgid "Break Hours 1"
+msgstr "ساعات استراحت ۱"
+
+#| msgid "Break 1 default start"
+msgid "Break 1 Default Start"
+msgstr "شروع پیش‌فرض استراحت ۱"
+
+#| msgid "Break 1 default end"
+msgid "Break 1 Default End"
+msgstr "پایان پیش‌فرض استراحت ۱"
+
+msgid "Per-day break times when mode is \"different\" (mon..sun keys)."
+msgstr ""
+"زمان‌های استراحت روزانه وقتی حالت \"متفاوت\" است (کلیدهای دوشنبه..یک‌شنبه)."
+
+#| msgid "Break 1 per-day times"
+msgid "Break 1 Per-Day Times"
+msgstr "زمان‌های روزانه استراحت ۱"
+
+#| msgid "Break hours 2"
+msgid "Break Hours 2"
+msgstr "ساعات استراحت ۲"
+
+#| msgid "Break 2 default start"
+msgid "Break 2 Default Start"
+msgstr "شروع پیش‌فرض استراحت ۲"
+
+#| msgid "Break 2 default end"
+msgid "Break 2 Default End"
+msgstr "پایان پیش‌فرض استراحت ۲"
+
+#| msgid "Break 2 per-day times"
+msgid "Break 2 Per-Day Times"
+msgstr "زمان‌های روزانه استراحت ۲"
+
+#| msgid "Assigned users"
+msgid "Assigned Users"
+msgstr "کاربران تخصیص‌یافته"
+
+#| msgid "Shift hour"
+msgid "Shift Hour"
+msgstr "ساعت شیفت"
+
+msgid "Yes"
+msgstr "بله"
+
+msgid "No"
+msgstr "خیر"
+
+msgid "Same (incomplete)"
+msgstr "یکسان (ناقص)"
+
+msgid "Different per day"
+msgstr "متفاوت در هر روز"
+
+msgid "Kanban"
+msgstr "کانبان"
+
+msgid "Group By"
+msgstr "گروه‌بندی بر اساس"
+
+msgid "Column User"
+msgstr "کاربر ستون"
+
+msgid "Name of the model (e.g., 'User') to group by."
+msgstr "نام مدل (مثلاً 'User') برای گروه‌بندی بر اساس."
+
+msgid "Whether this setting is for Kanban view or Group By view."
+msgstr "اینکه این تنظیم برای نمای کانبان است یا نمای گروه‌بندی بر اساس."
+
+msgid ""
+"Name of the field that can be used for grouping (ChoiceField or ForeignKey)."
+msgstr ""
+"نام فیلدی که می‌توان برای گروه‌بندی استفاده کرد (ChoiceField یا ForeignKey)."
+
+msgid "User"
+msgstr "کاربر"
+
+msgid "Model name for which timeline span fields apply."
+msgstr "نام مدلی که فیلدهای بازه زمانی برای آن اعمال می‌شوند."
+
+msgid "Field used as bar start date."
+msgstr "فیلد مورد استفاده به عنوان تاریخ شروع نوار."
+
+msgid "Field used as bar end date (may equal start for single-day bars)."
+msgstr ""
+"فیلد مورد استفاده به عنوان تاریخ پایان نوار (ممکن است برای نوارهای یک‌روزه "
+"برابر با شروع باشد)."
+
+#, python-format
+msgid "'%(field)s' is not a valid date field for this model."
+msgstr "'%(field)s' یک فیلد تاریخ معتبر برای این مدل نیست."
+
+#| msgid "Timeline span settings"
+msgid "Timeline Span Settings"
+msgstr "تنظیمات بازه خط زمان"
+
+msgid "When set, this filter is available to all users in this list/position."
+msgstr ""
+"در صورت تنظیم، این فیلتر برای همه کاربران در این لیست/موقعیت در دسترس است."
+
+msgid "conversion rate from default currency"
+msgstr "نرخ تبدیل از ارز پیش‌فرض"
+
+msgid "Conversion Rate"
+msgstr "نرخ تبدیل"
+
+#| msgid "Decimal places"
+msgid "Decimal Places"
+msgstr "تعداد ارقام اعشار"
+
+msgid "Default Currency"
+msgstr "ارز پیش‌فرض"
+
+msgid "Mark this currency as the default for the system"
+msgstr "این ارز را به عنوان پیش‌فرض سیستم علامت‌گذاری کنید"
+
+msgid "Multiple Currency"
+msgstr "ارز چندگانه"
+
+msgid "Multiple Currencies"
+msgstr "ارزهای چندگانه"
+
+msgid "Conversion rate from default currency"
+msgstr "نرخ تبدیل از ارز پیش‌فرض"
+
+msgid "The date from which this conversion rate is effective"
+msgstr "تاریخی که این نرخ تبدیل از آن تاریخ معتبر است"
+
+msgid "Dated Conversion Rate"
+msgstr "نرخ تبدیل تاریخ‌دار"
+
+msgid "Dated Conversion Rates"
+msgstr "نرخ‌های تبدیل تاریخ‌دار"
+
+msgid "Standard Fiscal Year"
+msgstr "سال مالی استاندارد"
+
+msgid "Custom Fiscal Year"
+msgstr "سال مالی سفارشی"
+
+msgid "Fiscal Year Type"
+msgstr "نوع سال مالی"
+
+msgid "Year Based"
+msgstr "مبتنی بر سال"
+
+msgid "Quarter Based"
+msgstr "مبتنی بر سه‌ماهه"
+
+msgid "Format"
+msgstr "قالب"
+
+msgid ""
+"4-4-5 In each quarter, Period 1 has 4 weeks, Period 2 has 4 weeks, Period 3 "
+"has 5 weeks"
+msgstr ""
+"۴-۴-۵ در هر سه‌ماهه، دوره ۱ دارای ۴ هفته، دوره ۲ دارای ۴ هفته، دوره ۳ دارای ۵ "
+"هفته"
+
+msgid ""
+"4-5-4 In each quarter, Period 1 has 4 weeks, Period 2 has 5 weeks, Period 3 "
+"has 4 weeks"
+msgstr ""
+"۴-۵-۴ در هر سه‌ماهه، دوره ۱ دارای ۴ هفته، دوره ۲ دارای ۵ هفته، دوره ۳ دارای ۴ "
+"هفته"
+
+msgid ""
+"5-4-4 In each quarter, Period 1 has 5 weeks, Period 2 has 4 weeks, Period 3 "
+"has 4 weeks"
+msgstr ""
+"۵-۴-۴ در هر سه‌ماهه، دوره ۱ دارای ۵ هفته، دوره ۲ دارای ۴ هفته، دوره ۳ دارای ۴ "
+"هفته"
+
+msgid "Quarter Based Format"
+msgstr "قالب مبتنی بر سه‌ماهه"
+
+msgid ""
+"3-3-3-4 Quarter 1 has 3 Periods, Quarter 2 has 3 Periods, Quarter 3 has 3 "
+"Periods, Quarter 4 has 4 Periods"
+msgstr ""
+"۳-۳-۳-۴ سه‌ماهه ۱ دارای ۳ دوره، سه‌ماهه ۲ دارای ۳ دوره، سه‌ماهه ۳ دارای ۳ دوره، "
+"سه‌ماهه ۴ دارای ۴ دوره"
+
+msgid ""
+"3-3-4-3 Quarter 1 has 3 Periods, Quarter 2 has 3 Periods, Quarter 3 has 4 "
+"Periods, Quarter 4 has 3 Periods"
+msgstr ""
+"۳-۳-۴-۳ سه‌ماهه ۱ دارای ۳ دوره، سه‌ماهه ۲ دارای ۳ دوره، سه‌ماهه ۳ دارای ۴ دوره، "
+"سه‌ماهه ۴ دارای ۳ دوره"
+
+msgid ""
+"3-4-3-3 Quarter 1 has 3 Periods, Quarter 2 has 4 Periods, Quarter 3 has 3 "
+"Periods, Quarter 4 has 3 Periods"
+msgstr ""
+"۳-۴-۳-۳ سه‌ماهه ۱ دارای ۳ دوره، سه‌ماهه ۲ دارای ۴ دوره، سه‌ماهه ۳ دارای ۳ دوره، "
+"سه‌ماهه ۴ دارای ۳ دوره"
+
+msgid ""
+"4-3-3-3 Quarter 1 has 4 Periods, Quarter 2 has 3 Periods, Quarter 3 has 3 "
+"Periods, Quarter 4 has 3 Periods"
+msgstr ""
+"۴-۳-۳-۳ سه‌ماهه ۱ دارای ۴ دوره، سه‌ماهه ۲ دارای ۳ دوره، سه‌ماهه ۳ دارای ۳ دوره، "
+"سه‌ماهه ۴ دارای ۳ دوره"
+
+msgid "Year Based Format"
+msgstr "قالب مبتنی بر سال"
+
+msgid "Start Date Month"
+msgstr "ماه تاریخ شروع"
+
+msgid "Start Date Day"
+msgstr "روز تاریخ شروع"
+
+msgid "Starting Year"
+msgstr "سال شروع"
+
+msgid "Ending Year"
+msgstr "سال پایان"
+
+msgid "Display Fiscal Year Based On"
+msgstr "نمایش سال مالی بر اساس"
+
+msgid "Year"
+msgstr "سال"
+
+msgid "Quarter"
+msgstr "سه‌ماهه"
+
+msgid "Period"
+msgstr "دوره"
+
+msgid "Number Weeks By"
+msgstr "تعداد هفته‌ها بر اساس"
+
+msgid "Number by Year"
+msgstr "تعداد بر اساس سال"
+
+msgid "Number by Quarter"
+msgstr "تعداد بر اساس سه‌ماهه"
+
+msgid "Period Display Option"
+msgstr "گزینه نمایش دوره"
+
+msgid "Fiscal Year"
+msgstr "سال مالی"
+
+msgid "Fiscal Years"
+msgstr "سال‌های مالی"
+
+msgid "Fiscal Year Configuration"
+msgstr "پیکربندی سال مالی"
+
+msgid "End Date"
+msgstr "تاریخ پایان"
+
+msgid "Fiscal Year Name"
+msgstr "نام سال مالی"
+
+msgid "Is Current"
+msgstr "جاری است"
+
+msgid "Fiscal Year Instance"
+msgstr "نمونه سال مالی"
+
+msgid "Fiscal Year Instances"
+msgstr "نمونه‌های سال مالی"
+
+msgid "Quarter Name"
+msgstr "نام سه‌ماهه"
+
+msgid "Quarter Number"
+msgstr "شماره سه‌ماهه"
+
+msgid "Quarters"
+msgstr "سه‌ماهه‌ها"
+
+msgid "Period Name"
+msgstr "نام دوره"
+
+msgid "Period Number"
+msgstr "شماره دوره"
+
+msgid "Periods"
+msgstr "دوره‌ها"
+
+msgid "Weekly"
+msgstr "هفتگی"
+
+msgid "Monthly"
+msgstr "ماهانه"
+
+msgid "Yearly"
+msgstr "سالانه"
+
+msgid "On Day"
+msgstr "در روز"
+
+msgid "On the"
+msgstr "در"
+
+msgid "On every"
+msgstr "در هر"
+
+msgid "Holiday Name"
+msgstr "نام تعطیلات"
+
+msgid "All Users"
+msgstr "همه کاربران"
+
+msgid "Specific Users"
+msgstr "کاربران خاص"
+
+msgid "Recurring"
+msgstr "تکرارشونده"
+
+msgid "Holiday Frequency"
+msgstr "تناوب تعطیلات"
+
+msgid "Recurs Every (weeks)"
+msgstr "تکرار هر (هفته)"
+
+msgid "Weekly Days"
+msgstr "روزهای هفتگی"
+
+msgid "Monthly Repeat Type"
+msgstr "نوع تکرار ماهانه"
+
+msgid "Day of Month"
+msgstr "روز ماه"
+
+msgid "Monthly Interval"
+msgstr "فاصله ماهانه"
+
+msgid "Day of Week"
+msgstr "روز هفته"
+
+msgid "Week of Month"
+msgstr "هفته ماه"
+
+msgid "Yearly Repeat Type"
+msgstr "نوع تکرار سالانه"
+
+msgid "Month"
+msgstr "ماه"
+
+msgid "Start date cannot be after end date"
+msgstr "تاریخ شروع نمی‌تواند بعد از تاریخ پایان باشد"
+
+msgid "Frequency is required for recurring holidays"
+msgstr "تناوب برای تعطیلات تکرارشونده الزامی است"
+
+msgid "Weekly days must be specified for weekly recurrence"
+msgstr "روزهای هفتگی برای تکرار هفتگی باید مشخص شوند"
+
+msgid "Recurs every weeks must be at least 1"
+msgstr "تکرار هر هفته باید حداقل ۱ باشد"
+
+msgid "Day of month is required for monthly recurrence"
+msgstr "روز ماه برای تکرار ماهانه الزامی است"
+
+msgid "Both day of week and week of month are required for monthly recurrence"
+msgstr "هم روز هفته و هم هفته ماه برای تکرار ماهانه الزامی است"
+
+msgid "Please select a valid monthly repeat type"
+msgstr "لطفاً یک نوع تکرار ماهانه معتبر انتخاب کنید"
+
+msgid "Month is required for yearly recurrence"
+msgstr "ماه برای تکرار سالانه الزامی است"
+
+msgid "Day of month is required for yearly recurrence"
+msgstr "روز ماه برای تکرار سالانه الزامی است"
+
+msgid "Both week of month and day of week are required for yearly recurrence"
+msgstr "هم هفته ماه و هم روز هفته برای تکرار سالانه الزامی است"
+
+msgid "Please select a valid yearly repeat type"
+msgstr "لطفاً یک نوع تکرار سالانه معتبر انتخاب کنید"
+
+msgid "1st"
+msgstr "اول"
+
+msgid "2nd"
+msgstr "دوم"
+
+msgid "3rd"
+msgstr "سوم"
+
+msgid "4th"
+msgstr "چهارم"
+
+msgid "5th"
+msgstr "پنجم"
+
+msgid "One-time holiday"
+msgstr "تعطیلات یک‌باره"
+
+msgid "Weekly on {}"
+msgstr "هفتگی در {}"
+
+msgid "Every {} weeks on {}"
+msgstr "هر {} هفته در {}"
+
+msgid "Monthly on day {}"
+msgstr "ماهانه در روز {}"
+
+msgid "Every {} months on day {}"
+msgstr "هر {} ماه در روز {}"
+
+msgid "Monthly on {} {} of month"
+msgstr "ماهانه در {} {} ماه"
+
+msgid "Every {} months on {} {} of month"
+msgstr "هر {} ماه در {} {} ماه"
+
+msgid "Yearly on {} {}"
+msgstr "سالانه در {} {}"
+
+msgid "Yearly on {} {} of {}"
+msgstr "سالانه در {} {} از {}"
+
+msgid "Custom recurrence"
+msgstr "تکرار سفارشی"
+
+msgid "Can View Global Import"
+msgstr "می‌تواند واردات جهانی را مشاهده کند"
+
+msgid "Global Import"
+msgstr "واردات جهانی"
+
+msgid "Processing"
+msgstr "در حال پردازش"
+
+msgid "Success"
+msgstr "موفقیت"
+
+msgid "Partial Success"
+msgstr "موفقیت جزئی"
+
+msgid "Failed"
+msgstr "ناموفق"
+
+msgid "Import Name"
+msgstr "نام واردات"
+
+msgid "Module Name"
+msgstr "نام ماژول"
+
+msgid "App Label"
+msgstr "برچسب برنامه"
+
+msgid "Filename"
+msgstr "نام فایل"
+
+msgid "Status"
+msgstr "وضعیت"
+
+msgid "Total Counts"
+msgstr "تعداد کل"
+
+msgid "Success Rate (%)"
+msgstr "نرخ موفقیت (درصد)"
+
+msgid "Imported File"
+msgstr "فایل وارد شده"
+
+msgid "Error File"
+msgstr "فایل خطا"
+
+msgid "1=create, 2=update, 3=both"
+msgstr "۱=ایجاد، ۲=به‌روزرسانی، ۳=هر دو"
+
+msgid "Duration (seconds)"
+msgstr "مدت زمان (ثانیه)"
+
+msgid "Import History"
+msgstr "تاریخچه واردات"
+
+msgid "Import Histories"
+msgstr "تاریخچه‌های واردات"
+
+msgid "Can View Global Export"
+msgstr "می‌تواند اکسپورت جهانی را مشاهده کند"
+
+msgid "Global Export"
+msgstr "اکسپورت جهانی"
+
+msgid "Daily"
+msgstr "روزانه"
+
+msgid "List of model names, e.g. ['Employee', 'Department']"
+msgstr "لیست نام مدل‌ها، مثلاً ['Employee', 'Department']"
+
+msgid "Modules"
+msgstr "ماژول‌ها"
+
+msgid ""
+"Dict of {model_name: [field_name, ...]}. Empty/missing entries export all "
+"exportable fields for that model."
+msgstr "دیکشنری به شکل {model_name: [field_name, ...]}. ورودی‌های خالی یا موجودنبودن ورودی باعث می‌شود همه فیلدهای قابل خروجی‌گرفتن آن مدل خروجی گرفته شوند."
+
+msgid "Fields"
+msgstr "فیلدها"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Excel"
+msgstr "اکسل"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Export Format"
+msgstr "قالب اکسپورت"
+
+msgid "Frequency"
+msgstr "تناوب"
+
+msgid "1-31 for monthly"
+msgstr "۱-۳۱ برای ماهانه"
+
+msgid "Last Executed On"
+msgstr "آخرین اجرا در"
+
+msgid "Export Schedule"
+msgstr "اکسپورت برنامه"
+
+msgid "Export Schedules"
+msgstr "اکسپورت برنامه ها"
+
+msgid "Not run yet"
+msgstr "هنوز اجرا نشده است"
+
+msgid "Every day"
+msgstr "هر روز"
+
+msgid "Every"
+msgstr "هر"
+
+msgid "Day"
+msgstr "روز"
+
+msgid "of every month"
+msgstr "از هر ماه"
+
+msgid "Department Name"
+msgstr "نام بخش"
+
+msgid "Description"
+msgstr "توضیحات"
+
+msgid "Department"
+msgstr "بخش"
+
+msgid "Departments"
+msgstr "بخش‌ها"
+
+msgid "Role"
+msgstr "نقش"
+
+msgid "Parent Role"
+msgstr "نقش والد"
+
+msgid "Permissions"
+msgstr "مجوزها"
+
+msgid "Roles"
+msgstr "نقش‌ها"
+
+msgid "Team Role Name"
+msgstr "نام نقش تیم"
+
+msgid "Team Role"
+msgstr "نقش تیم"
+
+msgid "Team Roles"
+msgstr "نقش‌های تیم"
+
+msgid "Customer Role Name"
+msgstr "نام نقش مشتری"
+
+msgid "Customer Role"
+msgstr "نقش مشتری"
+
+msgid "Customer Roles"
+msgstr "نقش‌های مشتری"
+
+msgid "Partner Role Name"
+msgstr "نام نقش شریک"
+
+msgid "Partner Role"
+msgstr "نقش شریک"
+
+msgid "Partner Roles"
+msgstr "نقش‌های شریک"
+
+msgid "Deleted At"
+msgstr "حذف شده در"
+
+#| msgid "Retention Period (Days)"
+msgid "Retention Period (days)"
+msgstr "دوره نگهداری (روز)"
+
+msgid "Recycle Bin Policy"
+msgstr "سیاست سطل بازیافت"
+
+msgid "Recycle Bin Policies"
+msgstr "سیاست‌های سطل بازیافت"
+
+msgid "Can View Global Settings"
+msgstr "می‌تواند تنظیمات جهانی را مشاهده کند"
+
+msgid "Global Settings"
+msgstr "تنظیمات جهانی"
+
+msgid "Can View About System"
+msgstr "می‌تواند درباره سیستم را مشاهده کند"
+
+msgid "Profile Image"
+msgstr "تصویر نمایه"
+
+msgid "User's preferred currency for display"
+msgstr "ارز ترجیحی کاربر برای نمایش"
+
+msgid "Preferred Currency"
+msgstr "ارز ترجیحی"
+
+#| msgid "Select your preferred time format."
+msgid "Select your preferred number format."
+msgstr "قالب اعداد مورد نظر خود را انتخاب کنید."
+
+#| msgid "Time Format"
+msgid "Number Format"
+msgstr "قالب اعداد"
+
+msgid "Username"
+msgstr "نام کاربری"
+
+msgid "First Name"
+msgstr "نام"
+
+msgid "Last Name"
+msgstr "نام خانوادگی"
+
+msgid "Email"
+msgstr "ایمیل"
+
+msgid "Administrator"
+msgstr "مدیر"
+
+msgid "Active"
+msgstr "فعال"
+
+msgid "Can Switch Company"
+msgstr "می‌تواند شرکت را تغییر دهد"
+
+msgid "Switch Company"
+msgstr "تغییر شرکت"
+
+msgid "Can View Profile"
+msgstr "می‌تواند نمایه را مشاهده کند"
+
+msgid "Can Change Profile"
+msgstr "می‌تواند نمایه را تغییر دهد"
+
+msgid "User Profile"
+msgstr "نمایه کاربر"
+
+msgid "Field Permission"
+msgstr "مجوز فیلد"
+
+msgid "Field Permissions"
+msgstr "مجوزهای فیلد"
+
+msgid "Either user or role must be set"
+msgstr "یا کاربر یا نقش باید تنظیم شود"
+
+msgid "Cannot set both user and role"
+msgstr "نمی‌توان هم کاربر و هم نقش را تنظیم کرد"
+
+msgid "Scheduled Export - {}"
+msgstr "اکسپورت زمان‌بندی شده - {}"
+
+msgid "Avatar"
+msgstr "آواتار"
+
+msgid "Edit"
+msgstr "ویرایش"
+
+msgid "Permission Denied"
+msgstr "دسترسی رد شد"
+
+msgid ""
+"You are allowed to access the settings, but some details are hidden due to "
+"limited permissions."
+msgstr ""
+"شما مجاز به دسترسی به تنظیمات هستید، اما برخی جزئیات به دلیل محدودیت مجوزها "
+"پنهان شده‌اند."
+
+msgid "Export records to a file, or schedule recurring exports."
+msgstr "اکسپورت رکوردها به فایل یا زمان‌بندی اکسپورت دوره‌ای."
+
+msgid "Select Module"
+msgstr "انتخاب ماژول"
+
+msgid "Choose Module"
+msgstr "انتخاب ماژول"
+
+msgid "Select Export Format"
+msgstr "انتخاب قالب اکسپورت"
+
+msgid "Schedule"
+msgstr "برنامه‌ریزی"
+
+msgid "Export"
+msgstr "اکسپورت"
+
+msgid "Select Columns to Export (Optional)"
+msgstr "ستون‌های مورد نظر برای خروجی را انتخاب کنید (اختیاری)"
+
+msgid "Close"
+msgstr "بستن"
+
+msgid "Unselect All"
+msgstr "لغو انتخاب همه"
+
+msgid "Cancel"
+msgstr "انصراف"
+
+msgid "Scheduled Exports"
+msgstr "صادرات‌های زمان‌بندی شده"
+
+msgid "Quick Tips"
+msgstr "نکات سریع"
+
+msgid "Select multiple modules to export data from different sections at once"
+msgstr ""
+"برای اکسپورت داده از بخش‌های مختلف به طور همزمان، چندین ماژول انتخاب کنید"
+
+msgid "Choose from Excel, CSV, or PDF formats based on your needs"
+msgstr "بر اساس نیاز خود از بین قالب‌های اکسل، CSV یا PDF انتخاب کنید"
+
+msgid ""
+"You can set an end date for scheduled exports or leave it blank for "
+"indefinite scheduling"
+msgstr ""
+"می‌توانید تاریخ پایان برای صادرات‌های زمان‌بندی شده تنظیم کنید یا برای زمان‌بندی "
+"نامحدود خالی بگذارید"
+
+msgid ""
+"Export immediately by clicking the Export button, or schedule for automated "
+"recurring exports"
+msgstr ""
+"با کلیک روی دکمه صادرات، فوراً صادر کنید، یا برای اکسپورت تکراری خودکار "
+"زمان‌بندی کنید"
+
+msgid "Select All"
+msgstr "انتخاب همه"
+
+msgid "Schedule Export"
+msgstr "زمان‌بندی اکسپورت"
+
+msgid "Columns (Optional)"
+msgstr "ستون‌ها (اختیاری)"
+
+msgid "Day of week"
+msgstr "روز هفته"
+
+msgid "Day of month"
+msgstr "روز ماه"
+
+msgid "End Date (optional)"
+msgstr "تاریخ پایان (اختیاری)"
+
+msgid "Logo"
+msgstr "لوگو"
+
+msgid "Forgot Password?"
+msgstr "رمز عبور را فراموش کرده‌اید؟"
+
+msgid "Username or Email"
+msgstr "نام کاربری یا ایمیل"
+
+msgid "Enter your email or username"
+msgstr "ایمیل یا نام کاربری خود را وارد کنید"
+
+msgid "arrow"
+msgstr "پیکان"
+
+msgid "Send reset link"
+msgstr "ارسال لینک بازنشانی"
+
+msgid "Loading..."
+msgstr "در حال بارگذاری..."
+
+msgid " Reset link will be sent to your registered email"
+msgstr "لینک بازنشانی به ایمیل ثبت‌شده شما ارسال خواهد شد"
+
+msgid "Back to login"
+msgstr "بازگشت به ورود"
+
+msgid "Email Sent!"
+msgstr "ایمیل ارسال شد!"
+
+msgid "Password reset link has been sent to your email."
+msgstr "لینک بازنشانی رمز عبور به ایمیل شما ارسال شد."
+
+msgid ""
+"Please check your inbox and click the link to reset your password. The link "
+"will expire in 24 hours."
+msgstr ""
+"لطفاً صندوق ورودی خود را بررسی کنید و برای بازنشانی رمز عبور روی لینک کلیک "
+"کنید. این لینک در ۲۴ ساعت منقضی می‌شود."
+
+msgid "Login"
+msgstr "ورود"
+
+msgid "Back to Login"
+msgstr "بازگشت به ورود"
+
+msgid "Didn't receive the email? Try again"
+msgstr "ایمیل را دریافت نکردید؟ دوباره امتحان کنید"
+
+msgid "Reset Your Password"
+msgstr "بازنشانی رمز عبور"
+
+msgid "Please enter your new password"
+msgstr "لطفاً رمز عبور جدید خود را وارد کنید"
+
+msgid "Toggle visibility"
+msgstr "تغییر وضعیت نمایش"
+
+msgid "Confirm new password"
+msgstr "تأیید رمز عبور جدید"
+
+msgid "Arrow"
+msgstr "پیکان"
+
+msgid "Reset Password"
+msgstr "بازنشانی رمز عبور"
+
+msgid "Invalid Link"
+msgstr "لینک نامعتبر"
+
+msgid "This password reset link is invalid or has expired."
+msgstr "این لینک بازنشانی رمز عبور نامعتبر است یا منقضی شده است."
+
+msgid "Please request a new password reset link."
+msgstr "لطفاً یک لینک بازنشانی رمز عبور جدید درخواست کنید."
+
+msgid "Password Reset Request"
+msgstr "درخواست بازنشانی رمز عبور"
+
+msgid "We received a request to reset your password for your"
+msgstr "ما درخواستی برای بازنشانی رمز عبور برای"
+
+msgid "account. Click the button below to reset your password:"
+msgstr "حساب شما دریافت کردیم. برای بازنشانی رمز عبور روی دکمه زیر کلیک کنید:"
+
+msgid ""
+"If the button above doesn't work, copy and paste this link into your browser:"
+msgstr ""
+"اگر دکمه بالا کار نمی‌کند، این لینک را در مرورگر خود کپی و جای‌گذاری کنید:"
+
+msgid "Security Notice:"
+msgstr "توجه امنیتی:"
+
+msgid ""
+"If you didn't request a password reset, please ignore this email or contact "
+"support if you have concerns. This link will expire in 24 hours."
+msgstr ""
+"اگر شما درخواست بازنشانی رمز عبور نداده‌اید، این ایمیل را نادیده بگیرید یا در "
+"صورت نگرانی با پشتیبانی تماس بگیرید. این لینک در ۲۴ ساعت منقضی می‌شود."
+
+msgid "This is an automated message from the system. Please do not reply."
+msgstr "این یک پیام خودکار از سیستم است. لطفاً پاسخ ندهید."
+
+msgid "All rights reserved."
+msgstr "تمامی حقوق محفوظ است."
+
+msgid "Are you sure you want to delete this holiday?"
+msgstr "آیا مطمئن هستید که می‌خواهید این تعطیلات را حذف کنید؟"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Import progress"
+msgstr "پیشرفت واردات"
+
+msgid "Upload Files"
+msgstr "آپلود فایل‌ها"
+
+msgid "Map Fields"
+msgstr "نگاشت فیلدها"
+
+msgid "Action"
+msgstr "اقدام"
+
+msgid "Import"
+msgstr "واردات"
+
+msgid "Select Fields for Template"
+msgstr "انتخاب فیلدها برای قالب"
+
+msgid "File Format"
+msgstr "قالب فایل"
+
+msgid "Excel (XLSX)"
+msgstr "اکسل (XLSX)"
+
+msgid "Download Template"
+msgstr "دانلود قالب"
+
+msgid "Download"
+msgstr "دانلود"
+
+msgid "Enter Import Name"
+msgstr "نام واردات را وارد کنید"
+
+msgid "Upload File"
+msgstr "آپلود فایل"
+
+msgid "File already uploaded"
+msgstr "فایل قبلاً آپلود شده است"
+
+msgid "CSV, XLS, XLSX ( Max 10MB )"
+msgstr "CSV، XLS، XLSX (حداکثر ۱۰ مگابایت)"
+
+msgid "Next"
+msgstr "بعدی"
+
+#| msgid "Choose the module you want to bring records into."
+msgid "Choose the module you want to bring records into"
+msgstr "ماژولی را انتخاب کنید که می‌خواهید رکوردها به آن وارد شوند"
+
+#| msgid ""
+#| "Download the template to see the expected columns, or upload your own CSV/"
+#| "XLS/XLSX file."
+msgid ""
+"Download the template to see the expected columns, or upload your own CSV/"
+"XLS/XLSX file"
+msgstr "برای مشاهده ستون‌های مورد انتظار، قالب را دانلود کنید یا فایل CSV/XLS/XLSX خود را بارگذاری کنید"
+
+#| msgid "Next, you'll map your file's columns to the module's fields."
+msgid "Next, you'll map your file's columns to the module's fields"
+msgstr "در گام بعد، ستون‌های فایل خود را به فیلدهای ماژول نسبت می‌دهید"
+
+#| msgid ""
+#| "Finally, choose whether to create new records, update existing ones, or "
+#| "both."
+msgid ""
+"Finally, choose whether to create new records, update existing ones, or both"
+msgstr "در پایان، انتخاب کنید که رکوردهای جدید ایجاد شوند، رکوردهای موجود به‌روزرسانی شوند یا هر دو"
+
+msgid "Model Field"
+msgstr "فیلد مدل"
+
+msgid "File Header"
+msgstr "سربرگ فایل"
+
+msgid "Default Values"
+msgstr "مقادیر پیش‌فرض"
+
+msgid "Sample Data"
+msgstr "داده نمونه"
+
+msgid "Select Header"
+msgstr "انتخاب سربرگ"
+
+msgid "Select Default Value"
+msgstr "انتخاب مقدار پیش‌فرض"
+
+msgid "Default value"
+msgstr "مقدار پیش‌فرض"
+
+msgid "Auto Mapped"
+msgstr "نگاشت خودکار"
+
+msgid "Not Mapped"
+msgstr "نگاشت نشده"
+
+msgid "No model fields available"
+msgstr "هیچ فیلد مدلی در دسترس نیست"
+
+msgid "Previous"
+msgstr "قبلی"
+
+msgid "Import Option:"
+msgstr "گزینه واردات:"
+
+msgid "Create new record"
+msgstr "ایجاد رکورد جدید"
+
+msgid "Update existing"
+msgstr "به‌روزرسانی موجود"
+
+msgid "Create new and update existing"
+msgstr "ایجاد جدید و به‌روزرسانی موجود"
+
+msgid "Record match by"
+msgstr "تطابق رکورد بر اساس"
+
+msgid "Module"
+msgstr "ماژول"
+
+msgid "Import Action"
+msgstr "اقدام واردات"
+
+msgid "Create New"
+msgstr "ایجاد جدید"
+
+msgid "Update Existing"
+msgstr "به‌روزرسانی موجود"
+
+msgid "Create New and Update Existing"
+msgstr "ایجاد جدید و به‌روزرسانی موجود"
+
+msgid "Mapped"
+msgstr "نگاشت شده"
+
+msgid "Unmapped"
+msgstr "نگاشت نشده"
+
+msgid "Import Completed Successfully!"
+msgstr "واردات با موفقیت انجام شد!"
+
+msgid "Your data has been imported successfully."
+msgstr "داده‌های شما با موفقیت وارد شد."
+
+msgid "Records Created"
+msgstr "رکوردهای ایجاد شده"
+
+msgid "Records Updated"
+msgstr "رکوردهای به‌روزرسانی شده"
+
+msgid "Errors"
+msgstr "خطاها"
+
+msgid "Total Rows Processed:"
+msgstr "تعداد کل ردیف‌های پردازش شده:"
+
+msgid "Success Rate:"
+msgstr "نرخ موفقیت:"
+
+msgid "Errors encountered:"
+msgstr "خطاهای مواجه شده:"
+
+msgid "Download Full Error Report"
+msgstr "دانلود گزارش کامل خطا"
+
+msgid "... and"
+msgstr "... و"
+
+msgid "more errors."
+msgstr "خطاهای بیشتر."
+
+msgid "Download the full report above to see all errors."
+msgstr "برای مشاهده همه خطاها، گزارش کامل بالا را دانلود کنید."
+
+msgid "Import More Data"
+msgstr "واردات داده بیشتر"
+
+msgid "Bulk import records from a file."
+msgstr "واردات انبوه رکوردها از یک فایل."
+
+msgid "Map Values for"
+msgstr "نگاشت مقادیر برای"
+
+msgid "File Value"
+msgstr "مقدار فایل"
+
+msgid "Replace With"
+msgstr "جایگزینی با"
+
+msgid "Select Choice"
+msgstr "انتخاب گزینه"
+
+msgid "Select Related Object"
+msgstr "انتخاب شیء مرتبط"
+
+msgid "No unique values found"
+msgstr "هیچ مقدار منحصر‌به‌فردی یافت نشد"
+
+msgid "Initialize Database"
+msgstr "راه‌اندازی پایگاه داده"
+
+msgid "Company  Information"
+msgstr "اطلاعات شرکت"
+
+msgid "Database Authentication"
+msgstr "احراز هویت پایگاه داده"
+
+msgid "Authenticate with your password intialize the Database"
+msgstr "برای راه‌اندازی پایگاه داده با رمز عبور خود احراز هویت کنید"
+
+msgid "Database authentication password"
+msgstr "رمز عبور احراز هویت پایگاه داده"
+
+msgid "Authenticate"
+msgstr "احراز هویت"
+
+msgid "Go To Home"
+msgstr "رفتن به صفحه اصلی"
+
+msgid "Click to edit"
+msgstr "برای ویرایش کلیک کنید"
+
+msgid "Delete role"
+msgstr "حذف نقش"
+
+msgid "Role Name"
+msgstr "نام نقش"
+
+msgid "Enter role name"
+msgstr "نام نقش را وارد کنید"
+
+msgid "Role Description"
+msgstr "توضیحات نقش"
+
+msgid "Description..."
+msgstr "توضیحات..."
+
+msgid "Select Parent Role"
+msgstr "انتخاب نقش والد"
+
+msgid "Save"
+msgstr "ذخیره"
+
+msgid "Sign In"
+msgstr "ورود"
+
+msgid "Next Step"
+msgstr "مرحله بعدی"
+
+msgid "Sign Up"
+msgstr "ثبت‌نام"
+
+msgid "Configure Demo Data"
+msgstr "پیکربندی داده‌های نمایشی"
+
+msgid "Select the number of records to load for each data type"
+msgstr "تعداد رکوردهای بارگذاری برای هر نوع داده را انتخاب کنید"
+
+msgid "No configurable entities found"
+msgstr "هیچ موجودیت قابل پیکربندی یافت نشد"
+
+msgid "Note:"
+msgstr "توجه:"
+
+msgid ""
+"Loading large datasets may take several minutes. Higher values will require "
+"more processing time and storage space."
+msgstr ""
+"بارگذاری مجموعه داده‌های بزرگ ممکن است چند دقیقه طول بکشد. مقادیر بالاتر به "
+"زمان پردازش و فضای ذخیره‌سازی بیشتری نیاز دارند."
+
+msgid "Back"
+msgstr "بازگشت"
+
+msgid "Start Loading"
+msgstr "شروع بارگذاری"
+
+msgid "Authenticate with your password to load demo database"
+msgstr "برای بارگذاری پایگاه داده نمایشی با رمز عبور خود احراز هویت کنید"
+
+msgid "Loading Demo Database"
+msgstr "در حال بارگذاری پایگاه داده نمایشی"
+
+msgid "Please wait while we load the demo data..."
+msgstr "لطفاً در حین بارگذاری داده‌های نمایشی منتظر بمانید..."
+
+msgid "Initializing..."
+msgstr "در حال راه‌اندازی..."
+
+msgid ""
+"Success! Demo database loaded. You can now login with username 'admin' and "
+"password 'admin'."
+msgstr ""
+"موفقیت! پایگاه داده نمایشی بارگذاری شد. اکنون می‌توانید با نام کاربری 'admin' "
+"و رمز عبور 'admin' وارد شوید."
+
+msgid "Loading"
+msgstr "در حال بارگذاری"
+
+msgid "Error:"
+msgstr "خطا:"
+
+msgid "Network error occurred"
+msgstr "خطای شبکه رخ داد"
+
+msgid ""
+"Are you sure you want to change the default currency? The previous default "
+"will be unset."
+msgstr ""
+"آیا مطمئن هستید که می‌خواهید ارز پیش‌فرض را تغییر دهید؟ ارز پیش‌فرض قبلی لغو "
+"خواهد شد."
+
+msgid "Assign Users"
+msgstr "تخصیص کاربران"
+
+msgid "Filter"
+msgstr "فیلتر"
+
+msgid "Select users"
+msgstr "انتخاب کاربران"
+
+msgid "Search models..."
+msgstr "جستجوی مدل‌ها..."
+
+msgid "Field permissions not available for this model"
+msgstr "مجوزهای فیلد برای این مدل در دسترس نیست"
+
+msgid "Field Level Permissions"
+msgstr "مجوزهای سطح فیلد"
+
+msgid "Role:"
+msgstr "نقش:"
+
+msgid "User:"
+msgstr "کاربر:"
+
+msgid "Selected Users:"
+msgstr "کاربران انتخاب شده:"
+
+msgid "Model:"
+msgstr "مدل:"
+
+msgid "Warning:"
+msgstr "هشدار:"
+
+msgid "No users selected. Please select atleast one user."
+msgstr "هیچ کاربری انتخاب نشده است. لطفاً حداقل یک کاربر انتخاب کنید."
+
+msgid ""
+"Required fields are always visible when creating or duplicating. Permissions "
+"for these fields apply only during editing."
+msgstr ""
+"فیلدهای الزامی همیشه در هنگام ایجاد یا کپی‌سازی قابل مشاهده هستند. مجوزهای "
+"این فیلدها فقط در طول ویرایش اعمال می‌شوند."
+
+msgid "Read Only"
+msgstr "فقط خواندنی"
+
+msgid "Read and Write"
+msgstr "خواندن و نوشتن"
+
+msgid "Don't Show"
+msgstr "نمایش نده"
+
+msgid "Mandatory field"
+msgstr "فیلد اجباری"
+
+msgid "No fields found for this model."
+msgstr "هیچ فیلدی برای این مدل یافت نشد."
+
+msgid "Save All Changes"
+msgstr "ذخیره همه تغییرات"
+
+msgid "To manage field-level permissions, simply click the name of a model."
+msgstr "برای مدیریت مجوزهای سطح فیلد، کافی است روی نام یک مدل کلیک کنید."
+
+msgid "User Roles"
+msgstr "نقش‌های کاربر"
+
+msgid "Add Roles"
+msgstr "افزودن نقش‌ها"
+
+msgid "Control what each role can view, create, edit, or delete."
+msgstr "تعیین کنید هر نقش چه چیزی را می‌تواند مشاهده، ایجاد، ویرایش یا حذف کند."
+
+msgid "Members"
+msgstr "اعضا"
+
+msgid "User Permissions"
+msgstr "مجوزهای کاربر"
+
+msgid "Search users..."
+msgstr "جستجوی کاربران..."
+
+msgid "Assign"
+msgstr "تخصیص"
+
+msgid "Add Member"
+msgstr "افزودن عضو"
+
+msgid "No models found matching your search."
+msgstr "هیچ مدلی مطابق با جستجوی شما یافت نشد."
+
+msgid "No models available."
+msgstr "هیچ مدلی در دسترس نیست."
+
+msgid "Are you sure you want to remove superuser status from this user?"
+msgstr "آیا مطمئن هستید که می‌خواهید وضعیت ابرکاربری را از این کاربر حذف کنید؟"
+
+msgid "Remove"
+msgstr "حذف"
+
+msgid "No users available."
+msgstr "هیچ کاربری در دسترس نیست."
+
+msgid "Regional Formatting"
+msgstr "قالب‌بندی منطقه‌ای"
+
+msgid "Configure how dates, times, and other values are displayed for you."
+msgstr "نحوه نمایش تاریخ‌ها، ساعت‌ها و سایر مقادیر را برای خود تنظیم کنید."
+
+msgid "roles"
+msgstr "نقش‌ها"
+
+msgid "Zoom In"
+msgstr "بزرگ‌نمایی"
+
+msgid "Zoom Out"
+msgstr "کوچک‌نمایی"
+
+msgid "Reset Zoom"
+msgstr "بازنشانی بزرگ‌نمایی"
+
+msgid "Move Up"
+msgstr "حرکت به بالا"
+
+msgid "Move Left"
+msgstr "حرکت به چپ"
+
+msgid "Move Right"
+msgstr "حرکت به راست"
+
+msgid "Move Down"
+msgstr "حرکت به پایین"
+
+msgid "Nothing to show yet. Please add your Role."
+msgstr "هنوز چیزی برای نمایش وجود ندارد. لطفاً نقش خود را اضافه کنید."
+
+msgid "users"
+msgstr "کاربران"
+
+msgid "Add Users"
+msgstr "افزودن کاربران"
+
+msgid "Add Sub Role"
+msgstr "افزودن نقش فرعی"
+
+msgid "View Users"
+msgstr "مشاهده کاربران"
+
+msgid "Delete Role"
+msgstr "حذف نقش"
+
+msgid "No settings found"
+msgstr "تنظیماتی یافت نشد"
+
+msgid "Business and shift hours"
+msgstr "ساعات کاری و شیفت"
+
+msgid "Business hours"
+msgstr "ساعات کاری"
+
+msgid "Shift hours"
+msgstr "ساعات شیفت"
+
+msgid ""
+"Set up shift-based working hours for employees with non-standard schedules."
+msgstr ""
+"ساعات کاری مبتنی بر شیفت را برای کارمندانی با برنامه‌های غیراستاندارد تنظیم "
+"کنید."
+
+msgid "Add Shift Hour"
+msgstr "افزودن ساعت شیفت"
+
+msgid "Define the working hours your company operates on each day."
+msgstr "ساعات کاری شرکت خود را برای هر روز تعریف کنید."
+
+msgid "Add Business Hour"
+msgstr "افزودن ساعت کاری"
+
+msgid "Add Holiday"
+msgstr "افزودن تعطیلات"
+
+msgid "Week starts on"
+msgstr "هفته از روز"
+
+msgid "First day of the week for calendars and reporting."
+msgstr "اولین روز هفته برای تقویم‌ها و گزارش‌گیری."
+
+msgid "Time zone"
+msgstr "منطقه زمانی"
+
+msgid "Business days"
+msgstr "روزهای کاری"
+
+msgid "Manage"
+msgstr "مدیریت"
+
+msgid "No business hour configured yet."
+msgstr "هنوز ساعت کاری پیکربندی نشده است."
+
+msgid "Use Add Business Hour to create your company schedule."
+msgstr "برای ایجاد برنامه شرکت خود از افزودن ساعت کاری استفاده کنید."
+
+msgid "Current Default Currency"
+msgstr "ارز پیش‌فرض فعلی"
+
+msgid "Password Management"
+msgstr "مدیریت رمز عبور"
+
+msgid "Update your password to keep your account secure."
+msgstr "برای امنیت حساب کاربری خود، رمز عبور را به‌روزرسانی کنید."
+
+msgid "Last Updated"
+msgstr "آخرین به‌روزرسانی"
+
+msgid "Change Your Password"
+msgstr "تغییر رمز عبور"
+
+msgid ""
+"View and update your company profile, fiscal year, working hours, and other "
+"core settings."
+msgstr ""
+"پروفایل شرکت، سال مالی، ساعات کاری و سایر تنظیمات اصلی خود را مشاهده و "
+"به‌روزرسانی کنید."
+
+msgid "Enter Conversion Rate"
+msgstr "نرخ تبدیل را وارد کنید"
+
+msgid "Conversion Rates"
+msgstr "نرخ‌های تبدیل"
+
+msgid "Active Currencies"
+msgstr "ارزهای فعال"
+
+msgid "Preview in Calendar"
+msgstr "پیش‌نمایش در تقویم"
+
+msgid " Standard Fiscal Year"
+msgstr "سال مالی استاندارد"
+
+msgid "Here using standard fiscal year"
+msgstr "در اینجا با استفاده از سال مالی استاندارد"
+
+msgid "Week"
+msgstr "هفته"
+
+msgid "Configure how your fiscal year and reporting periods are structured."
+msgstr "نحوه ساختار سال مالی و دوره‌های گزارش‌گیری خود را پیکربندی کنید."
+
+msgid "Preview Calendar"
+msgstr "پیش‌نمایش تقویم"
+
+msgid "Manage Fiscal Year"
+msgstr "مدیریت سال مالی"
+
+msgid "No active company"
+msgstr "هیچ شرکت فعالی وجود ندارد"
+
+msgid "Configuration Preview"
+msgstr "پیش‌نمایش پیکربندی"
+
+msgid "Period Display:"
+msgstr "نمایش دوره:"
+
+msgid "Manage the holidays observed by your company."
+msgstr "تعطیلات رسمی شرکت خود را مدیریت کنید."
+
+msgid "Add Holidays"
+msgstr "افزودن تعطیلات"
+
+msgid "Dated Exchange  Rates"
+msgstr "نرخ‌های تبدیل تاریخ‌دار"
+
+msgid "Select a Date Range"
+msgstr "انتخاب بازه تاریخ"
+
+msgid "New Exchange Rates"
+msgstr "نرخ‌های تبدیل جدید"
+
+msgid "Currency Management"
+msgstr "مدیریت ارز"
+
+msgid "Set your default currency and manage exchange rates."
+msgstr "ارز پیش‌فرض خود را تنظیم کنید و نرخ‌های تبدیل را مدیریت کنید."
+
+msgid "Add Currency"
+msgstr "افزودن ارز"
+
+msgid "Menu"
+msgstr "منو"
+
+msgid "Edit Conversion Rates"
+msgstr "ویرایش نرخ‌های تبدیل"
+
+msgid "Dated Exchange Rates"
+msgstr "نرخ‌های تبدیل تاریخ‌دار"
+
+msgid "Enable Multiple Currency"
+msgstr "فعال‌سازی ارز چندگانه"
+
+msgid "My Settings"
+msgstr "تنظیمات من"
+
+msgid "Manage your personal profile, password, and preferences."
+msgstr "پروفایل شخصی، رمز عبور و ترجیحات خود را مدیریت کنید."
+
+msgid ""
+"Set how many days deleted records stay in the recycle bin before being "
+"permanently removed."
+msgstr ""
+"تعیین کنید رکوردهای حذف‌شده چند روز در سطل بازیافت بمانند تا به‌طور دائمی حذف "
+"شوند."
+
+msgid "Default Expire Days"
+msgstr "روزهای انقضای پیش‌فرض"
+
+msgid "Days"
+msgstr "روزها"
+
+msgid "Settings"
+msgstr "تنظیمات"
+
+msgid "Manage your company, users, and system configuration."
+msgstr "شرکت، کاربران و تنظیمات سیستم رو مدیریت کنید"
+
+msgid "Search settings..."
+msgstr "جستجو در تنظیمات"
+
+msgid "My Profile"
+msgstr "نمایه من"
+
+msgid "View and update your personal details."
+msgstr "مشاهده و به‌روزرسانی جزئیات شخصی خود."
+
+msgid "View Login History"
+msgstr "مشاهده تاریخچه ورود"
+
+msgid "Select"
+msgstr "انتخاب"
+
+msgid "Modules & Versions"
+msgstr "ماژول‌ها و نسخه‌ها"
+
+msgid "Version Information & Installed Packages"
+msgstr "اطلاعات نسخه و بسته‌های نصب شده"
+
+msgid "View version details"
+msgstr "مشاهده جزئیات نسخه"
+
+msgid "Icon"
+msgstr "آیکون"
+
+msgid "Release date"
+msgstr "تاریخ انتشار"
+
+msgid "What's new"
+msgstr "چه موارد جدیدی"
+
+msgid "No changelog available."
+msgstr "هیچ تغییرات ثبت‌شده‌ای در دسترس نیست."
+
+msgid "Manage your organization's branches."
+msgstr "مدیریت شعب سازمان."
+
+msgid "Add Column to List"
+msgstr "افزودن ستون به لیست"
+
+msgid "Branch Information"
+msgstr "اطلاعات شعبه"
+
+msgid "Address"
+msgstr "آدرس"
+
+msgid "Localization"
+msgstr "بومی‌سازی"
+
+msgid "Details"
+msgstr "جزئیات"
+
+msgid "Working hours"
+msgstr "ساعات کاری"
+
+msgid "Currencies"
+msgstr "ارزها"
+
+msgid "Basic Information"
+msgstr "اطلاعات پایه"
+
+msgid "Business Details"
+msgstr "جزئیات کسب‌وکار"
+
+msgid "Location & Locale"
+msgstr "موقعیت و منطقه"
+
+msgid "Preferences"
+msgstr "ترجیحات"
+
+msgid "Business Hour Form"
+msgstr "فرم ساعت کاری"
+
+msgid "Are you sure you want to remove this holiday?"
+msgstr "آیا مطمئن هستید که می‌خواهید این تعطیلات را حذف کنید؟"
+
+msgid "The requested record does not exist."
+msgstr "رکورد درخواستی وجود ندارد."
+
+msgid "The requested holiday does not exist."
+msgstr "تعطیلات درخواستی وجود ندارد."
+
+msgid "Your password has been changed successfully."
+msgstr "رمز عبور شما با موفقیت تغییر یافت."
+
+msgid "Too many failed login attempts. Please try again in 15 minutes."
+msgstr ""
+"تعداد تلاش‌های ناموفق برای ورود بیش از حد مجاز است. لطفاً ۱۵ دقیقه دیگر دوباره "
+"امتحان کنید."
+
+msgid "Invalid credentials. Please check and try again."
+msgstr ""
+"نام کاربری یا رمز عبور صحیح نمی باشد. لطفاً بررسی کنید و دوباره امتحان کنید."
+
+msgid "This user is archived or blocked. Please contact support."
+msgstr "این کاربر بایگانی یا مسدود شده است. لطفاً با پشتیبانی تماس بگیرید."
+
+msgid "Login successful."
+msgstr "ورود موفقیت‌آمیز بود."
+
+msgid "Define roles for the customer contacts you work with."
+msgstr "تعریف نقش‌ها برای مخاطبان مشتری که با آنها کار می‌کنید."
+
+msgid "The requested data does not exist."
+msgstr "داده‌های درخواستی وجود ندارند."
+
+msgid "Organize employees into departments across your company."
+msgstr "سازماندهی کارمندان در بخش‌های مختلف شرکت."
+
+msgid ""
+"Your session may have expired, or this form was open too long. Refresh the "
+"page and try again."
+msgstr ""
+"نشست شما ممکن است منقضی شده باشد، یا این فرم مدت طولانی باز بوده است. صفحه "
+"را بازخوانی کنید و دوباره امتحان کنید."
+
+msgid "Please select at least one model and export format."
+msgstr "لطفاً حداقل یک مدل و قالب اکسپورت انتخاب کنید."
+
+msgid "Selected module not found."
+msgstr "ماژول انتخاب شده یافت نشد."
+
+msgid "You do not have permission to export this module."
+msgstr "شما مجوز اکسپورت این ماژول را ندارید."
+
+msgid "Export failed. Please try again."
+msgstr "اکسپورت ناموفق بود. لطفاً دوباره امتحان کنید."
+
+msgid "Export completed successfully."
+msgstr "اکسپورت با موفقیت انجام شد."
+
+msgid "Schedule not found."
+msgstr "برنامه یافت نشد."
+
+msgid "Please select at least one module before scheduling."
+msgstr "لطفاً قبل از زمان‌بندی حداقل یک ماژول انتخاب کنید."
+
+msgid "January"
+msgstr "ژانویه"
+
+msgid "February"
+msgstr "فوریه"
+
+msgid "March"
+msgstr "مارس"
+
+msgid "April"
+msgstr "آوریل"
+
+msgid "May"
+msgstr "مه"
+
+msgid "June"
+msgstr "ژوئن"
+
+msgid "July"
+msgstr "ژوئیه"
+
+msgid "August"
+msgstr "اوت"
+
+msgid "September"
+msgstr "سپتامبر"
+
+msgid "October"
+msgstr "اکتبر"
+
+msgid "November"
+msgstr "نوامبر"
+
+msgid "December"
+msgstr "دسامبر"
+
+msgid "Start date is required."
+msgstr "تاریخ شروع الزامی است."
+
+msgid "Start date cannot be in the past."
+msgstr "تاریخ شروع نمی‌تواند در گذشته باشد."
+
+msgid "Invalid date format."
+msgstr "قالب تاریخ نامعتبر است."
+
+msgid "End date must be after start date."
+msgstr "تاریخ پایان باید بعد از تاریخ شروع باشد."
+
+msgid "Day of month and month are required for yearly schedule."
+msgstr "روز ماه و ماه برای برنامه سالانه الزامی است."
+
+msgid "Day of week is required for weekly schedule."
+msgstr "روز هفته برای برنامه هفتگی الزامی است."
+
+msgid "Day of month is required for monthly schedule."
+msgstr "روز ماه برای برنامه ماهانه الزامی است."
+
+msgid "Scheduled export updated successfully."
+msgstr "اکسپورت زمان‌بندی شده با موفقیت به‌روزرسانی شد."
+
+msgid "Scheduled export created successfully."
+msgstr "اکسپورت زمان‌بندی شده با موفقیت ایجاد شد."
+
+msgid "Schedule Details"
+msgstr "جزئیات برنامه"
+
+msgid "Scheduled Export Details"
+msgstr "جزئیات اکسپورت زمان‌بندی شده"
+
+msgid "Please fill in all password fields."
+msgstr "لطفاً همه فیلدهای رمز عبور را پر کنید."
+
+msgid "Passwords do not match."
+msgstr "رمزهای عبور مطابقت ندارند."
+
+msgid "Invalid password reset link."
+msgstr "لینک بازنشانی رمز عبور نامعتبر است."
+
+msgid "Role does not exist"
+msgstr "نقش وجود ندارد"
+
+msgid "User does not exist"
+msgstr "کاربر وجود ندارد"
+
+msgid "Model not found"
+msgstr "مدل یافت نشد"
+
+msgid "Field-level permissions are not available for this model."
+msgstr "مجوزهای سطح فیلد برای این مدل در دسترس نیستند."
+
+msgid "Super Users"
+msgstr "ابرکاربران"
+
+msgid "Are you sure you want to delete the user from this role?"
+msgstr "آیا مطمئن هستید که می‌خواهید کاربر را از این نقش حذف کنید؟"
+
+msgid "Permission added successfully."
+msgstr "مجوز با موفقیت اضافه شد."
+
+msgid "Permission removed successfully."
+msgstr "مجوز با موفقیت حذف شد."
+
+msgid "Please select at least one user."
+msgstr "لطفاً حداقل یک کاربر انتخاب کنید."
+
+msgid "Please select at least one permission."
+msgstr "لطفاً حداقل یک مجوز انتخاب کنید."
+
+#, python-brace-format
+msgid ""
+"Successfully assigned {permissions_count} permission(s) to {users_count} "
+"user(s)."
+msgstr "{permissions_count} مجوز با موفقیت به {users_count} کاربر تخصیص یافت."
+
+#, python-brace-format
+msgid "Error assigning permissions: {error}"
+msgstr "خطا در تخصیص مجوزها: {error}"
+
+msgid "Role Does not Exist"
+msgstr "نقش وجود ندارد"
+
+msgid "No users selected. Please select at least one user."
+msgstr "هیچ کاربری انتخاب نشده است. لطفاً حداقل یک کاربر انتخاب کنید."
+
+msgid "Invalid user selection."
+msgstr "انتخاب کاربر نامعتبر است."
+
+msgid "App label and model name are required"
+msgstr "برچسب برنامه و نام مدل الزامی است"
+
+msgid "No field permissions to save."
+msgstr "هیچ مجوز فیلدی برای ذخیره وجود ندارد."
+
+msgid "No valid users found."
+msgstr "هیچ کاربر معتبری یافت نشد."
+
+#, python-brace-format
+msgid ""
+"Successfully saved {count} field permission(s) for {user_count} user(s) on "
+"{model}."
+msgstr ""
+"{count} مجوز فیلد با موفقیت برای {user_count} کاربر در {model} ذخیره شد."
+
+#, python-brace-format
+msgid "Error saving field permissions: {error}"
+msgstr "خطا در ذخیره مجوزهای فیلد: {error}"
+
+msgid "Either role or user must be specified"
+msgstr "یا نقش یا کاربر باید مشخص شود"
+
+msgid "Create"
+msgstr "ایجاد"
+
+msgid "Change"
+msgstr "تغییر"
+
+msgid "View"
+msgstr "مشاهده"
+
+msgid "Create Own"
+msgstr "ایجاد خود"
+
+msgid "Change Own"
+msgstr "تغییر خود"
+
+msgid "View Own"
+msgstr "مشاهده خود"
+
+msgid "Delete Own"
+msgstr "حذف خود"
+
+msgid "Export Own"
+msgstr "اکسپورت مالک"
+
+msgid "User Does not Exist"
+msgstr "کاربر وجود ندارد"
+
+msgid "Add Super Users"
+msgstr "افزودن ابرکاربران"
+
+#, python-brace-format
+msgid "Successfully added {count} user(s) as superuser(s)."
+msgstr "{count} کاربر با موفقیت به عنوان ابرکاربر اضافه شدند."
+
+msgid "Holiday Form"
+msgstr "فرم تعطیلات"
+
+msgid "Holiday Start Date"
+msgstr "تاریخ شروع تعطیلات"
+
+msgid "Holiday End Date"
+msgstr "تاریخ پایان تعطیلات"
+
+msgid "Error: Missing parameters"
+msgstr "خطا: پارامترهای缺失"
+
+msgid "Error: Field not found"
+msgstr "خطا: فیلد یافت نشد"
+
+msgid "Error: Invalid field type"
+msgstr "خطا: نوع فیلد نامعتبر است"
+
+msgid "Please select a module first"
+msgstr "لطفاً ابتدا یک ماژول انتخاب کنید"
+
+msgid "Invalid module selected"
+msgstr "ماژول انتخاب شده نامعتبر است"
+
+msgid "Selected module is not available for import"
+msgstr "ماژول انتخاب شده برای واردات در دسترس نیست"
+
+msgid "Error loading fields"
+msgstr "خطا در بارگذاری فیلدها"
+
+msgid "Invalid module selection. Please choose a valid module from the list."
+msgstr "انتخاب ماژول نامعتبر است. لطفاً یک ماژول معتبر از لیست انتخاب کنید."
+
+msgid "Module and Import Name are required"
+msgstr "نام ماژول و واردات الزامی است"
+
+msgid "No valid fields found for the selected model"
+msgstr "هیچ فیلد معتبری برای مدل انتخاب شده یافت نشد"
+
+msgid "All fields are required"
+msgstr "همه فیلدها الزامی هستند"
+
+msgid "Please upload a CSV or Excel file"
+msgstr "لطفاً یک فایل CSV یا اکسل آپلود کنید"
+
+msgid "Missing module or app_label in session"
+msgstr "ماژول یا app_label در نشست وجود ندارد"
+
+#, python-format
+msgid "Unmapped choice values: %(values)s%(ellipsis)s"
+msgstr "مقادیر انتخاب نشده: %(values)s%(ellipsis)s"
+
+#, python-format
+msgid "Invalid choice value: %(value)s"
+msgstr "مقدار انتخاب نامعتبر: %(value)s"
+
+#, python-format
+msgid "Unmapped foreign key values: %(values)s%(ellipsis)s"
+msgstr "مقادیر کلید خارجی نگاشت نشده: %(values)s%(ellipsis)s"
+
+#, python-format
+msgid "Invalid foreign key ID: %(id)s"
+msgstr "شناسه کلید خارجی نامعتبر: %(id)s"
+
+msgid "Foreign key must be a valid ID"
+msgstr "کلید خارجی باید یک شناسه معتبر باشد"
+
+#, python-format
+msgid ""
+"Field type mismatch: '%(field)s' expects DATE format, but file column "
+"'%(column)s' contains invalid date: '%(value)s'"
+msgstr ""
+"عدم تطابق نوع فیلد: '%(field)s' انتظار قالب DATE را دارد، اما ستون فایل "
+"'%(column)s' حاوی تاریخ نامعتبر است: '%(value)s'"
+
+msgid "INTEGER"
+msgstr "عدد صحیح"
+
+msgid "DECIMAL"
+msgstr "اعشاری"
+
+#, python-format
+msgid ""
+"Field type mismatch: '%(field)s' expects %(type)s format, but file column "
+"'%(column)s' contains invalid number: '%(value)s'"
+msgstr ""
+"عدم تطابق نوع فیلد: '%(field)s' انتظار قالب %(type)s را دارد، اما ستون فایل "
+"'%(column)s' حاوی عدد نامعتبر است: '%(value)s'"
+
+#, python-format
+msgid ""
+"Field type mismatch: '%(field)s' expects BOOLEAN (true/false/yes/no/1/0), "
+"but file column '%(column)s' contains like: '%(value)s'"
+msgstr ""
+"عدم تطابق نوع فیلد: '%(field)s' انتظار BOOLEAN (true/false/yes/no/1/0) را "
+"دارد، اما ستون فایل '%(column)s' حاوی چیزی شبیه: '%(value)s' است"
+
+#, python-format
+msgid ""
+"Field type mismatch: '%(field)s' expects EMAIL format, but file column "
+"'%(column)s' contains invalid email"
+msgstr ""
+"عدم تطابق نوع فیلد: '%(field)s' انتظار قالب EMAIL را دارد، اما ستون فایل "
+"'%(column)s' حاوی ایمیل نامعتبر است"
+
+#, python-format
+msgid ""
+"Field type mismatch: '%(field)s' expects URL format, but file column "
+"'%(column)s' contains invalid URL: '%(value)s'"
+msgstr ""
+"عدم تطابق نوع فیلد: '%(field)s' انتظار قالب URL را دارد، اما ستون فایل "
+"'%(column)s' حاوی URL نامعتبر است: '%(value)s'"
+
+#, python-format
+msgid ""
+"Error: '%(field)s' is a TEXT field, but file column '%(column)s' appears to "
+"contain DATES. Consider mapping to a DateField instead."
+msgstr ""
+"خطا: '%(field)s' یک فیلد TEXT است، اما به نظر می‌رسد ستون فایل '%(column)s' "
+"حاوی تاریخ است. به جای آن از DateField استفاده کنید."
+
+#, python-format
+msgid ""
+"Error: '%(field)s' is a TEXT field, but file column '%(column)s' appears to "
+"contain EMAIL addresses. Consider mapping to an EmailField instead."
+msgstr ""
+"خطا: '%(field)s' یک فیلد TEXT است، اما به نظر می‌رسد ستون فایل '%(column)s' "
+"حاوی آدرس ایمیل است. به جای آن از EmailField استفاده کنید."
+
+#, python-format
+msgid ""
+"Error: '%(field)s' is a TEXT field, but file column '%(column)s' appears to "
+"contain NUMBERS. Consider mapping to a numeric field instead."
+msgstr ""
+"خطا: '%(field)s' یک فیلد TEXT است، اما به نظر می‌رسد ستون فایل '%(column)s' "
+"حاوی اعداد است. به جای آن از فیلد عددی استفاده کنید."
+
+#, python-format
+msgid "Required field '%(field)s' must be mapped to a file column."
+msgstr "فیلد الزامی '%(field)s' باید به یک ستون فایل نگاشت شود."
+
+msgid "Error processing field mappings"
+msgstr "خطا در پردازش نگاشت فیلدها"
+
+msgid "No import data found in session"
+msgstr "هیچ داده وارداتی در نشست یافت نشد"
+
+msgid "Complete user sign-up and company setup before going to home."
+msgstr "پیش از رفتن به صفحه اصلی، ثبت‌نام کاربر و راه‌اندازی شرکت را تکمیل کنید."
+
+msgid "Unauthorized. Please authenticate first."
+msgstr "غیرمجاز. لطفاً ابتدا احراز هویت کنید."
+
+msgid "Database already initialized"
+msgstr "پایگاه داده قبلاً راه‌اندازی شده است"
+
+msgid "Invalid password. Please try again."
+msgstr "رمز عبور نامعتبر است. لطفاً دوباره امتحان کنید."
+
+msgid ""
+"Demo database loaded successfully! You can now login with username 'admin' "
+"and password 'admin'."
+msgstr ""
+"پایگاه داده نمایشی با موفقیت بارگذاری شد! اکنون می‌توانید با نام کاربری "
+"'admin' و رمز عبور 'admin' وارد شوید."
+
+msgid "Database loaded successfully."
+msgstr "پایگاه داده با موفقیت بارگذاری شد."
+
+msgid "Data file not found: {}"
+msgstr "فایل داده یافت نشد: {}"
+
+msgid "Loading {}"
+msgstr "در حال بارگذاری {}"
+
+msgid "Error loading {}. All changes have been rolled back."
+msgstr "خطا در بارگذاری {}. همه تغییرات برگشت داده شدند."
+
+msgid "Currency Code"
+msgstr "کد ارز"
+
+msgid "Default currency can't be deleted"
+msgstr "ارز پیش‌فرض قابل حذف نیست"
+
+msgid "Currency is already the default."
+msgstr "ارز در حال حاضر پیش‌فرض است."
+
+msgid "Default currency changed successfully."
+msgstr "ارز پیش‌فرض با موفقیت تغییر یافت."
+
+msgid "Edit Currency Information"
+msgstr "ویرایش اطلاعات ارز"
+
+msgid "Fetching conversion rate..."
+msgstr "در حال دریافت نرخ تبدیل..."
+
+msgid "Define roles for the partner contacts you work with."
+msgstr "تعریف نقش‌ها برای مخاطبان شریک که با آنها کار می‌کنید."
+
+msgid "Restore or permanently delete records removed from Horilla."
+msgstr "بازیابی یا حذف دائمی رکوردهای حذف‌شده از هورایلا."
+
+msgid "Are you sure you want to restore the selected items?"
+msgstr "آیا مطمئن هستید که می‌خواهید موارد انتخاب شده را بازیابی کنید؟"
+
+msgid "Are you sure you want to delete the selected items?"
+msgstr "آیا مطمئن هستید که می‌خواهید موارد انتخاب شده را حذف کنید؟"
+
+msgid ""
+"When deleting the items, its dependent data will be set to NULL or "
+"reassigned."
+msgstr "هنگام حذف این موارد، داده‌های وابسته به آن‌ها روی NULL تنظیم یا بازتخصیص می‌شوند."
+
+msgid "Are you sure you want to empty this bin?"
+msgstr "آیا مطمئن هستید که می‌خواهید این سطل را خالی کنید؟"
+
+msgid "Record Name"
+msgstr "نام رکورد"
+
+msgid "Type"
+msgstr "نوع"
+
+msgid "Deleted By"
+msgstr "حذف شده توسط"
+
+msgid "Are you sure you want to restore this item?"
+msgstr "آیا مطمئن هستید که می‌خواهید این مورد را بازیابی کنید؟"
+
+msgid "Are you sure you want to delete this item?"
+msgstr "آیا مطمئن هستید که می‌خواهید این مورد را حذف کنید؟"
+
+msgid ""
+"When deleting the item, its dependent data will be set to NULL or reassigned."
+msgstr "هنگام حذف این مورد، داده‌های وابسته به آن روی NULL تنظیم یا بازتخصیص می‌شوند."
+
+msgid "No records selected for deletion."
+msgstr "هیچ رکوردی برای حذف انتخاب نشده است."
+
+msgid "No records selected for restoration."
+msgstr "هیچ رکوردی برای بازیابی انتخاب نشده است."
+
+msgid "You don't have permission to do this change"
+msgstr "شما مجوز انجام این تغییر را ندارید"
+
+msgid "Enter a valid retention period in days."
+msgstr "یک دوره نگهداری معتبر بر حسب روز وارد کنید."
+
+msgid "Recycle bin policy updated successfully."
+msgstr "سیاست سطل بازیافت با موفقیت به‌روزرسانی شد."
+
+msgid "Your preferences have been updated successfully."
+msgstr "ترجیحات شما با موفقیت به‌روزرسانی شد."
+
+msgid "There was an error updating your preferences."
+msgstr "در به‌روزرسانی ترجیحات شما خطایی رخ داد."
+
+msgid "The requested role does not exist."
+msgstr "نقش درخواستی وجود ندارد."
+
+msgid "Please select a role to continue."
+msgstr "لطفاً برای ادامه یک نقش انتخاب کنید."
+
+msgid "The requested user does not exist."
+msgstr "کاربر درخواستی وجود ندارد."
+
+msgid "Define roles and their position in your organization's hierarchy."
+msgstr "تعریف نقش‌ها و جایگاه آنها در سلسله‌مراتب سازمانی."
+
+msgid "Add Role"
+msgstr "افزودن نقش"
+
+msgid "Shift Timing"
+msgstr "زمان‌بندی شیفت"
+
+msgid "Shift Days"
+msgstr "روزهای شیفت"
+
+msgid "No of Users"
+msgstr "تعداد کاربران"
+
+msgid "Shift hour"
+msgstr "ساعت شیفت"
+
+msgid "Shift hour details"
+msgstr "جزئیات ساعت شیفت"
+
+msgid "Main hours"
+msgstr "ساعات اصلی"
+
+msgid "Break 1"
+msgstr "استراحت ۱"
+
+msgid "Break 2"
+msgstr "استراحت ۲"
+
+msgid "Assigned users"
+msgstr "کاربران تخصیص یافته"
+
+msgid "Define roles for members collaborating on team-selling deals."
+msgstr "تعریف نقش‌ها برای اعضای همکار در معاملات فروش تیمی."
+
+msgid "My Holidays"
+msgstr "تعطیلات من"
+
+msgid "View the holidays that apply to you."
+msgstr "تعطیلاتی که به شما مربوط می‌شود را مشاهده کنید."
+
+msgid "Holiday Type"
+msgstr "نوع تعطیلات"
+
+msgid "My Login History"
+msgstr "تاریخچه ورود من"
+
+msgid "Review the sign-in activity on your account."
+msgstr "فعالیت ورود به حساب خود را بررسی کنید."
+
+msgid "Browser"
+msgstr "مرورگر"
+
+msgid "Login Time"
+msgstr "زمان ورود"
+
+msgid "IP"
+msgstr "آی‌پی"
+
+msgid "Manage user accounts, roles, and access across your organization."
+msgstr "مدیریت حساب‌های کاربری، نقش‌ها و دسترسی‌ها در سراسر سازمان."
+
+msgid "Personal Information"
+msgstr "اطلاعات شخصی"
+
+msgid "Address Information"
+msgstr "اطلاعات آدرس"
+
+msgid "Work Information"
+msgstr "اطلاعات کاری"
+
+msgid "Localization Information"
+msgstr "اطلاعات بومی‌سازی"
+
+msgid "Change Company"
+msgstr "تغییر شرکت"
+
+msgid "Work Info"
+msgstr "اطلاعات کاری"
+
+msgid "Review sign-in activity for users across your organization."
+msgstr "بررسی فعالیت ورود کاربران در سراسر سازمان."
+
+msgid "Process Builder"
+msgstr "سازنده فرآیند"
+
+msgid "My Jobs"
+msgstr "وظایف من"
+
+msgid ""
+"Module for managing the process, including approval processes and review "
+"processes."
+msgstr "ماژول برای مدیریت فرآیند، شامل فرآیندهای تأیید و فرآیندهای بررسی."
+
+msgid ""
+"Apply runtime viewport fit on approval/review process lists and approval job/"
+"history detail screens."
+msgstr "اعمال تنظیم خودکار اندازه نمایش در زمان اجرا بر فهرست فرایندهای تأیید و بازبینی و صفحات جزئیات وظایف و تاریخچه تأیید."
+
+msgid ""
+"Reviews: cap review process form modal body height with max-h so short forms "
+"no longer reserve a fixed 500px empty area."
+msgstr "بازبینی‌ها: محدود کردن ارتفاع بدنه پنجره فرم فرایند بازبینی با max-h، تا فرم‌های کوتاه دیگر فضای خالی ثابت ۵۰۰ پیکسلی اشغال نکنند."
+
+msgid ""
+"Approvals: scope delegation to ApprovalInstance.delegated_approver instead "
+"of mutating shared process rules; replace alert()-based responses with "
+"messages.error and HTMX reload; register ApprovalInstance for export_data. "
+"Wrap approval form placeholders with gettext_lazy."
+msgstr "تأییدها: محدود کردن واگذاری به ApprovalInstance.delegated_approver به جای تغییر قواعد فرایند مشترک؛ جایگزینی پاسخ‌های مبتنی بر alert() با messages.error و بارگذاری مجدد HTMX؛ ثبت ApprovalInstance برای export_data. پوشاندن متن‌های راهنمای فرم تأیید با gettext_lazy."
+
+msgid ""
+"Re-raise HttpNotFound with exception chaining in process detail views to "
+"preserve context."
+msgstr "پرتاب مجدد HttpNotFound با زنجیره‌سازی استثنا در نماهای جزئیات فرایند برای حفظ زمینه."
+
+msgid ""
+"Approvals: fixed type mismatch when excluding pending approval objects from "
+"list view; added job detail body template and adjusted tab container height."
+msgstr "تأییدها: رفع ناهمخوانی نوع داده هنگام حذف اشیای تأیید در انتظار از نمای فهرست؛ افزودن قالب بدنه برای جزئیات وظیفه و تنظیم ارتفاع محفظه زبانه‌ها."
+
+msgid ""
+"ApprovalRuleForm refactored to fields=\"__all__\" with field_order, dropping "
+"the unused process_config field and the redundant view fields list. Fixed a "
+"KeyError on review-process create by adding keep_on_form for is_active. "
+"Migrated signal imports to the db.models.signals shim and added docstrings "
+"for pylint compliance."
+msgstr ""
+"ApprovalRuleForm به fields=\"__all__\" با field_order بازسازی شد و فیلد "
+"استفاده نشده process_config و لیست فیلدهای نمایش اضافی حذف شدند. KeyError در "
+"ایجاد فرآیند بررسی با افزودن keep_on_form برای is_active برطرف شد. واردات "
+"سیگنال به شیم horilla.db.models.signals مهاجرت داده شد و مستندسازی برای "
+"انطباق با pylint اضافه شد."
+
+msgid ""
+"Release 1.10: Process Builder consolidated under contrib.process with "
+"approvals and reviews sub-apps. Django app labels for approvals and reviews "
+"are unchanged; import paths and includes now use the contrib package layout."
+msgstr ""
+"نسخه ۱.۱۰: Process Builder در زیر contrib.process با زیربرنامه‌های approvals "
+"و reviews تثبیت شد. برچسب‌های برنامه جنگو برای approvals و reviews بدون تغییر "
+"هستند؛ مسیرهای واردات و includes اکنون از چیدمان بسته contrib استفاده می‌کنند."
+
+msgid ""
+"Enhanced approval workflow with delete support in approval history, standard "
+"HTMX modal delete flow, and inline edit enforcement for pending/rejected "
+"records. Improved approval signals cleanup, review process table viewport "
+"handling, and redirect behavior."
+msgstr ""
+"گردش کار تأیید با پشتیبانی حذف در تاریخچه تأیید، جریان حذف مودال استاندارد "
+"HTMX، و اعمال ویرایش درون‌خطی برای رکوردهای در انتظار/رد شده بهبود یافت. "
+"پاک‌سازی سیگنال‌های تأیید، مدیریت نمای جدول فرآیند بررسی و رفتار هدایت بهبود "
+"یافت."
+
+msgid ""
+"Introduced unified Process Builder combining reviews and approvals into a "
+"flexible, condition-driven workflow engine with configurable approvers, "
+"field-level controls, and per-app process configuration."
+msgstr ""
+"سازنده فرآیند یکپارچه معرفی شد که بررسی‌ها و تأییدیه‌ها را در یک موتور گردش "
+"کار انعطاف‌پذیر و مبتنی بر شرایط با تأییدکنندگان قابل تنظیم، کنترل‌های سطح "
+"فیلد و پیکربندی فرآیند در هر برنامه ترکیب می‌کند."
+
+msgid "Related To"
+msgstr "مرتبط با"
+
+msgid "The page you are looking for does not exist or may have been moved."
+msgstr "صفحه‌ای که به دنبال آن هستید وجود ندارد یا ممکن است منتقل شده باشد."
+
+msgid "You do not have permission to view this page."
+msgstr "شما مجوز مشاهده این صفحه را ندارید."
+
+msgid "Page Not Found"
+msgstr "صفحه یافت نشد"
+
+msgid "Go to Dashboard"
+msgstr "رفتن به داشبورد"
+
+msgid "Method Not Allowed"
+msgstr "روش مجاز نیست"
+
+msgid "The request method is not allowed for this resource."
+msgstr "روش درخواست برای این منبع مجاز نیست."
+
+msgid "Server Error"
+msgstr "خطای سرور"
+
+msgid ""
+"There’s been an error. It’s been reported to the site administrators via "
+"email and should be fixed shortly. Thanks for your patience."
+msgstr ""
+"خطایی رخ داده است. این خطا از طریق ایمیل به مدیران سایت گزارش شده است و به "
+"زودی برطرف می‌شود. از صبر شما متشکریم."
+
+msgid "Activate company"
+msgstr "فعال‌سازی شرکت"
+
+msgid "Please create or activate your company."
+msgstr "لطفاً شرکت خود را ایجاد یا فعال کنید."
+
+msgid "Search anything..."
+msgstr "جستجوی کلی..."
+
+msgid "Toggle theme"
+msgstr "تغییر تم"
+
+msgid "Recently viewed"
+msgstr "اخیراً مشاهده شده"
+
+msgid "Recently Viewed"
+msgstr "اخیراً مشاهده شده"
+
+#, python-format
+msgid "%(time)s ago"
+msgstr "%(time)s پیش"
+
+msgid "No recent items"
+msgstr "هیچ مورد اخیری وجود ندارد"
+
+msgid "icon"
+msgstr "آیکون"
+
+msgid "Switch company"
+msgstr "تغییر شرکت"
+
+msgid "All Company"
+msgstr "همه شرکت‌ها"
+
+msgid "No companies available"
+msgstr "هیچ شرکتی در دسترس نیست"
+
+msgid "Logout"
+msgstr "خروج"
+
+msgid "Quick actions"
+msgstr "اقدامات سریع"
+
+msgid "Security check failed"
+msgstr "بررسی امنیت ناموفق بود"
+
+msgid "Security Check Failed"
+msgstr "بررسی امنیت ناموفق بود"
+
+msgid "We could not verify this request. Refresh the page and submit again."
+msgstr ""
+"ما نتوانستیم این درخواست را تأیید کنیم. صفحه را بازخوانی کنید و دوباره ارسال "
+"کنید."
+
+msgid "Enter Username"
+msgstr "نام کاربری را وارد کنید"
+
+msgid "Enter Password"
+msgstr "رمز عبور را وارد کنید"
+
+msgid "Load Demo Data"
+msgstr "بارگذاری داده‌های نمایشی"
+
+#~ msgid "Horilla"
+#~ msgstr "هورایلا"
+
+#~ msgid "Welcome to Horilla"
+#~ msgstr "به هورایلا خوش آمدید"
+
+#~ msgid "Please sign in to access your dashboard"
+#~ msgstr "لطفاً برای دسترسی به داشبورد خود وارد شوید"
+
+#~ msgid "Please sign up to access Horilla"
+#~ msgstr "لطفاً برای دسترسی به هورایلا ثبت‌نام کنید"
+
+#~ msgid "English"
+#~ msgstr "انگلیسی"
+
+#~ msgid "French"
+#~ msgstr "فرانسوی"
+
+#~ msgid "German"
+#~ msgstr "آلمانی"
+
+#~ msgid "Spanish"
+#~ msgstr "اسپانیایی"
+
+#~ msgid "Italian"
+#~ msgstr "ایتالیایی"
+
+#~ msgid "Portuguese"
+#~ msgstr "پرتغالی"
+
+#~ msgid "Monday"
+#~ msgstr "دوشنبه"
+
+#~ msgid "Tuesday"
+#~ msgstr "سه‌شنبه"
+
+#~ msgid "Wednesday"
+#~ msgstr "چهارشنبه"
+
+#~ msgid "Thursday"
+#~ msgstr "پنج‌شنبه"
+
+#~ msgid "Friday"
+#~ msgstr "جمعه"
+
+#~ msgid "Saturday"
+#~ msgstr "شنبه"
+
+#~ msgid "Sunday"
+#~ msgstr "یک‌شنبه"
+
+#~ msgid "Same Hour Every Day"
+#~ msgstr "ساعت یکسان هر روز"
+
+#~ msgid "Different Hour Per Day"
+#~ msgstr "ساعت متفاوت در هر روز"
+
+#~ msgid "Equals"
+#~ msgstr "برابر است با"
+
+#~ msgid "Not Equals"
+#~ msgstr "برابر نیست با"
+
+#~ msgid "Contains"
+#~ msgstr "شامل"
+
+#~ msgid "Does Not Contain"
+#~ msgstr "شامل نمی‌شود"
+
+#~ msgid "Starts With"
+#~ msgstr "شروع می‌شود با"
+
+#~ msgid "Ends With"
+#~ msgstr "پایان می‌یابد با"
+
+#~ msgid "Greater Than"
+#~ msgstr "بزرگتر از"
+
+#~ msgid "Greater Than or Equal"
+#~ msgstr "بزرگتر یا مساوی"
+
+#~ msgid "Less Than"
+#~ msgstr "کوچکتر از"
+
+#~ msgid "Less Than or Equal"
+#~ msgstr "کوچکتر یا مساوی"
+
+#~ msgid "Is Empty"
+#~ msgstr "خالی است"
+
+#~ msgid "Is Not Empty"
+#~ msgstr "خالی نیست"
+
+#~ msgid "Between"
+#~ msgstr "بین"
+
+#, fuzzy
+#~| msgid "Role Description"
+#~ msgid "Updation description"
+#~ msgstr "توضیحات نقش"
+
+#, fuzzy
+#~| msgid "Updated At"
+#~ msgid "Updation tag"
+#~ msgstr "به‌روزرسانی شده در"
+
+#, fuzzy
+#~| msgid "Login History"
+#~ msgid "History"
+#~ msgstr "تاریخچه ورود"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgid "Created"
+#~ msgstr "ایجاد"
+
+#, fuzzy
+#~| msgid "Updated At"
+#~ msgid "Updated"
+#~ msgstr "به‌روزرسانی شده در"
+
+#, fuzzy
+#~| msgid "No valid users found."
+#~ msgid "No history found."
+#~ msgstr "هیچ کاربر معتبری یافت نشد."
+
+#, fuzzy
+#~| msgid "Sun"
+#~ msgid "Run"
+#~ msgstr "یک‌شنبه"
+
+#, fuzzy
+#~| msgid "Invalid user selection."
+#~ msgid "Clear selection"
+#~ msgstr "انتخاب کاربر نامعتبر است."
+
+#, fuzzy
+#~| msgid "Model Field"
+#~ msgid "Model name"
+#~ msgstr "فیلد مدل"
+
+#, fuzzy
+#~| msgid "Add Holiday"
+#~ msgid "Add link"
+#~ msgstr "افزودن تعطیلات"
+
+#, fuzzy
+#~| msgid "Address"
+#~ msgid "Add"
+#~ msgstr "آدرس"
+
+#, fuzzy
+#~| msgid "You do not have permission to view this page."
+#~ msgid "You don’t have permission to view or edit anything."
+#~ msgstr "شما مجوز مشاهده این صفحه را ندارید."
+
+#, fuzzy
+#~| msgid "Change Password"
+#~ msgid "Change password"
+#~ msgstr "تغییر رمز عبور"
+
+#, fuzzy
+#~| msgid "Reset Password"
+#~ msgid "Set password"
+#~ msgstr "بازنشانی رمز عبور"
+
+#, fuzzy
+#~| msgid "Database Authentication"
+#~ msgid "Disable password-based authentication"
+#~ msgstr "احراز هویت پایگاه داده"
+
+#, fuzzy
+#~| msgid "Database Authentication"
+#~ msgid "Enable password-based authentication"
+#~ msgstr "احراز هویت پایگاه داده"
+
+#, fuzzy
+#~| msgid "View Users"
+#~ msgid "View site"
+#~ msgstr "مشاهده کاربران"
+
+#, fuzzy
+#~| msgid "Administrator"
+#~ msgid "Django administration"
+#~ msgstr "مدیر"
+
+#, fuzzy
+#~| msgid "View Login History"
+#~ msgid "View on site"
+#~ msgstr "مشاهده تاریخچه ورود"
+
+#, fuzzy
+#~| msgid "Total Counts"
+#~ msgid "Show counts"
+#~ msgstr "تعداد کل"
+
+#, fuzzy
+#~| msgid "Toggle theme"
+#~ msgid "Toggle sorting"
+#~ msgstr "تغییر تم"
+
+#, fuzzy
+#~| msgid "Select Related Object"
+#~ msgid "Delete multiple objects"
+#~ msgstr "انتخاب شیء مرتبط"
+
+#, fuzzy
+#~| msgid "Delete"
+#~ msgid "Delete?"
+#~ msgstr "حذف"
+
+#, fuzzy
+#~| msgid "Quick actions"
+#~ msgid "Recent actions"
+#~ msgstr "اقدامات سریع"
+
+#, fuzzy
+#~| msgid "Quick actions"
+#~ msgid "My actions"
+#~ msgstr "اقدامات سریع"
+
+#, fuzzy
+#~| msgid "No users available."
+#~ msgid "None available"
+#~ msgstr "هیچ کاربری در دسترس نیست."
+
+#, fuzzy
+#~| msgid "Change"
+#~ msgid "Changed:"
+#~ msgstr "تغییر"
+
+#, fuzzy
+#~| msgid "Delete"
+#~ msgid "Deleted:"
+#~ msgstr "حذف"
+
+#, fuzzy
+#~| msgid "Default end time"
+#~ msgid "Date/time"
+#~ msgstr "زمان پایان پیش‌فرض"
+
+#, fuzzy
+#~| msgid "Country"
+#~ msgid "entry"
+#~ msgid_plural "entries"
+#~ msgstr[0] "کشور"
+#~ msgstr[1] "کشور"
+
+#, fuzzy, python-format
+#~| msgid "Search models..."
+#~ msgid "Search %(name)s"
+#~ msgstr "جستجوی مدل‌ها..."
+
+#, fuzzy
+#~| msgid "March"
+#~ msgid "Search"
+#~ msgstr "مارس"
+
+#, fuzzy, python-format
+#~| msgid "Please select a module first"
+#~ msgid "Delete selected %(model)s"
+#~ msgstr "لطفاً ابتدا یک ماژول انتخاب کنید"
+
+#~ msgid "Week days"
+#~ msgstr "روزهای هفته"
+
+#~ msgid "Number grouping format"
+#~ msgstr "قالب گروه‌بندی اعداد"
+
+#~ msgid "Select your preferred number grouping format."
+#~ msgstr "قالب گروه‌بندی اعداد مورد نظر خود را انتخاب کنید."
+
+#~ msgid "Number Grouping"
+#~ msgstr "گروه‌بندی اعداد"
+
+#~ msgid "How importing works"
+#~ msgstr "نحوه کار واردات"
+
+#~ msgid "No records"
+#~ msgstr "هیچ رکوردی"
+
+#~ msgid "No Grouping"
+#~ msgstr "بدون گروه‌بندی"
+
+#, python-format
+#~ msgid "Nothing to show yet. Please add your %(model)s."
+#~ msgstr "هنوز چیزی برای نمایش وجود ندارد. لطفاً %(model)s را اضافه کنید."
+
+# Roles & Permissions — model section labels
+#~ msgid "Call Integration Setting"
+#~ msgstr "تنظیمات یکپارچه‌سازی تماس"
+
+#~ msgid "Call Integration Settings"
+#~ msgstr "تنظیمات یکپارچه‌سازی تماس"
+
+#~ msgid "Call Provider"
+#~ msgstr "ارائه‌دهنده تماس"
+
+#~ msgid "Call Providers"
+#~ msgstr "ارائه‌دهندگان تماس"
+
+#~ msgid "Call Log"
+#~ msgstr "گزارش تماس"
+
+#~ msgid "Call Logs"
+#~ msgstr "گزارش‌های تماس"
+
+#~ msgid "Agent Mapping"
+#~ msgstr "نگاشت نماینده"
+
+#~ msgid "Agent Mappings"
+#~ msgstr "نگاشت‌های نماینده"
+
+#~ msgid "Approval process"
+#~ msgstr "فرآیند تأیید"
+
+#~ msgid "Approval processes"
+#~ msgstr "فرآیندهای تأیید"
+
+#~ msgid "Approval process rule"
+#~ msgstr "قانون فرآیند تأیید"
+
+#~ msgid "Approval process rules"
+#~ msgstr "قوانین فرآیند تأیید"
+
+#~ msgid "Approval step"
+#~ msgstr "مرحله تأیید"
+
+#~ msgid "Approval steps"
+#~ msgstr "مراحل تأیید"
+
+#~ msgid "Approval instance"
+#~ msgstr "نمونه تأیید"
+
+#~ msgid "Approval instances"
+#~ msgstr "نمونه‌های تأیید"
+
+#~ msgid "Approval decision"
+#~ msgstr "تصمیم تأیید"
+
+#~ msgid "Approval decisions"
+#~ msgstr "تصمیم‌های تأیید"
+
+#~ msgid "Activity Call Extension"
+#~ msgstr "افزونه تماس فعالیت"
+
+#~ msgid "Activity Call Extensions"
+#~ msgstr "افزونه‌های تماس فعالیت"
+
+#~ msgid "activity call extension"
+#~ msgstr "افزونه تماس فعالیت"
+
+#, python-format
+#~ msgid "Successfully deleted the %(model)s and all its related records."
+#~ msgstr "%(model)s و همه رکوردهای مرتبط آن با موفقیت حذف شد."

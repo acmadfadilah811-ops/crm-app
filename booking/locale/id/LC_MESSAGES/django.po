@@ -1,0 +1,698 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Booking"
+msgstr "Booking"
+
+msgid ""
+"Public scheduling pages with slot availability, online meeting links (Zoom, "
+"Google Meet, Microsoft Teams), CRM lead integration, and confirmation, "
+"reminder, reschedule, and cancellation emails."
+msgstr ""
+"Halaman penjadwalan publik dengan ketersediaan slot, tautan rapat online "
+"(Zoom, Google Meet, Microsoft Teams), integrasi prospek CRM, dan email "
+"konfirmasi, pengingat, penjadwalan ulang, dan pembatalan."
+
+msgid "Registered Booking for export_data."
+msgstr "Pemesanan Terdaftar untuk ekspor_data."
+
+msgid ""
+"Added ModalDetailView with clickable rows, prev/next navigation, and status "
+"change actions; replaced hardcoded modal colors with theme variables. Split "
+"booking/views.py into booking_page, booking_list, and public modules. Use "
+"load_branding() TITLE as the fallback company name in reminder and "
+"confirmation emails."
+msgstr ""
+"Menambahkan ModalDetailView dengan baris yang dapat diklik, navigasi "
+"sebelumnya/berikutnya, dan tindakan perubahan status; mengganti warna modal "
+"hardcode dengan variabel tema. Pisahkan booking/views.py menjadi "
+"booking_page, booking_list, dan modul publik. Gunakan load_branding() TITLE "
+"sebagai nama perusahaan pengganti dalam email pengingat dan konfirmasi."
+
+msgid ""
+"Improved booking calendar UX with timezone-aware slot display and "
+"confirmation rendering. Fixed the public date-strip to read date-object "
+"properties instead of stale outer-scope month/day variables. Adopted the "
+"utils.timezone shim and standardized first-party import groups across "
+"booking models, tasks, utils, and views."
+msgstr ""
+"Peningkatan UX kalender pemesanan dengan tampilan slot sadar zona waktu dan "
+"rendering konfirmasi. Memperbaiki strip tanggal publik untuk membaca "
+"properti objek tanggal alih-alih variabel bulan/hari cakupan luar yang basi."
+" Mengadopsi shim utils.timezone dan grup impor pihak pertama yang "
+"terstandarisasi di seluruh model pemesanan, tugas, utilitas, dan tampilan."
+
+msgid ""
+"Select2 timezone picker and clearer public scheduling layout. HTMX toggles "
+"for allow_cancel, allow_reschedule, and is_online with better online/offline"
+" location controls and brand-color widget rendering. Per-booking-page mail "
+"templates for confirmation, cancellation, and reschedule — plus Celery "
+"reminder emails aligned with CRM lead/contact/activity hooks."
+msgstr ""
+"Pilih2 pemilih zona waktu dan tata letak penjadwalan publik yang lebih "
+"jelas. HTMX beralih untuk izinkan_batal, izinkan_reschedule, dan is_online "
+"dengan kontrol lokasi online/offline yang lebih baik dan rendering widget "
+"warna merek. Templat email per halaman pemesanan untuk konfirmasi, "
+"pembatalan, dan penjadwalan ulang — ditambah email pengingat Seledri yang "
+"selaras dengan kait prospek/kontak/aktivitas CRM."
+
+msgid ""
+"Initial release: booking pages with business-hour or shift-hour "
+"availability, public booking forms, embed URLs, custom questions and brand "
+"colors, My Bookings under My Jobs, settings under General Settings, optional"
+" mail templates for confirmation/cancellation/reschedule, Celery reminder "
+"tasks, and automatic lead and activity creation on booking submission."
+msgstr ""
+"Rilis awal: halaman pemesanan dengan ketersediaan jam kerja atau jam shift, "
+"formulir pemesanan umum, URL semat, pertanyaan khusus dan warna merek, "
+"Pemesanan Saya di bawah Pekerjaan Saya, pengaturan di bawah Pengaturan Umum,"
+" templat email opsional untuk konfirmasi/pembatalan/penjadwalan ulang, tugas"
+" pengingat seledri, dan pembuatan prospek dan aktivitas otomatis pada "
+"pengiriman pemesanan."
+
+msgid "e.g. 30-Minute Intro Call"
+msgstr "misalnya Panggilan Perkenalan 30 Menit"
+
+msgid "Booking Form Information"
+msgstr "Informasi Formulir Pemesanan"
+
+msgid "Meeting Scheduling Settings"
+msgstr "Pengaturan Penjadwalan Rapat"
+
+msgid ""
+"Meeting details that are not collected from the user but required for "
+"scheduling."
+msgstr ""
+"Detail rapat yang tidak dikumpulkan dari pengguna tetapi diperlukan untuk "
+"penjadwalan."
+
+msgid "Minimum minutes before a slot can be booked"
+msgstr "Minimum menit sebelum slot dapat dipesan"
+
+msgid "How many days ahead visitors can book"
+msgstr "Berapa hari ke depan pengunjung dapat memesan"
+
+msgid "Minutes before each meeting"
+msgstr "Minutes before each meeting"
+
+msgid "Minutes after each meeting"
+msgstr "Minutes after each meeting"
+
+msgid ""
+"Send reminder email X hours before the meeting. Leave blank to disable."
+msgstr ""
+"Kirim email pengingat X jam sebelum rapat. Biarkan kosong untuk "
+"menonaktifkan."
+
+msgid "Meeting provider is required for online meetings."
+msgstr "Penyedia rapat diperlukan untuk rapat online."
+
+msgid "Your Name"
+msgstr "Your Name"
+
+msgid "Full name"
+msgstr "Nama lengkap"
+
+msgid "Your Email"
+msgstr "Email Anda"
+
+msgid "email@example.com"
+msgstr "email@contoh.com"
+
+msgid "Notes"
+msgstr "Catatan"
+
+msgid "Any additional information..."
+msgstr "Any additional information..."
+
+msgid "My Bookings"
+msgstr "Pemesanan Saya"
+
+msgid "Calendar Booking"
+msgstr "Pemesanan Kalender"
+
+msgid "Zoom"
+msgstr "Perbesar"
+
+msgid "Google Meet"
+msgstr "Google bertemu"
+
+msgid "Microsoft Teams"
+msgstr "Tim Microsoft"
+
+msgid "Pending"
+msgstr "Tertunda"
+
+msgid "Confirmed"
+msgstr "Dikonfirmasi"
+
+msgid "Cancelled"
+msgstr "Dibatalkan"
+
+msgid "Completed"
+msgstr "Completed"
+
+msgid "No Show"
+msgstr "Tidak Ada Pertunjukan"
+
+msgid "Business Hour"
+msgstr "Jam Kerja"
+
+msgid "Company business hours that govern available booking slots."
+msgstr "Jam kerja perusahaan yang mengatur slot pemesanan yang tersedia."
+
+msgid "Shift Hours"
+msgstr "Jam Shift"
+
+msgid ""
+"Use shift hours schedule for slot availability instead of business hours."
+msgstr "Gunakan jadwal jam shift untuk ketersediaan slot, bukan jam kerja."
+
+msgid "Slug"
+msgstr "Siput"
+
+msgid "Unique URL identifier for the booking page."
+msgstr "Pengidentifikasi URL unik untuk halaman pemesanan."
+
+msgid "Title"
+msgstr "Judul"
+
+msgid "Description"
+msgstr "Keterangan"
+
+msgid "Duration (minutes)"
+msgstr "Durasi (menit)"
+
+msgid "Online Meeting"
+msgstr "Pertemuan Daring"
+
+msgid "Meeting Provider"
+msgstr "Penyedia Pertemuan"
+
+msgid "Required when Online Meeting is enabled."
+msgstr "Diperlukan ketika Rapat Online diaktifkan."
+
+msgid "Location"
+msgstr "Lokasi"
+
+msgid "Physical address for in-person meetings."
+msgstr "Alamat fisik untuk pertemuan tatap muka."
+
+msgid "Buffer Before (minutes)"
+msgstr "Buffer Sebelumnya (menit)"
+
+msgid "Buffer After (minutes)"
+msgstr "Buffer Setelah (menit)"
+
+msgid "Max Bookings Per Day"
+msgstr "Pemesanan Maks Per Hari"
+
+msgid "Leave blank for unlimited."
+msgstr "Leave blank for unlimited."
+
+msgid "Advance Notice (minutes)"
+msgstr "Pemberitahuan Sebelumnya (menit)"
+
+msgid "Minimum notice required before a booking can be made."
+msgstr "Pemberitahuan minimum diperlukan sebelum pemesanan dapat dilakukan."
+
+msgid "Booking Window (days)"
+msgstr "Jendela Pemesanan (hari)"
+
+msgid "How many days into the future visitors can book."
+msgstr "How many days into the future visitors can book."
+
+msgid "Custom Questions"
+msgstr "Pertanyaan Khusus"
+
+msgid "List of questions to ask the booker."
+msgstr "Daftar pertanyaan untuk ditanyakan kepada pemesan."
+
+msgid "Reminder (hours before)"
+msgstr "Pengingat (beberapa jam sebelumnya)"
+
+msgid "Allow Rescheduling"
+msgstr "Izinkan Penjadwalan Ulang"
+
+msgid "Reschedule Cutoff (days)"
+msgstr "Batas Waktu Penjadwalan Ulang (hari)"
+
+msgid "Prevent rescheduling if less than X days before the meeting."
+msgstr "Cegah penjadwalan ulang jika kurang dari X hari sebelum rapat."
+
+msgid "Allow Cancellation"
+msgstr "Izinkan Pembatalan"
+
+msgid "Cancel Cutoff (days)"
+msgstr "Batalkan Batas Waktu (hari)"
+
+msgid "Prevent cancellation if less than X days before the meeting."
+msgstr "Cegah pembatalan bila kurang dari X hari sebelum rapat."
+
+msgid "Brand Color"
+msgstr "Warna Merek"
+
+msgid "Hex color used on the public booking page (e.g. #e54f38)."
+msgstr "Hex color used on the public booking page (e.g. #e54f38)."
+
+msgid "Host"
+msgstr "Tuan rumah"
+
+msgid "Participants"
+msgstr "Participants"
+
+msgid ""
+"Users who will be added as participants to every meeting booked via this "
+"page."
+msgstr ""
+"Pengguna yang akan ditambahkan sebagai peserta pada setiap pertemuan yang "
+"dipesan melalui halaman ini."
+
+msgid "Confirmation Email Template"
+msgstr "Confirmation Email Template"
+
+msgid "Optional. Overrides the default confirmation email design."
+msgstr "Opsional. Menggantikan desain email konfirmasi default."
+
+msgid "Cancellation Email Template"
+msgstr "Templat Email Pembatalan"
+
+msgid "Optional. Overrides the default cancellation email design."
+msgstr "Opsional. Mengganti desain email pembatalan default."
+
+msgid "Reschedule Email Template"
+msgstr "Jadwalkan Ulang Templat Email"
+
+msgid "Optional. Overrides the default reschedule email design."
+msgstr "Opsional. Mengganti desain email penjadwalan ulang default."
+
+msgid "Booking Page"
+msgstr "Halaman Pemesanan"
+
+msgid "Booking Pages"
+msgstr "Halaman Pemesanan"
+
+msgid "Booker Name"
+msgstr "Nama Pemesan"
+
+msgid "Booker Email"
+msgstr "Email Pemesan"
+
+msgid "Start Date & Time"
+msgstr "Tanggal & Waktu Mulai"
+
+msgid "End Date & Time"
+msgstr "Tanggal & Waktu Berakhir"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Question Answers"
+msgstr "Jawaban Pertanyaan"
+
+msgid "Meeting URL"
+msgstr "URL Rapat"
+
+msgid "Cancellation Token"
+msgstr "Token Pembatalan"
+
+msgid "Cancellation Reason"
+msgstr "Alasan Pembatalan"
+
+msgid "Booker Timezone"
+msgstr "Zona Waktu Pemesan"
+
+msgid "Meeting Activity"
+msgstr "Aktivitas Rapat"
+
+msgid "Bookings"
+msgstr "Pemesanan"
+
+msgid "Enter meeting location"
+msgstr "Masukkan lokasi pertemuan"
+
+msgid "Select a date to see available times."
+msgstr "Select a date to see available times."
+
+msgid "Available times"
+msgstr "Available times"
+
+msgid "No available slots for this date."
+msgstr "No available slots for this date."
+
+msgid "Cancel Booking"
+msgstr "Cancel Booking"
+
+msgid "Booking Cancelled"
+msgstr "Pemesanan Dibatalkan"
+
+msgid "Your booking for"
+msgstr "Pemesanan Anda untuk"
+
+msgid "has been cancelled."
+msgstr "has been cancelled."
+
+msgid "Already "
+msgstr "Already"
+
+msgid "This booking has already been"
+msgstr "Pemesanan ini sudah dilakukan"
+
+msgid "Cancellation Unavailable"
+msgstr "Pembatalan Tidak Tersedia"
+
+msgid "Cancellation is no longer available as the meeting is too soon."
+msgstr "Cancellation is no longer available as the meeting is too soon."
+
+#, python-format
+msgid ""
+"\n"
+"                        Cancellation is not allowed within %(days)s day(s) of the meeting.\n"
+"                    "
+msgstr "Cancellation is not allowed within%(days)sday(s) of the meeting."
+
+msgid "Cancel Booking?"
+msgstr "Batalkan Pemesanan?"
+
+msgid "Meeting:"
+msgstr "Pertemuan:"
+
+msgid "Date:"
+msgstr "Tanggal:"
+
+msgid "at"
+msgstr "at"
+
+msgid "Host:"
+msgstr "Tuan rumah:"
+
+msgid "Reason for cancellation"
+msgstr "Reason for cancellation"
+
+msgid "optional"
+msgstr "opsional"
+
+msgid "Let the host know why you are cancelling..."
+msgstr "Beri tahu tuan rumah alasan Anda membatalkan..."
+
+msgid "Yes, Cancel Booking"
+msgstr "Yes, Cancel Booking"
+
+msgid "Booking Confirmed"
+msgstr "Pemesanan Dikonfirmasi"
+
+msgid "You're booked!"
+msgstr "Anda sudah dipesan!"
+
+msgid "A confirmation has been sent to your email."
+msgstr "A confirmation has been sent to your email."
+
+msgid "Your booking has been rescheduled successfully."
+msgstr "Pemesanan Anda telah berhasil dijadwal ulang."
+
+msgid "Meeting"
+msgstr "Pertemuan"
+
+msgid "Date & Time"
+msgstr "Tanggal & Waktu"
+
+msgid "Duration"
+msgstr "Duration"
+
+msgid "min"
+msgstr "menit"
+
+msgid "Meeting Link"
+msgstr "Meeting Link"
+
+msgid "Join Meeting"
+msgstr "Bergabunglah dalam Rapat"
+
+msgid "Reschedule"
+msgstr "Jadwalkan Ulang"
+
+msgid "Hosted by"
+msgstr "Diselenggarakan oleh"
+
+msgid "Online"
+msgstr "On line"
+
+msgid "Select Date"
+msgstr "Pilih Tanggal"
+
+msgid "Select Time"
+msgstr "Select Time"
+
+msgid "Your Details"
+msgstr "Detail Anda"
+
+msgid "Back"
+msgstr "Kembali"
+
+msgid "12hr"
+msgstr "12 jam"
+
+msgid "24hr"
+msgstr "24 jam"
+
+msgid "Pick a date first"
+msgstr "Pilih tanggalnya terlebih dahulu"
+
+msgid "Booking Summary"
+msgstr "Ringkasan Pemesanan"
+
+msgid "Personal Details"
+msgstr "Detail Pribadi"
+
+msgid "Full Name"
+msgstr "Full Name"
+
+msgid "Enter your full name"
+msgstr "Masukkan nama lengkap Anda"
+
+msgid "Email Address"
+msgstr "Alamat Surel"
+
+msgid "Select"
+msgstr "Pilih"
+
+msgid "Additional Notes"
+msgstr "Catatan Tambahan"
+
+msgid "Previous"
+msgstr "Sebelumnya"
+
+msgid "Confirm Booking"
+msgstr "Konfirmasi Pemesanan"
+
+msgid "No slots available for this day"
+msgstr "Tidak ada slot tersedia untuk hari ini"
+
+msgid "Failed to load slots."
+msgstr "Gagal memuat slot."
+
+msgid "Reschedule Booking"
+msgstr "Reschedule Booking"
+
+msgid "Current:"
+msgstr "Saat ini:"
+
+msgid "Rescheduling Unavailable"
+msgstr "Rescheduling Unavailable"
+
+msgid "This booking cannot be rescheduled."
+msgstr "Pemesanan ini tidak dapat dijadwal ulang."
+
+msgid "Status:"
+msgstr "Status:"
+
+msgid "Loading..."
+msgstr "Memuat..."
+
+msgid "Confirm Reschedule"
+msgstr "Konfirmasi Penjadwalan Ulang"
+
+msgid "No slots available."
+msgstr "Tidak ada slot yang tersedia."
+
+msgid "Availability"
+msgstr "Tersedianya"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Business Hours"
+msgstr "Business Hours"
+
+msgid "Weekly Schedule"
+msgstr "Jadwal Mingguan"
+
+msgid "Closed"
+msgstr "Tertutup"
+
+msgid "Host Unavailability"
+msgstr "Host Unavailability"
+
+msgid "User"
+msgstr "Pengguna"
+
+msgid "From"
+msgstr "Dari"
+
+msgid "To"
+msgstr "Ke"
+
+msgid "Reason"
+msgstr "Alasan"
+
+msgid "Open-ended"
+msgstr "Open-ended"
+
+msgid "No unavailability blocks set."
+msgstr "Tidak ada blok ketidaktersediaan yang disetel."
+
+msgid "Share & Embed"
+msgstr "Bagikan & Sematkan"
+
+msgid "Public Booking Link"
+msgstr "Tautan Pemesanan Umum"
+
+msgid "Copy"
+msgstr "Salin"
+
+msgid "Link copied!"
+msgstr "Tautan disalin!"
+
+msgid "Embed Code"
+msgstr "Sematkan Kode"
+
+msgid "Embed code copied!"
+msgstr "Kode semat disalin!"
+
+msgid "New Booking Page"
+msgstr "Halaman Pemesanan Baru"
+
+msgid "Business Hours Required"
+msgstr "Diperlukan Jam Kerja"
+
+msgid ""
+"Please configure Business Hours for your company before creating a Booking "
+"Page."
+msgstr ""
+"Please configure Business Hours for your company before creating a Booking "
+"Page."
+
+msgid "Set up Business Hours"
+msgstr "Set up Business Hours"
+
+msgid "Change Booking Status"
+msgstr "Ubah Status Pemesanan"
+
+msgid "New Status"
+msgstr "Status Baru"
+
+msgid "Update"
+msgstr "Perbarui"
+
+msgid "Booker"
+msgstr "Pemesan"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Change Status"
+msgstr "Ubah Status"
+
+msgid "Booking Detail"
+msgstr "Detil Pemesanan"
+
+msgid "Start"
+msgstr "Awal"
+
+msgid "End"
+msgstr "End"
+
+msgid "Timezone"
+msgstr "Zona waktu"
+
+msgid "Monday"
+msgstr "Senin"
+
+msgid "Tuesday"
+msgstr "Selasa"
+
+msgid "Wednesday"
+msgstr "Rabu"
+
+msgid "Thursday"
+msgstr "Kamis"
+
+msgid "Friday"
+msgstr "Jumat"
+
+msgid "Saturday"
+msgstr "Saturday"
+
+msgid "Sunday"
+msgstr "Minggu"
+
+msgid "Create booking pages so others can schedule time with you."
+msgstr ""
+"Buat halaman pemesanan sehingga orang lain dapat menjadwalkan waktu bersama "
+"Anda."
+
+msgid "Duration (min)"
+msgstr "Durasi (menit)"
+
+msgid "Active"
+msgstr "Aktif"
+
+msgid "Edit"
+msgstr "Sunting"
+
+msgid "Embed"
+msgstr "Menanamkan"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Your name is required."
+msgstr "Nama Anda wajib diisi."
+
+msgid "Your email is required."
+msgstr "Your email is required."
+
+msgid "Please select a date."
+msgstr "Silakan pilih tanggal."
+
+msgid "Please select a time slot."
+msgstr "Silakan pilih slot waktu."
+
+msgid "Invalid date or time."
+msgstr "Tanggal atau waktu tidak valid."
+
+msgid "That slot is no longer available. Please choose another."
+msgstr "Slot itu tidak lagi tersedia. Silakan pilih yang lain."
+
+msgid "Please select a date and time."
+msgstr "Please select a date and time."
+
+msgid "That slot is no longer available."
+msgstr "That slot is no longer available."

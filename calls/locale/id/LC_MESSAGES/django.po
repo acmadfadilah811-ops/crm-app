@@ -1,0 +1,803 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Calls Integration"
+msgstr "Integrasi Panggilan"
+
+msgid ""
+"Telephony integration for click-to-call from CRM records, multi-provider "
+"support (Twilio, SignalWire(Beta), Telnyx(Beta), Sinch(Beta), Exotel(Beta), "
+"call logging, agent mapping, and company-level access control."
+msgstr ""
+"Integrasi telepon untuk klik untuk menelepon dari catatan CRM, dukungan "
+"multi-penyedia (Twilio, SignalWire(Beta), Telnyx(Beta), Sinch(Beta), "
+"Exotel(Beta), pencatatan panggilan, pemetaan agen, dan kontrol akses tingkat"
+" perusahaan."
+
+msgid ""
+"Lock down the calls API to company members with granted access.Seed default "
+"call reports for the report engine."
+msgstr ""
+"Kunci API panggilan ke anggota perusahaan dengan akses yang diberikan. Buat "
+"laporan panggilan default untuk mesin laporan."
+
+msgid ""
+"Adopted ScriptResponse and HxTriggerResponse for provider and call-log "
+"actions. Preserved exception context when Exotel and SignalWire return non-"
+"JSON responses."
+msgstr ""
+"Mengadopsi ScriptResponse dan HxTriggerResponse untuk tindakan penyedia dan "
+"log panggilan.Konteks pengecualian dipertahankan ketika Exotel dan "
+"SignalWire mengembalikan respons non-JSON."
+
+msgid ""
+"Initial release: multi-provider telephony (Twilio, SignalWire(Beta), "
+"Telnyx(Beta), Sinch(Beta), Exotel(Beta), Mock) with adapter factory; company"
+" enable/disable and role/user access control; Click-to-Call modal with HTMX "
+"live status, cancel, and recording toggles; CallLog history with Activity "
+"Timeline integration; agent mapping; secure credential storage; Settings → "
+"Integrations and My Settings UIs; REST API and webhook/WebSocket consumers."
+msgstr ""
+"Rilis awal: telepon multi-penyedia (Twilio, SignalWire(Beta), Telnyx(Beta), "
+"Sinch(Beta), Exotel(Beta), Mock) dengan pabrik "
+"adaptor;pengaktifan/penonaktifan perusahaan dan kontrol akses "
+"peran/pengguna;Modal Klik untuk Menelepon dengan status langsung HTMX, "
+"pembatalan, dan tombol perekaman;Riwayat CallLog dengan integrasi Timeline "
+"Aktivitas;pemetaan agen;penyimpanan kredensial yang aman;Pengaturan → "
+"Integrasi dan UI Pengaturan Saya;REST API dan konsumen webhook/WebSocket."
+
+msgid "Account SID"
+msgstr "SID akun"
+
+msgid "API Key"
+msgstr "Kunci API"
+
+msgid "Auth Token / API Secret"
+msgstr "Token Otentikasi / Rahasia API"
+
+msgid "API Base URL"
+msgstr "URL Basis API"
+
+msgid "Webhook Secret"
+msgstr "Rahasia Webhook"
+
+msgid "Leave blank to keep existing"
+msgstr "Biarkan kosong agar tetap ada"
+
+msgid "Roles"
+msgstr "Peran"
+
+msgid "Select roles"
+msgstr "Pilih peran"
+
+msgid "Users"
+msgstr "Pengguna"
+
+msgid "Select users"
+msgstr "Pilih pengguna"
+
+msgid "Call Integration"
+msgstr "Integrasi Panggilan"
+
+msgid "Calls"
+msgstr "Panggilan"
+
+msgid "All Users"
+msgstr "Semua Pengguna"
+
+msgid "Specific Roles"
+msgstr "Peran Tertentu"
+
+msgid "Specific Users"
+msgstr "Pengguna Tertentu"
+
+msgid "Enabled"
+msgstr "Diaktifkan"
+
+msgid "Access Type"
+msgstr "Jenis Akses"
+
+msgid "Who can initiate calls."
+msgstr "Siapa yang dapat memulai panggilan."
+
+msgid "Allowed Roles"
+msgstr "Peran yang Diizinkan"
+
+msgid "Allowed Users"
+msgstr "Pengguna yang Diizinkan"
+
+msgid "Call Integration Setting"
+msgstr "Pengaturan Integrasi Panggilan"
+
+msgid "Call Integration Settings"
+msgstr "Pengaturan Integrasi Panggilan"
+
+msgid "Twilio"
+msgstr "Twilio"
+
+msgid "SignalWire (Beta)"
+msgstr "Kabel Sinyal (Beta)"
+
+msgid "Telnyx (Beta)"
+msgstr "Telnyx (Beta)"
+
+msgid "Sinch (Beta)"
+msgstr "Sinch (Beta)"
+
+msgid "Exotel (Beta)"
+msgstr "Eksotel (Beta)"
+
+msgid "Mock (Testing)"
+msgstr "Tiruan (Pengujian)"
+
+msgid "Active"
+msgstr "Aktif"
+
+msgid "Inactive"
+msgstr "Tidak aktif"
+
+msgid "Testing"
+msgstr "Pengujian"
+
+msgid "Name"
+msgstr "Nama"
+
+msgid "Provider"
+msgstr "Penyedia"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Account SID / App ID"
+msgstr "SID Akun / ID Aplikasi"
+
+msgid ""
+"Twilio AccountSID, Plivo Auth ID, Ozonetel username, or equivalent "
+"identifier."
+msgstr ""
+"Twilio AccountSID, Plivo Auth ID, nama pengguna Ozonetel, atau pengenal yang"
+" setara."
+
+msgid "API Secret / Auth Token"
+msgstr "Rahasia API / Token Otentikasi"
+
+msgid "Optional override for Ozonetel or custom API endpoints."
+msgstr "Penggantian opsional untuk Ozonetel atau titik akhir API khusus."
+
+msgid "Default Caller ID"
+msgstr "ID Penelepon Default"
+
+msgid "Default outbound phone number or SIP caller ID."
+msgstr "Nomor telepon keluar default atau ID penelepon SIP."
+
+msgid "Enable Call Recording"
+msgstr "Aktifkan Perekaman Panggilan"
+
+msgid ""
+"Record calls via this provider. Requires recording support on the provider "
+"side."
+msgstr ""
+"Rekam panggilan melalui penyedia ini.Membutuhkan dukungan perekaman di sisi "
+"penyedia."
+
+msgid "Used to validate incoming webhook signatures."
+msgstr "Digunakan untuk memvalidasi tanda tangan webhook yang masuk."
+
+msgid "Extra Configuration"
+msgstr "Konfigurasi Ekstra"
+
+msgid "Call Provider"
+msgstr "Penyedia Panggilan"
+
+msgid "Call Providers"
+msgstr "Penyedia Panggilan"
+
+msgid "User"
+msgstr "Pengguna"
+
+msgid "Extension / SIP Extension"
+msgstr "Ekstensi / Ekstensi SIP"
+
+msgid "Agent / Caller ID"
+msgstr "Agen / ID Penelepon"
+
+msgid "Provider's internal agent or caller identifier."
+msgstr "Agen internal penyedia atau pengenal penelepon."
+
+msgid "Agent Mapping"
+msgstr "Pemetaan Agen"
+
+msgid "Agent Mappings"
+msgstr "Pemetaan Agen"
+
+msgid "Inbound"
+msgstr "Masuk"
+
+msgid "Outbound"
+msgstr "Keluar"
+
+msgid "Initiated"
+msgstr "Dimulai"
+
+msgid "Ringing"
+msgstr "Berdering"
+
+msgid "In Progress"
+msgstr "Sedang Berlangsung"
+
+msgid "Completed"
+msgstr "Selesai"
+
+msgid "No Answer"
+msgstr "Tidak Ada Jawaban"
+
+msgid "Busy"
+msgstr "Sibuk"
+
+msgid "Failed"
+msgstr "Gagal"
+
+msgid "Cancelled"
+msgstr "Dibatalkan"
+
+msgid "Agent"
+msgstr "Agen"
+
+msgid "Direction"
+msgstr "Arah"
+
+msgid "From Number"
+msgstr "Dari Nomor"
+
+msgid "To Number"
+msgstr "Ke Nomor"
+
+msgid "Duration (seconds)"
+msgstr "Durasi (detik)"
+
+msgid "Started At"
+msgstr "Dimulai pada"
+
+msgid "Ended At"
+msgstr "Berakhir Pada"
+
+msgid "Provider Call ID"
+msgstr "ID Panggilan Penyedia"
+
+msgid "Twilio CallSID, Plivo RequestUUID, Vonage UUID, Ozonetel UCID, etc."
+msgstr "Twilio CallSID, Plivo RequestUUID, Vonage UUID, Ozonetel UCID, dll."
+
+msgid "Recording URL"
+msgstr "URL rekaman"
+
+msgid "Related Model"
+msgstr "Model Terkait"
+
+msgid "'lead' or 'contact'"
+msgstr "'memimpin' atau 'kontak'"
+
+msgid "Related Object ID"
+msgstr "ID Objek Terkait"
+
+msgid "Call Log"
+msgstr "Log Panggilan"
+
+msgid "Call Logs"
+msgstr "Log Panggilan"
+
+msgid "How to configure your Caller ID"
+msgstr "Cara mengkonfigurasi ID Penelepon Anda"
+
+msgid "Log in to Twilio Console"
+msgstr "Masuk ke Konsol Twilio"
+
+msgid "Visit"
+msgstr "Mengunjungi"
+
+msgid "and sign in."
+msgstr "dan masuk."
+
+msgid "Go to Phone Numbers"
+msgstr "Buka Nomor Telepon"
+
+msgid "Navigate to Phone Numbers → Manage → Active Numbers."
+msgstr "Navigasikan ke Nomor Telepon → Kelola → Nomor Aktif."
+
+msgid "Copy your number"
+msgstr "Salin nomor Anda"
+
+msgid "Copy the number in E.164 format (e.g. +12125551234)."
+msgstr "Salin nomor dalam format E.164 (misal +12125551234)."
+
+msgid "Paste below"
+msgstr "Tempel di bawah"
+
+msgid "Enter the number as your Caller ID and click Save."
+msgstr "Masukkan nomor sebagai ID Penelepon Anda dan klik Simpan."
+
+msgid "Log in to SignalWire Dashboard"
+msgstr "Masuk ke Dasbor SignalWire"
+
+msgid "and sign in to your Space."
+msgstr "dan masuk ke Space Anda."
+
+msgid "Click Phone Numbers in the left menu → select an active number."
+msgstr "Klik Nomor Telepon di menu sebelah kiri → pilih nomor yang aktif."
+
+msgid "Log in to Telnyx Portal"
+msgstr "Masuk ke Portal Telnyx"
+
+msgid "Go to Numbers"
+msgstr "Pergi ke Angka"
+
+msgid "Click Numbers in the left menu → My Numbers."
+msgstr "Klik Nomor di menu sebelah kiri → Nomor Saya."
+
+msgid "Log in to Sinch Dashboard"
+msgstr "Masuk ke Dasbor Sinch"
+
+msgid "Navigate to Numbers → Your Virtual Numbers."
+msgstr "Navigasi ke Nomor → Nomor Virtual Anda."
+
+msgid "Log in to Exotel Dashboard"
+msgstr "Masuk ke Dasbor Exotel"
+
+msgid "Click Numbers → Exophone Numbers in the left menu."
+msgstr "Klik Nomor → Nomor Exophone di menu sebelah kiri."
+
+msgid "Copy your Exophone"
+msgstr "Salin Exophone Anda"
+
+msgid "Copy the outbound Exophone number assigned to your account."
+msgstr "Salin nomor Exophone keluar yang ditetapkan ke akun Anda."
+
+msgid ""
+"Mock provider is for testing only. Enter any phone number in E.164 format "
+"(e.g. +919XXXXXXXXX) as your Caller ID."
+msgstr ""
+"Penyedia tiruan hanya untuk pengujian.Masukkan nomor telepon apa pun dalam "
+"format E.164 (misalnya +919XXXXXXXXX) sebagai ID Penelepon Anda."
+
+msgid ""
+"Enter the outbound phone number assigned to your account by your provider in"
+" E.164 format (e.g. +12125551234)."
+msgstr ""
+"Masukkan nomor telepon keluar yang ditetapkan ke akun Anda oleh penyedia "
+"Anda dalam format E.164 (mis. +12125551234)."
+
+msgid "How to configure Twilio"
+msgstr "Cara mengkonfigurasi Twilio"
+
+msgid "Found on the Console home page under Account Info. Starts with AC."
+msgstr ""
+"Ditemukan di halaman beranda Konsol di bawah Info Akun.Dimulai dengan AC."
+
+msgid "Found on the same page. Click the eye icon to reveal it."
+msgstr "Ditemukan di halaman yang sama.Klik ikon mata untuk mengungkapkannya."
+
+msgid ""
+"Go to Phone Numbers → Active Numbers and copy your outbound number in E.164 "
+"format (e.g. +12125551234)."
+msgstr ""
+"Buka Nomor Telepon → Nomor Aktif dan salin nomor keluar Anda dalam format "
+"E.164 (misalnya +12125551234)."
+
+msgid ""
+"Optional. Used to validate signed webhook requests. Set one in your Twilio "
+"webhook config and paste the same value here."
+msgstr ""
+"Opsional.Digunakan untuk memvalidasi permintaan webhook yang "
+"ditandatangani.Tetapkan satu di konfigurasi webhook Twilio Anda dan "
+"tempelkan nilai yang sama di sini."
+
+msgid "How to configure SignalWire (Beta)"
+msgstr "Cara mengkonfigurasi SignalWire (Beta)"
+
+msgid "Log in to SignalWire"
+msgstr "Masuk ke SignalWire"
+
+msgid "and open your Space."
+msgstr "dan buka Ruang Anda."
+
+msgid ""
+"Go to Settings → General. Copy the Project ID (this is your Account SID)."
+msgstr "Buka Pengaturan → Umum.Salin ID Proyek (ini adalah SID Akun Anda)."
+
+msgid "Same Settings page — copy the Auth Token."
+msgstr "Halaman Pengaturan yang Sama — salin Token Auth."
+
+msgid ""
+"Your Space URL, e.g. https://yourspace.signalwire.com. Found in the browser "
+"address bar when inside your Space."
+msgstr ""
+"URL Space Anda, mis.https://yourspace.signalwire.com.Ditemukan di bilah "
+"alamat browser saat berada di dalam Space Anda."
+
+msgid "Go to Phone Numbers and copy your outbound number in E.164 format."
+msgstr "Buka Nomor Telepon dan salin nomor keluar Anda dalam format E.164."
+
+msgid ""
+"Optional. Set in your SignalWire webhook configuration and paste the same "
+"value here."
+msgstr ""
+"Opsional.Atur konfigurasi webhook SignalWire Anda dan tempelkan nilai yang "
+"sama di sini."
+
+msgid "How to configure Telnyx (Beta)"
+msgstr "Cara mengkonfigurasi Telnyx (Beta)"
+
+msgid "Go to Auth → API Keys → Create API Key. Copy the generated key."
+msgstr "Buka Auth → Kunci API → Buat Kunci API.Salin kunci yang dihasilkan."
+
+msgid "Connection ID"
+msgstr "ID Koneksi"
+
+msgid ""
+"Go to Voice → Connections → create or select a TeXML App. Copy the "
+"Connection ID from the app details."
+msgstr ""
+"Buka Suara → Koneksi → buat atau pilih Aplikasi TeXML.Salin ID Koneksi dari "
+"detail aplikasi."
+
+msgid "Go to Numbers → My Numbers and copy your number in E.164 format."
+msgstr "Buka Numbers → My Numbers dan salin nomor Anda dalam format E.164."
+
+msgid ""
+"Optional. Set in your Telnyx webhook URL settings and enter the same secret "
+"here."
+msgstr ""
+"Opsional.Atur di pengaturan URL webhook Telnyx Anda dan masukkan rahasia "
+"yang sama di sini."
+
+msgid "How to configure Sinch (Beta)"
+msgstr "Cara mengkonfigurasi Sinch (Beta)"
+
+msgid "Account SID (Project ID)"
+msgstr "SID Akun (ID Proyek)"
+
+msgid "Found at the top of the Dashboard under your project name."
+msgstr "Ditemukan di bagian atas Dasbor di bawah nama proyek Anda."
+
+msgid ""
+"Go to Settings → Access Keys → New Key. Copy the Key Secret (shown only "
+"once)."
+msgstr ""
+"Buka Pengaturan → Tombol Akses → Kunci Baru.Salin Rahasia Kunci (hanya "
+"ditampilkan sekali)."
+
+msgid ""
+"Go to Numbers → Your Virtual Numbers and copy your outbound number in E.164 "
+"format."
+msgstr ""
+"Buka Numbers → Your Virtual Numbers dan salin nomor keluar Anda dalam format"
+" E.164."
+
+msgid "How to configure Exotel (Beta)"
+msgstr "Cara mengkonfigurasi Exotel (Beta)"
+
+msgid "Account SID (SID)"
+msgstr "SID Akun (SID)"
+
+msgid "Go to Settings → API → Your SID. This is your Exotel account SID."
+msgstr "Buka Pengaturan → API → SID Anda.Ini adalah SID akun Exotel Anda."
+
+msgid "Same API Settings page — copy the API Token."
+msgstr "Halaman Pengaturan API yang sama — salin Token API."
+
+msgid ""
+"Go to Settings → API Keys → Create a new key and copy the generated API Key."
+msgstr ""
+"Buka Pengaturan → Kunci API → Buat kunci baru dan salin Kunci API yang "
+"dihasilkan."
+
+msgid "Go to Numbers → Exophone Numbers and copy your Exophone number."
+msgstr "Buka Numbers → Exophone Numbers dan salin nomor Exophone Anda."
+
+msgid "How to configure Mock (Testing)"
+msgstr "Cara mengkonfigurasi Mock (Pengujian)"
+
+msgid ""
+"Mock provider requires no real credentials. It simulates calls locally for "
+"development and testing."
+msgstr ""
+"Penyedia tiruan tidak memerlukan kredensial nyata.Ini mensimulasikan "
+"panggilan lokal untuk pengembangan dan pengujian."
+
+msgid "Auth Token"
+msgstr "Token Otentikasi"
+
+msgid "Enter any value (e.g. test-token)."
+msgstr "Masukkan nilai apa pun (misalnya token uji)."
+
+msgid "Enter any phone number in E.164 format (e.g. +919XXXXXXXXX)."
+msgstr ""
+"Masukkan nomor telepon apa pun dalam format E.164 (mis. +919XXXXXXXXX)."
+
+msgid "Caller ID"
+msgstr "ID penelepon"
+
+msgid "(optional)"
+msgstr "(opsional)"
+
+msgid "Your phone number (e.g. +919XXXXXXXXX)"
+msgstr "Nomor telepon Anda (misalnya +919XXXXXXXXX)"
+
+msgid ""
+"Leave blank to use the provider's default number set by your administrator."
+msgstr ""
+"Biarkan kosong untuk menggunakan nomor default penyedia yang ditetapkan oleh"
+" administrator Anda."
+
+msgid "Save"
+msgstr "Simpan"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Call Log Detail"
+msgstr "Detil Log Panggilan"
+
+msgid "From"
+msgstr "Dari"
+
+msgid "To"
+msgstr "Ke"
+
+msgid "Duration"
+msgstr "Lamanya"
+
+msgid "Started"
+msgstr "Dimulai"
+
+msgid "Ended"
+msgstr "Berakhir"
+
+msgid "Related"
+msgstr "Terkait"
+
+msgid "Recording"
+msgstr "Rekaman"
+
+msgid "via"
+msgstr "melalui"
+
+msgid "Hang Up"
+msgstr "Menggantung"
+
+msgid "Cancel Call"
+msgstr "Batalkan Panggilan"
+
+msgid "Call Accounts"
+msgstr "Akun Panggilan"
+
+msgid "Manage the calling accounts connected to your profile."
+msgstr "Kelola akun panggilan yang terhubung ke profil Anda."
+
+msgid "Call Integration Disabled"
+msgstr "Integrasi Panggilan Dinonaktifkan"
+
+msgid ""
+"Call integration is not currently enabled for your account. Please contact "
+"your administrator."
+msgstr ""
+"Integrasi panggilan saat ini tidak diaktifkan untuk akun Anda.Silakan "
+"hubungi administrator Anda."
+
+msgid "No Providers Configured"
+msgstr "Tidak Ada Penyedia yang Dikonfigurasi"
+
+msgid ""
+"Ask your administrator to add a provider under Settings → Integrations → "
+"Call Integration."
+msgstr ""
+"Minta administrator Anda untuk menambahkan penyedia di bawah Pengaturan → "
+"Integrasi → Integrasi Panggilan."
+
+msgid "Configuration saved."
+msgstr "Konfigurasi disimpan."
+
+msgid "Edit Configuration"
+msgstr "Sunting Konfigurasi"
+
+msgid "Call"
+msgstr "Panggilan"
+
+msgid "Make a Call"
+msgstr "Lakukan Panggilan"
+
+msgid "Phone Number"
+msgstr "Nomor telepon"
+
+msgid "+1234567890"
+msgstr "+1234567890"
+
+msgid "No phone number found on this record. Please enter one."
+msgstr ""
+"Tidak ada nomor telepon yang ditemukan pada catatan ini.Silakan masukkan "
+"satu."
+
+msgid "Select provider..."
+msgstr "Pilih penyedia..."
+
+msgid "Cancel"
+msgstr "Batal"
+
+msgid "Call Now"
+msgstr "Hubungi Sekarang"
+
+msgid "Connect a calling provider to make and log calls from Horilla."
+msgstr ""
+"Hubungkan penyedia panggilan untuk membuat dan mencatat panggilan dari "
+"Horilla."
+
+msgid "Call Settings"
+msgstr "Pengaturan Panggilan"
+
+msgid ""
+"Enable call integration to allow users to make and receive calls directly "
+"from any record."
+msgstr ""
+"Aktifkan integrasi panggilan untuk memungkinkan pengguna membuat dan "
+"menerima panggilan langsung dari rekaman mana pun."
+
+msgid "Enable Call Integration"
+msgstr "Aktifkan Integrasi Panggilan"
+
+msgid "Enable Call Integration?"
+msgstr "Aktifkan Integrasi Panggilan?"
+
+msgid "Disabled — users cannot make calls"
+msgstr "Disabled (Dinonaktifkan) — pengguna tidak dapat melakukan panggilan"
+
+msgid "Let users make & receive calls directly from any record."
+msgstr ""
+"Izinkan pengguna melakukan & menerima panggilan langsung dari catatan mana "
+"pun."
+
+msgid "Enabled — users can make and receive calls"
+msgstr "Diaktifkan — pengguna dapat membuat dan menerima panggilan"
+
+msgid "Disable Call Integration?"
+msgstr "Nonaktifkan Integrasi Panggilan?"
+
+msgid "Users will no longer be able to make calls from the CRM."
+msgstr "Pengguna tidak lagi dapat melakukan panggilan dari CRM."
+
+msgid "Choose who can initiate calls."
+msgstr "Pilih siapa yang dapat memulai panggilan."
+
+msgid "Set access to All Users?"
+msgstr "Setel akses ke Semua Pengguna?"
+
+msgid "Every user in the company will be able to initiate calls."
+msgstr "Setiap pengguna di perusahaan akan dapat melakukan panggilan."
+
+msgid "Every user in the company can use call integration."
+msgstr "Setiap pengguna di perusahaan dapat menggunakan integrasi panggilan."
+
+msgid "Switch to Specific Roles?"
+msgstr "Beralih ke Peran Tertentu?"
+
+msgid "Only users with selected roles will be able to make calls."
+msgstr "Hanya pengguna dengan peran terpilih yang dapat melakukan panggilan."
+
+msgid "Only users with selected roles can use call integration."
+msgstr ""
+"Hanya pengguna dengan peran terpilih yang dapat menggunakan integrasi "
+"panggilan."
+
+msgid "Click to add or remove roles."
+msgstr "Klik untuk menambah atau menghapus peran."
+
+msgid "role"
+msgstr "peran"
+
+msgid "roles"
+msgstr "peran"
+
+msgid "Switch to Specific Users?"
+msgstr "Beralih ke Pengguna Tertentu?"
+
+msgid "Only individually selected users will be able to make calls."
+msgstr ""
+"Hanya pengguna yang dipilih secara individual yang dapat melakukan "
+"panggilan."
+
+msgid "Only selected individual users can use call integration."
+msgstr ""
+"Hanya pengguna individu terpilih yang dapat menggunakan integrasi panggilan."
+
+msgid "Click to add or remove users."
+msgstr "Klik untuk menambah atau menghapus pengguna."
+
+msgid "user"
+msgstr "pengguna"
+
+msgid "users"
+msgstr "pengguna"
+
+msgid "Setup guides"
+msgstr "Panduan pengaturan"
+
+msgid "Add"
+msgstr "Tambah"
+
+msgid "Please enter a phone number to call."
+msgstr "Silakan masukkan nomor telepon untuk dihubungi."
+
+msgid "Provider not found."
+msgstr "Penyedia tidak ditemukan."
+
+msgid "Initiating…"
+msgstr "Memulai…"
+
+msgid "Ringing…"
+msgstr "Dering…"
+
+msgid "Call Ended"
+msgstr "Panggilan Berakhir"
+
+msgid "Call Declined"
+msgstr "Panggilan Ditolak"
+
+msgid "Call Failed"
+msgstr "Panggilan Gagal"
+
+msgid "Call Cancelled"
+msgstr "Panggilan Dibatalkan"
+
+msgid "Date & Time"
+msgstr "Tanggal & Waktu"
+
+msgid "Access Control"
+msgstr "Kontrol Akses"
+
+msgid "Providers"
+msgstr "Penyedia"
+
+msgid "Select Roles"
+msgstr "Pilih Peran"
+
+msgid "Select Users"
+msgstr "Pilih Pengguna"
+
+msgid "Roles with Call Access"
+msgstr "Peran dengan Akses Panggilan"
+
+msgid "No roles selected yet."
+msgstr "Belum ada peran yang dipilih."
+
+msgid "Users with Call Access"
+msgstr "Pengguna dengan Akses Panggilan"
+
+msgid "No users selected yet."
+msgstr "Belum ada pengguna yang dipilih."
+
+msgid "Provider not found"
+msgstr "Penyedia tidak ditemukan"
+
+msgid "Connection successful"
+msgstr "Koneksi berhasil"
+
+msgid "Connection failed"
+msgstr "Koneksi gagal"
+
+msgid "Provider status updated successfully."
+msgstr "Status penyedia berhasil diperbarui."

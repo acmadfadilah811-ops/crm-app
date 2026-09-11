@@ -1,0 +1,87 @@
+{% get_user_model_meta as user_meta %}
+<div
+    id="assign_to_users_container"
+    class="flex flex-col"
+    {% if assign_to_type != 'user' %}
+        style="display: none"
+    {% endif %}
+>
+    <div class="flex justify-between items-center mb-2">
+        <label for="id_assign_to_users" class="text-xs text-color-600 flex-1 min-w-0">
+            {% trans "Assign To Users" %}
+        </label>
+        <button
+            type="button"
+            class="user-picker-btn whitespace-nowrap flex items-center gap-1 text-xs text-primary-600 hover:text-primary-800 bg-primary-300 px-2 py-1 rounded transition-colors"
+            data-field-id="id_assign_to_users"
+            hx-get="{% url 'generics:user_picker_modal' user_meta.app_label user_meta.model_class_name %}?field_id=id_assign_to_users&field_label=Assign%20To%20Users&form_class=horilla_crm.leads.forms.AssignmentRuleConditionForm&field_name=assign_to_users"
+            hx-target="#horillaModalBox"
+            hx-swap="innerHTML"
+            hx-on:click="openhorillaModal()"
+            hx-push-url="false"
+        >
+            <svg width="11" height="11" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 5h14M6 10h8M9 15h2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            {% trans "Filter" %}
+        </button>
+    </div>
+    <div class="relative">
+        <select
+            name="assign_to_users"
+            id="id_assign_to_users"
+            class="select2-pagination w-full text-sm"
+            data-url="{% url 'generics:model_select2' user_meta.app_label user_meta.model_class_name %}"
+            data-placeholder="{% trans 'Select Assign To Users' %}"
+            multiple="multiple"
+            data-initial=""
+            data-field-name="assign_to_users"
+            data-form-class="horilla_crm.leads.forms.AssignmentRuleConditionForm"
+        >
+        </select>
+    </div>
+</div>
+
+<div
+    id="assign_to_roles_container"
+    class="flex flex-col"
+    hx-swap-oob="outerHTML"
+    {% if assign_to_type != 'role' %}
+        style="display: none"
+    {% endif %}
+>
+    <div class="flex justify-between items-center mb-2">
+        <label for="id_assign_to_roles" class="text-xs text-color-600 flex-1 min-w-0">
+            {% trans "Assign To Roles" %}
+        </label>
+        <button
+            type="button"
+            class="user-picker-btn whitespace-nowrap flex items-center gap-1 text-xs text-primary-600 hover:text-primary-800 bg-primary-300 px-2 py-1 rounded transition-colors"
+            data-field-id="id_assign_to_roles"
+            hx-get="{% url 'generics:user_picker_modal' 'core' 'role' %}?field_id=id_assign_to_roles&field_label=Assign%20To%20Roles&form_class=horilla_crm.leads.forms.AssignmentRuleConditionForm&field_name=assign_to_roles"
+            hx-target="#horillaModalBox"
+            hx-swap="innerHTML"
+            hx-on:click="openhorillaModal()"
+            hx-push-url="false"
+        >
+            <svg width="11" height="11" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 5h14M6 10h8M9 15h2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            {% trans "Filter" %}
+        </button>
+    </div>
+    <div class="relative">
+        <select
+            name="assign_to_roles"
+            id="id_assign_to_roles"
+            class="select2-pagination w-full text-sm"
+            data-url="{% url 'generics:model_select2' 'core' 'role' %}"
+            data-placeholder="{% trans 'Select Assign To Roles' %}"
+            multiple="multiple"
+            data-initial=""
+            data-field-name="assign_to_roles"
+            data-form-class="horilla_crm.leads.forms.AssignmentRuleConditionForm"
+        >
+        </select>
+    </div>
+</div>

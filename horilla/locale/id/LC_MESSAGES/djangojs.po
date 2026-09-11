@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-02 12:30+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Confirm"
+msgstr "Mengonfirmasi"
+
+msgid "Close"
+msgstr "Menutup"
+
+msgid "Cancel"
+msgstr "Membatalkan"
+
+msgid "Selected"
+msgstr "Terpilih"
+
+msgid "Do you want to download the excel file?"
+msgstr "Apakah Anda ingin mendownload file excelnya?"
+
+msgid "Do you want to download the template?"
+msgstr "Apakah Anda ingin mengunduh templatnya?"
+
+msgid "No rows are selected from the records."
+msgstr "Tidak ada baris yang dipilih dari rekaman."
+
+msgid "Do you really want to delete all the selected records?"
+msgstr "Apakah Anda benar-benar ingin menghapus semua rekaman yang dipilih?"
+
+msgid "Do you really want to archive all the selected records?"
+msgstr ""
+"Apakah Anda benar-benar ingin mengarsipkan semua catatan yang dipilih?"
+
+msgid "Do you really want to unarchive all the selected records?"
+msgstr ""
+"Apakah Anda benar-benar ingin membatalkan pengarsipan semua data yang "
+"dipilih?"
+
+msgid "Select an option"
+msgstr "Pilih sebuah opsi"
+
+msgid "Connection Lost"
+msgstr "Koneksi Hilang"
+
+msgid ""
+"We can't reach the server right now. Check your internet connection and try "
+"again."
+msgstr ""
+"Kami tidak dapat menjangkau server saat ini.Periksa koneksi internet Anda "
+"dan coba lagi."
+
+msgid "Offline"
+msgstr "Luring"
+
+msgid "Retry"
+msgstr "Mencoba kembali"
+
+msgid "Error code:"
+msgstr "Kode kesalahan:"
+
+msgid "No unread notifications"
+msgstr "Tidak ada notifikasi yang belum dibaca"
+
+msgid "No notifications"
+msgstr "Tidak ada pemberitahuan"

@@ -1,0 +1,452 @@
+# French translations for Horilla Reports module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Module for creating and customizing reports across all system modules."
+msgstr ""
+"Module permettant de creer et de personnaliser des rapports sur l'ensemble "
+"des modules du systeme."
+
+msgid ""
+"Seed default CRM reports and extend the engine to load them. Add an empty "
+"state for report filters and refresh report-detail navbar button styles. "
+"Store relative referer URLs with a full-nav fallback from report detail."
+msgstr ""
+
+msgid ""
+"Gate report export through export permissions and get_export_queryset / "
+"is_exportable_field helpers."
+msgstr ""
+
+msgid ""
+"Avoid RelatedObjectDoesNotExist in create-report form_invalid when related "
+"objects are missing."
+msgstr ""
+
+msgid ""
+"Re-raise HttpNotFound with exception chaining in report detail, export, and "
+"CRUD views to preserve context."
+msgstr ""
+
+msgid ""
+"Added pivot cell active state and filter badge with clear action. Fixed "
+"detail table filtering for empty and null pivot group values."
+msgstr ""
+
+msgid ""
+"Removed redundant fields attributes superseded by form_class on report CRUD "
+"views, standardized first-party import groups, and added docstrings for "
+"pylint compliance."
+msgstr ""
+"Suppression des attributs de champs redondants remplaces par form_class dans "
+"les vues CRUD des rapports, standardisation des imports et ajout de "
+"docstrings pour la conformite pylint."
+
+#, fuzzy
+#| msgid ""
+#| "Report forms aligned with HorillaModelForm layout: field_order and "
+#| "Meta.fields = \"__all__\" with Meta.exclude; folder and column HTMX "
+#| "unchanged."
+msgid ""
+"Report forms aligned with ModelForm layout: field_order and Meta.fields = "
+"\"__all__\" with Meta.exclude; folder and column HTMX unchanged."
+msgstr ""
+"Formulaires de rapports alignes sur le layout HorillaModelForm : field_order "
+"et Meta.fields avec Meta.exclude ; HTMX du dossier et de la colonne inchange."
+
+msgid ""
+"Release 1.10: reports ship under contrib with app label reports. Cross-app "
+"report wiring, ContentType references, namespaces, and registrations updated "
+"for the contrib naming scheme."
+msgstr ""
+"Version 1.10 : les rapports sont integres sous contrib avec le label "
+"d'application reports. Cablage des rapports inter-applications, references "
+"ContentType, espaces de noms et enregistrements mis a jour."
+
+msgid ""
+"Improved report compatibility with dashboard multi-widget support, enhanced "
+"chart_value_field handling, and minor stability improvements for report "
+"rendering and filter processing."
+msgstr ""
+"Amelioration de la compatibilite des rapports avec le support multi-widgets "
+"du tableau de bord, gestion amelioree de chart_value_field et ameliorations "
+"mineures de stabilite."
+
+msgid ""
+"Added support for advanced chart types including Treemap, Area charts, "
+"Heatmaps, Sankey diagrams, and Radar charts. Improved compatibility with the "
+"new visualization and analytics framework."
+msgstr ""
+"Ajout du support pour les types de graphiques avances incluant Treemap, "
+"graphiques en aire, cartes thermiques, diagrammes de Sankey et graphiques "
+"radar. Compatibilite amelioree avec le nouveau framework de visualisation."
+
+#, fuzzy
+#| msgid ""
+#| "Migrated from Django AppConfig to Horilla AppLauncher and and "
+#| "replacedDjango utilities with horilla.utils.decorators, "
+#| "horilla.utils.translation,and horilla.shortcuts where applicable."
+msgid ""
+"Migrated from AppConfig to AppLauncher and and replacedutilities with "
+"utils.decorators, utils.translation,and shortcuts where applicable."
+msgstr ""
+"Migration de Django AppConfig vers Horilla AppLauncher et remplacement des "
+"utilitaires Django par horilla.utils.decorators, horilla.utils.translation "
+"et horilla.shortcuts selon le cas."
+
+msgid "Reports"
+msgstr "Rapports"
+
+msgid "Analytics"
+msgstr "Analyses"
+
+msgid "Folder Name"
+msgstr "Nom du dossier"
+
+msgid "Folder"
+msgstr "Dossier"
+
+msgid "Folder Owner"
+msgstr "Proprietaire du dossier"
+
+msgid "Report Folder"
+msgstr "Dossier de rapport"
+
+msgid "Report Folders"
+msgstr "Dossiers de rapports"
+
+msgid "Column Chart"
+msgstr "Graphique en colonnes"
+
+msgid "Line Chart"
+msgstr "Graphique lineaire"
+
+msgid "Pie Chart"
+msgstr "Graphique en secteurs"
+
+msgid "Funnel"
+msgstr "Graphique en entonnoir"
+
+msgid "Bar Chart"
+msgstr "Graphique en barres"
+
+msgid "Donut"
+msgstr "Graphique en anneau"
+
+msgid "Stacked Vertical Chart"
+msgstr "Graphique vertical empile"
+
+msgid "Stacked Horizontal Chart"
+msgstr "Graphique horizontal empile"
+
+msgid "Scatter Chart"
+msgstr "Nuage de points"
+
+msgid "Treemap"
+msgstr "Carte arborescente"
+
+msgid "Area Chart"
+msgstr "Graphique en aire"
+
+msgid "Heatmap"
+msgstr "Carte thermique"
+
+msgid "Sankey"
+msgstr "Diagramme de Sankey"
+
+msgid "Radar Chart"
+msgstr "Graphique radar"
+
+msgid "Report Owner"
+msgstr "Proprietaire du rapport"
+
+msgid "Report Name"
+msgstr "Nom du rapport"
+
+msgid "Module"
+msgstr "Module"
+
+msgid "Chart Field"
+msgstr "Champ du graphique"
+
+msgid "Secondary Field"
+msgstr "Champ secondaire"
+
+msgid "Value Field (Y-axis)"
+msgstr "Champ de valeur (axe Y)"
+
+msgid "Report"
+msgstr "Rapport"
+
+msgid "breadcrumb"
+msgstr ""
+
+msgid " All Reports"
+msgstr " Tous les rapports"
+
+msgid "Folders"
+msgstr "Dossiers"
+
+msgid "All Folders"
+msgstr "Tous les dossiers"
+
+msgid "Favourites"
+msgstr "Favoris"
+
+msgid "All Reports"
+msgstr "Tous les rapports"
+
+msgid "You are already selected this field"
+msgstr "Ce champ est deja selectionne"
+
+msgid "No matching columns found"
+msgstr "Aucune colonne correspondante trouvee"
+
+msgid "No fields found matching your search"
+msgstr "Aucun champ ne correspond a votre recherche"
+
+msgid "R"
+msgstr "R"
+
+msgid "C"
+msgstr "C"
+
+msgid "A"
+msgstr "A"
+
+msgid "Summary Report"
+msgstr "Rapport recapitulatif"
+
+msgid "Total Count"
+msgstr "Nombre total"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "Subtotal"
+msgstr "Sous-total"
+
+msgid "Grand Total"
+msgstr "Total general"
+
+msgid "Count"
+msgstr "Nombre"
+
+msgid "Overall Grand Total"
+msgstr "Total general global"
+
+msgid "Error"
+msgstr "Erreur"
+
+msgid "Configuration not supported"
+msgstr "Configuration non prise en charge"
+
+msgid "Columns"
+msgstr "Colonnes"
+
+msgid "Grouping"
+msgstr "Regroupement"
+
+msgid "Filter"
+msgstr "Filtre"
+
+msgid "Search Columns"
+msgstr "Rechercher des colonnes"
+
+msgid "Search"
+msgstr "Rechercher"
+
+msgid "Selected Columns"
+msgstr "Colonnes selectionnees"
+
+msgid "Grouped Columns"
+msgstr "Colonnes groupees"
+
+msgid "Row Groups"
+msgstr "Groupes de lignes"
+
+msgid "Column Groups"
+msgstr "Groupes de colonnes"
+
+msgid "Aggregate Columns"
+msgstr "Colonnes agregees"
+
+msgid "Sum"
+msgstr "Somme"
+
+msgid "Avg"
+msgstr "Moyenne"
+
+msgid "Max"
+msgstr "Maximum"
+
+msgid "Min"
+msgstr "Minimum"
+
+msgid "Seacrch"
+msgstr "Rechercher"
+
+msgid "Apply Filters"
+msgstr "Appliquer les filtres"
+
+msgid "value1,value2"
+msgstr ""
+
+msgid "Select..."
+msgstr "Selectionner..."
+
+msgid "No filters applied. Add a filter to refine your results."
+msgstr ""
+
+msgid "Report:"
+msgstr "Rapport :"
+
+msgid "Refresh"
+msgstr "Actualiser"
+
+msgid "Save"
+msgstr "Enregistrer"
+
+msgid "Discard Changes"
+msgstr "Annuler les modifications"
+
+msgid "Close"
+msgstr "Fermer"
+
+msgid "Close Panel"
+msgstr "Fermer le panneau"
+
+msgid "Edit Report"
+msgstr "Modifier le rapport"
+
+msgid "Edit"
+msgstr "Modifier"
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "You have unsaved changes. Click"
+msgstr "Vous avez des modifications non enregistrees. Cliquez sur"
+
+msgid "to keep your changes or"
+msgstr "pour conserver vos modifications ou"
+
+msgid "Discard"
+msgstr "Annuler"
+
+msgid "to revert."
+msgstr "pour revenir en arriere."
+
+msgid "Detail table"
+msgstr "Tableau detaille"
+
+msgid "Filtered by pivot:"
+msgstr "Filtre par pivot :"
+
+msgid "Clear pivot filter"
+msgstr "Effacer le filtre pivot"
+
+msgid "Pivot table"
+msgstr "Tableau croise dynamique"
+
+msgid "Report Chart"
+msgstr "Graphique du rapport"
+
+msgid "Change Chart"
+msgstr "Changer le graphique"
+
+msgid "Export as PDF"
+msgstr "Exporter en PDF"
+
+msgid "Export as PNG"
+msgstr "Exporter en PNG"
+
+msgid "Add to Dashboard"
+msgstr "Ajouter au tableau de bord"
+
+msgid "Record Count:"
+msgstr "Nombre d'enregistrements :"
+
+msgid "Favourite"
+msgstr "Favori"
+
+msgid "Move"
+msgstr "Deplacer"
+
+msgid "Delete"
+msgstr "Supprimer"
+
+msgid "Select Default Reports"
+msgstr "Selectionner les rapports par defaut"
+
+msgid "Select All"
+msgstr "Tout selectionner"
+
+msgid "Create"
+msgstr "Creer"
+
+msgid "No reports found."
+msgstr "Aucun rapport trouve."
+
+msgid "New Report"
+msgstr "Nouveau rapport"
+
+msgid "Load Default Reports"
+msgstr "Charger les rapports par defaut"
+
+msgid "New Folder"
+msgstr "Nouveau dossier"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Average"
+msgstr "Moyenne"
+
+msgid "Minimum"
+msgstr "Minimum"
+
+msgid "Maximum"
+msgstr "Maximum"
+
+msgid "Record count"
+msgstr "Nombre d'enregistrements"
+
+#, python-format
+msgid "%(metric)s of %(field)s"
+msgstr "%(metric)s de %(field)s"
+
+msgid "Chart type"
+msgstr "Type de graphique"
+
+msgid "X-axis (Group by)"
+msgstr "Axe X (Regrouper par)"
+
+msgid "Stack by (second group)"
+msgstr "Empiler par (deuxieme groupe)"
+
+msgid "Y-axis (Value)"
+msgstr "Axe Y (Valeur)"
+
+msgid "Invalid field '{}'. This field does not exist on the model."
+msgstr "Champ '{}' invalide. Ce champ n'existe pas dans le modele."
+
+msgid "Invalid filter value: {}"
+msgstr "Valeur de filtre invalide : {}"

@@ -1,0 +1,19 @@
+<li data-company-id="{{ company_data.company_id }}">
+    <a href="javascript:void(0);">
+        <div class="member-view-box bg-primary-400 border border-primary-500">
+            <div class="member-header whitespace-nowrap font-bold text-primary-600">
+                {{ company_data.company_name }}
+            </div>
+            <div class="member-footer">
+                <div class="name">{{ company_data.roles_count }} {% trans "roles" %}</div>
+            </div>
+        </div>
+    </a>
+    {% if company_data.roles %}
+        <ul class="level-1">
+            {% for role in company_data.roles %}
+                {% include "role/role_node.html" with role=role level=1 %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+</li>

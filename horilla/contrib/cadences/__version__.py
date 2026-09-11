@@ -1,0 +1,53 @@
+"""
+Version information for the cadences app
+"""
+
+# First party imports (Horilla)
+from horilla.utils.translation import gettext_lazy as _
+
+__version__ = "1.11.5"
+__module_name__ = "Cadences"
+__release_date__ = ""
+__description__ = _(
+    "Module for managing cadence workflows and runtime activity sequences."
+)
+__icon__ = "cadences/assets/icons/cadence.svg"
+
+__1_11_5__ = _(
+    "Use the shared is_active toggle column partial. Derive list column labels from model "
+    "verbose_name; wrap remaining form strings with gettext."
+)
+
+__1_11_4__ = _(
+    "Decouple the Cadence tab from generics/CRM into a cadences extension. "
+    "Apply runtime viewport fit on the cadence settings view."
+)
+
+__1_11_3__ = _(
+    "Stop rendering blank cards for branch parents without a continuation. "
+    "Extend the New Lead Outreach demo cadence with a multi-stage follow-up flow."
+)
+
+__1_11_2__ = _(
+    "Standardized exception chaining in cadence forms to preserve root-cause tracebacks."
+)
+
+__1_11_1__ = _(
+    "Migrated signal and timezone imports to the horilla shims, standardized first-party "
+    "import groups, and added class and method docstrings for pylint compliance."
+)
+
+__1_10_1__ = _(
+    "Cadence forms aligned with HorillaModelForm layout: field_order, "
+    'Meta.fields = "__all__", Meta.exclude, and keep_on_form; save logic and HTMX unchanged.'
+)
+
+__1_10_0__ = _(
+    "Release 1.10: cadences ship under contrib with app label cadences. "
+    "Signals, registrations, URLs, and static paths updated to match the new contrib layout."
+)
+
+__1_0_0__ = _(
+    "Implemented cadence signals for runtime activities, enabling "
+    "automated cadence-driven workflow execution and activity tracking."
+)

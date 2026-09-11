@@ -1,0 +1,32 @@
+{% has_perm "leads.change_leadstatus" as change_leadstatus %}
+
+<div class="flex items-center justify-center">
+    {% if not change_leadstatus %}
+        <input
+            type="checkbox"
+            id="final-list-{{ instance.id }}"
+            name="is-final-{{ instance.id }}"
+            class="w-4 h-4 bg-[#E9EDF7] rounded-sm accent-[#e54f38] opacity-50 cursor-not-allowed"
+            {% if instance.is_final %}
+                checked
+            {% endif %}
+            disabled
+        >
+    {% else %}
+        <input
+            type="checkbox"
+            id="final-list-{{ instance.id }}"
+            name="is-final-{{ instance.id }}"
+            class="w-4 h-4 bg-[#E9EDF7] rounded-sm accent-[#e54f38]"
+            {% if instance.is_final %}
+                checked
+            {% endif %}
+            value="{{ instance.id }}"
+            hx-post="{% url 'leads:change_lead_stage_final' instance.id %}"
+            hx-trigger="confirmed"
+            hx-target="#final-list-{{ instance.id }}"
+            hx-swap="innerHTML"
+            hx-on:click="hxConfirm(this, '{% trans "Are you sure you want to change the final stage?" %}')"
+        >
+    {% endif %}
+</div>

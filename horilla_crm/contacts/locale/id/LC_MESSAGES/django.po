@@ -1,0 +1,208 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Contacts"
+msgstr "Kontak"
+
+msgid ""
+"Invalid parent contact. This relationship would create a circular hierarchy."
+msgstr ""
+"Kontak orang tua tidak valid.Hubungan ini akan menciptakan hierarki "
+"melingkar."
+
+msgid "Select Contact"
+msgstr "Pilih Kontak"
+
+msgid "Select the contact to assign as a child contact."
+msgstr "Pilih kontak yang akan ditetapkan sebagai kontak anak."
+
+msgid "Please select contact."
+msgstr "Silakan pilih kontak."
+
+msgid "This contact already has a parent contact assigned."
+msgstr "Kontak ini sudah mempunyai kontak induk yang ditetapkan."
+
+msgid "An contact cannot be its own parent."
+msgstr "Kontak tidak bisa menjadi induknya sendiri."
+
+msgid "Please select a valid contact."
+msgstr "Silakan pilih kontak yang valid."
+
+msgid "Web"
+msgstr "jaring"
+
+msgid "Phone Inquiry"
+msgstr "Pertanyaan Telepon"
+
+msgid "Partner Referral"
+msgstr "Referensi Mitra"
+
+msgid "Purchased List"
+msgstr "Daftar yang Dibeli"
+
+msgid "Other"
+msgstr "Lainnya"
+
+msgid "Contact Owner"
+msgstr "Hubungi Pemilik"
+
+msgid "Title"
+msgstr "Judul"
+
+msgid "First Name"
+msgstr "Nama depan"
+
+msgid "Last Name"
+msgstr "Nama Belakang"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Contact Number"
+msgstr "Nomor Kontak"
+
+msgid "Secondary Contact Number"
+msgstr "Nomor Kontak Sekunder"
+
+msgid "City"
+msgstr "Kota"
+
+msgid "State"
+msgstr "Negara"
+
+msgid "Country"
+msgstr "Negara"
+
+msgid "Zip"
+msgstr "Ritsleting"
+
+msgid "Parent Contact"
+msgstr "Kontak Orang Tua"
+
+msgid "Contact Source"
+msgstr "Sumber Kontak"
+
+msgid "Description"
+msgstr "Keterangan"
+
+msgid "Birth Date"
+msgstr "Tanggal Lahir"
+
+msgid "Assistant"
+msgstr "Asisten"
+
+msgid "Assistant Contact Number"
+msgstr "Nomor Kontak Asisten"
+
+msgid "Languages"
+msgstr "Bahasa"
+
+msgid "Is Primary"
+msgstr "Apakah Pratama"
+
+msgid "Contact Score"
+msgstr "Skor Kontak"
+
+msgid "Contact"
+msgstr "Kontak"
+
+msgid "Account"
+msgstr "Akun"
+
+msgid "Role"
+msgstr "Peran"
+
+msgid "Contact Account Relationship"
+msgstr "Hubungi Hubungan Akun"
+
+msgid "Contact Account Relationships"
+msgstr "Hubungi Hubungan Akun"
+
+msgid "contact Hierarchy"
+msgstr "hubungi Hirarki"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Contact Information"
+msgstr "Informasi Kontak"
+
+msgid "Address Information"
+msgstr "Informasi Alamat"
+
+msgid "Additional Information"
+msgstr "Informasi Tambahan"
+
+msgid "Change Owner"
+msgstr "Ganti Pemilik"
+
+msgid "Add Account Contact Relationships"
+msgstr "Tambahkan Hubungan Kontak Akun"
+
+msgid "Add Child Contact"
+msgstr "Tambahkan Kontak Anak"
+
+msgid "You must be logged in to perform this action."
+msgstr "Anda harus masuk untuk melakukan tindakan ini."
+
+msgid "No parent contact specified in the request."
+msgstr "Tidak ada kontak orang tua yang ditentukan dalam permintaan."
+
+msgid "A contact cannot be its own parent."
+msgstr "Kontak tidak bisa menjadi induknya sendiri."
+
+msgid "This contact already has a parent contact."
+msgstr "Kontak ini sudah memiliki kontak induk."
+
+msgid "Child contact assigned successfully."
+msgstr "Kontak anak berhasil ditetapkan."
+
+msgid "Invalid parent contact ID format."
+msgstr "Format ID kontak orang tua tidak valid."
+
+msgid "You don't have permission to perform this action."
+msgstr "Anda tidak memiliki izin untuk melakukan tindakan ini."
+
+msgid "This contact doesn't have a parent contact."
+msgstr "Kontak ini tidak memiliki kontak orang tua."
+
+msgid "An error occurred while removing the child contact."
+msgstr "Terjadi kesalahan saat menghapus kontak anak."
+
+msgid "Edit"
+msgstr "Sunting"
+
+msgid "Duplicate"
+msgstr "Duplikat"
+
+msgid "Related Campaigns"
+msgstr "Kampanye Terkait"
+
+msgid "Related Opportunities"
+msgstr "Peluang Terkait"
+
+msgid "Related Accounts"
+msgstr "Akun Terkait"
+
+msgid "Child Contacts"
+msgstr "Kontak Anak"
+
+msgid "View Hierarchy"
+msgstr "Lihat Hirarki"

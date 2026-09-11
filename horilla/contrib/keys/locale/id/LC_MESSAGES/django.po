@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Module providing customizable keyboard shortcuts."
+msgstr "Modul menyediakan pintasan keyboard yang dapat disesuaikan."
+
+msgid ""
+"Tie shortcut keys to the user's company with all_objects lookups and sync "
+"company on user company change so shortcuts stay visible across active "
+"company switches."
+msgstr ""
+"Ikat tombol pintasan ke perusahaan pengguna dengan pencarian all_objects dan"
+" sinkronkan perusahaan pada perubahan perusahaan pengguna sehingga pintasan "
+"tetap terlihat di seluruh peralihan perusahaan yang aktif."
+
+msgid ""
+"Migrated signal and timezone imports to the horilla shims, standardized "
+"first-party import groups, and added docstrings for pylint compliance; "
+"shortcuts unchanged."
+msgstr ""
+"Memigrasikan impor sinyal dan zona waktu ke horilla shim, menstandardisasi "
+"grup impor pihak pertama, dan menambahkan dokumen untuk kepatuhan "
+"pylint;pintasan tidak berubah."
+
+msgid ""
+"Release 1.10: keyboard shortcuts ship under contrib with app label keys. "
+"URLs, registrations, shortcuts metadata, templates, and static paths updated"
+" from the legacy keys package layout."
+msgstr ""
+"Rilis 1.10: pintasan keyboard dikirimkan di bawah kontrib dengan tombol "
+"label aplikasi.URL, pendaftaran, metadata pintasan, templat, dan jalur "
+"statis diperbarui dari tata letak paket kunci lama."
+
+msgid ""
+"Migrated from Django AppConfig to Horilla AppLauncher and replaced "
+"Djangoutilities with horilla.utils.decorators, horilla.utils.translation, "
+"and horilla.shortcuts where applicable."
+msgstr ""
+"Bermigrasi dari Django AppConfig ke Horilla AppLauncher dan mengganti "
+"Djangoutilities dengan horilla.utils.decorators, horilla.utils.translation, "
+"dan horilla.shortcuts jika berlaku."
+
+msgid "Keyboard Shortcuts"
+msgstr "Pintasan Papan Ketik"
+
+msgid "Command Key"
+msgstr "Kunci Perintah"
+
+msgid "Short Keys"
+msgstr "Tombol Pendek"
+
+msgid "User"
+msgstr "Pengguna"
+
+msgid "Page"
+msgstr "Halaman"
+
+msgid "Key"
+msgstr "Kunci"
+
+msgid "Shortcut Key"
+msgstr "Tombol Pintasan"
+
+msgid "Shortcut Keys"
+msgstr "Tombol Pintasan"
+
+msgid "Home"
+msgstr "Rumah"
+
+msgid "Profile"
+msgstr "Profil"
+
+msgid "Users"
+msgstr "Pengguna"
+
+msgid "Branches"
+msgstr "Cabang"
+
+msgid "Regional & Formatting"
+msgstr "Regional & Pemformatan"
+
+msgid "Login History"
+msgstr "Riwayat Masuk"
+
+msgid "Holiday"
+msgstr "Hari libur"
+
+msgid "Dashboards"
+msgstr "Dasbor"
+
+msgid "Reports"
+msgstr "Laporan"
+
+msgid "Calendar"
+msgstr "Kalender"
+
+msgid "Activities"
+msgstr "Kegiatan"
+
+msgid "Create keyboard shortcuts for quick access to actions."
+msgstr "Buat pintasan keyboard untuk akses cepat ke tindakan."
+
+msgid "Short Key"
+msgstr "Kunci Pendek"
+
+msgid "The requested data does not exist."
+msgstr "Data yang diminta tidak ada."

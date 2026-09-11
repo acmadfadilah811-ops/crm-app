@@ -1,0 +1,19 @@
+<div
+    id="do_this_value_container"
+    class="{% if show_field %}flex flex-col{% else %}hidden{% endif %}"
+    {% if not show_field %}
+        style="display: none"
+    {% endif %}
+>
+    {% if show_field %}
+        <div class="flex justify-between mb-1 w-full">
+            <label for="{{ form.do_this_value.id_for_label }}" class="text-xs text-color-600">
+                {{ form.do_this_value.label }}
+                {% if form.do_this_value.field.required %}<span class="text-red-500">*</span>{% endif %}
+            </label>
+        </div>
+        <div class="relative">
+            {{ form.do_this_value }}
+        </div>
+    {% endif %}
+</div>

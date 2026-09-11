@@ -1,0 +1,139 @@
+# Arabic translations for Horilla Theme module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+msgid "Module providing customizable color themes and UI personalization."
+msgstr "وحدة توفر ألوان سمات قابلة للتخصيص وتخصيص واجهة المستخدم."
+
+msgid ""
+"Migrated signal imports to the horilla.db.models.signals shim, standardized "
+"first-party import groups, and added docstrings for pylint compliance; theme "
+"behavior unchanged."
+msgstr ""
+"تم ترحيل استيرادات الإشارات إلى shim الخاص بـ horilla.db.models.signals، "
+"وتوحيد مجموعات الاستيراد الداخلية، وإضافة توثيق docstrings لتوافق pylint؛ "
+"سلوك السمة دون تغيير."
+
+msgid ""
+"Release 1.10: theme management ships under contrib with app label theme. "
+"Static assets served under theme/ URLs, signals aligned to the core contrib "
+"app, and default-theme seeding coordinated with contrib post_migrate "
+"semantics."
+msgstr ""
+"الإصدار 1.10: تُشحن إدارة السمات ضمن contrib بتسمية تطبيق theme. يتم تقديم "
+"الأصول الثابتة ضمن URLs للسمة، وتم توافق الإشارات مع تطبيق contrib الأساسي."
+
+msgid ""
+"Improved dynamic Tailwind theme integration with adoption of primary_600 for "
+"dynamic theme coloring, improved fallback handling for theme variables, and "
+"brand-aligned icon color updates across modules."
+msgstr ""
+"تحسين تكامل سمة Tailwind الديناميكية مع اعتماد primary_600 لتلوين السمة "
+"الديناميكية، وتحسين معالجة الحلول البديلة لمتغيرات السمة، وتحديثات لون "
+"الأيقونات عبر الوحدات."
+
+msgid ""
+"Introduced fully dynamic Theme Manager with per-company theme customization, "
+"global default theme support, dynamic Tailwind config injection, and surface "
+"color system for advanced UI backgrounds."
+msgstr ""
+"إدخال مدير سمات ديناميكي كامل مع تخصيص السمة لكل شركة ودعم السمة الافتراضية "
+"العالمية وحقن إعداد Tailwind الديناميكي ونظام ألوان السطح للخلفيات المتقدمة."
+
+msgid "Theme Manager"
+msgstr "مدير السمات"
+
+msgid "Name"
+msgstr "الاسم"
+
+msgid "Description"
+msgstr "الوصف"
+
+msgid "Is Default"
+msgstr "افتراضي"
+
+msgid ""
+"Set as default theme for login page.            Only one theme can be "
+"default across all companies."
+msgstr ""
+"تعيين كسمة افتراضية لصفحة تسجيل الدخول. يمكن أن تكون سمة واحدة فقط افتراضية "
+"عبر جميع الشركات."
+
+msgid "Color Theme"
+msgstr "سمة الألوان"
+
+msgid "Color Themes"
+msgstr "سمات الألوان"
+
+msgid "Theme"
+msgstr "السمة"
+
+msgid "Company Theme"
+msgstr "سمة الشركة"
+
+msgid "Company Themes"
+msgstr "سمات الشركة"
+
+msgid "Active"
+msgstr "نشطة"
+
+msgid "Remove as default"
+msgstr "إزالة كافتراضية"
+
+msgid "Default Theme"
+msgstr "السمة الافتراضية"
+
+msgid "Set as default for login page"
+msgstr "تعيين كافتراضية لصفحة تسجيل الدخول"
+
+msgid "Set as Default"
+msgstr "تعيين كافتراضية"
+
+msgid "No records"
+msgstr ""
+
+msgid "No themes available"
+msgstr "لا توجد سمات متاحة"
+
+msgid "Theme Management"
+msgstr "إدارة السمات"
+
+msgid "Select a theme to customize the appearance of your application"
+msgstr "اختر سمة لتخصيص مظهر تطبيقك"
+
+msgid "Theme ID is required"
+msgstr "معرّف السمة مطلوب"
+
+msgid "No active company found"
+msgstr "لم يتم العثور على شركة نشطة"
+
+msgid "Theme changed successfully and set as default for login page"
+msgstr "تم تغيير السمة بنجاح وتعيينها كافتراضية لصفحة تسجيل الدخول"
+
+msgid "Theme changed successfully"
+msgstr "تم تغيير السمة بنجاح"
+
+msgid "Theme removed as default for login page"
+msgstr "تمت إزالة السمة كافتراضية لصفحة تسجيل الدخول"
+
+msgid "Theme set as default for login page"
+msgstr "تم تعيين السمة كافتراضية لصفحة تسجيل الدخول"
+
+#, python-format
+msgid "An error occurred while setting the default theme: %(error)s"
+msgstr "حدث خطأ أثناء تعيين السمة الافتراضية: %(error)s"

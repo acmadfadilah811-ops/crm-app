@@ -1,0 +1,436 @@
+# German translations for Horilla Activity module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid ""
+"Module for tracking and managing activities such as tasks,calls, events, and "
+"emails."
+msgstr ""
+"Modul zur Nachverfolgung und Verwaltung von Aktivitäten wie Aufgaben, "
+"Anrufen, Ereignissen und E-Mails."
+
+msgid ""
+"Prioritize the Duplicate list action on global and tab activity list views."
+msgstr ""
+
+msgid ""
+"Fix TaskCreateForm refresh targeting #TaskTab so new tasks appear without a "
+"full reload; enable table_auto on activity tab list views so sticky Actions "
+"columns are not clipped. Meeting create: harden invite permissions, "
+"timezones, and Meet link handling. Clear email suggestions on blur for "
+"activity and meeting forms."
+msgstr ""
+
+msgid ""
+"Registered Activity for export_data. Improved activity tab hover styles and "
+"replaced fixed viewport list widths with flex-based layout."
+msgstr ""
+
+msgid ""
+"Optional Calls integration without a hard dependency: calls_enabled and "
+"get_phone_number template tags gate Call Now in the activity tab when the "
+"Calls app is installed. CallListView excludes telephony-purpose logs from "
+"the manual call history list. Activity create form excludes "
+"call_duration_display."
+msgstr ""
+
+msgid ""
+"Simplified mail visibility so can_send_mail and can_view_mail follow parent-"
+"record change and view access. Activity tab Edit/Delete actions and email "
+"Send/Cancel/Snooze actions are gated on parent-record change/delete access "
+"with subordinate-aware ownership via get_allowed_user_ids()."
+msgstr ""
+
+msgid ""
+"Constrained activity tab list table height for consistent scrolling. Added "
+"cursor-pointer to Pending and Completed Calls sub-tabs."
+msgstr ""
+
+msgid ""
+"Disabled base owner_filtration on EmailListView. Centralised get_main_url in "
+"the list-view mixin and fixed tab-calls typo in status update and activity "
+"tab template. Task and activity creates now navigate directly to the correct "
+"tab instead of reverting to the first tab after reload; aligned task-create "
+"reload trigger with project-wide jQuery convention. Fixed delete and bulk-"
+"action views that reverted to the wrong tab."
+msgstr ""
+
+msgid ""
+"Fixed call duration field ordering and removed redundant validation; history "
+"tab now correctly identifies CallLog entries and displays call status. Use "
+"load_branding() TITLE as the fallback company name in meeting invitation "
+"emails. Allow ActivityView for users with view_own_activity as well as "
+"view_activity. Added meeting provider choices (Zoom, Google Meet, Microsoft "
+"Teams) on the Activity model."
+msgstr ""
+
+#, fuzzy
+#| msgid ""
+#| "Email-tab permissions corrected to add/view/change/delete own-record "
+#| "checks. Removed redundant fields attributes from create-view forms "
+#| "superseded by form_class. Adopted the horilla.utils.timezone shim, "
+#| "standardized first-party imports, and added class and method docstrings "
+#| "for pylint compliance."
+msgid ""
+"Email-tab permissions corrected to add/view/change/delete own-record checks. "
+"Removed redundant fields attributes from create-view forms superseded by "
+"form_class. Adopted the utils.timezone shim, standardized first-party "
+"imports, and added class and method docstrings for pylint compliance."
+msgstr ""
+"Berechtigungen des E-Mail-Tabs wurden korrigiert, um eigene Datensätze "
+"hinzuzufügen/anzuzeigen/zu ändern/zu löschen. Redundante Feldattribute aus "
+"Erstellungsformularen entfernt und durch form_class ersetzt."
+
+#, fuzzy
+#| msgid ""
+#| "Activity forms aligned with HorillaModelForm layout: field_order, "
+#| "Meta.fields = \"__all__\", and Meta.exclude; save logic and HTMX behavior "
+#| "unchanged."
+msgid ""
+"Activity forms aligned with ModelForm layout: field_order, Meta.fields = "
+"\"__all__\", and Meta.exclude; save logic and HTMX behavior unchanged."
+msgstr ""
+"Aktivitätsformulare wurden am HorillaModelForm-Layout ausgerichtet: "
+"field_order, Meta.fields und Meta.exclude; Speicherlogik und HTMX-Verhalten "
+"unverändert."
+
+msgid ""
+"Meeting integration in activities: schedule meetings from activities, send "
+"invites and reminders, and display generated Zoom/Teams meeting links on "
+"activity records."
+msgstr ""
+"Besprechungsintegration in Aktivitäten: Besprechungen aus Aktivitäten "
+"planen, Einladungen und Erinnerungen senden und generierte Zoom/Teams-"
+"Besprechungslinks in Aktivitätsdatensätzen anzeigen."
+
+msgid ""
+"Release 1.10: activity ships under contrib with app label activity. "
+"AppLauncher, imports, namespaces, registrations, templates, and metadata "
+"references updated from the legacy activity package name to the contrib "
+"layout."
+msgstr ""
+"Version 1.10: Aktivität wird unter contrib mit dem App-Label activity "
+"ausgeliefert. AppLauncher, Importe, Namespaces, Registrierungen, Vorlagen "
+"und Metadatenreferenzen wurden aktualisiert."
+
+msgid ""
+"Reduced redundant history entries, improved Many-to-Many field "
+"representation, and added cleaner labels for mail events and activity "
+"creation with new template filters for better rendering."
+msgstr ""
+"Redundante Verlaufseinträge reduziert, Many-to-Many-Felddarstellung "
+"verbessert und klarere Bezeichnungen für Mail-Ereignisse und "
+"Aktivitätserstellung mit neuen Vorlagenfiltern hinzugefügt."
+
+msgid ""
+"Improved activity workflow behavior. The Pending tab now shows all "
+"incomplete activitiesregardless of status label, and activity type "
+"configuration handling was enhanced for improved workflow accuracy."
+msgstr ""
+"Verbessertes Aktivitäts-Workflow-Verhalten. Der Tab 'Ausstehend' zeigt nun "
+"alle unvollständigen Aktivitäten unabhängig vom Statuslabel an."
+
+#, fuzzy
+#| msgid ""
+#| "Migrated from Django AppConfig to Horilla AppLauncher and replaced Django "
+#| "utilities withhorilla.utils.decorators, horilla.utils.translation, and "
+#| "horilla.shortcuts where applicable."
+msgid ""
+"Migrated from AppConfig to AppLauncher and replaced utilities "
+"withutils.decorators, utils.translation, and shortcuts where applicable."
+msgstr ""
+"Migration von Django AppConfig zu Horilla AppLauncher und Ersatz der Django-"
+"Hilfsprogramme durch horilla.utils.decorators, horilla.utils.translation und "
+"horilla.shortcuts wo anwendbar."
+
+msgid "Activity"
+msgstr "Aktivität"
+
+msgid "Meeting Provider"
+msgstr "Besprechungsanbieter"
+
+msgid "Activities"
+msgstr "Aktivitäten"
+
+msgid "Event"
+msgstr "Ereignis"
+
+msgid "Meeting"
+msgstr "Besprechung"
+
+msgid "Task"
+msgstr "Aufgabe"
+
+msgid "Log Call"
+msgstr "Anruf protokollieren"
+
+msgid "Not Started"
+msgstr "Nicht begonnen"
+
+msgid "Scheduled"
+msgstr "Geplant"
+
+msgid "In Progress"
+msgstr "In Bearbeitung"
+
+msgid "Waiting on Someone"
+msgstr "Warten auf jemanden"
+
+msgid "Completed"
+msgstr "Abgeschlossen"
+
+msgid "Cancelled"
+msgstr "Abgebrochen"
+
+msgid "Deferred"
+msgstr "Zurückgestellt"
+
+msgid "High"
+msgstr "Hoch"
+
+msgid "Medium"
+msgstr "Mittel"
+
+msgid "Low"
+msgstr "Niedrig"
+
+msgid "Inbound"
+msgstr "Eingehend"
+
+msgid "Outbound"
+msgstr "Ausgehend"
+
+msgid "Zoom"
+msgstr "Zoom"
+
+msgid "Google Meet"
+msgstr "Google Meet"
+
+msgid "Microsoft Teams"
+msgstr "Microsoft Teams"
+
+msgid "Subject"
+msgstr "Betreff"
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "Activity Type"
+msgstr "Aktivitätstyp"
+
+msgid "Related Content Type"
+msgstr "Zugehöriger Inhaltstyp"
+
+msgid "Related To"
+msgstr "Bezogen auf"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Start Date"
+msgstr "Startdatum"
+
+msgid "End Date"
+msgstr "Enddatum"
+
+msgid "Location"
+msgstr "Ort"
+
+msgid "Online Meeting"
+msgstr "Online-Besprechung"
+
+msgid "Meeting Link"
+msgstr "Besprechungslink"
+
+msgid "All Day"
+msgstr "Ganztägig"
+
+msgid "Assigned To"
+msgstr "Zugewiesen an"
+
+msgid "Participants"
+msgstr "Teilnehmer"
+
+msgid "Meeting Host"
+msgstr "Besprechungsleiter"
+
+msgid "Activity Owner"
+msgstr "Aktivitätsverantwortlicher"
+
+msgid "Priority"
+msgstr "Priorität"
+
+msgid "Due Date"
+msgstr "Fälligkeitsdatum"
+
+msgid "Recipient Email"
+msgstr "E-Mail des Empfängers"
+
+msgid "Call Duration"
+msgstr "Anrufdauer"
+
+msgid "Call Duration (Seconds)"
+msgstr "Anrufdauer (Sekunden)"
+
+msgid "Call Type"
+msgstr "Anruftyp"
+
+msgid "Notes"
+msgstr "Notizen"
+
+msgid "Google Calendar Event ID"
+msgstr "Google Kalender-Ereignis-ID"
+
+msgid "Call Purpose"
+msgstr "Anrufzweck"
+
+msgid "External Participants"
+msgstr "Externe Teilnehmer"
+
+msgid "No Reminder"
+msgstr "Keine Erinnerung"
+
+msgid "5 minutes before"
+msgstr "5 Minuten vorher"
+
+msgid "10 minutes before"
+msgstr "10 Minuten vorher"
+
+msgid "15 minutes before"
+msgstr "15 Minuten vorher"
+
+msgid "30 minutes before"
+msgstr "30 Minuten vorher"
+
+msgid "1 hour before"
+msgstr "1 Stunde vorher"
+
+msgid "1 day before"
+msgstr "1 Tag vorher"
+
+msgid "Reminder"
+msgstr "Erinnerung"
+
+msgid "Invitation Email Template"
+msgstr "Einladungs-E-Mail-Vorlage"
+
+msgid "External guests will receive a meeting invite email."
+msgstr "Externe Gäste erhalten eine Einladungs-E-Mail zur Besprechung."
+
+msgid "Tasks"
+msgstr "Aufgaben"
+
+msgid "Meetings"
+msgstr "Besprechungen"
+
+msgid "Call"
+msgstr "Anruf"
+
+msgid "Email"
+msgstr "E-Mail"
+
+msgid "Events"
+msgstr "Ereignisse"
+
+msgid "Pending Tasks"
+msgstr "Ausstehende Aufgaben"
+
+msgid "Completed Tasks"
+msgstr "Abgeschlossene Aufgaben"
+
+msgid "Add Task"
+msgstr "Aufgabe hinzufügen"
+
+msgid "Pending Meetings"
+msgstr "Ausstehende Besprechungen"
+
+msgid "Completed Meetings"
+msgstr "Abgeschlossene Besprechungen"
+
+msgid "Add Meetings"
+msgstr "Besprechungen hinzufügen"
+
+msgid "Pending Calls"
+msgstr "Ausstehende Anrufe"
+
+msgid "Completed Calls"
+msgstr "Abgeschlossene Anrufe"
+
+msgid "Call History"
+msgstr ""
+
+#, fuzzy
+#| msgid "Call"
+msgid "Call Now"
+msgstr "Anruf"
+
+msgid "Add Call"
+msgstr "Anruf hinzufügen"
+
+msgid "Mails"
+msgstr "E-Mails"
+
+msgid "Drafts"
+msgstr "Entwürfe"
+
+msgid "Pending Events"
+msgstr "Ausstehende Ereignisse"
+
+msgid "Completed Events"
+msgstr "Abgeschlossene Ereignisse"
+
+msgid "Add Events"
+msgstr "Ereignisse hinzufügen"
+
+msgid "Join"
+msgstr "Beitreten"
+
+msgid "Send Email"
+msgstr "E-Mail senden"
+
+msgid "Calls"
+msgstr "Anrufe"
+
+msgid "You do not have permission to modify this item."
+msgstr "Sie haben keine Berechtigung, dieses Element zu bearbeiten."
+
+msgid "Purpose"
+msgstr "Zweck"
+
+msgid "Type"
+msgstr "Typ"
+
+msgid "Duration"
+msgstr "Dauer"
+
+msgid "Schedule"
+msgstr "Planen"
+
+msgid "Duplicate"
+msgstr "Duplizieren"
+
+msgid "Invalid status."
+msgstr "Ungültiger Status."
+
+msgid "Activity not found."
+msgstr "Aktivität nicht gefunden."
+
+msgid "Status Updated."
+msgstr "Status aktualisiert."

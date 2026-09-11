@@ -1,0 +1,172 @@
+<div
+    id="matching-rule-list"
+    class="overflow overflow-y-auto custom-scroll max-h-[calc(_100vh_-_240px_)] border border-primary-300 rounded-md"
+>
+    <button
+        id="reloadButton"
+        hidden
+        hx-get="{{ request.path }}?{{request.GET.urlencode}}"
+        hx-target="#matching-rule-list"
+        hx-trigger="click"
+        hx-swap="outerHTML"
+        hx-select="#matching-rule-list"
+    >
+        click
+    </button>
+    {% include "messages.html" %}
+    {% for rule in matching_rules %}
+        <div class="{% if not forloop.first %}border-t border-primary-300{% endif %}">
+            <a
+                type="button"
+                class="cursor-pointer flex justify-between items-center w-full px-4 py-3 text-left text-gray-800 font-medium transition"
+                onclick="toggleAccordion(this)"
+            >
+                <div class="flex gap-3 w-full font-bold text-sm">
+                    {{ rule.name }}
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <div class="flex tablebtn">
+                        {% has_perm "duplicates.change_matchingrule" as can_edit %}
+                        {% if can_edit %}
+                            <button
+                                class="w-10 h-7 bg-dark-25 flex-1 flex justify-center border-r border-r-[white] hover:bg-dark-50 transition duration-300 items-center"
+                                hx-get="{% url 'duplicates:matching_rule_update_view' rule.pk %}?new=true"
+                                hx-target="#modalBox"
+                                hx-swap="innerHTML"
+                                title="{% trans 'Edit' %}"
+                                onclick="openModal(); event.stopPropagation()"
+                            >
+                                <img
+                                    src="{% static 'assets/icons/edit.svg' %}"
+                                    alt="{% trans 'Edit' %}"
+                                    width="15"
+                                    height="15"
+                                >
+                            </button>
+                        {% endif %}
+                        {% has_perm "duplicates.delete_matchingrule" as can_delete %}
+                        {% if can_delete %}
+                            <button
+                                class="w-10 h-7 bg-dark-25 flex-1 flex justify-center border-r border-r-[white] hover:bg-dark-50 transition duration-300 items-center"
+                                title="{% trans 'Delete' %}"
+                                hx-get="{% url 'duplicates:matching_rule_delete_view' rule.pk %}"
+                                hx-target="#deleteModeBox"
+                                hx-swap="innerHTML"
+                                hx-trigger="click"
+                                hx-vals='{"check_dependencies": "false"}'
+                                onclick="openDeleteModeModal(); event.stopPropagation()"
+                            >
+                                <img
+                                    src="{% static 'assets/icons/a4.svg' %}"
+                                    alt="{% trans 'Delete' %}"
+                                    width="15"
+                                    height="15"
+                                >
+                            </button>
+                        {% endif %}
+                    </div>
+                    <svg
+                        class="w-4 transform transition-transform"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </a>
+            <div class="accordion-content text-sm text-dark-500" style="max-height: 0; overflow: hidden">
+                <div class="px-4 border-t border-primary-300 pt-3 pb-3">
+                    <div class="grid grid-cols-2 gap-4">
+                        {% if rule.content_type %}
+                            <div class="text-sm flex flex-col md:flex-row">
+                                <span
+                                    class="text-dark-200 font-semibold w-40 text-sm"
+                                >{{ rule|verbose_name:"content_type" }}</span>
+                                <span class="flex-1 text-dark-200">
+                                    <span class="pe-2">:</span>
+                                    {{ rule.content_type }}
+                                </span>
+                            </div>
+                        {% endif %}
+
+                        {% if rule.description %}
+                            <div class="text-sm flex flex-col md:flex-row">
+                                <span
+                                    class="text-dark-200 font-semibold w-40"
+                                >{{ rule|verbose_name:"description" }}</span>
+                                <span class="flex-1 text-dark-200">
+                                    <span class="pe-2">:</span>
+                                    {{ rule.description }}
+                                </span>
+                            </div>
+                        {% endif %}
+
+                        {% if rule.criteria.exists %}
+                            <div class="text-sm flex flex-col md:flex-row col-span-2">
+                                <span class="text-dark-200 font-semibold w-40">{% trans "Matching Criteria" %}</span>
+                                <span class="flex-1 text-dark-200">
+                                    <span class="pe-2">:</span>
+                                    {% for criterion in rule.criteria.all %}
+                                        {% with model_class=rule.content_type.model_class %}
+                                            {% if model_class %}
+                                                {% with field_verbose_name=model_class|verbose_name:criterion.field_name %}
+                                                    ({{ rule.content_type.model|title }}: {{ field_verbose_name }}
+                                                    {{ criterion.get_matching_method_display }} MatchBlank =
+                                                    {% if criterion.match_blank_fields %}TRUE{% else %}FALSE{% endif %}){% if not forloop.last %}
+                                                        and
+                                                    {% endif %}
+                                                {% endwith %}
+                                            {% else %}
+                                                ({{ rule.content_type.model|title }}: {{ criterion.field_name|title }}
+                                                {{ criterion.get_matching_method_display }} MatchBlank =
+                                                {% if criterion.match_blank_fields %}TRUE{% else %}FALSE{% endif %}){% if not forloop.last %}
+                                                    and
+                                                {% endif %}
+                                            {% endif %}
+                                        {% endwith %}
+                                    {% endfor %}
+                                </span>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% empty %}
+        <div class="px-4 py-8 text-center text-gray-500">
+            {% trans "Nothing to show yet. Please add your Matching Rules." as empty_state_message %}
+            {% include "components/empty_state.html" with message=empty_state_message %}
+            {% has_perm "duplicates.add_matchingrule" as can_add %}
+            {% if can_add %}
+                <button
+                    id="matching-rule-create"
+                    hx-get="{% url 'duplicates:matching_rule_create_view' %}?new=true"
+                    hx-target="#modalBox"
+                    hx-swap="innerHTML"
+                    onclick="openModal()"
+                    class="text-sm px-4 py-2 bg-primary-600 rounded-md hover:bg-primary-800 transition duration-300 text-[white] m-auto flex"
+                >
+                    {% trans "Add New" %}
+                </button>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+
+<script>
+    function toggleAccordion(button) {
+        const content = button.nextElementSibling;
+        const svg = button.querySelector('svg');
+
+        if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+            content.style.maxHeight = '0px';
+            svg.style.transform = 'rotate(0deg)';
+        } else {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            svg.style.transform = 'rotate(180deg)';
+        }
+    }
+</script>

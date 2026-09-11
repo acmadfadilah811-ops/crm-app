@@ -1,0 +1,433 @@
+# Arabic translations for Horilla Activity module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+msgid ""
+"Module for tracking and managing activities such as tasks,calls, events, and "
+"emails."
+msgstr ""
+"وحدة لتتبع وإدارة الأنشطة مثل المهام والمكالمات والأحداث ورسائل البريد "
+"الإلكتروني."
+
+msgid ""
+"Prioritize the Duplicate list action on global and tab activity list views."
+msgstr ""
+
+msgid ""
+"Fix TaskCreateForm refresh targeting #TaskTab so new tasks appear without a "
+"full reload; enable table_auto on activity tab list views so sticky Actions "
+"columns are not clipped. Meeting create: harden invite permissions, "
+"timezones, and Meet link handling. Clear email suggestions on blur for "
+"activity and meeting forms."
+msgstr ""
+
+msgid ""
+"Registered Activity for export_data. Improved activity tab hover styles and "
+"replaced fixed viewport list widths with flex-based layout."
+msgstr ""
+
+msgid ""
+"Optional Calls integration without a hard dependency: calls_enabled and "
+"get_phone_number template tags gate Call Now in the activity tab when the "
+"Calls app is installed. CallListView excludes telephony-purpose logs from "
+"the manual call history list. Activity create form excludes "
+"call_duration_display."
+msgstr ""
+
+msgid ""
+"Simplified mail visibility so can_send_mail and can_view_mail follow parent-"
+"record change and view access. Activity tab Edit/Delete actions and email "
+"Send/Cancel/Snooze actions are gated on parent-record change/delete access "
+"with subordinate-aware ownership via get_allowed_user_ids()."
+msgstr ""
+
+msgid ""
+"Constrained activity tab list table height for consistent scrolling. Added "
+"cursor-pointer to Pending and Completed Calls sub-tabs."
+msgstr ""
+
+msgid ""
+"Disabled base owner_filtration on EmailListView. Centralised get_main_url in "
+"the list-view mixin and fixed tab-calls typo in status update and activity "
+"tab template. Task and activity creates now navigate directly to the correct "
+"tab instead of reverting to the first tab after reload; aligned task-create "
+"reload trigger with project-wide jQuery convention. Fixed delete and bulk-"
+"action views that reverted to the wrong tab."
+msgstr ""
+
+msgid ""
+"Fixed call duration field ordering and removed redundant validation; history "
+"tab now correctly identifies CallLog entries and displays call status. Use "
+"load_branding() TITLE as the fallback company name in meeting invitation "
+"emails. Allow ActivityView for users with view_own_activity as well as "
+"view_activity. Added meeting provider choices (Zoom, Google Meet, Microsoft "
+"Teams) on the Activity model."
+msgstr ""
+
+#, fuzzy
+#| msgid ""
+#| "Email-tab permissions corrected to add/view/change/delete own-record "
+#| "checks. Removed redundant fields attributes from create-view forms "
+#| "superseded by form_class. Adopted the horilla.utils.timezone shim, "
+#| "standardized first-party imports, and added class and method docstrings "
+#| "for pylint compliance."
+msgid ""
+"Email-tab permissions corrected to add/view/change/delete own-record checks. "
+"Removed redundant fields attributes from create-view forms superseded by "
+"form_class. Adopted the utils.timezone shim, standardized first-party "
+"imports, and added class and method docstrings for pylint compliance."
+msgstr ""
+"تم تصحيح أذونات تبويب البريد الإلكتروني لإضافة/عرض/تعديل/حذف السجلات الخاصة. "
+"إزالة سمات الحقول الزائدة من نماذج عرض الإنشاء واستخدام form_class بدلاً منها."
+
+#, fuzzy
+#| msgid ""
+#| "Activity forms aligned with HorillaModelForm layout: field_order, "
+#| "Meta.fields = \"__all__\", and Meta.exclude; save logic and HTMX behavior "
+#| "unchanged."
+msgid ""
+"Activity forms aligned with ModelForm layout: field_order, Meta.fields = "
+"\"__all__\", and Meta.exclude; save logic and HTMX behavior unchanged."
+msgstr ""
+"تم محاذاة نماذج النشاط مع تخطيط HorillaModelForm: field_order وMeta.fields "
+"وMeta.exclude، مع الحفاظ على منطق الحفظ وسلوك HTMX دون تغيير."
+
+msgid ""
+"Meeting integration in activities: schedule meetings from activities, send "
+"invites and reminders, and display generated Zoom/Teams meeting links on "
+"activity records."
+msgstr ""
+"تكامل الاجتماعات في الأنشطة: جدولة الاجتماعات من الأنشطة وإرسال الدعوات "
+"والتذكيرات وعرض روابط اجتماعات Zoom/Teams المُنشأة في سجلات النشاط."
+
+msgid ""
+"Release 1.10: activity ships under contrib with app label activity. "
+"AppLauncher, imports, namespaces, registrations, templates, and metadata "
+"references updated from the legacy activity package name to the contrib "
+"layout."
+msgstr ""
+"الإصدار 1.10: يتم شحن النشاط ضمن contrib بتسمية تطبيق activity. تم تحديث "
+"AppLauncher والاستيرادات ومساحات الأسماء والتسجيلات والقوالب ومراجع البيانات "
+"الوصفية."
+
+msgid ""
+"Reduced redundant history entries, improved Many-to-Many field "
+"representation, and added cleaner labels for mail events and activity "
+"creation with new template filters for better rendering."
+msgstr ""
+"تقليل إدخالات السجل الزائدة وتحسين تمثيل حقول Many-to-Many وإضافة تسميات "
+"أوضح لأحداث البريد وإنشاء النشاط مع مرشحات قوالب جديدة."
+
+msgid ""
+"Improved activity workflow behavior. The Pending tab now shows all "
+"incomplete activitiesregardless of status label, and activity type "
+"configuration handling was enhanced for improved workflow accuracy."
+msgstr ""
+"تحسين سلوك سير عمل النشاط. يعرض تبويب المعلق الآن جميع الأنشطة غير المكتملة "
+"بغض النظر عن تسمية الحالة، وتم تحسين معالجة تكوين نوع النشاط."
+
+#, fuzzy
+#| msgid ""
+#| "Migrated from Django AppConfig to Horilla AppLauncher and replaced Django "
+#| "utilities withhorilla.utils.decorators, horilla.utils.translation, and "
+#| "horilla.shortcuts where applicable."
+msgid ""
+"Migrated from AppConfig to AppLauncher and replaced utilities "
+"withutils.decorators, utils.translation, and shortcuts where applicable."
+msgstr ""
+"تم الترحيل من Django AppConfig إلى Horilla AppLauncher واستبدال أدوات Django "
+"بـ horilla.utils.decorators وhorilla.utils.translation وhorilla.shortcuts "
+"حيثما ينطبق ذلك."
+
+msgid "Activity"
+msgstr "نشاط"
+
+msgid "Meeting Provider"
+msgstr "مزوّد الاجتماع"
+
+msgid "Activities"
+msgstr "الأنشطة"
+
+msgid "Event"
+msgstr "حدث"
+
+msgid "Meeting"
+msgstr "اجتماع"
+
+msgid "Task"
+msgstr "مهمة"
+
+msgid "Log Call"
+msgstr "تسجيل مكالمة"
+
+msgid "Not Started"
+msgstr "لم يبدأ"
+
+msgid "Scheduled"
+msgstr "مجدول"
+
+msgid "In Progress"
+msgstr "قيد التنفيذ"
+
+msgid "Waiting on Someone"
+msgstr "في انتظار شخص ما"
+
+msgid "Completed"
+msgstr "مكتمل"
+
+msgid "Cancelled"
+msgstr "ملغى"
+
+msgid "Deferred"
+msgstr "مؤجل"
+
+msgid "High"
+msgstr "عالي"
+
+msgid "Medium"
+msgstr "متوسط"
+
+msgid "Low"
+msgstr "منخفض"
+
+msgid "Inbound"
+msgstr "وارد"
+
+msgid "Outbound"
+msgstr "صادر"
+
+msgid "Zoom"
+msgstr "زووم"
+
+msgid "Google Meet"
+msgstr "جوجل ميت"
+
+msgid "Microsoft Teams"
+msgstr "مايكروسوفت تيمز"
+
+msgid "Subject"
+msgstr "الموضوع"
+
+msgid "Description"
+msgstr "الوصف"
+
+msgid "Activity Type"
+msgstr "نوع النشاط"
+
+msgid "Related Content Type"
+msgstr "نوع المحتوى المرتبط"
+
+msgid "Related To"
+msgstr "مرتبط بـ"
+
+msgid "Status"
+msgstr "الحالة"
+
+msgid "Title"
+msgstr "العنوان"
+
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+msgid "Location"
+msgstr "الموقع"
+
+msgid "Online Meeting"
+msgstr "اجتماع عبر الإنترنت"
+
+msgid "Meeting Link"
+msgstr "رابط الاجتماع"
+
+msgid "All Day"
+msgstr "طوال اليوم"
+
+msgid "Assigned To"
+msgstr "مُسند إلى"
+
+msgid "Participants"
+msgstr "المشاركون"
+
+msgid "Meeting Host"
+msgstr "مضيف الاجتماع"
+
+msgid "Activity Owner"
+msgstr "مالك النشاط"
+
+msgid "Priority"
+msgstr "الأولوية"
+
+msgid "Due Date"
+msgstr "تاريخ الاستحقاق"
+
+msgid "Recipient Email"
+msgstr "البريد الإلكتروني للمستلم"
+
+msgid "Call Duration"
+msgstr "مدة المكالمة"
+
+msgid "Call Duration (Seconds)"
+msgstr "مدة المكالمة (بالثواني)"
+
+msgid "Call Type"
+msgstr "نوع المكالمة"
+
+msgid "Notes"
+msgstr "ملاحظات"
+
+msgid "Google Calendar Event ID"
+msgstr "معرّف حدث تقويم جوجل"
+
+msgid "Call Purpose"
+msgstr "غرض المكالمة"
+
+msgid "External Participants"
+msgstr "المشاركون الخارجيون"
+
+msgid "No Reminder"
+msgstr "بدون تذكير"
+
+msgid "5 minutes before"
+msgstr "قبل 5 دقائق"
+
+msgid "10 minutes before"
+msgstr "قبل 10 دقائق"
+
+msgid "15 minutes before"
+msgstr "قبل 15 دقيقة"
+
+msgid "30 minutes before"
+msgstr "قبل 30 دقيقة"
+
+msgid "1 hour before"
+msgstr "قبل ساعة واحدة"
+
+msgid "1 day before"
+msgstr "قبل يوم واحد"
+
+msgid "Reminder"
+msgstr "تذكير"
+
+msgid "Invitation Email Template"
+msgstr "قالب بريد الدعوة"
+
+msgid "External guests will receive a meeting invite email."
+msgstr "سيتلقى الضيوف الخارجيون بريداً إلكترونياً بدعوة الاجتماع."
+
+msgid "Tasks"
+msgstr "المهام"
+
+msgid "Meetings"
+msgstr "الاجتماعات"
+
+msgid "Call"
+msgstr "مكالمة"
+
+msgid "Email"
+msgstr "بريد إلكتروني"
+
+msgid "Events"
+msgstr "الأحداث"
+
+msgid "Pending Tasks"
+msgstr "المهام قيد الانتظار"
+
+msgid "Completed Tasks"
+msgstr "المهام المكتملة"
+
+msgid "Add Task"
+msgstr "إضافة مهمة"
+
+msgid "Pending Meetings"
+msgstr "الاجتماعات قيد الانتظار"
+
+msgid "Completed Meetings"
+msgstr "الاجتماعات المكتملة"
+
+msgid "Add Meetings"
+msgstr "إضافة اجتماعات"
+
+msgid "Pending Calls"
+msgstr "المكالمات قيد الانتظار"
+
+msgid "Completed Calls"
+msgstr "المكالمات المكتملة"
+
+msgid "Call History"
+msgstr ""
+
+#, fuzzy
+#| msgid "Call"
+msgid "Call Now"
+msgstr "مكالمة"
+
+msgid "Add Call"
+msgstr "إضافة مكالمة"
+
+msgid "Mails"
+msgstr "الرسائل"
+
+msgid "Drafts"
+msgstr "المسودات"
+
+msgid "Pending Events"
+msgstr "الأحداث قيد الانتظار"
+
+msgid "Completed Events"
+msgstr "الأحداث المكتملة"
+
+msgid "Add Events"
+msgstr "إضافة أحداث"
+
+msgid "Join"
+msgstr "انضمام"
+
+msgid "Send Email"
+msgstr "إرسال بريد إلكتروني"
+
+msgid "Calls"
+msgstr "المكالمات"
+
+msgid "You do not have permission to modify this item."
+msgstr "ليس لديك صلاحية لتعديل هذا العنصر."
+
+msgid "Purpose"
+msgstr "الغرض"
+
+msgid "Type"
+msgstr "النوع"
+
+msgid "Duration"
+msgstr "المدة"
+
+msgid "Schedule"
+msgstr "جدولة"
+
+msgid "Duplicate"
+msgstr "تكرار"
+
+msgid "Invalid status."
+msgstr "حالة غير صالحة."
+
+msgid "Activity not found."
+msgstr "النشاط غير موجود."
+
+msgid "Status Updated."
+msgstr "تم تحديث الحالة."

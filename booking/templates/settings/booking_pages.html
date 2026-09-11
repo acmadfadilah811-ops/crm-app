@@ -1,0 +1,22 @@
+{% extends "settings/settings.html" %}
+{% block settings %}
+    <div id="booking-settings-view" class="h-full flex flex-col">
+        {% if not has_business_hour %}
+            {% trans "Business Hours Required" as empty_state_alt %}
+            {% trans "Please configure Business Hours for your company before creating a Booking Page." as empty_state_message %}
+            {% trans "Set up Business Hours" as empty_state_action_label %}
+            {% url 'booking:goto_working_hours' as working_hours_url %}
+            {% include "components/empty_state.html" with image="assets/img/activate-company.svg" alt=empty_state_alt message=empty_state_message spacer=True action_url=working_hours_url action_label=empty_state_action_label %}
+        {% else %}
+            <div id="navBar" class="flex-shrink-0" hx-get="{{ nav_url }}?{{ request.GET.urlencode }}" hx-trigger="load">
+            </div>
+            <div
+                id="mainSession"
+                class="pt-3 flex-1 min-h-0 flex flex-col"
+                hx-get="{{ list_url }}?{{ request.GET.urlencode }}"
+                hx-trigger="load"
+            >
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "settings/settings.html" %}
+{% block settings %}
+    {% has_perm "cadences.view_cadence" as can_view_cadence %}
+
+    {% if can_view_cadence %}
+        <div class="mb-2">
+            <div class="flex justify-between items-center">
+                <div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <button
+                            type="button"
+                            class="shrink-0 p-1 rounded hover:bg-dark-50 transition"
+                            title="{% trans 'Back' %}"
+                            hx-get="{{ back_url }}"
+                            hx-target="#mainContent"
+                            hx-swap="outerHTML"
+                            hx-select="#mainContent"
+                            hx-push-url="true"
+                        >
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <h3 class="text-md font-semibold">
+                            {% if cadence %}{{ cadence.name }} {% trans "Report" %}
+                            {% else %}{% trans "Cadences Report" %}{% endif %}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            hx-push-url="false"
+            hx-get="{% url 'cadences:cadence_report_tab_view' %}?{{request.GET.urlencode}}"
+            hx-trigger="load"
+        >
+        </div>
+    {% else %}
+        {% include "403.html" with embed=True %}
+    {% endif %}
+{% endblock %}

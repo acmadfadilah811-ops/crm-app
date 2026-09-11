@@ -1,0 +1,54 @@
+<div id="company-detail-view">
+    <button
+        id="reloadButton"
+        hidden
+        hx-get="{{ request.META.HTTP_REFERER }}?{{request.GET.urlencode}}"
+        hx-target="#company-information"
+        hx-swap="outerHTML"
+        hx-select="#company-information"
+        hx-select-oob="#dropdown-companies"
+    >
+        click
+    </button>
+    <div class="bg-white">
+        <div class="flex flex-wrap justify-between items-center h-14 mb-3">
+            <div class="flex items-center gap-2">
+                {% if obj.icon %}
+                    <img src="{{ obj.icon.url }}" alt="{% trans 'Logo' %}" class="w-11 h-11 rounded-full">
+                {% else %}
+                    <img src="{{ obj.get_avatar }}" alt="{% trans 'Logo' %}" class="w-11 h-11 rounded-full">
+                {% endif %}
+                <h3 class="text-md font-semibold">
+                    {{ obj.name }}
+                </h3>
+            </div>
+            {% has_perm "core.change_company" as can_change_company %}
+            {% if request.active_company %}
+                {% if can_change_company %}
+                    <button
+                        id="profile-edit-btn"
+                        hx-get="{% url 'core:edit_company_multi_step' obj.pk %}?details=true"
+                        hx-on:click="openModal()"
+                        hx-target="#modalBox"
+                    >
+                        <img src="{% static 'assets/icons/edit.svg' %}" alt="{% trans 'Edit' %}" width="15">
+                    </button>
+                {% endif %}
+            {% endif %}
+        </div>
+        <div class="grid columns-1 lg:grid-cols-2 gap-4">
+            {% for label, field, icon in detail_fields %}
+                <div class="text-sm flex flex-col sm:flex-row">
+                    <span class="text-dark-200 font-semibold w-40 flex items-center gap-2">
+                        {% if icon %}<i class="{{ icon }} text-xs text-gray-400 w-4"></i>{% endif %}
+                        {{ label }}
+                    </span>
+                    <span class="flex-1 text-dark-200">
+                        <span class="pe-2">:</span>
+                        {% display_field_value obj field request.user %}
+                    </span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

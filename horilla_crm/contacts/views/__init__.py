@@ -1,0 +1,66 @@
+"""Aggregate and re-export contact-related views for convenience imports."""
+
+# Local imports
+from horilla_crm.contacts.views.core import (
+    ContactActivityTab,
+    ContactDetailTab,
+    ContactDetailView,
+    ContactDetailViewTabs,
+    ContactGroupByView,
+    ContactHierarchyView,
+    ContactHistorytab,
+    ContactKanbanView,
+    ContactListView,
+    ContactNavbar,
+    ContactRelatedListsTab,
+    ContactView,
+    ContactsNotesAndAttachments,
+    ContactCardView,
+    ContactSplitView,
+    ContactChartView,
+    ContactTimelineView,
+)
+from horilla_crm.contacts.views.actions import (
+    AddChildContactFormView,
+    AddRelatedAccountsFormView,
+    ChildContactDeleteView,
+    ContactChangeOwnerFormView,
+    ContactDeleteView,
+    ContactFormView,
+    ContactsSingleFormView,
+    RelatedContactDeleteView,
+    RelatedContactFormView,
+    RelatedContactSingleFormView,
+)
+
+__all__ = [
+    # core
+    "ContactView",
+    "ContactNavbar",
+    "ContactListView",
+    "ContactGroupByView",
+    "ContactKanbanView",
+    "ContactDetailView",
+    "ContactDetailViewTabs",
+    "ContactDetailTab",
+    "ContactActivityTab",
+    "ContactsNotesAndAttachments",
+    "ContactHistorytab",
+    "ContactRelatedListsTab",
+    "ContactHierarchyView",
+    "ContactCardView",
+    "ContactSplitView",
+    "ContactChartView",
+    "ContactTimelineView",
+    # actions
+    "ContactFormView",
+    "ContactsSingleFormView",
+    "RelatedContactFormView",
+    "RelatedContactSingleFormView",
+    "ContactChangeOwnerFormView",
+    "AddRelatedAccountsFormView",
+    "AddChildContactFormView",
+    "ChildContactDeleteView",
+    "ContactDeleteView",
+    "RelatedContactDeleteView",
+]

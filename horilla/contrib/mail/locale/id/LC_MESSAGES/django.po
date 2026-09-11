@@ -1,0 +1,796 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid ""
+"Module for managing incoming and outgoing emails through mail servers and "
+"Outlook."
+msgstr ""
+"Modul untuk mengelola email masuk dan keluar melalui server email dan "
+"Outlook."
+
+msgid ""
+"Email pills and suggestions templates accept override URLs so non-Mail "
+"callers are not forced through Mail permission checks. Clear the suggestions"
+" dropdown on blur regardless of whether the typed value is a valid email."
+msgstr ""
+"Pil email dan templat saran menerima URL pengganti sehingga penelepon non-"
+"Mail tidak dipaksa melalui pemeriksaan izin Mail.Hapus dropdown saran pada "
+"blur terlepas dari apakah nilai yang diketik adalah email yang valid."
+
+msgid "Registered Mail for export_data."
+msgstr "Email Terdaftar untuk ekspor_data."
+
+msgid ""
+"Added send_by ForeignKey on Mail to record the sending user. Introduced Mail"
+" History settings view with filter, navbar, and list actions for sent, "
+"scheduled, and draft mails. Parent-record access gates mail compose, draft "
+"save/discard, and delete flows. Standardized exception chaining across "
+"serializers, backends, and template views."
+msgstr ""
+"Menambahkan send_by ForeignKey di Mail untuk mencatat pengguna "
+"pengirim.Tampilan pengaturan Riwayat Email yang diperkenalkan dengan filter,"
+" bilah navigasi, dan tindakan daftar untuk email terkirim, terjadwal, dan "
+"draf.Gerbang akses pencatatan induk penulisan surat, penyimpanan/pembuangan "
+"draf, dan alur penghapusan.Rangkaian pengecualian standar di seluruh "
+"serializer, backend, dan tampilan templat."
+
+msgid ""
+"Fixed mail preview context leak, false-positive XSS block, and IDOR access "
+"check. Corrected MailTemplateListView permissions and row-attr shape. "
+"Persist rendered subject and body snapshot at send time. Fixed mail preview "
+"modal styling inconsistencies."
+msgstr ""
+"Memperbaiki kebocoran konteks pratinjau email, blok XSS positif palsu, dan "
+"pemeriksaan akses IDOR.Izin MailTemplateListView dan bentuk attr baris telah"
+" diperbaiki.Pertahankan cuplikan subjek dan isi yang dirender pada waktu "
+"pengiriman.Memperbaiki inkonsistensi gaya modal pratinjau email."
+
+msgid ""
+"Fixed mail and notification template creation by assigning created_by and "
+"updated_by before save when _thread_local.request is unavailable. Added mail"
+" configuration detail modal with list row click-through and channel-specific"
+" edit and delete URLs. Sanitize mail subject and body XSS with shared "
+"helpers and centralized sanitize_html in preview and detail views. Clear "
+"mail template body on validation errors to prevent re-displaying rejected "
+"content."
+msgstr ""
+"Memperbaiki pembuatan templat email dan pemberitahuan dengan menetapkan "
+"dibuat_oleh dan diperbarui_oleh sebelum disimpan ketika "
+"_thread_local.request tidak tersedia.Menambahkan modal detail konfigurasi "
+"email dengan klik-tayang baris daftar serta edit dan hapus URL khusus "
+"saluran.Sanitasi subjek email dan isi XSS dengan pembantu bersama dan "
+"sanitize_html terpusat dalam tampilan pratinjau dan detail.Hapus isi "
+"template email pada kesalahan validasi untuk mencegah menampilkan kembali "
+"konten yang ditolak."
+
+msgid ""
+"Security: fixed SSTI information disclosure and IDOR in the preview endpoint"
+" by blocking dangerous template paths and adding a per-object permission "
+"check. Mail permissions replaced admin-config perms with correct "
+"add/view/change/delete own-record permissions across all mail views and the "
+"activity email tab. Standardized first-party imports and added docstrings "
+"for pylint compliance."
+msgstr ""
+"Keamanan: memperbaiki pengungkapan informasi SSTI dan IDOR di titik akhir "
+"pratinjau dengan memblokir jalur templat berbahaya dan menambahkan "
+"pemeriksaan izin per objek.Izin email menggantikan izin konfigurasi admin "
+"dengan izin tambah/lihat/ubah/hapus catatan sendiri yang benar di semua "
+"tampilan email dan tab email aktivitas.Standarisasi impor pihak pertama dan "
+"penambahan dokumen untuk kepatuhan pylint."
+
+msgid ""
+"Mail forms aligned with ModelForm layout: field_order, Meta.fields = "
+"\"__all__\", Meta.exclude, and keep_on_form on configuration forms."
+msgstr ""
+"Formulir email selaras dengan tata letak ModelForm: field_order, Meta.fields"
+" = \"__all__\", Meta.exclude, dan keep_on_form pada formulir konfigurasi."
+
+msgid ""
+"Release 1.10: mail ships under the contrib package tree with Django app "
+"label mail. Imports, API routes, URLs, permissions, templates, and static "
+"asset paths updated to drop the legacy prefixed mail app name."
+msgstr ""
+"Rilis 1.10: surat dikirimkan di bawah pohon paket contrib dengan surat label"
+" aplikasi Django.Impor, rute API, URL, izin, templat, dan jalur aset statis "
+"diperbarui untuk menghapus nama aplikasi email dengan awalan lama."
+
+msgid ""
+"Improved mail template standardization, async mail handling with background "
+"thread execution, and enhanced notification and mail action separation for "
+"approval workflows."
+msgstr ""
+"Standarisasi templat email yang ditingkatkan, penanganan email asinkron "
+"dengan eksekusi thread latar belakang, serta peningkatan pemberitahuan dan "
+"pemisahan tindakan email untuk alur kerja persetujuan."
+
+msgid ""
+"Minor compatibility improvements and internal stability updates to align "
+"with the enhanced generics framework and visualization system."
+msgstr ""
+"Peningkatan kompatibilitas kecil dan pembaruan stabilitas internal agar "
+"selaras dengan kerangka generik dan sistem visualisasi yang ditingkatkan."
+
+msgid ""
+"Migrated from AppConfig to AppLauncher and and replacedutilities with "
+"utils.decorators, utils.translation, and shortcuts where applicable."
+msgstr ""
+"Bermigrasi dari AppConfig ke AppLauncher dan mengganti utilitas dengan "
+"utils.decorators, utils.translation, dan pintasan jika memungkinkan."
+
+msgid "Mail System"
+msgstr "Sistem Surat"
+
+msgid "To Email"
+msgstr "Ke Email"
+
+msgid "Enter email address to send test email"
+msgstr "Masukkan alamat email untuk mengirim email percobaan"
+
+msgid "Enter the email address where you want to send the test email."
+msgstr "Masukkan alamat email tempat Anda ingin mengirim email percobaan."
+
+msgid "Please enter a valid email address."
+msgstr "Silakan masukkan alamat email yang valid."
+
+msgid "Template title is required."
+msgstr "Judul templat wajib diisi."
+
+msgid "Template body is required."
+msgstr "Badan templat wajib diisi."
+
+msgid "Select Mail Template"
+msgstr "Pilih Templat Surat"
+
+msgid "Choose a template"
+msgstr "Pilih templat"
+
+msgid "Body content cannot be empty."
+msgstr "Isi isi tidak boleh kosong."
+
+msgid "Enter app password"
+msgstr "Masukkan kata sandi aplikasi"
+
+msgid "Enter the app-specific password for your mail account."
+msgstr "Masukkan kata sandi khusus aplikasi untuk akun email Anda."
+
+msgid "Enter the app-specific password  for your mail account."
+msgstr "Masukkan kata sandi khusus aplikasi untuk akun email Anda."
+
+msgid "Enter client secret"
+msgstr "Masukkan rahasia klien"
+
+msgid ""
+"Enter the client secret generated from your Microsoft Azure app "
+"registration. This secret is used to authenticate your Outlook integration "
+"securely."
+msgstr ""
+"Masukkan rahasia klien yang dihasilkan dari pendaftaran aplikasi Microsoft "
+"Azure Anda.Rahasia ini digunakan untuk mengautentikasi integrasi Outlook "
+"Anda dengan aman."
+
+msgid "Mail"
+msgstr "Surat"
+
+msgid "Outgoing Mail Server"
+msgstr "Server Surat Keluar"
+
+msgid "Incoming Mail Server"
+msgstr "Server Surat Masuk"
+
+msgid "Mail Template"
+msgstr "Templat Surat"
+
+msgid "Mail History"
+msgstr "Riwayat Surat"
+
+msgid "Outlook"
+msgstr "Pandangan"
+
+msgid "Incoming"
+msgstr "Masuk"
+
+msgid "Outgoing"
+msgstr "Keluar"
+
+msgid "Type"
+msgstr "Jenis"
+
+msgid "Mail Channel"
+msgstr "Saluran Surat"
+
+msgid ""
+"Specifies whether this configuration handles incoming,outgoing, or both "
+"types of emails."
+msgstr ""
+"Menentukan apakah konfigurasi ini menangani email masuk, keluar, atau kedua "
+"jenis email."
+
+msgid "Host"
+msgstr "Tuan rumah"
+
+msgid "Port"
+msgstr "Pelabuhan"
+
+msgid "Default From Mail"
+msgstr "Default Dari Surat"
+
+msgid "Email Host Username"
+msgstr "Nama Pengguna Host Email"
+
+msgid "Display Name"
+msgstr "Nama Tampilan"
+
+msgid "Email Authentication Password"
+msgstr "Kata Sandi Otentikasi Email"
+
+msgid "Use TLS"
+msgstr "Gunakan TLS"
+
+msgid "Use SSL"
+msgstr "Gunakan SSL"
+
+msgid "Fail Silently"
+msgstr "Gagal Secara Diam-diam"
+
+msgid "Primary Mail Server"
+msgstr "Server Surat Utama"
+
+msgid ""
+"By enabling this the display name will take from who triggered the mail"
+msgstr ""
+"Dengan mengaktifkan ini, nama tampilan akan diambil dari siapa yang memicu "
+"email tersebut"
+
+msgid "Email Send Timeout (seconds)"
+msgstr "Batas Waktu Pengiriman Email (detik)"
+
+msgid "Client ID"
+msgstr "ID Klien"
+
+msgid "Client Secret"
+msgstr "Rahasia Klien"
+
+msgid "Tenant ID"
+msgstr "ID Penyewa"
+
+msgid "Redirect URi"
+msgstr "Arahkan ulang URi"
+
+msgid "OAuth authorization endpoint"
+msgstr "Titik akhir otorisasi OAuth"
+
+msgid "OAuth token endpoint"
+msgstr "Titik akhir token OAuth"
+
+msgid "Microsoft Graph API endpoint"
+msgstr "Titik akhir Microsoft Graph API"
+
+msgid "This field is required"
+msgstr "Bidang ini wajib diisi"
+
+msgid "Mail Configuration"
+msgstr "Konfigurasi Surat"
+
+msgid "Mail Configurations"
+msgstr "Konfigurasi Surat"
+
+msgid "Draft"
+msgstr "Draf"
+
+msgid "Scheduled"
+msgstr "Dijadwalkan"
+
+msgid "Sent"
+msgstr "Terkirim"
+
+msgid "Delivered"
+msgstr "Terkirim"
+
+msgid "Bounced"
+msgstr "Terpental"
+
+msgid "Opened"
+msgstr "Dibuka"
+
+msgid "Failed"
+msgstr "Gagal"
+
+msgid "From"
+msgstr "Dari"
+
+msgid "Comma separated recipient email addresses"
+msgstr "Alamat email penerima yang dipisahkan koma"
+
+msgid "To"
+msgstr "Ke"
+
+msgid "Cc"
+msgstr "CC"
+
+msgid "Bcc"
+msgstr "SM"
+
+msgid "Subject"
+msgstr "Subjek"
+
+msgid "Body"
+msgstr "Tubuh"
+
+msgid "Rendered subject saved at send time."
+msgstr "Subjek yang dirender disimpan pada waktu pengiriman."
+
+msgid "Rendered body saved at send time."
+msgstr "Tubuh yang dirender disimpan pada waktu pengiriman."
+
+msgid "When the mail should be sent (for scheduled mails)."
+msgstr "Kapan surat harus dikirim (untuk surat terjadwal)."
+
+msgid "Sent By"
+msgstr "Dikirim Oleh"
+
+msgid "Mails"
+msgstr "Surat"
+
+msgid "Mail Attachment"
+msgstr "Lampiran Surat"
+
+msgid "Mail Attachments"
+msgstr "Lampiran Surat"
+
+msgid "Template title"
+msgstr "Judul templat"
+
+msgid "Related Model"
+msgstr "Model Terkait"
+
+msgid "Mail Templates"
+msgstr "Templat Surat"
+
+msgid "Save Changes?"
+msgstr "Simpan Perubahan?"
+
+msgid "Do you want to save your changes as a draft or discard them?"
+msgstr "Apakah Anda ingin menyimpan perubahan sebagai draf atau membuangnya?"
+
+msgid "Discard"
+msgstr "Buang"
+
+msgid "Save as Draft"
+msgstr "Simpan sebagai Draf"
+
+msgid "No emails found for"
+msgstr "Tidak ada email yang ditemukan untuk"
+
+msgid "Start typing to search emails..."
+msgstr "Mulai mengetik untuk mencari email..."
+
+msgid "Insert Fields"
+msgstr "Sisipkan Bidang"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Select fields to insert into your email template."
+msgstr "Pilih bidang untuk dimasukkan ke dalam templat email Anda."
+
+msgid "Instance"
+msgstr "Contoh"
+
+msgid "User"
+msgstr "Pengguna"
+
+msgid "Company"
+msgstr "Perusahaan"
+
+msgid "Request"
+msgstr "Meminta"
+
+msgid "Direct Fields"
+msgstr "Bidang Langsung"
+
+msgid "User Fields"
+msgstr "Bidang Pengguna"
+
+msgid "Company Fields"
+msgstr "Bidang Perusahaan"
+
+msgid "Request Fields"
+msgstr "Bidang Permintaan"
+
+msgid "Related Fields"
+msgstr "Bidang Terkait"
+
+msgid "Reverse Related Fields"
+msgstr "Bidang Terkait Terbalik"
+
+msgid "No fields available for this model"
+msgstr "Tidak ada kolom yang tersedia untuk model ini"
+
+msgid "Insert Selected Fields"
+msgstr "Sisipkan Bidang yang Dipilih"
+
+msgid "Test Email Configuration"
+msgstr "Uji Konfigurasi Email"
+
+msgid "Loading..."
+msgstr "Memuat..."
+
+msgid "Send Test Email"
+msgstr "Kirim Email Uji"
+
+msgid "Select Mail Server Type"
+msgstr "Pilih Jenis Server Email"
+
+msgid "Outlook Mail Server"
+msgstr "Server Surat Outlook"
+
+msgid "Configure using Microsoft Azure/Office 365 OAuth authentication"
+msgstr ""
+"Konfigurasikan menggunakan autentikasi OAuth Microsoft Azure/Office 365"
+
+msgid "Select Outlook"
+msgstr "Pilih Pandangan"
+
+msgid "mail"
+msgstr "surat"
+
+msgid "Other Mail Servers"
+msgstr "Server Email Lainnya"
+
+msgid "Configure SMTP, Gmail, Yahoo, or any other mail server"
+msgstr "Konfigurasikan SMTP, Gmail, Yahoo, atau server email lainnya"
+
+msgid "Select Other"
+msgstr "Pilih Lainnya"
+
+msgid "Refresh Token"
+msgstr "Segarkan Token"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Send Test Mail"
+msgstr "Kirim Surat Uji"
+
+msgid "Edit"
+msgstr "Sunting"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Mail Configuration Required"
+msgstr "Konfigurasi Email Diperlukan"
+
+msgid "Cannot send email"
+msgstr "Tidak dapat mengirim email"
+
+msgid "Mail can only be sent after outgoing mail is configured."
+msgstr "Email hanya dapat dikirim setelah email keluar dikonfigurasi."
+
+msgid "Configure Outgoing Mail"
+msgstr "Konfigurasikan Surat Keluar"
+
+msgid "Please contact your administrator to configure outgoing mail settings."
+msgstr ""
+"Silakan hubungi administrator Anda untuk mengonfigurasi pengaturan email "
+"keluar."
+
+msgid "Send Mail"
+msgstr "Kirim Surat"
+
+msgid "No mail server configured"
+msgstr "Tidak ada server email yang dikonfigurasi"
+
+msgid "Enter Subject"
+msgstr "Masukkan Subjek"
+
+msgid "Related to"
+msgstr "Terkait dengan"
+
+msgid "Message"
+msgstr "Pesan"
+
+msgid "Insert Field"
+msgstr "Sisipkan Bidang"
+
+msgid "Add mail template"
+msgstr "Tambahkan templat email"
+
+msgid "Save as template"
+msgstr "Simpan sebagai templat"
+
+msgid "Preview"
+msgstr "Pratinjau"
+
+msgid "Preview Error"
+msgstr "Kesalahan Pratinjau"
+
+msgid "Error generating preview:"
+msgstr "Kesalahan saat membuat pratinjau:"
+
+msgid "Mail Preview"
+msgstr "Pratinjau Surat"
+
+msgid "Email Snapshot"
+msgstr "Cuplikan Email"
+
+msgid "From:"
+msgstr "Dari:"
+
+msgid "No sender configured"
+msgstr "Tidak ada pengirim yang dikonfigurasi"
+
+msgid "To:"
+msgstr "Ke:"
+
+msgid "No recipient specified"
+msgstr "Tidak ada penerima yang ditentukan"
+
+msgid "No subject"
+msgstr "Tidak ada subjek"
+
+msgid "No message content"
+msgstr "Tidak ada isi pesan"
+
+msgid "This is how your email will look when sent"
+msgstr "Ini adalah tampilan email Anda saat dikirim"
+
+msgid "Enter template title"
+msgstr "Masukkan judul templat"
+
+msgid "Enter email subject (optional)"
+msgstr "Masukkan subjek email (opsional)"
+
+msgid "Select content type (optional)"
+msgstr "Pilih jenis konten (opsional)"
+
+msgid "Save as mail template"
+msgstr "Simpan sebagai templat email"
+
+msgid "Title"
+msgstr "Judul"
+
+msgid "Enter title"
+msgstr "Masukkan judul"
+
+msgid "Save Template"
+msgstr "Simpan Templat"
+
+msgid "Select Template"
+msgstr "Pilih Templat"
+
+msgid "Email Template Preview"
+msgstr "Pratinjau Templat Email"
+
+msgid "No content to preview"
+msgstr "Tidak ada konten untuk dipratinjau"
+
+msgid "Schedule Email"
+msgstr "Jadwalkan Email"
+
+msgid "Schedule Date"
+msgstr "Tanggal Jadwal"
+
+msgid "Schedule"
+msgstr "Jadwal"
+
+msgid "Cannot send email. Outgoing mail must be configured first."
+msgstr ""
+"Tidak dapat mengirim email.Surat keluar harus dikonfigurasi terlebih dahulu."
+
+msgid "To email is required"
+msgstr "Diperlukan untuk mengirim email"
+
+msgid "From mail configuration is required"
+msgstr "Konfigurasi dari email diperlukan"
+
+msgid ""
+"Both model_name and object_id are required to send mail related to an "
+"object."
+msgstr ""
+"Model_name dan object_id diperlukan untuk mengirim email yang terkait dengan"
+" suatu objek."
+
+msgid ""
+"Cannot send mail: model information is missing. Please try again from the "
+"opportunity page."
+msgstr ""
+"Tidak dapat mengirim email: informasi model tidak ada.Silakan coba lagi dari"
+" halaman peluang."
+
+msgid "Mail sent successfully"
+msgstr "Email berhasil dikirim"
+
+msgid "Mail bounced: "
+msgstr "Email terpental:"
+
+msgid "Failed to send mail: "
+msgstr "Gagal mengirim email:"
+
+msgid "Error sending mail: "
+msgstr "Kesalahan saat mengirim email:"
+
+msgid "Subject contains dangerous content."
+msgstr "Subjek mengandung konten berbahaya."
+
+msgid "Message body contains dangerous content."
+msgstr "Isi pesan berisi konten berbahaya."
+
+msgid "You do not have permission to access this record."
+msgstr "Anda tidak memiliki izin untuk mengakses catatan ini."
+
+msgid "Draft saved successfully"
+msgstr "Draf berhasil disimpan"
+
+msgid "Error saving draft: "
+msgstr "Terjadi kesalahan saat menyimpan draf:"
+
+msgid "Draft discarded"
+msgstr "Draf dibuang"
+
+msgid "Error discarding draft: "
+msgstr "Terjadi kesalahan saat membuang draf:"
+
+msgid "Mail deleted successfully."
+msgstr "Email berhasil dihapus."
+
+msgid "Schedule time is required"
+msgstr "Jadwal waktu diperlukan"
+
+msgid "Scheduled time must be in the future"
+msgstr "Waktu yang dijadwalkan harus di masa depan"
+
+msgid "Invalid date/time format"
+msgstr "Format tanggal/waktu tidak valid"
+
+msgid "Scheduled mail not found or you don't have permission"
+msgstr "Email terjadwal tidak ditemukan atau Anda tidak memiliki izin"
+
+msgid "You do not have permission to reschedule this mail."
+msgstr "Anda tidak memiliki izin untuk menjadwal ulang email ini."
+
+msgid "Mail rescheduled successfully for "
+msgstr "Email berhasil dijadwal ulang untuk"
+
+msgid "Invalid mail configuration selected"
+msgstr "Konfigurasi email yang dipilih tidak valid"
+
+msgid "You do not have permission to send mail for this record."
+msgstr "Anda tidak memiliki izin mengirim email untuk catatan ini."
+
+msgid "Mail scheduled successfully for "
+msgstr "Email berhasil dijadwalkan untuk"
+
+msgid "Error scheduling mail: "
+msgstr "Kesalahan menjadwalkan email:"
+
+msgid "Incoming Mail Configurations"
+msgstr "Konfigurasi Surat Masuk"
+
+msgid "Configure the IMAP server used to receive incoming emails."
+msgstr "Konfigurasikan server IMAP yang digunakan untuk menerima email masuk."
+
+msgid "Channel"
+msgstr "Saluran"
+
+msgid "Primary"
+msgstr "Utama"
+
+msgid "From Email"
+msgstr "Dari Surel"
+
+msgid "Dynamic Display Name"
+msgstr "Nama Tampilan Dinamis"
+
+msgid "Timeout (seconds)"
+msgstr "Batas waktu (detik)"
+
+msgid "Redirect URI"
+msgstr "Arahkan ulang URI"
+
+msgid "Authorization URL"
+msgstr "URL Otorisasi"
+
+msgid "Token URL"
+msgstr "URL Token"
+
+msgid "API Endpoint"
+msgstr "Titik Akhir API"
+
+msgid "Token Last Refreshed"
+msgstr "Token Terakhir Disegarkan"
+
+msgid "Review emails sent and received through Horilla."
+msgstr "Tinjau email yang dikirim dan diterima melalui Horilla."
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Sent At"
+msgstr "Dikirim Pada"
+
+msgid "Create reusable email templates for common messages."
+msgstr "Buat templat email yang dapat digunakan kembali untuk pesan umum."
+
+msgid "Update Mail Template"
+msgstr "Perbarui Templat Surat"
+
+msgid "Update Template"
+msgstr "Perbarui Templat"
+
+msgid "Create Mail Template"
+msgstr "Buat Templat Surat"
+
+msgid "Mail template \"{}\" updated successfully."
+msgstr "Templat email \"{}\" berhasil diperbarui."
+
+msgid "Mail template \"{}\" created successfully."
+msgstr "Templat email \"{}\" berhasil dibuat."
+
+msgid "Outgoing Mail Configurations"
+msgstr "Konfigurasi Surat Keluar"
+
+msgid "Configure the SMTP server used to send outgoing emails."
+msgstr ""
+"Konfigurasikan server SMTP yang digunakan untuk mengirim email keluar."
+
+msgid "Outgoing Mail Server Configuration"
+msgstr "Konfigurasi Server Surat Keluar"
+
+msgid "Something went wrong:"
+msgstr "Ada yang tidak beres:"
+
+msgid "Not configured outlook"
+msgstr "Pandangan tidak dikonfigurasi"
+
+msgid "Outlook Client ID is not configured"
+msgstr "ID Klien Outlook tidak dikonfigurasi"
+
+msgid "Outlook Redirect URI is not configured"
+msgstr "URI Pengalihan Outlook tidak dikonfigurasi"
+
+msgid "Outlook Authorization URL is not configured"
+msgstr "URL Otorisasi Outlook tidak dikonfigurasi"
+
+msgid "Invalid Outlook configuration"
+msgstr "Konfigurasi Outlook tidak valid"
+
+msgid "Outlook Token URL is not configured"
+msgstr "URL Token Outlook tidak dikonfigurasi"
+
+msgid "Outlook Client Secret is not configured"
+msgstr "Rahasia Klien Outlook tidak dikonfigurasi"
+
+msgid "Unable to build authorization response URI"
+msgstr "Tidak dapat membuat URI respons otorisasi"
+
+msgid "Token not refreshed, Login required"
+msgstr "Token tidak disegarkan, Diperlukan login"
+
+msgid "Token refreshed successfully"
+msgstr "Token berhasil disegarkan"
+
+#, python-brace-format
+msgid "Token refresh failed: {error}. Please re-authenticate."
+msgstr "Penyegaran token gagal:{error}.Harap autentikasi ulang."
+
+#, python-brace-format
+msgid "Token refresh failed: {error}"
+msgstr "Penyegaran token gagal:{error}"

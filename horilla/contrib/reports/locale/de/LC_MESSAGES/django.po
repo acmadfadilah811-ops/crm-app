@@ -1,0 +1,452 @@
+# German translations for Horilla Reports module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Module for creating and customizing reports across all system modules."
+msgstr ""
+"Modul zum Erstellen und Anpassen von Berichten ueber alle Systemmodule "
+"hinweg."
+
+msgid ""
+"Seed default CRM reports and extend the engine to load them. Add an empty "
+"state for report filters and refresh report-detail navbar button styles. "
+"Store relative referer URLs with a full-nav fallback from report detail."
+msgstr ""
+
+msgid ""
+"Gate report export through export permissions and get_export_queryset / "
+"is_exportable_field helpers."
+msgstr ""
+
+msgid ""
+"Avoid RelatedObjectDoesNotExist in create-report form_invalid when related "
+"objects are missing."
+msgstr ""
+
+msgid ""
+"Re-raise HttpNotFound with exception chaining in report detail, export, and "
+"CRUD views to preserve context."
+msgstr ""
+
+msgid ""
+"Added pivot cell active state and filter badge with clear action. Fixed "
+"detail table filtering for empty and null pivot group values."
+msgstr ""
+
+msgid ""
+"Removed redundant fields attributes superseded by form_class on report CRUD "
+"views, standardized first-party import groups, and added docstrings for "
+"pylint compliance."
+msgstr ""
+"Entfernung redundanter Feldattribute, die durch form_class in den CRUD-"
+"Ansichten der Berichte ersetzt wurden, Standardisierung der Importgruppen "
+"und Hinzufuegen von Docstrings fuer pylint-Konformitaet."
+
+#, fuzzy
+#| msgid ""
+#| "Report forms aligned with HorillaModelForm layout: field_order and "
+#| "Meta.fields = \"__all__\" with Meta.exclude; folder and column HTMX "
+#| "unchanged."
+msgid ""
+"Report forms aligned with ModelForm layout: field_order and Meta.fields = "
+"\"__all__\" with Meta.exclude; folder and column HTMX unchanged."
+msgstr ""
+"Berichtsformulare am HorillaModelForm-Layout ausgerichtet: field_order und "
+"Meta.fields mit Meta.exclude; Ordner und Spalten-HTMX unveraendert."
+
+msgid ""
+"Release 1.10: reports ship under contrib with app label reports. Cross-app "
+"report wiring, ContentType references, namespaces, and registrations updated "
+"for the contrib naming scheme."
+msgstr ""
+"Version 1.10: Berichte werden unter contrib mit dem App-Label reports "
+"ausgeliefert. App-uebergreifende Berichtsverdrahtung, ContentType-"
+"Referenzen, Namespaces und Registrierungen wurden aktualisiert."
+
+msgid ""
+"Improved report compatibility with dashboard multi-widget support, enhanced "
+"chart_value_field handling, and minor stability improvements for report "
+"rendering and filter processing."
+msgstr ""
+"Verbesserte Berichtskompatibilitaet mit Dashboard-Multi-Widget-"
+"Unterstuetzung, verbesserter chart_value_field-Handhabung und geringfuegigen "
+"Stabilitaetsverbesserungen fuer die Berichtsdarstellung."
+
+msgid ""
+"Added support for advanced chart types including Treemap, Area charts, "
+"Heatmaps, Sankey diagrams, and Radar charts. Improved compatibility with the "
+"new visualization and analytics framework."
+msgstr ""
+"Unterstuetzung fuer erweiterte Diagrammtypen hinzugefuegt, einschliesslich "
+"Baumkarte, Flaechendiagramme, Heatmaps, Sankey-Diagramme und Radardiagramme. "
+"Verbesserte Kompatibilitaet mit dem neuen Visualisierungs-Framework."
+
+#, fuzzy
+#| msgid ""
+#| "Migrated from Django AppConfig to Horilla AppLauncher and and "
+#| "replacedDjango utilities with horilla.utils.decorators, "
+#| "horilla.utils.translation,and horilla.shortcuts where applicable."
+msgid ""
+"Migrated from AppConfig to AppLauncher and and replacedutilities with "
+"utils.decorators, utils.translation,and shortcuts where applicable."
+msgstr ""
+"Migration von Django AppConfig zu Horilla AppLauncher und Ersatz der Django-"
+"Hilfsprogramme durch horilla.utils.decorators, horilla.utils.translation und "
+"horilla.shortcuts wo anwendbar."
+
+msgid "Reports"
+msgstr "Berichte"
+
+msgid "Analytics"
+msgstr "Analysen"
+
+msgid "Folder Name"
+msgstr "Ordnername"
+
+msgid "Folder"
+msgstr "Ordner"
+
+msgid "Folder Owner"
+msgstr "Ordnerinhaber"
+
+msgid "Report Folder"
+msgstr "Berichtsordner"
+
+msgid "Report Folders"
+msgstr "Berichtsordner"
+
+msgid "Column Chart"
+msgstr "Saeulendiagramm"
+
+msgid "Line Chart"
+msgstr "Liniendiagramm"
+
+msgid "Pie Chart"
+msgstr "Kreisdiagramm"
+
+msgid "Funnel"
+msgstr "Trichterdiagramm"
+
+msgid "Bar Chart"
+msgstr "Balkendiagramm"
+
+msgid "Donut"
+msgstr "Ringdiagramm"
+
+msgid "Stacked Vertical Chart"
+msgstr "Gestapeltes vertikales Diagramm"
+
+msgid "Stacked Horizontal Chart"
+msgstr "Gestapeltes horizontales Diagramm"
+
+msgid "Scatter Chart"
+msgstr "Streudiagramm"
+
+msgid "Treemap"
+msgstr "Baumkarte"
+
+msgid "Area Chart"
+msgstr "Flaechendiagramm"
+
+msgid "Heatmap"
+msgstr "Heatmap"
+
+msgid "Sankey"
+msgstr "Sankey-Diagramm"
+
+msgid "Radar Chart"
+msgstr "Radardiagramm"
+
+msgid "Report Owner"
+msgstr "Berichtsinhaber"
+
+msgid "Report Name"
+msgstr "Berichtsname"
+
+msgid "Module"
+msgstr "Modul"
+
+msgid "Chart Field"
+msgstr "Diagrammfeld"
+
+msgid "Secondary Field"
+msgstr "Sekundaeres Feld"
+
+msgid "Value Field (Y-axis)"
+msgstr "Wertfeld (Y-Achse)"
+
+msgid "Report"
+msgstr "Bericht"
+
+msgid "breadcrumb"
+msgstr ""
+
+msgid " All Reports"
+msgstr " Alle Berichte"
+
+msgid "Folders"
+msgstr "Ordner"
+
+msgid "All Folders"
+msgstr "Alle Ordner"
+
+msgid "Favourites"
+msgstr "Favoriten"
+
+msgid "All Reports"
+msgstr "Alle Berichte"
+
+msgid "You are already selected this field"
+msgstr "Dieses Feld wurde bereits ausgewaehlt"
+
+msgid "No matching columns found"
+msgstr "Keine passenden Spalten gefunden"
+
+msgid "No fields found matching your search"
+msgstr "Keine Felder gefunden, die Ihrer Suche entsprechen"
+
+msgid "R"
+msgstr "R"
+
+msgid "C"
+msgstr "C"
+
+msgid "A"
+msgstr "A"
+
+msgid "Summary Report"
+msgstr "Zusammenfassender Bericht"
+
+msgid "Total Count"
+msgstr "Gesamtanzahl"
+
+msgid "Total"
+msgstr "Gesamt"
+
+msgid "Subtotal"
+msgstr "Zwischensumme"
+
+msgid "Grand Total"
+msgstr "Gesamtsumme"
+
+msgid "Count"
+msgstr "Anzahl"
+
+msgid "Overall Grand Total"
+msgstr "Gesamtsumme insgesamt"
+
+msgid "Error"
+msgstr "Fehler"
+
+msgid "Configuration not supported"
+msgstr "Konfiguration wird nicht unterstuetzt"
+
+msgid "Columns"
+msgstr "Spalten"
+
+msgid "Grouping"
+msgstr "Gruppierung"
+
+msgid "Filter"
+msgstr "Filter"
+
+msgid "Search Columns"
+msgstr "Spalten suchen"
+
+msgid "Search"
+msgstr "Suchen"
+
+msgid "Selected Columns"
+msgstr "Ausgewaehlte Spalten"
+
+msgid "Grouped Columns"
+msgstr "Gruppierte Spalten"
+
+msgid "Row Groups"
+msgstr "Zeilengruppen"
+
+msgid "Column Groups"
+msgstr "Spaltengruppen"
+
+msgid "Aggregate Columns"
+msgstr "Aggregierte Spalten"
+
+msgid "Sum"
+msgstr "Summe"
+
+msgid "Avg"
+msgstr "Durchschnitt"
+
+msgid "Max"
+msgstr "Maximum"
+
+msgid "Min"
+msgstr "Minimum"
+
+msgid "Seacrch"
+msgstr "Suchen"
+
+msgid "Apply Filters"
+msgstr "Filter anwenden"
+
+msgid "value1,value2"
+msgstr ""
+
+msgid "Select..."
+msgstr "Auswaehlen..."
+
+msgid "No filters applied. Add a filter to refine your results."
+msgstr ""
+
+msgid "Report:"
+msgstr "Bericht:"
+
+msgid "Refresh"
+msgstr "Aktualisieren"
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Discard Changes"
+msgstr "Aenderungen verwerfen"
+
+msgid "Close"
+msgstr "Schliessen"
+
+msgid "Close Panel"
+msgstr "Bereich schliessen"
+
+msgid "Edit Report"
+msgstr "Bericht bearbeiten"
+
+msgid "Edit"
+msgstr "Bearbeiten"
+
+msgid "Actions"
+msgstr "Aktionen"
+
+msgid "You have unsaved changes. Click"
+msgstr "Sie haben nicht gespeicherte Aenderungen. Klicken Sie auf"
+
+msgid "to keep your changes or"
+msgstr "um Ihre Aenderungen zu behalten oder"
+
+msgid "Discard"
+msgstr "Verwerfen"
+
+msgid "to revert."
+msgstr "um zurueckzusetzen."
+
+msgid "Detail table"
+msgstr "Detailtabelle"
+
+msgid "Filtered by pivot:"
+msgstr "Gefiltert nach Pivot:"
+
+msgid "Clear pivot filter"
+msgstr "Pivot-Filter loeschen"
+
+msgid "Pivot table"
+msgstr "Pivot-Tabelle"
+
+msgid "Report Chart"
+msgstr "Berichtsdiagramm"
+
+msgid "Change Chart"
+msgstr "Diagramm aendern"
+
+msgid "Export as PDF"
+msgstr "Als PDF exportieren"
+
+msgid "Export as PNG"
+msgstr "Als PNG exportieren"
+
+msgid "Add to Dashboard"
+msgstr "Zum Dashboard hinzufuegen"
+
+msgid "Record Count:"
+msgstr "Anzahl der Datensaetze:"
+
+msgid "Favourite"
+msgstr "Favorit"
+
+msgid "Move"
+msgstr "Verschieben"
+
+msgid "Delete"
+msgstr "Loeschen"
+
+msgid "Select Default Reports"
+msgstr "Standardberichte auswaehlen"
+
+msgid "Select All"
+msgstr "Alle auswaehlen"
+
+msgid "Create"
+msgstr "Erstellen"
+
+msgid "No reports found."
+msgstr "Keine Berichte gefunden."
+
+msgid "New Report"
+msgstr "Neuer Bericht"
+
+msgid "Load Default Reports"
+msgstr "Standardberichte laden"
+
+msgid "New Folder"
+msgstr "Neuer Ordner"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Type"
+msgstr "Typ"
+
+msgid "Average"
+msgstr "Durchschnitt"
+
+msgid "Minimum"
+msgstr "Minimum"
+
+msgid "Maximum"
+msgstr "Maximum"
+
+msgid "Record count"
+msgstr "Anzahl der Datensaetze"
+
+#, python-format
+msgid "%(metric)s of %(field)s"
+msgstr "%(metric)s von %(field)s"
+
+msgid "Chart type"
+msgstr "Diagrammtyp"
+
+msgid "X-axis (Group by)"
+msgstr "X-Achse (Gruppieren nach)"
+
+msgid "Stack by (second group)"
+msgstr "Stapeln nach (zweite Gruppe)"
+
+msgid "Y-axis (Value)"
+msgstr "Y-Achse (Wert)"
+
+msgid "Invalid field '{}'. This field does not exist on the model."
+msgstr "Ungueltiges Feld '{}'. Dieses Feld existiert nicht im Modell."
+
+msgid "Invalid filter value: {}"
+msgstr "Ungueltiger Filterwert: {}"

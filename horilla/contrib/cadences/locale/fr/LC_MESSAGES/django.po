@@ -1,0 +1,456 @@
+# French translations for Horilla Cadences module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Module for managing cadence workflows and runtime activity sequences."
+msgstr ""
+"Module de gestion des flux de travail de cadence et des sequences "
+"d'activites."
+
+msgid ""
+"Standardized exception chaining in cadence forms to preserve root-cause "
+"tracebacks."
+msgstr ""
+
+msgid ""
+"Migrated signal and timezone imports to the horilla shims, standardized "
+"first-party import groups, and added class and method docstrings for pylint "
+"compliance."
+msgstr ""
+"Migration des imports de signaux et de fuseaux horaires vers les shims "
+"horilla, standardisation des groupes d'imports et ajout de docstrings pour "
+"la conformite pylint."
+
+msgid ""
+"Cadence forms aligned with HorillaModelForm layout: field_order, Meta.fields "
+"= \"__all__\", Meta.exclude, and keep_on_form; save logic and HTMX unchanged."
+msgstr ""
+"Les formulaires de cadence ont ete alignes sur le layout HorillaModelForm : "
+"field_order, Meta.fields, Meta.exclude et keep_on_form ; logique de "
+"sauvegarde et HTMX inchanges."
+
+msgid ""
+"Release 1.10: cadences ship under contrib with app label cadences. Signals, "
+"registrations, URLs, and static paths updated to match the new contrib "
+"layout."
+msgstr ""
+"Version 1.10 : les cadences sont integrees sous contrib avec le label "
+"d'application cadences. Signaux, enregistrements, URLs et chemins statiques "
+"mis a jour."
+
+msgid ""
+"Implemented cadence signals for runtime activities, enabling automated "
+"cadence-driven workflow execution and activity tracking."
+msgstr ""
+"Implementation des signaux de cadence pour les activites d'execution, "
+"permettant l'execution automatisee des flux de travail pilotes par cadence "
+"et le suivi des activites."
+
+msgid "Cadences"
+msgstr "Cadences"
+
+msgid "At least one condition is required."
+msgstr "Au moins une condition est requise."
+
+msgid "Each condition row must include Field, Operator, and Value."
+msgstr ""
+"Chaque ligne de condition doit inclure un champ, un operateur et une valeur."
+
+msgid "Mail to"
+msgstr "Envoyer le mail a"
+
+msgid ""
+"Choose which user or email field on the record should receive this mail."
+msgstr ""
+"Choisissez quel champ utilisateur ou e-mail du enregistrement doit recevoir "
+"ce mail."
+
+msgid ""
+"Email follow-up is unavailable until an outgoing mail server is configured."
+msgstr ""
+"Le suivi par e-mail n'est pas disponible tant qu'un serveur de messagerie "
+"sortant n'est pas configure."
+
+msgid "Parent follow-up is required for this stage."
+msgstr "Le suivi parent est requis pour cette etape."
+
+msgid "Invalid cadence for branch."
+msgstr "Cadence invalide pour la branche."
+
+msgid "Parent must belong to the previous follow-up stage."
+msgstr "Le parent doit appartenir a l'etape de suivi precedente."
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Module"
+msgstr "Module"
+
+msgid "Target module"
+msgstr "Module cible"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Cadence"
+msgstr "Cadence"
+
+msgid "Field Name"
+msgstr "Nom du champ"
+
+msgid "Operator"
+msgstr "Operateur"
+
+msgid "Value"
+msgstr "Valeur"
+
+msgid "AND"
+msgstr "ET"
+
+msgid "OR"
+msgstr "OU"
+
+msgid "Logical Operator"
+msgstr "Operateur logique"
+
+msgid "Order"
+msgstr "Ordre"
+
+msgid "Cadence Condition"
+msgstr "Condition de cadence"
+
+msgid "Cadence Conditions"
+msgstr "Conditions de cadence"
+
+msgid "Task"
+msgstr "Tache"
+
+msgid "Call"
+msgstr "Appel"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Overdue"
+msgstr "En retard"
+
+msgid "Immediately"
+msgstr "Immediatement"
+
+msgid "Minute"
+msgstr "Minute"
+
+msgid "Hour"
+msgstr "Heure"
+
+msgid "Day"
+msgstr "Jour"
+
+msgid "Month"
+msgstr "Mois"
+
+msgid "Follow up"
+msgstr "Suivi"
+
+msgid "Stage number (1 = first follow-up)."
+msgstr "Numero d'etape (1 = premier suivi)."
+
+msgid "Follow up Type"
+msgstr "Type de suivi"
+
+msgid "Branched from"
+msgstr "Derive de"
+
+#, fuzzy
+#| msgid ""
+#| "Set when this step was created from a specific parent card's + (next "
+#| "stage)."
+msgid ""
+"Set when this step was created from a specific parent card’s + (next stage)."
+msgstr ""
+"Defini lorsque cette etape a ete creee depuis le bouton + d'une carte parent "
+"(etape suivante)."
+
+msgid "Do This"
+msgstr "Faire ceci"
+
+msgid "Do This Value"
+msgstr "Valeur de faire ceci"
+
+msgid "Required for minute/hour/day/month."
+msgstr "Requis pour minute/heure/jour/mois."
+
+msgid "After Previous Status Is"
+msgstr "Apres que le statut precedent soit"
+
+msgid "Required from follow up 2 onwards."
+msgstr "Requis a partir du suivi 2."
+
+msgid "Subject"
+msgstr "Objet"
+
+msgid "Trigger Date + Days"
+msgstr "Date de declenchement + jours"
+
+msgid "Status"
+msgstr "Statut"
+
+msgid "Priority"
+msgstr "Priorite"
+
+msgid "Task Owner"
+msgstr "Responsable de la tache"
+
+msgid "Call Type"
+msgstr "Type d'appel"
+
+msgid "Call Status"
+msgstr "Statut de l'appel"
+
+msgid "Call Start + Days"
+msgstr "Debut d'appel + jours"
+
+msgid "Call Owner"
+msgstr "Responsable de l'appel"
+
+msgid "Purpose"
+msgstr "Objet"
+
+msgid "Recipients for this step. Choose user/email fields from the record"
+msgstr ""
+"Destinataires pour cette etape. Choisissez les champs utilisateur/e-mail du "
+"enregistrement."
+
+msgid "Mail Template"
+msgstr "Modele d'e-mail"
+
+msgid "Cadence Follow up"
+msgstr "Suivi de cadence"
+
+msgid "Cadence Follow ups"
+msgstr "Suivis de cadence"
+
+msgid "Follow up 1 can only contain one item."
+msgstr "Le suivi 1 ne peut contenir qu'un seul element."
+
+msgid "Select status condition from previous follow-up."
+msgstr "Selectionnez la condition de statut du suivi precedent."
+
+msgid "Cannot add this follow-up before creating previous follow-up bucket."
+msgstr ""
+"Impossible d'ajouter ce suivi avant de creer le groupe de suivi precedent."
+
+msgid "Enter value for selected Do This unit."
+msgstr "Entrez la valeur pour l'unite Faire ceci selectionnee."
+
+msgid "This field is required for selected follow-up type."
+msgstr "Ce champ est requis pour le type de suivi selectionne."
+
+msgid "Invalid follow-up type."
+msgstr "Type de suivi invalide."
+
+msgid "Back"
+msgstr "Retour"
+
+msgid "Edit"
+msgstr "Modifier"
+
+msgid "View Reports"
+msgstr "Voir les rapports"
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "Delete"
+msgstr "Supprimer"
+
+msgid "Do this"
+msgstr "Faire ceci"
+
+msgid "After previous status is"
+msgstr "Apres que le statut precedent soit"
+
+msgid "Due Date"
+msgstr "Date d'echeance"
+
+msgid "Trigger date +"
+msgstr "Date de declenchement +"
+
+msgid "day(s)"
+msgstr "jour(s)"
+
+msgid "Mail template"
+msgstr "Modele d'e-mail"
+
+msgid "Add follow-up in next stage"
+msgstr "Ajouter un suivi a l'etape suivante"
+
+msgid "Add follow-up in this stage"
+msgstr "Ajouter un suivi a cette etape"
+
+msgid "Add another follow-up in this stage"
+msgstr "Ajouter un autre suivi a cette etape"
+
+msgid ""
+"Get started by adding an Email, Task, or Call follow-up to your Cadence."
+msgstr "Commencez par ajouter un suivi E-mail, Tache ou Appel a votre cadence."
+
+msgid "Add Follow Ups"
+msgstr "Ajouter des suivis"
+
+msgid "Add Follow-up"
+msgstr "Ajouter un suivi"
+
+msgid "Cadence Name"
+msgstr "Nom de la cadence"
+
+msgid "Start Date"
+msgstr "Date de debut"
+
+msgid "Last Follow-up Response"
+msgstr "Derniere reponse de suivi"
+
+msgid "Next Follow-up"
+msgstr "Prochain suivi"
+
+msgid "No active cadences match this record right now."
+msgstr ""
+"Aucune cadence active ne correspond a cet enregistrement pour le moment."
+
+msgid "Total Triggered Calls"
+msgstr "Total des appels declenches"
+
+msgid "Completed Calls"
+msgstr "Appels termines"
+
+msgid "Scheduled Calls"
+msgstr "Appels planifies"
+
+msgid "Cancelled Calls"
+msgstr "Appels annules"
+
+msgid "Total Triggered Mails"
+msgstr "Total des e-mails declenches"
+
+msgid "Email Delivered"
+msgstr "E-mail livre"
+
+msgid "Bounced Emails"
+msgstr "E-mails rejetes"
+
+msgid "Opened Emails"
+msgstr "E-mails ouverts"
+
+msgid "Failed Mails"
+msgstr "E-mails echoues"
+
+msgid "Report"
+msgstr "Rapport"
+
+msgid "Cadences Report"
+msgstr "Rapport des cadences"
+
+msgid "Total Triggered Tasks"
+msgstr "Total des taches declenchees"
+
+msgid "Completed Tasks"
+msgstr "Taches terminees"
+
+msgid "Pending Tasks"
+msgstr "Taches en attente"
+
+msgid "Unresolved"
+msgstr "Non resolu"
+
+msgid "Mail Configuration Required"
+msgstr "Configuration de messagerie requise"
+
+msgid "Close"
+msgstr "Fermer"
+
+msgid "Cannot add Email Follow-up"
+msgstr "Impossible d'ajouter un suivi par e-mail"
+
+msgid "Configure outgoing mail to use Email follow-ups in cadence."
+msgstr ""
+"Configurez la messagerie sortante pour utiliser les suivis par e-mail dans "
+"la cadence."
+
+msgid "Configure"
+msgstr "Configurer"
+
+msgid "Follow-Up"
+msgstr "Suivi"
+
+msgid "Completed"
+msgstr "Termine"
+
+msgid "Pending"
+msgstr "En attente"
+
+msgid "Scheduled"
+msgstr "Planifie"
+
+msgid "Cancelled"
+msgstr "Annule"
+
+msgid "Email Template"
+msgstr "Modele d'e-mail"
+
+msgid "Delivered"
+msgstr "Livre"
+
+msgid "Bounced"
+msgstr "Rejete"
+
+msgid "Opened"
+msgstr "Ouvert"
+
+msgid "Failed"
+msgstr "Echoue"
+
+msgid "New"
+msgstr "Nouveau"
+
+#, fuzzy
+#| msgid "Cadence Conditions"
+msgid "Conditions"
+msgstr "Conditions de cadence"
+
+msgid "Follow-up removed."
+msgstr "Suivi supprime."
+
+msgid ""
+"Remove or reassign follow-ups in later stages before deleting this step."
+msgstr ""
+"Supprimez ou reaffectez les suivis dans les etapes ulterieures avant de "
+"supprimer cette etape."
+
+msgid "Next Follow-up Response"
+msgstr "Prochaine reponse de suivi"
+
+msgid "Invalid model for cadence tab."
+msgstr "Modele invalide pour l'onglet cadence."
+
+msgid "Object not found."
+msgstr "Objet introuvable."
+
+msgid "You don't have permission to view this item."
+msgstr "Vous n'avez pas la permission de voir cet element."

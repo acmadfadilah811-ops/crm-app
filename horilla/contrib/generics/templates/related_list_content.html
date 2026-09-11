@@ -1,0 +1,106 @@
+<div class="h-full min-h-0 w-full flex flex-col">
+    <div class="flex justify-between mb-2 flex-shrink-0">
+        <div class="flex gap-2">
+            {% if related_list|can_add_related:object and related_list.add_url %}
+                <a
+                    hx-get="{{ object|get_add_url:related_list }}?id={{ object.id }}"
+                    hx-target="#modalBox"
+                    onclick="event.stopPropagation();openModal()"
+                    class="text-sm px-4 py-1.5 bg-primary-600 rounded-md hover:bg-primary-800 transition duration-300 text-[white] cursor-pointer"
+                >
+                    {% if related_list.button_name %}
+                        {{ related_list.button_name }}
+                    {% else %}
+                        {% trans "Add" %}
+                    {% endif %}
+                </a>
+            {% endif %}
+            {% if related_list.custom_buttons %}
+                {% for button in related_list.custom_buttons %}
+                    <button
+                        hx-get="{{ button.url }}?id={{object.id}}"
+                        {{ button.attrs|safe }}
+                        class="{{ button.class }}"
+                    >
+                        {% if button.icon %}
+                            <i class="{{ button.icon }} mr-1"></i>
+                        {% endif %}
+                        {{ button.label }}
+                    </button>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <div class="flex gap-2">
+            <!-- Refresh Button -->
+            <button
+                hx-get="{% url 'generics:related_list_content' object.pk %}?field_name={{ related_list.name }}&model_name={{ object|model_name }}&class_name={{ class_name }}"
+                hx-target="#{{ related_list.name|sanitize_id }}-content"
+                hx-swap="outerHTML"
+                hx-select="#{{ related_list.name|sanitize_id }}-content"
+                title="{% trans 'Reload' %}"
+                class="bg-[#f3f4f6] w-6 h-6 md:w-8 md:h-8 flex items-center justify-center rounded transition duration-300 cursor-pointer"
+            >
+                <img src="{% static 'assets/icons/l5.svg' %}" alt="{% trans 'Reload' %}" width="17">
+            </button>
+
+            {% if can_add_column or related_list.dropdown_actions %}
+                <!-- Dropdown Menu -->
+                <div class="bg-[#f3f4f6] w-6 h-6 md:w-8 md:h-8 flex items-center justify-center rounded transition duration-300 cursor-pointer">
+                    <button
+                        id="dropdownDefaultButton-{{ related_list.name|sanitize_id }}"
+                        data-dropdown-toggle="dropdown-{{ related_list.name|sanitize_id }}"
+                        data-dropdown-placement="right-end"
+                        title="{% trans 'Actions' %}"
+                    >
+                        <img src="{% static 'assets/icons/l1.svg' %}" alt="{% trans 'Actions' %}" width="18">
+                    </button>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    {% if can_add_column or related_list.dropdown_actions %}
+        <!-- Dropdown Menu Content -->
+        <div
+            id="dropdown-{{ related_list.name|sanitize_id }}"
+            class="z-10 hidden bg-white rounded-lg [box-shadow:0px_0px_20px_0px_rgb(0_0_0_/_5%)] min-w-[160px] py-1 absolute"
+        >
+            <ul class="text-sm" aria-labelledby="dropdownDefaultButton-{{ related_list.name }}">
+                {% if can_add_column %}
+                    <li>
+                        <button
+                            hx-get="{% url 'generics:column_selector' %}?app_label={{ related_list.app_label }}&model_name={{ related_list.model_name }}&url_name=related_list_content"
+                            onclick="openModal()"
+                            hx-target="#modalBox"
+                            hx-swap="innerHTML"
+                            class="block w-full px-4 py-2 text-left hover:text-primary-600 transition duration-300 text-sm"
+                        >
+                            {% trans "Add Column to List" %}
+                        </button>
+                    </li>
+                {% endif %}
+                {% for action in related_list.dropdown_actions %}
+                    <li>
+                        <button
+                            hx-get="{{ action.url }}"
+                            {{ action.attrs|safe }}
+                            class="block w-full px-4 py-2 text-left hover:text-primary-600 transition duration-300 text-sm"
+                        >
+                            {{ action.title }}
+                        </button>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    <!-- Content Area -->
+    <div class="pt-3 flex-1 min-h-0 flex flex-col">
+        {% if related_list.rendered_content %}
+            {{ related_list.rendered_content|safe }}
+        {% else %}
+            <p class="text-gray-500 text-center py-4">No {{ related_list.title|lower }} found.</p>
+        {% endif %}
+    </div>
+</div>

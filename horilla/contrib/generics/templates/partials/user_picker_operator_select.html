@@ -1,0 +1,19 @@
+<div id="up-operator-container-{{ row_id }}">
+    <select
+        name="operator"
+        class="js-example-basic-single w-full"
+        hx-get="{{ up_filter_url }}"
+        hx-include="#up-filter-row-{{ row_id }} [name='field']"
+        hx-vals='{"operator_change": "true", "row_id": "{{ row_id }}"}'
+        hx-target="#up-value-container-{{ row_id }}"
+        hx-select="#up-value-container-{{ row_id }}"
+        hx-swap="outerHTML"
+        hx-push-url="false"
+        hx-trigger="change"
+    >
+        <option value="">{% trans 'Select Operator' %}</option>
+        {% for value, label in operators %}
+            <option value="{{ value }}">{{ label }}</option>
+        {% endfor %}
+    </select>
+</div>

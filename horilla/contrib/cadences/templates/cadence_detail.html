@@ -1,0 +1,345 @@
+{% extends "settings/settings.html" %}
+{% block settings %}
+    <link rel="stylesheet" href="{% static 'cadences/css/cadence_detail.css' %}">
+    {% has_perm "cadences.view_cadence" as can_view_cadence %}
+
+    {% if can_view_cadence %}
+        <div class="mb-6">
+            <div class="flex justify-between items-start gap-4">
+                <div class="min-w-0 flex-1">
+                    <div class="flex items-center gap-3 mb-3">
+                        <button
+                            type="button"
+                            class="shrink-0 p-1 rounded hover:bg-dark-50 transition"
+                            title="{% trans 'Back' %}"
+                            hx-get="{{ previous_url }}"
+                            hx-target="#mainContent"
+                            hx-swap="outerHTML"
+                            hx-select="#mainContent"
+                            hx-push-url="true"
+                        >
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <h3 class="text-md font-semibold text-color-600 truncate">{{ obj.name }}</h3>
+                        {% if can_update %}
+                            <button
+                                type="button"
+                                class="shrink-0 p-1 rounded hover:bg-dark-50 transition"
+                                title="{% trans 'Edit' %}"
+                                hx-get="{{ obj.get_edit_url }}"
+                                hx-target="#modalBox"
+                                hx-swap="innerHTML"
+                                onclick="openModal()"
+                            >
+                                <img src="{% static 'assets/icons/edit.svg' %}" alt="" width="15" height="15">
+                            </button>
+                        {% endif %}
+                    </div>
+                </div>
+                <button
+                    type="button"
+                    class="inline-flex items-center gap-2 text-sm px-4 py-2 border border-primary-600 rounded-md text-primary-600"
+                    hx-get="{% url 'cadences:cadence_report_view' %}?cadence_pk={{ obj.pk }}"
+                    hx-target="#mainContent"
+                    hx-swap="outerHTML"
+                    hx-push-url="true"
+                    hx-select="#mainContent"
+                >
+                    <i class="fa-solid fa-chart-line"></i>
+                    {% trans "View Reports" %}
+                </button>
+            </div>
+        </div>
+
+        <div class="custom-scroll overflow-x-auto overflow-y-visible pb-1">
+            <div
+                id="cadence-board-grid"
+                class="cadence-board-grid grid gap-5 overflow-visible min-w-0"
+                data-arrow-src="{% static 'assets/icons/right1.svg' %}"
+                style="grid-template-columns: repeat({{ followup_column_count }}, minmax(255px, 1fr))"
+            >
+                <button
+                    id="reloadButton"
+                    hidden
+                    hx-get="{{ request.path }}?{{request.GET.urlencode}}"
+                    hx-target="#cadence-board-grid"
+                    hx-swap="outerHTML"
+                    hx-select="#cadence-board-grid"
+                    hx-select-oob="#dropdown-companies"
+                >
+                    click
+                </button>
+                {% include "messages.html" %}
+                {% for col in cadence_columns %}
+                    <div class="kanban-block relative flex flex-col overflow-visible rounded-lg bg-[#e9edf0] px-1.5 pb-4 pt-0">
+                        <div class="sticky top-0 z-10 flex bg-[#e9edf0] py-2">
+                            <h5 class="rounded-2xl text-white bg-primary-600 px-5 py-1.5 text-center text-sm font-medium">
+                                {% trans "Follow up" %} {{ col.col_num }}
+                            </h5>
+                        </div>
+
+                        <div class="custom-scroll cadence-column-cards flex max-h-[calc(100vh-340px)] min-w-0 w-full flex-col pr-2">
+                            {% if col.rows %}
+                                {% for row in col.rows %}
+                                    {% if row.empty_slot %}
+                                        <div class="cadence-path-unit w-full mb-2">
+                                            <div class="cadence-slot-empty-card w-full h-[200px]" aria-hidden="true">
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        {% with c=row.condition %}
+                                            <div class="cadence-path-unit w-full mb-2">
+                                                <div
+                                                    class="cadence-followup-card mb-0 w-full max-w-none px-3 py-4 pr-4 text-sm leading-relaxed sm:px-4 sm:pr-4"
+                                                    data-followup-pk="{{ c.pk }}"
+                                                    data-branch-from-id="{% if c.branch_from_id %}{{ c.branch_from_id }}{% endif %}"
+                                                >
+                                                    {% if can_update %}
+                                                        <button
+                                                            class="card-item-menu-btn p-1.5 text-gray-400 hover:text-primary-600"
+                                                            id="followup-card-menu-btn-{{ c.pk }}"
+                                                            data-dropdown-toggle="followup-card-menu-{{ c.pk }}"
+                                                            type="button"
+                                                            title="{% trans 'Actions' %}"
+                                                            aria-label="{% trans 'Menu' %}"
+                                                            onclick="event.stopPropagation()"
+                                                        >
+                                                            <svg
+                                                                class="w-5 h-5"
+                                                                fill="none"
+                                                                stroke="currentColor"
+                                                                viewBox="0 0 24 24"
+                                                            >
+                                                                <path
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    stroke-width="2"
+                                                                    d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                                                                />
+                                                            </svg>
+                                                        </button>
+                                                        <div
+                                                            id="followup-card-menu-{{ c.pk }}"
+                                                            class="card-item-menu hidden bg-white rounded-lg [box-shadow:0px_0px_20px_0px_rgb(0_0_0_/_5%)] min-w-[120px]"
+                                                        >
+                                                            <ul
+                                                                class="py-2 text-sm"
+                                                                aria-labelledby="followup-card-menu-btn-{{ c.pk }}"
+                                                            >
+                                                                <li>
+                                                                    <button
+                                                                        type="button"
+                                                                        class="block px-3 py-1 hover:text-primary-600 transition duration-300 text-xs w-full flex"
+                                                                        hx-get="{{ c.get_edit_url }}"
+                                                                        hx-target="#modalBox"
+                                                                        hx-swap="innerHTML"
+                                                                        onclick="openModal()"
+                                                                    >
+                                                                        {% trans "Edit" %}
+                                                                    </button>
+                                                                </li>
+                                                                {% if row.show_delete_followup %}
+                                                                    <li>
+                                                                        <button
+                                                                            type="button"
+                                                                            class="block px-3 py-1 hover:text-primary-600 transition duration-300 text-xs w-full flex"
+                                                                            hx-get="{{ c.get_delete_url }}"
+                                                                            hx-target="#modalBox"
+                                                                            hx-swap="innerHTML"
+                                                                            onclick="openModal()"
+                                                                        >
+                                                                            {% trans "Delete" %}
+                                                                        </button>
+                                                                    </li>
+                                                                {% endif %}
+                                                            </ul>
+                                                        </div>
+                                                    {% endif %}
+
+                                                    <div class="mb-4 flex items-center gap-2.5 border-b border-b-[#565e6c13] pb-4 pr-14">
+                                                        <img
+                                                            src="{% static row.icon %}"
+                                                            alt=""
+                                                            width="20"
+                                                            height="20"
+                                                            class="shrink-0"
+                                                        >
+                                                        <p class="text-sm font-medium text-color-600">
+                                                            {{ row.kind_label }}
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="cadence-field-block">
+                                                        <p class="mb-1.5 text-xs font-semibold text-dark-600">
+                                                            {% trans "Do this" %}
+                                                        </p>
+                                                        <p class="text-xs text-[#565E6C]">
+                                                            {% if c.followup_number > 1 and c.previous_status %}
+                                                                {% trans "After previous status is" %}
+                                                                {{ c.get_previous_status_display }}<br>
+                                                            {% endif %}
+                                                            {% if c.do_this_unit == "immediately" %}
+                                                                {% trans "Immediately" %}
+                                                            {% else %}
+                                                                {{ c.do_this_value }} {{ c.get_do_this_unit_display }}
+                                                            {% endif %}
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="cadence-field-block">
+                                                        <p class="mb-1.5 text-xs font-semibold text-dark-600">
+                                                            {% trans "Due Date" %}
+                                                        </p>
+                                                        <p class="text-xs text-[#565E6C]">
+                                                            {% if row.kind == "task" %}
+                                                                {% trans "Trigger date +" %}
+                                                                {{ c.due_after_days|default:0 }} {% trans "day(s)" %}
+                                                            {% elif row.kind == "call" %}
+                                                                {% trans "Trigger date +" %}
+                                                                {{ c.call_start_after_days|default:0 }}
+                                                                {% trans "day(s)" %}
+                                                            {% else %}
+                                                                —
+                                                            {% endif %}
+                                                        </p>
+                                                    </div>
+
+                                                    {% if row.kind == "task" %}
+                                                        <div class="cadence-field-block">
+                                                            <p class="mb-1.5 text-xs font-semibold text-dark-600">
+                                                                {% trans "Subject" %}
+                                                            </p>
+                                                            <p class="text-xs text-[#565E6C]">{{ c.subject }}</p>
+                                                        </div>
+                                                    {% elif row.kind == "call" %}
+                                                        <div class="cadence-field-block">
+                                                            <p class="mb-1.5 text-xs font-semibold text-dark-600">
+                                                                {% trans "Purpose" %}
+                                                            </p>
+                                                            <p class="text-xs text-[#565E6C]">{{ c.purpose }}</p>
+                                                        </div>
+                                                    {% else %}
+                                                        <div class="cadence-field-block">
+                                                            <p class="mb-1.5 text-xs font-semibold text-dark-600">
+                                                                {% trans "Mail template" %}
+                                                            </p>
+                                                            <p class="text-xs text-[#565E6C]">
+                                                                {{ c.email_template.title|default:"—" }}
+                                                            </p>
+                                                        </div>
+                                                    {% endif %}
+
+                                                    {% if can_update and row.show_card_add_branch %}
+                                                        <button
+                                                            type="button"
+                                                            class="cadence-add-branch"
+                                                            title="{% trans 'Add follow-up in next stage' %}"
+                                                            hx-get="{% url 'cadences:cadence_followup_create_view' cadence_pk=obj.pk %}?followup_number={{ row.add_branch_followup_number }}&branch_from={{ c.pk }}"
+                                                            hx-target="#modalBox"
+                                                            hx-swap="innerHTML"
+                                                            onclick="openModal()"
+                                                        >
+                                                            <img
+                                                                src="{% static 'assets/icons/add1.svg' %}"
+                                                                alt=""
+                                                                width="30"
+                                                                height="30"
+                                                            >
+                                                        </button>
+                                                    {% endif %}
+                                                    {% if row.show_child_down_arrow %}
+                                                        <div class="cadence-child-down-indicator">
+                                                            <span class="cadence-child-arrow-wrap">
+                                                                <img
+                                                                    src="{% static 'assets/icons/right1.svg' %}"
+                                                                    alt=""
+                                                                    width="30"
+                                                                    height="30"
+                                                                >
+                                                            </span>
+                                                        </div>
+                                                    {% endif %}
+                                                </div>
+                                                <div class="cadence-card-bottom-add w-full">
+                                                    {% if can_update and row.show_card_add_below_next %}
+                                                        <button
+                                                            type="button"
+                                                            class="cadence-add-sibling relative z-[2]"
+                                                            title="{% trans 'Add follow-up in this stage' %}"
+                                                            hx-get="{% url 'cadences:cadence_followup_create_view' cadence_pk=obj.pk %}?followup_number={{ row.bottom_add_followup_number }}&branch_from={{ row.bottom_add_branch_from_id }}"
+                                                            hx-target="#modalBox"
+                                                            hx-swap="innerHTML"
+                                                            onclick="openModal()"
+                                                        >
+                                                            <img
+                                                                src="{% static 'assets/icons/add1.svg' %}"
+                                                                alt=""
+                                                                width="32"
+                                                                height="32"
+                                                            >
+                                                        </button>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        {% endwith %}
+                                    {% endif %}
+                                {% endfor %}
+
+                                {% if can_update and col.show_bottom_sibling_add %}
+                                    <div class="cadence-fu2-bottom-add flex justify-center">
+                                        <button
+                                            type="button"
+                                            class="cadence-add-sibling"
+                                            title="{% trans 'Add another follow-up in this stage' %}"
+                                            hx-get="{% url 'cadences:cadence_followup_create_view' cadence_pk=obj.pk %}?followup_number={{ col.col_num }}{% if col.bottom_sibling_branch_from_id %}&branch_from={{ col.bottom_sibling_branch_from_id }}{% endif %}"
+                                            hx-target="#modalBox"
+                                            hx-swap="innerHTML"
+                                            onclick="openModal()"
+                                        >
+                                            <img
+                                                src="{% static 'assets/icons/add1.svg' %}"
+                                                alt=""
+                                                width="32"
+                                                height="32"
+                                            >
+                                        </button>
+                                    </div>
+                                {% endif %}
+                            {% else %}
+                                {% if col.col_num == 1 %}
+                                    <div class="h-[260px] rounded-lg p-5 text-center flex flex-col items-center justify-center gap-4">
+                                        <p class="text-xs leading-relaxed text-dark-600 sm:text-sm">
+                                            {% trans "Get started by adding an Email, Task, or Call follow-up to your Cadence." %}
+                                        </p>
+                                        {% if can_update and not cadence_columns.0.rows %}
+                                            <button
+                                                type="button"
+                                                class="inline-flex items-center gap-2 rounded-md bg-primary-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-primary-800"
+                                                hx-get="{{ obj.get_add_followup_url }}"
+                                                hx-target="#modalBox"
+                                                hx-swap="innerHTML"
+                                                onclick="openModal()"
+                                            >
+                                                <img
+                                                    src="{% static 'assets/icons/add.svg' %}"
+                                                    alt=""
+                                                    width="15"
+                                                    height="15"
+                                                    class="brightness-0 invert"
+                                                >
+                                                {% if conditions %}{% trans "Add Follow Ups" %}{% else %}{% trans "Add Follow-up" %}{% endif %}
+                                            </button>
+                                        {% endif %}
+                                    </div>
+                                {% else %}<div class="h-[260px] rounded-lg"></div>{% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <script src="{% static 'cadences/js/cadence_detail.js' %}"></script>
+    {% else %}
+        {% include "403.html" with embed=True %}
+    {% endif %}
+{% endblock %}

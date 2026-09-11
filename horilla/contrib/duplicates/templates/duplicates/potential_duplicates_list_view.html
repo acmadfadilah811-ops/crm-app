@@ -1,0 +1,471 @@
+<style>
+    .htmx-indicator {
+        display: none;
+        pointer-events: none;
+    }
+    .htmx-request .htmx-indicator {
+        display: flex !important;
+        pointer-events: auto;
+    }
+    .htmx-request.htmx-indicator {
+        display: flex !important;
+        pointer-events: auto;
+    }
+    .pagination-indicator {
+        display: none;
+    }
+    .htmx-request .pagination-indicator {
+        display: none;
+    }
+    .htmx-request.pagination-indicator {
+        display: inline;
+    }
+</style>
+<div id="{{ view_id|safe }}" style="position: relative" class="h-full flex flex-col" data-viewport-fit>
+    <div id="loading-indicator" class="htmx-indicator tabloading" style="z-index: 30">
+        <div class="flex justify-center items-center p-4">
+            <div class="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary-600"></div>
+        </div>
+    </div>
+    <div id="messages-container" style="display: none">
+        {% for message in messages %}
+            <div class="message" data-level="{{ message.tags }}" data-message="{{ message }}"></div>
+        {% endfor %}
+    </div>
+    <button
+        id="reloadButton"
+        hidden
+        hx-get="{{ request.path }}?{{request.GET.urlencode}}"
+        hx-target="#{{ view_id|safe }}"
+        hx-trigger="click"
+        hx-swap="outerHTML"
+        hx-select="#{{ view_id|safe }}"
+        hx-indicator="#loading-indicator"
+    >
+        click
+    </button>
+
+    {% if queryset %}
+        <div id="tableview-{{ view_id|safe }}" class="flex-1 min-h-0 flex flex-col" data-viewport-flex>
+            {% if bulk_select_option %}
+                <div class="flex gap-1 items-center flex-wrap mb-3 flex-shrink-0">
+                    <div class="flex gap-1 flex-wrap">
+                        {% comment %} Select 3 button instead of Select All {% endcomment %}
+                        <button
+                            type="button"
+                            class="text-xs px-4 py-2 bg-[#0aa10a1a] rounded-md hover:bg-[#0ba10a] transition duration-300 text-[#0ba10a] border border-[#0aa10a46] hover:text-[white]"
+                            hx-on:click="selectFirstThree('{{ view_id|safe }}', {{ max_selection_limit|default:3 }})"
+                            id="select-three-btn-{{ view_id|safe }}"
+                        >
+                            <i class="fa-solid fa-check-double pe-1"></i>
+                            {% trans "Select" %}
+                            {{ max_selection_limit|default:3 }}
+                            {% trans "of" %}
+                            {{ total_duplicates_count|default:0 }}
+                        </button>
+
+                        <button
+                            class="unselect-all-btn text-xs px-4 py-2 bg-[#ba10bf2a] rounded-md hover:bg-[#ba10bf] transition duration-300 text-[#ba10bf] border border-[#ba10bf2a] hover:text-[white]"
+                            hx-on:click="selectAll(false, '{{ view_id|safe }}')"
+                            id="unselect-all-btn-{{ view_id|safe }}"
+                            style="display: none"
+                        >
+                            <i class="fa-solid fa-xmark" style="padding-right: 0.25rem"></i>
+                            {% trans 'Unselect' %} (<span
+                                id="unselect-text-{{ view_id|safe }}"
+                                class="text-xs font-medium"
+                            >0</span>)
+                        </button>
+
+                        {% for action in custom_bulk_actions %}
+                            <button
+                                type="button"
+                                id="bulk-action-{{ action.name }}-{{ view_id|safe }}"
+                                class="text-xs px-4 py-2 rounded-md transition duration-300 border {% if action.bg_color %}bg-[{{ action.bg_color }}]{% else %}bg-primary-50{% endif %} {% if action.text_color %}text-[{{ action.text_color }}]{% else %}text-primary-600{% endif %} {% if action.border_color %}border-[{{ action.border_color }}]{% else %}border-primary-200{% endif %} hover:{% if action.hover_bg_color %}bg-[{{ action.hover_bg_color }}]{% else %}bg-primary-600{% endif %} hover:{% if action.hover_text_color %}text-[{{ action.hover_text_color }}]{% else %}text-white{% endif %}"
+                                {% if action.method == "post" %}
+                                    hx-post="{{ action.url }}"
+                                {% else %}
+                                    hx-get="{{ action.url }}"
+                                {% endif %}
+                                {% if action.target %}
+                                    hx-target="{{ action.target }}"
+                                {% endif %}
+                                {% if action.swap %}
+                                    hx-swap="{{ action.swap }}"
+                                {% endif %}
+                                {% if action.trigger %}
+                                    hx-trigger="{{ action.trigger }}"
+                                {% endif %}
+                                {% if action.hx_vals %}
+                                    hx-vals="{{ action.hx_vals|safe }}"
+                                {% elif action.hx_vals_extra %}
+                                    hx-vals="js:{{ action.hx_vals_extra|safe }}"
+                                {% endif %}
+                                {% if action.onclick %}
+                                    onclick="{{ action.onclick }}"
+                                {% elif action.hx_click %}
+                                    onclick="{{ action.hx_click }}"
+                                {% endif %}
+                                style="display: none"
+                            >
+                                {% if action.icon %}
+                                    <i class="{{ action.icon }} pe-1"></i>
+                                {% endif %}
+                                <span>{{ action.label }}</span>
+                            </button>
+                        {% endfor %}
+
+                        {% if clear_session_button_enabled and bulk_select_option %}
+                            <button
+                                class="text-xs px-4 py-2 bg-[#ff00491f] rounded-md hover:bg-[#ff0049] transition duration-300 text-[#ff0049] border border-[1px solid #ff004929] hover:text-[white]"
+                                hx-on:click="clearSelections('{{ view_id|safe }}')"
+                                id="clear-select-btn-{{ view_id|safe }}"
+                            >
+                                <i class="fa-solid fa-delete-left pe-1"></i>
+                                {% trans 'Clear Session' %}
+                            </button>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+
+            <div
+                class="custom-scroll relative overflow-hidden overflow-y-auto overflow-x-auto flex-1 min-h-0 {% if table_height %} [h-51vh] [max-h-unset] {% endif %} [box-shadow:0px_0px_20px_0px_rgb(0_0_0_/_5%)] bg-white rounded-lg max-h-fit z-0 {% if table_class %} block text-[.8rem] {% endif %}"
+                id="table-container-{{view_id|safe}}"
+                data-view-id="{{view_id|safe}}"
+                data-record-ids="{{ selected_ids_json }}"
+                data-total-records="{{ total_records_count }}"
+            >
+                <table class="w-full {% if not table_class %} border-separate border-spacing-0 {% endif %}">
+                    <thead class="sticky top-0 {% if table_class %} bg-primary-300 text-primary-600 {% else %} bg-white {% endif %} z-50">
+                        <tr>
+                            {% if bulk_select_option %}
+                                <th
+                                    class="text-sm sticky left-0 {% if table_class %} bg-primary-300 {% endif %} z-50 top-0 font-bold text-left p-3 border-[1px] border-[solid] border-[#efefef]"
+                                    style="width: 50px"
+                                >
+                                    <div class="flex items-center justify-center">
+                                        <input
+                                            type="checkbox"
+                                            title="{% trans 'Select Visible Items' %}"
+                                            data-role="select-all"
+                                            name="select_all_{{view_id|safe}}"
+                                            class="w-4 h-4 {% if table_class %} bg-white {% else %} bg-[#E9EDF7] {% endif %}rounded-sm accent-[#e54f38]"
+                                            style="display: none"
+                                        >
+                                    </div>
+                                </th>
+                            {% endif %}
+
+                            {% for cell in columns %}
+                                <th class="{% if forloop.first %}sticky {% if bulk_select_option %}left-[50px]{% else %}left-0{% endif %}{% endif %} {% if table_class %} bg-primary-300 {% else %} bg-white {% endif %} z-50 top-0 font-bold {% if table_class %} text-sm {% else %} text-[.8rem] {% endif %} text-left p-3 border-[1px] border-[solid] border-[#efefef]">
+                                    {{ cell.0 }}
+                                </th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody id="data-container-{{view_id|safe}}">
+                        {% include "partials/list_view_rows.html" %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% else %}
+        {% if no_record_section %}
+            {% trans 'No potential duplicates found.' as empty_state_message %}
+            {% include "components/empty_state.html" with message=empty_state_message %}
+        {% endif %}
+    {% endif %}
+</div>
+
+<script>
+    // Function to select first 3 items
+    window.selectFirstThree = function(viewId, maxSelection) {
+        // Use global tableData if available, otherwise create window.tableData
+        const tableDataMap = (typeof tableData !== 'undefined' && tableData instanceof Map) ? tableData : (window.tableData || new Map());
+        if (!window.tableData && typeof tableData === 'undefined') {
+            window.tableData = tableDataMap;
+        }
+
+        let table = tableDataMap.get(viewId);
+        if (!table) {
+            table = { selectedRecordIds: [], allRecordIds: [], allSelected: false };
+            tableDataMap.set(viewId, table);
+        }
+
+        // Wait a bit to ensure DOM is ready, especially after redirect
+        setTimeout(function() {
+            const checkboxes = document.querySelectorAll(`#table-container-${viewId} input[data-role='row-select']`);
+            const selectedIds = [];
+
+            if (checkboxes.length === 0) {
+                // If no checkboxes found, try again after a short delay
+                setTimeout(function() {
+                    window.selectFirstThree(viewId, maxSelection);
+                }, 200);
+                return;
+            }
+
+            // Uncheck all first
+            checkboxes.forEach(function(checkbox) {
+                checkbox.checked = false;
+                // Use jQuery if available to ensure proper update
+                if (typeof $ !== 'undefined') {
+                    $(checkbox).prop('checked', false);
+                }
+            });
+
+            // Select first maxSelection checkboxes
+            Array.from(checkboxes).slice(0, maxSelection).forEach(function(checkbox) {
+                const recordId = checkbox.getAttribute('data-record-id') || checkbox.value;
+                checkbox.checked = true;
+                // Use jQuery if available to ensure proper update
+                if (typeof $ !== 'undefined') {
+                    $(checkbox).prop('checked', true).trigger('change');
+                } else {
+                    // Trigger change event to ensure UI updates
+                    checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+                }
+                if (recordId && !selectedIds.includes(recordId)) {
+                    selectedIds.push(recordId);
+                }
+            });
+
+            // Update table data
+            table.selectedRecordIds = selectedIds;
+            table.allSelected = false;
+            if (typeof sessionStorage !== 'undefined') {
+                sessionStorage.setItem(`selectedRecordIds_${viewId}`, JSON.stringify(selectedIds));
+            }
+
+            // Update UI - force update button visibility immediately
+            if (typeof $ !== 'undefined') {
+                const hasSelections = selectedIds.length > 0;
+
+                // Show/hide unselect button
+                $(`#unselect-all-btn-${viewId}`).toggle(hasSelections);
+                if (hasSelections) {
+                    $(`#unselect-text-${viewId}`).text(selectedIds.length);
+                }
+
+                // Show/hide all bulk action buttons (including merge)
+                $(`[id^="bulk-action-"][id$="-${viewId}"]`).each(function() {
+                    $(this).toggle(hasSelections);
+                });
+
+                // Also call the global function if available (it's debounced, so call it after a small delay)
+                if (typeof updateActionButtonsVisibility === 'function') {
+                    // Call it immediately and also after a small delay to ensure it runs
+                    updateActionButtonsVisibility(viewId);
+                    setTimeout(function() {
+                        updateActionButtonsVisibility(viewId);
+                    }, 150);
+                }
+            }
+        }, 100); // Small delay to ensure DOM is ready
+    };
+
+    // Limit selection to maxSelection and update button visibility
+    (function() {
+        const viewId = "{{ view_id }}";
+        const maxSelection = {{ max_selection_limit|default:3 }};
+        const objectId = "{{ object_id }}";
+        const contentTypeId = "{{ content_type_id }}";
+
+        // Initialize tableData if not exists
+        if (!window.tableData) window.tableData = new Map();
+        if (!window.tableData.get(viewId)) {
+            window.tableData.set(viewId, { selectedRecordIds: [], allRecordIds: [] });
+        }
+
+        // Function to update selected IDs in tableData
+        function updateSelectedIds(viewId) {
+            // Use global tableData if available, otherwise window.tableData
+            const tableDataMap = (typeof tableData !== 'undefined' && tableData instanceof Map) ? tableData : (window.tableData || new Map());
+            if (!window.tableData && typeof tableData === 'undefined') {
+                window.tableData = tableDataMap;
+            }
+
+            let table = tableDataMap.get(viewId);
+            if (!table) {
+                table = { selectedRecordIds: [], allRecordIds: [], allSelected: false };
+                tableDataMap.set(viewId, table);
+            }
+
+            const checkboxes = document.querySelectorAll(`#table-container-${viewId} input[data-role='row-select']`);
+            const selectedIds = [];
+
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.checked) {
+                    const recordId = checkbox.getAttribute('data-record-id') || checkbox.value;
+                    if (recordId) {
+                        selectedIds.push(recordId);
+                    }
+                }
+            });
+
+            // Ensure we don't exceed the limit - uncheck extras if needed
+            if (selectedIds.length > maxSelection) {
+                // Uncheck checkboxes beyond the limit
+                let checkedCount = 0;
+                checkboxes.forEach(function(checkbox) {
+                    if (checkbox.checked) {
+                        checkedCount++;
+                        if (checkedCount > maxSelection) {
+                            checkbox.checked = false;
+                            const recordId = checkbox.getAttribute('data-record-id') || checkbox.value;
+                            const index = selectedIds.indexOf(recordId);
+                            if (index > -1) {
+                                selectedIds.splice(index, 1);
+                            }
+                        }
+                    }
+                });
+            }
+
+            table.selectedRecordIds = selectedIds;
+            if (typeof sessionStorage !== 'undefined') {
+                sessionStorage.setItem(`selectedRecordIds_${viewId}`, JSON.stringify(selectedIds));
+            }
+
+            // Update button visibility
+            if (typeof updateActionButtonsVisibility === 'function') {
+                updateActionButtonsVisibility(viewId);
+            } else if (typeof $ !== 'undefined') {
+                // Fallback: manually show/hide buttons
+                const hasSelections = selectedIds.length > 0;
+                $(`#unselect-all-btn-${viewId}, [id^="bulk-action-"][id$="-${viewId}"]`).toggle(hasSelections);
+                if (hasSelections) {
+                    $(`#unselect-text-${viewId}`).text(selectedIds.length);
+                } else {
+                    $(`#unselect-text-${viewId}`).text('0');
+                }
+            }
+        }
+
+        // Handle change event to check limit and update count
+        document.addEventListener('change', function(e) {
+            if (e.target.matches(`#table-container-${viewId} input[data-role='row-select']`)) {
+                const checkbox = e.target;
+                const checkboxes = document.querySelectorAll(`#table-container-${viewId} input[data-role='row-select']:checked`);
+
+                // Check if limit exceeded
+                if (checkboxes.length > maxSelection) {
+                    // Uncheck the checkbox that caused the limit to be exceeded
+                    checkbox.checked = false;
+
+                    // Use SweetAlert instead of alert
+                    if (typeof Swal !== 'undefined') {
+                        Swal.fire({
+                            html: '{% trans "You can only merge up to" %} ' + maxSelection + ' {% trans "items at a time" %}',
+                            icon: "warning",
+                            confirmButtonColor: "#008000",
+                            confirmButtonText: typeof horillaMessages !== 'undefined' ? horillaMessages.ok || 'OK' : 'OK',
+                            showClass: {
+                                popup: `animate__animated animate__fadeInUp animate__faster`
+                            },
+                            hideClass: {
+                                popup: `animate__animated animate__fadeOutDown animate__faster`
+                            }
+                        });
+                    }
+                    updateSelectedIds(viewId);
+                    return;
+                }
+
+                // Only update selected IDs and button visibility if limit not exceeded
+                updateSelectedIds(viewId);
+            }
+        });
+
+        // Also listen using jQuery if available
+        if (typeof $ !== 'undefined') {
+            $(document).on('change', `#table-container-${viewId} input[data-role='row-select']`, function(e) {
+                const $checkbox = $(this);
+                const checkboxes = $(`#table-container-${viewId} input[data-role='row-select']:checked`);
+
+                // Check if limit exceeded
+                if (checkboxes.length > maxSelection) {
+                    // Uncheck the checkbox that caused the limit to be exceeded
+                    $checkbox.prop('checked', false);
+
+                    // Use SweetAlert instead of alert
+                    if (typeof Swal !== 'undefined') {
+                        Swal.fire({
+                            html: '{% trans "You can only merge up to" %} ' + maxSelection + ' {% trans "items at a time" %}',
+                            icon: "warning",
+                            confirmButtonColor: "#008000",
+                            confirmButtonText: typeof horillaMessages !== 'undefined' ? horillaMessages.ok || 'OK' : 'OK',
+                            showClass: {
+                                popup: `animate__animated animate__fadeInUp animate__faster`
+                            },
+                            hideClass: {
+                                popup: `animate__animated animate__fadeOutDown animate__faster`
+                            }
+                        });
+                    } else if (typeof hxConfirm === 'function') {
+                        // Fallback to hxConfirm if Swal not available
+                        hxConfirm($checkbox[0], '{% trans "You can only merge up to" %} ' + maxSelection + ' {% trans "items at a time" %}');
+                    } else {
+                        // Final fallback to alert
+                        alert('{% trans "You can only merge up to" %} ' + maxSelection + ' {% trans "items at a time" %}');
+                    }
+
+                    // Immediately recalculate to fix the count
+                    updateSelectedIds(viewId);
+                    return false;
+                }
+
+                // Only update selected IDs and button visibility if limit not exceeded
+                updateSelectedIds(viewId);
+            });
+        }
+
+        // Update merge button hx-vals to include selected_ids
+        document.body.addEventListener('htmx:configRequest', function(event) {
+            const target = event.detail.target;
+            if (target && (target.id && target.id.includes('bulk-action-merge-' + viewId) || (target.closest && target.closest('#bulk-action-merge-' + viewId)))) {
+                const currentVals = event.detail.parameters || {};
+                currentVals.object_id = objectId;
+                currentVals.content_type_id = contentTypeId;
+
+                // Get selected IDs from tableData or checkboxes
+                let selectedIds = [];
+                if (typeof tableData !== 'undefined' && tableData instanceof Map) {
+                    const table = tableData.get(viewId);
+                    if (table && table.selectedRecordIds) {
+                        selectedIds = table.selectedRecordIds;
+                    }
+                } else if (window.tableData && window.tableData instanceof Map) {
+                    const table = window.tableData.get(viewId);
+                    if (table && table.selectedRecordIds) {
+                        selectedIds = table.selectedRecordIds;
+                    }
+                }
+
+                // If no IDs in tableData, get from checkboxes
+                if (selectedIds.length === 0) {
+                    const checkboxes = document.querySelectorAll(`#table-container-${viewId} input[data-role='row-select']:checked`);
+                    checkboxes.forEach(function(checkbox) {
+                        const recordId = checkbox.getAttribute('data-record-id') || checkbox.value;
+                        if (recordId) {
+                            selectedIds.push(recordId);
+                        }
+                    });
+                }
+
+                // Add selected_ids as JSON string
+                if (selectedIds.length > 0) {
+                    currentVals.selected_ids = JSON.stringify(selectedIds);
+                }
+
+                event.detail.parameters = currentVals;
+            }
+        });
+
+        // Initialize button visibility on page load
+        setTimeout(function() {
+            updateSelectedIds(viewId);
+        }, 100);
+    })();
+</script>

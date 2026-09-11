@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-18 14:05+0000\n"
+"PO-Revision-Date: 2026-08-01 12:00+0330\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Scoring Rules"
+msgstr "قوانین امتیازدهی"
+
+msgid "At least one condition must be provided."
+msgstr "حداقل یک شرط باید ارائه شود."
+
+msgid "Rule Name"
+msgstr "نام قانون"
+
+msgid "Module"
+msgstr "ماژول"
+
+msgid "Description"
+msgstr "توضیحات"
+
+msgid "Scoring Rule"
+msgstr "قانون امتیازدهی"
+
+msgid "Criterion Name"
+msgstr "نام معیار"
+
+msgid "Points to Award"
+msgstr "امتیاز برای اعطا"
+
+msgid "Add"
+msgstr "افزودن"
+
+msgid "Sub"
+msgstr "تفریق"
+
+msgid "Operation Type"
+msgstr "نوع عملیات"
+
+msgid "Order"
+msgstr "ترتیب"
+
+msgid "Scoring Criterion"
+msgstr "معیار امتیازدهی"
+
+msgid "Scoring Criteria"
+msgstr "معیارهای امتیازدهی"
+
+msgid "Field Name"
+msgstr "نام فیلد"
+
+msgid "Operator"
+msgstr "عملگر"
+
+msgid "Value"
+msgstr "مقدار"
+
+msgid "AND"
+msgstr "و"
+
+msgid "OR"
+msgstr "یا"
+
+msgid "Logical Operator"
+msgstr "عملگر منطقی"
+
+msgid "Scoring Condition"
+msgstr "شرط امتیازدهی"
+
+msgid "Scoring Conditions"
+msgstr "شروط امتیازدهی"
+
+msgid "Opened"
+msgstr "باز شده"
+
+msgid "Clicked"
+msgstr "کلیک شده"
+
+msgid "Bounced"
+msgstr "برگشت خورده"
+
+msgid "Criteria"
+msgstr "معیارها"
+
+msgid "Points"
+msgstr "امتیازها"
+
+msgid "Actions"
+msgstr "اقدامات"
+
+msgid "Edit"
+msgstr "ویرایش"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Nothing to show yet. Please add your Criteria"
+msgstr "هنوز چیزی برای نمایش وجود ندارد. لطفاً معیارهای خود را اضافه کنید"
+
+msgid "Define rules that automatically score leads and opportunities."
+msgstr "قوانینی برای امتیازدهی خودکار سرنخ‌ها و فرصت‌ها تعریف کنید."
+
+msgid "The requested data does not exist."
+msgstr "داده‌های درخواستی وجود ندارند."
+
+msgid "Create New Rule Criteria"
+msgstr "ایجاد معیار قانون جدید"

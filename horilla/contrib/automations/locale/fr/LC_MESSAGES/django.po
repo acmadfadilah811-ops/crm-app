@@ -1,0 +1,402 @@
+# French translations for Horilla Automations module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid ""
+"Module for automating mail and notifications based on model events and "
+"conditions."
+msgstr ""
+"Module pour automatiser les e-mails et les notifications basés sur les "
+"événements et conditions du modèle."
+
+msgid ""
+"Migrated signal and timezone imports to the horilla shims, standardized "
+"first-party import groups, and added docstrings for pylint compliance; "
+"behavior unchanged."
+msgstr ""
+"Migration des imports de signaux et de fuseaux horaires vers les shims "
+"horilla, standardisation des groupes d'imports internes et ajout de "
+"docstrings pour la conformité pylint ; comportement inchangé."
+
+msgid ""
+"Celery Beat schedule entries now use the fully qualified task path so "
+"scheduled automations resolve correctly at runtime."
+msgstr ""
+"Les entrées de planification Celery Beat utilisent désormais le chemin de "
+"tâche complet afin que les automatisations planifiées se résolvent "
+"correctement à l'exécution."
+
+msgid ""
+"Release 1.10: automations ship under contrib with app label automations. "
+"Triggers referencing ContentType and Celery task dotted paths updated "
+"alongside imports and registrations for the contrib namespace."
+msgstr ""
+"Version 1.10 : les automatisations sont intégrées sous contrib avec le label "
+"d'application automations. Les déclencheurs référençant ContentType et les "
+"chemins de tâches Celery ont été mis à jour."
+
+msgid ""
+"Improved automation reliability with background processing enhancements, "
+"better schedule-aware form validation, and idempotent run tracking via "
+"AutomationRunLog for scheduled automations."
+msgstr ""
+"Amélioration de la fiabilité des automatisations avec des améliorations du "
+"traitement en arrière-plan, une meilleure validation des formulaires tenant "
+"compte de la planification, et un suivi idempotent via AutomationRunLog."
+
+msgid ""
+"Introduced scheduled automations with Celery Beat support, including dynamic "
+"schedule fields in the automation form, server-side validation for scheduled "
+"triggers, and execution run logging to prevent duplicate runs."
+msgstr ""
+"Introduction des automatisations planifiées avec prise en charge de Celery "
+"Beat, y compris des champs de planification dynamiques, la validation côté "
+"serveur des déclencheurs planifiés et la journalisation des exécutions."
+
+msgid ""
+"Minor compatibility improvements and internal stability updatesto ensure "
+"seamless integration with the updated generics framework and platform "
+"enhancements."
+msgstr ""
+"Améliorations mineures de compatibilité et mises à jour de stabilité interne "
+"pour assurer une intégration transparente avec le framework generics mis à "
+"jour."
+
+msgid ""
+"Migrated from Django AppConfig to Horilla AppLauncher and replaced Django "
+"utilitieswith horilla.utils.decorators, horilla.utils.translation, and "
+"horilla.shortcuts where applicable."
+msgstr ""
+"Migration de Django AppConfig vers Horilla AppLauncher et remplacement des "
+"utilitaires Django par horilla.utils.decorators, horilla.utils.translation "
+"et horilla.shortcuts selon le cas."
+
+msgid "Automations"
+msgstr "Automatisations"
+
+msgid "Please select a mail server."
+msgstr "Veuillez sélectionner un serveur de messagerie."
+
+msgid "Invalid mail server selected."
+msgstr "Serveur de messagerie sélectionné invalide."
+
+msgid "Automations loaded successfully."
+msgstr "Automatisations chargées avec succès."
+
+msgid "All selected automations already exist."
+msgstr "Toutes les automatisations sélectionnées existent déjà."
+
+msgid "No automations were processed."
+msgstr "Aucune automatisation n'a été traitée."
+
+msgid "Mail & Notifications"
+msgstr "E-mail & Notifications"
+
+msgid "Equal (==)"
+msgstr "Égal (==)"
+
+msgid "Not Equal (!=)"
+msgstr "Différent (!=)"
+
+msgid "Less Than (<)"
+msgstr "Inférieur à (<)"
+
+msgid "Greater Than (>)"
+msgstr "Supérieur à (>)"
+
+msgid "Less Than or Equal To (<=)"
+msgstr "Inférieur ou égal à (<=)"
+
+msgid "Greater Than or Equal To (>=)"
+msgstr "Supérieur ou égal à (>=)"
+
+msgid "Contains"
+msgstr "Contient"
+
+msgid "Title"
+msgstr "Titre"
+
+msgid "Method Title"
+msgstr "Titre de la méthode"
+
+msgid "Module"
+msgstr "Module"
+
+msgid "Mail to/Notify to"
+msgstr "Envoyer un e-mail à / Notifier"
+
+msgid ""
+"Specify recipients for email/notifications. Supports:\n"
+"- Direct email: user@example.com\n"
+"- Self: 'self' (person who triggered)\n"
+"- Instance fields: 'instance.owner.email', 'instance.created_by', "
+"'instance.owner'\n"
+"- Multiple: comma-separated (e.g., 'self, instance.owner.email, "
+"admin@example.com')\n"
+"\n"
+"For notifications: Use user fields directly (e.g., 'instance.owner') or "
+"email addresses.\n"
+"The system will find users by email if an email address is provided."
+msgstr ""
+"Spécifiez les destinataires pour les e-mails/notifications. Prend en "
+"charge :\n"
+"- E-mail direct : user@example.com\n"
+"- Soi-même : 'self' (la personne qui a déclenché l'action)\n"
+"- Champs d'instance : 'instance.owner.email', 'instance.created_by', "
+"'instance.owner'\n"
+"- Plusieurs : séparés par des virgules (ex. : 'self, instance.owner.email, "
+"admin@example.com')\n"
+"\n"
+"Pour les notifications : utilisez directement les champs utilisateur (ex. : "
+"'instance.owner') ou des adresses e-mail.\n"
+"Le système trouvera les utilisateurs par e-mail si une adresse e-mail est "
+"fournie."
+
+msgid "Also Send to"
+msgstr "Envoyer également à"
+
+msgid "Mail Detail Choice"
+msgstr "Choix des détails de l'e-mail"
+
+msgid "Trigger"
+msgstr "Déclencheur"
+
+msgid "Mail Template"
+msgstr "Modèle d'e-mail"
+
+msgid "Notification Template"
+msgstr "Modèle de notification"
+
+msgid "Outgoing Mail Server"
+msgstr "Serveur de messagerie sortant"
+
+msgid ""
+"Select the mail server to use for sending emails. If not selected, the "
+"primary mail server will be used."
+msgstr ""
+"Sélectionnez le serveur de messagerie à utiliser pour l'envoi des e-mails. "
+"Si aucun n'est sélectionné, le serveur de messagerie principal sera utilisé."
+
+msgid "Choose Delivery Channel"
+msgstr "Choisir le canal de livraison"
+
+msgid "Target Date Field"
+msgstr "Champ de date cible"
+
+msgid ""
+"The date field on the record to schedule around (e.g., 'close_date', "
+"'due_date'). Required for scheduled automations."
+msgstr ""
+"Le champ de date sur l'enregistrement autour duquel planifier (ex. : "
+"'close_date', 'due_date'). Requis pour les automatisations planifiées."
+
+msgid "Adjust By"
+msgstr "Ajuster de"
+
+msgid ""
+"How many days/weeks/months away from the Target Date.\n"
+"Use 0 to send on the same day."
+msgstr ""
+"Combien de jours/semaines/mois avant ou après la date cible.\n"
+"Utilisez 0 pour envoyer le même jour."
+
+msgid "Before"
+msgstr "Avant"
+
+msgid "After"
+msgstr "Après"
+
+msgid "Timing"
+msgstr "Synchronisation"
+
+msgid ""
+"Before = send earlier than the Target Date.\n"
+"After = send later than the Target Date."
+msgstr ""
+"Avant = envoyer avant la date cible.\n"
+"Après = envoyer après la date cible."
+
+msgid "Days"
+msgstr "Jours"
+
+msgid "Weeks"
+msgstr "Semaines"
+
+msgid "Months"
+msgstr "Mois"
+
+msgid "Offset Unit"
+msgstr "Unité de décalage"
+
+msgid "Choose Days, Weeks, or Months."
+msgstr "Choisissez Jours, Semaines ou Mois."
+
+msgid "Run Time"
+msgstr "Heure d'exécution"
+
+msgid "Optional. Leave empty to run whenever the scheduler runs."
+msgstr ""
+"Optionnel. Laissez vide pour s'exécuter dès que le planificateur se lance."
+
+msgid "Mail and Notification"
+msgstr "E-mail et notification"
+
+msgid "Mail and Notifications"
+msgstr "E-mail et notifications"
+
+msgid "This field is required when Trigger is 'Scheduled'."
+msgstr "Ce champ est requis lorsque le déclencheur est 'Planifié'."
+
+msgid ""
+"Notification template is required when delivery channel is 'Send as "
+"Notification'."
+msgstr ""
+"Le modèle de notification est requis lorsque le canal de livraison est "
+"'Envoyer comme notification'."
+
+msgid "Mail template is required when delivery channel is 'Send as Mail'."
+msgstr ""
+"Le modèle d'e-mail est requis lorsque le canal de livraison est 'Envoyer "
+"comme e-mail'."
+
+msgid ""
+"Outgoing mail server is required when delivery channel is 'Send as Mail'."
+msgstr ""
+"Le serveur de messagerie sortant est requis lorsque le canal de livraison "
+"est 'Envoyer comme e-mail'."
+
+msgid ""
+"Mail template is required when delivery channel is 'Send as Mail and "
+"Notification'."
+msgstr ""
+"Le modèle d'e-mail est requis lorsque le canal de livraison est 'Envoyer "
+"comme e-mail et notification'."
+
+msgid ""
+"Notification template is required when delivery channel is 'Send as Mail and "
+"Notification'."
+msgstr ""
+"Le modèle de notification est requis lorsque le canal de livraison est "
+"'Envoyer comme e-mail et notification'."
+
+msgid ""
+"Outgoing mail server is required when delivery channel is 'Send as Mail and "
+"Notification'."
+msgstr ""
+"Le serveur de messagerie sortant est requis lorsque le canal de livraison "
+"est 'Envoyer comme e-mail et notification'."
+
+msgid "Automation"
+msgstr "Automatisation"
+
+msgid "Field Name"
+msgstr "Nom du champ"
+
+msgid "Operator"
+msgstr "Opérateur"
+
+msgid "Value"
+msgstr "Valeur"
+
+msgid "AND"
+msgstr "ET"
+
+msgid "OR"
+msgstr "OU"
+
+msgid "Logical Operator"
+msgstr "Opérateur logique"
+
+msgid "Order"
+msgstr "Ordre"
+
+msgid "Automation Condition"
+msgstr "Condition d'automatisation"
+
+msgid "Automation Conditions"
+msgstr "Conditions d'automatisation"
+
+msgid "Content Type"
+msgstr "Type de contenu"
+
+msgid "Object ID"
+msgstr "ID de l'objet"
+
+msgid "Run Date"
+msgstr "Date d'exécution"
+
+msgid "Scheduled For"
+msgstr "Planifié pour"
+
+msgid "The instance date value that matched when this automation executed."
+msgstr ""
+"La valeur de date de l'instance qui correspondait lors de l'exécution de "
+"cette automatisation."
+
+msgid "Automation Run Log"
+msgstr "Journal d'exécution de l'automatisation"
+
+msgid "Automation Run Logs"
+msgstr "Journaux d'exécution des automatisations"
+
+msgid "Load Automation"
+msgstr "Charger l'automatisation"
+
+msgid "Close"
+msgstr "Fermer"
+
+msgid "Mail Server"
+msgstr "Serveur de messagerie"
+
+msgid "Select mail server"
+msgstr "Sélectionner le serveur de messagerie"
+
+msgid "Add an outgoing mail server in Mail to load automations."
+msgstr ""
+"Ajoutez un serveur de messagerie sortant dans E-mail pour charger les "
+"automatisations."
+
+msgid "Select All"
+msgstr "Tout sélectionner"
+
+msgid "Create"
+msgstr "Créer"
+
+msgid "No default automations found."
+msgstr "Aucune automatisation par défaut trouvée."
+
+msgid "Add an outgoing mail server to load automations."
+msgstr ""
+"Ajoutez un serveur de messagerie sortant pour charger les automatisations."
+
+msgid "Select user fields"
+msgstr "Sélectionner les champs utilisateur"
+
+#, fuzzy
+#| msgid ""
+#| "Module for automating mail and notifications based on model events and "
+#| "conditions."
+msgid "Automate mail and notifications based on events in your workflow."
+msgstr ""
+"Module pour automatiser les e-mails et les notifications basés sur les "
+"événements et conditions du modèle."
+
+msgid "Template"
+msgstr "Modèle"
+
+msgid "Condition"
+msgstr "Condition"

@@ -1,0 +1,180 @@
+.cadence-followup-card {
+    position: relative;
+    z-index: 2;
+    /* Keep side/bottom action icons fully visible (no clipping). */
+    overflow: visible;
+    border-radius: 8px;
+    border: 1px solid rgba(86, 94, 108, 0.13);
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    min-height: 260px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cadence-slot-empty-card {
+    border-radius: 8px;
+    border: 1px solid rgba(86, 94, 108, 0.13);
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    min-height: 260px;
+    height: 260px;
+}
+
+.cadence-followup-card .cadence-field-block {
+    margin-bottom: 0.875rem;
+}
+
+.cadence-followup-card .cadence-field-block:last-of-type {
+    margin-bottom: 0;
+}
+
+.cadence-followup-card .cadence-add-branch {
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    z-index: 3;
+    line-height: 0;
+    transform: translateY(-50%);
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+[dir="rtl"] .cadence-followup-card .cadence-add-branch {
+    right: auto;
+    left: -4px;
+}
+
+.cadence-followup-card .cadence-add-branch:hover {
+    opacity: 0.85;
+}
+
+.cadence-followup-card .cadence-add-branch img {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.cadence-add-sibling {
+    line-height: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.cadence-add-sibling img {
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+
+.cadence-path-unit {
+    display: flex;
+    flex-direction: column;
+}
+
+.cadence-child-down-indicator {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.cadence-child-down-indicator img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+.cadence-child-down-indicator .cadence-child-arrow-wrap {
+    width: 27px;
+    height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(90deg);
+    z-index: 2;
+}
+
+.cadence-card-bottom-add {
+    position: relative;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -12px;
+}
+
+.kanban-block {
+    position: relative;
+    z-index: 0;
+}
+
+.cadence-board-grid {
+    position: relative;
+}
+
+.cadence-flow-arrows {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.cadence-flow-arrow {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    transform: translate(-50%, -50%);
+    opacity: 0.95;
+}
+
+[dir="rtl"] .cadence-flow-arrow {
+    transform: translate(-50%, -50%) scaleX(-1);
+}
+
+.cadence-column-cards {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Cadence board dark-mode readability fixes */
+body.dark .cadence-followup-card,
+body.dark .cadence-slot-empty-card {
+    background: #2a2a2a !important;
+    border-color: #565656 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+body.dark .cadence-followup-card p {
+    color: rgba(255, 255, 255, 0.84) !important;
+}
+
+body.dark .cadence-followup-card .font-semibold,
+body.dark .cadence-followup-card .font-medium {
+    color: rgba(255, 255, 255, 0.96) !important;
+}
+
+body.dark .cadence-followup-card .border-b,
+body.dark .cadence-followup-card .border-b-\[\#565e6c13\] {
+    border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+body.dark .cadence-followup-card hr {
+    border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+body.dark .kanban-block {
+    background-color: #000 !important;
+}
+
+body.dark .kanban-block > .sticky {
+    background-color: #000 !important;
+}

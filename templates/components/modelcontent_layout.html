@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% block content %}
+    {% block before_modelcontent %}{% endblock %}
+
+    <div class="flex modelcontent">
+        {% block before_sub_sidebar %}{% endblock %}
+
+        {% block sub_sidebar %}
+            {% include "components/sub_sidebar.html" %}
+        {% endblock %}
+
+        {% block after_sub_sidebar %}{% endblock %}
+
+        {% block main_content %}
+            <div
+                id="mainContent"
+                class="flex-[1_0] transition-all duration-300 ease-in-out pt-0 {% block main_leftspace_class %}leftspace{% endblock %} {% block main_content_classes %}{% endblock %}"
+                {% block main_content_attrs %}{% endblock %}
+            >
+                {% block messages %}
+                    {% include "messages.html" %}
+                {% endblock %}
+
+                {% block navbar %}{% endblock %}
+
+                {% block main %}{% endblock %}
+            </div>
+        {% endblock %}
+    </div>
+
+    {% block after_modelcontent %}{% endblock %}
+{% endblock %}

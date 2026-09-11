@@ -1,0 +1,102 @@
+{% load static i18n %}
+<div class="relative bg-white rounded-lg shadow-sm">
+    <form
+        hx-post="{% url 'calls:click_to_call' %}"
+        hx-target="#modalBox"
+        hx-swap="innerHTML"
+    >
+        {% csrf_token %}
+        {% if phone_number %}<input type="hidden" name="to_number" value="{{ phone_number }}">{% endif %}
+        <input type="hidden" name="from_number" value="">
+        <input type="hidden" name="related_model_name" value="{{ related_model_name }}">
+        <input type="hidden" name="related_object_id" value="{{ related_object_id }}">
+
+        <div class="p-5">
+            <div class="flex justify-between items-center mb-2">
+                <h2 class="text-md font-semibold">
+                    {% if phone_number %}{% trans "Call" %}
+                        {{ phone_number }}{% else %}{% trans "Make a Call" %}{% endif %}
+                </h2>
+                <button
+                    type="button"
+                    onclick="closeModal()"
+                    class="text-gray-500 hover:text-red-500 text-xl cursor-pointer"
+                >
+                    <img src="{% static 'assets/icons/close.svg' %}" alt="{% trans 'Close' %}">
+                </button>
+            </div>
+
+            {% if error %}
+                <div class="bg-red-50 text-red-500 px-3 py-2 rounded text-xs mb-3">
+                    {{ error }}
+                </div>
+            {% endif %}
+
+            <div class="grid grid-cols-1 gap-4 mb-3">
+                {% if not phone_number %}
+                    <div class="flex flex-col">
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="id_to_number" class="text-xs text-color-600">
+                                {% trans "Phone Number" %} <span class="text-red-500">*</span>
+                            </label>
+                        </div>
+                        <input
+                            type="tel"
+                            id="id_to_number"
+                            name="to_number"
+                            placeholder="{% trans '+1234567890' %}"
+                            required
+                            class="w-full border border-dark-50 rounded-md px-3 py-1.5 text-sm mt-1 focus:outline-none focus:border-primary-500"
+                        >
+                        <p class="text-xs text-gray-400 mt-1.5">
+                            {% trans "No phone number found on this record. Please enter one." %}
+                        </p>
+                    </div>
+                {% endif %}
+                <div class="flex flex-col">
+                    <div class="flex justify-between items-center mb-1">
+                        <label for="id_provider_id" class="text-xs text-color-600">
+                            {% trans "Provider" %} <span class="text-red-500">*</span>
+                        </label>
+                    </div>
+                    <select
+                        id="id_provider_id"
+                        name="provider_id"
+                        class="js-example-basic-single headselect w-full"
+                        required
+                    >
+                        <option value="">{% trans "Select provider..." %}</option>
+                        {% for provider in providers %}
+                            <option value="{{ provider.pk }}">{{ provider.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-end p-5 pt-0 gap-2">
+            <button
+                type="button"
+                onclick="closeModal()"
+                class="text-sm px-4 py-2 border border-primary-600 rounded-md hover:bg-primary-600 hover:text-[white] transition duration-300 text-primary-600"
+            >
+                {% trans "Cancel" %}
+            </button>
+            <button
+                type="submit"
+                class="text-sm px-4 py-2 bg-primary-600 rounded-md hover:bg-primary-800 transition duration-300 text-[white]"
+            >
+                {% trans "Call Now" %}
+            </button>
+        </div>
+    </form>
+</div>
+
+<script>
+    (function () {
+        var sel = document.getElementById('id_provider_id');
+        if (sel && window.$) {
+            $(sel).select2({ width: '100%', dropdownParent: $(sel).closest('.oh-modal-content') });
+        }
+    })();
+</script>

@@ -1,0 +1,755 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-18 14:05+0000\n"
+"PO-Revision-Date: 2026-08-24 12:00+0330\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Calls Integration"
+msgstr "یکپارچه‌سازی تماس"
+
+msgid ""
+"Telephony integration for click-to-call from CRM records, multi-provider "
+"support (Twilio, SignalWire(Beta), Telnyx(Beta), Sinch(Beta), Exotel(Beta), "
+"call logging, agent mapping, and company-level access control."
+msgstr ""
+
+msgid "Fix TemplateSyntaxError crashing the calls user-settings page."
+msgstr ""
+
+msgid ""
+"Lock down the calls API to company members with granted access.Seed default "
+"call reports for the report engine."
+msgstr ""
+
+msgid ""
+"Adopted ScriptResponse and HxTriggerResponse for provider and call-log "
+"actions. Preserved exception context when Exotel and SignalWire return non-"
+"JSON responses."
+msgstr ""
+
+msgid ""
+"Initial release: multi-provider telephony (Twilio, SignalWire(Beta), "
+"Telnyx(Beta), Sinch(Beta), Exotel(Beta), Mock) with adapter factory; company"
+" enable/disable and role/user access control; Click-to-Call modal with HTMX "
+"live status, cancel, and recording toggles; CallLog history with Activity "
+"Timeline integration; agent mapping; secure credential storage; Settings → "
+"Integrations and My Settings UIs; REST API and webhook/WebSocket consumers."
+msgstr ""
+
+msgid "Account SID"
+msgstr "شناسه SID حساب"
+
+msgid "API Key"
+msgstr "کلید API"
+
+msgid "Auth Token / API Secret"
+msgstr "توکن احراز هویت / رمز API"
+
+msgid "API Base URL"
+msgstr "URL پایه API"
+
+msgid "Webhook Secret"
+msgstr "رمز وب‌هوک"
+
+msgid "Leave blank to keep existing"
+msgstr "برای حفظ مقدار موجود خالی بگذارید"
+
+msgid "Roles"
+msgstr "نقش‌ها"
+
+msgid "Select roles"
+msgstr "انتخاب نقش‌ها"
+
+msgid "Users"
+msgstr "کاربران"
+
+msgid "Select users"
+msgstr "انتخاب کاربران"
+
+msgid "Call Integration"
+msgstr "یکپارچه‌سازی تماس"
+
+msgid "Calls"
+msgstr "تماس‌ها"
+
+msgid "All Users"
+msgstr "همه کاربران"
+
+msgid "Specific Roles"
+msgstr "نقش‌های مشخص"
+
+msgid "Specific Users"
+msgstr "کاربران مشخص"
+
+msgid "Enabled"
+msgstr "فعال"
+
+msgid "Access Type"
+msgstr "نوع دسترسی"
+
+msgid "Who can initiate calls."
+msgstr "چه کسانی می‌توانند تماس برقرار کنند."
+
+msgid "Allowed Roles"
+msgstr "نقش‌های مجاز"
+
+msgid "Allowed Users"
+msgstr "کاربران مجاز"
+
+msgid "Call Integration Setting"
+msgstr "تنظیمات یکپارچه‌سازی تماس"
+
+msgid "Call Integration Settings"
+msgstr "تنظیمات یکپارچه‌سازی تماس"
+
+msgid "Twilio"
+msgstr "Twilio"
+
+msgid "SignalWire (Beta)"
+msgstr "SignalWire (بتا)"
+
+msgid "Telnyx (Beta)"
+msgstr "Telnyx (بتا)"
+
+msgid "Sinch (Beta)"
+msgstr "Sinch (بتا)"
+
+msgid "Exotel (Beta)"
+msgstr "Exotel (بتا)"
+
+msgid "Mock (Testing)"
+msgstr "Mock (آزمایشی)"
+
+msgid "Active"
+msgstr "فعال"
+
+msgid "Inactive"
+msgstr "غیرفعال"
+
+msgid "Testing"
+msgstr "در حال آزمایش"
+
+msgid "Name"
+msgstr "نام"
+
+msgid "Provider"
+msgstr "ارائه‌دهنده"
+
+msgid "Status"
+msgstr "وضعیت"
+
+msgid "Account SID / App ID"
+msgstr "شناسه SID حساب / شناسه برنامه"
+
+msgid ""
+"Twilio AccountSID, Plivo Auth ID, Ozonetel username, or equivalent "
+"identifier."
+msgstr ""
+
+msgid "API Secret / Auth Token"
+msgstr "رمز API / توکن احراز هویت"
+
+msgid "Optional override for Ozonetel or custom API endpoints."
+msgstr ""
+
+msgid "Default Caller ID"
+msgstr "شناسه تماس‌گیرنده پیش‌فرض"
+
+msgid "Default outbound phone number or SIP caller ID."
+msgstr ""
+
+msgid "Enable Call Recording"
+msgstr "فعال‌سازی ضبط تماس"
+
+msgid ""
+"Record calls via this provider. Requires recording support on the provider "
+"side."
+msgstr ""
+
+msgid "Used to validate incoming webhook signatures."
+msgstr ""
+
+msgid "Extra Configuration"
+msgstr "پیکربندی اضافی"
+
+msgid "Call Provider"
+msgstr "ارائه‌دهنده تماس"
+
+msgid "Call Providers"
+msgstr "ارائه‌دهندگان تماس"
+
+msgid "User"
+msgstr "کاربر"
+
+msgid "Extension / SIP Extension"
+msgstr "داخلی / داخلی SIP"
+
+msgid "Agent / Caller ID"
+msgstr "نماینده / شناسه تماس‌گیرنده"
+
+msgid "Provider's internal agent or caller identifier."
+msgstr ""
+
+msgid "Agent Mapping"
+msgstr "نگاشت نماینده"
+
+msgid "Agent Mappings"
+msgstr "نگاشت‌های نماینده"
+
+msgid "Inbound"
+msgstr "ورودی"
+
+msgid "Outbound"
+msgstr "خروجی"
+
+msgid "Initiated"
+msgstr "آغاز شده"
+
+msgid "Ringing"
+msgstr "در حال زنگ"
+
+msgid "In Progress"
+msgstr "در حال انجام"
+
+msgid "Completed"
+msgstr "تکمیل شده"
+
+msgid "No Answer"
+msgstr "بدون پاسخ"
+
+msgid "Busy"
+msgstr "مشغول"
+
+msgid "Failed"
+msgstr "ناموفق"
+
+msgid "Cancelled"
+msgstr "لغو شده"
+
+msgid "Agent"
+msgstr "نماینده"
+
+msgid "Direction"
+msgstr "جهت"
+
+msgid "From Number"
+msgstr "از شماره"
+
+msgid "To Number"
+msgstr "به شماره"
+
+msgid "Duration (seconds)"
+msgstr "مدت زمان (ثانیه)"
+
+msgid "Started At"
+msgstr "شروع در"
+
+msgid "Ended At"
+msgstr "پایان در"
+
+msgid "Provider Call ID"
+msgstr "شناسه تماس ارائه‌دهنده"
+
+msgid "Twilio CallSID, Plivo RequestUUID, Vonage UUID, Ozonetel UCID, etc."
+msgstr ""
+
+msgid "Recording URL"
+msgstr "URL ضبط"
+
+msgid "Related Model"
+msgstr "مدل مرتبط"
+
+msgid "'lead' or 'contact'"
+msgstr ""
+
+msgid "Related Object ID"
+msgstr "شناسه شیء مرتبط"
+
+msgid "Call Log"
+msgstr "گزارش تماس"
+
+msgid "Call Logs"
+msgstr "گزارش‌های تماس"
+
+msgid "How to configure your Caller ID"
+msgstr ""
+
+msgid "Log in to Twilio Console"
+msgstr ""
+
+msgid "Visit"
+msgstr "بازدید"
+
+msgid "and sign in."
+msgstr "و وارد شوید."
+
+msgid "Go to Phone Numbers"
+msgstr ""
+
+msgid "Navigate to Phone Numbers → Manage → Active Numbers."
+msgstr ""
+
+msgid "Copy your number"
+msgstr ""
+
+msgid "Copy the number in E.164 format (e.g. +12125551234)."
+msgstr ""
+
+msgid "Paste below"
+msgstr ""
+
+msgid "Enter the number as your Caller ID and click Save."
+msgstr ""
+
+msgid "Log in to SignalWire Dashboard"
+msgstr ""
+
+msgid "and sign in to your Space."
+msgstr ""
+
+msgid "Click Phone Numbers in the left menu → select an active number."
+msgstr ""
+
+msgid "Log in to Telnyx Portal"
+msgstr ""
+
+msgid "Go to Numbers"
+msgstr ""
+
+msgid "Click Numbers in the left menu → My Numbers."
+msgstr ""
+
+msgid "Log in to Sinch Dashboard"
+msgstr ""
+
+msgid "Navigate to Numbers → Your Virtual Numbers."
+msgstr ""
+
+msgid "Log in to Exotel Dashboard"
+msgstr ""
+
+msgid "Click Numbers → Exophone Numbers in the left menu."
+msgstr ""
+
+msgid "Copy your Exophone"
+msgstr ""
+
+msgid "Copy the outbound Exophone number assigned to your account."
+msgstr ""
+
+msgid ""
+"Mock provider is for testing only. Enter any phone number in E.164 format "
+"(e.g. +919XXXXXXXXX) as your Caller ID."
+msgstr ""
+
+msgid ""
+"Enter the outbound phone number assigned to your account by your provider in"
+" E.164 format (e.g. +12125551234)."
+msgstr ""
+
+msgid "How to configure Twilio"
+msgstr ""
+
+msgid "Found on the Console home page under Account Info. Starts with AC."
+msgstr ""
+
+msgid "Found on the same page. Click the eye icon to reveal it."
+msgstr ""
+
+msgid ""
+"Go to Phone Numbers → Active Numbers and copy your outbound number in E.164 "
+"format (e.g. +12125551234)."
+msgstr ""
+
+msgid ""
+"Optional. Used to validate signed webhook requests. Set one in your Twilio "
+"webhook config and paste the same value here."
+msgstr ""
+
+msgid "How to configure SignalWire (Beta)"
+msgstr ""
+
+msgid "Log in to SignalWire"
+msgstr ""
+
+msgid "and open your Space."
+msgstr ""
+
+msgid ""
+"Go to Settings → General. Copy the Project ID (this is your Account SID)."
+msgstr ""
+
+msgid "Same Settings page — copy the Auth Token."
+msgstr ""
+
+msgid ""
+"Your Space URL, e.g. https://yourspace.signalwire.com. Found in the browser "
+"address bar when inside your Space."
+msgstr ""
+
+msgid "Go to Phone Numbers and copy your outbound number in E.164 format."
+msgstr ""
+
+msgid ""
+"Optional. Set in your SignalWire webhook configuration and paste the same "
+"value here."
+msgstr ""
+
+msgid "How to configure Telnyx (Beta)"
+msgstr ""
+
+msgid "Go to Auth → API Keys → Create API Key. Copy the generated key."
+msgstr ""
+
+msgid "Connection ID"
+msgstr ""
+
+msgid ""
+"Go to Voice → Connections → create or select a TeXML App. Copy the "
+"Connection ID from the app details."
+msgstr ""
+
+msgid "Go to Numbers → My Numbers and copy your number in E.164 format."
+msgstr ""
+
+msgid ""
+"Optional. Set in your Telnyx webhook URL settings and enter the same secret "
+"here."
+msgstr ""
+
+msgid "How to configure Sinch (Beta)"
+msgstr ""
+
+msgid "Account SID (Project ID)"
+msgstr ""
+
+msgid "Found at the top of the Dashboard under your project name."
+msgstr ""
+
+msgid ""
+"Go to Settings → Access Keys → New Key. Copy the Key Secret (shown only "
+"once)."
+msgstr ""
+
+msgid ""
+"Go to Numbers → Your Virtual Numbers and copy your outbound number in E.164 "
+"format."
+msgstr ""
+
+msgid "How to configure Exotel (Beta)"
+msgstr ""
+
+msgid "Account SID (SID)"
+msgstr ""
+
+msgid "Go to Settings → API → Your SID. This is your Exotel account SID."
+msgstr ""
+
+msgid "Same API Settings page — copy the API Token."
+msgstr ""
+
+msgid ""
+"Go to Settings → API Keys → Create a new key and copy the generated API Key."
+msgstr ""
+
+msgid "Go to Numbers → Exophone Numbers and copy your Exophone number."
+msgstr ""
+
+msgid "How to configure Mock (Testing)"
+msgstr ""
+
+msgid ""
+"Mock provider requires no real credentials. It simulates calls locally for "
+"development and testing."
+msgstr ""
+
+msgid "Auth Token"
+msgstr ""
+
+msgid "Enter any value (e.g. test-token)."
+msgstr ""
+
+msgid "Enter any phone number in E.164 format (e.g. +919XXXXXXXXX)."
+msgstr ""
+
+msgid "Caller ID"
+msgstr "شناسه تماس‌گیرنده"
+
+msgid "(optional)"
+msgstr ""
+
+msgid "Your phone number (e.g. +919XXXXXXXXX)"
+msgstr ""
+
+msgid ""
+"Leave blank to use the provider's default number set by your administrator."
+msgstr ""
+
+msgid "Save"
+msgstr "ذخیره"
+
+msgid "Close"
+msgstr "بستن"
+
+msgid "Call Log Detail"
+msgstr "جزئیات گزارش تماس"
+
+msgid "From"
+msgstr "از"
+
+msgid "To"
+msgstr "تا"
+
+msgid "Duration"
+msgstr "مدت زمان"
+
+msgid "Started"
+msgstr ""
+
+msgid "Ended"
+msgstr ""
+
+msgid "Related"
+msgstr ""
+
+msgid "Recording"
+msgstr ""
+
+msgid "via"
+msgstr ""
+
+msgid "Hang Up"
+msgstr ""
+
+msgid "Cancel Call"
+msgstr "لغو تماس"
+
+msgid "Call Accounts"
+msgstr "حساب‌های تماس"
+
+msgid "Manage the calling accounts connected to your profile."
+msgstr ""
+
+msgid "Call Integration Disabled"
+msgstr "یکپارچه‌سازی تماس غیرفعال است"
+
+msgid ""
+"Call integration is not currently enabled for your account. Please contact "
+"your administrator."
+msgstr ""
+
+msgid "No Providers Configured"
+msgstr "ارائه‌دهنده‌ای پیکربندی نشده است"
+
+msgid ""
+"Ask your administrator to add a provider under Settings → Integrations → "
+"Call Integration."
+msgstr ""
+
+msgid "Configuration saved."
+msgstr ""
+
+msgid "Edit Configuration"
+msgstr ""
+
+msgid "Call"
+msgstr "تماس"
+
+msgid "Make a Call"
+msgstr "برقراری تماس"
+
+msgid "Phone Number"
+msgstr ""
+
+msgid "+1234567890"
+msgstr ""
+
+msgid "No phone number found on this record. Please enter one."
+msgstr ""
+
+msgid "Select provider..."
+msgstr "انتخاب ارائه‌دهنده..."
+
+msgid "Cancel"
+msgstr "لغو"
+
+msgid "Call Now"
+msgstr "تماس فوری"
+
+msgid "Connect a calling provider to make and log calls from Horilla."
+msgstr ""
+"یک ارائه‌دهنده تماس را برای برقراری و ثبت تماس‌ها از هورایلا متصل کنید."
+
+msgid "Call Settings"
+msgstr "تنظیمات تماس"
+
+msgid ""
+"Enable call integration to allow users to make and receive calls directly "
+"from any record."
+msgstr ""
+"یکپارچه‌سازی تماس را فعال کنید تا کاربران بتوانند مستقیماً از هر رکوردی تماس"
+" برقرار کرده و تماس دریافت کنند."
+
+msgid "Enable Call Integration"
+msgstr "فعال‌سازی یکپارچه‌سازی تماس"
+
+msgid "Enable Call Integration?"
+msgstr ""
+
+msgid "Disabled — users cannot make calls"
+msgstr ""
+
+#| msgid ""
+#| "Enable call integration to allow users to make and receive calls directly "
+#| "from any record."
+msgid "Let users make & receive calls directly from any record."
+msgstr ""
+"به کاربران اجازه دهید مستقیماً از هر رکوردی تماس برقرار کرده و دریافت کنند."
+
+msgid "Enabled — users can make and receive calls"
+msgstr ""
+
+msgid "Disable Call Integration?"
+msgstr ""
+
+msgid "Users will no longer be able to make calls from the CRM."
+msgstr ""
+
+msgid "Choose who can initiate calls."
+msgstr ""
+
+msgid "Set access to All Users?"
+msgstr "دسترسی را به همه کاربران تنظیم کنیم؟"
+
+msgid "Every user in the company will be able to initiate calls."
+msgstr ""
+
+msgid "Every user in the company can use call integration."
+msgstr ""
+
+msgid "Switch to Specific Roles?"
+msgstr ""
+
+msgid "Only users with selected roles will be able to make calls."
+msgstr ""
+
+msgid "Only users with selected roles can use call integration."
+msgstr ""
+
+msgid "Click to add or remove roles."
+msgstr ""
+
+msgid "role"
+msgstr ""
+
+msgid "roles"
+msgstr "نقش‌ها"
+
+msgid "Switch to Specific Users?"
+msgstr ""
+
+msgid "Only individually selected users will be able to make calls."
+msgstr ""
+
+msgid "Only selected individual users can use call integration."
+msgstr ""
+
+msgid "Click to add or remove users."
+msgstr ""
+
+msgid "user"
+msgstr ""
+
+msgid "users"
+msgstr "کاربران"
+
+msgid "Setup guides"
+msgstr ""
+
+msgid "Add"
+msgstr "افزودن"
+
+msgid "Please enter a phone number to call."
+msgstr ""
+
+msgid "Provider not found."
+msgstr ""
+
+msgid "Initiating…"
+msgstr ""
+
+msgid "Ringing…"
+msgstr ""
+
+msgid "Call Ended"
+msgstr "تماس پایان یافت"
+
+msgid "Call Declined"
+msgstr "تماس رد شد"
+
+msgid "Call Failed"
+msgstr "تماس ناموفق بود"
+
+msgid "Call Cancelled"
+msgstr "تماس لغو شد"
+
+msgid "Date & Time"
+msgstr "تاریخ و زمان"
+
+msgid "Access Control"
+msgstr "کنترل دسترسی"
+
+msgid "Providers"
+msgstr "ارائه‌دهندگان"
+
+msgid "Select Roles"
+msgstr "انتخاب نقش‌ها"
+
+msgid "Select Users"
+msgstr "انتخاب کاربران"
+
+msgid "Roles with Call Access"
+msgstr "نقش‌های دارای دسترسی تماس"
+
+msgid "No roles selected yet."
+msgstr ""
+
+msgid "Users with Call Access"
+msgstr "کاربران دارای دسترسی تماس"
+
+msgid "No users selected yet."
+msgstr ""
+
+msgid "Provider not found"
+msgstr ""
+
+msgid "Connection successful"
+msgstr ""
+
+msgid "Connection failed"
+msgstr ""
+
+msgid "Provider status updated successfully."
+msgstr ""
+
+msgid "Activity Call Extension"
+msgstr "افزونه تماس فعالیت"
+
+msgid "Activity Call Extensions"
+msgstr "افزونه‌های تماس فعالیت"
+
+msgid "activity call extension"
+msgstr "افزونه تماس فعالیت"

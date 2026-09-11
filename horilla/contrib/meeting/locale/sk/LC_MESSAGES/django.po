@@ -1,0 +1,516 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n "
+">= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
+
+msgid "Meeting Integration"
+msgstr ""
+
+msgid ""
+"Zoom and Microsoft Teams meeting integration with company access control, "
+"OAuth connections, personal meeting URLs, and activity meeting links."
+msgstr ""
+
+msgid ""
+"Add connect/read timeouts on outbound Zoom and Microsoft Graph (Teams) OAuth "
+"and API calls so a blocked network path cannot hang a worker indefinitely."
+msgstr ""
+
+msgid "Restricted allowed-users and allowed-roles list views to HTMX requests."
+msgstr ""
+
+msgid ""
+"Google Meet option now hides when Google Calendar integration is disabled. "
+"Resolve meeting integration settings from the user's company via all_objects "
+"and use unfiltered GoogleCalendarConfig lookups in provider settings and "
+"link generation. Handle missing active company gracefully in integration "
+"settings views."
+msgstr ""
+
+msgid ""
+"Fixed MultipleObjectsReturned on the Zoom and Teams OAuth callbacks. "
+"Improved the access-control UI: constrained the section to the viewport, "
+"added a count + eye pill for allowed users and roles that opens a "
+"HorillaListView modal, and fixed the card-wide click handler. Added "
+"integration-settings view docstrings for pylint."
+msgstr ""
+
+msgid ""
+"Initial release: company-level meeting integration settings, Zoom and Teams "
+"OAuth, per-user provider settings, MeetingLink CRUD, admin integration "
+"screens under Settings → Integrations, My Settings entries, and generate-"
+"link support for activities."
+msgstr ""
+
+msgid "Roles"
+msgstr ""
+
+msgid "Select roles"
+msgstr ""
+
+msgid "Users"
+msgstr ""
+
+msgid "Select users"
+msgstr ""
+
+msgid "Meeting"
+msgstr ""
+
+msgid "Zoom"
+msgstr ""
+
+msgid "Google Meet"
+msgstr ""
+
+msgid "Microsoft Teams"
+msgstr ""
+
+msgid "All Users"
+msgstr ""
+
+msgid "Specific Roles"
+msgstr ""
+
+msgid "Specific Users"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "Access Type"
+msgstr ""
+
+msgid "Who can generate meeting links."
+msgstr ""
+
+msgid "Allowed Roles"
+msgstr ""
+
+msgid "Allowed Users"
+msgstr ""
+
+msgid "Meeting Integration Setting"
+msgstr ""
+
+msgid "Meeting Integration Settings"
+msgstr ""
+
+msgid "User"
+msgstr ""
+
+msgid "Provider"
+msgstr ""
+
+msgid "Personal Meeting URL"
+msgstr ""
+
+msgid "Your static personal meeting room link, if available."
+msgstr ""
+
+msgid "User Meeting Config"
+msgstr ""
+
+msgid "User Meeting Configs"
+msgstr ""
+
+msgid "Client ID"
+msgstr ""
+
+msgid "Client Secret"
+msgstr ""
+
+msgid "OAuth Token"
+msgstr ""
+
+msgid "OAuth State"
+msgstr ""
+
+msgid "Connected Account Email"
+msgstr ""
+
+msgid "Zoom OAuth Config"
+msgstr ""
+
+msgid "Zoom OAuth Configs"
+msgstr ""
+
+msgid "Client ID (Application ID)"
+msgstr ""
+
+msgid "Tenant ID"
+msgstr ""
+
+msgid "Your Azure AD tenant ID, or 'common' for multi-tenant apps."
+msgstr ""
+
+msgid "Microsoft Teams OAuth Config"
+msgstr ""
+
+msgid "Microsoft Teams OAuth Configs"
+msgstr ""
+
+msgid "Roles with access"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Users with access"
+msgstr ""
+
+msgid "Select Roles"
+msgstr ""
+
+msgid "Select Users"
+msgstr ""
+
+msgid "Search..."
+msgstr ""
+
+msgid "Select all"
+msgstr ""
+
+msgid "Clear all"
+msgstr ""
+
+msgid "No roles found."
+msgstr ""
+
+msgid "No users found."
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid ""
+"Connect and manage the meeting providers available to your organization."
+msgstr ""
+
+msgid "Meeting Links"
+msgstr ""
+
+msgid ""
+"Enable meeting integration to allow users to generate and share meeting "
+"links using Zoom, Google Meet, Microsoft Teams, and more."
+msgstr ""
+
+msgid "Enable Meeting Integration"
+msgstr ""
+
+msgid "Disable Meeting Integration?"
+msgstr ""
+
+msgid "Users will no longer be able to create meeting links."
+msgstr ""
+
+msgid "Enable Meeting Integration?"
+msgstr ""
+
+msgid "Enabled — users can now create meeting links"
+msgstr ""
+
+msgid "Disabled — users cannot create meeting links"
+msgstr ""
+
+msgid "Access Control"
+msgstr ""
+
+msgid "Choose who can generate meeting links."
+msgstr ""
+
+msgid "Set access to All Users?"
+msgstr ""
+
+msgid "Every user in the company will be able to create meeting links."
+msgstr ""
+
+msgid "Every user in the company can use meeting links."
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Click to activate"
+msgstr ""
+
+msgid "Select Specific Roles?"
+msgstr ""
+
+msgid "Only users with selected roles will be able to create meeting links."
+msgstr ""
+
+msgid "Only users with selected roles can use meeting links."
+msgstr ""
+
+msgid "· Click to add or remove roles."
+msgstr ""
+
+msgid "role(s)"
+msgstr ""
+
+msgid "Click to select"
+msgstr ""
+
+msgid "Select Specific Users?"
+msgstr ""
+
+msgid "Only selected users will be able to create meeting links."
+msgstr ""
+
+msgid "Only selected individual users can use meeting links."
+msgstr ""
+
+msgid "· Click to add or remove users."
+msgstr ""
+
+msgid "user(s)"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "No entries found."
+msgstr ""
+
+msgid "Meeting Accounts"
+msgstr ""
+
+msgid "Manage the meeting accounts connected to your profile."
+msgstr ""
+
+msgid ""
+"Meeting integration is not currently enabled for your account. Please "
+"contact your administrator."
+msgstr ""
+
+msgid "Connected"
+msgstr ""
+
+msgid "Connected Account"
+msgstr ""
+
+msgid "Reconnect"
+msgstr ""
+
+msgid "Disconnect"
+msgstr ""
+
+msgid "Credentials saved. Click Connect to authorize with Zoom."
+msgstr ""
+
+msgid "Connect Zoom"
+msgstr ""
+
+msgid "Edit Credentials"
+msgstr ""
+
+msgid "Save Credentials"
+msgstr ""
+
+msgid "How to set up Zoom OAuth"
+msgstr ""
+
+msgid "Go to Zoom Marketplace"
+msgstr ""
+
+msgid "Visit"
+msgstr ""
+
+msgid "and sign in."
+msgstr ""
+
+msgid "Create an OAuth app"
+msgstr ""
+
+msgid "Click \"Build App\" → choose \"OAuth\" → select \"User-managed\"."
+msgstr ""
+
+msgid "Add redirect URI"
+msgstr ""
+
+msgid "Under OAuth settings, add this exact redirect URI:"
+msgstr ""
+
+msgid "Copy credentials"
+msgstr ""
+
+msgid ""
+"Copy the Client ID and Client Secret from the app's Basic Information page."
+msgstr ""
+
+msgid "Enter below and save"
+msgstr ""
+
+msgid "Paste your credentials below and click Save, then Connect."
+msgstr ""
+
+msgid "your_client_id"
+msgstr ""
+
+msgid "your_client_secret"
+msgstr ""
+
+msgid "Disable"
+msgstr ""
+
+msgid ""
+"Google Calendar is connected. Enable Google Meet to auto-generate meeting "
+"links."
+msgstr ""
+
+msgid "Enable Google Meet"
+msgstr ""
+
+msgid "Google Meet requires Google Calendar to be connected first."
+msgstr ""
+
+msgid "Connect Google Calendar"
+msgstr ""
+
+msgid "Credentials saved. Click Connect to authorize with Microsoft."
+msgstr ""
+
+msgid "Connect Teams"
+msgstr ""
+
+msgid "How to set up Microsoft Teams OAuth"
+msgstr ""
+
+msgid ""
+"Important: Microsoft Teams meeting creation requires a Microsoft 365 work or "
+"school account with a Teams license. Personal Microsoft accounts "
+"(@outlook.com, @hotmail.com, @live.com) are not supported by the Microsoft "
+"Graph API."
+msgstr ""
+
+msgid "Go to Azure Portal"
+msgstr ""
+
+msgid "and sign in with your work or school account."
+msgstr ""
+
+msgid "Register an application"
+msgstr ""
+
+msgid ""
+"Search \"App registrations\" → New registration. Set a name and choose "
+"\"Accounts in any organizational directory only (Single tenant)\"."
+msgstr ""
+
+msgid "Under Authentication → Add a platform → Web. Enter this exact URI:"
+msgstr ""
+
+msgid "Create a client secret"
+msgstr ""
+
+msgid "Go to Certificates & secrets → New client secret. Copy the"
+msgstr ""
+
+msgid "Value"
+msgstr ""
+
+msgid "(not the Secret ID) immediately — it is only shown once."
+msgstr ""
+
+msgid "Add API permissions"
+msgstr ""
+
+msgid ""
+"API permissions → Add → Microsoft Graph → Delegated → add "
+"OnlineMeetings.ReadWrite and User.Read. Then click \"Grant admin consent\"."
+msgstr ""
+
+msgid "From Overview, copy Application (client) ID and Directory (tenant) ID."
+msgstr ""
+
+msgid "Application (client) ID"
+msgstr ""
+
+msgid "Secret Value"
+msgstr ""
+
+msgid "Directory (tenant) ID"
+msgstr ""
+
+msgid "No active company found.Cannot save settings."
+msgstr ""
+
+msgid "Meeting integration enabled."
+msgstr ""
+
+msgid "Meeting integration disabled and all credentials cleared."
+msgstr ""
+
+msgid "Access set to All Users."
+msgstr ""
+
+msgid "Full Name"
+msgstr ""
+
+msgid "Role"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Role Name"
+msgstr ""
+
+msgid "Allowed roles updated."
+msgstr ""
+
+msgid "Allowed users updated."
+msgstr ""
+
+msgid "Zoom credentials saved. Click Connect to authorize."
+msgstr ""
+
+msgid "Zoom account disconnected."
+msgstr ""
+
+msgid "Connect Google Calendar first to enable Google Meet."
+msgstr ""
+
+msgid "Google Meet enabled for meeting link generation."
+msgstr ""
+
+msgid "Google Meet disabled."
+msgstr ""
+
+msgid "Teams credentials saved. Click Connect to authorize."
+msgstr ""
+
+msgid "Teams account disconnected."
+msgstr ""
+
+msgid "Please save your Zoom Client ID and Secret first."
+msgstr ""
+
+msgid "Zoom account connected successfully."
+msgstr ""
+
+msgid "Please save your Teams Client ID, Secret and Tenant ID first."
+msgstr ""
+
+msgid "Teams account connected successfully."
+msgstr ""

@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Scoring Rules"
+msgstr "Règles de notation"
+
+msgid "At least one condition must be provided."
+msgstr "Au moins une condition doit être fournie."
+
+msgid "Rule Name"
+msgstr "Nom de la règle"
+
+msgid "Module"
+msgstr "Module"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Scoring Rule"
+msgstr "Règle de notation"
+
+msgid "Criterion Name"
+msgstr "Nom du critère"
+
+msgid "Points to Award"
+msgstr "Points à attribuer"
+
+msgid "Add"
+msgstr "Ajouter"
+
+msgid "Sub"
+msgstr "Soustraire"
+
+msgid "Operation Type"
+msgstr "Type d'opération"
+
+msgid "Order"
+msgstr "Ordre"
+
+msgid "Scoring Criterion"
+msgstr "Critère de notation"
+
+msgid "Scoring Criteria"
+msgstr "Critères de notation"
+
+msgid "Field Name"
+msgstr "Nom du champ"
+
+msgid "Operator"
+msgstr "Opérateur"
+
+msgid "Value"
+msgstr "Valeur"
+
+msgid "AND"
+msgstr "ET"
+
+msgid "OR"
+msgstr "OU"
+
+msgid "Logical Operator"
+msgstr "Opérateur logique"
+
+msgid "Scoring Condition"
+msgstr "Condition de notation"
+
+msgid "Scoring Conditions"
+msgstr "Conditions de notation"
+
+msgid "Opened"
+msgstr "Ouvert"
+
+msgid "Clicked"
+msgstr "Cliqué"
+
+msgid "Bounced"
+msgstr "Rebondi"
+
+msgid "Criteria"
+msgstr "Critères"
+
+msgid "Points"
+msgstr "Points"
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "Edit"
+msgstr "Modifier"
+
+msgid "Delete"
+msgstr "Supprimer"
+
+msgid "Nothing to show yet. Please add your Criteria"
+msgstr "Rien à afficher pour l'instant. Veuillez ajouter vos critères."
+
+msgid "Define rules that automatically score leads and opportunities."
+msgstr ""
+
+msgid "The requested data does not exist."
+msgstr "Les données demandées n'existent pas."
+
+msgid "Create New Rule Criteria"
+msgstr "Créer de nouveaux critères de règle"

@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Module providing customizable color themes and UI personalization."
+msgstr ""
+
+msgid ""
+"Migrated signal imports to the horilla.db.models.signals shim, standardized "
+"first-party import groups, and added docstrings for pylint compliance; theme "
+"behavior unchanged."
+msgstr ""
+
+msgid ""
+"Release 1.10: theme management ships under contrib with app label theme. "
+"Static assets served under theme/ URLs, signals aligned to the core contrib "
+"app, and default-theme seeding coordinated with contrib post_migrate "
+"semantics."
+msgstr ""
+
+msgid ""
+"Improved dynamic Tailwind theme integration with adoption of primary_600 for "
+"dynamic theme coloring, improved fallback handling for theme variables, and "
+"brand-aligned icon color updates across modules."
+msgstr ""
+
+msgid ""
+"Introduced fully dynamic Theme Manager with per-company theme customization, "
+"global default theme support, dynamic Tailwind config injection, and surface "
+"color system for advanced UI backgrounds."
+msgstr ""
+
+msgid "Theme Manager"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Is Default"
+msgstr ""
+
+msgid ""
+"Set as default theme for login page.            Only one theme can be "
+"default across all companies."
+msgstr ""
+
+msgid "Color Theme"
+msgstr ""
+
+msgid "Color Themes"
+msgstr ""
+
+msgid "Theme"
+msgstr ""
+
+msgid "Company Theme"
+msgstr ""
+
+msgid "Company Themes"
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Remove as default"
+msgstr ""
+
+msgid "Default Theme"
+msgstr ""
+
+msgid "Set as default for login page"
+msgstr ""
+
+msgid "Set as Default"
+msgstr ""
+
+msgid "No records"
+msgstr ""
+
+msgid "No themes available"
+msgstr ""
+
+msgid "Theme Management"
+msgstr ""
+
+msgid "Select a theme to customize the appearance of your application"
+msgstr ""
+
+msgid "Theme ID is required"
+msgstr ""
+
+msgid "No active company found"
+msgstr ""
+
+msgid "Theme changed successfully and set as default for login page"
+msgstr ""
+
+msgid "Theme changed successfully"
+msgstr ""
+
+msgid "Theme removed as default for login page"
+msgstr ""
+
+msgid "Theme set as default for login page"
+msgstr ""
+
+#, python-format
+msgid "An error occurred while setting the default theme: %(error)s"
+msgstr ""

@@ -1,0 +1,32 @@
+{% extends "components/modelcontent_layout.html" %}
+{% block main_content_classes %}custom-scroll overflow-hidden h-[calc(_100vh_-_60px_)]{% endblock %}
+{% block messages %}{% endblock %}
+
+{% block navbar %}
+    <div id="navBar" class="w-full" hx-get="{{ nav_url}}?{{ request.GET.urlencode}}" hx-trigger="load"></div>
+{% endblock navbar %}
+
+{% block main %}
+    <!-- main content -->
+    {% with query=request.GET.urlencode %}
+        <div
+            class="p-5 h-full pt-24 flex flex-col min-h-0"
+            style="position: relative"
+            id="mainSession"
+            hx-get="{{ layout_url }}?{{ query }}{% if filter_form %}&hx_trigger={{filter_form}}{% endif %}"
+            hx-trigger="load"
+            hx-indicator="#loading-indicator"
+            hx-disinherit="*"
+        >
+            <div
+                id="loading-indicator"
+                class="htmx-indicator"
+                style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center"
+            >
+                <div class="flex justify-center items-center p-4">
+                    <div class="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary-600"></div>
+                </div>
+            </div>
+        </div>
+    {% endwith %}
+{% endblock main %}

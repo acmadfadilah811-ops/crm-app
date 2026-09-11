@@ -1,0 +1,372 @@
+# Arabic translations for Horilla Duplicates module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+msgid ""
+"Module for detecting potential duplicate records and supporting merge "
+"workflows."
+msgstr "وحدة للكشف عن السجلات المكررة المحتملة ودعم سير عمل الدمج."
+
+msgid ""
+"Avoid RelatedObjectDoesNotExist in DuplicateRule.clean when related objects "
+"are missing."
+msgstr ""
+
+msgid "Removed deprecated merge_views compatibility shim."
+msgstr ""
+
+msgid ""
+"Standardized first-party import groups and aligned with the platform 1.11.1 "
+"release; rules, criteria, and merge behavior unchanged."
+msgstr ""
+"توحيد مجموعات الاستيراد الداخلية والتوافق مع إصدار المنصة 1.11.1؛ القواعد "
+"والمعايير وسلوك الدمج دون تغيير."
+
+msgid ""
+"Duplicate rule forms aligned with HorillaModelForm layout: field_order and "
+"Meta.fields = \"__all__\"; criteria rows and validation unchanged."
+msgstr ""
+"تم محاذاة نماذج قواعد التكرار مع تخطيط HorillaModelForm: field_order "
+"وMeta.fields؛ صفوف المعايير والتحقق دون تغيير."
+
+msgid ""
+"Release 1.10: duplicate control ships under contrib with app label "
+"duplicates. Feature registration, merge flows, and cross-model references "
+"use contrib paths and matching app labels for clone and duplicate tooling."
+msgstr ""
+"الإصدار 1.10: يُشحن التحكم في التكرار ضمن contrib بتسمية تطبيق duplicates. "
+"تسجيل الميزات وتدفقات الدمج والمراجع العابرة للنماذج تستخدم مسارات contrib."
+
+msgid ""
+"Renamed Clone Management to Duplicate Control. Added duplicate validation "
+"for inline field edits with warning modal for duplicate conflicts. Fixed "
+"duplicate detail tab injection issue and improved merge flow handling for "
+"edge cases."
+msgstr ""
+"إعادة تسمية إدارة النسخ إلى التحكم في التكرار. إضافة التحقق من التكرار "
+"لتعديلات الحقول المضمّنة مع نافذة تحذير لتعارضات التكرار. إصلاح مشكلة حقن "
+"تبويب التفاصيل وتحسين معالجة تدفق الدمج."
+
+msgid ""
+"Introduced duplicate management capabilities with matching rules, potential "
+"duplicate detection, and merge comparison and summary workflows."
+msgstr ""
+"إدخال إمكانات إدارة التكرار مع قواعد المطابقة والكشف عن التكرار المحتمل وسير "
+"عمل مقارنة الدمج والملخص."
+
+msgid "Clone Management"
+msgstr "إدارة النسخ"
+
+msgid "Potential Duplicates"
+msgstr "التكرارات المحتملة"
+
+msgid "Similar records were found. Do you want to proceed?"
+msgstr "تم العثور على سجلات مشابهة. هل تريد المتابعة؟"
+
+#, python-format
+msgid ""
+"Each matching criterion must use a different field. The following field(s) "
+"appear more than once: %(fields)s"
+msgstr ""
+"يجب أن يستخدم كل معيار مطابقة حقلاً مختلفاً. الحقل/الحقول التالية تظهر أكثر من "
+"مرة: %(fields)s"
+
+msgid "Matching Criteria row has missing required field: Field."
+msgstr "صف معايير المطابقة يفتقر إلى حقل مطلوب: الحقل."
+
+msgid "At least one matching criterion is required."
+msgstr "يجب توفير معيار مطابقة واحد على الأقل."
+
+msgid ""
+"Matching rule must apply to the same content type as duplicate rule. Please "
+"select a matching rule for the selected module."
+msgstr ""
+"يجب أن تنطبق قاعدة المطابقة على نفس نوع المحتوى كقاعدة التكرار. يرجى اختيار "
+"قاعدة مطابقة للوحدة المختارة."
+
+msgid "Duplicate Control"
+msgstr "التحكم في التكرار"
+
+msgid "Matching Rules"
+msgstr "قواعد المطابقة"
+
+msgid "Duplicate Rules"
+msgstr "قواعد التكرار"
+
+msgid "Exact Match"
+msgstr "مطابقة تامة"
+
+msgid "Fuzzy Match"
+msgstr "مطابقة تقريبية"
+
+msgid "Phonetic Match"
+msgstr "مطابقة صوتية"
+
+msgid "Edit Distance"
+msgstr "مسافة التعديل"
+
+msgid "Name"
+msgstr "الاسم"
+
+msgid "Description"
+msgstr "الوصف"
+
+msgid "The model this matching rule applies to"
+msgstr "النموذج الذي تنطبق عليه قاعدة المطابقة هذه"
+
+msgid "Module"
+msgstr "الوحدة"
+
+msgid "Matching Rule"
+msgstr "قاعدة المطابقة"
+
+msgid "Exact"
+msgstr "تام"
+
+msgid "Fuzzy"
+msgstr "تقريبي"
+
+msgid "Field"
+msgstr "الحقل"
+
+msgid "Field name to match on"
+msgstr "اسم الحقل للمطابقة عليه"
+
+msgid "Matching Method"
+msgstr "طريقة المطابقة"
+
+msgid "Match Blank Fields"
+msgstr "مطابقة الحقول الفارغة"
+
+msgid "If checked, blank fields will be considered a match"
+msgstr "إذا تم التحديد، ستُعتبر الحقول الفارغة تطابقاً"
+
+msgid "Order of evaluation"
+msgstr "ترتيب التقييم"
+
+msgid "Matching Criterion"
+msgstr "معيار المطابقة"
+
+msgid "Matching Criteria"
+msgstr "معايير المطابقة"
+
+msgid "Allow"
+msgstr "سماح"
+
+msgid "Block"
+msgstr "حجب"
+
+msgid "The model this duplicate rule applies to"
+msgstr "النموذج الذي تنطبق عليه قاعدة التكرار هذه"
+
+msgid "The matching rule to use for detection"
+msgstr "قاعدة المطابقة المستخدمة للكشف"
+
+msgid "Action on Create"
+msgstr "الإجراء عند الإنشاء"
+
+msgid "Action on Edit"
+msgstr "الإجراء عند التعديل"
+
+msgid "Title shown in the alert dialog"
+msgstr "العنوان المعروض في نافذة التنبيه"
+
+msgid "Alert Title"
+msgstr "عنوان التنبيه"
+
+msgid "Message to show in alert when duplicates are detected"
+msgstr "الرسالة المعروضة في التنبيه عند الكشف عن تكرارات"
+
+msgid "Alert Message"
+msgstr "رسالة التنبيه"
+
+msgid "Show list of potential duplicates in the alert"
+msgstr "عرض قائمة التكرارات المحتملة في التنبيه"
+
+msgid "Show Duplicate Records"
+msgstr "عرض السجلات المكررة"
+
+msgid "Duplicate Rule"
+msgstr "قاعدة التكرار"
+
+msgid "Field Name"
+msgstr "اسم الحقل"
+
+msgid "Field name to evaluate"
+msgstr "اسم الحقل للتقييم"
+
+msgid "Operator"
+msgstr "المعامل"
+
+msgid "Value"
+msgstr "القيمة"
+
+msgid "Value to compare against"
+msgstr "القيمة للمقارنة معها"
+
+msgid "Logical Operator"
+msgstr "المعامل المنطقي"
+
+msgid "How to combine with next condition"
+msgstr "كيفية الجمع مع الشرط التالي"
+
+msgid "Duplicate Rule Condition"
+msgstr "شرط قاعدة التكرار"
+
+msgid "Duplicate Rule Conditions"
+msgstr "شروط قاعدة التكرار"
+
+msgid "Close"
+msgstr "إغلاق"
+
+msgid "Potential Duplicate Records:"
+msgstr "السجلات المكررة المحتملة:"
+
+msgid "Cancel"
+msgstr "إلغاء"
+
+msgid "Continue"
+msgstr "متابعة"
+
+msgid "Edit"
+msgstr "تعديل"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Nothing to show yet. Please add your Matching Rules."
+msgstr "لا يوجد شيء لعرضه بعد. يرجى إضافة قواعد المطابقة."
+
+msgid "Potential Duplicate Records"
+msgstr "السجلات المكررة المحتملة"
+
+msgid "Compare"
+msgstr "مقارنة"
+
+msgid ""
+"When you merge, the master record is updated with the values you choose, and "
+"relationships to other items are shifted to the master record."
+msgstr ""
+"عند الدمج، يتم تحديث السجل الرئيسي بالقيم التي تختارها، وتنتقل العلاقات مع "
+"العناصر الأخرى إلى السجل الرئيسي."
+
+msgid "Master Record"
+msgstr "السجل الرئيسي"
+
+msgid "Use as master record"
+msgstr "استخدام كسجل رئيسي"
+
+msgid "Next"
+msgstr "التالي"
+
+msgid "Merge Summary"
+msgstr "ملخص الدمج"
+
+msgid "You're about to merge these records. You can't undo merging."
+msgstr "أنت على وشك دمج هذه السجلات. لا يمكن التراجع عن الدمج."
+
+msgid "Selected Values"
+msgstr "القيم المختارة"
+
+msgid "Selected Value"
+msgstr "القيمة المختارة"
+
+msgid "Merge"
+msgstr "دمج"
+
+msgid "Select"
+msgstr "اختيار"
+
+msgid "of"
+msgstr "من"
+
+msgid "Unselect"
+msgstr "إلغاء الاختيار"
+
+msgid "Clear Session"
+msgstr "مسح الجلسة"
+
+msgid "Select Visible Items"
+msgstr "اختيار العناصر المرئية"
+
+msgid "No potential duplicates found."
+msgstr "لم يتم العثور على تكرارات محتملة."
+
+msgid "You can only merge up to"
+msgstr "يمكنك الدمج حتى"
+
+msgid "items at a time"
+msgstr "عنصر في المرة الواحدة"
+
+msgid "Set how duplicate records are handled once matched."
+msgstr ""
+
+msgid "Conditions"
+msgstr "الشروط"
+
+msgid "Details"
+msgstr "التفاصيل"
+
+msgid "Define which fields are compared to detect matching records."
+msgstr ""
+
+msgid "You do not have permission to view this."
+msgstr "ليس لديك صلاحية لعرض هذا."
+
+msgid "Invalid request for potential duplicates."
+msgstr "طلب غير صالح للتكرارات المحتملة."
+
+msgid "Missing required parameters."
+msgstr "معاملات مطلوبة مفقودة."
+
+msgid "Model not found."
+msgstr "النموذج غير موجود."
+
+msgid "No duplicates selected."
+msgstr "لم يتم اختيار أي تكرارات."
+
+#, python-brace-format
+msgid "Error loading merge comparison: {error}"
+msgstr "خطأ في تحميل مقارنة الدمج: {error}"
+
+#, python-brace-format
+msgid "Error: {error}"
+msgstr "خطأ: {error}"
+
+#, python-brace-format
+msgid "Error loading merge summary: {error}"
+msgstr "خطأ في تحميل ملخص الدمج: {error}"
+
+#, python-brace-format
+msgid "Successfully merged {count} duplicate(s) into master record."
+msgstr "تم دمج {count} تكرار/تكرارات بنجاح في السجل الرئيسي."
+
+msgid ""
+"The master record is different from the current record. You will be "
+"redirected to the master record."
+msgstr ""
+
+#, python-brace-format
+msgid "Error merging duplicates: {error}"
+msgstr "خطأ في دمج التكرارات: {error}"
+
+msgid "Merge Selected"
+msgstr "دمج المختار"
+
+msgid "Record"
+msgstr "سجل"

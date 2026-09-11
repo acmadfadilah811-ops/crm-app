@@ -1,0 +1,129 @@
+# German translations for Horilla Notifications module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Notifications"
+msgstr "Benachrichtigungen"
+
+msgid "Template title is required."
+msgstr "Vorlagentitel ist erforderlich."
+
+msgid "Template message is required."
+msgstr "Vorlagennachricht ist erforderlich."
+
+msgid ""
+"URL contains potentially dangerous content. Please remove any scripts or "
+"malicious code."
+msgstr ""
+"Die URL enthaelt potenziell gefaehrlichen Inhalt. Bitte entfernen Sie alle "
+"Skripte oder schaedlichen Code."
+
+msgid "Notification"
+msgstr "Benachrichtigung"
+
+msgid "muted"
+msgstr "stummgeschaltet"
+
+msgid "unmuted"
+msgstr "nicht stummgeschaltet"
+
+msgid "Notification Sound Preference"
+msgstr "Benachrichtigungston-Einstellung"
+
+msgid "Notification Sound Preferences"
+msgstr "Benachrichtigungston-Einstellungen"
+
+msgid "Template Title"
+msgstr "Vorlagentitel"
+
+msgid "Message"
+msgstr "Nachricht"
+
+msgid "Related Model"
+msgstr "Verknuepftes Modell"
+
+msgid "Notification Template"
+msgstr "Benachrichtigungsvorlage"
+
+msgid "Notification Templates"
+msgstr "Benachrichtigungsvorlagen"
+
+msgid "Unmute notifications"
+msgstr "Benachrichtigungen nicht stummschalten"
+
+msgid "Mute notifications"
+msgstr "Benachrichtigungen stummschalten"
+
+msgid "Mark all as read"
+msgstr "Alle als gelesen markieren"
+
+msgid "No unread notifications"
+msgstr "Keine ungelesenen Benachrichtigungen"
+
+msgid "View all Notification"
+msgstr "Alle Benachrichtigungen anzeigen"
+
+msgid "All Notifications"
+msgstr "Alle Benachrichtigungen"
+
+msgid "Clear All"
+msgstr "Alle loeschen"
+
+msgid "No notifications"
+msgstr "Keine Benachrichtigungen"
+
+msgid "Close"
+msgstr "Schliessen"
+
+msgid "Enter template title"
+msgstr "Vorlagentitel eingeben"
+
+msgid "Select content type (optional)"
+msgstr "Inhaltstyp auswaehlen (optional)"
+
+msgid "Insert Field"
+msgstr "Feld einfuegen"
+
+msgid "Loading..."
+msgstr "Wird geladen..."
+
+msgid "All notifications marked as read."
+msgstr "Alle Benachrichtigungen als gelesen markiert."
+
+msgid "Notification Deleted."
+msgstr "Benachrichtigung geloescht."
+
+msgid "Customize the content of notifications sent to your users."
+msgstr ""
+
+msgid "Update Notification Template"
+msgstr "Benachrichtigungsvorlage aktualisieren"
+
+msgid "Update Template"
+msgstr "Vorlage aktualisieren"
+
+msgid "Create Notification Template"
+msgstr "Benachrichtigungsvorlage erstellen"
+
+msgid "Save Template"
+msgstr "Vorlage speichern"
+
+msgid "Notification template \"{}\" updated successfully."
+msgstr "Benachrichtigungsvorlage \"{}\" erfolgreich aktualisiert."
+
+msgid "Notification template \"{}\" created successfully."
+msgstr "Benachrichtigungsvorlage \"{}\" erfolgreich erstellt."

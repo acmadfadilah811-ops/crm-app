@@ -1,0 +1,1152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Contains"
+msgstr "Berisi"
+
+msgid "Equals"
+msgstr "Setara"
+
+msgid "Not Equals"
+msgstr "Tidak Sama"
+
+msgid "Starts with"
+msgstr "Dimulai dengan"
+
+msgid "Ends with"
+msgstr "Berakhir dengan"
+
+msgid "Is empty"
+msgstr "Kosong"
+
+msgid "Is not empty"
+msgstr "Tidak kosong"
+
+msgid "Greater than"
+msgstr "Lebih besar dari"
+
+msgid "Less than"
+msgstr "Kurang dari"
+
+msgid "Greater than or equal"
+msgstr "Lebih besar dari atau sama"
+
+msgid "Less than or equal"
+msgstr "Kurang dari atau sama"
+
+msgid "Between"
+msgstr "Di antara"
+
+msgid "After"
+msgstr "Setelah"
+
+msgid "Before"
+msgstr "Sebelum"
+
+msgid "Today"
+msgstr "Hari ini"
+
+msgid "Yesterday"
+msgstr "Kemarin"
+
+msgid "This Week"
+msgstr "Minggu ini"
+
+msgid "This Month"
+msgstr "Bulan ini"
+
+#, python-format
+msgid "Select %(field)s"
+msgstr "Pilih%(field)s"
+
+#, python-format
+msgid "Enter %(field)s"
+msgstr "Masukkan%(field)s"
+
+msgid "Operator is required when a field is selected."
+msgstr "Operator diperlukan ketika suatu bidang dipilih."
+
+msgid "Select a valid field. That choice is not one of the available fields."
+msgstr ""
+"Pilih bidang yang valid.Pilihan itu bukanlah salah satu bidang yang "
+"tersedia."
+
+msgid "Value is required when a field and operator are selected."
+msgstr "Nilai diperlukan ketika bidang dan operator dipilih."
+
+msgid "This field is read-only and cannot be modified."
+msgstr "Bidang ini bersifat hanya baca dan tidak dapat diubah."
+
+msgid "List View Name"
+msgstr "Nama Tampilan Daftar"
+
+msgid "Specify the list view name"
+msgstr "Tentukan nama tampilan daftar"
+
+msgid "Make as public"
+msgstr "Jadikan sebagai publik"
+
+msgid "Select date to filter"
+msgstr "Pilih tanggal untuk difilter"
+
+msgid "Enter phone number"
+msgstr "Masukkan nomor telepon"
+
+msgid "Enter a valid phone number."
+msgstr "Masukkan nomor telepon yang valid."
+
+msgid "Enter title"
+msgstr "Masukkan judul"
+
+#, python-format
+msgid "Upload %(field)s"
+msgstr "Unggah%(field)s"
+
+#, python-format
+msgid "Enter %(field)s here..."
+msgstr "Masukkan%(field)sdi sini..."
+
+msgid "Select Fields to Display"
+msgstr "Pilih Bidang untuk Ditampilkan"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Available Fields"
+msgstr "Bidang yang Tersedia"
+
+msgid "Search fields..."
+msgstr "Bidang pencarian..."
+
+msgid "Visible Fields"
+msgstr "Bidang Terlihat"
+
+msgid "Reset to Default"
+msgstr "Atur Ulang ke Default"
+
+msgid "Save"
+msgstr "Simpan"
+
+msgid "Change Detail View Fields"
+msgstr "Ubah Bidang Tampilan Detail"
+
+msgid "Header Portion Fields"
+msgstr "Bidang Bagian Header"
+
+msgid "Search..."
+msgstr "Mencari..."
+
+msgid "All fields added"
+msgstr "Semua bidang ditambahkan"
+
+msgid "No fields"
+msgstr "Tidak ada bidang"
+
+msgid "Details Tab Fields"
+msgstr "Bidang Tab Detail"
+
+#, python-format
+msgid ""
+"\n"
+"                            Nothing to show yet. The %(view)s list doesn't have any data.\n"
+"                        "
+msgstr ""
+"Belum ada yang bisa ditampilkan.Daftar%(view)stidak memiliki data apa pun."
+
+msgid "Nothing to show yet. Please add your"
+msgstr "Belum ada yang bisa ditampilkan.Silakan tambahkan milik Anda"
+
+msgid "Delete List"
+msgstr "Hapus Daftar"
+
+msgid "Add New"
+msgstr "Tambahkan Baru"
+
+msgid "Chart view"
+msgstr "Tampilan grafik"
+
+msgid "X-axis (Group by)"
+msgstr "Sumbu X (Kelompokkan berdasarkan)"
+
+msgid "Y-axis (Value)"
+msgstr "Sumbu Y (Nilai)"
+
+msgid "Stack by"
+msgstr "Tumpuk"
+
+msgid "Single dimension"
+msgstr "Dimensi tunggal"
+
+msgid "Chart type"
+msgstr "Jenis bagan"
+
+msgid "Actions"
+msgstr "Tindakan"
+
+msgid "Export as PDF"
+msgstr "Ekspor sebagai PDF"
+
+msgid "Export as PNG"
+msgstr "Ekspor sebagai PNG"
+
+msgid "Add to Dashboard"
+msgstr "Tambahkan ke Dasbor"
+
+msgid "Fields"
+msgstr "bidang"
+
+msgid "Previous"
+msgstr "Sebelumnya"
+
+msgid "Next"
+msgstr "Berikutnya"
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "Edit"
+msgstr "Sunting"
+
+msgid "Read Only"
+msgstr "Hanya Baca"
+
+msgid "Drag to move"
+msgstr "Seret untuk bergerak"
+
+msgid "Filters"
+msgstr "Filter"
+
+msgid "Shrink panel"
+msgstr "Kecilkan panel"
+
+msgid "Expand panel"
+msgstr "Perluas panel"
+
+msgid "Filter"
+msgstr "Filter"
+
+msgid "Add more filter"
+msgstr "Tambahkan lebih banyak filter"
+
+msgid "Applied Filters"
+msgstr "Filter Terapan"
+
+msgid "Clear All"
+msgstr "Hapus Semua"
+
+msgid "Save to List"
+msgstr "Simpan ke Daftar"
+
+msgid "Cancel"
+msgstr "Batal"
+
+msgid "OR"
+msgstr "ATAU"
+
+msgid "AND"
+msgstr "DAN"
+
+msgid "Drag to resize width (left)"
+msgstr "Seret untuk mengubah ukuran lebar (kiri)"
+
+msgid "Resize width left"
+msgstr "Ubah ukuran lebar ke kiri"
+
+msgid "Drag to resize width (right)"
+msgstr "Seret untuk mengubah ukuran lebar (kanan)"
+
+msgid "Resize width right"
+msgstr "Ubah ukuran lebar ke kanan"
+
+msgid "Drag to resize height"
+msgstr "Seret untuk mengubah ukuran tinggi"
+
+msgid "Resize height"
+msgstr "Ubah ukuran tinggi"
+
+msgid "Multi-Step Form"
+msgstr "Formulir Multi-Langkah"
+
+msgid "Single-Step Form"
+msgstr "Formulir Satu Langkah"
+
+msgid "JPG or PNG"
+msgstr "JPG atau PNG"
+
+msgid "Remove photo"
+msgstr "Hapus foto"
+
+msgid "Choose File"
+msgstr "Pilih File"
+
+msgid "No file chosen"
+msgstr "Tidak ada file yang dipilih"
+
+msgid "Clear"
+msgstr "Hapus"
+
+msgid "Add"
+msgstr "Tambah"
+
+msgid "Save & New"
+msgstr "Simpan & Baru"
+
+msgid "Add Notes and Attachment"
+msgstr "Tambahkan Catatan dan Lampiran"
+
+msgid "Upload File"
+msgstr "Unggah Berkas"
+
+msgid "File already uploaded"
+msgstr "File sudah diunggah"
+
+msgid "Click to upload or drag & drop"
+msgstr "Klik untuk mengunggah atau drag & drop"
+
+msgid "Any file (Max 10MB)"
+msgstr "File apa pun (Maks 10MB)"
+
+msgid "Clear file"
+msgstr "Hapus berkas"
+
+msgid "File selected"
+msgstr "Berkas dipilih"
+
+msgid "We searched for"
+msgstr "Kami mencari"
+
+msgid "No search results found"
+msgstr "Tidak ada hasil pencarian yang ditemukan"
+
+msgid "Select Visible Items"
+msgstr "Pilih Item yang Terlihat"
+
+msgid "No items in this group."
+msgstr "Tidak ada item dalam grup ini."
+
+msgid "Clear Filters"
+msgstr "Hapus Filter"
+
+msgid "Call"
+msgstr "Panggilan"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Initiated"
+msgstr "Dimulai"
+
+msgid "New"
+msgstr "Baru"
+
+msgid "created"
+msgstr "dibuat"
+
+msgid "status"
+msgstr "status"
+
+msgid "Added call task to this"
+msgstr "Menambahkan tugas panggilan ke ini"
+
+msgid "Send email to this"
+msgstr "Kirim email ke ini"
+
+msgid "Activity logged for this"
+msgstr "Aktivitas dicatat untuk ini"
+
+msgid "Event scheduled for this"
+msgstr "Acara dijadwalkan untuk ini"
+
+msgid "Meeting scheduled with this"
+msgstr "Pertemuan dijadwalkan dengan ini"
+
+msgid "Action performed by"
+msgstr "Tindakan yang dilakukan oleh"
+
+msgid "No history available for this object."
+msgstr "Tidak ada riwayat yang tersedia untuk objek ini."
+
+msgid "Kanban Settings"
+msgstr "Pengaturan Kanban"
+
+msgid "Select Columns to Export (Optional)"
+msgstr "Pilih Kolom untuk Diekspor (Opsional)"
+
+msgid "Export Format"
+msgstr "Format Ekspor"
+
+msgid "Excel"
+msgstr "Unggul"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Available Columns"
+msgstr "Kolom yang Tersedia"
+
+msgid "Select which columns to export"
+msgstr "Pilih kolom mana yang akan diekspor"
+
+msgid "Add Additional Columns"
+msgstr "Tambahkan Kolom Tambahan"
+
+msgid "Select more fields you want to export"
+msgstr "Pilih lebih banyak bidang yang ingin Anda ekspor"
+
+msgid "Export"
+msgstr "Ekspor"
+
+msgid "Select"
+msgstr "Pilih"
+
+msgid "Unselect"
+msgstr "Batalkan pilihan"
+
+msgid "Export Selected"
+msgstr "Ekspor yang Dipilih"
+
+msgid "Bulk Update"
+msgstr "Pembaruan Massal"
+
+msgid "Bulk Delete"
+msgstr "Hapus Massal"
+
+msgid "Edit List"
+msgstr "Sunting Daftar"
+
+#, python-format
+msgid ""
+"\n"
+"                        Nothing to show yet. The %(view)s list does not have any data.\n"
+"                    "
+msgstr ""
+"Belum ada yang bisa ditampilkan.Daftar%(view)stidak memiliki data apa pun."
+
+msgid " Nothing to show yet. Please add your"
+msgstr "Belum ada yang bisa ditampilkan.Silakan tambahkan milik Anda"
+
+msgid "All Items"
+msgstr "Semua Barang"
+
+msgid "Recently Viewed"
+msgstr "Baru Dilihat"
+
+msgid "Recently Created"
+msgstr "Baru-baru ini Dibuat"
+
+msgid "Recently Modified"
+msgstr "Baru-baru ini Dimodifikasi"
+
+msgid "List View"
+msgstr "Tampilan Daftar"
+
+msgid "Unpin default view"
+msgstr "Lepas sematan tampilan default"
+
+msgid "Unpin"
+msgstr "Membuka peniti"
+
+msgid "Set as default view"
+msgstr "Tetapkan sebagai tampilan default"
+
+msgid "Pin as default"
+msgstr "Sematkan sebagai default"
+
+msgid "Search"
+msgstr "Cari"
+
+msgid "Reload"
+msgstr "Muat ulang"
+
+msgid "Applied filters"
+msgstr "Filter yang diterapkan"
+
+msgid "Views"
+msgstr "Tampilan"
+
+msgid "Layout"
+msgstr "Tata Letak"
+
+msgid "Split View"
+msgstr "Tampilan Terpisah"
+
+msgid "Chart"
+msgstr "Bagan"
+
+msgid "List"
+msgstr "Daftar"
+
+msgid "Card"
+msgstr "Kartu"
+
+msgid "Kanban"
+msgstr "Kanban"
+
+msgid "Timeline"
+msgstr "Garis Waktu"
+
+msgid "Group By"
+msgstr "Kelompokkan Berdasarkan"
+
+msgid "Chart View"
+msgstr "Tampilan Bagan"
+
+msgid "Notes and Attachments"
+msgstr "Catatan dan Lampiran"
+
+msgid "Open file in new tab"
+msgstr "Buka file di tab baru"
+
+msgid "Notes"
+msgstr "Catatan"
+
+msgid "Created By"
+msgstr "Dibuat Oleh"
+
+msgid "Created At"
+msgstr "Dibuat Pada"
+
+msgid "File Size"
+msgstr "Ukuran Berkas"
+
+msgid "Related To"
+msgstr "Terkait dengan"
+
+msgid "Delete Attachment"
+msgstr "Hapus Lampiran"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Add Quick Filter"
+msgstr "Tambahkan Filter Cepat"
+
+msgid "Select Fields"
+msgstr "Pilih Bidang"
+
+msgid "No available fields to add as quick filter."
+msgstr "Tidak ada kolom yang tersedia untuk ditambahkan sebagai filter cepat."
+
+msgid "Loading..."
+msgstr "Memuat..."
+
+msgid "Hard Delete Confirmation"
+msgstr "Konfirmasi Penghapusan Keras"
+
+msgid "Are you sure you want to hard delete the selected"
+msgstr "Apakah Anda yakin ingin menghapus secara permanen yang dipilih"
+
+msgid "Deletable Records"
+msgstr "Catatan yang Dapat Dihapus"
+
+msgid "Protected Records"
+msgstr "Catatan yang Dilindungi"
+
+msgid "Delete All"
+msgstr "Hapus Semua"
+
+msgid " Confirm"
+msgstr "Konfirmasi"
+
+msgid "Bulk Update Selected"
+msgstr "Pembaruan Massal Dipilih"
+
+msgid "Yes"
+msgstr "Ya"
+
+msgid "No"
+msgstr "TIDAK"
+
+#, python-format
+msgid ""
+"Select\n"
+"                                            %(field)s"
+msgstr "Pilih%(field)s"
+
+#, python-format
+msgid ""
+"Select\n"
+"                                                %(field)s"
+msgstr "Pilih%(field)s"
+
+msgid "No fields available for bulk update."
+msgstr "Tidak ada kolom yang tersedia untuk pembaruan massal."
+
+msgid "Update"
+msgstr "Perbarui"
+
+msgid "Remove"
+msgstr "Hapus"
+
+msgid "Select Delete Mode"
+msgstr "Pilih Mode Hapus"
+
+msgid "Choose the deletion mode for the selected records"
+msgstr "Pilih mode penghapusan untuk rekaman yang dipilih"
+
+msgid "Hard Delete will permanently delete data."
+msgstr "Hard Delete akan menghapus data secara permanen."
+
+msgid "Soft Delete allows you to restore deleted records."
+msgstr "Soft Delete memungkinkan Anda memulihkan catatan yang dihapus."
+
+msgid "Hard Delete"
+msgstr "Hapus Keras"
+
+msgid "Soft Delete"
+msgstr "Hapus Lembut"
+
+msgid "Select Field"
+msgstr "Pilih Bidang"
+
+msgid "No value needed"
+msgstr "Tidak diperlukan nilai"
+
+msgid "Start"
+msgstr "Awal"
+
+msgid "End"
+msgstr "Akhir"
+
+msgid "and"
+msgstr "Dan"
+
+msgid "True"
+msgstr "BENAR"
+
+msgid "False"
+msgstr "PALSU"
+
+msgid "Enter value"
+msgstr "Masukkan nilai"
+
+msgid "Remove filter"
+msgstr "Hapus penyaring"
+
+msgid "Apply"
+msgstr "Terapkan"
+
+msgid "Drag"
+msgstr "Menyeret"
+
+msgid "More actions"
+msgstr "Lebih banyak tindakan"
+
+msgid "Select Operator"
+msgstr "Pilih Operator"
+
+msgid "All"
+msgstr "Semua"
+
+msgid "Are you sure you want to delete this quick filter"
+msgstr "Apakah Anda yakin ingin menghapus filter cepat ini"
+
+msgid "Bulk Reassign Dependencies"
+msgstr "Penetapan Ulang Ketergantungan Secara Massal"
+
+msgid "Reassign all dependent"
+msgstr "Tetapkan kembali semua tanggungan"
+
+msgid "to a new target before deleting"
+msgstr "ke target baru sebelum menghapus"
+
+msgid "New Target"
+msgstr "Sasaran Baru"
+
+msgid "No other targets available"
+msgstr "Tidak ada target lain yang tersedia"
+
+msgid "Confirm"
+msgstr "Konfirmasi"
+
+msgid "Confirm Deletion"
+msgstr "Konfirmasi Penghapusan"
+
+msgid "Soft deleting this"
+msgstr "Menghapus ini dengan lembut"
+
+msgid "will also soft delete all its related"
+msgstr "juga akan menghapus sementara semua yang terkait"
+
+msgid "Permanently deleting this"
+msgstr "Menghapus ini secara permanen"
+
+msgid "will also permanently delete all its related"
+msgstr "juga akan menghapus secara permanen semua yang terkait dengannya"
+
+msgid "Are you sure you want to proceed ?"
+msgstr "Apakah Anda yakin ingin melanjutkan?"
+
+msgid "with Dependencies"
+msgstr "dengan Dependensi"
+
+msgid "Confirm Delete"
+msgstr "Konfirmasi Hapus"
+
+msgid "The"
+msgstr "Itu"
+
+msgid "has dependencies and cannot be deleted directly."
+msgstr "memiliki ketergantungan dan tidak dapat dihapus secara langsung."
+
+msgid "Reassign All"
+msgstr "Tetapkan Ulang Semua"
+
+msgid "Reassign Individually"
+msgstr "Tetapkan kembali secara individual"
+
+msgid "Are you sure you want to delete the"
+msgstr "Apakah Anda yakin ingin menghapus"
+
+msgid "Choose the deletion mode for"
+msgstr "Pilih mode penghapusan untuk"
+
+msgid "Individual Reassign or Delete Dependencies"
+msgstr "Menugaskan Kembali Individu atau Menghapus Ketergantungan"
+
+msgid "Choose actions for each dependent"
+msgstr "Pilih tindakan untuk setiap tanggungan"
+
+msgid "before deleting"
+msgstr "sebelum menghapus"
+
+msgid "Dependent Data"
+msgstr "Data Ketergantungan"
+
+msgid "Select Target"
+msgstr "Pilih Sasaran"
+
+msgid "Set null for all"
+msgstr "Tetapkan nol untuk semua"
+
+msgid "Set to Null"
+msgstr "Setel ke Null"
+
+msgid "Delete all"
+msgstr "Hapus semua"
+
+msgid "Set Null"
+msgstr "Setel Null"
+
+msgid "Are you sure you want to soft delete this dependency ? "
+msgstr "Apakah Anda yakin ingin menghapus sementara ketergantungan ini?"
+
+msgid "Are you sure you want to hard delete this dependency ? "
+msgstr "Apakah Anda yakin ingin menghapus ketergantungan ini secara permanen?"
+
+msgid "No dependent records found."
+msgstr "Tidak ada catatan ketergantungan yang ditemukan."
+
+msgid "Soft Delete Confirmation"
+msgstr "Konfirmasi Penghapusan Sementara"
+
+msgid "Are you sure you want to soft delete the selected"
+msgstr "Apakah Anda yakin ingin menghapus sementara yang dipilih"
+
+msgid ""
+"Are you sure you want to soft delete all dependencies of this record ? "
+msgstr ""
+"Apakah Anda yakin ingin menghapus sementara semua dependensi rekaman ini?"
+
+msgid "No Records to Delete"
+msgstr "Tidak Ada Catatan untuk Dihapus"
+
+msgid "Value"
+msgstr "Nilai"
+
+msgid "No results found"
+msgstr "Tidak ada hasil yang ditemukan"
+
+msgid "Select All"
+msgstr "Pilih Semua"
+
+msgid "Select an option"
+msgstr "Pilih sebuah opsi"
+
+msgid "From"
+msgstr "Dari"
+
+msgid "To"
+msgstr "Ke"
+
+msgid "No related lists found for this"
+msgstr "Tidak ditemukan daftar terkait untuk ini"
+
+msgid "Add Column to List"
+msgstr "Tambahkan Kolom ke Daftar"
+
+msgid "Edit List View"
+msgstr "Edit Tampilan Daftar"
+
+msgid "New List View"
+msgstr "Tampilan Daftar Baru"
+
+msgid "Add filter"
+msgstr "Tambahkan penyaring"
+
+msgid "No filter parameters available."
+msgstr "Tidak ada parameter filter yang tersedia."
+
+msgid "Conditions"
+msgstr "Kondisi"
+
+msgid "Add More"
+msgstr "Tambahkan Lebih Banyak"
+
+msgid "Select an item from the list to view details"
+msgstr "Pilih item dari daftar untuk melihat detailnya"
+
+msgid "Timeline settings"
+msgstr "Pengaturan garis waktu"
+
+msgid "Group by"
+msgstr "Kelompokkan berdasarkan"
+
+msgid "View"
+msgstr "Lihat"
+
+msgid "Timeline bar start and end are taken from these record fields."
+msgstr "Awal dan akhir bilah garis waktu diambil dari bidang catatan ini."
+
+msgid "Enter Value"
+msgstr "Masukkan Nilai"
+
+msgid "Task added"
+msgstr "Tugas ditambahkan"
+
+msgid "Event added"
+msgstr "Acara ditambahkan"
+
+msgid "Meeting added"
+msgstr "Rapat ditambahkan"
+
+msgid "Call added"
+msgstr "Panggilan ditambahkan"
+
+msgid "Email sent"
+msgstr "Email terkirim"
+
+msgid "Draft saved"
+msgstr "Draf disimpan"
+
+msgid "Scheduled mail"
+msgstr "Surat terjadwal"
+
+msgid "Mail failed"
+msgstr "Email gagal"
+
+msgid "Notes and Attachment"
+msgstr "Catatan dan Lampiran"
+
+msgid "You don't have permission to edit this attachment."
+msgstr "Anda tidak memiliki izin untuk mengedit lampiran ini."
+
+msgid "The requested attachment does not exist."
+msgstr "Lampiran yang diminta tidak ada."
+
+msgid "You don't have permission to add attachments to this record."
+msgstr "Anda tidak memiliki izin untuk menambahkan lampiran ke data ini."
+
+msgid "Invalid related object."
+msgstr "Objek terkait tidak valid."
+
+msgid "You don't have permission to delete this attachment."
+msgstr "Anda tidak memiliki izin untuk menghapus lampiran ini."
+
+msgid "Column Chart"
+msgstr "Bagan Kolom"
+
+msgid "Line Chart"
+msgstr "Bagan Garis"
+
+msgid "Pie Chart"
+msgstr "Bagan Pai"
+
+msgid "Funnel"
+msgstr "Corong"
+
+msgid "Bar Chart"
+msgstr "Bagan Batang"
+
+msgid "Donut"
+msgstr "Donat"
+
+msgid "Stacked Vertical"
+msgstr "Bertumpuk Vertikal"
+
+msgid "Stacked Horizontal"
+msgstr "Ditumpuk Horisontal"
+
+msgid "Scatter"
+msgstr "Menyebarkan"
+
+msgid "Treemap"
+msgstr "Peta Hierarki"
+
+msgid "Area Chart"
+msgstr "Bagan Area"
+
+msgid "Heatmap"
+msgstr "Peta panas"
+
+msgid "Sankey"
+msgstr "Sankey"
+
+msgid "Radar Chart"
+msgstr "Bagan Radar"
+
+msgid "Sum"
+msgstr "Jumlah"
+
+msgid "Average"
+msgstr "Rata-rata"
+
+msgid "Minimum"
+msgstr "Minimum"
+
+msgid "Maximum"
+msgstr "Maksimum"
+
+msgid "Record count"
+msgstr "Jumlah rekaman"
+
+#, python-format
+msgid "%(metric)s of %(field)s"
+msgstr "%(metric)sdari%(field)s"
+
+msgid "(empty)"
+msgstr "(kosong)"
+
+msgid "This field cannot be used as chart dimension."
+msgstr "Bidang ini tidak dapat digunakan sebagai dimensi bagan."
+
+msgid "Selected Y-axis field must be numeric."
+msgstr "Bidang sumbu Y yang dipilih harus berupa angka."
+
+msgid "Both fields must support chart grouping."
+msgstr "Kedua bidang harus mendukung pengelompokan bagan."
+
+msgid "Not enough data for stacked chart."
+msgstr "Data tidak cukup untuk diagram bertumpuk."
+
+msgid ""
+"No suitable field for chart grouping (need a choice, foreign key, or boolean"
+" field)."
+msgstr ""
+"Tidak ada bidang yang cocok untuk pengelompokan bagan (membutuhkan bidang "
+"pilihan, kunci asing, atau boolean)."
+
+msgid ""
+"Selected record is not associated with any company. Activate a company to "
+"proceed with deletion."
+msgstr ""
+"Catatan yang dipilih tidak dikaitkan dengan perusahaan mana pun.Aktifkan "
+"perusahaan untuk melanjutkan penghapusan."
+
+msgid "Invalid target ID"
+msgstr "ID target tidak valid"
+
+msgid "Details"
+msgstr "Detail"
+
+msgid "Activity"
+msgstr "Aktivitas"
+
+msgid "Cadence"
+msgstr "Irama"
+
+msgid "Related Lists"
+msgstr "Daftar Terkait"
+
+msgid "Notes & Attachments"
+msgstr "Catatan & Lampiran"
+
+msgid "History"
+msgstr "Sejarah"
+
+msgid "View full detail"
+msgstr "Lihat detail selengkapnya"
+
+msgid "You don't have permission to update this record."
+msgstr "Anda tidak memiliki izin untuk memperbarui data ini."
+
+msgid "Invalid choice"
+msgstr "Pilihan tidak valid"
+
+msgid "Detailed View"
+msgstr "Tampilan Detil"
+
+msgid "The requested record does not exist."
+msgstr "Catatan yang diminta tidak ada."
+
+msgid ""
+"No grouping field specified or you don't have permission to view any "
+"grouping fields."
+msgstr ""
+"Tidak ada bidang pengelompokan yang ditentukan atau Anda tidak memiliki izin"
+" untuk melihat bidang pengelompokan apa pun."
+
+#, python-format
+msgid "Field '%(field)s' is not a Choice field or ForeignKey field."
+msgstr "Bidang '%(field)s' bukan bidang Pilihan atau bidang ForeignKey."
+
+msgid "None"
+msgstr "Tidak ada"
+
+#, python-format
+msgid "Invalid grouping field '%(field)s': %(err)s"
+msgstr "Bidang pengelompokan '%(field)s':%(err)stidak valid"
+
+#, python-format
+msgid "Error grouping by field '%(field)s': %(err)s"
+msgstr "Kesalahan pengelompokan berdasarkan bidang '%(field)s':%(err)s"
+
+msgid "Select value(s)"
+msgstr "Pilih nilai"
+
+msgid "Enter Number"
+msgstr "Masukkan Nomor"
+
+msgid "Enter Email"
+msgstr "Masukkan Email"
+
+msgid "Enter URL"
+msgstr "Masukkan URL"
+
+msgid "You do not have permission to edit this."
+msgstr "Anda tidak memiliki izin untuk mengedit ini."
+
+#, python-format
+msgid "Error updating field: %(message)s"
+msgstr "Kesalahan saat memperbarui bidang:%(message)s"
+
+#, python-format
+msgid "Invalid decimal value: %(value)s"
+msgstr "Nilai desimal tidak valid:%(value)s"
+
+#, python-format
+msgid "Invalid datetime format: %(value)s"
+msgstr "Format tanggal dan waktu tidak valid:%(value)s"
+
+#, python-format
+msgid "Invalid date format: %(value)s"
+msgstr "Format tanggal tidak valid:%(value)s"
+
+msgid "You do not have permission to view this."
+msgstr "Anda tidak memiliki izin untuk melihat ini."
+
+msgid "Invalid saved list ID."
+msgstr "ID daftar tersimpan tidak valid."
+
+msgid "Group By Settings"
+msgstr "Kelompokkan Berdasarkan Pengaturan"
+
+msgid "You don't have permission to configure columns for this list."
+msgstr "Anda tidak memiliki izin untuk mengonfigurasi kolom untuk daftar ini."
+
+msgid "Equals (case insensitive)"
+msgstr "Sama dengan (tidak peka huruf besar-kecil)"
+
+msgid "Greater than or equal to"
+msgstr "Lebih besar dari atau sama dengan"
+
+msgid "Less than or equal to"
+msgstr "Kurang dari atau sama dengan"
+
+msgid "Create"
+msgstr "Buat"
+
+msgid "Import"
+msgstr "Impor"
+
+msgid "duplicated"
+msgstr "digandakan"
+
+msgid "updated"
+msgstr "diperbarui"
+
+#, python-format
+msgid "%(model)s %(action)s successfully."
+msgstr "%(model)s%(action)sberhasil."
+
+#, python-format
+msgid "A %(model)s with this %(field)s already exists."
+msgstr "%(model)sdengan%(field)sini sudah ada."
+
+#, python-format
+msgid "A %(model)s with this combination of %(fields)s already exists."
+msgstr "%(model)sdengan kombinasi%(fields)sini sudah ada."
+
+#, python-format
+msgid ""
+"This %(model)s could not be saved due to a duplicate entry. Please check "
+"your input and try again."
+msgstr ""
+"%(model)sini tidak dapat disimpan karena ada entri duplikat.Silakan periksa "
+"masukan Anda dan coba lagi."
+
+msgid "An error occurred while saving. Please try again or contact support."
+msgstr ""
+"Terjadi kesalahan saat menyimpan.Silakan coba lagi atau hubungi dukungan."
+
+msgid "Timeline view requires timeline_start_field to be set."
+msgstr "Tampilan garis waktu memerlukan timeline_start_field untuk disetel."
+
+#, python-format
+msgid "Invalid timeline_start_field: %(field)s."
+msgstr "Timeline_start_field tidak valid:%(field)s."
+
+msgid "Days"
+msgstr "hari"
+
+msgid "Weeks"
+msgstr "Minggu"
+
+msgid "Months"
+msgstr "Bulan"
+
+msgid "Quarters"
+msgstr "Perempat"
+
+#, python-format
+msgid "Bars use: %(field)s"
+msgstr "Penggunaan batang:%(field)s"
+
+#, python-format
+msgid "From %(start)s → %(end)s"
+msgstr "Dari%(start)s→%(end)s"
+
+msgid "No rows selected for deletion."
+msgstr "Tidak ada baris yang dipilih untuk dihapus."
+
+msgid "You do not have permission to delete this data."
+msgstr "Anda tidak memiliki izin untuk menghapus data ini."
+
+msgid "Please select a valid choice for the operator field."
+msgstr "Silakan pilih pilihan yang valid untuk bidang operator."
+
+msgid "Please select a valid choice for the field."
+msgstr "Silakan pilih pilihan yang valid untuk bidang tersebut."

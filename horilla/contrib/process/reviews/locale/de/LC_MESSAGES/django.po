@@ -1,0 +1,369 @@
+# German translations for Horilla Reviews module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-12 09:44+0000\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Review Process"
+msgstr "Pruefungsprozess"
+
+msgid "Select field(s)"
+msgstr "Feld(er) auswaehlen"
+
+msgid "Fields to Review"
+msgstr "Zu pruefende Felder"
+
+msgid "Please select at least one field to review."
+msgstr "Bitte waehlen Sie mindestens ein zu pruefendes Feld aus."
+
+msgid "Please select at least one approver user."
+msgstr "Bitte waehlen Sie mindestens einen Genehmiger-Benutzer aus."
+
+msgid "Please select at least one approver role."
+msgstr "Bitte waehlen Sie mindestens eine Genehmiger-Rolle aus."
+
+msgid "Review Processes"
+msgstr "Pruefungsprozesse"
+
+msgid "Review Jobs"
+msgstr "Pruefungsaufgaben"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Method Title"
+msgstr "Methodentitel"
+
+msgid "Module"
+msgstr "Modul"
+
+msgid "Notify on Resubmission"
+msgstr "Benachrichtigen bei erneuter Einreichung"
+
+msgid "Notify on Approval"
+msgstr "Benachrichtigen bei Genehmigung"
+
+msgid "Notify on Rejection"
+msgstr "Benachrichtigen bei Ablehnung"
+
+msgid "Title is required."
+msgstr "Titel ist erforderlich."
+
+msgid ""
+"An active review process already exists for this model and company. Only one "
+"active process is allowed per model per company."
+msgstr ""
+"Fuer dieses Modell und dieses Unternehmen existiert bereits ein aktiver "
+"Pruefungsprozess. Pro Modell und Unternehmen ist nur ein aktiver Prozess "
+"erlaubt."
+
+msgid "Field Name"
+msgstr "Feldname"
+
+msgid "Operator"
+msgstr "Operator"
+
+msgid "Value"
+msgstr "Wert"
+
+msgid "AND"
+msgstr "UND"
+
+msgid "OR"
+msgstr "ODER"
+
+msgid "Logical Operator"
+msgstr "Logischer Operator"
+
+msgid "Order"
+msgstr "Reihenfolge"
+
+msgid "Review Condition"
+msgstr "Pruefungsbedingung"
+
+msgid "Review Conditions"
+msgstr "Pruefungsbedingungen"
+
+msgid "User"
+msgstr "Benutzer"
+
+msgid "Role"
+msgstr "Rolle"
+
+msgid "Approver Type"
+msgstr "Genehmigertyp"
+
+msgid "Approver Users"
+msgstr "Genehmiger-Benutzer"
+
+msgid "Approver Roles"
+msgstr "Genehmiger-Rollen"
+
+msgid "Review Rule"
+msgstr "Pruefungsregel"
+
+msgid "Review Rules"
+msgstr "Pruefungsregeln"
+
+msgid "Review Rule Condition"
+msgstr "Pruefungsregelbedingung"
+
+msgid "Review Rule Conditions"
+msgstr "Pruefungsregelbedingungen"
+
+msgid "Pending"
+msgstr "Ausstehend"
+
+msgid "Approved"
+msgstr "Genehmigt"
+
+msgid "Rejected"
+msgstr "Abgelehnt"
+
+msgid "Content Type"
+msgstr "Inhaltstyp"
+
+msgid "Object ID"
+msgstr "Objekt-ID"
+
+msgid "Assigned To"
+msgstr "Zugewiesen an"
+
+msgid "Review Fields Snapshot"
+msgstr "Schnappschuss der Pruefungsfelder"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Reviewed By"
+msgstr "Geprueft von"
+
+msgid "Reviewed At"
+msgstr "Geprueft am"
+
+msgid "Review Note"
+msgstr "Pruefungsnotiz"
+
+msgid "Review Job"
+msgstr "Pruefungsaufgabe"
+
+msgid "Add More"
+msgstr "Mehr hinzufuegen"
+
+msgid "Field Review"
+msgstr "Feldpruefung"
+
+msgid "Close"
+msgstr "Schliessen"
+
+msgid "Your Decision"
+msgstr "Ihre Entscheidung"
+
+msgid "Comment"
+msgstr "Kommentar"
+
+msgid "Add reason for this field decision"
+msgstr "Grund fuer diese Feldentscheidung hinzufuegen"
+
+msgid "Reject"
+msgstr "Ablehnen"
+
+msgid "Approve"
+msgstr "Genehmigen"
+
+msgid "Process"
+msgstr "Prozess"
+
+msgid "Record"
+msgstr "Datensatz"
+
+#, python-format
+msgid ""
+"\n"
+"                            %(done)s / %(total)s approved.\n"
+"                        "
+msgstr ""
+"\n"
+"                            %(done)s / %(total)s genehmigt.\n"
+"                        "
+
+msgid "Record Details"
+msgstr "Datensatzdetails"
+
+msgid "No additional record details available."
+msgstr "Keine weiteren Datensatzdetails verfuegbar."
+
+msgid "Fields To Review"
+msgstr "Zu pruefende Felder"
+
+msgid "Review field"
+msgstr "Feld pruefen"
+
+msgid "Edit rejected field"
+msgstr "Abgelehntes Feld bearbeiten"
+
+msgid "Edit"
+msgstr "Bearbeiten"
+
+msgid "Save and resubmit"
+msgstr "Speichern und erneut einreichen"
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "No review fields captured for this job."
+msgstr "Keine Pruefungsfelder fuer diese Aufgabe erfasst."
+
+msgid "Multi-Step Form"
+msgstr "Mehrstufiges Formular"
+
+msgid "Single-Step Form"
+msgstr "Einstufiges Formular"
+
+msgid "Choose File"
+msgstr "Datei auswaehlen"
+
+msgid "No file chosen"
+msgstr "Keine Datei ausgewaehlt"
+
+msgid "Clear"
+msgstr "Loeschen"
+
+msgid "Read Only"
+msgstr "Schreibgeschuetzt"
+
+msgid "Add"
+msgstr "Hinzufuegen"
+
+msgid "Loading..."
+msgstr "Wird geladen..."
+
+msgid "Conditions"
+msgstr "Bedingungen"
+
+msgid "Remove"
+msgstr "Entfernen"
+
+msgid "Save & New"
+msgstr "Speichern und neu"
+
+msgid "Entry Criteria"
+msgstr "Eingabekriterien"
+
+msgid ""
+"No entry criteria set. This review process applies to all records in the "
+"module."
+msgstr "Keine Eingabekriterien festgelegt. Dieser Pruefungsprozess gilt fuer alle Datensaetze im Modul."
+
+msgid "Actions"
+msgstr "Aktionen"
+
+msgid "Resubmission"
+msgstr "Erneute Einreichung"
+
+msgid "Approval"
+msgstr "Genehmigung"
+
+msgid "Rejection"
+msgstr "Ablehnung"
+
+msgid "Fields"
+msgstr "Felder"
+
+msgid "No review rules added"
+msgstr "Keine Pruefungsregeln hinzugefuegt"
+
+msgid ""
+"Add a rule to assign an approver. Criteria is optional — if left empty, the "
+"rule applies to all records."
+msgstr "Fuegen Sie eine Regel hinzu, um einen Genehmiger zuzuweisen. Kriterien sind optional — wenn leer gelassen, gilt die Regel fuer alle Datensaetze."
+
+msgid "Rule"
+msgstr "Regel"
+
+msgid "Edit Rule"
+msgstr "Regel bearbeiten"
+
+msgid "Delete Rule"
+msgstr "Regel loeschen"
+
+msgid "Approver"
+msgstr "Genehmiger"
+
+#, python-format
+msgid "You have a pending review request for %(record)s in %(process)s."
+msgstr "Sie haben eine ausstehende Pruefungsanfrage fuer %(record)s in %(process)s."
+
+msgid "Add Rule"
+msgstr "Regel hinzufuegen"
+
+msgid "Edit Process"
+msgstr "Prozess bearbeiten"
+
+msgid "Delete"
+msgstr "Loeschen"
+
+msgid "Criteria"
+msgstr "Kriterien"
+
+msgid "Condition"
+msgstr "Bedingung"
+
+msgid "activated"
+msgstr "aktiviert"
+
+msgid "deactivated"
+msgstr "deaktiviert"
+
+msgid "An active review process already exists for this model and company."
+msgstr "Fuer dieses Modell und dieses Unternehmen existiert bereits ein aktiver Pruefungsprozess."
+
+msgid "My Review Jobs"
+msgstr "Meine Pruefungsaufgaben"
+
+msgid "Review"
+msgstr "Pruefung"
+
+msgid "The module for this review record is no longer available."
+msgstr "Das Modul fuer diesen Pruefungsdatensatz ist nicht mehr verfuegbar."
+
+#, python-format
+msgid "%(owner)s resubmitted %(field)s in %(process)s for %(record)s."
+msgstr "%(owner)s hat %(field)s in %(process)s fuer %(record)s erneut eingereicht."
+
+msgid "Invalid decision."
+msgstr "Ungueltige Entscheidung."
+
+#, python-format
+msgid ""
+"%(field)s was approved in %(process)s by %(approver)s. Comment: %(comment)s"
+msgstr "%(field)s wurde in %(process)s von %(approver)s genehmigt. Kommentar: %(comment)s"
+
+#, python-format
+msgid ""
+"%(field)s was rejected in %(process)s by %(approver)s. Reason: %(comment)s"
+msgstr "%(field)s wurde in %(process)s von %(approver)s abgelehnt. Grund: %(comment)s"
+
+msgid ""
+"All approvers have approved all review fields. Review completed successfully."
+msgstr "Alle Genehmiger haben alle Pruefungsfelder genehmigt. Pruefung erfolgreich abgeschlossen."
+
+msgid ""
+"You have approved all fields. Waiting for other approvers to complete their "
+"review."
+msgstr "Sie haben alle Felder genehmigt. Warten auf andere Genehmiger, um ihre Pruefung abzuschliessen."

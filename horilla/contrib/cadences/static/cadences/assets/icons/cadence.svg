@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 60 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e54f38;
+      }
+    </style>
+  </defs>
+  <g>
+    <g id="Layer_1">
+      <g>
+        <!-- Step node 1 (top-left) -->
+        <circle class="cls-1" cx="12" cy="12" r="7"/>
+        <!-- Connector 1→2 horizontal bar -->
+        <rect class="cls-1" x="17" y="10" width="14" height="4" rx="2"/>
+        <!-- Step node 2 (top-right) -->
+        <circle class="cls-1" cx="36" cy="12" r="7"/>
+        <!-- Connector 2→3 vertical bar -->
+        <rect class="cls-1" x="34" y="17" width="4" height="14" rx="2"/>
+        <!-- Step node 3 (middle-right) -->
+        <circle class="cls-1" cx="36" cy="36" r="7"/>
+        <!-- Connector 3→4 horizontal bar going left -->
+        <rect class="cls-1" x="17" y="34" width="14" height="4" rx="2"/>
+        <!-- Step node 4 (middle-left) -->
+        <circle class="cls-1" cx="12" cy="36" r="7"/>
+        <!-- Arrow/indicator: forward chevron at bottom -->
+        <path class="cls-1" d="M20,47 L30,53 L20,59 Z"/>
+        <!-- Connector from node4 down to arrow -->
+        <rect class="cls-1" x="10" y="41" width="4" height="10" rx="2"/>
+        <rect class="cls-1" x="12" y="49" width="10" height="4" rx="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

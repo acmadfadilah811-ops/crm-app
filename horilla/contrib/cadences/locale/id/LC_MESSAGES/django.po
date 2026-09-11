@@ -1,0 +1,450 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Module for managing cadence workflows and runtime activity sequences."
+msgstr "Modul untuk mengelola alur kerja irama dan urutan aktivitas runtime."
+
+msgid ""
+"Standardized exception chaining in cadence forms to preserve root-cause "
+"tracebacks."
+msgstr ""
+"Rangkaian pengecualian standar dalam bentuk irama untuk mempertahankan "
+"penelusuran balik penyebab utama."
+
+msgid ""
+"Migrated signal and timezone imports to the horilla shims, standardized "
+"first-party import groups, and added class and method docstrings for pylint "
+"compliance."
+msgstr ""
+"Impor sinyal dan zona waktu yang dimigrasikan ke shim horilla, grup impor "
+"pihak pertama yang terstandarisasi, dan penambahan dokumen kelas dan metode "
+"untuk kepatuhan pylint."
+
+msgid ""
+"Cadence forms aligned with HorillaModelForm layout: field_order, Meta.fields"
+" = \"__all__\", Meta.exclude, and keep_on_form; save logic and HTMX "
+"unchanged."
+msgstr ""
+"Formulir irama selaras dengan tata letak HorillaModelForm: field_order, "
+"Meta.fields = \"__all__\", Meta.exclude, dan keep_on_form;simpan logika dan "
+"HTML tidak berubah."
+
+msgid ""
+"Release 1.10: cadences ship under contrib with app label cadences. Signals, "
+"registrations, URLs, and static paths updated to match the new contrib "
+"layout."
+msgstr ""
+"Rilis 1.10: irama dikirimkan di bawah kontrib dengan irama label "
+"aplikasi.Sinyal, pendaftaran, URL, dan jalur statis diperbarui agar sesuai "
+"dengan tata letak kontribusi yang baru."
+
+msgid ""
+"Implemented cadence signals for runtime activities, enabling automated "
+"cadence-driven workflow execution and activity tracking."
+msgstr ""
+"Menerapkan sinyal irama untuk aktivitas runtime, memungkinkan eksekusi alur "
+"kerja dan pelacakan aktivitas berbasis irama otomatis."
+
+msgid "Cadences"
+msgstr "Irama"
+
+msgid "At least one condition is required."
+msgstr "Setidaknya satu syarat diperlukan."
+
+msgid "Each condition row must include Field, Operator, and Value."
+msgstr "Setiap baris kondisi harus menyertakan Bidang, Operator, dan Nilai."
+
+msgid "Mail to"
+msgstr "Kirim ke"
+
+msgid ""
+"Choose which user or email field on the record should receive this mail."
+msgstr ""
+"Pilih bidang pengguna atau email mana dalam catatan yang harus menerima "
+"email ini."
+
+msgid ""
+"Email follow-up is unavailable until an outgoing mail server is configured."
+msgstr ""
+"Tindak lanjut email tidak tersedia sampai server email keluar dikonfigurasi."
+
+msgid "Parent follow-up is required for this stage."
+msgstr "Tindak lanjut orang tua diperlukan untuk tahap ini."
+
+msgid "Invalid cadence for branch."
+msgstr "Irama untuk cabang tidak valid."
+
+msgid "Parent must belong to the previous follow-up stage."
+msgstr "Orang tua harus mengikuti tahap tindak lanjut sebelumnya."
+
+msgid "Name"
+msgstr "Nama"
+
+msgid "Module"
+msgstr "Modul"
+
+msgid "Target module"
+msgstr "Modul sasaran"
+
+msgid "Description"
+msgstr "Keterangan"
+
+msgid "Cadence"
+msgstr "Irama"
+
+msgid "Field Name"
+msgstr "Nama Bidang"
+
+msgid "Operator"
+msgstr "Operator"
+
+msgid "Value"
+msgstr "Nilai"
+
+msgid "AND"
+msgstr "DAN"
+
+msgid "OR"
+msgstr "ATAU"
+
+msgid "Logical Operator"
+msgstr "Operator Logis"
+
+msgid "Order"
+msgstr "Memesan"
+
+msgid "Cadence Condition"
+msgstr "Kondisi Irama"
+
+msgid "Cadence Conditions"
+msgstr "Kondisi Irama"
+
+msgid "Task"
+msgstr "Tugas"
+
+msgid "Call"
+msgstr "Panggilan"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Overdue"
+msgstr "Terlambat"
+
+msgid "Immediately"
+msgstr "Langsung"
+
+msgid "Minute"
+msgstr "Menit"
+
+msgid "Hour"
+msgstr "Jam"
+
+msgid "Day"
+msgstr "Hari"
+
+msgid "Month"
+msgstr "Bulan"
+
+msgid "Follow up"
+msgstr "Menindaklanjuti"
+
+msgid "Stage number (1 = first follow-up)."
+msgstr "Nomor tahap (1 = tindak lanjut pertama)."
+
+msgid "Follow up Type"
+msgstr "Jenis Tindak lanjut"
+
+msgid "Branched from"
+msgstr "Bercabang dari"
+
+msgid ""
+"Set when this step was created from a specific parent card’s + (next stage)."
+msgstr ""
+"Tetapkan kapan langkah ini dibuat dari + kartu induk tertentu (tahap "
+"selanjutnya)."
+
+msgid "Do This"
+msgstr "Lakukan Ini"
+
+msgid "Do This Value"
+msgstr "Lakukan Nilai Ini"
+
+msgid "Required for minute/hour/day/month."
+msgstr "Diperlukan untuk menit/jam/hari/bulan."
+
+msgid "After Previous Status Is"
+msgstr "Setelah Status Sebelumnya Adalah"
+
+msgid "Required from follow up 2 onwards."
+msgstr "Diperlukan mulai tindak lanjut 2 dan seterusnya."
+
+msgid "Subject"
+msgstr "Subjek"
+
+msgid "Trigger Date + Days"
+msgstr "Tanggal Pemicu + Hari"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Priority"
+msgstr "Prioritas"
+
+msgid "Task Owner"
+msgstr "Pemilik Tugas"
+
+msgid "Call Type"
+msgstr "Jenis Panggilan"
+
+msgid "Call Status"
+msgstr "Status Panggilan"
+
+msgid "Call Start + Days"
+msgstr "Panggilan Mulai + Hari"
+
+msgid "Call Owner"
+msgstr "Hubungi Pemilik"
+
+msgid "Purpose"
+msgstr "Tujuan"
+
+msgid "Recipients for this step. Choose user/email fields from the record"
+msgstr "Penerima untuk langkah ini.Pilih bidang pengguna/email dari catatan"
+
+msgid "Mail Template"
+msgstr "Templat Surat"
+
+msgid "Cadence Follow up"
+msgstr "Tindak Lanjut Irama"
+
+msgid "Cadence Follow ups"
+msgstr "Tindak Lanjut Irama"
+
+msgid "Follow up 1 can only contain one item."
+msgstr "Tindak lanjut 1 hanya dapat berisi satu item."
+
+msgid "Select status condition from previous follow-up."
+msgstr "Pilih kondisi status dari tindak lanjut sebelumnya."
+
+msgid "Cannot add this follow-up before creating previous follow-up bucket."
+msgstr ""
+"Tidak dapat menambahkan tindak lanjut ini sebelum membuat keranjang tindak "
+"lanjut sebelumnya."
+
+msgid "Enter value for selected Do This unit."
+msgstr "Masukkan nilai untuk unit Lakukan Ini yang dipilih."
+
+msgid "This field is required for selected follow-up type."
+msgstr "Bidang ini wajib diisi untuk jenis tindak lanjut yang dipilih."
+
+msgid "Invalid follow-up type."
+msgstr "Jenis tindak lanjut tidak valid."
+
+msgid "Back"
+msgstr "Kembali"
+
+msgid "Edit"
+msgstr "Sunting"
+
+msgid "View Reports"
+msgstr "Lihat Laporan"
+
+msgid "Actions"
+msgstr "Tindakan"
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Do this"
+msgstr "Lakukan ini"
+
+msgid "After previous status is"
+msgstr "Setelah status sebelumnya adalah"
+
+msgid "Due Date"
+msgstr "Tenggat waktu"
+
+msgid "Trigger date +"
+msgstr "Tanggal pemicu +"
+
+msgid "day(s)"
+msgstr "hari"
+
+msgid "Mail template"
+msgstr "Templat surat"
+
+msgid "Add follow-up in next stage"
+msgstr "Tambahkan tindak lanjut di tahap berikutnya"
+
+msgid "Add follow-up in this stage"
+msgstr "Tambahkan tindak lanjut pada tahap ini"
+
+msgid "Add another follow-up in this stage"
+msgstr "Tambahkan tindak lanjut lain pada tahap ini"
+
+msgid ""
+"Get started by adding an Email, Task, or Call follow-up to your Cadence."
+msgstr ""
+"Mulailah dengan menambahkan tindak lanjut Email, Tugas, atau Panggilan ke "
+"Irama Anda."
+
+msgid "Add Follow Ups"
+msgstr "Tambahkan Tindak Lanjut"
+
+msgid "Add Follow-up"
+msgstr "Tambahkan Tindak Lanjut"
+
+msgid "Cadence Name"
+msgstr "Nama Irama"
+
+msgid "Start Date"
+msgstr "Tanggal Mulai"
+
+msgid "Last Follow-up Response"
+msgstr "Respon Tindak Lanjut Terakhir"
+
+msgid "Next Follow-up"
+msgstr "Tindak Lanjut Selanjutnya"
+
+msgid "No active cadences match this record right now."
+msgstr "Tidak ada irama aktif yang cocok dengan rekor ini saat ini."
+
+msgid "Total Triggered Calls"
+msgstr "Total Panggilan yang Dipicu"
+
+msgid "Completed Calls"
+msgstr "Panggilan Selesai"
+
+msgid "Scheduled Calls"
+msgstr "Panggilan Terjadwal"
+
+msgid "Cancelled Calls"
+msgstr "Panggilan Dibatalkan"
+
+msgid "Total Triggered Mails"
+msgstr "Total Email yang Dipicu"
+
+msgid "Email Delivered"
+msgstr "Email Terkirim"
+
+msgid "Bounced Emails"
+msgstr "Email Terpental"
+
+msgid "Opened Emails"
+msgstr "Email yang Dibuka"
+
+msgid "Failed Mails"
+msgstr "Email Gagal"
+
+msgid "Report"
+msgstr "Laporan"
+
+msgid "Cadences Report"
+msgstr "Laporan Irama"
+
+msgid "Total Triggered Tasks"
+msgstr "Total Tugas yang Dipicu"
+
+msgid "Completed Tasks"
+msgstr "Tugas Selesai"
+
+msgid "Pending Tasks"
+msgstr "Tugas yang Tertunda"
+
+msgid "Unresolved"
+msgstr "Belum terselesaikan"
+
+msgid "Mail Configuration Required"
+msgstr "Konfigurasi Email Diperlukan"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Cannot add Email Follow-up"
+msgstr "Tidak dapat menambahkan Tindak Lanjut Email"
+
+msgid "Configure outgoing mail to use Email follow-ups in cadence."
+msgstr ""
+"Konfigurasikan email keluar untuk menggunakan tindak lanjut Email secara "
+"irama."
+
+msgid "Configure"
+msgstr "Konfigurasikan"
+
+msgid "Follow-Up"
+msgstr "Menindaklanjuti"
+
+msgid "Completed"
+msgstr "Selesai"
+
+msgid "Pending"
+msgstr "Tertunda"
+
+msgid "Scheduled"
+msgstr "Dijadwalkan"
+
+msgid "Cancelled"
+msgstr "Dibatalkan"
+
+msgid "Email Template"
+msgstr "Templat Email"
+
+msgid "Delivered"
+msgstr "Terkirim"
+
+msgid "Bounced"
+msgstr "Terpental"
+
+msgid "Opened"
+msgstr "Dibuka"
+
+msgid "Failed"
+msgstr "Gagal"
+
+msgid "New"
+msgstr "Baru"
+
+msgid "Conditions"
+msgstr "Kondisi"
+
+msgid "Follow-up removed."
+msgstr "Tindak lanjut dihapus."
+
+msgid ""
+"Remove or reassign follow-ups in later stages before deleting this step."
+msgstr ""
+"Hapus atau tetapkan ulang tindak lanjut di tahap selanjutnya sebelum "
+"menghapus langkah ini."
+
+msgid "Next Follow-up Response"
+msgstr "Tanggapan Tindak Lanjut Selanjutnya"
+
+msgid "Invalid model for cadence tab."
+msgstr "Model untuk tab irama tidak valid."
+
+msgid "Object not found."
+msgstr "Objek tidak ditemukan."
+
+msgid "You don't have permission to view this item."
+msgstr "Anda tidak memiliki izin untuk melihat item ini."

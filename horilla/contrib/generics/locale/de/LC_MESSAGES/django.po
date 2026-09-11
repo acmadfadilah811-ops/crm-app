@@ -1,0 +1,1201 @@
+# German translations for Horilla Generics module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Contains"
+msgstr ""
+
+msgid "Equals"
+msgstr ""
+
+msgid "Not Equals"
+msgstr ""
+
+#, fuzzy
+#| msgid "Start"
+msgid "Starts with"
+msgstr "Start"
+
+msgid "Ends with"
+msgstr ""
+
+#, fuzzy
+#| msgid "(empty)"
+msgid "Is empty"
+msgstr "(leer)"
+
+msgid "Is not empty"
+msgstr ""
+
+#, fuzzy
+#| msgid "Created At"
+msgid "Greater than"
+msgstr "Erstellt am"
+
+msgid "Less than"
+msgstr ""
+
+msgid "Greater than or equal"
+msgstr ""
+
+msgid "Less than or equal"
+msgstr ""
+
+msgid "Between"
+msgstr ""
+
+msgid "After"
+msgstr ""
+
+msgid "Before"
+msgstr ""
+
+msgid "Today"
+msgstr ""
+
+msgid "Yesterday"
+msgstr ""
+
+msgid "This Week"
+msgstr ""
+
+#, fuzzy
+#| msgid "Months"
+msgid "This Month"
+msgstr "Monate"
+
+#, python-format
+msgid "Select %(field)s"
+msgstr "%(field)s auswaehlen"
+
+#, python-format
+msgid "Enter %(field)s"
+msgstr "%(field)s eingeben"
+
+msgid "Operator is required when a field is selected."
+msgstr "Operator ist erforderlich, wenn ein Feld ausgewaehlt ist."
+
+msgid "Select a valid field. That choice is not one of the available fields."
+msgstr ""
+"Waehlen Sie ein gueltiges Feld. Diese Auswahl ist keines der verfuegbaren "
+"Felder."
+
+msgid "Value is required when a field and operator are selected."
+msgstr ""
+"Wert ist erforderlich, wenn ein Feld und ein Operator ausgewaehlt sind."
+
+msgid "This field is read-only and cannot be modified."
+msgstr "Dieses Feld ist schreibgeschuetzt und kann nicht geaendert werden."
+
+msgid "List View Name"
+msgstr "Listenansicht-Name"
+
+#, fuzzy
+#| msgid "Select an item from the list to view details"
+msgid "Specify the list view name"
+msgstr "Element aus der Liste auswaehlen, um Details anzuzeigen"
+
+msgid "Make as public"
+msgstr "Oeffentlich machen"
+
+#, fuzzy
+#| msgid "Select Fields to Display"
+msgid "Select date to filter"
+msgstr "Anzuzeigende Felder auswaehlen"
+
+#, fuzzy
+#| msgid "Enter Number"
+msgid "Enter phone number"
+msgstr "Zahl eingeben"
+
+msgid "Enter a valid phone number."
+msgstr ""
+
+#, fuzzy
+#| msgid "Enter value"
+msgid "Enter title"
+msgstr "Wert eingeben"
+
+#, python-format
+msgid "Upload %(field)s"
+msgstr "%(field)s hochladen"
+
+#, python-format
+msgid "Enter %(field)s here..."
+msgstr "%(field)s hier eingeben..."
+
+msgid "Select Fields to Display"
+msgstr "Anzuzeigende Felder auswaehlen"
+
+msgid "Close"
+msgstr "Schliessen"
+
+msgid "Available Fields"
+msgstr "Verfuegbare Felder"
+
+msgid "Search fields..."
+msgstr "Felder suchen..."
+
+msgid "Visible Fields"
+msgstr "Sichtbare Felder"
+
+msgid "Reset to Default"
+msgstr "Auf Standard zuruecksetzen"
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Change Detail View Fields"
+msgstr "Detailansicht-Felder aendern"
+
+msgid "Header Portion Fields"
+msgstr "Kopfbereich-Felder"
+
+msgid "Search..."
+msgstr "Suchen..."
+
+msgid "All fields added"
+msgstr "Alle Felder hinzugefuegt"
+
+msgid "No fields"
+msgstr "Keine Felder"
+
+msgid "Details Tab Fields"
+msgstr "Felder des Details-Tabs"
+
+#, python-format
+msgid ""
+"\n"
+"                            Nothing to show yet. The %(view)s list doesn't "
+"have any data.\n"
+"                        "
+msgstr ""
+"\n"
+"                            Noch nichts anzuzeigen. Die %(view)s-Liste "
+"enthaelt keine Daten.\n"
+"                        "
+
+msgid "Nothing to show yet. Please add your"
+msgstr "Noch nichts anzuzeigen. Bitte fuegen Sie Ihre"
+
+msgid "Delete List"
+msgstr "Liste loeschen"
+
+msgid "Add New"
+msgstr "Neu hinzufuegen"
+
+msgid "Chart view"
+msgstr "Diagrammansicht"
+
+msgid "X-axis (Group by)"
+msgstr "X-Achse (Gruppieren nach)"
+
+msgid "Y-axis (Value)"
+msgstr "Y-Achse (Wert)"
+
+msgid "Stack by"
+msgstr "Stapeln nach"
+
+msgid "Single dimension"
+msgstr "Einzelne Dimension"
+
+msgid "Chart type"
+msgstr "Diagrammtyp"
+
+msgid "Actions"
+msgstr "Aktionen"
+
+msgid "Export as PDF"
+msgstr "Als PDF exportieren"
+
+msgid "Export as PNG"
+msgstr "Als PNG exportieren"
+
+msgid "Add to Dashboard"
+msgstr "Zum Dashboard hinzufuegen"
+
+msgid "Fields"
+msgstr "Felder"
+
+msgid "Previous"
+msgstr "Zurueck"
+
+msgid "Next"
+msgstr "Weiter"
+
+msgid "Menu"
+msgstr "Menue"
+
+msgid "Edit"
+msgstr "Bearbeiten"
+
+msgid "Read Only"
+msgstr "Schreibgeschuetzt"
+
+msgid "Drag to move"
+msgstr "Zum Verschieben ziehen"
+
+msgid "Filters"
+msgstr "Filter"
+
+msgid "Shrink panel"
+msgstr "Bereich verkleinern"
+
+msgid "Expand panel"
+msgstr "Bereich erweitern"
+
+msgid "Filter"
+msgstr "Filter"
+
+msgid "Add more filter"
+msgstr "Weiteren Filter hinzufuegen"
+
+msgid "Applied Filters"
+msgstr "Angewandte Filter"
+
+msgid "Clear All"
+msgstr "Alle loeschen"
+
+msgid "Save to List"
+msgstr "In Liste speichern"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "OR"
+msgstr ""
+
+msgid "AND"
+msgstr ""
+
+msgid "Drag to resize width (left)"
+msgstr "Zum Aendern der Breite ziehen (links)"
+
+msgid "Resize width left"
+msgstr "Breite links aendern"
+
+msgid "Drag to resize width (right)"
+msgstr "Zum Aendern der Breite ziehen (rechts)"
+
+msgid "Resize width right"
+msgstr "Breite rechts aendern"
+
+msgid "Drag to resize height"
+msgstr "Zum Aendern der Hoehe ziehen"
+
+msgid "Resize height"
+msgstr "Hoehe aendern"
+
+msgid "Multi-Step Form"
+msgstr "Mehrstufiges Formular"
+
+msgid "Single-Step Form"
+msgstr "Einstufiges Formular"
+
+msgid "JPG or PNG"
+msgstr ""
+
+#, fuzzy
+#| msgid "Remove"
+msgid "Remove photo"
+msgstr "Entfernen"
+
+msgid "Choose File"
+msgstr "Datei auswaehlen"
+
+msgid "No file chosen"
+msgstr "Keine Datei ausgewaehlt"
+
+msgid "Clear"
+msgstr "Loeschen"
+
+msgid "Add"
+msgstr "Hinzufuegen"
+
+msgid "Save & New"
+msgstr "Speichern und neu"
+
+msgid "Add Notes and Attachment"
+msgstr "Notizen und Anhang hinzufuegen"
+
+msgid "Upload File"
+msgstr "Datei hochladen"
+
+msgid "File already uploaded"
+msgstr "Datei bereits hochgeladen"
+
+msgid "Click to upload or drag & drop"
+msgstr "Klicken zum Hochladen oder Drag & Drop"
+
+msgid "Any file (Max 10MB)"
+msgstr "Beliebige Datei (Max. 10 MB)"
+
+msgid "Clear file"
+msgstr "Datei loeschen"
+
+msgid "File selected"
+msgstr "Datei ausgewaehlt"
+
+msgid "We searched for"
+msgstr "Wir haben gesucht nach"
+
+msgid "No search results found"
+msgstr "Keine Suchergebnisse gefunden"
+
+msgid "Select Visible Items"
+msgstr "Sichtbare Elemente auswaehlen"
+
+msgid "No items in this group."
+msgstr "Keine Elemente in dieser Gruppe."
+
+msgid "Clear Filters"
+msgstr "Filter loeschen"
+
+msgid "Call"
+msgstr "Anruf"
+
+msgid "Email"
+msgstr "E-Mail"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Initiated"
+msgstr "Gestartet"
+
+msgid "New"
+msgstr "Neu"
+
+msgid "created"
+msgstr "erstellt"
+
+msgid "status"
+msgstr "Status"
+
+msgid "Added call task to this"
+msgstr "Anrufaufgabe hinzugefuegt zu diesem"
+
+msgid "Send email to this"
+msgstr "E-Mail senden an diesen"
+
+msgid "Activity logged for this"
+msgstr "Aktivitaet protokolliert fuer diesen"
+
+msgid "Event scheduled for this"
+msgstr "Ereignis geplant fuer diesen"
+
+msgid "Meeting scheduled with this"
+msgstr "Besprechung geplant mit diesem"
+
+msgid "Action performed by"
+msgstr "Aktion ausgefuehrt von"
+
+msgid "No history available for this object."
+msgstr "Kein Verlauf fuer dieses Objekt verfuegbar."
+
+msgid "Kanban Settings"
+msgstr "Kanban-Einstellungen"
+
+msgid "Select Columns to Export (Optional)"
+msgstr "Zu exportierende Spalten auswaehlen (Optional)"
+
+msgid "Export Format"
+msgstr "Exportformat"
+
+msgid "Excel"
+msgstr "Excel"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Available Columns"
+msgstr "Verfuegbare Spalten"
+
+msgid "Select which columns to export"
+msgstr "Auswaehlen, welche Spalten exportiert werden sollen"
+
+msgid "Add Additional Columns"
+msgstr "Zusaetzliche Spalten hinzufuegen"
+
+msgid "Select more fields you want to export"
+msgstr "Weitere zu exportierende Felder auswaehlen"
+
+msgid "Export"
+msgstr "Exportieren"
+
+msgid "Select"
+msgstr "Auswaehlen"
+
+msgid "Unselect"
+msgstr "Abwaehlen"
+
+msgid "Export Selected"
+msgstr "Auswahl exportieren"
+
+msgid "Bulk Update"
+msgstr "Massenaktualisierung"
+
+msgid "Bulk Delete"
+msgstr "Massenloesch-Vorgang"
+
+msgid "Edit List"
+msgstr "Liste bearbeiten"
+
+#, python-format
+msgid ""
+"\n"
+"                        Nothing to show yet. The %(view)s list does not have "
+"any data.\n"
+"                    "
+msgstr ""
+"\n"
+"                        Noch nichts anzuzeigen. Die %(view)s-Liste enthaelt "
+"keine Daten.\n"
+"                    "
+
+msgid " Nothing to show yet. Please add your"
+msgstr " Noch nichts anzuzeigen. Bitte fuegen Sie Ihre"
+
+msgid "All Items"
+msgstr "Alle Elemente"
+
+msgid "Recently Viewed"
+msgstr "Kuerzlich angesehen"
+
+msgid "Recently Created"
+msgstr "Kuerzlich erstellt"
+
+msgid "Recently Modified"
+msgstr "Kuerzlich geaendert"
+
+msgid "List View"
+msgstr "Listenansicht"
+
+msgid "Unpin default view"
+msgstr "Standardansicht losloesen"
+
+msgid "Unpin"
+msgstr "Losloesen"
+
+msgid "Set as default view"
+msgstr "Als Standardansicht festlegen"
+
+msgid "Pin as default"
+msgstr "Als Standard anheften"
+
+msgid "Search"
+msgstr "Suchen"
+
+msgid "Reload"
+msgstr "Neu laden"
+
+msgid "Applied filters"
+msgstr "Angewandte Filter"
+
+msgid "Views"
+msgstr "Ansichten"
+
+msgid "Layout"
+msgstr "Layout"
+
+msgid "Split View"
+msgstr "Geteilte Ansicht"
+
+msgid "Chart"
+msgstr "Diagramm"
+
+msgid "List"
+msgstr "Liste"
+
+msgid "Card"
+msgstr "Karte"
+
+msgid "Kanban"
+msgstr "Kanban"
+
+msgid "Timeline"
+msgstr "Zeitachse"
+
+msgid "Group By"
+msgstr "Gruppieren nach"
+
+msgid "Chart View"
+msgstr "Diagrammansicht"
+
+msgid "Notes and Attachments"
+msgstr "Notizen und Anhaenge"
+
+msgid "Open file in new tab"
+msgstr "Datei in neuem Tab oeffnen"
+
+msgid "Notes"
+msgstr "Notizen"
+
+msgid "Created By"
+msgstr "Erstellt von"
+
+msgid "Created At"
+msgstr "Erstellt am"
+
+msgid "File Size"
+msgstr "Dateigroesse"
+
+msgid "Related To"
+msgstr "Bezogen auf"
+
+msgid "Delete Attachment"
+msgstr "Anhang loeschen"
+
+msgid "Delete"
+msgstr "Loeschen"
+
+msgid "Add Quick Filter"
+msgstr "Schnellfilter hinzufuegen"
+
+msgid "Select Fields"
+msgstr "Felder auswaehlen"
+
+msgid "No available fields to add as quick filter."
+msgstr "Keine verfuegbaren Felder als Schnellfilter hinzufuegbar."
+
+msgid "Loading..."
+msgstr "Wird geladen..."
+
+msgid "Hard Delete Confirmation"
+msgstr "Bestaetigung der endgueltigen Loeschung"
+
+msgid "Are you sure you want to hard delete the selected"
+msgstr "Sind Sie sicher, dass Sie die Auswahl endgueltig loeschen moechten"
+
+msgid "Deletable Records"
+msgstr "Loeschbare Datensaetze"
+
+msgid "Protected Records"
+msgstr "Geschuetzte Datensaetze"
+
+msgid "Delete All"
+msgstr "Alle loeschen"
+
+msgid " Confirm"
+msgstr " Bestaetigen"
+
+msgid "Bulk Update Selected"
+msgstr "Auswahl massenweise aktualisieren"
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "No"
+msgstr "Nein"
+
+#, python-format
+msgid ""
+"Select\n"
+"                                            %(field)s"
+msgstr ""
+"Auswaehlen\n"
+"                                            %(field)s"
+
+#, python-format
+msgid ""
+"Select\n"
+"                                                %(field)s"
+msgstr ""
+"Auswaehlen\n"
+"                                                %(field)s"
+
+msgid "No fields available for bulk update."
+msgstr "Keine Felder fuer die Massenaktualisierung verfuegbar."
+
+msgid "Update"
+msgstr "Aktualisieren"
+
+msgid "Remove"
+msgstr "Entfernen"
+
+msgid "Select Delete Mode"
+msgstr "Loesch-Modus auswaehlen"
+
+msgid "Choose the deletion mode for the selected records"
+msgstr "Loesch-Modus fuer die ausgewaehlten Datensaetze auswaehlen"
+
+msgid "Hard Delete will permanently delete data."
+msgstr "Endgueltige Loeschung wird Daten dauerhaft loeschen."
+
+msgid "Soft Delete allows you to restore deleted records."
+msgstr ""
+"Sanfte Loeschung erlaubt die Wiederherstellung geloeschter Datensaetze."
+
+msgid "Hard Delete"
+msgstr "Endgueltig loeschen"
+
+msgid "Soft Delete"
+msgstr "Sanft loeschen"
+
+msgid "Select Field"
+msgstr "Feld auswaehlen"
+
+msgid "No value needed"
+msgstr "Kein Wert erforderlich"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "End"
+msgstr "Ende"
+
+msgid "and"
+msgstr "und"
+
+msgid "True"
+msgstr "Wahr"
+
+msgid "False"
+msgstr "Falsch"
+
+msgid "Enter value"
+msgstr "Wert eingeben"
+
+msgid "Remove filter"
+msgstr "Filter entfernen"
+
+msgid "Apply"
+msgstr "Anwenden"
+
+msgid "Drag"
+msgstr "Ziehen"
+
+msgid "More actions"
+msgstr "Weitere Aktionen"
+
+msgid "Select Operator"
+msgstr "Operator auswaehlen"
+
+msgid "All"
+msgstr "Alle"
+
+msgid "Are you sure you want to delete this quick filter"
+msgstr "Sind Sie sicher, dass Sie diesen Schnellfilter loeschen moechten"
+
+msgid "Bulk Reassign Dependencies"
+msgstr "Abhaengigkeiten massenweise neu zuweisen"
+
+msgid "Reassign all dependent"
+msgstr "Alle abhaengigen neu zuweisen"
+
+msgid "to a new target before deleting"
+msgstr "einem neuen Ziel zuweisen vor dem Loeschen"
+
+msgid "New Target"
+msgstr "Neues Ziel"
+
+msgid "No other targets available"
+msgstr "Keine weiteren Ziele verfuegbar"
+
+msgid "Confirm"
+msgstr "Bestaetigen"
+
+msgid "Confirm Deletion"
+msgstr "Loeschung bestaetigen"
+
+msgid "Soft deleting this"
+msgstr "Sanftes Loeschen dieses"
+
+msgid "will also soft delete all its related"
+msgstr "wird auch alle zugehoerigen Elemente sanft loeschen"
+
+msgid "Permanently deleting this"
+msgstr "Dauerhaftes Loeschen dieses"
+
+msgid "will also permanently delete all its related"
+msgstr "wird auch alle zugehoerigen Elemente dauerhaft loeschen"
+
+msgid "Are you sure you want to proceed ?"
+msgstr "Sind Sie sicher, dass Sie fortfahren moechten?"
+
+msgid "with Dependencies"
+msgstr "mit Abhaengigkeiten"
+
+msgid "Confirm Delete"
+msgstr "Loeschung bestaetigen"
+
+msgid "The"
+msgstr "Das/Die/Der"
+
+msgid "has dependencies and cannot be deleted directly."
+msgstr "hat Abhaengigkeiten und kann nicht direkt geloescht werden."
+
+msgid "Reassign All"
+msgstr "Alle neu zuweisen"
+
+msgid "Reassign Individually"
+msgstr "Einzeln neu zuweisen"
+
+msgid "Are you sure you want to delete the"
+msgstr "Sind Sie sicher, dass Sie loeschen moechten"
+
+msgid "Choose the deletion mode for"
+msgstr "Loesch-Modus auswaehlen fuer"
+
+msgid "Individual Reassign or Delete Dependencies"
+msgstr "Einzelne Neuzuweisung oder Loeschung von Abhaengigkeiten"
+
+msgid "Choose actions for each dependent"
+msgstr "Aktionen fuer jede Abhaengigkeit auswaehlen"
+
+msgid "before deleting"
+msgstr "vor dem Loeschen"
+
+msgid "Dependent Data"
+msgstr "Abhaengige Daten"
+
+msgid "Select Target"
+msgstr "Ziel auswaehlen"
+
+msgid "Set null for all"
+msgstr "Null fuer alle setzen"
+
+msgid "Set to Null"
+msgstr "Auf Null setzen"
+
+msgid "Delete all"
+msgstr "Alle loeschen"
+
+msgid "Set Null"
+msgstr "Null setzen"
+
+msgid "Are you sure you want to soft delete this dependency ? "
+msgstr ""
+"Sind Sie sicher, dass Sie diese Abhaengigkeit sanft loeschen moechten? "
+
+msgid "Are you sure you want to hard delete this dependency ? "
+msgstr ""
+"Sind Sie sicher, dass Sie diese Abhaengigkeit endgueltig loeschen moechten? "
+
+msgid "No dependent records found."
+msgstr "Keine abhaengigen Datensaetze gefunden."
+
+msgid "Soft Delete Confirmation"
+msgstr "Bestaetigung der sanften Loeschung"
+
+msgid "Are you sure you want to soft delete the selected"
+msgstr "Sind Sie sicher, dass Sie die Auswahl sanft loeschen moechten"
+
+msgid "Are you sure you want to soft delete all dependencies of this record ? "
+msgstr ""
+"Sind Sie sicher, dass Sie alle Abhaengigkeiten dieses Datensatzes sanft "
+"loeschen moechten? "
+
+msgid "No Records to Delete"
+msgstr "Keine Datensaetze zum Loeschen"
+
+msgid "Value"
+msgstr "Wert"
+
+msgid "No results found"
+msgstr "Keine Ergebnisse gefunden"
+
+msgid "Select All"
+msgstr "Alle auswaehlen"
+
+msgid "Select an option"
+msgstr "Option auswaehlen"
+
+msgid "From"
+msgstr "Von"
+
+msgid "To"
+msgstr "Bis"
+
+msgid "No related lists found for this"
+msgstr "Keine verwandten Listen fuer diesen gefunden"
+
+msgid "Add Column to List"
+msgstr "Spalte zur Liste hinzufuegen"
+
+msgid "Edit List View"
+msgstr "Listenansicht bearbeiten"
+
+msgid "New List View"
+msgstr "Neue Listenansicht"
+
+msgid "Add filter"
+msgstr "Filter hinzufuegen"
+
+msgid "No filter parameters available."
+msgstr "Keine Filterparameter verfuegbar."
+
+msgid "Conditions"
+msgstr "Bedingungen"
+
+msgid "Add More"
+msgstr "Mehr hinzufuegen"
+
+msgid "Select an item from the list to view details"
+msgstr "Element aus der Liste auswaehlen, um Details anzuzeigen"
+
+msgid "Timeline settings"
+msgstr "Zeitachsen-Einstellungen"
+
+msgid "Group by"
+msgstr "Gruppieren nach"
+
+msgid "View"
+msgstr "Ansicht"
+
+msgid "Timeline bar start and end are taken from these record fields."
+msgstr ""
+"Anfang und Ende der Zeitachsenleiste werden aus diesen Datensatzfeldern "
+"entnommen."
+
+msgid "Enter Value"
+msgstr "Wert eingeben"
+
+msgid "Task added"
+msgstr "Aufgabe hinzugefuegt"
+
+msgid "Event added"
+msgstr "Ereignis hinzugefuegt"
+
+msgid "Meeting added"
+msgstr "Besprechung hinzugefuegt"
+
+msgid "Call added"
+msgstr "Anruf hinzugefuegt"
+
+msgid "Email sent"
+msgstr "E-Mail gesendet"
+
+msgid "Draft saved"
+msgstr "Entwurf gespeichert"
+
+msgid "Scheduled mail"
+msgstr "Geplante E-Mail"
+
+msgid "Mail failed"
+msgstr "E-Mail fehlgeschlagen"
+
+msgid "Notes and Attachment"
+msgstr "Notizen und Anhang"
+
+msgid "You don't have permission to edit this attachment."
+msgstr "Sie haben keine Berechtigung, diesen Anhang zu bearbeiten."
+
+msgid "The requested attachment does not exist."
+msgstr "Der angeforderte Anhang existiert nicht."
+
+msgid "You don't have permission to add attachments to this record."
+msgstr "Sie haben keine Berechtigung, diesem Datensatz Anhaenge hinzuzufuegen."
+
+msgid "Invalid related object."
+msgstr "Ungueltiges verwandtes Objekt."
+
+#, fuzzy
+#| msgid "You don't have permission to edit this attachment."
+msgid "You don't have permission to delete this attachment."
+msgstr "Sie haben keine Berechtigung, diesen Anhang zu bearbeiten."
+
+msgid "Column Chart"
+msgstr "Saeulendiagramm"
+
+msgid "Line Chart"
+msgstr "Liniendiagramm"
+
+msgid "Pie Chart"
+msgstr "Kreisdiagramm"
+
+msgid "Funnel"
+msgstr "Trichter"
+
+msgid "Bar Chart"
+msgstr "Balkendiagramm"
+
+msgid "Donut"
+msgstr "Ringdiagramm"
+
+msgid "Stacked Vertical"
+msgstr "Gestapelt vertikal"
+
+msgid "Stacked Horizontal"
+msgstr "Gestapelt horizontal"
+
+msgid "Scatter"
+msgstr "Streudiagramm"
+
+msgid "Treemap"
+msgstr "Baumkarte"
+
+msgid "Area Chart"
+msgstr "Flaechendiagramm"
+
+msgid "Heatmap"
+msgstr "Heatmap"
+
+msgid "Sankey"
+msgstr "Sankey"
+
+msgid "Radar Chart"
+msgstr "Radardiagramm"
+
+msgid "Sum"
+msgstr "Summe"
+
+msgid "Average"
+msgstr "Durchschnitt"
+
+msgid "Minimum"
+msgstr "Minimum"
+
+msgid "Maximum"
+msgstr "Maximum"
+
+msgid "Record count"
+msgstr "Datensatzanzahl"
+
+#, python-format
+msgid "%(metric)s of %(field)s"
+msgstr "%(metric)s von %(field)s"
+
+msgid "(empty)"
+msgstr "(leer)"
+
+msgid "This field cannot be used as chart dimension."
+msgstr "Dieses Feld kann nicht als Diagrammdimension verwendet werden."
+
+msgid "Selected Y-axis field must be numeric."
+msgstr "Das ausgewaehlte Y-Achsen-Feld muss numerisch sein."
+
+msgid "Both fields must support chart grouping."
+msgstr "Beide Felder muessen die Diagrammgruppierung unterstuetzen."
+
+msgid "Not enough data for stacked chart."
+msgstr "Nicht genug Daten fuer das gestapelte Diagramm."
+
+msgid ""
+"No suitable field for chart grouping (need a choice, foreign key, or boolean "
+"field)."
+msgstr ""
+"Kein geeignetes Feld fuer die Diagrammgruppierung (Auswahl-, "
+"Fremdschluessel- oder boolesches Feld erforderlich)."
+
+msgid ""
+"Selected record is not associated with any company. Activate a company to "
+"proceed with deletion."
+msgstr ""
+"Der ausgewaehlte Datensatz ist keinem Unternehmen zugeordnet. Aktivieren Sie "
+"ein Unternehmen, um mit der Loeschung fortzufahren."
+
+#, fuzzy
+#| msgid "Invalid saved list ID."
+msgid "Invalid target ID"
+msgstr "Ungueltige gespeicherte Listen-ID."
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Activity"
+msgstr "Aktivitaet"
+
+msgid "Cadence"
+msgstr "Kadenz"
+
+msgid "Related Lists"
+msgstr "Verwandte Listen"
+
+msgid "Notes & Attachments"
+msgstr "Notizen und Anhaenge"
+
+msgid "History"
+msgstr "Verlauf"
+
+msgid "View full detail"
+msgstr "Vollstaendige Details anzeigen"
+
+msgid "You don't have permission to update this record."
+msgstr "Sie haben keine Berechtigung, diesen Datensatz zu aktualisieren."
+
+msgid "Invalid choice"
+msgstr "Ungueltige Auswahl"
+
+msgid "Detailed View"
+msgstr "Detailansicht"
+
+msgid "The requested record does not exist."
+msgstr "Der angeforderte Datensatz existiert nicht."
+
+msgid ""
+"No grouping field specified or you don't have permission to view any "
+"grouping fields."
+msgstr ""
+"Kein Gruppierungsfeld angegeben oder Sie haben keine Berechtigung, "
+"Gruppierungsfelder anzuzeigen."
+
+#, python-format
+msgid "Field '%(field)s' is not a Choice field or ForeignKey field."
+msgstr "Feld '%(field)s' ist kein Auswahlfeld oder Fremdschluesselfeld."
+
+msgid "None"
+msgstr "Keine"
+
+#, python-format
+msgid "Invalid grouping field '%(field)s': %(err)s"
+msgstr "Ungueltiges Gruppierungsfeld '%(field)s': %(err)s"
+
+#, python-format
+msgid "Error grouping by field '%(field)s': %(err)s"
+msgstr "Fehler beim Gruppieren nach Feld '%(field)s': %(err)s"
+
+msgid "Select value(s)"
+msgstr "Wert(e) auswaehlen"
+
+msgid "Enter Number"
+msgstr "Zahl eingeben"
+
+msgid "Enter Email"
+msgstr "E-Mail eingeben"
+
+msgid "Enter URL"
+msgstr "URL eingeben"
+
+msgid "You do not have permission to edit this."
+msgstr "Sie haben keine Berechtigung, dies zu bearbeiten."
+
+#, fuzzy, python-format
+#| msgid "Error grouping by field '%(field)s': %(err)s"
+msgid "Error updating field: %(message)s"
+msgstr "Fehler beim Gruppieren nach Feld '%(field)s': %(err)s"
+
+#, python-format
+msgid "Invalid decimal value: %(value)s"
+msgstr ""
+
+#, python-format
+msgid "Invalid datetime format: %(value)s"
+msgstr ""
+
+#, python-format
+msgid "Invalid date format: %(value)s"
+msgstr ""
+
+msgid "You do not have permission to view this."
+msgstr "Sie haben keine Berechtigung, dies anzuzeigen."
+
+msgid "Invalid saved list ID."
+msgstr "Ungueltige gespeicherte Listen-ID."
+
+msgid "Group By Settings"
+msgstr "Gruppierungseinstellungen"
+
+#, fuzzy
+#| msgid "You do not have permission to view this."
+msgid "You don't have permission to configure columns for this list."
+msgstr "Sie haben keine Berechtigung, dies anzuzeigen."
+
+msgid "Equals (case insensitive)"
+msgstr ""
+
+msgid "Greater than or equal to"
+msgstr ""
+
+msgid "Less than or equal to"
+msgstr ""
+
+msgid "Create"
+msgstr "Erstellen"
+
+msgid "Import"
+msgstr "Importieren"
+
+msgid "duplicated"
+msgstr "dupliziert"
+
+msgid "updated"
+msgstr "aktualisiert"
+
+#, python-format
+msgid "%(model)s %(action)s successfully."
+msgstr "%(model)s %(action)s erfolgreich."
+
+#, python-format
+msgid "A %(model)s with this %(field)s already exists."
+msgstr "Ein %(model)s mit diesem %(field)s existiert bereits."
+
+#, python-format
+msgid "A %(model)s with this combination of %(fields)s already exists."
+msgstr "Ein %(model)s mit dieser Kombination von %(fields)s existiert bereits."
+
+#, python-format
+msgid ""
+"This %(model)s could not be saved due to a duplicate entry. Please check "
+"your input and try again."
+msgstr ""
+"Dieses %(model)s konnte aufgrund eines doppelten Eintrags nicht gespeichert "
+"werden. Bitte ueberpruefen Sie Ihre Eingabe und versuchen Sie es erneut."
+
+msgid "An error occurred while saving. Please try again or contact support."
+msgstr ""
+"Beim Speichern ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut "
+"oder kontaktieren Sie den Support."
+
+msgid "Timeline view requires timeline_start_field to be set."
+msgstr ""
+"Die Zeitachsenansicht erfordert, dass timeline_start_field gesetzt ist."
+
+#, python-format
+msgid "Invalid timeline_start_field: %(field)s."
+msgstr "Ungueltiges timeline_start_field: %(field)s."
+
+msgid "Days"
+msgstr "Tage"
+
+msgid "Weeks"
+msgstr "Wochen"
+
+msgid "Months"
+msgstr "Monate"
+
+msgid "Quarters"
+msgstr "Quartale"
+
+#, python-format
+msgid "Bars use: %(field)s"
+msgstr "Balken verwenden: %(field)s"
+
+#, python-format
+msgid "From %(start)s → %(end)s"
+msgstr "Von %(start)s → %(end)s"
+
+msgid "No rows selected for deletion."
+msgstr "Keine Zeilen fuer die Loeschung ausgewaehlt."
+
+#, fuzzy
+#| msgid "You do not have permission to edit this."
+msgid "You do not have permission to delete this data."
+msgstr "Sie haben keine Berechtigung, dies zu bearbeiten."
+
+msgid "Please select a valid choice for the operator field."
+msgstr "Bitte waehlen Sie eine gueltige Auswahl fuer das Operatorfeld."
+
+msgid "Please select a valid choice for the field."
+msgstr "Bitte waehlen Sie eine gueltige Auswahl fuer das Feld."
+
+#, python-brace-format
+#~ msgid "{self.model._meta.verbose_name} Stage Updated Successfully"
+#~ msgstr "{self.model._meta.verbose_name} Stufe erfolgreich aktualisiert"

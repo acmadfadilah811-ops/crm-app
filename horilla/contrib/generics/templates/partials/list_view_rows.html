@@ -1,0 +1,261 @@
+{% for data in queryset %}
+    <tr>
+        {% if bulk_select_option %}
+            <td class="sticky left-0 bg-white z-40 text-sm list-cell-border-l-strong text-left p-3">
+                <div class="flex items-center justify-center">
+                    <input
+                        type="checkbox"
+                        name="selected_ids"
+                        value="{{ data.id }}"
+                        data-role="row-select"
+                        class="w-4 h-4 bg-[#E9EDF7] rounded-sm accent-[#e54f38]"
+                        onclick="updateActionButtonsVisibility()"
+                    >
+                </div>
+            </td>
+        {% endif %}
+
+        {% for cell in columns %}
+            {% with field_name=cell.1 col_attrs_for_field=col_attrs|lookup:cell.1 %}
+                {% if col_attrs_for_field.permission or col_attrs_for_field.own_permission %}
+                    {% col_attr_has_permission col_attrs_for_field data as col_attr_allowed %}
+                {% endif %}
+
+                <td
+                    {% if col_attrs_for_field.permission or col_attrs_for_field.own_permission %}
+                        {% if col_attr_allowed %}
+                            {% for attr_name, attr_value in col_attrs_for_field.items %}
+                                {% if attr_name != 'class' and attr_name != 'style' and attr_name != 'permission' and attr_name != 'own_permission' and attr_name != 'owner_field' and attr_name != 'owner_method' and attr_name != 'sort_url' and attr_name != 'is_draggable' %}
+                                    {{ attr_name }}="{{ attr_value|format:data|safe }}"
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    {% else %}
+                        {% for attr_name, attr_value in col_attrs_for_field.items %}
+                            {% if attr_name != 'class' and attr_name != 'style' and attr_name != 'sort_url' and attr_name != 'is_draggable' %}
+                                {{ attr_name }}="{{ attr_value|format:data|safe }}"
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                    {% for r_atts, r_value in raw_attrs.items %}
+                        {% if r_atts != 'class' and r_atts != 'style' %}
+                            {{ r_atts }}="{{ r_value|format:data|safe }}"
+                        {% endif %}
+                    {% endfor %}
+                    class="
+                        {% if forloop.first %}
+                        sticky bg-white z-40 {% if bulk_select_option %}left-[50px]{% else %}left-0{% endif %}
+                        {% else %}
+                        bg-white
+                        {% endif %}
+                        {% if table_class %}
+                        text-sm list-cell-border-l-strong text-left p-3
+                        {% else %}
+                        text-[.8rem] list-cell-border-l text-left p-2
+                        {% endif %}
+                        {% if forloop.first and forloop.parentloop.last %}
+                        rounded-bl-md
+                        {% endif %}
+                        {% if col_attrs_for_field.permission or col_attrs_for_field.own_permission %}
+                        {% if col_attr_allowed %}
+                        hover:text-primary-600
+                        {% endif %}
+                        {% elif col_attrs_for_field %}
+                        hover:text-primary-600
+                        {% endif %}
+                        max-w-0 overflow-hidden
+                        {{ raw_attrs.class|default:'' }}
+                    "
+                    style="{% if col_attrs_for_field.permission or col_attrs_for_field.own_permission %}
+                            {% if col_attr_allowed %}
+                                cursor:pointer;
+                            {% endif %}
+                        {% elif col_attrs_for_field %}
+                            cursor:pointer;
+                        {% endif %}
+                        {{ raw_attrs.style|default:'' }}"
+                    {% if col_attrs_for_field.sort_url %}
+                        data-sort-url="{{ col_attrs_for_field.sort_url|safe }}"
+                        data-id="{{ data.id|safe }}"
+                    {% endif %}
+                >
+                    <div class="flex gap-4 items-center relative min-w-0 w-full">
+                        {% if col_attrs_for_field.is_draggable == 'true' %}
+                            {% if not col_attrs_for_field.permission or col_attr_allowed %}
+                                <div class="cursor-move drag-handle flex-shrink-0">
+                                    <img src="{% static 'assets/icons/drag.svg' %}" alt="{% trans 'Drag' %}" width="16">
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                        {% with cell_value=data|get_field:cell.1 %}
+                            {% if cell_value|striptags != cell_value %}
+                                {{ cell_value }}
+                            {% else %}
+                                <span
+                                    class="truncate block min-w-0 whitespace-nowrap"
+                                    data-truncate-title="{{ cell_value|escape }}"
+                                >{{ cell_value|escape }}</span>
+                            {% endif %}
+                        {% endwith %}
+                    </div>
+                </td>
+            {% endwith %}
+        {% endfor %}
+
+        {% if visible_actions or action_method %}
+            {% if visible_actions %}
+                {% resolve_row_actions visible_actions data queryset as allowed_actions %}
+                {% if use_dropdown %}
+                    {% filter_actions_by_permission dropdown_actions data as allowed_dropdown_actions %}
+                {% endif %}
+
+                {% if allowed_actions or allowed_dropdown_actions %}
+                    <td class="sticky right-0 bg-white has-[.dropdown-wrapper.active]:z-[45] {% if table_class %}text-sm list-cell-border-r-strong text-left p-3{% else %}text-[.8rem] list-cell-border-r text-left p-2{% endif %} {% if forloop.last %}rounded-br-md{% endif %}">
+                        <div class="flex tablebtn">
+                            {% if use_dropdown and allowed_dropdown_actions %}
+                                <div class="relative dropdown-wrapper">
+                                    <button
+                                        id="dropdownbtn-{{ data.id }}"
+                                        type="button"
+                                        class="w-10 h-7 bg-dark-25 flex-1 flex justify-center border-r border-r-[white] hover:bg-dark-50 transition duration-300 items-center"
+                                        title="{% trans 'More actions' %}"
+                                        aria-label="{% trans 'More actions' %}"
+                                    >
+                                        <img
+                                            src="{% static 'assets/icons/downarrow.svg' %}"
+                                            width="16"
+                                            height="10"
+                                            alt=""
+                                        >
+                                    </button>
+
+                                    <div class="dropdown-content absolute z-20 bg-white border-primary-300 rounded-lg [box-shadow:0px_0px_20px_0px_rgb(0_0_0_/_8%)] min-w-[150px] py-2 right-0">
+                                        <ul class="text-sm py-1" aria-labelledby="dropdownbtn-{{ data.id }}">
+                                            {% for action in allowed_dropdown_actions %}
+                                                <li>
+                                                    <a
+                                                        class="px-4 py-1.5 hover:text-primary-600 transition duration-300 text-sm !flex flex-row flex-nowrap items-center gap-2 w-full text-left cursor-pointer"
+                                                        {% if action.attrs %}
+                                                            {{ action.attrs|format:data|safe }}
+                                                        {% endif %}
+                                                    >
+                                                        {% if action.src %}
+                                                            <img
+                                                                src="{% static action.src %}"
+                                                                alt=""
+                                                                class="shrink-0 w-4 h-4 object-contain{% if action.img_class %} {{ action.img_class }}{% endif %}"
+                                                            >
+                                                        {% endif %}
+                                                        {% if action.icon %}
+                                                            <i
+                                                                class="fa-solid {{ action.icon|default:'fa-cogs' }} shrink-0 text-center w-4"
+                                                            ></i>
+                                                        {% endif %}
+                                                        <span class="min-w-0">{{ action.action }}</span>
+                                                    </a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            {% endif %}
+
+                            {% for action in allowed_actions %}
+                                {{ action|render_action_button:data }}
+                            {% endfor %}
+                        </div>
+                    </td>
+                {% endif %}
+            {% else %}
+                <td class="sticky right-0 bg-white has-[.dropdown-wrapper.active]:z-[45] {% if table_class %}text-sm list-cell-border-r-strong text-left p-3{% else %}text-[.8rem] list-cell-border-r text-left p-2{% endif %} {% if forloop.last %}rounded-br-md{% endif %}">
+                    {{ data|get_field:action_method|safe }}
+                </td>
+            {% endif %}
+        {% endif %}
+    </tr>
+{% endfor %}
+
+{% if has_next %}
+    <tr class="htmx-sentinel" style="height: 1px">
+        <td
+            colspan="100"
+            style="padding: 0; height: 1px"
+            {% if group_by_load_more_url and data_container_id %}
+                hx-get="{{ group_by_load_more_url }}"
+                hx-target="#data-container-{{ data_container_id }}"
+                hx-select="tr"
+            {% else %}
+                hx-get="{{ search_url }}?{{ search_params }}&page={{ next_page }}"
+                hx-target="#data-container-{{ view_id }}"
+                hx-select="#data-container-{{ view_id }} tr"
+            {% endif %}
+            hx-trigger="intersect once"
+            hx-swap="beforeend"
+            hx-indicator="#loadingIndicator"
+        >
+        </td>
+    </tr>
+{% endif %}
+
+<script>
+    $(document).ready(function () {
+        document.querySelectorAll('[data-truncate-title]').forEach(function (el) {
+            if (el.scrollWidth > el.clientWidth) {
+                el.title = el.dataset.truncateTitle;
+            }
+        });
+
+        const $tableBody = $('[id^="data-container"]');
+
+        if ($tableBody.length) {
+            const sortUrl = $tableBody.find('[data-sort-url]').first().attr('data-sort-url');
+
+            new Sortable($tableBody[0], {
+                animation: 150,
+                handle: '.drag-handle',
+                onEnd: function (evt) {
+                    if (!sortUrl) {
+                        console.error("No sort URL defined for drag reordering");
+                        return;
+                    }
+
+                    const rowIds = [];
+                    $tableBody.find('tr').each(function () {
+                        const id = $(this).find('[data-id]').first().attr('data-id');
+                        if (id) rowIds.push(id);
+                    });
+
+                    $.ajax({
+                        url: sortUrl,
+                        method: "POST",
+                        data: {
+                            ids: rowIds,
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                        },
+                        success: function (response) {
+                            if (response.status === 'success') {
+                                setTimeout(function () {
+                                    try {
+                                        const $reloadButton = $('#reloadButton');
+                                        if ($reloadButton.length) {
+                                            htmx.trigger('#reloadButton', 'click');
+                                        } else {
+                                            window.location.reload();
+                                        }
+                                    } catch (error) {
+                                        console.error("Error clicking reload button:", error);
+                                        window.location.reload();
+                                    }
+                                }, 100);
+                            }
+                        },
+                        error: function (xhr) {
+                            console.error("Error updating order:", xhr.responseText);
+                            window.location.reload();
+                        }
+                    });
+                }
+            });
+        }
+    });
+</script>

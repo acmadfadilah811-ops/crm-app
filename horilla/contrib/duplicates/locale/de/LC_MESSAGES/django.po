@@ -1,0 +1,381 @@
+# German translations for Horilla Duplicates module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid ""
+"Module for detecting potential duplicate records and supporting merge "
+"workflows."
+msgstr ""
+"Modul zur Erkennung potenzieller doppelter Datensaetze und Unterstuetzung "
+"von Zusammenfuehrungs-Workflows."
+
+msgid ""
+"Avoid RelatedObjectDoesNotExist in DuplicateRule.clean when related objects "
+"are missing."
+msgstr ""
+
+msgid "Removed deprecated merge_views compatibility shim."
+msgstr ""
+
+msgid ""
+"Standardized first-party import groups and aligned with the platform 1.11.1 "
+"release; rules, criteria, and merge behavior unchanged."
+msgstr ""
+"Standardisierung interner Importgruppen und Ausrichtung auf die "
+"Plattformversion 1.11.1; Regeln, Kriterien und Zusammenfuehrungsverhalten "
+"unveraendert."
+
+msgid ""
+"Duplicate rule forms aligned with HorillaModelForm layout: field_order and "
+"Meta.fields = \"__all__\"; criteria rows and validation unchanged."
+msgstr ""
+"Duplikat-Regelformulare am HorillaModelForm-Layout ausgerichtet: field_order "
+"und Meta.fields; Kriterienzeilen und Validierung unveraendert."
+
+msgid ""
+"Release 1.10: duplicate control ships under contrib with app label "
+"duplicates. Feature registration, merge flows, and cross-model references "
+"use contrib paths and matching app labels for clone and duplicate tooling."
+msgstr ""
+"Version 1.10: Duplikat-Kontrolle wird unter contrib mit dem App-Label "
+"duplicates ausgeliefert. Funktionsregistrierung, Zusammenfuehrungs-Flows und "
+"modelluebergreifende Referenzen verwenden contrib-Pfade."
+
+msgid ""
+"Renamed Clone Management to Duplicate Control. Added duplicate validation "
+"for inline field edits with warning modal for duplicate conflicts. Fixed "
+"duplicate detail tab injection issue and improved merge flow handling for "
+"edge cases."
+msgstr ""
+"Clone Management in Duplikat-Kontrolle umbenannt. Duplikat-Validierung fuer "
+"Inline-Feldbearbeitungen mit Warnmodal hinzugefuegt. Einschleusungsproblem "
+"im Detail-Tab behoben und Zusammenfuehrungs-Flow verbessert."
+
+msgid ""
+"Introduced duplicate management capabilities with matching rules, potential "
+"duplicate detection, and merge comparison and summary workflows."
+msgstr ""
+"Duplikat-Verwaltungsfaehigkeiten mit Abgleichregeln, potenzieller "
+"Duplikaterkennung und Zusammenfuehhrungs-Vergleichs- und Zusammenfassungs-"
+"Workflows eingefuehrt."
+
+msgid "Clone Management"
+msgstr "Klon-Verwaltung"
+
+msgid "Potential Duplicates"
+msgstr "Potenzielle Duplikate"
+
+msgid "Similar records were found. Do you want to proceed?"
+msgstr "Aehnliche Datensaetze wurden gefunden. Moechten Sie fortfahren?"
+
+#, python-format
+msgid ""
+"Each matching criterion must use a different field. The following field(s) "
+"appear more than once: %(fields)s"
+msgstr ""
+"Jedes Abgleichkriterium muss ein anderes Feld verwenden. Die folgenden "
+"Felder erscheinen mehr als einmal: %(fields)s"
+
+msgid "Matching Criteria row has missing required field: Field."
+msgstr "Die Abgleichkriterien-Zeile hat ein fehlendes Pflichtfeld: Feld."
+
+msgid "At least one matching criterion is required."
+msgstr "Mindestens ein Abgleichkriterium ist erforderlich."
+
+msgid ""
+"Matching rule must apply to the same content type as duplicate rule. Please "
+"select a matching rule for the selected module."
+msgstr ""
+"Die Abgleichregel muss fuer denselben Inhaltstyp wie die Duplikatregel "
+"gelten. Bitte waehlen Sie eine Abgleichregel fuer das ausgewaehlte Modul."
+
+msgid "Duplicate Control"
+msgstr "Duplikat-Kontrolle"
+
+msgid "Matching Rules"
+msgstr "Abgleichregeln"
+
+msgid "Duplicate Rules"
+msgstr "Duplikatregeln"
+
+msgid "Exact Match"
+msgstr "Exakte Uebereinstimmung"
+
+msgid "Fuzzy Match"
+msgstr "Unscharfe Uebereinstimmung"
+
+msgid "Phonetic Match"
+msgstr "Phonetische Uebereinstimmung"
+
+msgid "Edit Distance"
+msgstr "Editierabstand"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "The model this matching rule applies to"
+msgstr "Das Modell, auf das diese Abgleichregel angewendet wird"
+
+msgid "Module"
+msgstr "Modul"
+
+msgid "Matching Rule"
+msgstr "Abgleichregel"
+
+msgid "Exact"
+msgstr "Exakt"
+
+msgid "Fuzzy"
+msgstr "Unscharf"
+
+msgid "Field"
+msgstr "Feld"
+
+msgid "Field name to match on"
+msgstr "Feldname fuer den Abgleich"
+
+msgid "Matching Method"
+msgstr "Abgleichmethode"
+
+msgid "Match Blank Fields"
+msgstr "Leere Felder abgleichen"
+
+msgid "If checked, blank fields will be considered a match"
+msgstr "Wenn aktiviert, werden leere Felder als Uebereinstimmung betrachtet"
+
+msgid "Order of evaluation"
+msgstr "Auswertungsreihenfolge"
+
+msgid "Matching Criterion"
+msgstr "Abgleichkriterium"
+
+msgid "Matching Criteria"
+msgstr "Abgleichkriterien"
+
+msgid "Allow"
+msgstr "Zulassen"
+
+msgid "Block"
+msgstr "Blockieren"
+
+msgid "The model this duplicate rule applies to"
+msgstr "Das Modell, auf das diese Duplikatregel angewendet wird"
+
+msgid "The matching rule to use for detection"
+msgstr "Die zur Erkennung zu verwendende Abgleichregel"
+
+msgid "Action on Create"
+msgstr "Aktion beim Erstellen"
+
+msgid "Action on Edit"
+msgstr "Aktion beim Bearbeiten"
+
+msgid "Title shown in the alert dialog"
+msgstr "Im Warndialog angezeigter Titel"
+
+msgid "Alert Title"
+msgstr "Warntitel"
+
+msgid "Message to show in alert when duplicates are detected"
+msgstr ""
+"Nachricht, die in der Warnung angezeigt wird, wenn Duplikate erkannt werden"
+
+msgid "Alert Message"
+msgstr "Warnnachricht"
+
+msgid "Show list of potential duplicates in the alert"
+msgstr "Liste potenzieller Duplikate in der Warnung anzeigen"
+
+msgid "Show Duplicate Records"
+msgstr "Doppelte Datensaetze anzeigen"
+
+msgid "Duplicate Rule"
+msgstr "Duplikatregel"
+
+msgid "Field Name"
+msgstr "Feldname"
+
+msgid "Field name to evaluate"
+msgstr "Feldname zur Auswertung"
+
+msgid "Operator"
+msgstr "Operator"
+
+msgid "Value"
+msgstr "Wert"
+
+msgid "Value to compare against"
+msgstr "Zu vergleichender Wert"
+
+msgid "Logical Operator"
+msgstr "Logischer Operator"
+
+msgid "How to combine with next condition"
+msgstr "Wie mit der naechsten Bedingung kombiniert werden soll"
+
+msgid "Duplicate Rule Condition"
+msgstr "Duplikatregel-Bedingung"
+
+msgid "Duplicate Rule Conditions"
+msgstr "Duplikatregel-Bedingungen"
+
+msgid "Close"
+msgstr "Schliessen"
+
+msgid "Potential Duplicate Records:"
+msgstr "Potenzielle doppelte Datensaetze:"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "Continue"
+msgstr "Fortfahren"
+
+msgid "Edit"
+msgstr "Bearbeiten"
+
+msgid "Delete"
+msgstr "Loeschen"
+
+msgid "Nothing to show yet. Please add your Matching Rules."
+msgstr "Noch nichts anzuzeigen. Bitte fuegen Sie Ihre Abgleichregeln hinzu."
+
+msgid "Potential Duplicate Records"
+msgstr "Potenzielle doppelte Datensaetze"
+
+msgid "Compare"
+msgstr "Vergleichen"
+
+msgid ""
+"When you merge, the master record is updated with the values you choose, and "
+"relationships to other items are shifted to the master record."
+msgstr ""
+"Bei der Zusammenfuehrung wird der Hauptdatensatz mit den von Ihnen "
+"gewaaehlten Werten aktualisiert, und Beziehungen zu anderen Elementen werden "
+"auf den Hauptdatensatz uebertragen."
+
+msgid "Master Record"
+msgstr "Hauptdatensatz"
+
+msgid "Use as master record"
+msgstr "Als Hauptdatensatz verwenden"
+
+msgid "Next"
+msgstr "Weiter"
+
+msgid "Merge Summary"
+msgstr "Zusammenfuehrungs-Zusammenfassung"
+
+msgid "You're about to merge these records. You can't undo merging."
+msgstr ""
+"Sie sind dabei, diese Datensaetze zusammenzufuehren. Die Zusammenfuehrung "
+"kann nicht rueckgaengig gemacht werden."
+
+msgid "Selected Values"
+msgstr "Ausgewaehlte Werte"
+
+msgid "Selected Value"
+msgstr "Ausgewaehlter Wert"
+
+msgid "Merge"
+msgstr "Zusammenfuehren"
+
+msgid "Select"
+msgstr "Auswaehlen"
+
+msgid "of"
+msgstr "von"
+
+msgid "Unselect"
+msgstr "Abwaehlen"
+
+msgid "Clear Session"
+msgstr "Sitzung leeren"
+
+msgid "Select Visible Items"
+msgstr "Sichtbare Elemente auswaehlen"
+
+msgid "No potential duplicates found."
+msgstr "Keine potenziellen Duplikate gefunden."
+
+msgid "You can only merge up to"
+msgstr "Sie koennen nur bis zu"
+
+msgid "items at a time"
+msgstr "Elemente gleichzeitig zusammenfuehren"
+
+msgid "Set how duplicate records are handled once matched."
+msgstr ""
+
+msgid "Conditions"
+msgstr "Bedingungen"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Define which fields are compared to detect matching records."
+msgstr ""
+
+msgid "You do not have permission to view this."
+msgstr "Sie haben keine Berechtigung, dies anzuzeigen."
+
+msgid "Invalid request for potential duplicates."
+msgstr "Ungueltige Anfrage fuer potenzielle Duplikate."
+
+msgid "Missing required parameters."
+msgstr "Erforderliche Parameter fehlen."
+
+msgid "Model not found."
+msgstr "Modell nicht gefunden."
+
+msgid "No duplicates selected."
+msgstr "Keine Duplikate ausgewaehlt."
+
+#, python-brace-format
+msgid "Error loading merge comparison: {error}"
+msgstr "Fehler beim Laden des Zusammenfuehrungs-Vergleichs: {error}"
+
+#, python-brace-format
+msgid "Error: {error}"
+msgstr "Fehler: {error}"
+
+#, python-brace-format
+msgid "Error loading merge summary: {error}"
+msgstr "Fehler beim Laden der Zusammenfuehrungs-Zusammenfassung: {error}"
+
+#, python-brace-format
+msgid "Successfully merged {count} duplicate(s) into master record."
+msgstr ""
+"{count} Duplikat(e) erfolgreich in den Hauptdatensatz zusammengefuehrt."
+
+msgid ""
+"The master record is different from the current record. You will be "
+"redirected to the master record."
+msgstr ""
+
+#, python-brace-format
+msgid "Error merging duplicates: {error}"
+msgstr "Fehler beim Zusammenfuehren von Duplikaten: {error}"
+
+msgid "Merge Selected"
+msgstr "Auswahl zusammenfuehren"
+
+msgid "Record"
+msgstr "Datensatz"

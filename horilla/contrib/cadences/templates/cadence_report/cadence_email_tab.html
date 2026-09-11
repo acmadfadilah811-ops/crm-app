@@ -1,0 +1,58 @@
+{% has_perm "activity.view_activity" as can_view_activity %}
+
+{% if can_view_activity %}
+    <div class="overflow-hidden">
+        <div id="styled-email" role="tabpanel" aria-labelledby="history-tab">
+            <ul class="grid grid-cols-5 gap-4 mb-8 mt-4">
+                <li>
+                    <div class="rounded-lg bg-primary-50 border border-primary-100 p-4 text-center shadow-sm">
+                        <p class="text-sm font-medium text-gray-600 mb-1">{% trans "Total Triggered Mails" %}</p>
+                        <p class="text-2xl font-bold text-primary-600">{{ email_stats.triggered_count|default:0 }}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="rounded-lg bg-primary-50 border border-primary-100 p-4 text-center shadow-sm">
+                        <p class="text-sm font-medium text-gray-600 mb-1">{% trans "Email Delivered" %}</p>
+                        <p class="text-2xl font-bold text-primary-600">
+                            {{ email_stats.delivered_pct|default:0|floatformat:2 }}%
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="rounded-lg bg-primary-50 border border-primary-100 p-4 text-center shadow-sm">
+                        <p class="text-sm font-medium text-gray-600 mb-1">{% trans "Bounced Emails" %}</p>
+                        <p class="text-2xl font-bold text-primary-600">
+                            {{ email_stats.bounced_pct|default:0|floatformat:2 }}%
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="rounded-lg bg-primary-50 border border-primary-100 p-4 text-center shadow-sm">
+                        <p class="text-sm font-medium text-gray-600 mb-1">{% trans "Opened Emails" %}</p>
+                        <p class="text-2xl font-bold text-primary-600">
+                            {{ email_stats.opened_pct|default:0|floatformat:2 }}%
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="rounded-lg bg-primary-50 border border-primary-100 p-4 text-center shadow-sm">
+                        <p class="text-sm font-medium text-gray-600 mb-1">{% trans "Failed Mails" %}</p>
+                        <p class="text-2xl font-bold text-primary-600">
+                            {{ email_stats.failed_pct|default:0|floatformat:2 }}%
+                        </p>
+                    </div>
+                </li>
+            </ul>
+
+            <div
+                class="pt-2"
+                hx-push-url="false"
+                hx-get="{% url 'cadences:cadence_email_list_view' %}?{{ request.GET.urlencode }}"
+                hx-trigger="load"
+            >
+            </div>
+        </div>
+    </div>
+{% else %}
+    {% include "403.html" with embed=True %}
+{% endif %}

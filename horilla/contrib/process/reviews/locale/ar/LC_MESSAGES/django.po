@@ -1,0 +1,369 @@
+# Arabic translations for Horilla Reviews module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-12 09:44+0000\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+msgid "Review Process"
+msgstr "عملية المراجعة"
+
+msgid "Select field(s)"
+msgstr "اختر حقلاً/حقولاً"
+
+msgid "Fields to Review"
+msgstr "الحقول للمراجعة"
+
+msgid "Please select at least one field to review."
+msgstr "يرجى اختيار حقل واحد على الأقل للمراجعة."
+
+msgid "Please select at least one approver user."
+msgstr "يرجى اختيار مستخدم موافِق واحد على الأقل."
+
+msgid "Please select at least one approver role."
+msgstr "يرجى اختيار دور موافِق واحد على الأقل."
+
+msgid "Review Processes"
+msgstr "عمليات المراجعة"
+
+msgid "Review Jobs"
+msgstr "مهام المراجعة"
+
+msgid "Title"
+msgstr "العنوان"
+
+msgid "Method Title"
+msgstr "عنوان الطريقة"
+
+msgid "Module"
+msgstr "الوحدة"
+
+msgid "Notify on Resubmission"
+msgstr "إشعار عند إعادة التقديم"
+
+msgid "Notify on Approval"
+msgstr "إشعار عند الموافقة"
+
+msgid "Notify on Rejection"
+msgstr "إشعار عند الرفض"
+
+msgid "Title is required."
+msgstr "العنوان مطلوب."
+
+msgid ""
+"An active review process already exists for this model and company. Only one "
+"active process is allowed per model per company."
+msgstr ""
+"عملية مراجعة نشطة موجودة بالفعل لهذا النموذج والشركة. يُسمح بعملية نشطة "
+"واحدة فقط لكل نموذج لكل شركة."
+
+msgid "Field Name"
+msgstr "اسم الحقل"
+
+msgid "Operator"
+msgstr "المعامل"
+
+msgid "Value"
+msgstr "القيمة"
+
+msgid "AND"
+msgstr "و"
+
+msgid "OR"
+msgstr "أو"
+
+msgid "Logical Operator"
+msgstr "المعامل المنطقي"
+
+msgid "Order"
+msgstr "الترتيب"
+
+msgid "Review Condition"
+msgstr "شرط المراجعة"
+
+msgid "Review Conditions"
+msgstr "شروط المراجعة"
+
+msgid "User"
+msgstr "المستخدم"
+
+msgid "Role"
+msgstr "الدور"
+
+msgid "Approver Type"
+msgstr "نوع الموافِق"
+
+msgid "Approver Users"
+msgstr "مستخدمو الموافقة"
+
+msgid "Approver Roles"
+msgstr "أدوار الموافقة"
+
+msgid "Review Rule"
+msgstr "قاعدة المراجعة"
+
+msgid "Review Rules"
+msgstr "قواعد المراجعة"
+
+msgid "Review Rule Condition"
+msgstr "شرط قاعدة المراجعة"
+
+msgid "Review Rule Conditions"
+msgstr "شروط قاعدة المراجعة"
+
+msgid "Pending"
+msgstr "قيد الانتظار"
+
+msgid "Approved"
+msgstr "موافق عليه"
+
+msgid "Rejected"
+msgstr "مرفوض"
+
+msgid "Content Type"
+msgstr "نوع المحتوى"
+
+msgid "Object ID"
+msgstr "معرّف الكائن"
+
+msgid "Assigned To"
+msgstr "مُسند إلى"
+
+msgid "Review Fields Snapshot"
+msgstr "لقطة حقول المراجعة"
+
+msgid "Status"
+msgstr "الحالة"
+
+msgid "Reviewed By"
+msgstr "راجعه"
+
+msgid "Reviewed At"
+msgstr "تمت المراجعة في"
+
+msgid "Review Note"
+msgstr "ملاحظة المراجعة"
+
+msgid "Review Job"
+msgstr "مهمة المراجعة"
+
+msgid "Add More"
+msgstr "إضافة المزيد"
+
+msgid "Field Review"
+msgstr "مراجعة الحقل"
+
+msgid "Close"
+msgstr "إغلاق"
+
+msgid "Your Decision"
+msgstr "قرارك"
+
+msgid "Comment"
+msgstr "التعليق"
+
+msgid "Add reason for this field decision"
+msgstr "أضف سبباً لقرار هذا الحقل"
+
+msgid "Reject"
+msgstr "رفض"
+
+msgid "Approve"
+msgstr "موافقة"
+
+msgid "Process"
+msgstr "العملية"
+
+msgid "Record"
+msgstr "السجل"
+
+#, python-format
+msgid ""
+"\n"
+"                            %(done)s / %(total)s approved.\n"
+"                        "
+msgstr ""
+"\n"
+"                            %(done)s / %(total)s موافق عليه.\n"
+"                        "
+
+msgid "Record Details"
+msgstr "تفاصيل السجل"
+
+msgid "No additional record details available."
+msgstr "لا توجد تفاصيل إضافية للسجل."
+
+msgid "Fields To Review"
+msgstr "الحقول للمراجعة"
+
+msgid "Review field"
+msgstr "مراجعة الحقل"
+
+msgid "Edit rejected field"
+msgstr "تعديل الحقل المرفوض"
+
+msgid "Edit"
+msgstr "تعديل"
+
+msgid "Save and resubmit"
+msgstr "حفظ وإعادة التقديم"
+
+msgid "Save"
+msgstr "حفظ"
+
+msgid "Cancel"
+msgstr "إلغاء"
+
+msgid "No review fields captured for this job."
+msgstr "لم يتم التقاط حقول مراجعة لهذه المهمة."
+
+msgid "Multi-Step Form"
+msgstr "نموذج متعدد الخطوات"
+
+msgid "Single-Step Form"
+msgstr "نموذج خطوة واحدة"
+
+msgid "Choose File"
+msgstr "اختر ملفاً"
+
+msgid "No file chosen"
+msgstr "لم يتم اختيار ملف"
+
+msgid "Clear"
+msgstr "مسح"
+
+msgid "Read Only"
+msgstr "للقراءة فقط"
+
+msgid "Add"
+msgstr "إضافة"
+
+msgid "Loading..."
+msgstr "جارٍ التحميل..."
+
+msgid "Conditions"
+msgstr "الشروط"
+
+msgid "Remove"
+msgstr "إزالة"
+
+msgid "Save & New"
+msgstr "حفظ وجديد"
+
+msgid "Entry Criteria"
+msgstr "معايير الدخول"
+
+msgid ""
+"No entry criteria set. This review process applies to all records in the "
+"module."
+msgstr "لم يتم تعيين معايير دخول. تنطبق عملية المراجعة هذه على جميع السجلات في الوحدة."
+
+msgid "Actions"
+msgstr "الإجراءات"
+
+msgid "Resubmission"
+msgstr "إعادة التقديم"
+
+msgid "Approval"
+msgstr "الموافقة"
+
+msgid "Rejection"
+msgstr "الرفض"
+
+msgid "Fields"
+msgstr "الحقول"
+
+msgid "No review rules added"
+msgstr "لم تتم إضافة قواعد مراجعة"
+
+msgid ""
+"Add a rule to assign an approver. Criteria is optional — if left empty, the "
+"rule applies to all records."
+msgstr "أضف قاعدة لتعيين موافِق. المعايير اختيارية — إذا تُركت فارغة، تنطبق القاعدة على جميع السجلات."
+
+msgid "Rule"
+msgstr "القاعدة"
+
+msgid "Edit Rule"
+msgstr "تعديل القاعدة"
+
+msgid "Delete Rule"
+msgstr "حذف القاعدة"
+
+msgid "Approver"
+msgstr "الموافِق"
+
+#, python-format
+msgid "You have a pending review request for %(record)s in %(process)s."
+msgstr "لديك طلب مراجعة معلّق لـ %(record)s في %(process)s."
+
+msgid "Add Rule"
+msgstr "إضافة قاعدة"
+
+msgid "Edit Process"
+msgstr "تعديل العملية"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Criteria"
+msgstr "المعايير"
+
+msgid "Condition"
+msgstr "الشرط"
+
+msgid "activated"
+msgstr "مُنشَّط"
+
+msgid "deactivated"
+msgstr "مُلغى التنشيط"
+
+msgid "An active review process already exists for this model and company."
+msgstr "عملية مراجعة نشطة موجودة بالفعل لهذا النموذج والشركة."
+
+msgid "My Review Jobs"
+msgstr "مهام مراجعتي"
+
+msgid "Review"
+msgstr "مراجعة"
+
+msgid "The module for this review record is no longer available."
+msgstr "الوحدة لسجل المراجعة هذا لم تعد متاحة."
+
+#, python-format
+msgid "%(owner)s resubmitted %(field)s in %(process)s for %(record)s."
+msgstr "%(owner)s أعاد تقديم %(field)s في %(process)s لـ %(record)s."
+
+msgid "Invalid decision."
+msgstr "قرار غير صالح."
+
+#, python-format
+msgid ""
+"%(field)s was approved in %(process)s by %(approver)s. Comment: %(comment)s"
+msgstr "تمت الموافقة على %(field)s في %(process)s بواسطة %(approver)s. التعليق: %(comment)s"
+
+#, python-format
+msgid ""
+"%(field)s was rejected in %(process)s by %(approver)s. Reason: %(comment)s"
+msgstr "تم رفض %(field)s في %(process)s بواسطة %(approver)s. السبب: %(comment)s"
+
+msgid ""
+"All approvers have approved all review fields. Review completed successfully."
+msgstr "وافق جميع الموافِقين على جميع حقول المراجعة. اكتملت المراجعة بنجاح."
+
+msgid ""
+"You have approved all fields. Waiting for other approvers to complete their "
+"review."
+msgstr "لقد وافقت على جميع الحقول. في انتظار موافِقين آخرين لإكمال مراجعتهم."

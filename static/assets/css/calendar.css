@@ -1,0 +1,149 @@
+#calendar-container {
+  height: calc(100vh - 250px);
+  position: relative;
+}
+
+.fc-h-event {
+  background-color: #d8f1ff;
+  border: unset;
+  display: block;
+  font-size: 0.72rem !important;
+  padding: 1px 6px;
+  line-height: 1.2;
+}
+.fc-h-event .fc-event-title {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.66rem;
+  line-height: 1.2;
+}
+.fc .fc-daygrid-event {
+  margin: 1px 2px !important;
+  border-radius: 50px !important;
+  padding: 2px 7px;
+  min-height: 18px;
+}
+.fc .fc-daygrid-dot-event {
+  margin: 1px 2px !important;
+  border-radius: 50px !important;
+  padding: 2px 7px !important;
+  min-height: 18px;
+  display: block;
+}
+.fc .fc-daygrid-dot-event .fc-event-title,
+.fc .fc-daygrid-dot-event .fc-event-time {
+  font-size: 0.66rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+.fc .fc-col-header-cell-cushion {
+  font-size: 0.9rem;
+}
+.fc .fc-daygrid-more-link:hover {
+  background-color: unset;
+  color: var(--menu-arrow-fg, #e54f38);
+}
+.fc-direction-ltr .fc-daygrid-more-link {
+  color: var(--menu-arrow-fg, #e54f38);
+  font-size: 0.7rem;
+  top: 10px;
+  transition: 0.3s;
+  font-weight: 600;
+}
+.fc .fc-highlight {
+  background: rgb(204 230 248 / 30%);
+}
+.fc a[data-navlink]:hover {
+  text-decoration: underline;
+  color: var(--menu-arrow-fg, #e54f38);
+}
+.fc-daygrid-dot-event.fc-event-mirror,
+.fc-daygrid-dot-event {
+  transition: 0.3s;
+  font-size: 0.75rem;
+}
+
+.fc-daygrid-event-dot {
+  display: none;
+}
+.fc .fc-popover {
+  box-shadow: rgb(0 0 0 / 8%) 0px 2px 20px;
+  border-radius: 5px;
+  border: unset !important;
+}
+/* Scroll long "more" lists instead of overflowing the viewport (Tailwind: h-[calc(100vh-520px)]) */
+.fc .fc-popover-body {
+  max-height: calc(100vh - 620px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.fc-theme-standard .fc-popover-header {
+  background: #fff0ea;
+  color: var(--menu-arrow-fg, #e54f38);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 13px;
+  border-radius: 5px 5px 0 0;
+}
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: var(--calendar-today-bg, rgb(229 79 56 / 10%));
+  color: var(--calendar-today-fg, #e54f38);
+}
+#calendarPopup {
+  width: 230px;
+  box-shadow: rgb(0 0 0 / 8%) 0px 2px 20px;
+  border-radius: 5px;
+  border: unset !important;
+  padding: 15px;
+  font-size: 0.85rem;
+  /* Above FullCalendar's "more" list popover (z-index 9999) so detail shows on top */
+  z-index: 10050;
+}
+#popupContent button {
+  text-align: left;
+  font-size: 0.75rem;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+
+#popupContent .para {
+  padding: 3px 0;
+}
+
+#popupContent input[type="radio"] {
+  border: 1px solid #0000001f;
+  width: 13px;
+  height: 13px;
+}
+#popupContent label {
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 0.7rem;
+}
+
+.fc-timegrid-event-harness > .fc-timegrid-event {
+  padding: 5px;
+}
+.fc .fc-multimonth-multicol .fc-daygrid-more-link {
+  border: unset;
+}
+#popupContent h5 {
+    margin: -15px;
+    border-radius: 5px 5px 0 0;
+    padding: 8px 10px;
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.fc .fc-multimonth-title {
+  font-size: 1rem;
+  color: var(--menu-arrow-fg, #e54f38);
+  font-weight: 600;
+  padding: 8px 0;
+}
+.fc .fc-daygrid-day.fc-day-today {
+    background-color: var(--calendar-today-bg, #fcedeb);
+    color: var(--calendar-today-fg, #e54f38);
+}

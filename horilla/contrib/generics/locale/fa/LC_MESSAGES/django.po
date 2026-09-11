@@ -1,0 +1,1358 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-18 14:05+0000\n"
+"PO-Revision-Date: 2026-08-01 12:00+0330\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Contains"
+msgstr ""
+
+msgid "Equals"
+msgstr ""
+
+msgid "Not Equals"
+msgstr ""
+
+#| msgid "Start"
+msgid "Starts with"
+msgstr "شروع می‌شود با"
+
+msgid "Ends with"
+msgstr ""
+
+#| msgid "(empty)"
+msgid "Is empty"
+msgstr "خالی است"
+
+msgid "Is not empty"
+msgstr ""
+
+#| msgid "Created At"
+msgid "Greater than"
+msgstr "بزرگ‌تر از"
+
+msgid "Less than"
+msgstr ""
+
+msgid "Greater than or equal"
+msgstr ""
+
+msgid "Less than or equal"
+msgstr ""
+
+msgid "Between"
+msgstr ""
+
+msgid "After"
+msgstr ""
+
+msgid "Before"
+msgstr ""
+
+msgid "Today"
+msgstr ""
+
+msgid "Yesterday"
+msgstr ""
+
+msgid "This Week"
+msgstr ""
+
+#| msgid "Months"
+msgid "This Month"
+msgstr "این ماه"
+
+#, python-format
+msgid "Select %(field)s"
+msgstr "انتخاب %(field)s"
+
+#, python-format
+msgid "Enter %(field)s"
+msgstr "ورود %(field)s"
+
+msgid "Operator is required when a field is selected."
+msgstr "هنگام انتخاب فیلد، عملگر الزامی است."
+
+msgid "Select a valid field. That choice is not one of the available fields."
+msgstr "یک فیلد معتبر انتخاب کنید. این گزینه جزء فیلدهای موجود نیست."
+
+msgid "Value is required when a field and operator are selected."
+msgstr "هنگام انتخاب فیلد و عملگر، مقدار الزامی است."
+
+msgid "This field is read-only and cannot be modified."
+msgstr "این فیلد فقط خواندنی است و قابل تغییر نیست."
+
+msgid "List View Name"
+msgstr "نام نمای لیست"
+
+#| msgid "Select an item from the list to view details"
+msgid "Specify the list view name"
+msgstr "نام نمای لیست را مشخص کنید"
+
+msgid "Make as public"
+msgstr "عمومی کردن"
+
+#| msgid "Select Fields to Display"
+msgid "Select date to filter"
+msgstr "تاریخ را برای فیلتر انتخاب کنید"
+
+#| msgid "Enter Number"
+msgid "Enter phone number"
+msgstr "شماره تلفن را وارد کنید"
+
+msgid "Enter a valid phone number."
+msgstr ""
+
+msgid "e.g. Signed Contract"
+msgstr ""
+
+#, python-format
+msgid "Upload %(field)s"
+msgstr "آپلود %(field)s"
+
+#, python-format
+msgid "Enter %(field)s here..."
+msgstr "%(field)s را اینجا وارد کنید..."
+
+msgid "Select Fields to Display"
+msgstr "انتخاب فیلدها برای نمایش"
+
+msgid "Close"
+msgstr "بستن"
+
+msgid "Available Fields"
+msgstr "فیلدهای موجود"
+
+msgid "Search fields..."
+msgstr "جستجوی فیلدها..."
+
+msgid "Visible Fields"
+msgstr "فیلدهای قابل مشاهده"
+
+msgid "Reset to Default"
+msgstr "بازنشانی به پیش‌فرض"
+
+msgid "Save"
+msgstr "ذخیره"
+
+msgid "Change Detail View Fields"
+msgstr "تغییر فیلدهای نمای جزئیات"
+
+msgid "Header Portion Fields"
+msgstr "فیلدهای بخش هدر"
+
+msgid "Search..."
+msgstr "جستجو..."
+
+msgid "All fields added"
+msgstr "همه فیلدها اضافه شدند"
+
+msgid "No fields"
+msgstr "هیچ فیلدی"
+
+msgid "Details Tab Fields"
+msgstr "فیلدهای برگه جزئیات"
+
+#, python-format
+msgid ""
+"\n"
+"                            Nothing to show yet. The %(view)s list doesn't have any data.\n"
+"                        "
+msgstr ""
+"\n"
+"                            هنوز چیزی برای نمایش وجود ندارد. لیست %(view)s هیچ داده‌ای ندارد.\n"
+"                        "
+
+msgid "Nothing to show yet. Please add your"
+msgstr "هنوز چیزی برای نمایش وجود ندارد. لطفاً مورد خود را اضافه کنید."
+
+#, python-format
+msgid "Nothing to show yet. Please add your %(model)s."
+msgstr "هنوز چیزی برای نمایش وجود ندارد. لطفاً %(model)s را اضافه کنید."
+
+#| msgid "Are you sure you want to delete the"
+msgid "Are you sure you want to delete this saved list?"
+msgstr "آیا مطمئن هستید که می‌خواهید این لیست ذخیره شده را حذف کنید؟"
+
+msgid "Delete List"
+msgstr "حذف لیست"
+
+msgid "Add New"
+msgstr "افزودن جدید"
+
+msgid "Chart view"
+msgstr "نمای نمودار"
+
+msgid "X-axis (Group by)"
+msgstr "محور X (گروه‌بندی بر اساس)"
+
+msgid "Y-axis (Value)"
+msgstr "محور Y (مقدار)"
+
+msgid "Stack by"
+msgstr "انباشته بر اساس"
+
+msgid "Single dimension"
+msgstr "تک بعدی"
+
+msgid "Chart type"
+msgstr "نوع نمودار"
+
+msgid "Actions"
+msgstr "اقدامات"
+
+msgid "Export as PDF"
+msgstr "خروجی به عنوان PDF"
+
+msgid "Export as PNG"
+msgstr "خروجی به عنوان PNG"
+
+msgid "Add to Dashboard"
+msgstr "افزودن به داشبورد"
+
+msgid "Fields"
+msgstr "فیلدها"
+
+msgid "Previous"
+msgstr "قبلی"
+
+msgid "Next"
+msgstr "بعدی"
+
+msgid "Menu"
+msgstr "منو"
+
+msgid "Edit"
+msgstr "ویرایش"
+
+msgid "Read Only"
+msgstr "فقط خواندنی"
+
+msgid "Drag to move"
+msgstr "برای جابجایی بکشید"
+
+msgid "Filters"
+msgstr "فیلترها"
+
+msgid "Shrink panel"
+msgstr "کوچک کردن پنل"
+
+msgid "Expand panel"
+msgstr "بزرگ کردن پنل"
+
+msgid "Filter"
+msgstr "فیلتر"
+
+msgid "Add more filter"
+msgstr "افزودن فیلتر بیشتر"
+
+msgid "Applied Filters"
+msgstr "فیلترهای اعمال شده"
+
+msgid "Clear All"
+msgstr "پاک کردن همه"
+
+msgid "Save to List"
+msgstr "ذخیره در لیست"
+
+msgid "Cancel"
+msgstr "لغو"
+
+msgid "OR"
+msgstr ""
+
+msgid "AND"
+msgstr ""
+
+msgid "Drag to resize width (left)"
+msgstr "برای تغییر عرض بکشید (چپ)"
+
+msgid "Resize width left"
+msgstr "تغییر عرض به چپ"
+
+msgid "Drag to resize width (right)"
+msgstr "برای تغییر عرض بکشید (راست)"
+
+msgid "Resize width right"
+msgstr "تغییر عرض به راست"
+
+msgid "Drag to resize height"
+msgstr "برای تغییر ارتفاع بکشید"
+
+msgid "Resize height"
+msgstr "تغییر ارتفاع"
+
+msgid "Multi-Step Form"
+msgstr "فرم چند مرحله‌ای"
+
+msgid "Single-Step Form"
+msgstr "فرم تک مرحله‌ای"
+
+msgid "JPG or PNG"
+msgstr ""
+
+#| msgid "Remove"
+msgid "Remove photo"
+msgstr "حذف عکس"
+
+msgid "Choose File"
+msgstr "انتخاب فایل"
+
+msgid "No file chosen"
+msgstr "هیچ فایلی انتخاب نشده است"
+
+msgid "Clear"
+msgstr "پاک کردن"
+
+msgid "Add"
+msgstr "افزودن"
+
+msgid "Save & New"
+msgstr "ذخیره و جدید"
+
+msgid "Add Notes and Attachment"
+msgstr "افزودن یادداشت و پیوست"
+
+msgid "Upload File"
+msgstr "آپلود فایل"
+
+msgid "File already uploaded"
+msgstr "فایل قبلاً آپلود شده است"
+
+msgid "Click to upload or drag & drop"
+msgstr "برای آپلود کلیک کنید یا بکشید و رها کنید"
+
+msgid "Any file (Max 10MB)"
+msgstr "هر فایلی (حداکثر ۱۰ مگابایت)"
+
+msgid "Clear file"
+msgstr "پاک کردن فایل"
+
+msgid "File selected"
+msgstr "فایل انتخاب شد"
+
+msgid "We searched for"
+msgstr "ما جستجو کردیم برای"
+
+msgid "No search results found"
+msgstr "هیچ نتیجه جستجویی یافت نشد"
+
+msgid "Select Visible Items"
+msgstr "انتخاب موارد قابل مشاهده"
+
+msgid "No items in this group."
+msgstr "هیچ موردی در این گروه وجود ندارد."
+
+msgid "Clear Filters"
+msgstr "پاک کردن فیلترها"
+
+msgid "Call"
+msgstr "تماس"
+
+msgid "Email"
+msgstr "ایمیل"
+
+msgid "Status"
+msgstr "وضعیت"
+
+msgid "Initiated"
+msgstr "آغاز شده"
+
+msgid "New"
+msgstr "جدید"
+
+msgid "created"
+msgstr "ایجاد شد"
+
+msgid "status"
+msgstr "وضعیت"
+
+msgid "Added call task to this"
+msgstr "وظیفه تماس به این اضافه شد"
+
+msgid "Send email to this"
+msgstr "ارسال ایمیل به این"
+
+msgid "Activity logged for this"
+msgstr "فعالیت برای این ثبت شد"
+
+msgid "Event scheduled for this"
+msgstr "رویداد برای این زمان‌بندی شد"
+
+msgid "Meeting scheduled with this"
+msgstr "جلسه با این زمان‌بندی شد"
+
+msgid "Action performed by"
+msgstr "اقدام انجام شده توسط"
+
+msgid "No history available for this object."
+msgstr "هیچ تاریخچه‌ای برای این شیء در دسترس نیست."
+
+msgid "Kanban Settings"
+msgstr "تنظیمات کانبان"
+
+msgid "Select Columns to Export (Optional)"
+msgstr "انتخاب ستون‌ها برای خروجی (اختیاری)"
+
+msgid "Export Format"
+msgstr "قالب خروجی"
+
+msgid "Excel"
+msgstr "اکسل"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Available Columns"
+msgstr "ستون‌های موجود"
+
+msgid "Select which columns to export"
+msgstr "انتخاب کنید کدام ستون‌ها برای خروجی"
+
+msgid "Add Additional Columns"
+msgstr "افزودن ستون‌های اضافی"
+
+msgid "Select more fields you want to export"
+msgstr "فیلدهای بیشتری را که می‌خواهید خروجی بگیرید انتخاب کنید"
+
+msgid "Export"
+msgstr "خروجی"
+
+msgid "Select"
+msgstr "انتخاب"
+
+msgid "Unselect"
+msgstr "لغو انتخاب"
+
+msgid "Export Selected"
+msgstr "خروجی انتخاب شده‌ها"
+
+msgid "Bulk Update"
+msgstr "به‌روزرسانی گروهی"
+
+msgid "Bulk Delete"
+msgstr "حذف گروهی"
+
+msgid "Edit List"
+msgstr "ویرایش لیست"
+
+#, python-format
+msgid ""
+"\n"
+"                        Nothing to show yet. The %(view)s list does not have any data.\n"
+"                    "
+msgstr ""
+"\n"
+"                        هنوز چیزی برای نمایش وجود ندارد. لیست %(view)s هیچ داده‌ای ندارد.\n"
+"                    "
+
+msgid " Nothing to show yet. Please add your"
+msgstr "هنوز چیزی برای نمایش وجود ندارد. لطفاً مورد خود را اضافه کنید."
+
+msgid "All Items"
+msgstr "همه موارد"
+
+msgid "Recently Viewed"
+msgstr "اخیراً مشاهده شده"
+
+msgid "Recently Created"
+msgstr "اخیراً ایجاد شده"
+
+msgid "Recently Modified"
+msgstr "اخیراً تغییر یافته"
+
+msgid "List View"
+msgstr "نمای لیست"
+
+msgid "Unpin default view"
+msgstr "لغو سنجاق نمای پیش‌فرض"
+
+msgid "Unpin"
+msgstr "لغو سنجاق"
+
+msgid "Set as default view"
+msgstr "تنظیم به عنوان نمای پیش‌فرض"
+
+msgid "Pin as default"
+msgstr "سنجاق به عنوان پیش‌فرض"
+
+msgid "Search"
+msgstr "جستجو"
+
+msgid "Reload"
+msgstr "بارگذاری مجدد"
+
+msgid "Applied filters"
+msgstr "فیلترهای اعمال شده"
+
+msgid "Views"
+msgstr "نماها"
+
+msgid "Layout"
+msgstr "چیدمان"
+
+msgid "Split View"
+msgstr "نمای تقسیم شده"
+
+msgid "Chart"
+msgstr "نمودار"
+
+msgid "List"
+msgstr "لیست"
+
+msgid "Card"
+msgstr "کارت"
+
+msgid "Kanban"
+msgstr "کانبان"
+
+msgid "Timeline"
+msgstr "بازه زمانی"
+
+msgid "Group By"
+msgstr "گروه‌بندی بر اساس"
+
+msgid "Chart View"
+msgstr "نمای نمودار"
+
+msgid "Notes and Attachments"
+msgstr "یادداشت‌ها و پیوست‌ها"
+
+msgid "Open file in new tab"
+msgstr "باز کردن فایل در برگه جدید"
+
+msgid "Notes"
+msgstr "یادداشت‌ها"
+
+msgid "Created By"
+msgstr "ایجاد شده توسط"
+
+msgid "Created At"
+msgstr "ایجاد شده در"
+
+msgid "File Size"
+msgstr "اندازه فایل"
+
+msgid "Related To"
+msgstr "مرتبط با"
+
+msgid "Delete Attachment"
+msgstr "حذف پیوست"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Add Quick Filter"
+msgstr "افزودن فیلتر سریع"
+
+msgid "Select Fields"
+msgstr "انتخاب فیلدها"
+
+msgid "No available fields to add as quick filter."
+msgstr "هیچ فیلد موجودی برای اضافه کردن به عنوان فیلتر سریع وجود ندارد."
+
+msgid "Loading..."
+msgstr "در حال بارگذاری..."
+
+msgid "Hard Delete Confirmation"
+msgstr "تأیید حذف دائمی"
+
+msgid "Are you sure you want to hard delete the selected"
+msgstr ""
+"آیا مطمئن هستید که می‌خواهید موارد انتخاب شده را به طور دائمی حذف کنید"
+
+msgid "Deletable Records"
+msgstr "رکوردهای قابل حذف"
+
+msgid "Protected Records"
+msgstr "رکوردهای محافظت شده"
+
+#| msgid ""
+#| "Are you sure you want to soft delete all dependencies of this record ? "
+msgid ""
+"Are you sure you want to hard delete all dependencies of this record ? "
+msgstr ""
+"آیا مطمئن هستید که می‌خواهید همه وابستگی‌های این رکورد را به طور سخت حذف "
+"کنید؟ "
+
+msgid "Delete All"
+msgstr "حذف همه"
+
+msgid "Are you sure you want to hard delete this dependency ? "
+msgstr "آیا مطمئن هستید که می‌خواهید این وابستگی را به طور دائمی حذف کنید؟"
+
+msgid " Confirm"
+msgstr "تأیید"
+
+msgid "Bulk Update Selected"
+msgstr "به‌روزرسانی گروهی انتخاب شده‌ها"
+
+msgid "Yes"
+msgstr "بله"
+
+msgid "No"
+msgstr "خیر"
+
+#, python-format
+msgid ""
+"Select\n"
+"                                            %(field)s"
+msgstr ""
+"انتخاب\n"
+"                                            %(field)s"
+
+#, python-format
+msgid ""
+"Select\n"
+"                                                %(field)s"
+msgstr ""
+"انتخاب\n"
+"                                                %(field)s"
+
+msgid "No fields available for bulk update."
+msgstr "هیچ فیلدی برای به‌روزرسانی گروهی در دسترس نیست."
+
+msgid "Update"
+msgstr "به‌روزرسانی"
+
+msgid "Remove"
+msgstr "حذف"
+
+msgid "Select Delete Mode"
+msgstr "انتخاب حالت حذف"
+
+msgid "Choose the deletion mode for the selected records"
+msgstr "حالت حذف را برای رکوردهای انتخاب شده انتخاب کنید"
+
+msgid "Hard Delete will permanently delete data."
+msgstr "حذف دائمی داده‌ها را به طور دائمی حذف می‌کند."
+
+msgid "Soft Delete allows you to restore deleted records."
+msgstr "حذف نرم به شما امکان بازیابی رکوردهای حذف شده را می‌دهد."
+
+msgid "Hard Delete"
+msgstr "حذف دائمی"
+
+msgid "Soft Delete"
+msgstr "حذف نرم"
+
+msgid "Select Field"
+msgstr "انتخاب فیلد"
+
+msgid "No value needed"
+msgstr "هیچ مقداری نیاز نیست"
+
+msgid "Start"
+msgstr "شروع"
+
+msgid "End"
+msgstr "پایان"
+
+msgid "and"
+msgstr "و"
+
+msgid "True"
+msgstr "درست"
+
+msgid "False"
+msgstr "نادرست"
+
+msgid "Enter value"
+msgstr "مقدار را وارد کنید"
+
+msgid "Remove filter"
+msgstr "حذف فیلتر"
+
+msgid "Apply"
+msgstr "اعمال"
+
+msgid "Drag"
+msgstr "کشیدن"
+
+msgid "More actions"
+msgstr "اقدامات بیشتر"
+
+msgid "Select Operator"
+msgstr "انتخاب عملگر"
+
+#, python-format
+msgid ""
+"Are you sure you want to change the <span class=&quot;text-"
+"primary-600&quot;>%(field)s</span> to <span class=&quot;text-"
+"primary-600&quot;>%(stage)s</span>?"
+msgstr ""
+"آیا مطمئن هستید که می‌خواهید <span class=&quot;text-"
+"primary-600&quot;>%(field)s</span> را به <span class=&quot;text-"
+"primary-600&quot;>%(stage)s</span> تغییر دهید؟"
+
+msgid "All"
+msgstr "همه"
+
+msgid "Are you sure you want to delete this quick filter"
+msgstr "آیا مطمئن هستید که می‌خواهید این فیلتر سریع را حذف کنید"
+
+msgid "Bulk Reassign Dependencies"
+msgstr "تخصیص مجدد گروهی وابستگی‌ها"
+
+msgid "Reassign all dependent"
+msgstr "تخصیص مجدد همه وابسته‌ها"
+
+msgid "to a new target before deleting"
+msgstr "به یک هدف جدید قبل از حذف"
+
+msgid "New Target"
+msgstr "هدف جدید"
+
+msgid "No other targets available"
+msgstr "هیچ هدف دیگری در دسترس نیست"
+
+msgid "Confirm"
+msgstr "تأیید"
+
+msgid "Confirm Deletion"
+msgstr "تأیید حذف"
+
+msgid "Soft deleting this"
+msgstr "حذف نرم این"
+
+msgid "will also soft delete all its related"
+msgstr "همه موارد مرتبط را نیز به طور نرم حذف می‌کند"
+
+msgid "Permanently deleting this"
+msgstr "حذف دائمی این"
+
+msgid "will also permanently delete all its related"
+msgstr "همه موارد مرتبط را نیز به طور دائمی حذف می‌کند"
+
+msgid "Are you sure you want to proceed ?"
+msgstr "آیا مطمئن هستید که می‌خواهید ادامه دهید؟"
+
+msgid "with Dependencies"
+msgstr "با وابستگی‌ها"
+
+msgid "Confirm Delete"
+msgstr "تأیید حذف"
+
+msgid "The"
+msgstr ""
+
+msgid "has dependencies and cannot be deleted directly."
+msgstr "دارای وابستگی‌ها است و نمی‌تواند به طور مستقیم حذف شود."
+
+msgid "Reassign All"
+msgstr "تخصیص مجدد همه"
+
+msgid "Reassign Individually"
+msgstr "تخصیص مجدد به صورت جداگانه"
+
+msgid "Are you sure you want to delete the"
+msgstr "آیا مطمئن هستید که می‌خواهید"
+
+msgid "Choose the deletion mode for"
+msgstr "حالت حذف را برای انتخاب کنید"
+
+msgid "Individual Reassign or Delete Dependencies"
+msgstr "تخصیص مجدد فردی یا حذف وابستگی‌ها"
+
+msgid "Choose actions for each dependent"
+msgstr "اقدامات را برای هر وابسته انتخاب کنید"
+
+msgid "before deleting"
+msgstr "قبل از حذف"
+
+msgid "Dependent Data"
+msgstr "داده وابسته"
+
+msgid "Select Target"
+msgstr "انتخاب هدف"
+
+msgid "Set null for all"
+msgstr "تهی کردن همه"
+
+msgid "Set to Null"
+msgstr "تهی کردن"
+
+msgid "Delete all"
+msgstr "حذف همه"
+
+msgid "Set Null"
+msgstr "تهی کردن"
+
+msgid "Are you sure you want to soft delete this dependency ? "
+msgstr "آیا مطمئن هستید که می‌خواهید این وابستگی را به طور نرم حذف کنید؟"
+
+msgid "No dependent records found."
+msgstr "هیچ رکورد وابسته‌ای یافت نشد."
+
+msgid "Soft Delete Confirmation"
+msgstr "تأیید حذف نرم"
+
+msgid "Are you sure you want to soft delete the selected"
+msgstr "آیا مطمئن هستید که می‌خواهید موارد انتخاب شده را به طور نرم حذف کنید"
+
+msgid ""
+"Are you sure you want to soft delete all dependencies of this record ? "
+msgstr ""
+"آیا مطمئن هستید که می‌خواهید همه وابستگی‌های این رکورد را به طور نرم حذف "
+"کنید؟"
+
+msgid "No Records to Delete"
+msgstr "هیچ رکوردی برای حذف وجود ندارد"
+
+msgid "Value"
+msgstr "مقدار"
+
+msgid "No results found"
+msgstr "هیچ نتیجه‌ای یافت نشد"
+
+msgid "Select All"
+msgstr "انتخاب همه"
+
+msgid "Select an option"
+msgstr "یک گزینه انتخاب کنید"
+
+msgid "From"
+msgstr "از"
+
+msgid "To"
+msgstr "تا"
+
+msgid "No related lists found for this"
+msgstr "هیچ لیست مرتبطی برای این یافت نشد"
+
+msgid "Add Column to List"
+msgstr "افزودن ستون به لیست"
+
+msgid "Edit List View"
+msgstr "ویرایش نمای لیست"
+
+msgid "New List View"
+msgstr "نمای لیست جدید"
+
+msgid "Add filter"
+msgstr "افزودن فیلتر"
+
+msgid "No filter parameters available."
+msgstr "هیچ پارامتر فیلتری در دسترس نیست."
+
+msgid "Conditions"
+msgstr "شروط"
+
+msgid "Add More"
+msgstr "افزودن بیشتر"
+
+msgid "Select an item from the list to view details"
+msgstr "برای مشاهده جزئیات، یک مورد از لیست انتخاب کنید"
+
+msgid "Timeline settings"
+msgstr "تنظیمات بازه زمانی"
+
+msgid "Group by"
+msgstr "گروه‌بندی بر اساس"
+
+msgid "View"
+msgstr "مشاهده"
+
+msgid "Timeline bar start and end are taken from these record fields."
+msgstr "شروع و پایان نوار بازه زمانی از این فیلدهای رکورد گرفته می‌شوند."
+
+msgid "Enter Value"
+msgstr "مقدار را وارد کنید"
+
+msgid "Task added"
+msgstr "وظیفه اضافه شد"
+
+msgid "Event added"
+msgstr "رویداد اضافه شد"
+
+msgid "Meeting added"
+msgstr "جلسه اضافه شد"
+
+msgid "Call added"
+msgstr "تماس اضافه شد"
+
+msgid "Email sent"
+msgstr "ایمیل ارسال شد"
+
+msgid "Draft saved"
+msgstr "پیش‌نویس ذخیره شد"
+
+msgid "Scheduled mail"
+msgstr "ایمیل زمان‌بندی شده"
+
+msgid "Mail failed"
+msgstr "ایمیل ناموفق بود"
+
+msgid "Notes and Attachment"
+msgstr "یادداشت و پیوست"
+
+msgid "You don't have permission to edit this attachment."
+msgstr "شما مجوز ویرایش این پیوست را ندارید."
+
+msgid "The requested attachment does not exist."
+msgstr "پیوست درخواستی وجود ندارد."
+
+msgid "You don't have permission to add attachments to this record."
+msgstr "شما مجوز افزودن پیوست به این رکورد را ندارید."
+
+msgid "Invalid related object."
+msgstr "شیء مرتبط نامعتبر است."
+
+#| msgid "You don't have permission to edit this attachment."
+msgid "You don't have permission to delete this attachment."
+msgstr "شما مجوز حذف این پیوست را ندارید."
+
+msgid "Column Chart"
+msgstr "نمودار ستونی"
+
+msgid "Line Chart"
+msgstr "نمودار خطی"
+
+msgid "Pie Chart"
+msgstr "نمودار دایره‌ای"
+
+msgid "Funnel"
+msgstr "قیف"
+
+msgid "Bar Chart"
+msgstr "نمودار میله‌ای"
+
+msgid "Donut"
+msgstr "دونات"
+
+msgid "Stacked Vertical"
+msgstr "انباشته عمودی"
+
+msgid "Stacked Horizontal"
+msgstr "انباشته افقی"
+
+msgid "Scatter"
+msgstr "پراکندگی"
+
+msgid "Treemap"
+msgstr "نقشه درختی"
+
+msgid "Area Chart"
+msgstr "نمودار مساحت"
+
+msgid "Heatmap"
+msgstr "نقشه حرارتی"
+
+msgid "Sankey"
+msgstr "سانکی"
+
+msgid "Radar Chart"
+msgstr "نمودار رادار"
+
+msgid "Sum"
+msgstr "جمع"
+
+msgid "Average"
+msgstr "میانگین"
+
+msgid "Minimum"
+msgstr "حداقل"
+
+msgid "Maximum"
+msgstr "حداکثر"
+
+msgid "Record count"
+msgstr "تعداد رکوردها"
+
+#, python-format
+msgid "%(metric)s of %(field)s"
+msgstr "%(metric)s از %(field)s"
+
+msgid "(empty)"
+msgstr "(خالی)"
+
+msgid "This field cannot be used as chart dimension."
+msgstr "این فیلد نمی‌تواند به عنوان بعد نمودار استفاده شود."
+
+msgid "Selected Y-axis field must be numeric."
+msgstr "فیلد انتخاب شده برای محور Y باید عددی باشد."
+
+msgid "Both fields must support chart grouping."
+msgstr "هر دو فیلد باید از گروه‌بندی نمودار پشتیبانی کنند."
+
+msgid "Not enough data for stacked chart."
+msgstr "داده کافی برای نمودار انباشته وجود ندارد."
+
+msgid ""
+"No suitable field for chart grouping (need a choice, foreign key, or boolean"
+" field)."
+msgstr ""
+"هیچ فیلد مناسبی برای گروه‌بندی نمودار وجود ندارد (نیاز به فیلد انتخابی، کلید"
+" خارجی یا بولی)."
+
+msgid ""
+"Selected record is not associated with any company. Activate a company to "
+"proceed with deletion."
+msgstr ""
+"رکورد انتخاب شده با هیچ شرکتی مرتبط نیست. برای ادامه حذف، یک شرکت را فعال "
+"کنید."
+
+#| msgid "Invalid saved list ID."
+msgid "Invalid target ID"
+msgstr "شناسه هدف نامعتبر است"
+
+#, python-format
+msgid "Successfully soft deleted %(record)s."
+msgstr "%(record)s با موفقیت به‌صورت نرم حذف شد."
+
+msgid "Details"
+msgstr "جزئیات"
+
+msgid "Activity"
+msgstr "فعالیت"
+
+msgid "Cadence"
+msgstr "توالی"
+
+msgid "Related Lists"
+msgstr "لیست‌های مرتبط"
+
+msgid "Notes & Attachments"
+msgstr "یادداشت‌ها و پیوست‌ها"
+
+msgid "History"
+msgstr "تاریخچه"
+
+msgid "View full detail"
+msgstr "مشاهده جزئیات کامل"
+
+msgid "You don't have permission to update this record."
+msgstr "شما مجوز به‌روزرسانی این رکورد را ندارید."
+
+msgid "Invalid choice"
+msgstr "انتخاب نامعتبر"
+
+msgid "Detailed View"
+msgstr "نمای جزئیات"
+
+msgid "The requested record does not exist."
+msgstr "رکورد درخواستی وجود ندارد."
+
+msgid ""
+"No grouping field specified or you don't have permission to view any "
+"grouping fields."
+msgstr ""
+"هیچ فیلد گروه‌بندی مشخص نشده است یا شما مجوز مشاهده هیچ فیلد گروه‌بندی را "
+"ندارید."
+
+#, python-format
+msgid "Field '%(field)s' is not a Choice field or ForeignKey field."
+msgstr "فیلد '%(field)s' یک فیلد انتخابی یا کلید خارجی نیست."
+
+msgid "None"
+msgstr "هیچ‌کدام"
+
+#, python-format
+msgid "Invalid grouping field '%(field)s': %(err)s"
+msgstr "فیلد گروه‌بندی نامعتبر '%(field)s': %(err)s"
+
+#, python-format
+msgid "Error grouping by field '%(field)s': %(err)s"
+msgstr "خطا در گروه‌بندی بر اساس فیلد '%(field)s': %(err)s"
+
+msgid "Select value(s)"
+msgstr "انتخاب مقدار(ها)"
+
+msgid "Enter Number"
+msgstr "ورود عدد"
+
+msgid "Enter Email"
+msgstr "ورود ایمیل"
+
+msgid "Enter URL"
+msgstr "ورود URL"
+
+msgid "You do not have permission to edit this."
+msgstr "شما مجوز ویرایش این را ندارید."
+
+#, python-format
+#| msgid "Error grouping by field '%(field)s': %(err)s"
+msgid "Error updating field: %(message)s"
+msgstr "خطا در به‌روزرسانی فیلد: %(message)s"
+
+#, python-format
+msgid "Invalid decimal value: %(value)s"
+msgstr ""
+
+#, python-format
+msgid "Invalid datetime format: %(value)s"
+msgstr ""
+
+#, python-format
+msgid "Invalid date format: %(value)s"
+msgstr ""
+
+msgid "You do not have permission to view this."
+msgstr "شما مجوز مشاهده این را ندارید."
+
+msgid "Invalid saved list ID."
+msgstr "شناسه لیست ذخیره شده نامعتبر است."
+
+msgid "Group By Settings"
+msgstr "تنظیمات گروه‌بندی بر اساس"
+
+#| msgid "You do not have permission to view this."
+msgid "You don't have permission to configure columns for this list."
+msgstr "شما مجوز پیکربندی ستون‌ها برای این لیست را ندارید."
+
+msgid "Equals (case insensitive)"
+msgstr ""
+
+msgid "Greater than or equal to"
+msgstr ""
+
+msgid "Less than or equal to"
+msgstr ""
+
+msgid "Create"
+msgstr "ایجاد"
+
+msgid "Import"
+msgstr "واردات"
+
+msgid "Duplicate"
+msgstr "تکراری"
+
+msgid "duplicated"
+msgstr "تکرار شد"
+
+msgid "updated"
+msgstr "به‌روزرسانی شد"
+
+#, python-format
+msgid "%(model)s %(action)s successfully."
+msgstr "%(model)s با موفقیت %(action)s."
+
+#, python-format
+msgid "A %(model)s with this %(field)s already exists."
+msgstr "یک %(model)s با این %(field)s از قبل وجود دارد."
+
+#, python-format
+msgid "A %(model)s with this combination of %(fields)s already exists."
+msgstr "یک %(model)s با این ترکیب از %(fields)s از قبل وجود دارد."
+
+#, python-format
+msgid ""
+"This %(model)s could not be saved due to a duplicate entry. Please check "
+"your input and try again."
+msgstr ""
+"این %(model)s به دلیل ورودی تکراری قابل ذخیره نیست. لطفاً ورودی خود را بررسی"
+" کنید و دوباره امتحان کنید."
+
+msgid "An error occurred while saving. Please try again or contact support."
+msgstr ""
+"در حین ذخیره خطایی رخ داد. لطفاً دوباره امتحان کنید یا با پشتیبانی تماس "
+"بگیرید."
+
+msgid "Timeline view requires timeline_start_field to be set."
+msgstr "نمای بازه زمانی نیاز به تنظیم timeline_start_field دارد."
+
+#, python-format
+msgid "Invalid timeline_start_field: %(field)s."
+msgstr "timeline_start_field نامعتبر: %(field)s."
+
+msgid "Days"
+msgstr "روزها"
+
+msgid "Weeks"
+msgstr "هفته‌ها"
+
+msgid "Months"
+msgstr "ماه‌ها"
+
+msgid "Quarters"
+msgstr "سه‌ماهه‌ها"
+
+#, python-format
+msgid "Bars use: %(field)s"
+msgstr "نوارها استفاده می‌کنند: %(field)s"
+
+#, python-format
+msgid "From %(start)s → %(end)s"
+msgstr "از %(start)s → %(end)s"
+
+msgid "No rows selected for deletion."
+msgstr "هیچ ردیفی برای حذف انتخاب نشده است."
+
+#| msgid "You do not have permission to edit this."
+msgid "You do not have permission to delete this data."
+msgstr "شما مجوز حذف این داده را ندارید."
+
+#, python-format
+msgid ""
+"Successfully soft deleted %(deleted)d record(s). %(skipped)d record(s) were "
+"skipped because you do not have permission to delete them."
+msgstr ""
+"%(deleted)d رکورد با موفقیت به‌صورت نرم حذف شد. %(skipped)d رکورد به‌دلیل "
+"نداشتن مجوز حذف، رد شد."
+
+#, python-format
+msgid "Successfully soft deleted %(count)d records."
+msgstr "%(count)d رکورد با موفقیت به‌صورت نرم حذف شد."
+
+#, python-format
+msgid ""
+"Successfully hard deleted %(deleted)d record(s). %(skipped)d record(s) were "
+"skipped because you do not have permission to delete them."
+msgstr ""
+"%(deleted)d رکورد با موفقیت به‌صورت دائمی حذف شد. %(skipped)d رکورد به‌دلیل "
+"نداشتن مجوز حذف، رد شد."
+
+#, python-format
+msgid "Successfully hard deleted %(count)d records."
+msgstr "%(count)d رکورد با موفقیت به‌صورت دائمی حذف شد."
+
+#, python-format
+msgid "Successfully hard deleted %(count)d dependencies: %(summary)s"
+msgstr "%(count)d وابستگی با موفقیت به‌صورت دائمی حذف شد: %(summary)s"
+
+#, python-format
+msgid "No dependencies found for '%(record)s'"
+msgstr "هیچ وابستگی برای «%(record)s» یافت نشد."
+
+#, python-format
+msgid ""
+"Successfully hard deleted %(count)d '%(model)s' dependencies of "
+"'%(record)s'."
+msgstr ""
+"%(count)d وابستگی «%(model)s» مربوط به «%(record)s» با موفقیت به‌صورت دائمی "
+"حذف شد."
+
+#, python-format
+msgid "Successfully soft deleted %(count)d dependencies: %(summary)s"
+msgstr "%(count)d وابستگی با موفقیت به‌صورت نرم حذف شد: %(summary)s"
+
+#, python-format
+msgid ""
+"Successfully soft deleted %(count)d '%(model)s' dependencies of "
+"'%(record)s'."
+msgstr ""
+"%(count)d وابستگی «%(model)s» مربوط به «%(record)s» با موفقیت به‌صورت نرم "
+"حذف شد."
+
+#, python-format
+msgid ""
+"Updated %(updated)d record(s) successfully. %(skipped)d record(s) were "
+"skipped because you do not have permission to update them."
+msgstr ""
+"%(updated)d رکورد با موفقیت به‌روزرسانی شد. %(skipped)d رکورد به‌دلیل نداشتن"
+" مجوز به‌روزرسانی، رد شد."
+
+#, python-format
+msgid "Updated %(count)d records successfully."
+msgstr "%(count)d رکورد با موفقیت به‌روزرسانی شد."
+
+msgid "Please select a valid choice for the operator field."
+msgstr "لطفاً یک گزینه معتبر برای فیلد عملگر انتخاب کنید."
+
+msgid "Please select a valid choice for the field."
+msgstr "لطفاً یک گزینه معتبر برای فیلد انتخاب کنید."
+
+#, python-format
+msgid "Successfully deleted the %(model)s and all its related records."
+msgstr "%(model)s و همه رکوردهای مرتبط آن با موفقیت حذف شد."
+
+#, python-format
+msgid "Successfully reassigned %(count)d records and deleted the %(model)s."
+msgstr "%(count)d رکورد با موفقیت تخصیص مجدد شد و %(model)s حذف شد."
+
+#, python-format
+msgid "Reassigned %(count)d records and deleted %(record)s"
+msgstr "%(count)d رکورد تخصیص مجدد شد و %(record)s حذف شد"
+
+#, python-format
+msgid "Processed dependency records and deleted %(record)s"
+msgstr "رکوردهای وابسته پردازش شد و %(record)s حذف شد"
+
+#, python-format
+msgid "Reassigned %(count)d records"
+msgstr "%(count)d رکورد تخصیص مجدد شد"
+
+msgid "Processed dependency records"
+msgstr "رکوردهای وابسته پردازش شد"
+
+#, python-format
+msgid "Successfully deleted %(record)s."
+msgstr "%(record)s با موفقیت حذف شد."
+
+msgid "Successfully set record to null."
+msgstr "رکورد با موفقیت خالی شد."
+
+msgid "The record was deleted successfully."
+msgstr "رکورد با موفقیت حذف شد."
+
+#, python-format
+msgid "You don't have permission to delete this %(model)s."
+msgstr "شما مجوز حذف این %(model)s را ندارید."
+
+#, python-format
+msgid "You don't have permission to delete %(model)s."
+msgstr "شما مجوز حذف %(model)s را ندارید."
+
+msgid "Error in delete method"
+msgstr "خطا در روش حذف"
+
+#, python-format
+msgid "Error in delete method: %(error)s"
+msgstr "خطا در روش حذف: %(error)s"
+
+#, python-format
+msgid "Delete %(model)s with Dependencies"
+msgstr "حذف %(model)s با وابستگی‌ها"
+
+#, python-format
+msgid "The %(model)s \"%(obj)s\" has dependencies and cannot be deleted directly."
+msgstr "%(model)s «%(obj)s» دارای وابستگی است و نمی‌توان آن را مستقیماً حذف کرد."
+
+#, python-format
+msgid "Are you sure you want to delete the %(model)s \"%(obj)s\"?"
+msgstr "آیا مطمئن هستید که می‌خواهید %(model)s «%(obj)s» را حذف کنید؟"
+
+#, python-format
+msgid "Choose the deletion mode for %(model)s \"%(obj)s\"."
+msgstr "حالت حذف را برای %(model)s «%(obj)s» انتخاب کنید."
+
+#, python-format
+msgid "Are you sure you want to hard delete the selected %(model)s?"
+msgstr "آیا مطمئن هستید که می‌خواهید %(model)s انتخاب‌شده را به‌صورت دائمی حذف کنید؟"
+
+#, python-format
+msgid "Are you sure you want to soft delete the selected %(model)s?"
+msgstr "آیا مطمئن هستید که می‌خواهید %(model)s انتخاب‌شده را به‌صورت نرم حذف کنید؟"
+
+#, python-format
+msgid "Reassign all dependent %(model)s to a new target before deleting \"%(obj)s\"."
+msgstr "قبل از حذف «%(obj)s»، همه %(model)s وابسته را به یک هدف جدید تخصیص مجدد دهید."
+
+#, python-format
+msgid "Choose actions for each dependent %(model)s before deleting \"%(obj)s\"."
+msgstr "قبل از حذف «%(obj)s»، برای هر %(model)s وابسته یک اقدام انتخاب کنید."
+
+#, python-format
+msgid "Soft deleting this <strong>%(model)s</strong> will also soft delete all its related <strong>%(related)s</strong>."
+msgstr "حذف نرم این <strong>%(model)s</strong> همه <strong>%(related)s</strong> مرتبط را نیز به‌صورت نرم حذف می‌کند."
+
+#, python-format
+msgid "Permanently deleting this <strong>%(model)s</strong> will also permanently delete all its related <strong>%(related)s</strong>."
+msgstr "حذف دائمی این <strong>%(model)s</strong> همه <strong>%(related)s</strong> مرتبط را نیز به‌صورت دائمی حذف می‌کند."

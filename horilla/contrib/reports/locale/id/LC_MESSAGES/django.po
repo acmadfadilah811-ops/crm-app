@@ -1,0 +1,457 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Module for creating and customizing reports across all system modules."
+msgstr "Modul untuk membuat dan menyesuaikan laporan di seluruh modul sistem."
+
+msgid ""
+"Seed default CRM reports and extend the engine to load them. Add an empty "
+"state for report filters and refresh report-detail navbar button styles. "
+"Store relative referer URLs with a full-nav fallback from report detail."
+msgstr ""
+"Buat laporan CRM default dan perluas mesin untuk memuatnya.Tambahkan status "
+"kosong untuk filter laporan dan segarkan gaya tombol bilah navigasi detail "
+"laporan.Simpan URL perujuk relatif dengan penggantian navigasi lengkap dari "
+"detail laporan."
+
+msgid ""
+"Gate report export through export permissions and get_export_queryset / "
+"is_exportable_field helpers."
+msgstr ""
+"Ekspor laporan gerbang melalui izin ekspor dan pembantu get_export_queryset "
+"/ is_exportable_field."
+
+msgid ""
+"Avoid RelatedObjectDoesNotExist in create-report form_invalid when related "
+"objects are missing."
+msgstr ""
+"Hindari TerkaitObjectDoesNotExist di buat-laporan form_invalid ketika objek "
+"terkait hilang."
+
+msgid ""
+"Re-raise HttpNotFound with exception chaining in report detail, export, and "
+"CRUD views to preserve context."
+msgstr ""
+"Naikkan kembali HttpNotFound dengan rangkaian pengecualian dalam detail "
+"laporan, ekspor, dan tampilan CRUD untuk menjaga konteks."
+
+msgid ""
+"Added pivot cell active state and filter badge with clear action. Fixed "
+"detail table filtering for empty and null pivot group values."
+msgstr ""
+"Menambahkan status aktif sel pivot dan lencana filter dengan tindakan yang "
+"jelas.Memperbaiki pemfilteran tabel detail untuk nilai grup pivot kosong dan"
+" nol."
+
+msgid ""
+"Removed redundant fields attributes superseded by form_class on report CRUD "
+"views, standardized first-party import groups, and added docstrings for "
+"pylint compliance."
+msgstr ""
+"Menghapus atribut bidang berlebihan yang digantikan oleh form_class pada "
+"tampilan CRUD laporan, grup impor pihak pertama yang distandarisasi, dan "
+"menambahkan docstrings untuk kepatuhan pylint."
+
+msgid ""
+"Report forms aligned with ModelForm layout: field_order and Meta.fields = "
+"\"__all__\" with Meta.exclude; folder and column HTMX unchanged."
+msgstr ""
+"Formulir laporan selaras dengan tata letak ModelForm: field_order dan "
+"Meta.fields = \"__all__\" dengan Meta.exclude;folder dan kolom HTML tidak "
+"berubah."
+
+msgid ""
+"Release 1.10: reports ship under contrib with app label reports. Cross-app "
+"report wiring, ContentType references, namespaces, and registrations updated"
+" for the contrib naming scheme."
+msgstr ""
+"Rilis 1.10: laporan dikirimkan berdasarkan kontribusi dengan laporan label "
+"aplikasi.Pengkabelan laporan lintas aplikasi, referensi ContentType, "
+"namespace, dan registrasi diperbarui untuk skema penamaan kontrib."
+
+msgid ""
+"Improved report compatibility with dashboard multi-widget support, enhanced "
+"chart_value_field handling, and minor stability improvements for report "
+"rendering and filter processing."
+msgstr ""
+"Peningkatan kompatibilitas laporan dengan dukungan multi-widget dasbor, "
+"penanganan bidang_nilai_grafik yang ditingkatkan, dan sedikit peningkatan "
+"stabilitas untuk rendering laporan dan pemrosesan filter."
+
+msgid ""
+"Added support for advanced chart types including Treemap, Area charts, "
+"Heatmaps, Sankey diagrams, and Radar charts. Improved compatibility with the"
+" new visualization and analytics framework."
+msgstr ""
+"Menambahkan dukungan untuk tipe bagan tingkat lanjut termasuk Peta Hierarki,"
+" Bagan Area, Peta Panas, Diagram Sankey, dan Bagan Radar.Peningkatan "
+"kompatibilitas dengan kerangka visualisasi dan analitik baru."
+
+msgid ""
+"Migrated from AppConfig to AppLauncher and and replacedutilities with "
+"utils.decorators, utils.translation,and shortcuts where applicable."
+msgstr ""
+"Bermigrasi dari AppConfig ke AppLauncher dan mengganti utilitas dengan "
+"utils.decorators, utils.translation, dan pintasan jika memungkinkan."
+
+msgid "Reports"
+msgstr "Laporan"
+
+msgid "Analytics"
+msgstr "Analisis"
+
+msgid "Folder Name"
+msgstr "Nama Folder"
+
+msgid "Folder"
+msgstr "Map"
+
+msgid "Folder Owner"
+msgstr "Pemilik Folder"
+
+msgid "Report Folder"
+msgstr "Folder Laporan"
+
+msgid "Report Folders"
+msgstr "Folder Laporan"
+
+msgid "Column Chart"
+msgstr "Bagan Kolom"
+
+msgid "Line Chart"
+msgstr "Bagan Garis"
+
+msgid "Pie Chart"
+msgstr "Bagan Pai"
+
+msgid "Funnel"
+msgstr "Corong"
+
+msgid "Bar Chart"
+msgstr "Bagan Batang"
+
+msgid "Donut"
+msgstr "Donat"
+
+msgid "Stacked Vertical Chart"
+msgstr "Bagan Vertikal Bertumpuk"
+
+msgid "Stacked Horizontal Chart"
+msgstr "Bagan Horisontal Bertumpuk"
+
+msgid "Scatter Chart"
+msgstr "Bagan Sebar"
+
+msgid "Treemap"
+msgstr "Peta Hierarki"
+
+msgid "Area Chart"
+msgstr "Bagan Area"
+
+msgid "Heatmap"
+msgstr "Peta panas"
+
+msgid "Sankey"
+msgstr "Sankey"
+
+msgid "Radar Chart"
+msgstr "Bagan Radar"
+
+msgid "Report Owner"
+msgstr "Pemilik Laporan"
+
+msgid "Report Name"
+msgstr "Nama Laporan"
+
+msgid "Module"
+msgstr "Modul"
+
+msgid "Chart Field"
+msgstr "Bidang Bagan"
+
+msgid "Secondary Field"
+msgstr "Bidang Sekunder"
+
+msgid "Value Field (Y-axis)"
+msgstr "Bidang Nilai (sumbu Y)"
+
+msgid "Report"
+msgstr "Laporan"
+
+msgid "breadcrumb"
+msgstr "remah roti"
+
+msgid " All Reports"
+msgstr "Semua Laporan"
+
+msgid "Folders"
+msgstr "Folder"
+
+msgid "All Folders"
+msgstr "Semua Folder"
+
+msgid "Favourites"
+msgstr "Favorit"
+
+msgid "All Reports"
+msgstr "Semua Laporan"
+
+msgid "You are already selected this field"
+msgstr "Anda sudah memilih bidang ini"
+
+msgid "No matching columns found"
+msgstr "Tidak ditemukan kolom yang cocok"
+
+msgid "No fields found matching your search"
+msgstr "Tidak ada kolom yang cocok dengan pencarian Anda"
+
+msgid "R"
+msgstr "R"
+
+msgid "C"
+msgstr "C"
+
+msgid "A"
+msgstr "A"
+
+msgid "Summary Report"
+msgstr "Laporan Ringkasan"
+
+msgid "Total Count"
+msgstr "Jumlah Total"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "Subtotal"
+msgstr "Subtotal"
+
+msgid "Grand Total"
+msgstr "Jumlah Keseluruhan"
+
+msgid "Count"
+msgstr "Menghitung"
+
+msgid "Overall Grand Total"
+msgstr "Keseluruhan Keseluruhan Total"
+
+msgid "Error"
+msgstr "Kesalahan"
+
+msgid "Configuration not supported"
+msgstr "Konfigurasi tidak didukung"
+
+msgid "Columns"
+msgstr "Kolom"
+
+msgid "Grouping"
+msgstr "Pengelompokan"
+
+msgid "Filter"
+msgstr "Filter"
+
+msgid "Search Columns"
+msgstr "Kolom Pencarian"
+
+msgid "Search"
+msgstr "Cari"
+
+msgid "Selected Columns"
+msgstr "Kolom yang Dipilih"
+
+msgid "Grouped Columns"
+msgstr "Kolom yang Dikelompokkan"
+
+msgid "Row Groups"
+msgstr "Grup Baris"
+
+msgid "Column Groups"
+msgstr "Grup Kolom"
+
+msgid "Aggregate Columns"
+msgstr "Kolom Agregat"
+
+msgid "Sum"
+msgstr "Jumlah"
+
+msgid "Avg"
+msgstr "Rata-rata"
+
+msgid "Max"
+msgstr "Maks"
+
+msgid "Min"
+msgstr "Minimal"
+
+msgid "Seacrch"
+msgstr "Mencari"
+
+msgid "Apply Filters"
+msgstr "Terapkan Filter"
+
+msgid "value1,value2"
+msgstr "nilai1,nilai2"
+
+msgid "Select..."
+msgstr "Memilih..."
+
+msgid "No filters applied. Add a filter to refine your results."
+msgstr ""
+"Tidak ada filter yang diterapkan.Tambahkan filter untuk menyaring hasil "
+"Anda."
+
+msgid "Report:"
+msgstr "Laporan:"
+
+msgid "Refresh"
+msgstr "Segarkan"
+
+msgid "Save"
+msgstr "Simpan"
+
+msgid "Discard Changes"
+msgstr "Buang Perubahan"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Close Panel"
+msgstr "Tutup Panel"
+
+msgid "Edit Report"
+msgstr "Sunting Laporan"
+
+msgid "Edit"
+msgstr "Sunting"
+
+msgid "Actions"
+msgstr "Tindakan"
+
+msgid "You have unsaved changes. Click"
+msgstr "Anda memiliki perubahan yang belum disimpan.Klik"
+
+msgid "to keep your changes or"
+msgstr "untuk menyimpan perubahan Anda atau"
+
+msgid "Discard"
+msgstr "Buang"
+
+msgid "to revert."
+msgstr "untuk kembali."
+
+msgid "Detail table"
+msgstr "Tabel detailnya"
+
+msgid "Filtered by pivot:"
+msgstr "Difilter berdasarkan poros:"
+
+msgid "Clear pivot filter"
+msgstr "Hapus filter pivot"
+
+msgid "Pivot table"
+msgstr "Tabel pivot"
+
+msgid "Report Chart"
+msgstr "Bagan Laporan"
+
+msgid "Change Chart"
+msgstr "Ubah Bagan"
+
+msgid "Export as PDF"
+msgstr "Ekspor sebagai PDF"
+
+msgid "Export as PNG"
+msgstr "Ekspor sebagai PNG"
+
+msgid "Add to Dashboard"
+msgstr "Tambahkan ke Dasbor"
+
+msgid "Record Count:"
+msgstr "Jumlah Rekam:"
+
+msgid "Favourite"
+msgstr "Favorit"
+
+msgid "Move"
+msgstr "Pindahkan"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Select Default Reports"
+msgstr "Pilih Laporan Default"
+
+msgid "Select All"
+msgstr "Pilih Semua"
+
+msgid "Create"
+msgstr "Buat"
+
+msgid "No reports found."
+msgstr "Tidak ada laporan yang ditemukan."
+
+msgid "New Report"
+msgstr "Laporan Baru"
+
+msgid "Load Default Reports"
+msgstr "Muat Laporan Default"
+
+msgid "New Folder"
+msgstr "Folder Baru"
+
+msgid "Name"
+msgstr "Nama"
+
+msgid "Type"
+msgstr "Jenis"
+
+msgid "Average"
+msgstr "Rata-rata"
+
+msgid "Minimum"
+msgstr "Minimum"
+
+msgid "Maximum"
+msgstr "Maksimum"
+
+msgid "Record count"
+msgstr "Jumlah rekaman"
+
+#, python-format
+msgid "%(metric)s of %(field)s"
+msgstr "%(metric)sdari%(field)s"
+
+msgid "Chart type"
+msgstr "Jenis bagan"
+
+msgid "X-axis (Group by)"
+msgstr "Sumbu X (Kelompokkan berdasarkan)"
+
+msgid "Stack by (second group)"
+msgstr "Tumpuk berdasarkan (grup kedua)"
+
+msgid "Y-axis (Value)"
+msgstr "Sumbu Y (Nilai)"
+
+msgid "Invalid field '{}'. This field does not exist on the model."
+msgstr "Bidang '{}' tidak valid.Bidang ini tidak ada pada model."
+
+msgid "Invalid filter value: {}"
+msgstr "Nilai filter tidak valid:{}"

@@ -1,0 +1,483 @@
+# Arabic translations for Horilla Workflow module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+msgid "Workflow"
+msgstr "سير العمل"
+
+msgid ""
+"Record-triggered workflow rules with field conditions, immediate actions "
+"(update field, assign task, email, notification), and time-based triggers "
+"scheduled relative to record or rule dates."
+msgstr ""
+"قواعد سير العمل المُشغَّلة بالسجلات مع شروط الحقول والإجراءات الفورية (تحديث "
+"الحقل، تعيين المهمة، البريد الإلكتروني، الإشعار)، ومشغلات زمنية مجدولة نسبةً "
+"إلى تواريخ السجل أو القاعدة."
+
+msgid ""
+"Re-raise HttpNotFound with exception chaining in workflow detail views to "
+"preserve context."
+msgstr ""
+
+msgid ""
+"Migrated workflow execution engine transaction imports from django.db to "
+"horilla.db."
+msgstr ""
+
+msgid ""
+"Migrated signal imports to the horilla.db.models.signals shim and "
+"standardized first-party import groups; behavior unchanged."
+msgstr ""
+"تم ترحيل استيرادات الإشارات إلى shim الخاص بـ horilla.db.models.signals "
+"وتوحيد مجموعات الاستيراد الداخلية؛ السلوك دون تغيير."
+
+#, fuzzy
+#| msgid ""
+#| "Workflow automation engine: WorkflowRule / WorkflowCondition / "
+#| "WorkflowAction models, dynamic condition evaluation, immediate dispatch "
+#| "on record saves, Celery WorkflowTimeTriggerAction and "
+#| "ScheduledWorkflowExecution, execution history modal, FilterSet support, "
+#| "auto-registration for workflow-enabled CRM models (leads, accounts, "
+#| "campaigns, contacts, opportunities), modular views, hidden-field action "
+#| "configuration fixes, restored workflow detail pages, and improved routing "
+#| "namespaces."
+msgid ""
+"Workflow automation engine: WorkflowRule / WorkflowCondition / "
+"WorkflowAction models, dynamic condition evaluation, immediate dispatch on "
+"record saves, Celery WorkflowTimeTriggerAction and "
+"ScheduledWorkflowExecution, execution history modal, FilterSet support, auto-"
+"registration for workflow-enabled models via feature registration (e.g. "
+"users, departments, holidays), modular views, hidden-field action "
+"configuration fixes, restored workflow detail pages, and improved routing "
+"namespaces."
+msgstr ""
+"محرك أتمتة سير العمل: نماذج WorkflowRule / WorkflowCondition / "
+"WorkflowAction، تقييم الشروط الديناميكي، الإرسال الفوري عند حفظ السجلات، "
+"Celery WorkflowTimeTriggerAction وScheduledWorkflowExecution، نافذة سجل "
+"التنفيذ، دعم FilterSet، والتسجيل التلقائي لنماذج CRM."
+
+msgid ""
+"WorkflowRuleForm aligned with HorillaModelForm layout: field_order, "
+"Meta.fields = \"__all__\", and keep_on_form for is_active; action forms "
+"unchanged."
+msgstr ""
+"تم محاذاة WorkflowRuleForm مع تخطيط HorillaModelForm: field_order "
+"وMeta.fields وkeep_on_form لـ is_active؛ نماذج الإجراءات دون تغيير."
+
+#, fuzzy
+#| msgid ""
+#| "Initial release: workflow rules per ContentType with create/edit "
+#| "triggers, AND/OR conditions, ordered immediate actions, time-trigger "
+#| "actions with Celery scheduling and execution history, Settings → "
+#| "Automations → Workflow Rules, and integration with registered CRM models "
+#| "via feature registration."
+msgid ""
+"Initial release: workflow rules per ContentType with create/edit triggers, "
+"AND/OR conditions, ordered immediate actions, time-trigger actions with "
+"Celery scheduling and execution history, Settings → Automations → Workflow "
+"Rules, and integration with registered models via feature registration."
+msgstr ""
+"الإصدار الأولي: قواعد سير العمل لكل ContentType مع مشغلات الإنشاء/التعديل، "
+"شروط AND/OR، الإجراءات الفورية المرتبة، إجراءات المشغلات الزمنية مع جدولة "
+"Celery وسجل التنفيذ، الإعدادات ← الأتمتة ← قواعد سير العمل."
+
+msgid "Rule Trigger Date"
+msgstr "تاريخ تشغيل القاعدة"
+
+msgid "Workflow Rules"
+msgstr "قواعد سير العمل"
+
+msgid "Rule Name"
+msgstr "اسم القاعدة"
+
+msgid "Module"
+msgstr "الوحدة"
+
+msgid "The module (record type) this rule applies to."
+msgstr "الوحدة (نوع السجل) التي تنطبق عليها هذه القاعدة."
+
+msgid "Description"
+msgstr "الوصف"
+
+msgid "When record is created"
+msgstr "عند إنشاء السجل"
+
+msgid "Run this workflow when a new record is created."
+msgstr "تشغيل سير العمل هذا عند إنشاء سجل جديد."
+
+msgid "When record is edited"
+msgstr "عند تعديل السجل"
+
+msgid "Run this workflow when an existing record is edited."
+msgstr "تشغيل سير العمل هذا عند تعديل سجل موجود."
+
+msgid "Workflow Rule"
+msgstr "قاعدة سير العمل"
+
+msgid "Create and Edit"
+msgstr "إنشاء وتعديل"
+
+msgid "Create only"
+msgstr "إنشاء فقط"
+
+msgid "Edit only"
+msgstr "تعديل فقط"
+
+msgid "Not set"
+msgstr "غير محدد"
+
+msgid "Field Name"
+msgstr "اسم الحقل"
+
+msgid "Operator"
+msgstr "المعامل"
+
+msgid "Value"
+msgstr "القيمة"
+
+msgid "AND"
+msgstr "و"
+
+msgid "OR"
+msgstr "أو"
+
+msgid "Logical Operator"
+msgstr "المعامل المنطقي"
+
+msgid "Order"
+msgstr "الترتيب"
+
+msgid "Workflow Condition"
+msgstr "شرط سير العمل"
+
+msgid "Workflow Conditions"
+msgstr "شروط سير العمل"
+
+msgid "Update Field"
+msgstr "تحديث حقل"
+
+msgid "Assign Task"
+msgstr "تعيين مهمة"
+
+msgid "Email"
+msgstr "بريد إلكتروني"
+
+msgid "Notification"
+msgstr "إشعار"
+
+msgid "Action"
+msgstr "الإجراء"
+
+msgid ""
+"Type-specific configuration. update_field: {field, value}. assign_task: "
+"{subject, due_days, priority, owner_id}. email: {template_id, to}. "
+"notification: {message, user_ids}."
+msgstr ""
+"إعداد خاص بالنوع. update_field: {field, value}. assign_task: {subject, "
+"due_days, priority, owner_id}. email: {template_id, to}. notification: "
+"{message, user_ids}."
+
+msgid "Workflow Action"
+msgstr "إجراء سير العمل"
+
+msgid "Workflow Actions"
+msgstr "إجراءات سير العمل"
+
+msgid "Minutes"
+msgstr "دقائق"
+
+msgid "Hours"
+msgstr "ساعات"
+
+msgid "Days"
+msgstr "أيام"
+
+msgid "After"
+msgstr "بعد"
+
+msgid "Before"
+msgstr "قبل"
+
+msgid "Delay"
+msgstr "التأخير"
+
+msgid "Unit"
+msgstr "الوحدة"
+
+msgid "Direction"
+msgstr "الاتجاه"
+
+msgid "Trigger Date"
+msgstr "تاريخ التشغيل"
+
+msgid ""
+"Use 'rule_trigger_date' to fire relative to when the rule triggered, or "
+"enter a date field name from the target model."
+msgstr ""
+"استخدم 'rule_trigger_date' للتشغيل نسبةً إلى وقت تفعيل القاعدة، أو أدخل اسم "
+"حقل تاريخ من النموذج المستهدف."
+
+msgid "Action Type"
+msgstr "نوع الإجراء"
+
+msgid "Action Config"
+msgstr "إعداد الإجراء"
+
+msgid "Workflow Time Trigger Action"
+msgstr "إجراء مشغل زمني لسير العمل"
+
+msgid "Workflow Time Trigger Actions"
+msgstr "إجراءات المشغلات الزمنية لسير العمل"
+
+msgid "Pending"
+msgstr "قيد الانتظار"
+
+msgid "Completed"
+msgstr "مكتمل"
+
+msgid "Failed"
+msgstr "فاشل"
+
+msgid "Time Trigger"
+msgstr "مشغل زمني"
+
+msgid "Record ID"
+msgstr "معرّف السجل"
+
+msgid "Scheduled At"
+msgstr "مجدول في"
+
+msgid "Status"
+msgstr "الحالة"
+
+msgid "Executed At"
+msgstr "نُفِّذ في"
+
+msgid "Error"
+msgstr "خطأ"
+
+msgid "Scheduled Workflow Execution"
+msgstr "تنفيذ سير العمل المجدول"
+
+msgid "Scheduled Workflow Executions"
+msgstr "تنفيذات سير العمل المجدولة"
+
+msgid "Field"
+msgstr "الحقل"
+
+msgid "Select field"
+msgstr "اختر حقلاً"
+
+msgid "Task title"
+msgstr "عنوان المهمة"
+
+msgid "Due basis"
+msgstr "أساس الاستحقاق"
+
+msgid "Record submission date"
+msgstr "تاريخ تقديم السجل"
+
+msgid "Record update date"
+msgstr "تاريخ تحديث السجل"
+
+msgid "Due in days"
+msgstr "الاستحقاق خلال أيام"
+
+msgid "Not Started"
+msgstr "لم يبدأ"
+
+msgid "In Progress"
+msgstr "قيد التنفيذ"
+
+msgid "Priority"
+msgstr "الأولوية"
+
+msgid "Low"
+msgstr "منخفضة"
+
+msgid "Medium"
+msgstr "متوسطة"
+
+msgid "High"
+msgstr "عالية"
+
+msgid "Task description"
+msgstr "وصف المهمة"
+
+msgid "Mail template"
+msgstr "قالب البريد"
+
+msgid "Select template"
+msgstr "اختر قالباً"
+
+msgid "To (email field / email / self)"
+msgstr "إلى (حقل البريد / بريد إلكتروني / النفس)"
+
+msgid "Also send to"
+msgstr "إرسال أيضاً إلى"
+
+msgid "Notification template"
+msgstr "قالب الإشعار"
+
+msgid "To (record field / self)"
+msgstr "إلى (حقل السجل / النفس)"
+
+msgid "Also notify to"
+msgstr "إشعار أيضاً إلى"
+
+msgid "Custom message (optional, overrides template)"
+msgstr "رسالة مخصصة (اختياري، تتجاوز القالب)"
+
+msgid "Edit Action"
+msgstr "تعديل الإجراء"
+
+msgid "Add Action"
+msgstr "إضافة إجراء"
+
+msgid "Close"
+msgstr "إغلاق"
+
+msgid "Action type"
+msgstr "نوع الإجراء"
+
+msgid "Select action type"
+msgstr "اختر نوع الإجراء"
+
+msgid "Mail"
+msgstr "بريد"
+
+msgid "Cancel"
+msgstr "إلغاء"
+
+msgid "Save"
+msgstr "حفظ"
+
+msgid "Select value"
+msgstr "اختر قيمة"
+
+msgid "Edit Condition"
+msgstr "تعديل الشرط"
+
+msgid "Add Condition"
+msgstr "إضافة شرط"
+
+msgid "---------"
+msgstr "---------"
+
+msgid "Logical Operator (join with next condition)"
+msgstr "المعامل المنطقي (الربط مع الشرط التالي)"
+
+msgid "Are you sure you want to deactivate this workflow rule?"
+msgstr "هل أنت متأكد من إلغاء تنشيط قاعدة سير العمل هذه؟"
+
+msgid "Are you sure you want to activate this workflow rule?"
+msgstr "هل أنت متأكد من تنشيط قاعدة سير العمل هذه؟"
+
+msgid "Entry Criteria"
+msgstr "معايير الدخول"
+
+msgid "No conditions set."
+msgstr "لم يتم تعيين شروط."
+
+msgid "Immediate Actions"
+msgstr "الإجراءات الفورية"
+
+msgid "Add"
+msgstr "إضافة"
+
+msgid "Delete Action"
+msgstr "حذف الإجراء"
+
+msgid "No actions added yet"
+msgstr "لم تتم إضافة إجراءات بعد"
+
+msgid "Use the Add button to configure what happens when this rule fires."
+msgstr "استخدم زر الإضافة لتكوين ما يحدث عند تشغيل هذه القاعدة."
+
+msgid "Time Trigger Actions"
+msgstr "إجراءات المشغلات الزمنية"
+
+msgid "Execution History"
+msgstr "سجل التنفيذ"
+
+msgid "Edit"
+msgstr "تعديل"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "No time triggers added yet"
+msgstr "لم تتم إضافة مشغلات زمنية بعد"
+
+msgid "Use the Add button to schedule actions after a delay."
+msgstr "استخدم زر الإضافة لجدولة الإجراءات بعد تأخير."
+
+msgid "Edit Time Trigger"
+msgstr "تعديل المشغل الزمني"
+
+msgid "Add Time Trigger"
+msgstr "إضافة مشغل زمني"
+
+msgid "Trigger Timing"
+msgstr "توقيت التشغيل"
+
+msgid "Time Trigger Execution History"
+msgstr "سجل تنفيذ المشغل الزمني"
+
+msgid "activated"
+msgstr "مُنشَّط"
+
+msgid "deactivated"
+msgstr "مُلغى التنشيط"
+
+msgid "When should this rule apply?"
+msgstr "متى يجب تطبيق هذه القاعدة؟"
+
+msgid "At least one condition is required."
+msgstr "يجب توفير شرط واحد على الأقل."
+
+msgid "Model"
+msgstr "النموذج"
+
+msgid "Execute on"
+msgstr "تنفيذ عند"
+
+msgid "Active"
+msgstr "نشط"
+
+msgid "Record"
+msgstr "السجل"
+
+msgid "Workflow rule not found."
+msgstr "قاعدة سير العمل غير موجودة."
+
+msgid "Condition saved."
+msgstr "تم حفظ الشرط."
+
+msgid "Action saved."
+msgstr "تم حفظ الإجراء."
+
+msgid "Time trigger action saved."
+msgstr "تم حفظ إجراء المشغل الزمني."
+
+#, python-brace-format
+#~ msgid "Workflow rule \"{rule.name}\" has been {status}."
+#~ msgstr "قاعدة سير العمل \"{rule.name}\" تم {status}."
+
+#~ msgid "An error occurred while toggling the workflow rule: {str(e)}"
+#~ msgstr "حدث خطأ أثناء تبديل قاعدة سير العمل: {str(e)}"

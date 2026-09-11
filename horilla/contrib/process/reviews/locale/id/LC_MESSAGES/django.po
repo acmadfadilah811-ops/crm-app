@@ -1,0 +1,380 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-12 09:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Review Process"
+msgstr "Proses Peninjauan"
+
+msgid "Select field(s)"
+msgstr "Pilih bidang"
+
+msgid "Fields to Review"
+msgstr "Bidang untuk Ditinjau"
+
+msgid "Please select at least one field to review."
+msgstr "Harap pilih setidaknya satu bidang untuk ditinjau."
+
+msgid "Please select at least one approver user."
+msgstr "Harap pilih setidaknya satu pengguna pemberi persetujuan."
+
+msgid "Please select at least one approver role."
+msgstr "Harap pilih setidaknya satu peran pemberi persetujuan."
+
+msgid "Review Processes"
+msgstr "Proses Tinjauan"
+
+msgid "Review Jobs"
+msgstr "Tinjau Pekerjaan"
+
+msgid "Title"
+msgstr "Judul"
+
+msgid "Method Title"
+msgstr "Judul Metode"
+
+msgid "Module"
+msgstr "Modul"
+
+msgid "Notify on Resubmission"
+msgstr "Beritahu tentang Pengiriman Ulang"
+
+msgid "Notify on Approval"
+msgstr "Beritahukan tentang Persetujuan"
+
+msgid "Notify on Rejection"
+msgstr "Beritahu tentang Penolakan"
+
+msgid "Title is required."
+msgstr "Judul diperlukan."
+
+msgid ""
+"An active review process already exists for this model and company. Only one"
+" active process is allowed per model per company."
+msgstr ""
+"Proses peninjauan aktif sudah dilakukan untuk model dan perusahaan ini.Hanya"
+" satu proses aktif yang diperbolehkan per model per perusahaan."
+
+msgid "Field Name"
+msgstr "Nama Bidang"
+
+msgid "Operator"
+msgstr "Operator"
+
+msgid "Value"
+msgstr "Nilai"
+
+msgid "AND"
+msgstr "DAN"
+
+msgid "OR"
+msgstr "ATAU"
+
+msgid "Logical Operator"
+msgstr "Operator Logis"
+
+msgid "Order"
+msgstr "Memesan"
+
+msgid "Review Condition"
+msgstr "Kondisi Tinjauan"
+
+msgid "Review Conditions"
+msgstr "Kondisi Tinjauan"
+
+msgid "User"
+msgstr "Pengguna"
+
+msgid "Role"
+msgstr "Peran"
+
+msgid "Approver Type"
+msgstr "Jenis Penyetuju"
+
+msgid "Approver Users"
+msgstr "Pengguna yang Menyetujui"
+
+msgid "Approver Roles"
+msgstr "Peran Penyetuju"
+
+msgid "Review Rule"
+msgstr "Aturan Tinjauan"
+
+msgid "Review Rules"
+msgstr "Aturan Tinjauan"
+
+msgid "Review Rule Condition"
+msgstr "Tinjau Kondisi Aturan"
+
+msgid "Review Rule Conditions"
+msgstr "Tinjau Ketentuan Aturan"
+
+msgid "Pending"
+msgstr "Tertunda"
+
+msgid "Approved"
+msgstr "Disetujui"
+
+msgid "Rejected"
+msgstr "Ditolak"
+
+msgid "Content Type"
+msgstr "Tipe Konten"
+
+msgid "Object ID"
+msgstr "ID Objek"
+
+msgid "Assigned To"
+msgstr "Ditugaskan Ke"
+
+msgid "Review Fields Snapshot"
+msgstr "Tinjau Cuplikan Bidang"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Reviewed By"
+msgstr "Ditinjau Oleh"
+
+msgid "Reviewed At"
+msgstr "Ditinjau Pada"
+
+msgid "Review Note"
+msgstr "Catatan Tinjauan"
+
+msgid "Review Job"
+msgstr "Tinjau Pekerjaan"
+
+msgid "Add More"
+msgstr "Tambahkan Lebih Banyak"
+
+msgid "Field Review"
+msgstr "Tinjauan Lapangan"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Your Decision"
+msgstr "Keputusan Anda"
+
+msgid "Comment"
+msgstr "Komentar"
+
+msgid "Add reason for this field decision"
+msgstr "Tambahkan alasan untuk keputusan lapangan ini"
+
+msgid "Reject"
+msgstr "Tolak"
+
+msgid "Approve"
+msgstr "Setujui"
+
+msgid "Process"
+msgstr "Proses"
+
+msgid "Record"
+msgstr "Catatan"
+
+#, python-format
+msgid ""
+"\n"
+"                            %(done)s / %(total)s approved.\n"
+"                        "
+msgstr "%(done)s/%(total)sdisetujui."
+
+msgid "Record Details"
+msgstr "Detail Rekam"
+
+msgid "No additional record details available."
+msgstr "Tidak ada rincian catatan tambahan yang tersedia."
+
+msgid "Fields To Review"
+msgstr "Bidang Untuk Ditinjau"
+
+msgid "Review field"
+msgstr "Bidang ulasan"
+
+msgid "Edit rejected field"
+msgstr "Edit bidang yang ditolak"
+
+msgid "Edit"
+msgstr "Sunting"
+
+msgid "Save and resubmit"
+msgstr "Simpan dan kirim ulang"
+
+msgid "Save"
+msgstr "Simpan"
+
+msgid "Cancel"
+msgstr "Batal"
+
+msgid "No review fields captured for this job."
+msgstr "Tidak ada kolom ulasan yang diambil untuk pekerjaan ini."
+
+msgid "Multi-Step Form"
+msgstr "Formulir Multi-Langkah"
+
+msgid "Single-Step Form"
+msgstr "Formulir Satu Langkah"
+
+msgid "Choose File"
+msgstr "Pilih File"
+
+msgid "No file chosen"
+msgstr "Tidak ada file yang dipilih"
+
+msgid "Clear"
+msgstr "Hapus"
+
+msgid "Read Only"
+msgstr "Hanya Baca"
+
+msgid "Add"
+msgstr "Tambah"
+
+msgid "Loading..."
+msgstr "Memuat..."
+
+msgid "Conditions"
+msgstr "Kondisi"
+
+msgid "Remove"
+msgstr "Hapus"
+
+msgid "Save & New"
+msgstr "Simpan & Baru"
+
+msgid "Entry Criteria"
+msgstr "Kriteria Masuk"
+
+msgid ""
+"No entry criteria set. This review process applies to all records in the "
+"module."
+msgstr ""
+"Tidak ada kriteria masuk yang ditetapkan.Proses peninjauan ini berlaku untuk"
+" semua catatan dalam modul."
+
+msgid "Actions"
+msgstr "Tindakan"
+
+msgid "Resubmission"
+msgstr "Pengiriman ulang"
+
+msgid "Approval"
+msgstr "Persetujuan"
+
+msgid "Rejection"
+msgstr "Penolakan"
+
+msgid "Fields"
+msgstr "bidang"
+
+msgid "No review rules added"
+msgstr "Tidak ada aturan peninjauan yang ditambahkan"
+
+msgid ""
+"Add a rule to assign an approver. Criteria is optional — if left empty, the "
+"rule applies to all records."
+msgstr ""
+"Tambahkan aturan untuk menetapkan pemberi persetujuan.Kriteria bersifat "
+"opsional — jika dibiarkan kosong, aturan berlaku untuk semua rekaman."
+
+msgid "Rule"
+msgstr "Aturan"
+
+msgid "Edit Rule"
+msgstr "Sunting Aturan"
+
+msgid "Delete Rule"
+msgstr "Hapus Aturan"
+
+msgid "Approver"
+msgstr "Pemberi persetujuan"
+
+#, python-format
+msgid "You have a pending review request for %(record)s in %(process)s."
+msgstr ""
+"Anda memiliki permintaan peninjauan yang tertunda "
+"untuk%(record)sdi%(process)s."
+
+msgid "Add Rule"
+msgstr "Tambahkan Aturan"
+
+msgid "Edit Process"
+msgstr "Sunting Proses"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Criteria"
+msgstr "Kriteria"
+
+msgid "Condition"
+msgstr "Kondisi"
+
+msgid "activated"
+msgstr "diaktifkan"
+
+msgid "deactivated"
+msgstr "dinonaktifkan"
+
+msgid "An active review process already exists for this model and company."
+msgstr ""
+"Proses peninjauan aktif sudah dilakukan untuk model dan perusahaan ini."
+
+msgid "My Review Jobs"
+msgstr "Pekerjaan Ulasan Saya"
+
+msgid "Review"
+msgstr "Tinjauan"
+
+msgid "The module for this review record is no longer available."
+msgstr "Modul untuk catatan tinjauan ini tidak lagi tersedia."
+
+#, python-format
+msgid "%(owner)s resubmitted %(field)s in %(process)s for %(record)s."
+msgstr "%(owner)sdikirim ulang%(field)sdi%(process)suntuk%(record)s."
+
+msgid "Invalid decision."
+msgstr "Keputusan tidak valid."
+
+#, python-format
+msgid ""
+"%(field)s was approved in %(process)s by %(approver)s. Comment: %(comment)s"
+msgstr ""
+"%(field)stelah disetujui di%(process)soleh%(approver)s.Komentar:%(comment)s"
+
+#, python-format
+msgid ""
+"%(field)s was rejected in %(process)s by %(approver)s. Reason: %(comment)s"
+msgstr "%(field)sditolak di%(process)soleh%(approver)s.Alasan:%(comment)s"
+
+msgid ""
+"All approvers have approved all review fields. Review completed "
+"successfully."
+msgstr ""
+"Semua pemberi persetujuan telah menyetujui semua bidang tinjauan.Peninjauan "
+"berhasil diselesaikan."
+
+msgid ""
+"You have approved all fields. Waiting for other approvers to complete their "
+"review."
+msgstr ""
+"Anda telah menyetujui semua bidang.Menunggu pemberi persetujuan lain "
+"menyelesaikan peninjauannya."

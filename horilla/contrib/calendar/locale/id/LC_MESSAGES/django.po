@@ -1,0 +1,705 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Module for managing calendar events and schedules."
+msgstr "Modul untuk mengelola acara dan jadwal kalender."
+
+msgid ""
+"Harden Google Calendar sync (service, sync, and views) and surface meeting "
+"links more reliably when events are created or updated."
+msgstr ""
+"Memperkuat sinkronisasi Google Kalender (layanan, sinkronisasi, dan "
+"tampilan) dan menampilkan tautan rapat dengan lebih andal saat acara dibuat "
+"atau diperbarui."
+
+msgid ""
+"Google Calendar sync uses max() to ensure end datetime is never before "
+"start. Standardized exception chaining in calendar forms."
+msgstr ""
+"Sinkronisasi Google Kalender menggunakan max() untuk memastikan waktu akhir "
+"tidak pernah sebelum waktu dimulai.Rangkaian pengecualian standar dalam "
+"bentuk kalender."
+
+msgid ""
+"Resolve Google Calendar integration settings from the user's company with "
+"all_objects. Use all_objects for GoogleCalendarConfig lookups to prevent "
+"missing config and UNIQUE constraint errors when admins switch company "
+"context. Scope disconnect to active company when admin disables integration."
+msgstr ""
+"Selesaikan pengaturan integrasi Google Kalender dari perusahaan pengguna "
+"dengan all_objects.Gunakan all_objects untuk pencarian GoogleCalendarConfig "
+"guna mencegah kesalahan konfigurasi yang hilang dan batasan UNIK saat admin "
+"beralih konteks perusahaan.Cakupan terputus ke perusahaan aktif ketika admin"
+" menonaktifkan integrasi."
+
+msgid ""
+"Restored CSRF protection on SaveCalendarPreferencesView (removed "
+"@csrf_exempt). Migrated signal and timezone imports to the horilla shims and"
+" standardized first-party import groups; behavior unchanged."
+msgstr ""
+"Memulihkan perlindungan CSRF di SaveCalendarPreferencesView (menghapus "
+"@csrf_exempt).Impor sinyal dan zona waktu yang dimigrasikan ke horilla shims"
+" dan grup impor pihak pertama yang terstandarisasi;perilaku tidak berubah."
+
+msgid ""
+"Custom calendar form aligned with HorillaModelForm layout: field_order, "
+"Meta.fields = \"__all__\", and Meta.exclude; save logic and HTMX behavior "
+"unchanged."
+msgstr ""
+"Formulir kalender khusus yang selaras dengan tata letak HorillaModelForm: "
+"field_order, Meta.fields = \"__all__\", dan Meta.exclude;simpan logika dan "
+"perilaku HTML tidak berubah."
+
+msgid ""
+"Google Calendar integration settings now pass the full request on POST so "
+"get_or_create uses the active company consistently with GET."
+msgstr ""
+"Setelan integrasi Google Kalender kini meneruskan permintaan lengkap pada "
+"POST sehingga get_or_create menggunakan perusahaan aktif secara konsisten "
+"dengan GET."
+
+msgid ""
+"Release 1.10: calendar ships under contrib with app label calendar. Google "
+"Calendar sync, webhook settings, namespaces, templates, and integrations "
+"updated from the legacy calendar app naming."
+msgstr ""
+"Rilis 1.10: kalender dikirimkan dengan kontribusi bersama kalender label "
+"aplikasi.Sinkronisasi Google Kalender, setelan webhook, ruang nama, "
+"template, dan integrasi diperbarui dari penamaan aplikasi kalender lama."
+
+msgid ""
+"Introduced Google Calendar integration with sync capabilities, service "
+"configuration, and settings management for seamless external calendar "
+"connectivity."
+msgstr ""
+"Memperkenalkan integrasi Google Kalender dengan kemampuan sinkronisasi, "
+"konfigurasi layanan, dan manajemen pengaturan untuk konektivitas kalender "
+"eksternal yang lancar."
+
+msgid ""
+"Compatibility updates and minor internal improvements to align with platform"
+" architecture and generics framework updates."
+msgstr ""
+"Pembaruan kompatibilitas dan perbaikan internal kecil agar selaras dengan "
+"arsitektur platform dan pembaruan kerangka generik."
+
+msgid ""
+"Migrated from Django AppConfig to Horilla AppLauncher and replaced Django "
+"utilitieswith horilla.utils.decorators, horilla.utils.translation, and "
+"horilla.shortcuts where applicable."
+msgstr ""
+"Bermigrasi dari Django AppConfig ke Horilla AppLauncher dan mengganti "
+"utilitas Django dengan horilla.utils.decorators, horilla.utils.translation, "
+"dan horilla.shortcuts jika berlaku."
+
+msgid "Calendar"
+msgstr "Kalender"
+
+msgid "Please select a module."
+msgstr "Silakan pilih modul."
+
+msgid "End date field must differ from start date field."
+msgstr "Bidang tanggal akhir harus berbeda dengan bidang tanggal mulai."
+
+msgid "Google OAuth JSON file"
+msgstr "File Google OAuth JSON"
+
+msgid ""
+"Upload the client_secret_*.json file downloaded from Google Cloud Console."
+msgstr ""
+"Unggah file client_secret_*.json yang diunduh dari Google Cloud Console."
+
+msgid "Redirect URI"
+msgstr "Arahkan ulang URI"
+
+msgid ""
+"Must match exactly what you registered in Google Cloud Console. E.g. "
+"https://yourdomain.com/calendar/google-calendar/callback/"
+msgstr ""
+"Harus sama persis dengan yang Anda daftarkan di Google Cloud "
+"Console.Misalnya.https://domainanda.com/calendar/google-calendar/callback/"
+
+msgid "Invalid JSON file."
+msgstr "Berkas JSON tidak valid."
+
+msgid ""
+"Not a valid Google OAuth2 credentials file. Expected a JSON with a 'web' or "
+"'installed' key."
+msgstr ""
+"Bukan file kredensial Google OAuth2 yang valid.Diharapkan JSON dengan kunci "
+"'web' atau 'terpasang'."
+
+msgid "Google Calendar integration is not enabled."
+msgstr "Integrasi Google Kalender tidak diaktifkan."
+
+msgid ""
+"Google Calendar integration has not been enabled by your administrator."
+msgstr "Integrasi Google Kalender belum diaktifkan oleh administrator Anda."
+
+msgid "Google credentials saved. Click 'Connect Google Account' to authorize."
+msgstr ""
+"Kredensial Google disimpan.Klik 'Hubungkan Akun Google' untuk mengotorisasi."
+
+msgid "Please upload your Google OAuth credentials first."
+msgstr "Harap unggah kredensial Google OAuth Anda terlebih dahulu."
+
+#, python-format
+msgid "Google authorization was denied: %(error)s"
+msgstr "Otorisasi Google ditolak:%(error)s"
+
+msgid "Invalid OAuth2 callback parameters."
+msgstr "Parameter panggilan balik OAuth2 tidak valid."
+
+msgid "OAuth state mismatch. Please try again."
+msgstr "Ketidakcocokan status OAuth.Silakan coba lagi."
+
+msgid "Failed to connect Google Calendar. Please try again."
+msgstr "Gagal menghubungkan Google Kalender.Silakan coba lagi."
+
+#, python-format
+msgid "Google Calendar connected as %(email)s."
+msgstr "Google Kalender terhubung sebagai%(email)s."
+
+msgid "Sync direction saved."
+msgstr "Arah sinkronisasi disimpan."
+
+msgid "Google Calendar is already disconnected."
+msgstr "Google Kalender sudah terputus."
+
+msgid "Google Calendar disconnected."
+msgstr "Sambungan Google Kalender terputus."
+
+msgid "Google Calendar is not connected."
+msgstr "Google Kalender tidak terhubung."
+
+msgid ""
+"Webhook registered. Google Calendar will now push changes automatically."
+msgstr ""
+"Webhook terdaftar.Google Kalender sekarang akan mendorong perubahan secara "
+"otomatis."
+
+#, python-format
+msgid ""
+"Webhook registration failed: the URL %(url)s is not HTTPS. Access the app "
+"via an HTTPS URL (e.g. your dev tunnel) and try again."
+msgstr ""
+"Pendaftaran webhook gagal: URL%(url)sbukan HTTPS.Akses aplikasi melalui URL "
+"HTTPS (misalnya terowongan dev Anda) dan coba lagi."
+
+#, python-format
+msgid "Failed to register webhook: %(error)s"
+msgstr "Gagal mendaftarkan webhook:%(error)s"
+
+msgid "No active company found. Cannot save settings."
+msgstr ""
+"Tidak ada perusahaan aktif yang ditemukan.Tidak dapat menyimpan pengaturan."
+
+msgid "Google Calendar integration has been enabled for users."
+msgstr "Integrasi Google Kalender telah diaktifkan untuk pengguna."
+
+msgid ""
+"Google Calendar integration has been disabled. All user connections have "
+"been removed."
+msgstr ""
+"Integrasi Google Kalender telah dinonaktifkan.Semua koneksi pengguna telah "
+"dihapus."
+
+msgid "Google Calendar Sync"
+msgstr "Sinkronisasi Google Kalender"
+
+msgid "Schedule"
+msgstr "Jadwal"
+
+msgid "Google Calendar"
+msgstr "Google Kalender"
+
+msgid "Task"
+msgstr "Tugas"
+
+msgid "Event"
+msgstr "Peristiwa"
+
+msgid "Meeting"
+msgstr "Pertemuan"
+
+msgid "Un Availability"
+msgstr "Tidak Tersedianya"
+
+msgid "User"
+msgstr "Pengguna"
+
+msgid "Calendar Type"
+msgstr "Jenis Kalender"
+
+msgid "Color"
+msgstr "Warna"
+
+msgid "Is Selected"
+msgstr "Dipilih"
+
+msgid "User Calendar Preference"
+msgstr "Preferensi Kalender Pengguna"
+
+msgid "User Calendar Preferences"
+msgstr "Preferensi Kalender Pengguna"
+
+msgid "From"
+msgstr "Dari"
+
+msgid "To"
+msgstr "Ke"
+
+msgid "Reason"
+msgstr "Alasan"
+
+msgid "User Unavailability"
+msgstr "Ketidaktersediaan Pengguna"
+
+msgid "User Unavailabilities"
+msgstr "Ketidaktersediaan Pengguna"
+
+msgid "Google Calendar Event ID"
+msgstr "ID Acara Google Kalender"
+
+msgid "Calendar Name"
+msgstr "Nama Kalender"
+
+msgid "Module"
+msgstr "Modul"
+
+msgid "Start Date Field"
+msgstr "Bidang Tanggal Mulai"
+
+msgid "End Date Field"
+msgstr "Bidang Tanggal Berakhir"
+
+msgid "Display Name Field"
+msgstr "Bidang Nama Tampilan"
+
+msgid "Custom Calendar"
+msgstr "Kalender Khusus"
+
+msgid "Custom Calendars"
+msgstr "Kalender Khusus"
+
+msgid "Field Name"
+msgstr "Nama Bidang"
+
+msgid "Operator"
+msgstr "Operator"
+
+msgid "Value"
+msgstr "Nilai"
+
+msgid "Sequence"
+msgstr "Urutan"
+
+msgid "Custom Calendar Condition"
+msgstr "Kondisi Kalender Kustom"
+
+msgid "Custom Calendar Conditions"
+msgstr "Ketentuan Kalender Khusus"
+
+msgid "Enable Google Calendar Integration"
+msgstr "Aktifkan Integrasi Google Kalender"
+
+msgid "When enabled, users in this company can connect their Google Calendar."
+msgstr ""
+"Jika diaktifkan, pengguna di perusahaan ini dapat menghubungkan Google "
+"Kalender mereka."
+
+msgid "Google Integration Setting"
+msgstr "Pengaturan Integrasi Google"
+
+msgid "Google Integration Settings"
+msgstr "Pengaturan Integrasi Google"
+
+msgid "enabled"
+msgstr "diaktifkan"
+
+msgid "disabled"
+msgstr "dengan disabilitas"
+
+msgid "Credentials JSON"
+msgstr "Kredensial JSON"
+
+msgid "Connected Google Account"
+msgstr "Akun Google Terhubung"
+
+msgid "OAuth Token"
+msgstr "Token OAuth"
+
+msgid "OAuth State"
+msgstr "Negara Bagian OAuth"
+
+msgid "One-way: App → Google Calendar"
+msgstr "Satu arah: Aplikasi → Google Kalender"
+
+msgid "Two-way: App ↔ Google Calendar"
+msgstr "Dua arah: Aplikasi ↔ Google Kalender"
+
+msgid "Sync Direction"
+msgstr "Arah Sinkronisasi"
+
+msgid "Last Synced At"
+msgstr "Terakhir Disinkronkan Pada"
+
+msgid "Google Sync Token"
+msgstr "Token Sinkronisasi Google"
+
+msgid "Watch Channel ID"
+msgstr "Tonton ID Saluran"
+
+msgid "Watch Resource ID"
+msgstr "Tonton ID Sumber Daya"
+
+msgid "Watch Channel Expiration"
+msgstr "Tonton Kedaluwarsa Saluran"
+
+msgid "Watch Channel Token"
+msgstr "Tonton Token Saluran"
+
+msgid "Google Calendar Configuration"
+msgstr "Konfigurasi Google Kalender"
+
+msgid "Google Calendar Configurations"
+msgstr "Konfigurasi Google Kalender"
+
+msgid "Mark Unavailable"
+msgstr "Tandai Tidak Tersedia"
+
+msgid "New Activity"
+msgstr "Aktivitas Baru"
+
+msgid "Today"
+msgstr "Hari ini"
+
+msgid "Day"
+msgstr "Hari"
+
+msgid "Week"
+msgstr "Pekan"
+
+msgid "Month"
+msgstr "Bulan"
+
+msgid "Year"
+msgstr "Tahun"
+
+msgid "Failed to load edit form"
+msgstr "Gagal memuat formulir edit"
+
+msgid "Start Date"
+msgstr "Tanggal Mulai"
+
+msgid "End Date"
+msgstr "Tanggal Berakhir"
+
+msgid "Edit"
+msgstr "Sunting"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Info"
+msgstr "Informasi"
+
+msgid "Due Date"
+msgstr "Tenggat waktu"
+
+msgid "Subject"
+msgstr "Subjek"
+
+msgid "Assigned to"
+msgstr "Ditugaskan ke"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Mark as Complete"
+msgstr "Tandai sebagai Selesai"
+
+msgid "Mark as Unavailable"
+msgstr "Tandai sebagai Tidak Tersedia"
+
+msgid "My Calendars"
+msgstr "Kalender Saya"
+
+msgid "Add custom calendar"
+msgstr "Tambahkan kalender khusus"
+
+msgid "Dropdown"
+msgstr "tarik-turun"
+
+msgid "Display This Only"
+msgstr "Tampilkan Ini Saja"
+
+msgid "Update"
+msgstr "Perbarui"
+
+msgid "Connect your Google account to sync your calendar and meetings."
+msgstr ""
+"Hubungkan akun Google Anda untuk menyinkronkan kalender dan rapat Anda."
+
+msgid "OAuth Credentials"
+msgstr "Kredensial OAuth"
+
+msgid "Choose File"
+msgstr "Pilih File"
+
+msgid "No file chosen"
+msgstr "Tidak ada file yang dipilih"
+
+msgid "How to configure Google Cloud Console"
+msgstr "Cara mengonfigurasi Google Cloud Console"
+
+msgid "Go to Google Cloud Console"
+msgstr "Buka Google Cloud Console"
+
+msgid "Visit"
+msgstr "Mengunjungi"
+
+msgid "and sign in."
+msgstr "dan masuk."
+
+msgid "Create or select a project"
+msgstr "Buat atau pilih proyek"
+
+msgid ""
+"Click the project dropdown at the top → \"New Project\" (or choose an "
+"existing one)."
+msgstr ""
+"Klik dropdown proyek di bagian atas → \"Proyek Baru\" (atau pilih yang sudah"
+" ada)."
+
+msgid "Enable the required APIs"
+msgstr "Aktifkan API yang diperlukan"
+
+msgid "Navigate to \"APIs &amp; Services\" → \"Library\". Search for and enable:"
+msgstr "Navigasikan ke \"API &amp; Layanan\" → \"Perpustakaan\".Cari dan aktifkan:"
+
+msgid "Google Calendar API"
+msgstr "API Google Kalender"
+
+msgid "Tasks API"
+msgstr "API Tugas"
+
+msgid "Configure the OAuth consent screen"
+msgstr "Konfigurasikan layar persetujuan OAuth"
+
+msgid ""
+"Go to \"APIs &amp; Services\" → \"OAuth consent screen\". Choose "
+"\"External\" (or \"Internal\" for Google Workspace), fill in App name, "
+"support email, and developer contact. Save."
+msgstr ""
+"Buka \"API & Layanan\" → \"Layar persetujuan OAuth\".Pilih \"Eksternal\" "
+"(atau \"Internal\" untuk Google Workspace), isi Nama aplikasi, email "
+"dukungan, dan kontak pengembang.Menyimpan."
+
+msgid "Create OAuth 2.0 credentials"
+msgstr "Buat kredensial OAuth 2.0"
+
+msgid ""
+"Go to \"APIs &amp; Services\" → \"Credentials\" → \"+ Create Credentials\" →"
+" \"OAuth client ID\". Select Application type: Web application. Under "
+"\"Authorized redirect URIs\", click \"+ Add URI\" and paste the URI below."
+msgstr ""
+"Buka \"API & Layanan\" → \"Kredensial\" → \"+ Buat Kredensial\" → \"ID klien"
+" OAuth\".Pilih Jenis aplikasi: Aplikasi web.Di bawah \"URI pengalihan "
+"resmi\", klik \"+ Tambahkan URI\" dan tempelkan URI di bawah."
+
+msgid "Copy this exact redirect URI:"
+msgstr "Salin URI pengalihan persis ini:"
+
+msgid "Download and upload credentials"
+msgstr "Unduh dan unggah kredensial"
+
+msgid ""
+"After creating the OAuth client, click the download icon (↓) to get the"
+msgstr "Setelah membuat klien OAuth, klik ikon unduh (↓) untuk mendapatkan"
+
+msgid "file. Upload that file using the field above."
+msgstr "mengajukan.Unggah file itu menggunakan kolom di atas."
+
+msgid "Save Credentials"
+msgstr "Simpan Kredensial"
+
+msgid "Connection Status"
+msgstr "Status Koneksi"
+
+msgid "Connected Account"
+msgstr "Akun Terhubung"
+
+msgid "Last Synced"
+msgstr "Terakhir Disinkronkan"
+
+msgid "Never"
+msgstr "Tidak pernah"
+
+msgid "Auto-sync (Webhook)"
+msgstr "Sinkronisasi otomatis (Webhook)"
+
+msgid "Active"
+msgstr "Aktif"
+
+msgid "expires"
+msgstr "kedaluwarsa"
+
+msgid "Not registered"
+msgstr "Tidak terdaftar"
+
+msgid "must access via HTTPS"
+msgstr "harus mengakses melalui HTTPS"
+
+msgid "Google will push changes to:"
+msgstr "Google akan menerapkan perubahan pada:"
+
+msgid "Open the app via your HTTPS dev tunnel URL and click \\"
+msgstr "Buka aplikasi melalui URL terowongan dev HTTPS Anda dan klik \\"
+
+msgid "Open via HTTPS to register webhook"
+msgstr "Buka melalui HTTPS untuk mendaftarkan webhook"
+
+msgid "Loading..."
+msgstr "Memuat..."
+
+msgid "Renew Webhook"
+msgstr "Perbarui Webhook"
+
+msgid "Register Webhook"
+msgstr "Daftarkan Webhook"
+
+msgid "Disconnect"
+msgstr "Memutuskan"
+
+msgid "Not connected. Click the button to authorize with Google."
+msgstr "Tidak terhubung.Klik tombol untuk memberi otorisasi dengan Google."
+
+msgid "Connect Google Account"
+msgstr "Hubungkan Akun Google"
+
+msgid "Change Credentials"
+msgstr "Ubah Kredensial"
+
+#, python-format
+msgid ""
+"Switch to one-way sync?\n"
+"                                        Changes in Google Calendar will no longer sync to\n"
+"                                        %(title)s."
+msgstr ""
+"Beralih ke sinkronisasi satu arah?Perubahan di Google Kalender tidak lagi "
+"disinkronkan ke%(title)s."
+
+#, python-format
+msgid ""
+"Switch to two-way sync?\n"
+"                                        Changes in Google Calendar will sync to %(title)s."
+msgstr ""
+"Beralih ke sinkronisasi dua arah?Perubahan di Google Kalender akan "
+"disinkronkan ke%(title)s."
+
+#, python-format
+msgid ""
+"One-way: %(title)s →\n"
+"                                                    Google"
+msgstr "Satu arah:%(title)s→ Google"
+
+#, python-format
+msgid ""
+"Two-way: %(title)s ↔\n"
+"                                                    Google"
+msgstr "Dua arah:%(title)s↔ Google"
+
+#, python-format
+msgid ""
+"%(title)s activities are pushed\n"
+"                                                    to Google Calendar. Changes made in Google are\n"
+"                                                    ignored."
+msgstr ""
+"%(title)saktivitas didorong ke Google Kalender.Perubahan yang dilakukan di "
+"Google diabaikan."
+
+#, python-format
+msgid ""
+"Changes sync in both directions\n"
+"                                                    between %(title)s and Google Calendar."
+msgstr ""
+"Perubahan disinkronkan di kedua arah antara%(title)sdan Google Kalender."
+
+msgid "Google Integration"
+msgstr "Integrasi Google"
+
+msgid "Sync your calendar and meetings with your Google account."
+msgstr "Sinkronkan kalender dan rapat Anda dengan akun Google Anda."
+
+msgid ""
+"Enable Google Calendar integration to allow users in your company to connect"
+" their Google account and sync calendar events."
+msgstr ""
+"Aktifkan integrasi Google Kalender untuk memungkinkan pengguna di perusahaan"
+" Anda menghubungkan akun Google mereka dan menyinkronkan acara kalender."
+
+msgid "Enable Google Calendar"
+msgstr "Aktifkan Google Kalender"
+
+msgid "Disable Google Calendar integration?"
+msgstr "Nonaktifkan integrasi Google Kalender?"
+
+msgid ""
+"All user connections and credentials under this company will be permanently "
+"removed."
+msgstr ""
+"Semua koneksi pengguna dan kredensial di bawah perusahaan ini akan dihapus "
+"secara permanen."
+
+msgid "Enable Google Calendar integration?"
+msgstr "Aktifkan integrasi Google Kalender?"
+
+msgid "Integration enabled — users can now connect Google Calendar"
+msgstr ""
+"Integrasi diaktifkan — pengguna kini dapat menghubungkan Google Kalender"
+
+msgid "Integration disabled — users cannot connect Google Calendar"
+msgstr ""
+"Integrasi dinonaktifkan — pengguna tidak dapat menghubungkan Google Kalender"
+
+msgid "Tasks"
+msgstr "Tugas"
+
+msgid "Events"
+msgstr "Acara"
+
+msgid "Meetings"
+msgstr "Rapat"
+
+msgid "Unavailability"
+msgstr "Tidak tersedianya"
+
+msgid "Preferences saved successfully"
+msgstr "Preferensi berhasil disimpan"
+
+msgid "User Unavailable"
+msgstr "Pengguna Tidak Tersedia"
+
+msgid "Marked as completed successfully."
+msgstr "Ditandai sebagai berhasil diselesaikan."
+
+msgid "Mark Unavailability"
+msgstr "Tandai Tidak Tersedianya"

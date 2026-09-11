@@ -1,0 +1,390 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid ""
+"Module for automating mail and notifications based on model events and "
+"conditions."
+msgstr ""
+"Modul untuk mengotomatiskan email dan notifikasi berdasarkan model peristiwa"
+" dan kondisi."
+
+msgid ""
+"Migrated signal and timezone imports to the horilla shims, standardized "
+"first-party import groups, and added docstrings for pylint compliance; "
+"behavior unchanged."
+msgstr ""
+"Memigrasikan impor sinyal dan zona waktu ke horilla shim, menstandardisasi "
+"grup impor pihak pertama, dan menambahkan dokumen untuk kepatuhan "
+"pylint;perilaku tidak berubah."
+
+msgid ""
+"Celery Beat schedule entries now use the fully qualified task path so "
+"scheduled automations resolve correctly at runtime."
+msgstr ""
+"Entri jadwal Celery Beat sekarang menggunakan jalur tugas yang sepenuhnya "
+"memenuhi syarat sehingga otomatisasi terjadwal diselesaikan dengan benar "
+"saat runtime."
+
+msgid ""
+"Release 1.10: automations ship under contrib with app label automations. "
+"Triggers referencing ContentType and Celery task dotted paths updated "
+"alongside imports and registrations for the contrib namespace."
+msgstr ""
+"Rilis 1.10: otomatisasi dikirimkan berdasarkan kontribusi dengan otomatisasi"
+" label aplikasi.Pemicu yang mereferensikan jalur titik-titik tugas "
+"ContentType dan Seledri diperbarui bersamaan dengan impor dan registrasi "
+"untuk namespace contrib."
+
+msgid ""
+"Improved automation reliability with background processing enhancements, "
+"better schedule-aware form validation, and idempotent run tracking via "
+"AutomationRunLog for scheduled automations."
+msgstr ""
+"Peningkatan keandalan otomatisasi dengan penyempurnaan pemrosesan latar "
+"belakang, validasi formulir yang lebih sadar jadwal, dan pelacakan proses "
+"idempoten melalui AutomationRunLog untuk otomatisasi terjadwal."
+
+msgid ""
+"Introduced scheduled automations with Celery Beat support, including dynamic"
+" schedule fields in the automation form, server-side validation for "
+"scheduled triggers, and execution run logging to prevent duplicate runs."
+msgstr ""
+"Memperkenalkan otomatisasi terjadwal dengan dukungan Celery Beat, termasuk "
+"bidang jadwal dinamis dalam formulir otomatisasi, validasi sisi server untuk"
+" pemicu terjadwal, dan pencatatan proses eksekusi untuk mencegah proses "
+"duplikat."
+
+msgid ""
+"Minor compatibility improvements and internal stability updatesto ensure "
+"seamless integration with the updated generics framework and platform "
+"enhancements."
+msgstr ""
+"Peningkatan kompatibilitas kecil dan pembaruan stabilitas internal untuk "
+"memastikan integrasi yang lancar dengan kerangka generik yang diperbarui dan"
+" penyempurnaan platform."
+
+msgid ""
+"Migrated from Django AppConfig to Horilla AppLauncher and replaced Django "
+"utilitieswith horilla.utils.decorators, horilla.utils.translation, and "
+"horilla.shortcuts where applicable."
+msgstr ""
+"Bermigrasi dari Django AppConfig ke Horilla AppLauncher dan mengganti "
+"utilitas Django dengan horilla.utils.decorators, horilla.utils.translation, "
+"dan horilla.shortcuts jika berlaku."
+
+msgid "Automations"
+msgstr "Otomatisasi"
+
+msgid "Please select a mail server."
+msgstr "Silakan pilih server email."
+
+msgid "Invalid mail server selected."
+msgstr "Server email yang dipilih tidak valid."
+
+msgid "Automations loaded successfully."
+msgstr "Otomatisasi berhasil dimuat."
+
+msgid "All selected automations already exist."
+msgstr "Semua otomatisasi yang dipilih sudah ada."
+
+msgid "No automations were processed."
+msgstr "Tidak ada otomatisasi yang diproses."
+
+msgid "Mail & Notifications"
+msgstr "Surat & Pemberitahuan"
+
+msgid "Equal (==)"
+msgstr "Sama (==)"
+
+msgid "Not Equal (!=)"
+msgstr "Tidak Sama (!=)"
+
+msgid "Less Than (<)"
+msgstr "Kurang dari (<)"
+
+msgid "Greater Than (>)"
+msgstr "Lebih Besar Dari (>)"
+
+msgid "Less Than or Equal To (<=)"
+msgstr "Kurang dari atau Sama Dengan (<=)"
+
+msgid "Greater Than or Equal To (>=)"
+msgstr "Lebih Besar Dari atau Sama Dengan (>=)"
+
+msgid "Contains"
+msgstr "Berisi"
+
+msgid "Title"
+msgstr "Judul"
+
+msgid "Method Title"
+msgstr "Judul Metode"
+
+msgid "Module"
+msgstr "Modul"
+
+msgid "Mail to/Notify to"
+msgstr "Kirim ke/Beri tahu ke"
+
+msgid ""
+"Specify recipients for email/notifications. Supports:\n"
+"- Direct email: user@example.com\n"
+"- Self: 'self' (person who triggered)\n"
+"- Instance fields: 'instance.owner.email', 'instance.created_by', 'instance.owner'\n"
+"- Multiple: comma-separated (e.g., 'self, instance.owner.email, admin@example.com')\n"
+"\n"
+"For notifications: Use user fields directly (e.g., 'instance.owner') or email addresses.\n"
+"The system will find users by email if an email address is provided."
+msgstr ""
+"Tentukan penerima email/pemberitahuan.Mendukung: - Email langsung: "
+"pengguna@example.com - Diri: 'self' (orang yang memicu) - Bidang instance: "
+"'instance.owner.email', 'instance.created_by', 'instance.owner' - Beberapa: "
+"dipisahkan koma (mis., 'self, instance.owner.email, admin@example.com') "
+"Untuk notifikasi: Gunakan kolom pengguna secara langsung (mis., "
+"'instance.owner') atau alamat email.Sistem akan menemukan pengguna melalui "
+"email jika alamat email diberikan."
+
+msgid "Also Send to"
+msgstr "Juga Kirim ke"
+
+msgid "Mail Detail Choice"
+msgstr "Pilihan Detail Surat"
+
+msgid "Trigger"
+msgstr "Pemicu"
+
+msgid "Mail Template"
+msgstr "Templat Surat"
+
+msgid "Notification Template"
+msgstr "Templat Pemberitahuan"
+
+msgid "Outgoing Mail Server"
+msgstr "Server Surat Keluar"
+
+msgid ""
+"Select the mail server to use for sending emails. If not selected, the "
+"primary mail server will be used."
+msgstr ""
+"Pilih server email yang akan digunakan untuk mengirim email.Jika tidak "
+"dipilih, server email utama akan digunakan."
+
+msgid "Choose Delivery Channel"
+msgstr "Pilih Saluran Pengiriman"
+
+msgid "Target Date Field"
+msgstr "Bidang Tanggal Target"
+
+msgid ""
+"The date field on the record to schedule around (e.g., 'close_date', "
+"'due_date'). Required for scheduled automations."
+msgstr ""
+"Bidang tanggal pada rekaman yang akan dijadwalkan (misalnya, "
+"'tanggal_tutup', 'tanggal_jatuh tempo').Diperlukan untuk otomatisasi "
+"terjadwal."
+
+msgid "Adjust By"
+msgstr "Sesuaikan Oleh"
+
+msgid ""
+"How many days/weeks/months away from the Target Date.\n"
+"Use 0 to send on the same day."
+msgstr ""
+"Berapa hari/minggu/bulan lagi dari Tanggal Target.Gunakan 0 untuk mengirim "
+"pada hari yang sama."
+
+msgid "Before"
+msgstr "Sebelum"
+
+msgid "After"
+msgstr "Setelah"
+
+msgid "Timing"
+msgstr "Waktu"
+
+msgid ""
+"Before = send earlier than the Target Date.\n"
+"After = send later than the Target Date."
+msgstr ""
+"Sebelum = dikirim lebih awal dari Tanggal Target.After = dikirim paling "
+"lambat dari Tanggal Target."
+
+msgid "Days"
+msgstr "hari"
+
+msgid "Weeks"
+msgstr "Minggu"
+
+msgid "Months"
+msgstr "Bulan"
+
+msgid "Offset Unit"
+msgstr "Satuan Offset"
+
+msgid "Choose Days, Weeks, or Months."
+msgstr "Pilih Hari, Minggu, atau Bulan."
+
+msgid "Run Time"
+msgstr "Waktu Jalankan"
+
+msgid "Optional. Leave empty to run whenever the scheduler runs."
+msgstr ""
+"Opsional.Biarkan kosong untuk dijalankan setiap kali penjadwal berjalan."
+
+msgid "Mail and Notification"
+msgstr "Surat dan Pemberitahuan"
+
+msgid "Mail and Notifications"
+msgstr "Surat dan Pemberitahuan"
+
+msgid "This field is required when Trigger is 'Scheduled'."
+msgstr "Bidang ini wajib diisi bila Pemicu 'Dijadwalkan'."
+
+msgid ""
+"Notification template is required when delivery channel is 'Send as "
+"Notification'."
+msgstr ""
+"Template notifikasi diperlukan bila saluran pengiriman adalah 'Kirim sebagai"
+" Notifikasi'."
+
+msgid "Mail template is required when delivery channel is 'Send as Mail'."
+msgstr ""
+"Template email diperlukan bila saluran pengiriman adalah 'Kirim sebagai "
+"Email'."
+
+msgid ""
+"Outgoing mail server is required when delivery channel is 'Send as Mail'."
+msgstr ""
+"Server surat keluar diperlukan bila saluran pengiriman adalah 'Kirim sebagai"
+" Surat'."
+
+msgid ""
+"Mail template is required when delivery channel is 'Send as Mail and "
+"Notification'."
+msgstr ""
+"Template email diperlukan bila saluran pengiriman adalah 'Kirim sebagai "
+"Email dan Pemberitahuan'."
+
+msgid ""
+"Notification template is required when delivery channel is 'Send as Mail and"
+" Notification'."
+msgstr ""
+"Templat pemberitahuan diperlukan bila saluran pengiriman adalah 'Kirim "
+"sebagai Surat dan Pemberitahuan'."
+
+msgid ""
+"Outgoing mail server is required when delivery channel is 'Send as Mail and "
+"Notification'."
+msgstr ""
+"Server surat keluar diperlukan bila saluran pengiriman adalah 'Kirim sebagai"
+" Surat dan Pemberitahuan'."
+
+msgid "Automation"
+msgstr "Otomatisasi"
+
+msgid "Field Name"
+msgstr "Nama Bidang"
+
+msgid "Operator"
+msgstr "Operator"
+
+msgid "Value"
+msgstr "Nilai"
+
+msgid "AND"
+msgstr "DAN"
+
+msgid "OR"
+msgstr "ATAU"
+
+msgid "Logical Operator"
+msgstr "Operator Logis"
+
+msgid "Order"
+msgstr "Memesan"
+
+msgid "Automation Condition"
+msgstr "Kondisi Otomatisasi"
+
+msgid "Automation Conditions"
+msgstr "Kondisi Otomatisasi"
+
+msgid "Content Type"
+msgstr "Tipe Konten"
+
+msgid "Object ID"
+msgstr "ID Objek"
+
+msgid "Run Date"
+msgstr "Tanggal Jalankan"
+
+msgid "Scheduled For"
+msgstr "Dijadwalkan Untuk"
+
+msgid "The instance date value that matched when this automation executed."
+msgstr ""
+"Nilai tanggal instans yang cocok dengan saat otomatisasi ini dijalankan."
+
+msgid "Automation Run Log"
+msgstr "Log Jalankan Otomatisasi"
+
+msgid "Automation Run Logs"
+msgstr "Log Jalankan Otomatisasi"
+
+msgid "Load Automation"
+msgstr "Memuat Otomatisasi"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Mail Server"
+msgstr "Server Surat"
+
+msgid "Select mail server"
+msgstr "Pilih server email"
+
+msgid "Add an outgoing mail server in Mail to load automations."
+msgstr "Tambahkan server email keluar di Mail untuk memuat otomatisasi."
+
+msgid "Select All"
+msgstr "Pilih Semua"
+
+msgid "Create"
+msgstr "Buat"
+
+msgid "No default automations found."
+msgstr "Tidak ditemukan otomatisasi default."
+
+msgid "Add an outgoing mail server to load automations."
+msgstr "Tambahkan server email keluar untuk memuat otomatisasi."
+
+msgid "Select user fields"
+msgstr "Pilih bidang pengguna"
+
+msgid "Automate mail and notifications based on events in your workflow."
+msgstr ""
+"Otomatiskan email dan pemberitahuan berdasarkan peristiwa dalam alur kerja "
+"Anda."
+
+msgid "Template"
+msgstr "Templat"
+
+msgid "Condition"
+msgstr "Kondisi"

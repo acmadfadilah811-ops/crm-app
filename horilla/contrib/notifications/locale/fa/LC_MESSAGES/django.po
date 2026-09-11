@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-18 14:05+0000\n"
+"PO-Revision-Date: 2026-08-01 12:00+0330\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Notifications"
+msgstr "اعلان‌ها"
+
+msgid "Template title is required."
+msgstr "عنوان قالب الزامی است."
+
+msgid "Template message is required."
+msgstr "پیام قالب الزامی است."
+
+msgid ""
+"URL contains potentially dangerous content. Please remove any scripts or "
+"malicious code."
+msgstr ""
+"URL حاوی محتوای بالقوه خطرناک است. لطفاً هرگونه اسکریپت یا کد مخرب را حذف "
+"کنید."
+
+msgid "Notification"
+msgstr "اعلان"
+
+msgid "muted"
+msgstr "بی‌صدا"
+
+msgid "unmuted"
+msgstr "صدا دار"
+
+msgid "Notification Sound Preference"
+msgstr "ترجیح صدای اعلان"
+
+msgid "Notification Sound Preferences"
+msgstr "ترجیحات صدای اعلان"
+
+msgid "Template Title"
+msgstr "عنوان قالب"
+
+msgid "Message"
+msgstr "پیام"
+
+msgid "Related Model"
+msgstr "مدل مرتبط"
+
+msgid "Notification Template"
+msgstr "قالب اعلان"
+
+msgid "Notification Templates"
+msgstr "قالب‌های اعلان"
+
+msgid "Unmute notifications"
+msgstr "فعال کردن صدای اعلان‌ها"
+
+msgid "Mute notifications"
+msgstr "بی‌صدا کردن اعلان‌ها"
+
+msgid "Mark all as read"
+msgstr "علامت‌گذاری همه به عنوان خوانده شده"
+
+#, python-format
+msgid "%(time)s ago by %(sender)s"
+msgstr "%(time)s پیش توسط %(sender)s"
+
+#, python-format
+msgid "%(time)s ago by "
+msgstr "%(time)s پیش توسط "
+
+msgid "System"
+msgstr "سیستم"
+
+msgid "No unread notifications"
+msgstr "هیچ اعلان خوانده نشده‌ای وجود ندارد"
+
+msgid "View all Notification"
+msgstr "مشاهده همه اعلان‌ها"
+
+msgid "All Notifications"
+msgstr "همه اعلان‌ها"
+
+msgid "Clear All"
+msgstr "پاک کردن همه"
+
+msgid "No notifications"
+msgstr "هیچ اعلانی وجود ندارد"
+
+msgid "Close"
+msgstr "بستن"
+
+msgid "Enter template title"
+msgstr "عنوان قالب را وارد کنید"
+
+msgid "Select content type (optional)"
+msgstr "نوع محتوا را انتخاب کنید (اختیاری)"
+
+msgid "Insert Field"
+msgstr "درج فیلد"
+
+msgid "Loading..."
+msgstr "در حال بارگذاری..."
+
+msgid "All notifications marked as read."
+msgstr "همه اعلان‌ها به عنوان خوانده شده علامت‌گذاری شدند."
+
+msgid "Notification Deleted."
+msgstr "اعلان حذف شد."
+
+msgid "Customize the content of notifications sent to your users."
+msgstr "محتوای اعلان‌های ارسال‌شده به کاربران خود را سفارشی‌سازی کنید."
+
+#| msgid "Notification Template"
+msgid "Edit Notification Template"
+msgstr "ویرایش قالب اعلان"
+
+#| msgid "Update Template"
+msgid "Edit Template"
+msgstr "ویرایش قالب"
+
+msgid "Create Notification Template"
+msgstr "ایجاد قالب اعلان"
+
+msgid "Save Template"
+msgstr "ذخیره قالب"
+
+msgid "Notification template \"{}\" updated successfully."
+msgstr "قالب اعلان \"{}\" با موفقیت به‌روزرسانی شد."
+
+msgid "Notification template \"{}\" created successfully."
+msgstr "قالب اعلان \"{}\" با موفقیت ایجاد شد."

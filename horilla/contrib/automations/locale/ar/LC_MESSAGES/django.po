@@ -1,0 +1,382 @@
+# Arabic translations for Horilla Automations module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+msgid ""
+"Module for automating mail and notifications based on model events and "
+"conditions."
+msgstr "وحدة لأتمتة البريد والإشعارات بناءً على أحداث النموذج والشروط."
+
+msgid ""
+"Migrated signal and timezone imports to the horilla shims, standardized "
+"first-party import groups, and added docstrings for pylint compliance; "
+"behavior unchanged."
+msgstr ""
+"تم ترحيل استيرادات الإشارات والمنطقة الزمنية إلى shims الخاصة بـ horilla، "
+"وتوحيد مجموعات الاستيراد الداخلية، وإضافة توثيق docstrings لتوافق pylint؛ "
+"السلوك دون تغيير."
+
+msgid ""
+"Celery Beat schedule entries now use the fully qualified task path so "
+"scheduled automations resolve correctly at runtime."
+msgstr ""
+"تستخدم إدخالات جدول Celery Beat الآن مسار المهمة الكامل بحيث يتم حل الأتمتة "
+"المجدولة بشكل صحيح في وقت التشغيل."
+
+msgid ""
+"Release 1.10: automations ship under contrib with app label automations. "
+"Triggers referencing ContentType and Celery task dotted paths updated "
+"alongside imports and registrations for the contrib namespace."
+msgstr ""
+"الإصدار 1.10: تُشحن الأتمتة ضمن contrib بتسمية تطبيق automations. تم تحديث "
+"المشغّلات المرجعية لـ ContentType ومسارات مهام Celery جنباً إلى جنب مع "
+"الاستيرادات والتسجيلات."
+
+msgid ""
+"Improved automation reliability with background processing enhancements, "
+"better schedule-aware form validation, and idempotent run tracking via "
+"AutomationRunLog for scheduled automations."
+msgstr ""
+"تحسين موثوقية الأتمتة مع تحسينات معالجة الخلفية، والتحقق من صحة النماذج "
+"بمراعاة الجدولة، وتتبع التشغيل الانتهازي عبر AutomationRunLog."
+
+msgid ""
+"Introduced scheduled automations with Celery Beat support, including dynamic "
+"schedule fields in the automation form, server-side validation for scheduled "
+"triggers, and execution run logging to prevent duplicate runs."
+msgstr ""
+"إدخال الأتمتة المجدولة مع دعم Celery Beat، بما في ذلك حقول الجدولة "
+"الديناميكية في نموذج الأتمتة، والتحقق من الجانب الخادم للمشغّلات المجدولة، "
+"وتسجيل تشغيل التنفيذ لمنع التكرار."
+
+msgid ""
+"Minor compatibility improvements and internal stability updatesto ensure "
+"seamless integration with the updated generics framework and platform "
+"enhancements."
+msgstr ""
+"تحسينات توافق طفيفة وتحديثات استقرار داخلية لضمان التكامل السلس مع إطار "
+"generics المحدث وتحسينات المنصة."
+
+msgid ""
+"Migrated from Django AppConfig to Horilla AppLauncher and replaced Django "
+"utilitieswith horilla.utils.decorators, horilla.utils.translation, and "
+"horilla.shortcuts where applicable."
+msgstr ""
+"تم الترحيل من Django AppConfig إلى Horilla AppLauncher واستبدال أدوات Django "
+"بـ horilla.utils.decorators وhorilla.utils.translation وhorilla.shortcuts "
+"حيثما ينطبق."
+
+msgid "Automations"
+msgstr "الأتمتة"
+
+msgid "Please select a mail server."
+msgstr "يرجى اختيار خادم البريد."
+
+msgid "Invalid mail server selected."
+msgstr "خادم البريد المختار غير صالح."
+
+msgid "Automations loaded successfully."
+msgstr "تم تحميل الأتمتة بنجاح."
+
+msgid "All selected automations already exist."
+msgstr "جميع الأتمتة المختارة موجودة بالفعل."
+
+msgid "No automations were processed."
+msgstr "لم تتم معالجة أي أتمتة."
+
+msgid "Mail & Notifications"
+msgstr "البريد والإشعارات"
+
+msgid "Equal (==)"
+msgstr "يساوي (==)"
+
+msgid "Not Equal (!=)"
+msgstr "لا يساوي (!=)"
+
+msgid "Less Than (<)"
+msgstr "أقل من (<)"
+
+msgid "Greater Than (>)"
+msgstr "أكبر من (>)"
+
+msgid "Less Than or Equal To (<=)"
+msgstr "أقل من أو يساوي (<=)"
+
+msgid "Greater Than or Equal To (>=)"
+msgstr "أكبر من أو يساوي (>=)"
+
+msgid "Contains"
+msgstr "يحتوي على"
+
+msgid "Title"
+msgstr "العنوان"
+
+msgid "Method Title"
+msgstr "عنوان الطريقة"
+
+msgid "Module"
+msgstr "الوحدة"
+
+msgid "Mail to/Notify to"
+msgstr "إرسال البريد إلى / إشعار إلى"
+
+msgid ""
+"Specify recipients for email/notifications. Supports:\n"
+"- Direct email: user@example.com\n"
+"- Self: 'self' (person who triggered)\n"
+"- Instance fields: 'instance.owner.email', 'instance.created_by', "
+"'instance.owner'\n"
+"- Multiple: comma-separated (e.g., 'self, instance.owner.email, "
+"admin@example.com')\n"
+"\n"
+"For notifications: Use user fields directly (e.g., 'instance.owner') or "
+"email addresses.\n"
+"The system will find users by email if an email address is provided."
+msgstr ""
+"حدد المستلمين للبريد الإلكتروني/الإشعارات. يدعم:\n"
+"- البريد الإلكتروني المباشر: user@example.com\n"
+"- النفس: 'self' (الشخص الذي أطلق الحدث)\n"
+"- حقول النموذج: 'instance.owner.email'، 'instance.created_by'، "
+"'instance.owner'\n"
+"- متعدد: مفصول بفواصل (مثل: 'self, instance.owner.email, "
+"admin@example.com')\n"
+"\n"
+"للإشعارات: استخدم حقول المستخدم مباشرةً (مثل: 'instance.owner') أو عناوين "
+"البريد الإلكتروني.\n"
+"سيجد النظام المستخدمين عبر البريد الإلكتروني إذا تم توفير عنوان بريد "
+"إلكتروني."
+
+msgid "Also Send to"
+msgstr "إرسال أيضاً إلى"
+
+msgid "Mail Detail Choice"
+msgstr "اختيار تفاصيل البريد"
+
+msgid "Trigger"
+msgstr "المشغّل"
+
+msgid "Mail Template"
+msgstr "قالب البريد"
+
+msgid "Notification Template"
+msgstr "قالب الإشعار"
+
+msgid "Outgoing Mail Server"
+msgstr "خادم البريد الصادر"
+
+msgid ""
+"Select the mail server to use for sending emails. If not selected, the "
+"primary mail server will be used."
+msgstr ""
+"حدد خادم البريد المراد استخدامه لإرسال الرسائل. إذا لم يتم التحديد، سيتم "
+"استخدام الخادم الأساسي."
+
+msgid "Choose Delivery Channel"
+msgstr "اختر قناة التسليم"
+
+msgid "Target Date Field"
+msgstr "حقل التاريخ المستهدف"
+
+msgid ""
+"The date field on the record to schedule around (e.g., 'close_date', "
+"'due_date'). Required for scheduled automations."
+msgstr ""
+"حقل التاريخ في السجل المراد الجدولة حوله (مثل: 'close_date'، 'due_date'). "
+"مطلوب للأتمتة المجدولة."
+
+msgid "Adjust By"
+msgstr "ضبط بمقدار"
+
+msgid ""
+"How many days/weeks/months away from the Target Date.\n"
+"Use 0 to send on the same day."
+msgstr ""
+"عدد الأيام/الأسابيع/الأشهر بعيداً عن التاريخ المستهدف.\n"
+"استخدم 0 للإرسال في نفس اليوم."
+
+msgid "Before"
+msgstr "قبل"
+
+msgid "After"
+msgstr "بعد"
+
+msgid "Timing"
+msgstr "التوقيت"
+
+msgid ""
+"Before = send earlier than the Target Date.\n"
+"After = send later than the Target Date."
+msgstr ""
+"قبل = الإرسال قبل التاريخ المستهدف.\n"
+"بعد = الإرسال بعد التاريخ المستهدف."
+
+msgid "Days"
+msgstr "أيام"
+
+msgid "Weeks"
+msgstr "أسابيع"
+
+msgid "Months"
+msgstr "أشهر"
+
+msgid "Offset Unit"
+msgstr "وحدة الإزاحة"
+
+msgid "Choose Days, Weeks, or Months."
+msgstr "اختر أياماً أو أسابيع أو أشهراً."
+
+msgid "Run Time"
+msgstr "وقت التشغيل"
+
+msgid "Optional. Leave empty to run whenever the scheduler runs."
+msgstr "اختياري. اتركه فارغاً للتشغيل عند تشغيل المجدول."
+
+msgid "Mail and Notification"
+msgstr "البريد والإشعار"
+
+msgid "Mail and Notifications"
+msgstr "البريد والإشعارات"
+
+msgid "This field is required when Trigger is 'Scheduled'."
+msgstr "هذا الحقل مطلوب عندما يكون المشغّل 'مجدولاً'."
+
+msgid ""
+"Notification template is required when delivery channel is 'Send as "
+"Notification'."
+msgstr "قالب الإشعار مطلوب عندما تكون قناة التسليم 'إرسال كإشعار'."
+
+msgid "Mail template is required when delivery channel is 'Send as Mail'."
+msgstr "قالب البريد مطلوب عندما تكون قناة التسليم 'إرسال كبريد إلكتروني'."
+
+msgid ""
+"Outgoing mail server is required when delivery channel is 'Send as Mail'."
+msgstr ""
+"خادم البريد الصادر مطلوب عندما تكون قناة التسليم 'إرسال كبريد إلكتروني'."
+
+msgid ""
+"Mail template is required when delivery channel is 'Send as Mail and "
+"Notification'."
+msgstr ""
+"قالب البريد مطلوب عندما تكون قناة التسليم 'إرسال كبريد إلكتروني وإشعار'."
+
+msgid ""
+"Notification template is required when delivery channel is 'Send as Mail and "
+"Notification'."
+msgstr ""
+"قالب الإشعار مطلوب عندما تكون قناة التسليم 'إرسال كبريد إلكتروني وإشعار'."
+
+msgid ""
+"Outgoing mail server is required when delivery channel is 'Send as Mail and "
+"Notification'."
+msgstr ""
+"خادم البريد الصادر مطلوب عندما تكون قناة التسليم 'إرسال كبريد إلكتروني "
+"وإشعار'."
+
+msgid "Automation"
+msgstr "الأتمتة"
+
+msgid "Field Name"
+msgstr "اسم الحقل"
+
+msgid "Operator"
+msgstr "المعامل"
+
+msgid "Value"
+msgstr "القيمة"
+
+msgid "AND"
+msgstr "و"
+
+msgid "OR"
+msgstr "أو"
+
+msgid "Logical Operator"
+msgstr "المعامل المنطقي"
+
+msgid "Order"
+msgstr "الترتيب"
+
+msgid "Automation Condition"
+msgstr "شرط الأتمتة"
+
+msgid "Automation Conditions"
+msgstr "شروط الأتمتة"
+
+msgid "Content Type"
+msgstr "نوع المحتوى"
+
+msgid "Object ID"
+msgstr "معرّف الكائن"
+
+msgid "Run Date"
+msgstr "تاريخ التشغيل"
+
+msgid "Scheduled For"
+msgstr "مجدول لـ"
+
+msgid "The instance date value that matched when this automation executed."
+msgstr "قيمة تاريخ النموذج التي تطابقت عند تنفيذ هذه الأتمتة."
+
+msgid "Automation Run Log"
+msgstr "سجل تشغيل الأتمتة"
+
+msgid "Automation Run Logs"
+msgstr "سجلات تشغيل الأتمتة"
+
+msgid "Load Automation"
+msgstr "تحميل الأتمتة"
+
+msgid "Close"
+msgstr "إغلاق"
+
+msgid "Mail Server"
+msgstr "خادم البريد"
+
+msgid "Select mail server"
+msgstr "اختر خادم البريد"
+
+msgid "Add an outgoing mail server in Mail to load automations."
+msgstr "أضف خادم بريد صادر في البريد لتحميل الأتمتة."
+
+msgid "Select All"
+msgstr "تحديد الكل"
+
+msgid "Create"
+msgstr "إنشاء"
+
+msgid "No default automations found."
+msgstr "لم يتم العثور على أتمتة افتراضية."
+
+msgid "Add an outgoing mail server to load automations."
+msgstr "أضف خادم بريد صادر لتحميل الأتمتة."
+
+msgid "Select user fields"
+msgstr "اختر حقول المستخدم"
+
+#, fuzzy
+#| msgid ""
+#| "Module for automating mail and notifications based on model events and "
+#| "conditions."
+msgid "Automate mail and notifications based on events in your workflow."
+msgstr "وحدة لأتمتة البريد والإشعارات بناءً على أحداث النموذج والشروط."
+
+msgid "Template"
+msgstr "القالب"
+
+msgid "Condition"
+msgstr "الشرط"

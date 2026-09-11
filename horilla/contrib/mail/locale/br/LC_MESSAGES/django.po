@@ -1,0 +1,740 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=((n%10 == 1) && (n%100 != 11) && (n%100 !"
+"=71) && (n%100 !=91) ? 0 :(n%10 == 2) && (n%100 != 12) && (n%100 !=72) && "
+"(n%100 !=92) ? 1 :(n%10 ==3 || n%10==4 || n%10==9) && (n%100 < 10 || n% 100 "
+"> 19) && (n%100 < 70 || n%100 > 79) && (n%100 < 90 || n%100 > 99) ? 2 :(n != "
+"0 && n % 1000000 == 0) ? 3 : 4);\n"
+
+msgid ""
+"Module for managing incoming and outgoing emails through mail servers and "
+"Outlook."
+msgstr ""
+
+msgid ""
+"Email pills and suggestions templates accept override URLs so non-Mail "
+"callers are not forced through Mail permission checks. Clear the suggestions "
+"dropdown on blur regardless of whether the typed value is a valid email."
+msgstr ""
+
+msgid "Registered Mail for export_data."
+msgstr ""
+
+msgid ""
+"Added send_by ForeignKey on Mail to record the sending user. Introduced Mail "
+"History settings view with filter, navbar, and list actions for sent, "
+"scheduled, and draft mails. Parent-record access gates mail compose, draft "
+"save/discard, and delete flows. Standardized exception chaining across "
+"serializers, backends, and template views."
+msgstr ""
+
+msgid ""
+"Fixed mail preview context leak, false-positive XSS block, and IDOR access "
+"check. Corrected MailTemplateListView permissions and row-attr shape. "
+"Persist rendered subject and body snapshot at send time. Fixed mail preview "
+"modal styling inconsistencies."
+msgstr ""
+
+msgid ""
+"Fixed mail and notification template creation by assigning created_by and "
+"updated_by before save when _thread_local.request is unavailable. Added mail "
+"configuration detail modal with list row click-through and channel-specific "
+"edit and delete URLs. Sanitize mail subject and body XSS with shared helpers "
+"and centralized sanitize_html in preview and detail views. Clear mail "
+"template body on validation errors to prevent re-displaying rejected content."
+msgstr ""
+
+msgid ""
+"Security: fixed SSTI information disclosure and IDOR in the preview endpoint "
+"by blocking dangerous template paths and adding a per-object permission "
+"check. Mail permissions replaced admin-config perms with correct add/view/"
+"change/delete own-record permissions across all mail views and the activity "
+"email tab. Standardized first-party imports and added docstrings for pylint "
+"compliance."
+msgstr ""
+
+msgid ""
+"Mail forms aligned with ModelForm layout: field_order, Meta.fields = "
+"\"__all__\", Meta.exclude, and keep_on_form on configuration forms."
+msgstr ""
+
+msgid ""
+"Release 1.10: mail ships under the contrib package tree with Django app "
+"label mail. Imports, API routes, URLs, permissions, templates, and static "
+"asset paths updated to drop the legacy prefixed mail app name."
+msgstr ""
+
+msgid ""
+"Improved mail template standardization, async mail handling with background "
+"thread execution, and enhanced notification and mail action separation for "
+"approval workflows."
+msgstr ""
+
+msgid ""
+"Minor compatibility improvements and internal stability updates to align "
+"with the enhanced generics framework and visualization system."
+msgstr ""
+
+msgid ""
+"Migrated from AppConfig to AppLauncher and and replacedutilities with "
+"utils.decorators, utils.translation, and shortcuts where applicable."
+msgstr ""
+
+msgid "Mail System"
+msgstr ""
+
+msgid "To Email"
+msgstr ""
+
+msgid "Enter email address to send test email"
+msgstr ""
+
+msgid "Enter the email address where you want to send the test email."
+msgstr ""
+
+msgid "Please enter a valid email address."
+msgstr ""
+
+msgid "Template title is required."
+msgstr ""
+
+msgid "Template body is required."
+msgstr ""
+
+msgid "Select Mail Template"
+msgstr ""
+
+msgid "Choose a template"
+msgstr ""
+
+msgid "Body content cannot be empty."
+msgstr ""
+
+msgid "Enter app password"
+msgstr ""
+
+msgid "Enter the app-specific password for your mail account."
+msgstr ""
+
+msgid "Enter the app-specific password  for your mail account."
+msgstr ""
+
+msgid "Enter client secret"
+msgstr ""
+
+msgid ""
+"Enter the client secret generated from your Microsoft Azure app "
+"registration. This secret is used to authenticate your Outlook integration "
+"securely."
+msgstr ""
+
+msgid "Mail"
+msgstr ""
+
+msgid "Outgoing Mail Server"
+msgstr ""
+
+msgid "Incoming Mail Server"
+msgstr ""
+
+msgid "Mail Template"
+msgstr ""
+
+msgid "Mail History"
+msgstr ""
+
+msgid "Outlook"
+msgstr ""
+
+msgid "Incoming"
+msgstr ""
+
+msgid "Outgoing"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Mail Channel"
+msgstr ""
+
+msgid ""
+"Specifies whether this configuration handles incoming,outgoing, or both "
+"types of emails."
+msgstr ""
+
+msgid "Host"
+msgstr ""
+
+msgid "Port"
+msgstr ""
+
+msgid "Default From Mail"
+msgstr ""
+
+msgid "Email Host Username"
+msgstr ""
+
+msgid "Display Name"
+msgstr ""
+
+msgid "Email Authentication Password"
+msgstr ""
+
+msgid "Use TLS"
+msgstr ""
+
+msgid "Use SSL"
+msgstr ""
+
+msgid "Fail Silently"
+msgstr ""
+
+msgid "Primary Mail Server"
+msgstr ""
+
+msgid "By enabling this the display name will take from who triggered the mail"
+msgstr ""
+
+msgid "Email Send Timeout (seconds)"
+msgstr ""
+
+msgid "Client ID"
+msgstr ""
+
+msgid "Client Secret"
+msgstr ""
+
+msgid "Tenant ID"
+msgstr ""
+
+msgid "Redirect URi"
+msgstr ""
+
+msgid "OAuth authorization endpoint"
+msgstr ""
+
+msgid "OAuth token endpoint"
+msgstr ""
+
+msgid "Microsoft Graph API endpoint"
+msgstr ""
+
+msgid "This field is required"
+msgstr ""
+
+msgid "Mail Configuration"
+msgstr ""
+
+msgid "Mail Configurations"
+msgstr ""
+
+msgid "Draft"
+msgstr ""
+
+msgid "Scheduled"
+msgstr ""
+
+msgid "Sent"
+msgstr ""
+
+msgid "Delivered"
+msgstr ""
+
+msgid "Bounced"
+msgstr ""
+
+msgid "Opened"
+msgstr ""
+
+msgid "Failed"
+msgstr ""
+
+msgid "From"
+msgstr ""
+
+msgid "Comma separated recipient email addresses"
+msgstr ""
+
+msgid "To"
+msgstr ""
+
+msgid "Cc"
+msgstr ""
+
+msgid "Bcc"
+msgstr ""
+
+msgid "Subject"
+msgstr ""
+
+msgid "Body"
+msgstr ""
+
+msgid "Rendered subject saved at send time."
+msgstr ""
+
+msgid "Rendered body saved at send time."
+msgstr ""
+
+msgid "When the mail should be sent (for scheduled mails)."
+msgstr ""
+
+msgid "Sent By"
+msgstr ""
+
+msgid "Mails"
+msgstr ""
+
+msgid "Mail Attachment"
+msgstr ""
+
+msgid "Mail Attachments"
+msgstr ""
+
+msgid "Template title"
+msgstr ""
+
+msgid "Related Model"
+msgstr ""
+
+msgid "Mail Templates"
+msgstr ""
+
+msgid "Save Changes?"
+msgstr ""
+
+msgid "Do you want to save your changes as a draft or discard them?"
+msgstr ""
+
+msgid "Discard"
+msgstr ""
+
+msgid "Save as Draft"
+msgstr ""
+
+msgid "No emails found for"
+msgstr ""
+
+msgid "Start typing to search emails..."
+msgstr ""
+
+msgid "Insert Fields"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Select fields to insert into your email template."
+msgstr ""
+
+msgid "Instance"
+msgstr ""
+
+msgid "User"
+msgstr ""
+
+msgid "Company"
+msgstr ""
+
+msgid "Request"
+msgstr ""
+
+msgid "Direct Fields"
+msgstr ""
+
+msgid "User Fields"
+msgstr ""
+
+msgid "Company Fields"
+msgstr ""
+
+msgid "Request Fields"
+msgstr ""
+
+msgid "Related Fields"
+msgstr ""
+
+msgid "Reverse Related Fields"
+msgstr ""
+
+msgid "No fields available for this model"
+msgstr ""
+
+msgid "Insert Selected Fields"
+msgstr ""
+
+msgid "Test Email Configuration"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
+
+msgid "Send Test Email"
+msgstr ""
+
+msgid "Select Mail Server Type"
+msgstr ""
+
+msgid "Outlook Mail Server"
+msgstr ""
+
+msgid "Configure using Microsoft Azure/Office 365 OAuth authentication"
+msgstr ""
+
+msgid "Select Outlook"
+msgstr ""
+
+msgid "mail"
+msgstr ""
+
+msgid "Other Mail Servers"
+msgstr ""
+
+msgid "Configure SMTP, Gmail, Yahoo, or any other mail server"
+msgstr ""
+
+msgid "Select Other"
+msgstr ""
+
+msgid "Refresh Token"
+msgstr ""
+
+msgid "Login"
+msgstr ""
+
+msgid "Send Test Mail"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Mail Configuration Required"
+msgstr ""
+
+msgid "Cannot send email"
+msgstr ""
+
+msgid "Mail can only be sent after outgoing mail is configured."
+msgstr ""
+
+msgid "Configure Outgoing Mail"
+msgstr ""
+
+msgid "Please contact your administrator to configure outgoing mail settings."
+msgstr ""
+
+msgid "Send Mail"
+msgstr ""
+
+msgid "No mail server configured"
+msgstr ""
+
+msgid "Enter Subject"
+msgstr ""
+
+msgid "Related to"
+msgstr ""
+
+msgid "Message"
+msgstr ""
+
+msgid "Insert Field"
+msgstr ""
+
+msgid "Add mail template"
+msgstr ""
+
+msgid "Save as template"
+msgstr ""
+
+msgid "Preview"
+msgstr ""
+
+msgid "Preview Error"
+msgstr ""
+
+msgid "Error generating preview:"
+msgstr ""
+
+msgid "Mail Preview"
+msgstr ""
+
+msgid "Email Snapshot"
+msgstr ""
+
+msgid "From:"
+msgstr ""
+
+msgid "No sender configured"
+msgstr ""
+
+msgid "To:"
+msgstr ""
+
+msgid "No recipient specified"
+msgstr ""
+
+msgid "No subject"
+msgstr ""
+
+msgid "No message content"
+msgstr ""
+
+msgid "This is how your email will look when sent"
+msgstr ""
+
+msgid "Enter template title"
+msgstr ""
+
+msgid "Enter email subject (optional)"
+msgstr ""
+
+msgid "Select content type (optional)"
+msgstr ""
+
+msgid "Save as mail template"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Enter title"
+msgstr ""
+
+msgid "Save Template"
+msgstr ""
+
+msgid "Select Template"
+msgstr ""
+
+msgid "Email Template Preview"
+msgstr ""
+
+msgid "No content to preview"
+msgstr ""
+
+msgid "Schedule Email"
+msgstr ""
+
+msgid "Schedule Date"
+msgstr ""
+
+msgid "Schedule"
+msgstr ""
+
+msgid "Cannot send email. Outgoing mail must be configured first."
+msgstr ""
+
+msgid "To email is required"
+msgstr ""
+
+msgid "From mail configuration is required"
+msgstr ""
+
+msgid ""
+"Both model_name and object_id are required to send mail related to an object."
+msgstr ""
+
+msgid ""
+"Cannot send mail: model information is missing. Please try again from the "
+"opportunity page."
+msgstr ""
+
+msgid "Mail sent successfully"
+msgstr ""
+
+msgid "Mail bounced: "
+msgstr ""
+
+msgid "Failed to send mail: "
+msgstr ""
+
+msgid "Error sending mail: "
+msgstr ""
+
+msgid "Subject contains dangerous content."
+msgstr ""
+
+msgid "Message body contains dangerous content."
+msgstr ""
+
+msgid "You do not have permission to access this record."
+msgstr ""
+
+msgid "Draft saved successfully"
+msgstr ""
+
+msgid "Error saving draft: "
+msgstr ""
+
+msgid "Draft discarded"
+msgstr ""
+
+msgid "Error discarding draft: "
+msgstr ""
+
+msgid "Mail deleted successfully."
+msgstr ""
+
+msgid "Schedule time is required"
+msgstr ""
+
+msgid "Scheduled time must be in the future"
+msgstr ""
+
+msgid "Invalid date/time format"
+msgstr ""
+
+msgid "Scheduled mail not found or you don't have permission"
+msgstr ""
+
+msgid "You do not have permission to reschedule this mail."
+msgstr ""
+
+msgid "Mail rescheduled successfully for "
+msgstr ""
+
+msgid "Invalid mail configuration selected"
+msgstr ""
+
+msgid "You do not have permission to send mail for this record."
+msgstr ""
+
+msgid "Mail scheduled successfully for "
+msgstr ""
+
+msgid "Error scheduling mail: "
+msgstr ""
+
+msgid "Incoming Mail Configurations"
+msgstr ""
+
+msgid "Configure the IMAP server used to receive incoming emails."
+msgstr ""
+
+msgid "Channel"
+msgstr ""
+
+msgid "Primary"
+msgstr ""
+
+msgid "From Email"
+msgstr ""
+
+msgid "Dynamic Display Name"
+msgstr ""
+
+msgid "Timeout (seconds)"
+msgstr ""
+
+msgid "Redirect URI"
+msgstr ""
+
+msgid "Authorization URL"
+msgstr ""
+
+msgid "Token URL"
+msgstr ""
+
+msgid "API Endpoint"
+msgstr ""
+
+msgid "Token Last Refreshed"
+msgstr ""
+
+msgid "Review emails sent and received through Horilla."
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Sent At"
+msgstr ""
+
+msgid "Create reusable email templates for common messages."
+msgstr ""
+
+msgid "Update Mail Template"
+msgstr ""
+
+msgid "Update Template"
+msgstr ""
+
+msgid "Create Mail Template"
+msgstr ""
+
+msgid "Mail template \"{}\" updated successfully."
+msgstr ""
+
+msgid "Mail template \"{}\" created successfully."
+msgstr ""
+
+msgid "Outgoing Mail Configurations"
+msgstr ""
+
+msgid "Configure the SMTP server used to send outgoing emails."
+msgstr ""
+
+msgid "Outgoing Mail Server Configuration"
+msgstr ""
+
+msgid "Something went wrong:"
+msgstr ""
+
+msgid "Not configured outlook"
+msgstr ""
+
+msgid "Outlook Client ID is not configured"
+msgstr ""
+
+msgid "Outlook Redirect URI is not configured"
+msgstr ""
+
+msgid "Outlook Authorization URL is not configured"
+msgstr ""
+
+msgid "Invalid Outlook configuration"
+msgstr ""
+
+msgid "Outlook Token URL is not configured"
+msgstr ""
+
+msgid "Outlook Client Secret is not configured"
+msgstr ""
+
+msgid "Unable to build authorization response URI"
+msgstr ""
+
+msgid "Token not refreshed, Login required"
+msgstr ""
+
+msgid "Token refreshed successfully"
+msgstr ""
+
+#, python-brace-format
+msgid "Token refresh failed: {error}. Please re-authenticate."
+msgstr ""
+
+#, python-brace-format
+msgid "Token refresh failed: {error}"
+msgstr ""

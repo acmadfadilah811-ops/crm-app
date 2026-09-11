@@ -1,0 +1,481 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-18 14:05+0000\n"
+"PO-Revision-Date: 2026-08-01 12:00+0330\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Workflow"
+msgstr "گردش کار"
+
+msgid ""
+"Record-triggered workflow rules with field conditions, immediate actions "
+"(update field, assign task, email, notification), and time-based triggers "
+"scheduled relative to record or rule dates."
+msgstr ""
+"قوانین گردش کار مبتنی بر رکورد با شرایط فیلد، اقدامات فوری (به‌روزرسانی "
+"فیلد، تخصیص وظیفه، ایمیل، اعلان) و محرک‌های مبتنی بر زمان که نسبت به "
+"تاریخ‌های رکورد یا قانون زمان‌بندی می‌شوند."
+
+msgid ""
+"Re-raise HttpNotFound with exception chaining in workflow detail views to "
+"preserve context."
+msgstr ""
+
+msgid ""
+"Migrated workflow execution engine transaction imports from django.db to "
+"horilla.db."
+msgstr ""
+
+msgid ""
+"Migrated signal imports to the horilla.db.models.signals shim and "
+"standardized first-party import groups; behavior unchanged."
+msgstr ""
+"واردات سیگنال به شیم horilla.db.models.signals مهاجرت داده شد و گروه‌های "
+"واردات طرف اول استاندارد شدند؛ رفتار بدون تغییر."
+
+#| msgid ""
+#| "Workflow automation engine: WorkflowRule / WorkflowCondition / "
+#| "WorkflowAction models, dynamic condition evaluation, immediate dispatch on "
+#| "record saves, Celery WorkflowTimeTriggerAction and "
+#| "ScheduledWorkflowExecution, execution history modal, FilterSet support, "
+#| "auto-registration for workflow-enabled CRM models (leads, accounts, "
+#| "campaigns, contacts, opportunities), modular views, hidden-field action "
+#| "configuration fixes, restored workflow detail pages, and improved routing "
+#| "namespaces."
+msgid ""
+"Workflow automation engine: WorkflowRule / WorkflowCondition / "
+"WorkflowAction models, dynamic condition evaluation, immediate dispatch on "
+"record saves, Celery WorkflowTimeTriggerAction and "
+"ScheduledWorkflowExecution, execution history modal, FilterSet support, "
+"auto-registration for workflow-enabled models via feature registration (e.g."
+" users, departments, holidays), modular views, hidden-field action "
+"configuration fixes, restored workflow detail pages, and improved routing "
+"namespaces."
+msgstr ""
+"موتور اتوماسیون گردش کار: مدل‌های WorkflowRule / WorkflowCondition / "
+"WorkflowAction، ارزیابی شرایط پویا، ارسال فوری در ذخیره رکورد، "
+"WorkflowTimeTriggerAction سلری و ScheduledWorkflowExecution، مودال تاریخچه "
+"اجرا، پشتیبانی FilterSet، ثبت خودکار برای مدل‌های CRM فعال گردش کار "
+"(سرنخ‌ها، حساب‌ها، کمپین‌ها، مخاطبین، فرصت‌ها)، نمایش‌های ماژولار، اصلاحات "
+"پیکربندی اقدام فیلد پنهان، بازیابی صفحات جزئیات گردش کار و فضای نام "
+"مسیر‌یابی بهبود یافته."
+
+msgid ""
+"WorkflowRuleForm aligned with HorillaModelForm layout: field_order, "
+"Meta.fields = \"__all__\", and keep_on_form for is_active; action forms "
+"unchanged."
+msgstr ""
+"WorkflowRuleForm با چیدمان HorillaModelForm هماهنگ شد: field_order، "
+"Meta.fields = \"__all__\" و keep_on_form برای is_active؛ فرم‌های اقدام بدون "
+"تغییر."
+
+#| msgid ""
+#| "Initial release: workflow rules per ContentType with create/edit triggers, "
+#| "AND/OR conditions, ordered immediate actions, time-trigger actions with "
+#| "Celery scheduling and execution history, Settings → Automations → Workflow "
+#| "Rules, and integration with registered CRM models via feature registration."
+msgid ""
+"Initial release: workflow rules per ContentType with create/edit triggers, "
+"AND/OR conditions, ordered immediate actions, time-trigger actions with "
+"Celery scheduling and execution history, Settings → Automations → Workflow "
+"Rules, and integration with registered models via feature registration."
+msgstr ""
+"انتشار اولیه: قوانین گردش کار در هر ContentType با محرک‌های ایجاد/ویرایش، "
+"شرایط AND/OR، اقدامات فوری مرتب، اقدامات محرک زمانی با زمان‌بندی سلری و "
+"تاریخچه اجرا، Settings → Automations → Workflow Rules و یکپارچه‌سازی با "
+"مدل‌های CRM ثبت شده از طریق ثبت ویژگی."
+
+msgid "Rule Trigger Date"
+msgstr "تاریخ محرک قانون"
+
+msgid "Workflow Rules"
+msgstr "قوانین گردش کار"
+
+msgid "Rule Name"
+msgstr "نام قانون"
+
+msgid "Module"
+msgstr "ماژول"
+
+msgid "The module (record type) this rule applies to."
+msgstr "ماژول (نوع رکورد) که این قانون به آن اعمال می‌شود."
+
+msgid "Description"
+msgstr "توضیحات"
+
+msgid "When record is created"
+msgstr "هنگام ایجاد رکورد"
+
+msgid "Run this workflow when a new record is created."
+msgstr "این گردش کار را زمانی که یک رکورد جدید ایجاد می‌شود اجرا کن."
+
+msgid "When record is edited"
+msgstr "هنگام ویرایش رکورد"
+
+msgid "Run this workflow when an existing record is edited."
+msgstr "این گردش کار را زمانی که یک رکورد موجود ویرایش می‌شود اجرا کن."
+
+msgid "Workflow Rule"
+msgstr "قانون گردش کار"
+
+msgid "Create and Edit"
+msgstr "ایجاد و ویرایش"
+
+msgid "Create only"
+msgstr "فقط ایجاد"
+
+msgid "Edit only"
+msgstr "فقط ویرایش"
+
+msgid "Not set"
+msgstr "تنظیم نشده"
+
+msgid "Field Name"
+msgstr "نام فیلد"
+
+msgid "Operator"
+msgstr "عملگر"
+
+msgid "Value"
+msgstr "مقدار"
+
+msgid "AND"
+msgstr "و"
+
+msgid "OR"
+msgstr "یا"
+
+msgid "Logical Operator"
+msgstr "عملگر منطقی"
+
+msgid "Order"
+msgstr "ترتیب"
+
+msgid "Workflow Condition"
+msgstr "شرط گردش کار"
+
+msgid "Workflow Conditions"
+msgstr "شروط گردش کار"
+
+#| msgid "Update Field"
+msgid "Edit Field"
+msgstr "ویرایش فیلد"
+
+msgid "Assign Task"
+msgstr "تخصیص وظیفه"
+
+msgid "Email"
+msgstr "ایمیل"
+
+msgid "Notification"
+msgstr "اعلان"
+
+msgid "Action"
+msgstr "اقدام"
+
+msgid ""
+"Type-specific configuration. update_field: {field, value}. assign_task: "
+"{subject, due_days, priority, owner_id}. email: {template_id, to}. "
+"notification: {message, user_ids}."
+msgstr ""
+"پیکربندی خاص نوع. update_field: {field, value}. assign_task: {subject, "
+"due_days, priority, owner_id}. email: {template_id, to}. notification: "
+"{message, user_ids}."
+
+msgid "Workflow Action"
+msgstr "اقدام گردش کار"
+
+msgid "Workflow Actions"
+msgstr "اقدامات گردش کار"
+
+msgid "Minutes"
+msgstr "دقیقه"
+
+msgid "Hours"
+msgstr "ساعت"
+
+msgid "Days"
+msgstr "روز"
+
+msgid "After"
+msgstr "بعد"
+
+msgid "Before"
+msgstr "قبل"
+
+msgid "Delay"
+msgstr "تأخیر"
+
+msgid "Unit"
+msgstr "واحد"
+
+msgid "Direction"
+msgstr "جهت"
+
+msgid "Trigger Date"
+msgstr "تاریخ محرک"
+
+msgid ""
+"Use 'rule_trigger_date' to fire relative to when the rule triggered, or "
+"enter a date field name from the target model."
+msgstr ""
+"از 'rule_trigger_date' برای اجرا نسبت به زمانی که قانون راه‌اندازی شد "
+"استفاده کنید، یا یک نام فیلد تاریخ از مدل هدف وارد کنید."
+
+msgid "Action Type"
+msgstr "نوع اقدام"
+
+msgid "Action Config"
+msgstr "پیکربندی اقدام"
+
+msgid "Workflow Time Trigger Action"
+msgstr "اقدام محرک زمانی گردش کار"
+
+msgid "Workflow Time Trigger Actions"
+msgstr "اقدامات محرک زمانی گردش کار"
+
+msgid "Pending"
+msgstr "در انتظار"
+
+msgid "Completed"
+msgstr "تکمیل شده"
+
+msgid "Failed"
+msgstr "ناموفق"
+
+msgid "Time Trigger"
+msgstr "محرک زمانی"
+
+msgid "Record ID"
+msgstr "شناسه رکورد"
+
+msgid "Scheduled At"
+msgstr "زمان‌بندی شده در"
+
+msgid "Status"
+msgstr "وضعیت"
+
+msgid "Executed At"
+msgstr "اجرا شده در"
+
+msgid "Error"
+msgstr "خطا"
+
+msgid "Scheduled Workflow Execution"
+msgstr "اجرای گردش کار زمان‌بندی شده"
+
+msgid "Scheduled Workflow Executions"
+msgstr "اجراهای گردش کار زمان‌بندی شده"
+
+msgid "Field"
+msgstr "فیلد"
+
+msgid "Select field"
+msgstr "انتخاب فیلد"
+
+msgid "Task title"
+msgstr "عنوان وظیفه"
+
+msgid "Due basis"
+msgstr "مبنای سررسید"
+
+msgid "Record submission date"
+msgstr "تاریخ ثبت رکورد"
+
+msgid "Record update date"
+msgstr "تاریخ به‌روزرسانی رکورد"
+
+msgid "Due in days"
+msgstr "سررسید در روز"
+
+msgid "Not Started"
+msgstr "شروع نشده"
+
+msgid "In Progress"
+msgstr "در حال انجام"
+
+msgid "Priority"
+msgstr "اولویت"
+
+msgid "Low"
+msgstr "پایین"
+
+msgid "Medium"
+msgstr "متوسط"
+
+msgid "High"
+msgstr "بالا"
+
+msgid "Task description"
+msgstr "توضیحات وظیفه"
+
+msgid "Mail template"
+msgstr "قالب ایمیل"
+
+msgid "Select template"
+msgstr "انتخاب قالب"
+
+msgid "To (email field / email / self)"
+msgstr "به (فیلد ایمیل / ایمیل / خود)"
+
+msgid "Also send to"
+msgstr "همچنین ارسال به"
+
+msgid "Notification template"
+msgstr "قالب اعلان"
+
+msgid "To (record field / self)"
+msgstr "به (فیلد رکورد / خود)"
+
+msgid "Also notify to"
+msgstr "همچنین اعلان به"
+
+msgid "Custom message (optional, overrides template)"
+msgstr "پیام سفارشی (اختیاری، بازنویسی قالب)"
+
+msgid "Edit Action"
+msgstr "ویرایش اقدام"
+
+msgid "Add Action"
+msgstr "افزودن اقدام"
+
+msgid "Close"
+msgstr "بستن"
+
+msgid "Action type"
+msgstr "نوع اقدام"
+
+msgid "Select action type"
+msgstr "انتخاب نوع اقدام"
+
+msgid "Mail"
+msgstr "ایمیل"
+
+msgid "Cancel"
+msgstr "لغو"
+
+msgid "Save"
+msgstr "ذخیره"
+
+msgid "Select value"
+msgstr "انتخاب مقدار"
+
+msgid "Edit Condition"
+msgstr "ویرایش شرط"
+
+msgid "Add Condition"
+msgstr "افزودن شرط"
+
+msgid "---------"
+msgstr "---------"
+
+msgid "Logical Operator (join with next condition)"
+msgstr "عملگر منطقی (اتصال با شرط بعدی)"
+
+msgid "Are you sure you want to deactivate this workflow rule?"
+msgstr "آیا مطمئن هستید که می‌خواهید این قانون گردش کار را غیرفعال کنید؟"
+
+msgid "Are you sure you want to activate this workflow rule?"
+msgstr "آیا مطمئن هستید که می‌خواهید این قانون گردش کار را فعال کنید؟"
+
+msgid "Entry Criteria"
+msgstr "معیارهای ورود"
+
+msgid "No conditions set."
+msgstr "هیچ شرطی تنظیم نشده است."
+
+msgid "Immediate Actions"
+msgstr "اقدامات فوری"
+
+msgid "Add"
+msgstr "افزودن"
+
+msgid "Delete Action"
+msgstr "حذف اقدام"
+
+msgid "No actions added yet"
+msgstr "هنوز هیچ اقدامی اضافه نشده است"
+
+msgid "Use the Add button to configure what happens when this rule fires."
+msgstr ""
+"از دکمه افزودن برای پیکربندی آنچه هنگام اجرای این قانون اتفاق می‌افتد "
+"استفاده کنید."
+
+msgid "Time Trigger Actions"
+msgstr "اقدامات محرک زمانی"
+
+msgid "Execution History"
+msgstr "تاریخچه اجرا"
+
+msgid "Edit"
+msgstr "ویرایش"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "No time triggers added yet"
+msgstr "هنوز هیچ محرک زمانی اضافه نشده است"
+
+msgid "Use the Add button to schedule actions after a delay."
+msgstr "از دکمه افزودن برای زمان‌بندی اقدامات پس از تأخیر استفاده کنید."
+
+msgid "Edit Time Trigger"
+msgstr "ویرایش محرک زمانی"
+
+msgid "Add Time Trigger"
+msgstr "افزودن محرک زمانی"
+
+msgid "Trigger Timing"
+msgstr "زمان‌بندی محرک"
+
+msgid "Time Trigger Execution History"
+msgstr "تاریخچه اجرای محرک زمانی"
+
+msgid "activated"
+msgstr "فعال شد"
+
+msgid "deactivated"
+msgstr "غیرفعال شد"
+
+msgid "When should this rule apply?"
+msgstr "این قانون چه زمانی باید اعمال شود؟"
+
+msgid "At least one condition is required."
+msgstr "حداقل یک شرط الزامی است."
+
+msgid "Model"
+msgstr "مدل"
+
+msgid "Execute on"
+msgstr "اجرا بر روی"
+
+msgid "Active"
+msgstr "فعال"
+
+msgid "Record"
+msgstr "رکورد"
+
+msgid "Workflow rule not found."
+msgstr "قانون گردش کار یافت نشد."
+
+msgid "Condition saved."
+msgstr "شرط ذخیره شد."
+
+msgid "Action saved."
+msgstr "اقدام ذخیره شد."
+
+msgid "Time trigger action saved."
+msgstr "اقدام محرک زمانی ذخیره شد."

@@ -1,0 +1,449 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-18 14:05+0000\n"
+"PO-Revision-Date: 2026-08-01 12:00+0330\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Module for managing cadence workflows and runtime activity sequences."
+msgstr "ماژول برای مدیریت گردش‌های کاری توالی و دنباله‌های فعالیت زمان اجرا."
+
+msgid ""
+"Stop rendering blank cards for branch parents without a continuation. Extend"
+" the New Lead Outreach demo cadence with a multi-stage follow-up flow."
+msgstr ""
+
+msgid ""
+"Standardized exception chaining in cadence forms to preserve root-cause "
+"tracebacks."
+msgstr ""
+
+msgid ""
+"Migrated signal and timezone imports to the horilla shims, standardized "
+"first-party import groups, and added class and method docstrings for pylint "
+"compliance."
+msgstr ""
+"واردات سیگنال و منطقه زمانی به شیم‌های horilla مهاجرت داده شدند، گروه‌های "
+"واردات طرف اول استاندارد شدند و مستندسازی کلاس و متد برای انطباق با pylint "
+"اضافه شد."
+
+msgid ""
+"Cadence forms aligned with HorillaModelForm layout: field_order, Meta.fields"
+" = \"__all__\", Meta.exclude, and keep_on_form; save logic and HTMX "
+"unchanged."
+msgstr ""
+"فرم‌های توالی با چیدمان HorillaModelForm هماهنگ شدند: field_order، "
+"Meta.fields = \"__all__\"، Meta.exclude و keep_on_form؛ منطق ذخیره و HTMX "
+"بدون تغییر."
+
+msgid ""
+"Release 1.10: cadences ship under contrib with app label cadences. Signals, "
+"registrations, URLs, and static paths updated to match the new contrib "
+"layout."
+msgstr ""
+"نسخه ۱.۱۰: توالی‌ها تحت contrib با برچسب برنامه cadences ارائه می‌شوند. "
+"سیگنال‌ها، ثبت‌نام‌ها، URLها و مسیرهای استاتیک برای مطابقت با چیدمان جدید "
+"contrib به‌روزرسانی شدند."
+
+msgid ""
+"Implemented cadence signals for runtime activities, enabling automated "
+"cadence-driven workflow execution and activity tracking."
+msgstr ""
+"سیگنال‌های توالی برای فعالیت‌های زمان اجرا پیاده‌سازی شدند و امکان اجرای "
+"گردش کار خودکار مبتنی بر توالی و پیگیری فعالیت را فراهم می‌کنند."
+
+msgid "Cadences"
+msgstr "توالی‌ها"
+
+msgid "At least one condition is required."
+msgstr "حداقل یک شرط الزامی است."
+
+msgid "Each condition row must include Field, Operator, and Value."
+msgstr "هر ردیف شرط باید شامل فیلد، عملگر و مقدار باشد."
+
+msgid "Mail to"
+msgstr "ارسال ایمیل به"
+
+msgid ""
+"Choose which user or email field on the record should receive this mail."
+msgstr ""
+"انتخاب کنید که کدام فیلد کاربر یا ایمیل روی رکورد باید این ایمیل را دریافت "
+"کند."
+
+msgid ""
+"Email follow-up is unavailable until an outgoing mail server is configured."
+msgstr ""
+"پیگیری ایمیل تا زمانی که سرور ایمیل خروجی پیکربندی نشده باشد در دسترس نیست."
+
+msgid "Parent follow-up is required for this stage."
+msgstr "پیگیری والد برای این مرحله الزامی است."
+
+msgid "Invalid cadence for branch."
+msgstr "توالی نامعتبر برای شاخه."
+
+msgid "Parent must belong to the previous follow-up stage."
+msgstr "والد باید متعلق به مرحله پیگیری قبلی باشد."
+
+msgid "Name"
+msgstr "نام"
+
+msgid "Module"
+msgstr "ماژول"
+
+msgid "Target module"
+msgstr "ماژول هدف"
+
+msgid "Description"
+msgstr "توضیحات"
+
+msgid "Cadence"
+msgstr "توالی"
+
+msgid "Field Name"
+msgstr "نام فیلد"
+
+msgid "Operator"
+msgstr "عملگر"
+
+msgid "Value"
+msgstr "مقدار"
+
+msgid "AND"
+msgstr "و"
+
+msgid "OR"
+msgstr "یا"
+
+msgid "Logical Operator"
+msgstr "عملگر منطقی"
+
+msgid "Order"
+msgstr "ترتیب"
+
+msgid "Cadence Condition"
+msgstr "شرط توالی"
+
+msgid "Cadence Conditions"
+msgstr "شروط توالی"
+
+msgid "Task"
+msgstr "وظیفه"
+
+msgid "Call"
+msgstr "تماس"
+
+msgid "Email"
+msgstr "ایمیل"
+
+msgid "Overdue"
+msgstr "تأخیر"
+
+msgid "Immediately"
+msgstr "بلافاصله"
+
+msgid "Minute"
+msgstr "دقیقه"
+
+msgid "Hour"
+msgstr "ساعت"
+
+msgid "Day"
+msgstr "روز"
+
+msgid "Month"
+msgstr "ماه"
+
+msgid "Follow up"
+msgstr "پیگیری"
+
+msgid "Stage number (1 = first follow-up)."
+msgstr "شماره مرحله (۱ = اولین پیگیری)."
+
+msgid "Follow up Type"
+msgstr "نوع پیگیری"
+
+msgid "Branched from"
+msgstr "شاخه شده از"
+
+#| msgid ""
+#| "Set when this step was created from a specific parent card's + (next stage)."
+msgid ""
+"Set when this step was created from a specific parent card’s + (next stage)."
+msgstr ""
+"زمانی تنظیم می‌شود که این مرحله از + کارت والد خاص (مرحله بعدی) ایجاد شده "
+"باشد."
+
+msgid "Do This"
+msgstr "انجام این"
+
+msgid "Do This Value"
+msgstr "مقدار انجام این"
+
+msgid "Required for minute/hour/day/month."
+msgstr "برای دقیقه/ساعت/روز/ماه الزامی است."
+
+msgid "After Previous Status Is"
+msgstr "بعد از اینکه وضعیت قبلی باشد"
+
+msgid "Required from follow up 2 onwards."
+msgstr "از پیگیری ۲ به بعد الزامی است."
+
+msgid "Subject"
+msgstr "موضوع"
+
+msgid "Trigger Date + Days"
+msgstr "تاریخ محرک + روزها"
+
+msgid "Status"
+msgstr "وضعیت"
+
+msgid "Priority"
+msgstr "اولویت"
+
+msgid "Task Owner"
+msgstr "مالک وظیفه"
+
+msgid "Call Type"
+msgstr "نوع تماس"
+
+msgid "Call Status"
+msgstr "وضعیت تماس"
+
+msgid "Call Start + Days"
+msgstr "شروع تماس + روزها"
+
+msgid "Call Owner"
+msgstr "مالک تماس"
+
+msgid "Purpose"
+msgstr "هدف"
+
+msgid "Recipients for this step. Choose user/email fields from the record"
+msgstr "گیرندگان برای این مرحله. فیلدهای کاربر/ایمیل را از رکورد انتخاب کنید"
+
+msgid "Mail Template"
+msgstr "قالب ایمیل"
+
+msgid "Cadence Follow up"
+msgstr "پیگیری توالی"
+
+msgid "Cadence Follow ups"
+msgstr "پیگیری‌های توالی"
+
+msgid "Follow up 1 can only contain one item."
+msgstr "پیگیری ۱ فقط می‌تواند یک مورد داشته باشد."
+
+msgid "Select status condition from previous follow-up."
+msgstr "شرط وضعیت را از پیگیری قبلی انتخاب کنید."
+
+msgid "Cannot add this follow-up before creating previous follow-up bucket."
+msgstr "امکان افزودن این پیگیری قبل از ایجاد سطل پیگیری قبلی وجود ندارد."
+
+msgid "Enter value for selected Do This unit."
+msgstr "مقدار را برای واحد انجام این انتخاب شده وارد کنید."
+
+msgid "This field is required for selected follow-up type."
+msgstr "این فیلد برای نوع پیگیری انتخاب شده الزامی است."
+
+msgid "Invalid follow-up type."
+msgstr "نوع پیگیری نامعتبر است."
+
+msgid "Back"
+msgstr "بازگشت"
+
+msgid "Edit"
+msgstr "ویرایش"
+
+msgid "View Reports"
+msgstr "مشاهده گزارش‌ها"
+
+msgid "Actions"
+msgstr "اقدامات"
+
+msgid "Menu"
+msgstr "منو"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Do this"
+msgstr "انجام این"
+
+msgid "After previous status is"
+msgstr "بعد از اینکه وضعیت قبلی باشد"
+
+msgid "Due Date"
+msgstr "تاریخ سررسید"
+
+msgid "Trigger date +"
+msgstr "تاریخ محرک +"
+
+msgid "day(s)"
+msgstr "روز(ها)"
+
+msgid "Mail template"
+msgstr "قالب ایمیل"
+
+msgid "Add follow-up in next stage"
+msgstr "افزودن پیگیری در مرحله بعدی"
+
+msgid "Add follow-up in this stage"
+msgstr "افزودن پیگیری در این مرحله"
+
+msgid "Add another follow-up in this stage"
+msgstr "افزودن پیگیری دیگر در این مرحله"
+
+msgid ""
+"Get started by adding an Email, Task, or Call follow-up to your Cadence."
+msgstr "با افزودن یک پیگیری ایمیل، وظیفه یا تماس به توالی خود شروع کنید."
+
+msgid "Add Follow Ups"
+msgstr "افزودن پیگیری‌ها"
+
+msgid "Add Follow-up"
+msgstr "افزودن پیگیری"
+
+msgid "Cadence Name"
+msgstr "نام توالی"
+
+msgid "Start Date"
+msgstr "تاریخ شروع"
+
+msgid "Last Follow-up Response"
+msgstr "آخرین پاسخ پیگیری"
+
+msgid "Next Follow-up"
+msgstr "پیگیری بعدی"
+
+msgid "No active cadences match this record right now."
+msgstr "هیچ توالی فعالی در حال حاضر با این رکورد مطابقت ندارد."
+
+msgid "Total Triggered Calls"
+msgstr "کل تماس‌های راه‌اندازی شده"
+
+msgid "Completed Calls"
+msgstr "تماس‌های تکمیل شده"
+
+msgid "Scheduled Calls"
+msgstr "تماس‌های زمان‌بندی شده"
+
+msgid "Cancelled Calls"
+msgstr "تماس‌های لغو شده"
+
+msgid "Total Triggered Mails"
+msgstr "کل ایمیل‌های راه‌اندازی شده"
+
+msgid "Email Delivered"
+msgstr "ایمیل تحویل داده شد"
+
+msgid "Bounced Emails"
+msgstr "ایمیل‌های برگشت خورده"
+
+msgid "Opened Emails"
+msgstr "ایمیل‌های باز شده"
+
+msgid "Failed Mails"
+msgstr "ایمیل‌های ناموفق"
+
+msgid "Report"
+msgstr "گزارش"
+
+msgid "Cadences Report"
+msgstr "گزارش توالی‌ها"
+
+msgid "Total Triggered Tasks"
+msgstr "کل وظایف راه‌اندازی شده"
+
+msgid "Completed Tasks"
+msgstr "وظایف تکمیل شده"
+
+msgid "Pending Tasks"
+msgstr "وظایف در انتظار"
+
+msgid "Unresolved"
+msgstr "حل نشده"
+
+msgid "Mail Configuration Required"
+msgstr "پیکربندی ایمیل الزامی است"
+
+msgid "Close"
+msgstr "بستن"
+
+msgid "Cannot add Email Follow-up"
+msgstr "امکان افزودن پیگیری ایمیل وجود ندارد"
+
+msgid "Configure outgoing mail to use Email follow-ups in cadence."
+msgstr ""
+"برای استفاده از پیگیری‌های ایمیل در توالی، ایمیل خروجی را پیکربندی کنید."
+
+msgid "Configure"
+msgstr "پیکربندی"
+
+msgid "Follow-Up"
+msgstr "پیگیری"
+
+msgid "Completed"
+msgstr "تکمیل شده"
+
+msgid "Pending"
+msgstr "در انتظار"
+
+msgid "Scheduled"
+msgstr "زمان‌بندی شده"
+
+msgid "Cancelled"
+msgstr "لغو شده"
+
+msgid "Email Template"
+msgstr "قالب ایمیل"
+
+msgid "Delivered"
+msgstr "تحویل داده شد"
+
+msgid "Bounced"
+msgstr "برگشت خورد"
+
+msgid "Opened"
+msgstr "باز شد"
+
+msgid "Failed"
+msgstr "ناموفق"
+
+msgid "New"
+msgstr "جدید"
+
+#| msgid "Cadence Conditions"
+msgid "Conditions"
+msgstr "شروط"
+
+msgid "Follow-up removed."
+msgstr "پیگیری حذف شد."
+
+msgid ""
+"Remove or reassign follow-ups in later stages before deleting this step."
+msgstr ""
+"قبل از حذف این مرحله، پیگیری‌های مراحل بعدی را حذف یا دوباره تخصیص دهید."
+
+msgid "Next Follow-up Response"
+msgstr "پاسخ پیگیری بعدی"
+
+msgid "Invalid model for cadence tab."
+msgstr "مدل نامعتبر برای برگه توالی."
+
+msgid "Object not found."
+msgstr "شیء یافت نشد."
+
+msgid "You don't have permission to view this item."
+msgstr "شما مجوز مشاهده این مورد را ندارید."

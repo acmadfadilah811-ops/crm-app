@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 19:52+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Custom Fields"
+msgstr "Bidang Kustom"
+
+msgid "You do not have permission to edit this."
+msgstr "Anda tidak memiliki izin untuk mengedit ini."
+
+msgid "You do not have permission to view this."
+msgstr "Anda tidak memiliki izin untuk melihat ini."
+
+msgid "This field is required."
+msgstr "Bidang ini wajib diisi."
+
+msgid "Enter a valid number."
+msgstr "Masukkan nomor yang valid."
+
+msgid "Select a valid choice."
+msgstr "Pilih pilihan yang valid."
+
+msgid "Model"
+msgstr "Model"
+
+msgid "Option 1, Option 2, Option 3"
+msgstr "Opsi 1, Opsi 2, Opsi 3"
+
+msgid "Choices are required for Multiple Choice fields."
+msgstr "Pilihan diperlukan untuk bidang Pilihan Ganda."
+
+msgid "Custom fields are only supported for Leads and Opportunities."
+msgstr "Bidang khusus hanya didukung untuk Prospek dan Peluang."
+
+msgid "Custom Field"
+msgstr "Bidang Kustom"
+
+msgid "Small Text"
+msgstr "Teks Kecil"
+
+msgid "Large Text"
+msgstr "Teks Besar"
+
+msgid "Number"
+msgstr "Nomor"
+
+msgid "Multiple Choice"
+msgstr "Pilihan Ganda"
+
+msgid "Field Name"
+msgstr "Nama Bidang"
+
+msgid "Field Type"
+msgstr "Jenis Bidang"
+
+msgid "Required"
+msgstr "Diperlukan"
+
+msgid "Comma-separated list of choices (only for Multiple Choice type)"
+msgstr "Daftar pilihan yang dipisahkan koma (hanya untuk jenis Pilihan Ganda)"
+
+msgid "Choices"
+msgstr "Pilihan"
+
+msgid "Display Order"
+msgstr "Urutan Tampilan"
+
+msgid "Field Definition"
+msgstr "Definisi Bidang"
+
+msgid "Object ID"
+msgstr "ID Objek"
+
+msgid "Value"
+msgstr "Nilai"
+
+msgid "Numeric Value"
+msgstr "Nilai Numerik"
+
+msgid "Custom Field Value"
+msgstr "Nilai Bidang Khusus"
+
+msgid "Custom Field Values"
+msgstr "Nilai Bidang Khusus"
+
+#, python-format
+msgid "Enter %(name)s"
+msgstr "Masukkan%(name)s"
+
+msgid ""
+"Define custom fields to capture additional information on Leads and "
+"Opportunities."
+msgstr ""
+"Tentukan bidang khusus untuk mendapatkan informasi tambahan tentang Prospek "
+"dan Peluang."
+
+msgid "Name"
+msgstr "Nama"
+
+msgid "Type"
+msgstr "Jenis"
+
+msgid "Order"
+msgstr "Memesan"
+
+msgid "Edit"
+msgstr "Sunting"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid ""
+"Define extra fields on Leads and Opportunities. Configure them in Settings "
+"and use them on create/edit forms, detail views, list columns, filters, and "
+"exports."
+msgstr ""
+"Tentukan bidang tambahan pada Prospek dan Peluang.Konfigurasikan di "
+"Pengaturan dan gunakan pada pembuatan/edit formulir, tampilan detail, kolom "
+"daftar, filter, dan ekspor."
+
+msgid ""
+"Add a Custom Fields settings app for Leads and Opportunities. Support small "
+"text, large text, number, and multiple choice fields. Inject values into "
+"create/edit forms, detail views, list columns, record filters, and exports "
+"without changing Horilla core."
+msgstr ""
+"Tambahkan aplikasi pengaturan Bidang Khusus untuk Prospek dan "
+"Peluang.Mendukung bidang teks kecil, teks besar, angka, dan pilihan "
+"ganda.Menyuntikkan nilai ke dalam formulir buat/edit, tampilan detail, kolom"
+" daftar, filter rekaman, dan ekspor tanpa mengubah inti Horilla."

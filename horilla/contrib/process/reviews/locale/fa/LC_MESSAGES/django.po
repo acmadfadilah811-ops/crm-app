@@ -1,0 +1,367 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-18 14:05+0000\n"
+"PO-Revision-Date: 2026-08-24 12:00+0330\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Review Process"
+msgstr "فرآیند بازبینی"
+
+msgid "Select field(s)"
+msgstr "انتخاب فیلد(ها)"
+
+msgid "Fields to Review"
+msgstr "فیلدهای بازبینی"
+
+msgid "Please select at least one field to review."
+msgstr "لطفاً حداقل یک فیلد برای بازبینی انتخاب کنید."
+
+msgid "Please select at least one approver user."
+msgstr "لطفاً حداقل یک کاربر تأییدکننده انتخاب کنید."
+
+msgid "Please select at least one approver role."
+msgstr "لطفاً حداقل یک نقش تأییدکننده انتخاب کنید."
+
+msgid "Review Processes"
+msgstr "فرآیندهای بازبینی"
+
+msgid "Review Jobs"
+msgstr "کارهای بازبینی"
+
+msgid "Title"
+msgstr "عنوان"
+
+msgid "Method Title"
+msgstr "عنوان روش"
+
+msgid "Module"
+msgstr "ماژول"
+
+msgid "Notify on Resubmission"
+msgstr "اعلان در ارسال مجدد"
+
+msgid "Notify on Approval"
+msgstr "اعلان در تأیید"
+
+msgid "Notify on Rejection"
+msgstr "اعلان در رد"
+
+msgid "Title is required."
+msgstr "عنوان الزامی است."
+
+msgid ""
+"An active review process already exists for this model and company. Only one "
+"active process is allowed per model per company."
+msgstr "یک فرآیند بازبینی فعال برای این مدل و شرکت وجود دارد. فقط یک فرآیند فعال در هر مدل و هر شرکت مجاز است."
+
+msgid "Field Name"
+msgstr "نام فیلد"
+
+msgid "Operator"
+msgstr "عملگر"
+
+msgid "Value"
+msgstr "مقدار"
+
+msgid "AND"
+msgstr "و"
+
+msgid "OR"
+msgstr "یا"
+
+msgid "Logical Operator"
+msgstr "عملگر منطقی"
+
+msgid "Order"
+msgstr "ترتیب"
+
+msgid "Review Condition"
+msgstr "شرط بازبینی"
+
+msgid "Review Conditions"
+msgstr "شروط بازبینی"
+
+msgid "User"
+msgstr "کاربر"
+
+msgid "Role"
+msgstr "نقش"
+
+msgid "Approver Type"
+msgstr "نوع تأییدکننده"
+
+msgid "Approver Users"
+msgstr "کاربران تأییدکننده"
+
+msgid "Approver Roles"
+msgstr "نقش‌های تأییدکننده"
+
+msgid "Review Rule"
+msgstr "قانون بازبینی"
+
+msgid "Review Rules"
+msgstr "قوانین بازبینی"
+
+msgid "Review Rule Condition"
+msgstr "شرط قانون بازبینی"
+
+msgid "Review Rule Conditions"
+msgstr "شروط قانون بازبینی"
+
+msgid "Pending"
+msgstr "در انتظار"
+
+msgid "Approved"
+msgstr "تأیید شده"
+
+msgid "Rejected"
+msgstr "رد شده"
+
+msgid "Content Type"
+msgstr "نوع محتوا"
+
+msgid "Object ID"
+msgstr "شناسه شیء"
+
+msgid "Assigned To"
+msgstr "اختصاص یافته به"
+
+msgid "Review Fields Snapshot"
+msgstr "نمای فیلدهای بازبینی"
+
+msgid "Status"
+msgstr "وضعیت"
+
+msgid "Reviewed By"
+msgstr "بازبینی شده توسط"
+
+msgid "Reviewed At"
+msgstr "بازبینی شده در"
+
+msgid "Review Note"
+msgstr "یادداشت بازبینی"
+
+msgid "Review Job"
+msgstr "کار بازبینی"
+
+msgid "Add More"
+msgstr "افزودن بیشتر"
+
+msgid "Field Review"
+msgstr "بازبینی فیلد"
+
+msgid "Close"
+msgstr "بستن"
+
+msgid "Your Decision"
+msgstr "تصمیم شما"
+
+msgid "Comment"
+msgstr "نظر"
+
+msgid "Add reason for this field decision"
+msgstr "دلیل این تصمیم فیلد را اضافه کنید"
+
+msgid "Reject"
+msgstr "رد"
+
+msgid "Approve"
+msgstr "تأیید"
+
+msgid "Process"
+msgstr "فرآیند"
+
+msgid "Record"
+msgstr "رکورد"
+
+#, python-format
+msgid ""
+"\n"
+"%(done)s / %(total)s approved.\n"
+"                        "
+msgstr ""
+"\n"
+"%(done)s / %(total)s تأیید شده.\n"
+"                        "
+
+msgid "Record Details"
+msgstr "جزئیات رکورد"
+
+msgid "No additional record details available."
+msgstr "هیچ جزئیات اضافی برای رکورد در دسترس نیست."
+
+msgid "Fields To Review"
+msgstr "فیلدهای بازبینی"
+
+msgid "Review field"
+msgstr "فیلد بازبینی"
+
+msgid "Edit rejected field"
+msgstr "ویرایش فیلد رد شده"
+
+msgid "Edit"
+msgstr "ویرایش"
+
+msgid "Save and resubmit"
+msgstr "ذخیره و ارسال مجدد"
+
+msgid "Save"
+msgstr "ذخیره"
+
+msgid "Cancel"
+msgstr "لغو"
+
+msgid "No review fields captured for this job."
+msgstr "هیچ فیلد بازبینی برای این کار ثبت نشده است."
+
+msgid "Multi-Step Form"
+msgstr "فرم چند مرحله‌ای"
+
+msgid "Single-Step Form"
+msgstr "فرم تک مرحله‌ای"
+
+msgid "Choose File"
+msgstr "انتخاب فایل"
+
+msgid "No file chosen"
+msgstr "هیچ فایلی انتخاب نشده است"
+
+msgid "Clear"
+msgstr "پاک کردن"
+
+msgid "Read Only"
+msgstr "فقط خواندنی"
+
+msgid "Add"
+msgstr "افزودن"
+
+msgid "Loading..."
+msgstr "در حال بارگذاری..."
+
+msgid "Conditions"
+msgstr "شروط"
+
+msgid "Remove"
+msgstr "حذف"
+
+msgid "Save & New"
+msgstr "ذخیره و جدید"
+
+msgid "Entry Criteria"
+msgstr "معیارهای ورود"
+
+msgid ""
+"No entry criteria set. This review process applies to all records in the "
+"module."
+msgstr "هیچ معیار ورودی تنظیم نشده است. این فرآیند بازبینی برای همه رکوردهای ماژول اعمال می‌شود."
+
+msgid "Actions"
+msgstr "اقدامات"
+
+msgid "Resubmission"
+msgstr "ارسال مجدد"
+
+msgid "Approval"
+msgstr "تأیید"
+
+msgid "Rejection"
+msgstr "رد"
+
+msgid "Fields"
+msgstr "فیلدها"
+
+msgid "No review rules added"
+msgstr "هیچ قانون بازبینی اضافه نشده است"
+
+msgid ""
+"Add a rule to assign an approver. Criteria is optional — if left empty, the "
+"rule applies to all records."
+msgstr "برای تعیین تأییدکننده، یک قانون اضافه کنید. معیارها اختیاری هستند — در صورت خالی بودن، قانون برای همه رکوردها اعمال می‌شود."
+
+msgid "Rule"
+msgstr "قانون"
+
+msgid "Edit Rule"
+msgstr "ویرایش قانون"
+
+msgid "Delete Rule"
+msgstr "حذف قانون"
+
+msgid "Approver"
+msgstr "تأییدکننده"
+
+#, python-format
+msgid "You have a pending review request for %(record)s in %(process)s."
+msgstr "شما یک درخواست بازبینی در انتظار برای %(record)s در %(process)s دارید."
+
+msgid "Add Rule"
+msgstr "افزودن قانون"
+
+msgid "Edit Process"
+msgstr "ویرایش فرآیند"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Criteria"
+msgstr "معیارها"
+
+msgid "Condition"
+msgstr "شرط"
+
+msgid "activated"
+msgstr "فعال شد"
+
+msgid "deactivated"
+msgstr "غیرفعال شد"
+
+msgid "An active review process already exists for this model and company."
+msgstr "یک فرآیند بازبینی فعال برای این مدل و شرکت وجود دارد."
+
+msgid "My Review Jobs"
+msgstr "کارهای بازبینی من"
+
+msgid "Review"
+msgstr "بازبینی"
+
+msgid "The module for this review record is no longer available."
+msgstr "ماژول این رکورد بازبینی دیگر در دسترس نیست."
+
+#, python-format
+msgid "%(owner)s resubmitted %(field)s in %(process)s for %(record)s."
+msgstr "%(owner)s %(field)s را در %(process)s برای %(record)s دوباره ارسال کرد."
+
+msgid "Invalid decision."
+msgstr "تصمیم نامعتبر است."
+
+#, python-format
+msgid ""
+"%(field)s was approved in %(process)s by %(approver)s. Comment: %(comment)s"
+msgstr "%(field)s در %(process)s توسط %(approver)s تأیید شد. نظر: %(comment)s"
+
+#, python-format
+msgid ""
+"%(field)s was rejected in %(process)s by %(approver)s. Reason: %(comment)s"
+msgstr "%(field)s در %(process)s توسط %(approver)s رد شد. دلیل: %(comment)s"
+
+msgid ""
+"All approvers have approved all review fields. Review completed successfully."
+msgstr "همه تأییدکنندگان همه فیلدهای بازبینی را تأیید کردند. بازبینی با موفقیت انجام شد."
+
+msgid ""
+"You have approved all fields. Waiting for other approvers to complete their "
+"review."
+msgstr "شما همه فیلدها را تأیید کرده‌اید. در انتظار تکمیل بازبینی توسط سایر تأییدکنندگان."

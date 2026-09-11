@@ -1,0 +1,67 @@
+<div id="step4">
+    {% if single_import %}
+        <div class="flex justify-between items-center mb-2">
+            <h2 class="text-md font-semibold">Import {{ module_verbose_name|default:module }}</h2>
+            <button
+                type="button"
+                onclick="closeModal()"
+                class="text-gray-500 hover:text-red-500 text-xl cursor-pointer"
+            >
+                <img src="{% static 'assets/icons/close.svg' %}" alt="{% trans 'Close' %}">
+            </button>
+        </div>
+    {% endif %}
+    {% include "import/_stepper.html" with current_step=4 %}
+
+    <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="text-sm flex">
+            <span class="text-dark-200 w-40">{% trans "Module" %}</span>
+            <span class="flex-1 text-dark-200"><span class="pe-2"
+                >:</span>{{ module_verbose_name|default:import_data.module }}</span>
+        </div>
+        <div class="text-sm flex">
+            <span class="text-dark-200 w-40">{% trans "Import Action" %}</span>
+            <span class="flex-1 text-dark-200">
+                <span class="pe-2">:</span>
+                {% if import_data.import_option == '1' %}{% trans "Create New" %}
+                {% elif import_data.import_option == '2' %}{% trans "Update Existing" %}
+                {% else %}{% trans "Create New and Update Existing" %}
+                {% endif %}
+            </span>
+        </div>
+        <div class="text-sm flex">
+            <span class="text-dark-200 w-40">{% trans "File" %}</span>
+            <span class="flex-1 text-dark-200"><span class="pe-2">:</span>{{ import_data.original_filename }}</span>
+        </div>
+        <div class="text-sm flex">
+            <span class="text-dark-200 w-40">{% trans "Mapped" %}</span>
+            <span class="flex-1 text-dark-200"><span class="pe-2">:</span>{{ mapped_count }} {% trans "Fields" %}</span>
+        </div>
+        <div class="text-sm flex">
+            <span class="text-dark-200 w-40">{% trans "Unmapped" %}</span>
+            <span class="flex-1 text-dark-200"><span class="pe-2">:</span>{{ unmapped_count }}
+                {% trans "Fields" %}</span>
+        </div>
+    </div>
+
+    <form hx-post="{% url 'core:import_step4' %}" hx-target="#import-container" hx-swap="innerHTML">
+        {% csrf_token %}
+        <div class="flex gap-2 justify-between">
+            <button
+                type="button"
+                hx-get="{% url 'core:import_step3' %}"
+                hx-target="#import-container"
+                hx-swap="innerHTML"
+                class="backBtn btn-with-icon flex gap-3 text-sm px-5 py-2 rounded-md text-primary-600 bg-primary-100 hover:bg-primary-600 hover:text-[white] transition duration-300 cursor-pointer"
+            >
+                {% trans "Previous" %}
+            </button>
+            <button
+                type="submit"
+                class="nextBtn text-sm px-5 py-2 bg-primary-600 rounded-md hover:bg-primary-800 transition duration-300 text-[white]"
+            >
+                {% trans "Import" %}
+            </button>
+        </div>
+    </form>
+</div>

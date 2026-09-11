@@ -1,0 +1,642 @@
+body.dark {
+  color: white;
+  background-color: black;
+}
+body.dark .bg-\[\#fff\],
+body.dark .dropdown-content a:hover,
+body.dark .probar li .bg-\[\#F0F0F0\],
+body.dark .bg-gray-50,
+body.dark .bg-gray-100,
+body.dark .bg-blue-50,
+body.dark .bg-gray-200,
+body.dark .bg-dark-50,
+body.dark .bg-\[\#f8f8f9\],
+body.dark .module-icon,
+body.dark .bg-\[white\],
+body.dark .tabloading,
+body.dark .bg-\[\#f8fafc\]{
+  background-color: black !important;
+}
+body.dark .bg-white {
+  background-color: rgb(42 42 42) !important;
+}
+body.dark input:checked ~ .peer.bg-gray-200 {
+  background-color: #E54F38 !important;
+}
+body.dark input,
+body.dark textarea,
+body.dark .select2-container--default .select2-selection--single,
+body.dark .select2-container--default .select2-selection--multiple,
+body.dark .note-toolbar,
+body.dark .note-btn:not(.note-color-btn):not(.note-current-color-button){
+  background-color: black !important;
+}
+body.dark .nav-link .nav-link-icon {
+  background-color: white !important;
+}
+/* Let the icon follow the link's hover color instead of staying pinned to
+   white, so it turns orange in sync with the label text. Must set `color`
+   explicitly (not just background-color: currentColor) because the icon is
+   a <span>, and body.dark span above pins its own color to 80% white. */
+body.dark .nav-link:hover:not(.active):not(.bg-primary-600) .nav-link-icon {
+  color: var(--menu-arrow-fg, #E54F38) !important;
+  background-color: currentColor !important;
+}
+/* Same fix for the sub-sidebar's icon span */
+body.dark .sidebar-link:hover:not(.bg-primary-600) .sidebar-link-icon {
+  color: var(--menu-arrow-fg, #E54F38) !important;
+  background-color: currentColor !important;
+}
+/* Label text is also a span, so body.dark span (below) pins it to 80% white
+   and blocks the hover color inherited from .nav-link */
+body.dark .nav-link:hover:not(.active):not(.bg-primary-600) .nav-link-label {
+  color: var(--menu-arrow-fg, #E54F38) !important;
+}
+body.dark .bg-primary-50,
+body.dark .bg-primary-100,
+body.dark .select2-dropdown,
+body.dark .bg-dark-25,
+body.dark .bg-yellow-50,
+body.dark div:where(.swal2-popup),
+body.dark .bg-\[\#f1f1f1\],
+body.dark .bg-primary-200,
+body.dark .bg-\[\#e9edf0\],
+body.dark .hover\:bg-primary-100:hover,
+body.dark .has-\[\:checked\]\:bg-primary-100:has(:checked),
+body.dark .bg-blue-100,
+body.dark .panel-default>.panel-heading,
+body.dark .module-card
+{
+  background-color: #2f2f2f !important;
+}
+
+/* Select2: highlighted (hover) option in dark mode */
+body.dark .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: color-mix(in srgb, var(--menu-arrow-fg, #E54F38) 18%, #2f2f2f) !important;
+  color: rgb(255 255 255 / 95%) !important;
+}
+body.dark .header{
+  background: transparent;
+}
+body.dark .text-secondary-900,
+body.dark .text-color-600,
+body.dark .text-gray-700{
+  color: #ebebeb;
+}
+body.dark .nav-link:hover,
+body.dark .hover\:bg-\[\#f3f4f6\]:hover,
+body.dark #tab-campaigns button:hover,
+body.dark .progress li .sec::before,
+body.dark input[type="checkbox"],
+body.dark .swal2-popup.swal2-toast.custom-toast,
+body.dark .panel-default>.panel-heading{
+  background-color: var(--progress-track-bg, #5d5d5d) !important;
+}
+/* Editable area uses a plain neutral grey, not the theme-tinted progress
+   track variable above — that variable mixes in the tenant's primary
+   brand color, which reads as a jarring colored tint when the theme's
+   primary isn't a muted orange (e.g. a saturated pink/magenta brand). */
+body.dark .note-editor.note-frame .note-editing-area .note-editable{
+  background-color: #3f3f3f !important;
+}
+/* Dropdown item hover (layout + actions) – match detail view: black in dark */
+body.dark .hover\:bg-gray-50:hover {
+  background-color: black !important;
+}
+body.dark h1,
+body.dark .member-header,
+body.dark .probar li div,
+body.dark .list-disc,
+body.dark .border-\[\#dddddd\],
+body.dark .swal2-popup.swal2-toast.custom-toast .swal2-title,
+body.dark .module-description ,
+body.dark .module-name,
+body.dark .text-\[\#756f6fd1\],
+body.dark .text-gray-900{
+  color: rgb(255 255 255 / 95%) !important;
+}
+body.dark h3,
+body.dark .text-\[\#3d3d3d\] {
+  color: rgb(255 255 255 / 90%) !important;
+}
+body.dark p,
+body.dark .swal2-html-container,
+body.dark .member-footer div.name,
+body.dark .text-dark-200,
+body.dark .bg-primary-200 {
+  color: rgb(255 255 255 / 80%) !important;
+}
+body.dark .border-r,
+body.dark .border-b,
+body.dark .border-t,
+body.dark .border,
+body.dark .dropdown-content,
+body.dark .select2-container--default .select2-selection--single,
+body.dark .border-\[\#efefef\],
+body.dark .select2-dropdown,
+body.dark
+  .select2-container--default
+  .select2-search--dropdown
+  .select2-search__field,
+body.dark .border-\[2px\],
+body.dark .border-primary-400,
+body.dark .select2-container--default .select2-selection--multiple,
+body.dark .member-view-box,
+body.dark .fc-theme-standard td,
+body.dark .fc-theme-standard th,
+body.dark .fc-theme-standard .fc-scrollgrid,
+body.dark .border-\[\#e5e5e5\],
+body.dark .border-\[\#dddddd\],
+body.dark button,
+body.dark .note-toolbar,
+body.dark .border-\[\#e9e9e9\],
+body.dark .panel-default>.panel-heading,
+body.dark .module-card{
+  border-color: #565656 !important;
+}
+body.dark .border::placeholder {
+  color: #b5b5b5 !important;
+}
+body.dark {
+  --list-border-color: #565656;
+  --list-border-color-strong: #565656;
+}
+body.dark #settings-sidebar a,
+body.dark span,
+body.dark button,
+body.dark .dropdown-content a,
+body.dark label {
+  color: rgb(255 255 255 / 80%) !important;
+}
+body.dark #settings-sidebar a:hover,
+body.dark .dropdown-content a:hover {
+  color: var(--split-view-active-border, #E54F38) !important;
+}
+/* Settings sidebar active item: is_active adds text-primary-600 directly on
+   the <a>, but the blanket #settings-sidebar a color rule above (!important)
+   stomps it, leaving the active and inactive items visually identical */
+body.dark #settings-sidebar a.text-primary-600 {
+  color: var(--split-view-active-border, #E54F38) !important;
+}
+/* List view column header sort icon: sits in a <span>, so the blanket
+   body.dark span color rule above (!important) overrides the orange it
+   would otherwise inherit from the header <th>/<a>, leaving the icon
+   white while the header label text next to it is orange */
+body.dark th .sort-icon {
+  color: var(--split-view-active-border, #E54F38) !important;
+}
+/* Detail-view tab strip: Flowbite applies text-primary-600/border-primary-600
+   directly to the active tab <button>, but the blanket body.dark button
+   color/border-color rules above (both !important) stomp them, leaving
+   active and inactive tabs visually identical in dark mode */
+body.dark button[role="tab"].text-primary-600 {
+  color: var(--menu-arrow-fg, #E54F38) !important;
+  border-color: var(--menu-arrow-fg, #E54F38) !important;
+}
+/* Table cell hover text color: cell text lives in a child span, whose color
+   is forced above with !important, which otherwise beats the td's own
+   hover:text-primary-600 utility and silently kills the hover feedback */
+body.dark td.hover\:text-primary-600:hover span {
+  color: var(--menu-arrow-fg, #E54F38) !important;
+}
+/* Report builder R/C/aggregate toggle buttons: active state adds
+   text-primary-600 directly on the <button>, but the blanket body.dark
+   button color rule above (!important) stomps it, leaving active and
+   inactive toggles visually identical */
+body.dark #available-grouping-list button.text-primary-600 {
+  color: var(--menu-arrow-fg, #E54F38) !important;
+}
+/* Import stepper: current/completed step label is a <span class="text-primary-600">,
+   but the blanket body.dark span color rule above (!important) stomps it,
+   collapsing it visually with the not-yet-reached step labels */
+body.dark .import-stepper span.text-primary-600 {
+  color: var(--menu-arrow-fg, #E54F38) !important;
+}
+body.dark button.text-gray-500 img,
+body.dark #profile-edit-btn img,
+body.dark img.my-profile-edit-icon,
+body.dark #navBar img,
+body.dark .bg-dark-25 img,
+body.dark #dropdownLeftEndButton img,
+/* Chart view actions (same down.svg as report chart; invisible on dark bg without invert) */
+body.dark #chartViewActionsButton img,
+body.dark
+  .after\:bg-\[url\(\/static\/assets\/icons\/right-arrow\.svg\)\]::after,
+body.dark #tab-campaigns button img,
+body.dark #related-tab-contents button img,
+body.dark #modalCloseButton,
+body.dark .drag-handle img,
+body.dark #exportDropdownButton img,
+body.dark #toggleBtn img ,
+body.dark #nav-actions img,
+body.dark button.absolute img,
+body.dark .dropdown-wrapper .text-gray-600 img,
+body.dark .cursor-pointer img {
+  filter: brightness(0) invert(1);
+}
+body.dark .svg-themed,
+body.dark button .svg-themed,
+body.dark button.cursor-pointer .svg-themed {
+  filter: none !important;
+}
+/* Edit icon inside the notes/attachments detail modal explicitly forces
+   white via inline style so it stays visible on the solid primary-600
+   button; the blanket ".svg-themed { filter: none }" above would otherwise
+   cancel that and match the icon to the button's own red background. */
+body.dark #detail-container a.bg-primary-600 .svg-themed {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* History tab: collapsible day accordion (generics/history_tab.html) */
+body.dark #history-main .history-day,
+body.dark #history-main .border-\[\#e9e9e9\],
+body.dark #history-main .border-\[\#f5f5f5\] {
+  border-color: #565656 !important;
+}
+body.dark #history-main .text-black {
+  color: rgb(255 255 255 / 95%) !important;
+}
+body.dark #history-main .text-gray-400 {
+  color: rgb(255 255 255 / 45%) !important;
+}
+body.dark #history-main .text-gray-500 {
+  color: rgb(255 255 255 / 60%) !important;
+}
+body.dark #history-main .text-gray-600 {
+  color: rgb(255 255 255 / 70%) !important;
+}
+body.dark #history-main .text-gray-800 {
+  color: rgb(255 255 255 / 95%) !important;
+}
+body.dark #history-main .history-diff-chip {
+  background-color: color-mix(in srgb, var(--menu-arrow-fg, #E54F38) 25%, #2f2f2f) !important;
+  color: rgb(255 255 255 / 95%) !important;
+}
+body.dark #history-main .history-diff-chip-added {
+  background-color: color-mix(in srgb, #1f9254 25%, #2f2f2f) !important;
+  color: rgb(255 255 255 / 95%) !important;
+}
+body.dark #history-main .history-diff-chip-removed {
+  background-color: color-mix(in srgb, #e54f38 25%, #2f2f2f) !important;
+  color: rgb(255 255 255 / 95%) !important;
+}
+/* Keep real profile/sidebar avatar colors in dark mode */
+body.dark img.header-profile-avatar,
+body.dark img.settings-sidebar-avatar,
+body.dark .cursor-pointer img.header-profile-avatar,
+body.dark .cursor-pointer img.settings-sidebar-avatar {
+  filter: none !important;
+}
+body.dark #settings-sidebar .border-t:first-child {
+  border-color: transparent !important;
+}
+body.dark .custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #7f7f7f #424242;
+}
+body.dark .bg-primary-300 {
+  background-color: #3f3f3f !important;
+}
+
+/* Split view: tile hover in dark theme */
+body.dark #split-view-tiles .split-view-tile:hover {
+  background-color: #3f3f3f !important;
+}
+/* Split view: keep active tile colors from theme variables in dark mode */
+body.dark #split-view-tiles .split-view-tile.split-view-tile-active {
+  background-color: var(--split-view-active-bg, #3f3f3f) !important;
+  border-left-color: var(--split-view-active-border, #E54F38) !important;
+}
+body.dark #split-view-tiles .split-view-tile.split-view-tile-active .split-view-tile-name {
+  color: var(--split-view-active-border, #E54F38) !important;
+}
+body.dark .canvas-wrap {
+  background: #6a6a6a;
+}
+body.dark .member-view-box {
+  background-color: #252525;
+}
+/* Role tree action buttons (add user/sub-role, view, delete): replace light pastel backgrounds in dark mode */
+body.dark .member-footer div.downline button {
+  border-color: #565656 !important;
+}
+body.dark .member-footer div.downline button svg {
+  color: rgba(255, 255, 255, 0.85);
+}
+body.dark .downline button:nth-child(1),
+body.dark .downline button:nth-child(2),
+body.dark .downline button:nth-child(3),
+body.dark .downline button:nth-child(4) {
+  background-color: #3f3f3f !important;
+}
+body.dark .member-footer div.downline button:hover,
+body.dark .downline button:nth-child(1):hover,
+body.dark .downline button:nth-child(2):hover,
+body.dark .downline button:nth-child(3):hover,
+body.dark .downline button:nth-child(4):hover {
+  background-color: var(--split-view-active-border, #e54f38) !important;
+  border-color: var(--split-view-active-border, #e54f38) !important;
+}
+body.dark .member-footer div.downline button:hover svg {
+  color: white;
+}
+body.dark .fc .fc-daygrid-day.fc-day-today {
+  background-color: var(--calendar-today-bg, rgb(96 96 96)) !important;
+  color: var(--calendar-today-fg, #ffffff) !important;
+}
+body.dark .bg-\[\#ffefed\],
+body.dark .bg-\[\#f3f4f6\] {
+  background-color: rgb(82 82 82) !important;
+}
+body.dark .probar li .bg-primary-400 {
+  /* Use current theme primary accent instead of hard-coded coral */
+  background-color: color-mix(in srgb, var(--split-view-active-border, #E54F38) 30%, transparent) !important;
+}
+body.dark .probar li .hover\:bg-primary-600:hover {
+  /* Keep hover accent aligned with current theme */
+  background-color: var(--split-view-active-border, #E54F38) !important;
+}
+/* Header action icons (theme toggle, settings, history, language, switch company):
+   .bg-primary-100 is forced to dark grey with !important above, which otherwise
+   beats Tailwind's un-important hover:bg-primary-600 rule and kills the hover state */
+body.dark .hover\:bg-primary-600:hover {
+  background-color: var(--split-view-active-border, #E54F38) !important;
+}
+/* Calendar navbar buttons: body.dark button forces 80%-opacity white text
+   even on hover, dulling the intended full-white hover:text-white utility
+   against the orange hover background */
+body.dark .hover\:text-white:hover {
+  color: #ffffff !important;
+}
+body.dark .probar li .hover\:bg-\[\#838181\]:hover {
+  background-color: #5d5d5d !important;
+}
+body.dark .htmx-indicator {
+  background-color: black;
+}
+body.dark .black{
+  background-color: black !important;
+}
+body.dark .text-red-500{
+  color: red !important;
+}
+/* Status pills (e.g., Opportunity Won/Lost) should remain visible in dark mode */
+body.dark .bg-green-100 {
+  background-color: #14532d !important;
+}
+body.dark .text-green-800 {
+  color: #86efac !important;
+}
+body.dark .bg-red-100 {
+  background-color: #7f1d1d !important;
+}
+body.dark .text-red-800 {
+  color: #fca5a5 !important;
+}
+body.dark .bg-yellow-100 {
+  background-color: #713f12 !important;
+}
+body.dark .text-yellow-800 {
+  color: #fde68a !important;
+}
+body.dark .text-dark-400 {
+  color: #ffffff !important;
+}
+
+/* Checkbox-grid weekday pills: selected state uses has-[:checked]:bg-primary-100
+   (a light cream that dark.css does not remap via .bg-primary-100). Keep a dark
+   surface and force light label text so names stay readable. */
+body.dark .checkbox-grid-option {
+  background-color: rgb(42 42 42) !important;
+  border-color: #565656 !important;
+  color: rgb(255 255 255 / 95%) !important;
+}
+body.dark .checkbox-grid-option .checkbox-grid-option-label,
+body.dark .checkbox-grid-option span {
+  color: rgb(255 255 255 / 95%) !important;
+}
+body.dark .checkbox-grid-option:has(:checked) {
+  background-color: color-mix(
+    in srgb,
+    var(--menu-arrow-fg, #E54F38) 22%,
+    #2f2f2f
+  ) !important;
+  border-color: var(--menu-arrow-fg, #E54F38) !important;
+}
+body.dark .checkbox-grid-option:has(:checked) .checkbox-grid-option-label,
+body.dark .checkbox-grid-option:has(:checked) span {
+  color: rgb(255 255 255 / 95%) !important;
+}
+/* User chip name label (record detail views) is near-black by default,
+   invisible on the dark chip background; restore visibility so the
+   existing group-hover:text-primary-600 accent hover reads as a change,
+   not invisible-to-visible. Excludes the hovered state so the group-hover
+   utility (no !important) still wins and turns the label orange on hover. */
+body.dark .text-dark-500 {
+  color: rgb(255 255 255 / 85%) !important;
+}
+body.dark .group:hover .text-dark-500.group-hover\:text-primary-600 {
+  color: var(--menu-arrow-fg, #E54F38) !important;
+}
+body.dark .bg-\[\#efefef96\] {
+  background-color: #5c5c5c96;
+}
+/* Forecast table: keep user rows readable in dark mode */
+body.dark #forecast-table .user-details-row td,
+body.dark #forecast-table .user-details-row td.bg-gray-50 {
+  background-color: #2f2f2f !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+  border-color: #565656 !important;
+}
+body.dark #forecast-table .user-details-row td.sticky {
+  background-color: #383838 !important;
+}
+/* User-row achievement bar track must be visible in dark mode */
+body.dark #forecast-table .user-details-row .bg-gray-200 {
+  background-color: #565656 !important;
+}
+body.dark #calendarPreviewModal .text-primary-600{
+  background-color: black !important;
+}
+body.dark .bg-\[\#e6fff5\]{
+  background-color: #525252;
+}
+body.dark .bg-\[\#e6fff5\]:hover, body.dark .bg-\[\#ffefed\]:hover{
+  color: var(--menu-arrow-fg, #E54F38) !important;
+}
+
+/* Surface (kanban/group-by): dark mode override */
+body.dark .bg-surface {
+  background-color: #2f2f2f !important;
+}
+body.dark .group-by-details {
+  border-color: #565656 !important;
+}
+body.dark .group-by-header-band {
+  background-color: #383838 !important;
+  border-color: #565656 !important;
+}
+body.dark .group-by-details .group-by-summary span.text-primary-600 {
+  color: var(--menu-arrow-fg, #E54F38) !important;
+}
+body.dark .group-by-details .group-by-summary .fa-chevron-down {
+  color: var(--menu-arrow-fg, #E54F38) !important;
+}
+
+/* Timeline view: make pills + active group label use theme colors in dark mode */
+body.dark .timeline-bar {
+  background-color: var(--timeline-pill-bg, #2f2f2f) !important;
+  color: var(--timeline-pill-fg, #E54F38) !important;
+}
+body.dark .js-timeline-left-group.text-primary-600 {
+  color: var(--timeline-pill-fg, #E54F38) !important;
+}
+body.dark .js-timeline-left-group.text-primary-600 span {
+  /* Override global `body.dark span { color: ... !important; }` */
+  color: var(--timeline-pill-fg, #E54F38) !important;
+}
+
+/* Calendar: dark theme variables so year/month view cells and text are visible */
+body.dark .fc,
+body.dark .fc .fc-scrollgrid {
+  --fc-page-bg-color: #2a2a2a;
+  --fc-neutral-bg-color: #3f3f3f;
+  --fc-neutral-text-color: rgba(255, 255, 255, 0.9);
+  --fc-border-color: #565656;
+}
+body.dark .fc .fc-multimonth-daygrid {
+  background: #2a2a2a !important;
+}
+/* Calendar year view: ensure date numbers are visible in dark theme */
+body.dark .fc .fc-daygrid-day-number,
+body.dark .fc .fc-multimonth .fc-daygrid-day-number {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Summernote (Notes & Attachments rich text editor): dark theme for the
+   toolbar dropdowns, color picker, font family list, tooltips and modals.
+   dialogsInBody:true appends these directly under <body>, so selectors
+   below are intentionally unscoped by .note-editor/.note-popover ancestors
+   to also catch the body-level popups; !important is required since
+   dark.css loads before summernote-lite.min.css (see index.html). */
+body.dark .note-dropdown-menu,
+body.dark .note-modal-content,
+body.dark .note-popover,
+body.dark .note-popover-content,
+body.dark .note-popover.popover .popover-content {
+  background-color: #2f2f2f !important;
+  border-color: #565656 !important;
+  color: rgb(255 255 255 / 85%) !important;
+}
+/* "More Color" custom picker: the full color grid + Select + Reset to
+   default rows can be taller than the viewport with no scroll container
+   in the vendor CSS, clipping the bottom rows/controls */
+.note-color-all .note-dropdown-menu {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+body.dark .note-dropdown-item,
+body.dark a.note-dropdown-item,
+body.dark .note-modal-title,
+body.dark .note-modal-body,
+body.dark .note-current-fontname,
+body.dark .note-current-fontsize {
+  color: rgb(255 255 255 / 85%) !important;
+}
+body.dark .note-dropdown-item:hover,
+body.dark a.note-dropdown-item:hover {
+  background-color: color-mix(in srgb, var(--menu-arrow-fg, #E54F38) 18%, #2f2f2f) !important;
+  color: rgb(255 255 255 / 95%) !important;
+}
+body.dark .note-modal-header,
+body.dark .note-modal-footer {
+  background-color: #2f2f2f !important;
+  border-color: #565656 !important;
+}
+body.dark .note-modal-footer .note-btn {
+  background-color: #3f3f3f !important;
+  color: rgb(255 255 255 / 85%) !important;
+  border-color: #565656 !important;
+}
+/* Color picker palette */
+body.dark .note-palette-title,
+body.dark .note-color-palette div .note-color-btn {
+  border-color: #565656 !important;
+}
+body.dark .note-color-reset,
+body.dark .note-color-select {
+  color: rgb(255 255 255 / 85%) !important;
+}
+body.dark .note-color-reset:hover,
+body.dark .note-color-select:hover {
+  background-color: color-mix(in srgb, var(--menu-arrow-fg, #E54F38) 18%, #2f2f2f) !important;
+}
+/* Tooltips already render dark in light mode; keep them consistent */
+body.dark .note-tooltip-content {
+  background-color: #000 !important;
+  color: rgb(255 255 255 / 90%) !important;
+}
+body.dark .note-icon-caret,
+body.dark .note-btn .note-icon-caret {
+  color: rgb(255 255 255 / 85%) !important;
+}
+/* Current-color toggle button ("A" glyph + color underline bar) */
+body.dark .note-current-color-button {
+  background-color: black !important;
+}
+body.dark .note-current-color-button .note-icon-font {
+  color: rgb(255 255 255 / 85%) !important;
+}
+
+/* Calendar detail popup: dark background; labels/links use primary (match light theme), values stay light */
+body.dark #calendarPopup {
+  background-color: #2f2f2f !important;
+  border-color: #565656 !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+/* Only value cells (not labels): light text for readability */
+body.dark #popupContent .grid > div:not(.text-primary-600) {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+/* Labels: keep primary-600 color in dark theme (same as white theme) */
+body.dark #popupContent .text-primary-600 {
+  color: var(--menu-arrow-fg, #E54F38) !important;
+}
+body.dark #popupContent h5.bg-primary-300 {
+  background-color: #3f3f3f !important;
+  color: var(--menu-arrow-fg, #E54F38) !important;
+}
+body.dark #popupContent button.bg-primary-100 {
+  background-color: #3f3f3f !important;
+  border-color: #565656 !important;
+  color: var(--menu-arrow-fg, #E54F38) !important;
+}
+body.dark #popupContent button.bg-primary-100:hover {
+  background-color: #4a3f3f !important;
+  color: var(--menu-arrow-fg, #E54F38) !important;
+}
+
+/* Notes/attachments detail modal (generics/notes_attachments_detail.html) */
+body.dark .detail-card,
+body.dark .notes-section,
+body.dark .file-preview,
+body.dark .file-icon,
+body.dark .preview-placeholder {
+  background-color: #2f2f2f !important;
+  border-color: #565656 !important;
+}
+body.dark .detail-value,
+body.dark .notes-header,
+body.dark .file-name {
+  color: rgb(255 255 255 / 95%) !important;
+}
+body.dark .detail-label,
+body.dark .preview-placeholder {
+  color: rgb(255 255 255 / 60%) !important;
+}
+/* Outline-style Delete button (bg-[white] + primary border/text) shouldn't
+   flatten to solid black via the generic .bg-[white] rule above — keep it
+   looking like an outline button against the dark surface. */
+body.dark .bg-\[white\].border-primary-500 {
+  background-color: #2f2f2f !important;
+}

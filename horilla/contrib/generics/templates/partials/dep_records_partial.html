@@ -1,0 +1,16 @@
+{% for record in records %}
+    <li class="py-0.5">{{ record }}</li>
+{% endfor %}
+{% if has_more %}
+    <li
+        class="flex justify-center items-center py-2"
+        hx-post="{{ search_url }}"
+        hx-trigger="intersect once"
+        hx-swap="outerHTML"
+        hx-target="this"
+        hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
+        hx-vals='{"action": "load_dep_records", "record_id": "{{ record_id }}", "dep_model_name": "{{ dep_model_name }}", "offset": "{{ next_offset }}"}'
+    >
+        <div class="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-primary-600"></div>
+    </li>
+{% endif %}

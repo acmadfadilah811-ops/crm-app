@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Notifications"
+msgstr "Pemberitahuan"
+
+msgid "Template title is required."
+msgstr "Judul templat wajib diisi."
+
+msgid "Template message is required."
+msgstr "Pesan template diperlukan."
+
+msgid ""
+"URL contains potentially dangerous content. Please remove any scripts or "
+"malicious code."
+msgstr ""
+"URL berisi konten yang berpotensi berbahaya.Harap hapus skrip atau kode "
+"berbahaya apa pun."
+
+msgid "Notification"
+msgstr "Pemberitahuan"
+
+msgid "muted"
+msgstr "meredam"
+
+msgid "unmuted"
+msgstr "tidak dibisukan"
+
+msgid "Notification Sound Preference"
+msgstr "Preferensi Suara Notifikasi"
+
+msgid "Notification Sound Preferences"
+msgstr "Preferensi Suara Notifikasi"
+
+msgid "Template Title"
+msgstr "Judul Templat"
+
+msgid "Message"
+msgstr "Pesan"
+
+msgid "Related Model"
+msgstr "Model Terkait"
+
+msgid "Notification Template"
+msgstr "Templat Pemberitahuan"
+
+msgid "Notification Templates"
+msgstr "Templat Pemberitahuan"
+
+msgid "Unmute notifications"
+msgstr "Suarakan notifikasi"
+
+msgid "Mute notifications"
+msgstr "Bisukan notifikasi"
+
+msgid "Mark all as read"
+msgstr "Tandai semua sebagai telah dibaca"
+
+msgid "No unread notifications"
+msgstr "Tidak ada notifikasi yang belum dibaca"
+
+msgid "View all Notification"
+msgstr "Lihat semua Notifikasi"
+
+msgid "All Notifications"
+msgstr "Semua Pemberitahuan"
+
+msgid "Clear All"
+msgstr "Hapus Semua"
+
+msgid "No notifications"
+msgstr "Tidak ada pemberitahuan"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Enter template title"
+msgstr "Masukkan judul templat"
+
+msgid "Select content type (optional)"
+msgstr "Pilih jenis konten (opsional)"
+
+msgid "Insert Field"
+msgstr "Sisipkan Bidang"
+
+msgid "Loading..."
+msgstr "Memuat..."
+
+msgid "All notifications marked as read."
+msgstr "Semua notifikasi ditandai sebagai telah dibaca."
+
+msgid "Notification Deleted."
+msgstr "Pemberitahuan Dihapus."
+
+msgid "Customize the content of notifications sent to your users."
+msgstr "Sesuaikan konten notifikasi yang dikirimkan ke pengguna Anda."
+
+msgid "Update Notification Template"
+msgstr "Perbarui Templat Pemberitahuan"
+
+msgid "Update Template"
+msgstr "Perbarui Templat"
+
+msgid "Create Notification Template"
+msgstr "Buat Templat Pemberitahuan"
+
+msgid "Save Template"
+msgstr "Simpan Templat"
+
+msgid "Notification template \"{}\" updated successfully."
+msgstr "Templat pemberitahuan \"{}\" berhasil diperbarui."
+
+msgid "Notification template \"{}\" created successfully."
+msgstr "Template notifikasi \"{}\" berhasil dibuat."

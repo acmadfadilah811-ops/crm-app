@@ -1,0 +1,437 @@
+# Arabic translations for Horilla Cadences module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+msgid "Module for managing cadence workflows and runtime activity sequences."
+msgstr "وحدة لإدارة سير عمل الإيقاع وتسلسلات النشاط في وقت التشغيل."
+
+msgid ""
+"Standardized exception chaining in cadence forms to preserve root-cause "
+"tracebacks."
+msgstr ""
+
+msgid ""
+"Migrated signal and timezone imports to the horilla shims, standardized "
+"first-party import groups, and added class and method docstrings for pylint "
+"compliance."
+msgstr ""
+"تم ترحيل استيرادات الإشارات والمنطقة الزمنية إلى shims الخاصة بـ horilla، "
+"وتوحيد مجموعات الاستيراد الداخلية، وإضافة توثيق للفئات والطرق لتوافق pylint."
+
+msgid ""
+"Cadence forms aligned with HorillaModelForm layout: field_order, Meta.fields "
+"= \"__all__\", Meta.exclude, and keep_on_form; save logic and HTMX unchanged."
+msgstr ""
+"تم محاذاة نماذج الإيقاع مع تخطيط HorillaModelForm: field_order وMeta.fields "
+"وMeta.exclude وkeep_on_form؛ منطق الحفظ وسلوك HTMX دون تغيير."
+
+msgid ""
+"Release 1.10: cadences ship under contrib with app label cadences. Signals, "
+"registrations, URLs, and static paths updated to match the new contrib "
+"layout."
+msgstr ""
+"الإصدار 1.10: تُشحن الإيقاعات ضمن contrib بتسمية تطبيق cadences. تم تحديث "
+"الإشارات والتسجيلات وعناوين URL والمسارات الثابتة لتتوافق مع التخطيط الجديد."
+
+msgid ""
+"Implemented cadence signals for runtime activities, enabling automated "
+"cadence-driven workflow execution and activity tracking."
+msgstr ""
+"تم تنفيذ إشارات الإيقاع للأنشطة في وقت التشغيل، مما يتيح تنفيذ سير العمل "
+"المدفوع بالإيقاع وتتبع النشاط بشكل تلقائي."
+
+msgid "Cadences"
+msgstr "الإيقاعات"
+
+msgid "At least one condition is required."
+msgstr "يجب توفير شرط واحد على الأقل."
+
+msgid "Each condition row must include Field, Operator, and Value."
+msgstr "يجب أن تتضمن كل صف شرط: الحقل والمعامل والقيمة."
+
+msgid "Mail to"
+msgstr "إرسال البريد إلى"
+
+msgid ""
+"Choose which user or email field on the record should receive this mail."
+msgstr ""
+"اختر حقل المستخدم أو البريد الإلكتروني في السجل الذي سيستلم هذا البريد."
+
+msgid ""
+"Email follow-up is unavailable until an outgoing mail server is configured."
+msgstr "متابعة البريد الإلكتروني غير متاحة حتى يتم تكوين خادم بريد صادر."
+
+msgid "Parent follow-up is required for this stage."
+msgstr "المتابعة الأصلية مطلوبة لهذه المرحلة."
+
+msgid "Invalid cadence for branch."
+msgstr "إيقاع غير صالح للفرع."
+
+msgid "Parent must belong to the previous follow-up stage."
+msgstr "يجب أن تنتمي المتابعة الأصلية إلى مرحلة المتابعة السابقة."
+
+msgid "Name"
+msgstr "الاسم"
+
+msgid "Module"
+msgstr "الوحدة"
+
+msgid "Target module"
+msgstr "الوحدة المستهدفة"
+
+msgid "Description"
+msgstr "الوصف"
+
+msgid "Cadence"
+msgstr "الإيقاع"
+
+msgid "Field Name"
+msgstr "اسم الحقل"
+
+msgid "Operator"
+msgstr "المعامل"
+
+msgid "Value"
+msgstr "القيمة"
+
+msgid "AND"
+msgstr "و"
+
+msgid "OR"
+msgstr "أو"
+
+msgid "Logical Operator"
+msgstr "المعامل المنطقي"
+
+msgid "Order"
+msgstr "الترتيب"
+
+msgid "Cadence Condition"
+msgstr "شرط الإيقاع"
+
+msgid "Cadence Conditions"
+msgstr "شروط الإيقاع"
+
+msgid "Task"
+msgstr "مهمة"
+
+msgid "Call"
+msgstr "مكالمة"
+
+msgid "Email"
+msgstr "بريد إلكتروني"
+
+msgid "Overdue"
+msgstr "متأخر"
+
+msgid "Immediately"
+msgstr "فوراً"
+
+msgid "Minute"
+msgstr "دقيقة"
+
+msgid "Hour"
+msgstr "ساعة"
+
+msgid "Day"
+msgstr "يوم"
+
+msgid "Month"
+msgstr "شهر"
+
+msgid "Follow up"
+msgstr "متابعة"
+
+msgid "Stage number (1 = first follow-up)."
+msgstr "رقم المرحلة (1 = أول متابعة)."
+
+msgid "Follow up Type"
+msgstr "نوع المتابعة"
+
+msgid "Branched from"
+msgstr "متفرع من"
+
+#, fuzzy
+#| msgid ""
+#| "Set when this step was created from a specific parent card's + (next "
+#| "stage)."
+msgid ""
+"Set when this step was created from a specific parent card’s + (next stage)."
+msgstr "يُعيَّن عند إنشاء هذه الخطوة من بطاقة أصل محددة + (المرحلة التالية)."
+
+msgid "Do This"
+msgstr "افعل هذا"
+
+msgid "Do This Value"
+msgstr "قيمة افعل هذا"
+
+msgid "Required for minute/hour/day/month."
+msgstr "مطلوب للدقيقة/الساعة/اليوم/الشهر."
+
+msgid "After Previous Status Is"
+msgstr "بعد أن تكون الحالة السابقة"
+
+msgid "Required from follow up 2 onwards."
+msgstr "مطلوب من المتابعة 2 فما فوق."
+
+msgid "Subject"
+msgstr "الموضوع"
+
+msgid "Trigger Date + Days"
+msgstr "تاريخ التشغيل + أيام"
+
+msgid "Status"
+msgstr "الحالة"
+
+msgid "Priority"
+msgstr "الأولوية"
+
+msgid "Task Owner"
+msgstr "مالك المهمة"
+
+msgid "Call Type"
+msgstr "نوع المكالمة"
+
+msgid "Call Status"
+msgstr "حالة المكالمة"
+
+msgid "Call Start + Days"
+msgstr "بدء المكالمة + أيام"
+
+msgid "Call Owner"
+msgstr "مالك المكالمة"
+
+msgid "Purpose"
+msgstr "الغرض"
+
+msgid "Recipients for this step. Choose user/email fields from the record"
+msgstr "المستلمون لهذه الخطوة. اختر حقول المستخدم/البريد الإلكتروني من السجل."
+
+msgid "Mail Template"
+msgstr "قالب البريد"
+
+msgid "Cadence Follow up"
+msgstr "متابعة الإيقاع"
+
+msgid "Cadence Follow ups"
+msgstr "متابعات الإيقاع"
+
+msgid "Follow up 1 can only contain one item."
+msgstr "المتابعة 1 يمكن أن تحتوي على عنصر واحد فقط."
+
+msgid "Select status condition from previous follow-up."
+msgstr "اختر شرط الحالة من المتابعة السابقة."
+
+msgid "Cannot add this follow-up before creating previous follow-up bucket."
+msgstr "لا يمكن إضافة هذه المتابعة قبل إنشاء مجموعة المتابعة السابقة."
+
+msgid "Enter value for selected Do This unit."
+msgstr "أدخل القيمة لوحدة افعل هذا المحددة."
+
+msgid "This field is required for selected follow-up type."
+msgstr "هذا الحقل مطلوب لنوع المتابعة المحدد."
+
+msgid "Invalid follow-up type."
+msgstr "نوع متابعة غير صالح."
+
+msgid "Back"
+msgstr "رجوع"
+
+msgid "Edit"
+msgstr "تعديل"
+
+msgid "View Reports"
+msgstr "عرض التقارير"
+
+msgid "Actions"
+msgstr "الإجراءات"
+
+msgid "Menu"
+msgstr "القائمة"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Do this"
+msgstr "افعل هذا"
+
+msgid "After previous status is"
+msgstr "بعد أن تكون الحالة السابقة"
+
+msgid "Due Date"
+msgstr "تاريخ الاستحقاق"
+
+msgid "Trigger date +"
+msgstr "تاريخ التشغيل +"
+
+msgid "day(s)"
+msgstr "يوم(أيام)"
+
+msgid "Mail template"
+msgstr "قالب البريد"
+
+msgid "Add follow-up in next stage"
+msgstr "إضافة متابعة في المرحلة التالية"
+
+msgid "Add follow-up in this stage"
+msgstr "إضافة متابعة في هذه المرحلة"
+
+msgid "Add another follow-up in this stage"
+msgstr "إضافة متابعة أخرى في هذه المرحلة"
+
+msgid ""
+"Get started by adding an Email, Task, or Call follow-up to your Cadence."
+msgstr "ابدأ بإضافة متابعة بريد إلكتروني أو مهمة أو مكالمة إلى إيقاعك."
+
+msgid "Add Follow Ups"
+msgstr "إضافة متابعات"
+
+msgid "Add Follow-up"
+msgstr "إضافة متابعة"
+
+msgid "Cadence Name"
+msgstr "اسم الإيقاع"
+
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+msgid "Last Follow-up Response"
+msgstr "آخر استجابة متابعة"
+
+msgid "Next Follow-up"
+msgstr "المتابعة التالية"
+
+msgid "No active cadences match this record right now."
+msgstr "لا توجد إيقاعات نشطة تطابق هذا السجل الآن."
+
+msgid "Total Triggered Calls"
+msgstr "إجمالي المكالمات المُشغَّلة"
+
+msgid "Completed Calls"
+msgstr "المكالمات المكتملة"
+
+msgid "Scheduled Calls"
+msgstr "المكالمات المجدولة"
+
+msgid "Cancelled Calls"
+msgstr "المكالمات الملغاة"
+
+msgid "Total Triggered Mails"
+msgstr "إجمالي الرسائل المُشغَّلة"
+
+msgid "Email Delivered"
+msgstr "البريد المُسلَّم"
+
+msgid "Bounced Emails"
+msgstr "الرسائل المرتدة"
+
+msgid "Opened Emails"
+msgstr "الرسائل المفتوحة"
+
+msgid "Failed Mails"
+msgstr "الرسائل الفاشلة"
+
+msgid "Report"
+msgstr "تقرير"
+
+msgid "Cadences Report"
+msgstr "تقرير الإيقاعات"
+
+msgid "Total Triggered Tasks"
+msgstr "إجمالي المهام المُشغَّلة"
+
+msgid "Completed Tasks"
+msgstr "المهام المكتملة"
+
+msgid "Pending Tasks"
+msgstr "المهام قيد الانتظار"
+
+msgid "Unresolved"
+msgstr "غير محلول"
+
+msgid "Mail Configuration Required"
+msgstr "تكوين البريد مطلوب"
+
+msgid "Close"
+msgstr "إغلاق"
+
+msgid "Cannot add Email Follow-up"
+msgstr "لا يمكن إضافة متابعة بريد إلكتروني"
+
+msgid "Configure outgoing mail to use Email follow-ups in cadence."
+msgstr "قم بتكوين البريد الصادر لاستخدام متابعات البريد الإلكتروني في الإيقاع."
+
+msgid "Configure"
+msgstr "تكوين"
+
+msgid "Follow-Up"
+msgstr "متابعة"
+
+msgid "Completed"
+msgstr "مكتمل"
+
+msgid "Pending"
+msgstr "قيد الانتظار"
+
+msgid "Scheduled"
+msgstr "مجدول"
+
+msgid "Cancelled"
+msgstr "ملغى"
+
+msgid "Email Template"
+msgstr "قالب البريد الإلكتروني"
+
+msgid "Delivered"
+msgstr "مُسلَّم"
+
+msgid "Bounced"
+msgstr "مرتد"
+
+msgid "Opened"
+msgstr "مفتوح"
+
+msgid "Failed"
+msgstr "فاشل"
+
+msgid "New"
+msgstr "جديد"
+
+#, fuzzy
+#| msgid "Cadence Conditions"
+msgid "Conditions"
+msgstr "شروط الإيقاع"
+
+msgid "Follow-up removed."
+msgstr "تمت إزالة المتابعة."
+
+msgid ""
+"Remove or reassign follow-ups in later stages before deleting this step."
+msgstr "أزل أو أعد تعيين المتابعات في المراحل اللاحقة قبل حذف هذه الخطوة."
+
+msgid "Next Follow-up Response"
+msgstr "استجابة المتابعة التالية"
+
+msgid "Invalid model for cadence tab."
+msgstr "نموذج غير صالح لتبويب الإيقاع."
+
+msgid "Object not found."
+msgstr "الكائن غير موجود."
+
+msgid "You don't have permission to view this item."
+msgstr "ليس لديك صلاحية لعرض هذا العنصر."

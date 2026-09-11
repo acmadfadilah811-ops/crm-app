@@ -1,0 +1,750 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+msgid "Approvals"
+msgstr ""
+
+#, python-format
+msgid ""
+"'%(name)s' is already the active approval process for this module. "
+"Deactivate it before activating another."
+msgstr ""
+
+msgid "Select action"
+msgstr ""
+
+msgid "Update field"
+msgstr ""
+
+msgid "Assign task"
+msgstr ""
+
+msgid "Mail"
+msgstr ""
+
+msgid "Notification"
+msgstr ""
+
+msgid "Approval: field to update"
+msgstr ""
+
+msgid "Ex: status"
+msgstr ""
+
+msgid "Approval: updated value"
+msgstr ""
+
+msgid "Ex: Approved"
+msgstr ""
+
+msgid "Approval: task title"
+msgstr ""
+
+msgid "Follow up with requester"
+msgstr ""
+
+msgid "Approval: task description"
+msgstr ""
+
+msgid "Rejection: field to update"
+msgstr ""
+
+msgid "Rejection: updated value"
+msgstr ""
+
+msgid "Ex: Rejected"
+msgstr ""
+
+msgid "Rejection: task title"
+msgstr ""
+
+msgid "Resolve and resubmit"
+msgstr ""
+
+msgid "Rejection: task description"
+msgstr ""
+
+msgid "Approval: email subject"
+msgstr ""
+
+msgid "Approval: email body"
+msgstr ""
+
+msgid "Rejection: email subject"
+msgstr ""
+
+msgid "Rejection: email body"
+msgstr ""
+
+msgid "Ex: manager"
+msgstr ""
+
+msgid "User"
+msgstr ""
+
+msgid "Role"
+msgstr ""
+
+msgid "Record owner"
+msgstr ""
+
+msgid "Select role"
+msgstr ""
+
+msgid "Approval Processes"
+msgstr ""
+
+msgid "Approval Jobs"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Model this process applies to."
+msgstr ""
+
+msgid "Module"
+msgstr ""
+
+msgid "When record is created"
+msgstr ""
+
+msgid "Run this process when a new record is created."
+msgstr ""
+
+msgid "When record is edited"
+msgstr ""
+
+msgid "Run this process when a record is edited."
+msgstr ""
+
+msgid "Create and Edit"
+msgstr ""
+
+msgid "Create only"
+msgstr ""
+
+msgid "Edit only"
+msgstr ""
+
+msgid "Not set"
+msgstr ""
+
+msgid "Approval process"
+msgstr ""
+
+msgid "Approval processes"
+msgstr ""
+
+msgid ""
+"Per-rule JSON: approval_actions, rejection_actions, record_modification, "
+"process_admins (or rule-level admin overrides)."
+msgstr ""
+
+msgid "Order"
+msgstr ""
+
+msgid "Sequence of this rule within the process."
+msgstr ""
+
+msgid "Approval process rule"
+msgstr ""
+
+msgid "Approval process rules"
+msgstr ""
+
+msgid "Rule"
+msgstr ""
+
+msgid "Specific user"
+msgstr ""
+
+msgid "Manager of record owner"
+msgstr ""
+
+msgid "Sequence order of this step within the rule."
+msgstr ""
+
+msgid "Identifier for the role (implementation-specific)."
+msgstr ""
+
+msgid "Approval step"
+msgstr ""
+
+msgid "Approval steps"
+msgstr ""
+
+msgid "step"
+msgstr ""
+
+msgid "Process rule"
+msgstr ""
+
+msgid "Field Name"
+msgstr ""
+
+msgid "Operator"
+msgstr ""
+
+msgid "Value"
+msgstr ""
+
+msgid "AND"
+msgstr ""
+
+msgid "OR"
+msgstr ""
+
+msgid "Logical Operator"
+msgstr ""
+
+msgid "Approval Condition"
+msgstr ""
+
+msgid "Approval Conditions"
+msgstr ""
+
+msgid "Pending"
+msgstr ""
+
+msgid "Approved"
+msgstr ""
+
+msgid "Rejected"
+msgstr ""
+
+msgid "Cancelled"
+msgstr ""
+
+msgid "Primary key of the target object, stored as string."
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "The step currently awaiting decision, if any."
+msgstr ""
+
+msgid ""
+"When set, overrides current_step's approver for this instance only, without "
+"altering the shared process rule's step configuration."
+msgstr ""
+
+msgid "Approval instance"
+msgstr ""
+
+msgid "Approval instances"
+msgstr ""
+
+msgid "Approve"
+msgstr ""
+
+msgid "Reject"
+msgstr ""
+
+msgid "Approval decision"
+msgstr ""
+
+msgid "Approval decisions"
+msgstr ""
+
+msgid "This record is pending approval and cannot be edited."
+msgstr ""
+
+msgid "Record has been submitted for approval."
+msgstr ""
+
+msgid "Configure approval action"
+msgstr ""
+
+msgid "Configure rejection action"
+msgstr ""
+
+msgid "Field"
+msgstr ""
+
+msgid "Select field"
+msgstr ""
+
+msgid "Task title"
+msgstr ""
+
+msgid "Due basis"
+msgstr ""
+
+msgid "Record submission date"
+msgstr ""
+
+msgid "Approval date"
+msgstr ""
+
+msgid "Rejection date"
+msgstr ""
+
+msgid "Due in days"
+msgstr ""
+
+msgid "Not Started"
+msgstr ""
+
+msgid "In Progress"
+msgstr ""
+
+msgid "Completed"
+msgstr ""
+
+msgid "Priority"
+msgstr ""
+
+msgid "Low"
+msgstr ""
+
+msgid "Medium"
+msgstr ""
+
+msgid "High"
+msgstr ""
+
+msgid "Task description"
+msgstr ""
+
+msgid "Mail template"
+msgstr ""
+
+msgid "Select template"
+msgstr ""
+
+msgid "To (email field / email / self)"
+msgstr ""
+
+msgid "Also send to"
+msgstr ""
+
+msgid "Notification template"
+msgstr ""
+
+msgid "To (record field / self)"
+msgstr ""
+
+msgid "Also notify to"
+msgstr ""
+
+msgid "Custom message (optional, overrides template)"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Apply"
+msgstr ""
+
+msgid "Select value"
+msgstr ""
+
+msgid "Approval History"
+msgstr ""
+
+msgid "Resubmit this record for approval?"
+msgstr ""
+
+msgid "Resubmit"
+msgstr ""
+
+msgid "Process"
+msgstr ""
+
+msgid "Requested By"
+msgstr ""
+
+msgid "Respond"
+msgstr ""
+
+msgid "Current Step"
+msgstr ""
+
+msgid "Completed Steps"
+msgstr ""
+
+msgid "Progress"
+msgstr ""
+
+msgid "Respond to Approval"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Decision"
+msgstr ""
+
+msgid "Delegate"
+msgstr ""
+
+msgid "Delegate To"
+msgstr ""
+
+msgid "Select user"
+msgstr ""
+
+msgid "Response Note (Optional)"
+msgstr ""
+
+msgid "Add comments for your decision"
+msgstr ""
+
+msgid "Submit Response"
+msgstr ""
+
+msgid "Execute on"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Conditions"
+msgstr ""
+
+msgid "Approver"
+msgstr ""
+
+msgid "Notify approver"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "On approval"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "Template"
+msgstr ""
+
+msgid "To"
+msgstr ""
+
+msgid "Custom message"
+msgstr ""
+
+msgid "On rejection"
+msgstr ""
+
+msgid "Record modification"
+msgstr ""
+
+msgid "Stage"
+msgstr ""
+
+msgid "While waiting for approval"
+msgstr ""
+
+msgid "All Fields"
+msgstr ""
+
+msgid "No Fields"
+msgstr ""
+
+msgid "When record is in rejected state"
+msgstr ""
+
+msgid "No process rules yet. Use Add rule in the header above."
+msgstr ""
+
+msgid "Are you sure you want to deactivate this approval process?"
+msgstr ""
+
+#, python-format
+msgid ""
+"Activating this will deactivate any other active approval process for the "
+"%(module)s module. Do you want to continue?"
+msgstr ""
+
+msgid "Action on approval"
+msgstr ""
+
+msgid "Selected:"
+msgstr ""
+
+msgid "Update Field"
+msgstr ""
+
+msgid "Assign Task"
+msgstr ""
+
+msgid "Action on rejection"
+msgstr ""
+
+msgid "Who should approve"
+msgstr ""
+
+msgid "Approver type"
+msgstr ""
+
+msgid "Approver will be resolved from the record owner at runtime."
+msgstr ""
+
+msgid "Add More Approvers"
+msgstr ""
+
+msgid "Set overall approval method"
+msgstr ""
+
+msgid "Anyone"
+msgstr ""
+
+msgid "Everyone"
+msgstr ""
+
+msgid "Specify the order"
+msgstr ""
+
+msgid "Sequential"
+msgstr ""
+
+msgid "Parallel"
+msgstr ""
+
+msgid "Record Modification"
+msgstr ""
+
+msgid "Configure field access per approval stage (sequential approval)."
+msgstr ""
+
+msgid "Field access"
+msgstr ""
+
+msgid "Specific Fields"
+msgstr ""
+
+msgid ""
+"One setting applies to the whole process (Anyone, Parallel, or a single "
+"approver)."
+msgstr ""
+
+msgid "Edit Policy While Waiting"
+msgstr ""
+
+msgid "All fields are editable."
+msgstr ""
+
+msgid "Only specific fields are editable"
+msgstr ""
+
+msgid "No fields are editable while waiting."
+msgstr ""
+
+msgid "Select fields"
+msgstr ""
+
+msgid "No fields available"
+msgstr ""
+
+msgid "This approval no longer exists."
+msgstr ""
+
+msgid ""
+"Module not found: the linked record no longer exists. The approval entry has "
+"been removed."
+msgstr ""
+
+msgid "Only the original requester can resubmit this record."
+msgstr ""
+
+msgid "No approver step configured."
+msgstr ""
+
+msgid "Record resubmitted for approval."
+msgstr ""
+
+msgid "Only the original requester can update this task."
+msgstr ""
+
+msgid "Invalid task status."
+msgstr ""
+
+msgid "Invalid related record."
+msgstr ""
+
+msgid "Task status updated successfully."
+msgstr ""
+
+msgid "Details"
+msgstr ""
+
+msgid "Decision Timeline"
+msgstr ""
+
+msgid "Tasks"
+msgstr ""
+
+msgid "Step"
+msgstr ""
+
+msgid "Cycle"
+msgstr ""
+
+msgid "Decided By"
+msgstr ""
+
+msgid "Comment"
+msgstr ""
+
+msgid "Decided At"
+msgstr ""
+
+msgid "Current (After Resubmit)"
+msgstr ""
+
+msgid "Previous"
+msgstr ""
+
+msgid "Current"
+msgstr ""
+
+msgid "Subject"
+msgstr ""
+
+msgid "Due Date"
+msgstr ""
+
+msgid "My Approval Jobs"
+msgstr ""
+
+msgid "You are not an approver for this job."
+msgstr ""
+
+msgid "Module not found: the record linked to this approval no longer exists."
+msgstr ""
+
+msgid "You are not the approver for this job."
+msgstr ""
+
+msgid "Invalid decision."
+msgstr ""
+
+msgid "No pending step found."
+msgstr ""
+
+msgid "Approval delegated successfully."
+msgstr ""
+
+msgid "Approval rejected."
+msgstr ""
+
+msgid "Approved. Waiting for other approvers."
+msgstr ""
+
+msgid "Approval completed."
+msgstr ""
+
+msgid "Approved and moved to next approver."
+msgstr ""
+
+msgid "You are not the approver for this pending job."
+msgstr ""
+
+msgid "Only the original requester can edit this rejected record."
+msgstr ""
+
+msgid "Only the original requester can edit this approved record."
+msgstr ""
+
+msgid "This record's approval status does not allow edits."
+msgstr ""
+
+msgid "Record not found."
+msgstr ""
+
+msgid "Invalid field."
+msgstr ""
+
+msgid "Field is not editable."
+msgstr ""
+
+msgid "Unknown field."
+msgstr ""
+
+msgid "Invalid value."
+msgstr ""
+
+msgid "Failed to update field."
+msgstr ""
+
+msgid "Field updated successfully."
+msgstr ""
+
+msgid "Model"
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Approval Process"
+msgstr ""
+
+msgid "Rule criteria"
+msgstr ""
+
+msgid "When should this rule apply?"
+msgstr ""
+
+#, python-format
+msgid "Rule %(order)s — Criteria"
+msgstr ""
+
+msgid "Add process rule"
+msgstr ""
+
+msgid "Edit process rule"
+msgstr ""
+
+msgid "A rule with this order already exists for this process."
+msgstr ""
+
+msgid "Process rule updated successfully."
+msgstr ""
+
+msgid "Process rule created successfully."
+msgstr ""
+
+msgid "activated"
+msgstr ""
+
+msgid "deactivated"
+msgstr ""
+
+#, python-format
+msgid ""
+"%(name)s %(status)s successfully. %(deactivated)s deactivated for this "
+"module."
+msgstr ""
+
+msgid "Add Rule"
+msgstr ""
+
+msgid "Edit Process"
+msgstr ""

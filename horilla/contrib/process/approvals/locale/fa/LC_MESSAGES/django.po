@@ -1,0 +1,747 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr "ماژول پیدا نشد: رکورد مرتبط دیگر وجود ندارد. درخواست تأیید حذف شده است."
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-18 14:05+0000\n"
+"PO-Revision-Date: 2026-08-24 12:00+0330\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Approvals"
+msgstr "تأییدها"
+
+#, python-format
+msgid ""
+"'%(name)s' is already the active approval process for this module. "
+"Deactivate it before activating another."
+msgstr ""
+
+msgid "Select action"
+msgstr "انتخاب اقدام"
+
+msgid "Edit field"
+msgstr "ویرایش فیلد"
+
+msgid "Assign task"
+msgstr "تخصیص وظیفه"
+
+msgid "Mail"
+msgstr "ایمیل"
+
+msgid "Notification"
+msgstr "اعلان"
+
+msgid "Approval: field to update"
+msgstr "تأیید: فیلد مورد به‌روزرسانی"
+
+msgid "Ex: status"
+msgstr "مثال: وضعیت"
+
+msgid "Approval: updated value"
+msgstr "تأیید: مقدار به‌روزشده"
+
+msgid "Ex: Approved"
+msgstr "مثال: تأیید شده"
+
+msgid "Approval: task title"
+msgstr "تأیید: عنوان وظیفه"
+
+msgid "Follow up with requester"
+msgstr "پیگیری با درخواست‌دهنده"
+
+msgid "Approval: task description"
+msgstr "تأیید: توضیحات وظیفه"
+
+msgid "Rejection: field to update"
+msgstr "رد: فیلد مورد به‌روزرسانی"
+
+msgid "Rejection: updated value"
+msgstr "رد: مقدار به‌روزشده"
+
+msgid "Ex: Rejected"
+msgstr "مثال: رد شده"
+
+msgid "Rejection: task title"
+msgstr "رد: عنوان وظیفه"
+
+msgid "Resolve and resubmit"
+msgstr "رفع مشکل و ارسال مجدد"
+
+msgid "Rejection: task description"
+msgstr "رد: توضیحات وظیفه"
+
+msgid "Approval: email subject"
+msgstr "تأیید: موضوع ایمیل"
+
+msgid "Approval: email body"
+msgstr "تأیید: متن ایمیل"
+
+msgid "Rejection: email subject"
+msgstr "رد: موضوع ایمیل"
+
+msgid "Rejection: email body"
+msgstr "رد: متن ایمیل"
+
+msgid "Ex: manager"
+msgstr "مثال: مدیر"
+
+msgid "User"
+msgstr "کاربر"
+
+msgid "Role"
+msgstr "نقش"
+
+msgid "Record owner"
+msgstr "مالک رکورد"
+
+msgid "Select role"
+msgstr "انتخاب نقش"
+
+msgid "Approval Processes"
+msgstr "فرآیندهای تأیید"
+
+msgid "Approval Jobs"
+msgstr "کارهای تأیید"
+
+msgid "Name"
+msgstr "نام"
+
+msgid "Model this process applies to."
+msgstr "مدلی که این فرآیند روی آن اعمال می‌شود."
+
+msgid "Module"
+msgstr "ماژول"
+
+msgid "When record is created"
+msgstr "هنگام ایجاد رکورد"
+
+msgid "Run this process when a new record is created."
+msgstr "این فرآیند هنگام ایجاد رکورد جدید اجرا شود."
+
+msgid "When record is edited"
+msgstr "هنگام ویرایش رکورد"
+
+msgid "Run this process when a record is edited."
+msgstr "این فرآیند هنگام ویرایش رکورد اجرا شود."
+
+msgid "Create and Edit"
+msgstr "ایجاد و ویرایش"
+
+msgid "Create only"
+msgstr "فقط ایجاد"
+
+msgid "Edit only"
+msgstr "فقط ویرایش"
+
+msgid "Not set"
+msgstr "تنظیم نشده"
+
+msgid "Approval process"
+msgstr "فرآیند تأیید"
+
+msgid "Approval processes"
+msgstr "فرآیندهای تأیید"
+
+msgid ""
+"Per-rule JSON: approval_actions, rejection_actions, record_modification, "
+"process_admins (or rule-level admin overrides)."
+msgstr ""
+
+msgid "Order"
+msgstr "ترتیب"
+
+msgid "Sequence of this rule within the process."
+msgstr "ترتیب این قانون در فرآیند."
+
+msgid "Approval process rule"
+msgstr "قانون فرآیند تأیید"
+
+msgid "Approval process rules"
+msgstr "قوانین فرآیند تأیید"
+
+msgid "Rule"
+msgstr "قانون"
+
+msgid "Specific user"
+msgstr "کاربر مشخص"
+
+msgid "Manager of record owner"
+msgstr "مدیر مالک رکورد"
+
+msgid "Sequence order of this step within the rule."
+msgstr "ترتیب این مرحله در قانون."
+
+msgid "Identifier for the role (implementation-specific)."
+msgstr "شناسه نقش (وابسته به پیاده‌سازی)."
+
+msgid "Approval step"
+msgstr "مرحله تأیید"
+
+msgid "Approval steps"
+msgstr "مراحل تأیید"
+
+msgid "step"
+msgstr "مرحله"
+
+msgid "Process rule"
+msgstr "قانون فرآیند"
+
+msgid "Field Name"
+msgstr "نام فیلد"
+
+msgid "Operator"
+msgstr "عملگر"
+
+msgid "Value"
+msgstr "مقدار"
+
+msgid "AND"
+msgstr "و"
+
+msgid "OR"
+msgstr "یا"
+
+msgid "Logical Operator"
+msgstr "عملگر منطقی"
+
+msgid "Approval Condition"
+msgstr "شرط تأیید"
+
+msgid "Approval Conditions"
+msgstr "شروط تأیید"
+
+msgid "Pending"
+msgstr "در انتظار"
+
+msgid "Approved"
+msgstr "تأیید شده"
+
+msgid "Rejected"
+msgstr "رد شده"
+
+msgid "Cancelled"
+msgstr "لغو شده"
+
+msgid "Primary key of the target object, stored as string."
+msgstr "کلید اصلی شیء هدف که به‌صورت رشته ذخیره می‌شود."
+
+msgid "Status"
+msgstr "وضعیت"
+
+msgid "The step currently awaiting decision, if any."
+msgstr "مرحله‌ای که در حال حاضر منتظر تصمیم است، در صورت وجود."
+
+msgid ""
+"When set, overrides current_step's approver for this instance only, without "
+"altering the shared process rule's step configuration."
+msgstr ""
+
+msgid "Approval instance"
+msgstr "نمونه تأیید"
+
+msgid "Approval instances"
+msgstr "نمونه‌های تأیید"
+
+msgid "Approve"
+msgstr "تأیید"
+
+msgid "Reject"
+msgstr "رد"
+
+msgid "Approval decision"
+msgstr "تصمیم تأیید"
+
+msgid "Approval decisions"
+msgstr "تصمیم‌های تأیید"
+
+msgid "This record is pending approval and cannot be edited."
+msgstr "این رکورد در انتظار تأیید است و نمی‌توان آن را ویرایش کرد."
+
+msgid "Record has been submitted for approval."
+msgstr "رکورد برای تأیید ارسال شد."
+
+msgid "Configure approval action"
+msgstr "پیکربندی اقدام تأیید"
+
+msgid "Configure rejection action"
+msgstr "پیکربندی اقدام رد"
+
+msgid "Field"
+msgstr "فیلد"
+
+msgid "Select field"
+msgstr "انتخاب فیلد"
+
+msgid "Task title"
+msgstr "عنوان وظیفه"
+
+msgid "Due basis"
+msgstr "مبنای سررسید"
+
+msgid "Record submission date"
+msgstr "تاریخ ثبت رکورد"
+
+msgid "Approval date"
+msgstr "تاریخ تأیید"
+
+msgid "Rejection date"
+msgstr "تاریخ رد"
+
+msgid "Due in days"
+msgstr "سررسید در روز"
+
+msgid "Not Started"
+msgstr "شروع نشده"
+
+msgid "In Progress"
+msgstr "در حال انجام"
+
+msgid "Completed"
+msgstr "تکمیل شده"
+
+msgid "Priority"
+msgstr "اولویت"
+
+msgid "Low"
+msgstr "پایین"
+
+msgid "Medium"
+msgstr "متوسط"
+
+msgid "High"
+msgstr "بالا"
+
+msgid "Task description"
+msgstr "توضیحات وظیفه"
+
+msgid "Mail template"
+msgstr "قالب ایمیل"
+
+msgid "Select template"
+msgstr "انتخاب قالب"
+
+msgid "To (email field / email / self)"
+msgstr "به (فیلد ایمیل / ایمیل / خود)"
+
+msgid "Also send to"
+msgstr "همچنین ارسال به"
+
+msgid "Notification template"
+msgstr "قالب اعلان"
+
+msgid "To (record field / self)"
+msgstr "به (فیلد رکورد / خود)"
+
+msgid "Also notify to"
+msgstr "همچنین اعلان به"
+
+msgid "Custom message (optional, overrides template)"
+msgstr "پیام سفارشی (اختیاری، بازنویسی قالب)"
+
+msgid "Cancel"
+msgstr "لغو"
+
+msgid "Apply"
+msgstr "اعمال"
+
+msgid "Select value"
+msgstr "انتخاب مقدار"
+
+msgid "Approval History"
+msgstr "تاریخچه تأیید"
+
+msgid "Resubmit this record for approval?"
+msgstr "آیا این رکورد برای تأیید مجدد ارسال شود؟"
+
+msgid "Resubmit"
+msgstr "ارسال مجدد"
+
+msgid "Process"
+msgstr "فرآیند"
+
+msgid "Requested By"
+msgstr "درخواست‌دهنده"
+
+msgid "Respond"
+msgstr "پاسخ"
+
+msgid "Current Step"
+msgstr "مرحله فعلی"
+
+msgid "Completed Steps"
+msgstr "مراحل تکمیل‌شده"
+
+msgid "Progress"
+msgstr "پیشرفت"
+
+msgid "Respond to Approval"
+msgstr "پاسخ به درخواست تأیید"
+
+msgid "Close"
+msgstr "بستن"
+
+msgid "Decision"
+msgstr "تصمیم"
+
+msgid "Delegate"
+msgstr "واگذاری"
+
+msgid "Delegate To"
+msgstr "واگذاری به"
+
+msgid "Select user"
+msgstr "انتخاب کاربر"
+
+msgid "Response Note (Optional)"
+msgstr "یادداشت پاسخ (اختیاری)"
+
+msgid "Add comments for your decision"
+msgstr "برای تصمیم خود توضیحاتی اضافه کنید"
+
+msgid "Submit Response"
+msgstr "ثبت پاسخ"
+
+msgid "Execute on"
+msgstr "اجرا بر روی"
+
+msgid "Edit"
+msgstr "ویرایش"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Conditions"
+msgstr "شروط"
+
+msgid "Approver"
+msgstr "تأییدکننده"
+
+msgid "Notify approver"
+msgstr "اطلاع‌رسانی به تأییدکننده"
+
+msgid "Email"
+msgstr "ایمیل"
+
+msgid "On approval"
+msgstr "در صورت تأیید"
+
+msgid "Actions"
+msgstr "اقدامات"
+
+msgid "Template"
+msgstr "قالب"
+
+msgid "To"
+msgstr "تا"
+
+msgid "Custom message"
+msgstr "پیام سفارشی"
+
+msgid "On rejection"
+msgstr "در صورت رد"
+
+msgid "Record modification"
+msgstr "تغییر رکورد"
+
+msgid "Stage"
+msgstr "مرحله"
+
+msgid "While waiting for approval"
+msgstr "در زمان انتظار برای تأیید"
+
+msgid "All Fields"
+msgstr "همه فیلدها"
+
+msgid "No Fields"
+msgstr "بدون فیلد"
+
+msgid "When record is in rejected state"
+msgstr "هنگامی که رکورد در وضعیت رد شده است"
+
+msgid "No process rules yet. Use Add rule in the header above."
+msgstr "هنوز هیچ قانون فرآیندی وجود ندارد. از گزینه «افزودن قانون» در سربرگ بالا استفاده کنید."
+
+msgid "Are you sure you want to deactivate this approval process?"
+msgstr "آیا مطمئن هستید که می‌خواهید این فرآیند تأیید را غیرفعال کنید؟"
+
+#, python-format
+msgid ""
+"Activating this will deactivate any other active approval process for the "
+"%(module)s module. Do you want to continue?"
+msgstr ""
+
+msgid "Action on approval"
+msgstr "اقدام در صورت تأیید"
+
+msgid "Selected:"
+msgstr "انتخاب‌شده:"
+
+msgid "Edit Field"
+msgstr "ویرایش فیلد"
+
+msgid "Assign Task"
+msgstr "تخصیص وظیفه"
+
+msgid "Action on rejection"
+msgstr "اقدام در صورت رد"
+
+msgid "Who should approve"
+msgstr "چه کسی باید تأیید کند؟"
+
+msgid "Approver type"
+msgstr "نوع تأییدکننده"
+
+msgid "Approver will be resolved from the record owner at runtime."
+msgstr "تأییدکننده در زمان اجرا بر اساس مالک رکورد تعیین می‌شود."
+
+msgid "Add More Approvers"
+msgstr "افزودن تأییدکنندگان بیشتر"
+
+msgid "Set overall approval method"
+msgstr "تعیین روش کلی تأیید"
+
+msgid "Anyone"
+msgstr "هرکدام"
+
+msgid "Everyone"
+msgstr "همه"
+
+msgid "Specify the order"
+msgstr "تعیین ترتیب"
+
+msgid "Sequential"
+msgstr "ترتیبی"
+
+msgid "Parallel"
+msgstr "هم‌زمان"
+
+msgid "Record Modification"
+msgstr ""
+
+msgid "Configure field access per approval stage (sequential approval)."
+msgstr "دسترسی به فیلدها را برای هر مرحله تأیید پیکربندی کنید (تأیید ترتیبی)."
+
+msgid "Field access"
+msgstr "دسترسی به فیلد"
+
+msgid "Specific Fields"
+msgstr "فیلدهای مشخص"
+
+msgid ""
+"One setting applies to the whole process (Anyone, Parallel, or a single "
+"approver)."
+msgstr ""
+
+msgid "Edit Policy While Waiting"
+msgstr "سیاست ویرایش در زمان انتظار"
+
+msgid "All fields are editable."
+msgstr "همه فیلدها قابل ویرایش هستند."
+
+msgid "Only specific fields are editable"
+msgstr "فقط فیلدهای مشخص قابل ویرایش هستند"
+
+msgid "No fields are editable while waiting."
+msgstr "در زمان انتظار هیچ فیلدی قابل ویرایش نیست."
+
+msgid "Select fields"
+msgstr "انتخاب فیلدها"
+
+msgid "No fields available"
+msgstr "فیلدی در دسترس نیست"
+
+msgid "This approval no longer exists."
+msgstr "این درخواست تأیید دیگر وجود ندارد."
+
+msgid ""
+"Module not found: the linked record no longer exists. The approval entry has "
+"been removed."
+msgstr ""
+
+msgid "Only the original requester can resubmit this record."
+msgstr "فقط درخواست‌دهنده اصلی می‌تواند این رکورد را مجدداً ارسال کند."
+
+msgid "No approver step configured."
+msgstr "هیچ مرحله‌ای برای تأییدکننده پیکربندی نشده است."
+
+msgid "Record resubmitted for approval."
+msgstr "رکورد مجدداً برای تأیید ارسال شد."
+
+msgid "Only the original requester can update this task."
+msgstr "فقط درخواست‌دهنده اصلی می‌تواند این وظیفه را به‌روزرسانی کند."
+
+msgid "Invalid task status."
+msgstr "وضعیت وظیفه نامعتبر است."
+
+msgid "Invalid related record."
+msgstr "رکورد مرتبط نامعتبر است."
+
+msgid "Task status updated successfully."
+msgstr "وضعیت وظیفه با موفقیت به‌روزرسانی شد."
+
+msgid "Details"
+msgstr "جزئیات"
+
+msgid "Decision Timeline"
+msgstr "خط زمانی تصمیمات"
+
+msgid "Tasks"
+msgstr "وظایف"
+
+msgid "Step"
+msgstr "مرحله"
+
+msgid "Cycle"
+msgstr "دوره"
+
+msgid "Decided By"
+msgstr "تصمیم‌گیرنده"
+
+msgid "Comment"
+msgstr "نظر"
+
+msgid "Decided At"
+msgstr "زمان تصمیم"
+
+msgid "Current (After Resubmit)"
+msgstr "فعلی (پس از ارسال مجدد)"
+
+msgid "Previous"
+msgstr "قبلی"
+
+msgid "Current"
+msgstr "جاری"
+
+msgid "Subject"
+msgstr "موضوع"
+
+msgid "Due Date"
+msgstr "تاریخ سررسید"
+
+msgid "My Approval Jobs"
+msgstr "کارهای تأیید من"
+
+msgid "You are not an approver for this job."
+msgstr "شما تأییدکننده این کار نیستید."
+
+msgid "Module not found: the record linked to this approval no longer exists."
+msgstr "ماژول پیدا نشد: رکورد مرتبط با این تأیید دیگر وجود ندارد."
+
+msgid "You are not the approver for this job."
+msgstr "شما تأییدکننده این کار نیستید."
+
+msgid "Invalid decision."
+msgstr "تصمیم نامعتبر است."
+
+msgid "No pending step found."
+msgstr "هیچ مرحله در انتظاری پیدا نشد."
+
+msgid "Approval delegated successfully."
+msgstr "تأیید با موفقیت واگذار شد."
+
+msgid "Approval rejected."
+msgstr "تأیید رد شد."
+
+msgid "Approved. Waiting for other approvers."
+msgstr "تأیید شد. در انتظار سایر تأییدکنندگان."
+
+msgid "Approval completed."
+msgstr "فرآیند تأیید تکمیل شد."
+
+msgid "Approved and moved to next approver."
+msgstr "تأیید شد و به تأییدکننده بعدی منتقل شد."
+
+msgid "You are not the approver for this pending job."
+msgstr "شما تأییدکننده این کار در انتظار نیستید."
+
+msgid "Only the original requester can edit this rejected record."
+msgstr "فقط درخواست‌دهنده اصلی می‌تواند این رکورد ردشده را ویرایش کند."
+
+msgid "Only the original requester can edit this approved record."
+msgstr "فقط درخواست‌دهنده اصلی می‌تواند این رکورد تأییدشده را ویرایش کند."
+
+msgid "This record's approval status does not allow edits."
+msgstr "وضعیت تأیید این رکورد اجازه ویرایش را نمی‌دهد."
+
+msgid "Record not found."
+msgstr "رکورد پیدا نشد."
+
+msgid "Invalid field."
+msgstr "فیلد نامعتبر است."
+
+msgid "Field is not editable."
+msgstr "این فیلد قابل ویرایش نیست."
+
+msgid "Unknown field."
+msgstr "فیلد ناشناخته است."
+
+msgid "Invalid value."
+msgstr "مقدار نامعتبر است."
+
+msgid "Failed to update field."
+msgstr "به‌روزرسانی فیلد ناموفق بود."
+
+msgid "Field updated successfully."
+msgstr "فیلد با موفقیت به‌روزرسانی شد."
+
+msgid "Model"
+msgstr "مدل"
+
+msgid "Active"
+msgstr "فعال"
+
+msgid "Approval Process"
+msgstr "فرآیند تأیید"
+
+msgid "Rule criteria"
+msgstr "شرایط قانون"
+
+msgid "When should this rule apply?"
+msgstr "این قانون چه زمانی باید اعمال شود؟"
+
+#, python-format
+msgid "Rule %(order)s — Criteria"
+msgstr "قانون %(order)s — شرایط"
+
+msgid "Add process rule"
+msgstr "افزودن قانون فرآیند"
+
+msgid "Edit process rule"
+msgstr "ویرایش قانون فرآیند"
+
+msgid "A rule with this order already exists for this process."
+msgstr "قانونی با این ترتیب از قبل برای این فرآیند وجود دارد."
+
+msgid "Process rule updated successfully."
+msgstr "قانون فرآیند با موفقیت به‌روزرسانی شد."
+
+msgid "Process rule created successfully."
+msgstr "قانون فرآیند با موفقیت ایجاد شد."
+
+msgid "activated"
+msgstr "فعال شد"
+
+msgid "deactivated"
+msgstr "غیرفعال شد"
+
+#, python-format
+msgid ""
+"%(name)s %(status)s successfully. %(deactivated)s deactivated for this "
+"module."
+msgstr ""
+
+msgid "Add Rule"
+msgstr "افزودن قانون"
+
+msgid "Edit Process"
+msgstr "ویرایش فرآیند"

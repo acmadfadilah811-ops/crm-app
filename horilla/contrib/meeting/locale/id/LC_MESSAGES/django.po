@@ -1,0 +1,561 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Meeting Integration"
+msgstr "Integrasi Rapat"
+
+msgid ""
+"Zoom and Microsoft Teams meeting integration with company access control, "
+"OAuth connections, personal meeting URLs, and activity meeting links."
+msgstr ""
+"Integrasi rapat Zoom dan Microsoft Teams dengan kontrol akses perusahaan, "
+"koneksi OAuth, URL rapat pribadi, dan tautan rapat aktivitas."
+
+msgid ""
+"Add connect/read timeouts on outbound Zoom and Microsoft Graph (Teams) OAuth"
+" and API calls so a blocked network path cannot hang a worker indefinitely."
+msgstr ""
+"Tambahkan batas waktu koneksi/baca pada panggilan OAuth dan API Zoom keluar "
+"dan Microsoft Graph (Tim) sehingga jalur jaringan yang diblokir tidak dapat "
+"menghentikan pekerja tanpa batas waktu."
+
+msgid ""
+"Restricted allowed-users and allowed-roles list views to HTMX requests."
+msgstr ""
+"Membatasi tampilan daftar pengguna yang diizinkan dan peran yang diizinkan "
+"untuk permintaan HTMX."
+
+msgid ""
+"Google Meet option now hides when Google Calendar integration is disabled. "
+"Resolve meeting integration settings from the user's company via all_objects"
+" and use unfiltered GoogleCalendarConfig lookups in provider settings and "
+"link generation. Handle missing active company gracefully in integration "
+"settings views."
+msgstr ""
+"Opsi Google Meet sekarang disembunyikan ketika integrasi Google Kalender "
+"dinonaktifkan.Selesaikan setelan integrasi rapat dari perusahaan pengguna "
+"melalui all_objects dan gunakan pencarian GoogleCalendarConfig tanpa filter "
+"di setelan penyedia dan pembuatan tautan.Tangani perusahaan aktif yang "
+"hilang dengan baik dalam tampilan pengaturan integrasi."
+
+msgid ""
+"Fixed MultipleObjectsReturned on the Zoom and Teams OAuth callbacks. "
+"Improved the access-control UI: constrained the section to the viewport, "
+"added a count + eye pill for allowed users and roles that opens a "
+"HorillaListView modal, and fixed the card-wide click handler. Added "
+"integration-settings view docstrings for pylint."
+msgstr ""
+"Memperbaiki MultipleObjectsReturned pada panggilan balik Zoom dan Teams "
+"OAuth.Memperbaiki UI kontrol akses: membatasi bagian ke area pandang, "
+"menambahkan hitungan + pil mata untuk pengguna dan peran yang diizinkan yang"
+" membuka modal HorillaListView, dan memperbaiki pengendali klik di seluruh "
+"kartu.Menambahkan dokumen tampilan pengaturan integrasi untuk pylint."
+
+msgid ""
+"Initial release: company-level meeting integration settings, Zoom and Teams "
+"OAuth, per-user provider settings, MeetingLink CRUD, admin integration "
+"screens under Settings → Integrations, My Settings entries, and generate-"
+"link support for activities."
+msgstr ""
+"Rilis awal: pengaturan integrasi rapat tingkat perusahaan, Zoom dan Teams "
+"OAuth, pengaturan penyedia per pengguna, MeetingLink CRUD, layar integrasi "
+"admin di bawah Pengaturan → Integrasi, entri Pengaturan Saya, dan dukungan "
+"menghasilkan tautan untuk aktivitas."
+
+msgid "Roles"
+msgstr "Peran"
+
+msgid "Select roles"
+msgstr "Pilih peran"
+
+msgid "Users"
+msgstr "Pengguna"
+
+msgid "Select users"
+msgstr "Pilih pengguna"
+
+msgid "Meeting"
+msgstr "Pertemuan"
+
+msgid "Zoom"
+msgstr "Perbesar"
+
+msgid "Google Meet"
+msgstr "Google bertemu"
+
+msgid "Microsoft Teams"
+msgstr "Tim Microsoft"
+
+msgid "All Users"
+msgstr "Semua Pengguna"
+
+msgid "Specific Roles"
+msgstr "Peran Tertentu"
+
+msgid "Specific Users"
+msgstr "Pengguna Tertentu"
+
+msgid "Enabled"
+msgstr "Diaktifkan"
+
+msgid "Access Type"
+msgstr "Jenis Akses"
+
+msgid "Who can generate meeting links."
+msgstr "Siapa yang dapat membuat tautan rapat."
+
+msgid "Allowed Roles"
+msgstr "Peran yang Diizinkan"
+
+msgid "Allowed Users"
+msgstr "Pengguna yang Diizinkan"
+
+msgid "Meeting Integration Setting"
+msgstr "Pengaturan Integrasi Rapat"
+
+msgid "Meeting Integration Settings"
+msgstr "Pengaturan Integrasi Rapat"
+
+msgid "User"
+msgstr "Pengguna"
+
+msgid "Provider"
+msgstr "Penyedia"
+
+msgid "Personal Meeting URL"
+msgstr "URL Pertemuan Pribadi"
+
+msgid "Your static personal meeting room link, if available."
+msgstr "Tautan ruang pertemuan pribadi statis Anda, jika tersedia."
+
+msgid "User Meeting Config"
+msgstr "Konfigurasi Rapat Pengguna"
+
+msgid "User Meeting Configs"
+msgstr "Konfigurasi Rapat Pengguna"
+
+msgid "Client ID"
+msgstr "ID Klien"
+
+msgid "Client Secret"
+msgstr "Rahasia Klien"
+
+msgid "OAuth Token"
+msgstr "Token OAuth"
+
+msgid "OAuth State"
+msgstr "Negara Bagian OAuth"
+
+msgid "Connected Account Email"
+msgstr "Email Akun Terhubung"
+
+msgid "Zoom OAuth Config"
+msgstr "Konfigurasi Zoom OAuth"
+
+msgid "Zoom OAuth Configs"
+msgstr "Konfigurasi Zoom OAuth"
+
+msgid "Client ID (Application ID)"
+msgstr "ID Klien (ID Aplikasi)"
+
+msgid "Tenant ID"
+msgstr "ID Penyewa"
+
+msgid "Your Azure AD tenant ID, or 'common' for multi-tenant apps."
+msgstr ""
+"ID penyewa Azure Active Directory Anda, atau 'umum' untuk aplikasi multi-"
+"penyewa."
+
+msgid "Microsoft Teams OAuth Config"
+msgstr "Konfigurasi OAuth Microsoft Teams"
+
+msgid "Microsoft Teams OAuth Configs"
+msgstr "Konfigurasi OAuth Microsoft Teams"
+
+msgid "Roles with access"
+msgstr "Peran dengan akses"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Users with access"
+msgstr "Pengguna dengan akses"
+
+msgid "Select Roles"
+msgstr "Pilih Peran"
+
+msgid "Select Users"
+msgstr "Pilih Pengguna"
+
+msgid "Search..."
+msgstr "Mencari..."
+
+msgid "Select all"
+msgstr "Pilih semua"
+
+msgid "Clear all"
+msgstr "Hapus semuanya"
+
+msgid "No roles found."
+msgstr "Tidak ada peran yang ditemukan."
+
+msgid "No users found."
+msgstr "Tidak ada pengguna yang ditemukan."
+
+msgid "Cancel"
+msgstr "Batal"
+
+msgid "Save"
+msgstr "Simpan"
+
+msgid ""
+"Connect and manage the meeting providers available to your organization."
+msgstr ""
+"Hubungkan dan kelola penyedia pertemuan yang tersedia untuk organisasi Anda."
+
+msgid "Meeting Links"
+msgstr "Tautan Rapat"
+
+msgid ""
+"Enable meeting integration to allow users to generate and share meeting "
+"links using Zoom, Google Meet, Microsoft Teams, and more."
+msgstr ""
+"Aktifkan integrasi rapat untuk memungkinkan pengguna membuat dan berbagi "
+"tautan rapat menggunakan Zoom, Google Meet, Microsoft Teams, dan lainnya."
+
+msgid "Enable Meeting Integration"
+msgstr "Aktifkan Integrasi Rapat"
+
+msgid "Disable Meeting Integration?"
+msgstr "Nonaktifkan Integrasi Rapat?"
+
+msgid "Users will no longer be able to create meeting links."
+msgstr "Pengguna tidak lagi dapat membuat tautan rapat."
+
+msgid "Enable Meeting Integration?"
+msgstr "Aktifkan Integrasi Rapat?"
+
+msgid "Enabled — users can now create meeting links"
+msgstr "Diaktifkan — pengguna kini dapat membuat tautan rapat"
+
+msgid "Disabled — users cannot create meeting links"
+msgstr "Dinonaktifkan — pengguna tidak dapat membuat tautan rapat"
+
+msgid "Access Control"
+msgstr "Kontrol Akses"
+
+msgid "Choose who can generate meeting links."
+msgstr "Pilih siapa yang dapat membuat tautan rapat."
+
+msgid "Set access to All Users?"
+msgstr "Setel akses ke Semua Pengguna?"
+
+msgid "Every user in the company will be able to create meeting links."
+msgstr "Setiap pengguna di perusahaan akan dapat membuat tautan pertemuan."
+
+msgid "Every user in the company can use meeting links."
+msgstr "Setiap pengguna di perusahaan dapat menggunakan tautan rapat."
+
+msgid "Active"
+msgstr "Aktif"
+
+msgid "Click to activate"
+msgstr "Klik untuk mengaktifkan"
+
+msgid "Select Specific Roles?"
+msgstr "Pilih Peran Tertentu?"
+
+msgid "Only users with selected roles will be able to create meeting links."
+msgstr "Hanya pengguna dengan peran terpilih yang dapat membuat tautan rapat."
+
+msgid "Only users with selected roles can use meeting links."
+msgstr ""
+"Hanya pengguna dengan peran terpilih yang dapat menggunakan tautan rapat."
+
+msgid "· Click to add or remove roles."
+msgstr "· Klik untuk menambah atau menghapus peran."
+
+msgid "role(s)"
+msgstr "peran"
+
+msgid "Click to select"
+msgstr "Klik untuk memilih"
+
+msgid "Select Specific Users?"
+msgstr "Pilih Pengguna Tertentu?"
+
+msgid "Only selected users will be able to create meeting links."
+msgstr "Hanya pengguna terpilih yang dapat membuat tautan rapat."
+
+msgid "Only selected individual users can use meeting links."
+msgstr "Hanya pengguna individu terpilih yang dapat menggunakan tautan rapat."
+
+msgid "· Click to add or remove users."
+msgstr "· Klik untuk menambah atau menghapus pengguna."
+
+msgid "user(s)"
+msgstr "pengguna"
+
+msgid "Name"
+msgstr "Nama"
+
+msgid "No entries found."
+msgstr "Tidak ada entri yang ditemukan."
+
+msgid "Meeting Accounts"
+msgstr "Akun Rapat"
+
+msgid "Manage the meeting accounts connected to your profile."
+msgstr "Kelola akun rapat yang terhubung ke profil Anda."
+
+msgid ""
+"Meeting integration is not currently enabled for your account. Please "
+"contact your administrator."
+msgstr ""
+"Integrasi rapat saat ini tidak diaktifkan untuk akun Anda.Silakan hubungi "
+"administrator Anda."
+
+msgid "Connected"
+msgstr "Terhubung"
+
+msgid "Connected Account"
+msgstr "Akun Terhubung"
+
+msgid "Reconnect"
+msgstr "Hubungkan kembali"
+
+msgid "Disconnect"
+msgstr "Memutuskan"
+
+msgid "Credentials saved. Click Connect to authorize with Zoom."
+msgstr "Kredensial disimpan.Klik Hubungkan untuk mengotorisasi dengan Zoom."
+
+msgid "Connect Zoom"
+msgstr "Hubungkan Zoom"
+
+msgid "Edit Credentials"
+msgstr "Edit Kredensial"
+
+msgid "Save Credentials"
+msgstr "Simpan Kredensial"
+
+msgid "How to set up Zoom OAuth"
+msgstr "Cara mengatur Zoom OAuth"
+
+msgid "Go to Zoom Marketplace"
+msgstr "Buka Zoom Pasar"
+
+msgid "Visit"
+msgstr "Mengunjungi"
+
+msgid "and sign in."
+msgstr "dan masuk."
+
+msgid "Create an OAuth app"
+msgstr "Buat aplikasi OAuth"
+
+msgid "Click \"Build App\" → choose \"OAuth\" → select \"User-managed\"."
+msgstr "Klik \"Bangun Aplikasi\" → pilih \"OAuth\" → pilih \"Dikelola pengguna\"."
+
+msgid "Add redirect URI"
+msgstr "Tambahkan URI pengalihan"
+
+msgid "Under OAuth settings, add this exact redirect URI:"
+msgstr "Di bawah pengaturan OAuth, tambahkan URI pengalihan yang tepat ini:"
+
+msgid "Copy credentials"
+msgstr "Salin kredensial"
+
+msgid ""
+"Copy the Client ID and Client Secret from the app's Basic Information page."
+msgstr ""
+"Salin ID Klien dan Rahasia Klien dari halaman Informasi Dasar aplikasi."
+
+msgid "Enter below and save"
+msgstr "Masukkan di bawah dan simpan"
+
+msgid "Paste your credentials below and click Save, then Connect."
+msgstr "Tempel kredensial Anda di bawah dan klik Simpan, lalu Hubungkan."
+
+msgid "your_client_id"
+msgstr "id_klien_Anda"
+
+msgid "your_client_secret"
+msgstr "rahasia_klien_Anda"
+
+msgid "Disable"
+msgstr "Nonaktifkan"
+
+msgid ""
+"Google Calendar is connected. Enable Google Meet to auto-generate meeting "
+"links."
+msgstr ""
+"Google Kalender terhubung.Aktifkan Google Meet untuk membuat link rapat "
+"secara otomatis."
+
+msgid "Enable Google Meet"
+msgstr "Aktifkan Google Meet"
+
+msgid "Google Meet requires Google Calendar to be connected first."
+msgstr ""
+"Google Meet memerlukan Google Kalender untuk terhubung terlebih dahulu."
+
+msgid "Connect Google Calendar"
+msgstr "Hubungkan Google Kalender"
+
+msgid "Credentials saved. Click Connect to authorize with Microsoft."
+msgstr ""
+"Kredensial disimpan.Klik Hubungkan untuk mengotorisasi dengan Microsoft."
+
+msgid "Connect Teams"
+msgstr "Hubungkan Tim"
+
+msgid "How to set up Microsoft Teams OAuth"
+msgstr "Cara mengatur OAuth Tim Microsoft"
+
+msgid ""
+"Important: Microsoft Teams meeting creation requires a Microsoft 365 work or"
+" school account with a Teams license. Personal Microsoft accounts "
+"(@outlook.com, @hotmail.com, @live.com) are not supported by the Microsoft "
+"Graph API."
+msgstr ""
+"Penting: Pembuatan rapat Microsoft Teams memerlukan akun kerja atau sekolah "
+"Microsoft 365 dengan lisensi Teams.Akun Microsoft pribadi (@outlook.com, "
+"@hotmail.com, @live.com) tidak didukung oleh Microsoft Graph API."
+
+msgid "Go to Azure Portal"
+msgstr "Buka Portal Microsoft Azure"
+
+msgid "and sign in with your work or school account."
+msgstr "dan masuk dengan akun kantor atau sekolah Anda."
+
+msgid "Register an application"
+msgstr "Daftarkan aplikasi"
+
+msgid ""
+"Search \"App registrations\" → New registration. Set a name and choose "
+"\"Accounts in any organizational directory only (Single tenant)\"."
+msgstr ""
+"Cari \"Pendaftaran aplikasi\" → Pendaftaran baru.Tetapkan nama dan pilih "
+"\"Akun hanya di direktori organisasi mana pun (Penyewa tunggal)\"."
+
+msgid "Under Authentication → Add a platform → Web. Enter this exact URI:"
+msgstr ""
+"Di bawah Otentikasi → Tambahkan platform → Web.Masukkan URI persis ini:"
+
+msgid "Create a client secret"
+msgstr "Buat rahasia klien"
+
+msgid "Go to Certificates & secrets → New client secret. Copy the"
+msgstr "Buka Sertifikat & rahasia → Rahasia klien baru.Salin"
+
+msgid "Value"
+msgstr "Nilai"
+
+msgid "(not the Secret ID) immediately — it is only shown once."
+msgstr "(bukan ID Rahasia) langsung — hanya ditampilkan sekali."
+
+msgid "Add API permissions"
+msgstr "Tambahkan izin API"
+
+msgid ""
+"API permissions → Add → Microsoft Graph → Delegated → add "
+"OnlineMeetings.ReadWrite and User.Read. Then click \"Grant admin consent\"."
+msgstr ""
+"Izin API → Tambah → Microsoft Graph → Didelegasikan → tambahkan "
+"OnlineMeetings.ReadWrite dan User.Read.Kemudian klik \"Berikan persetujuan "
+"admin\"."
+
+msgid "From Overview, copy Application (client) ID and Directory (tenant) ID."
+msgstr "Dari Ikhtisar, salin ID Aplikasi (klien) dan ID Direktori (penyewa)."
+
+msgid "Application (client) ID"
+msgstr "ID Aplikasi (klien)."
+
+msgid "Secret Value"
+msgstr "Nilai Rahasia"
+
+msgid "Directory (tenant) ID"
+msgstr "ID Direktori (penyewa)."
+
+msgid "No active company found.Cannot save settings."
+msgstr "Tidak ditemukan perusahaan aktif. Tidak dapat menyimpan pengaturan."
+
+msgid "Meeting integration enabled."
+msgstr "Integrasi rapat diaktifkan."
+
+msgid "Meeting integration disabled and all credentials cleared."
+msgstr "Integrasi rapat dinonaktifkan dan semua kredensial dihapus."
+
+msgid "Access set to All Users."
+msgstr "Akses diatur ke Semua Pengguna."
+
+msgid "Full Name"
+msgstr "Nama Lengkap"
+
+msgid "Role"
+msgstr "Peran"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Role Name"
+msgstr "Nama Peran"
+
+msgid "Allowed roles updated."
+msgstr "Peran yang diizinkan diperbarui."
+
+msgid "Allowed users updated."
+msgstr "Pengguna yang diizinkan diperbarui."
+
+msgid "Zoom credentials saved. Click Connect to authorize."
+msgstr "Kredensial zoom disimpan.Klik Hubungkan untuk mengotorisasi."
+
+msgid "Zoom account disconnected."
+msgstr "Akun Zoom terputus."
+
+msgid "Connect Google Calendar first to enable Google Meet."
+msgstr ""
+"Hubungkan Google Kalender terlebih dahulu untuk mengaktifkan Google Meet."
+
+msgid "Google Meet enabled for meeting link generation."
+msgstr "Google Meet diaktifkan untuk pembuatan link rapat."
+
+msgid "Google Meet disabled."
+msgstr "Google Meet dinonaktifkan."
+
+msgid "Teams credentials saved. Click Connect to authorize."
+msgstr "Kredensial tim disimpan.Klik Hubungkan untuk mengotorisasi."
+
+msgid "Teams account disconnected."
+msgstr "Akun Teams terputus."
+
+msgid "Please save your Zoom Client ID and Secret first."
+msgstr "Silakan simpan ID Klien dan Rahasia Zoom Anda terlebih dahulu."
+
+msgid "Zoom account connected successfully."
+msgstr "Akun Zoom berhasil terhubung."
+
+msgid "Please save your Teams Client ID, Secret and Tenant ID first."
+msgstr ""
+"Harap simpan ID Klien, Rahasia, dan ID Penyewa Teams Anda terlebih dahulu."
+
+msgid "Teams account connected successfully."
+msgstr "Akun tim berhasil tersambung."

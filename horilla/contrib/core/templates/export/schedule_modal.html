@@ -1,0 +1,349 @@
+<div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" id="scheduleModal">
+    <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6 relative max-h-[85vh] overflow-y-auto">
+        <form hx-post="{% url 'core:schedule_create' %}" hx-target="#scheduleModal" hx-swap="outerHTML">
+            {% include "messages.html" %}
+            {% csrf_token %}
+
+            <!-- Hidden fields -->
+            {% for m in selected_modules %}
+                <input type="hidden" name="module" value="{{ m }}">
+            {% endfor %}
+
+            <input type="hidden" name="export_format" value="{{ selected_format }}">
+
+            {% if schedule_id %}
+                <input type="hidden" name="schedule_id" value="{{ schedule_id }}">
+            {% endif %}
+
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-lg font-semibold">{% trans "Schedule Export" %}</h2>
+                <button type="button" onclick="closeModal()" class="text-gray-500 hover:text-red-500 cursor-pointer">
+                    <img src="{% static 'assets/icons/close.svg' %}" alt="{% trans 'Close' %}" class="w-5 h-5">
+                </button>
+            </div>
+
+            {% if non_field_error %}
+                <div class="bg-primary-100 text-primary-600 px-4 py-2 rounded mb-4">
+                    <p class="text-sm">{{ non_field_error }}</p>
+                </div>
+            {% endif %}
+
+            <!-- Column selection -->
+            <div class="mb-6">
+                <div class="flex justify-between items-center mb-2">
+                    <label class="block text-xs font-medium text-gray-700">{% trans "Columns (Optional)" %}</label>
+                    <button
+                        type="button"
+                        id="globalScheduleToggleBtn"
+                        class="toggle-select-all-btn text-xs px-3 py-1.5 rounded-md border border-primary-600 text-primary-600 hover:bg-primary-100"
+                        onclick="toggleAllScheduleFieldsChecked(this, '#schedule-fields-wrapper')"
+                    >
+                        {% trans "Unselect All" %}
+                    </button>
+                </div>
+                <div id="schedule-fields-wrapper">
+                    {% for module in schedule_modules %}
+                        <div class="schedule-fields-block mt-2 rounded-md overflow-hidden border border-primary-300">
+                            <div class="schedule-fields-header flex items-center w-full px-4 py-3 bg-primary-300">
+                                <input
+                                    type="checkbox"
+                                    class="module-select-all w-4 h-4 bg-white border border-dark-100 rounded-sm accent-[#e54f38] mr-3"
+                                    {% if module.all_checked %}
+                                        checked
+                                    {% endif %}
+                                    onclick="event.stopPropagation();toggleModuleFieldsChecked(this)"
+                                >
+                                <button
+                                    type="button"
+                                    class="flex justify-between items-center w-full text-left transition"
+                                    onclick="toggleScheduleAccordion(this)"
+                                >
+                                    <div class="flex gap-3 w-full font-medium text-sm text-primary-600">
+                                        {{ module.label }}
+                                    </div>
+                                    <svg
+                                        class="ms-5 w-4 h-4 text-primary-600 transform transition-transform"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M19 9l-7 7-7-7"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="accordion-content text-sm text-dark-500 bg-white">
+                                <div class="grid grid-cols-2 gap-3 p-4">
+                                    {% for field in module.fields %}
+                                        <label class="flex items-center gap-2 text-sm">
+                                            <input
+                                                type="checkbox"
+                                                class="schedule-field-checkbox w-4 h-4 bg-[#E9EDF7] rounded-sm accent-[#e54f38]"
+                                                name="expo_{{ module.name }}_field"
+                                                value="{{ field.name }}"
+                                                {% if field.checked %}
+                                                    checked
+                                                {% endif %}
+                                                onchange="syncScheduleModuleSelectAllState(this)"
+                                            >
+                                            {{ field.label }}
+                                        </label>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Frequency -->
+            <div class="mb-6">
+                <label class="block text-xs font-medium text-gray-700 mb-2">{% trans "Frequency" %}</label>
+                <div class="radio-group flex flex-wrap gap-6">
+                    <!-- Daily -->
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input
+                            type="radio"
+                            name="frequency"
+                            value="daily"
+                            {% if selected_frequency_option == 'daily' %}
+                                checked
+                            {% endif %}
+                            class="hidden peer"
+                        >
+                        <span class="custom-radio"></span>
+                        <span>{% trans "Daily" %}</span>
+                    </label>
+
+                    <!-- Weekly -->
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input
+                            type="radio"
+                            name="frequency"
+                            value="weekly"
+                            {% if selected_frequency_option == 'weekly' %}
+                                checked
+                            {% endif %}
+                            class="hidden peer"
+                        >
+                        <span class="custom-radio"></span>
+                        <span>{% trans "Weekly" %}</span>
+                    </label>
+
+                    <!-- Monthly -->
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input
+                            type="radio"
+                            name="frequency"
+                            value="monthly"
+                            {% if selected_frequency_option == 'monthly' %}
+                                checked
+                            {% endif %}
+                            class="hidden peer"
+                        >
+                        <span class="custom-radio"></span>
+                        <span>{% trans "Monthly" %}</span>
+                    </label>
+
+                    <!-- Yearly -->
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input
+                            type="radio"
+                            name="frequency"
+                            value="yearly"
+                            {% if selected_frequency_option == 'yearly' %}
+                                checked
+                            {% endif %}
+                            class="hidden peer"
+                        >
+                        <span class="custom-radio"></span>
+                        <span>{% trans "Yearly" %}</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Weekly: Day of Week -->
+            <div id="weeklyFields" class="mb-6 {% if selected_frequency_option != 'weekly' %}hidden{% endif %}">
+                <label class="block text-xs font-medium text-gray-700 mb-1">{% trans "Day of week" %}</label>
+                <select name="weekday" class="js-example-basic-single headselect w-full">
+                    {% for day in weekdays %}
+                        <option value="{{ day }}">{{ day|capfirst }}</option>
+                    {% endfor %}
+                </select>
+                {% if field_errors.weekday %}
+                    <div class="bg-primary-100 text-primary-600 px-4 py-2 rounded mb-4 mt-2">
+                        <p class="text-sm">{{ field_errors.weekday }}</p>
+                    </div>
+                {% endif %}
+            </div>
+
+            <!-- Monthly: Day of Month -->
+            <div id="monthlyFields" class="mb-6 {% if selected_frequency_option != 'monthly' %}hidden{% endif %}">
+                <label class="block text-xs font-medium text-gray-700 mb-1">{% trans "Day of month" %}</label>
+                <select name="day_of_month" class="js-example-basic-single headselect w-full">
+                    {% for d in days_in_month %}
+                        <option value="{{ d }}">{{ d }}</option>
+                    {% endfor %}
+                </select>
+                {% if field_errors.day_of_month %}
+                    <div class="bg-primary-100 text-primary-600 px-4 py-2 rounded mb-4 mt-2">
+                        <p class="text-sm">{{ field_errors.day_of_month }}</p>
+                    </div>
+                {% endif %}
+            </div>
+
+            <!-- Yearly: Day of Month -->
+            <div id="yearlyDayField" class="mb-6 {% if selected_frequency_option != 'yearly' %}hidden{% endif %}">
+                <label class="block text-xs font-medium text-gray-700 mb-1">{% trans "Day of month" %}</label>
+                <select name="yearly_day_of_month" class="js-example-basic-single headselect w-full">
+                    {% for d in days_in_month %}
+                        <option value="{{ d }}">{{ d }}</option>
+                    {% endfor %}
+                </select>
+                {% if field_errors.yearly_day_of_month %}
+                    <div class="bg-primary-100 text-primary-600 px-4 py-2 rounded mb-4 mt-2">
+                        <p class="text-sm">{{ field_errors.yearly_day_of_month }}</p>
+                    </div>
+                {% endif %}
+            </div>
+
+            <!-- Yearly: Month -->
+            <div id="yearlyMonthField" class="mb-6 {% if selected_frequency_option != 'yearly' %}hidden{% endif %}">
+                <label class="block text-xs font-medium text-gray-700 mb-1">{% trans "Month" %}</label>
+                <select name="yearly_month" class="js-example-basic-single headselect w-full">
+                    {% for m, name in months %}
+                        <option value="{{ m }}">{{ name }}</option>
+                    {% endfor %}
+                </select>
+                {% if field_errors.yearly_month %}
+                    <div class="bg-primary-100 text-primary-600 px-4 py-2 rounded mb-4 mt-2">
+                        <p class="text-sm">{{ field_errors.yearly_month }}</p>
+                    </div>
+                {% endif %}
+            </div>
+
+            <!-- Start Date -->
+            <div class="mb-6">
+                <label class="block text-xs font-medium text-gray-700 mb-1">{% trans "Start Date" %}</label>
+                <input
+                    type="date"
+                    name="start_date"
+                    required
+                    value="{{ form_data.start_date|default:'' }}"
+                    class="text-color-600 p-2 placeholder:text-xs w-full border border-dark-50 rounded-md focus-visible:outline-0 placeholder:text-dark-100 text-sm transition duration-300 focus:border-primary-600"
+                >
+                {% if field_errors.start_date %}
+                    <div class="bg-primary-100 text-primary-600 px-4 py-2 rounded mb-4 mt-2">
+                        <p class="text-sm">{{ field_errors.start_date }}</p>
+                    </div>
+                {% endif %}
+            </div>
+
+            <!-- End Date -->
+            <div class="mb-6">
+                <label class="block text-xs font-medium text-gray-700 mb-1">{% trans "End Date (optional)" %}</label>
+                <input
+                    type="date"
+                    name="end_date"
+                    value="{{ form_data.end_date|default:'' }}"
+                    class="text-color-600 p-2 placeholder:text-xs w-full border border-dark-50 rounded-md focus-visible:outline-0 placeholder:text-dark-100 text-sm transition duration-300 focus:border-primary-600"
+                >
+                {% if field_errors.end_date %}
+                    <div class="bg-primary-100 text-primary-600 px-4 py-2 rounded mb-4 mt-2">
+                        <p class="text-sm">{{ field_errors.end_date }}</p>
+                    </div>
+                {% endif %}
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex justify-end gap-2 pt-2">
+                <button type="submit" class="px-4 py-2 text-sm bg-primary-600 text-white rounded hover:bg-primary-700">
+                    {% trans "Schedule" %}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function toggleScheduleAccordion(button) {
+      const header = button.closest('.schedule-fields-header');
+      const content = header ? header.nextElementSibling : button.nextElementSibling;
+      const svg = button.querySelector('svg');
+      if (content) content.classList.toggle('open');
+      if (svg) svg.classList.toggle('rotate-90');
+    }
+
+    const SCHEDULE_SELECT_ALL_LABEL = "{% trans 'Select All' %}";
+    const SCHEDULE_UNSELECT_ALL_LABEL = "{% trans 'Unselect All' %}";
+
+    function getScheduleFieldBlocks(scope) {
+      const scopeEl = typeof scope === 'string' ? document.querySelector(scope) : scope;
+      if (!scopeEl) return [];
+      return scopeEl.classList && scopeEl.classList.contains('schedule-fields-block')
+        ? [scopeEl]
+        : Array.from(scopeEl.querySelectorAll('.schedule-fields-block'));
+    }
+
+    function syncGlobalScheduleToggleState() {
+      const fields = document.querySelectorAll('.schedule-field-checkbox');
+      const total = fields.length;
+      const checkedCount = document.querySelectorAll('.schedule-field-checkbox:checked').length;
+      const btn = document.getElementById('globalScheduleToggleBtn');
+      if (btn) {
+        btn.textContent = total > 0 && checkedCount === total ? SCHEDULE_UNSELECT_ALL_LABEL : SCHEDULE_SELECT_ALL_LABEL;
+      }
+    }
+
+    function toggleAllScheduleFieldsChecked(button, scope) {
+      const checked = button.textContent.trim() === SCHEDULE_SELECT_ALL_LABEL;
+      const blocks = getScheduleFieldBlocks(scope);
+      blocks.forEach(block => {
+        block.querySelectorAll('.schedule-field-checkbox').forEach(cb => { cb.checked = checked; });
+        const selectAll = block.querySelector('.module-select-all');
+        if (selectAll) { selectAll.checked = checked; selectAll.indeterminate = false; }
+      });
+      button.textContent = checked ? SCHEDULE_UNSELECT_ALL_LABEL : SCHEDULE_SELECT_ALL_LABEL;
+    }
+
+    function toggleModuleFieldsChecked(checkbox) {
+      const block = checkbox.closest('.schedule-fields-block');
+      const checked = checkbox.checked;
+      block.querySelectorAll('.schedule-field-checkbox').forEach(cb => { cb.checked = checked; });
+      syncGlobalScheduleToggleState();
+    }
+
+    function syncScheduleModuleSelectAllState(checkbox) {
+      const block = checkbox.closest('.schedule-fields-block');
+      const fields = block.querySelectorAll('.schedule-field-checkbox');
+      const total = fields.length;
+      const checkedCount = block.querySelectorAll('.schedule-field-checkbox:checked').length;
+      const selectAll = block.querySelector('.module-select-all');
+
+      if (selectAll) {
+        selectAll.checked = checkedCount === total;
+        selectAll.indeterminate = checkedCount > 0 && checkedCount < total;
+      }
+      syncGlobalScheduleToggleState();
+    }
+
+    function updateFields() {
+      const value = document.querySelector('input[name="frequency"]:checked')?.value || 'daily';
+      document.getElementById('weeklyFields').classList.toggle('hidden', value !== 'weekly');
+      document.getElementById('monthlyFields').classList.toggle('hidden', value !== 'monthly');
+      document.getElementById('yearlyDayField').classList.toggle('hidden', value !== 'yearly');
+      document.getElementById('yearlyMonthField').classList.toggle('hidden', value !== 'yearly');
+    }
+
+    document.querySelectorAll('input[name="frequency"]').forEach(radio => {
+      radio.addEventListener('change', updateFields);
+    });
+
+    updateFields();
+</script>

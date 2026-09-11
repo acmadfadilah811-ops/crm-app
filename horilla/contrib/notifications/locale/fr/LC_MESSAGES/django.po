@@ -1,0 +1,129 @@
+# French translations for Horilla Notifications module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Notifications"
+msgstr "Notifications"
+
+msgid "Template title is required."
+msgstr "Le titre du modele est requis."
+
+msgid "Template message is required."
+msgstr "Le message du modele est requis."
+
+msgid ""
+"URL contains potentially dangerous content. Please remove any scripts or "
+"malicious code."
+msgstr ""
+"L'URL contient du contenu potentiellement dangereux. Veuillez supprimer tout "
+"script ou code malveillant."
+
+msgid "Notification"
+msgstr "Notification"
+
+msgid "muted"
+msgstr "en sourdine"
+
+msgid "unmuted"
+msgstr "non en sourdine"
+
+msgid "Notification Sound Preference"
+msgstr "Preference sonore des notifications"
+
+msgid "Notification Sound Preferences"
+msgstr "Preferences sonores des notifications"
+
+msgid "Template Title"
+msgstr "Titre du modele"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Related Model"
+msgstr "Modele associe"
+
+msgid "Notification Template"
+msgstr "Modele de notification"
+
+msgid "Notification Templates"
+msgstr "Modeles de notification"
+
+msgid "Unmute notifications"
+msgstr "Activer le son des notifications"
+
+msgid "Mute notifications"
+msgstr "Couper le son des notifications"
+
+msgid "Mark all as read"
+msgstr "Tout marquer comme lu"
+
+msgid "No unread notifications"
+msgstr "Aucune notification non lue"
+
+msgid "View all Notification"
+msgstr "Voir toutes les notifications"
+
+msgid "All Notifications"
+msgstr "Toutes les notifications"
+
+msgid "Clear All"
+msgstr "Tout effacer"
+
+msgid "No notifications"
+msgstr "Aucune notification"
+
+msgid "Close"
+msgstr "Fermer"
+
+msgid "Enter template title"
+msgstr "Entrez le titre du modele"
+
+msgid "Select content type (optional)"
+msgstr "Selectionnez le type de contenu (optionnel)"
+
+msgid "Insert Field"
+msgstr "Inserer un champ"
+
+msgid "Loading..."
+msgstr "Chargement..."
+
+msgid "All notifications marked as read."
+msgstr "Toutes les notifications marquees comme lues."
+
+msgid "Notification Deleted."
+msgstr "Notification supprimee."
+
+msgid "Customize the content of notifications sent to your users."
+msgstr ""
+
+msgid "Update Notification Template"
+msgstr "Mettre a jour le modele de notification"
+
+msgid "Update Template"
+msgstr "Mettre a jour le modele"
+
+msgid "Create Notification Template"
+msgstr "Creer un modele de notification"
+
+msgid "Save Template"
+msgstr "Enregistrer le modele"
+
+msgid "Notification template \"{}\" updated successfully."
+msgstr "Le modele de notification \"{}\" a ete mis a jour avec succes."
+
+msgid "Notification template \"{}\" created successfully."
+msgstr "Le modele de notification \"{}\" a ete cree avec succes."

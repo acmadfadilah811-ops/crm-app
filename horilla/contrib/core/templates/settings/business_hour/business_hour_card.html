@@ -1,0 +1,194 @@
+<div class="flex flex-wrap justify-between items-center h-14">
+    <div>
+        <h3 class="text-md font-semibold">{% trans "Business hours" %}</h3>
+        <p class="text-xs text-gray-500">{% trans 'Define the working hours your company operates on each day.' %}</p>
+    </div>
+    {% has_perm "core.add_businesshour" as can_add_business_hour %}
+    {% if can_add_business_hour and not business_hour %}
+        <button
+            type="button"
+            class="text-sm px-4 py-2 bg-primary-600 rounded-md hover:bg-primary-800 transition duration-300 text-[white]"
+            hx-get="{% url 'core:business_hour_create_form' %}"
+            hx-target="#modalBox"
+            hx-swap="innerHTML"
+            onclick="openModal()"
+        >
+            {% trans "Add Business Hour" %}
+        </button>
+    {% endif %}
+</div>
+
+{% if business_hour %}
+    <div
+        class="relative bg-white rounded-lg shadow-sm border border-dark-50 max-w-6xl"
+        id="business-hour-card-inner"
+    >
+        <div class="p-3 border-b border-dark-50">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+                <div class="min-w-0 flex flex-wrap items-center gap-2">
+                    <h4 class="text-md font-semibold text-gray-900">{{ business_hour.name }}</h4>
+                    <span
+                        class="inline-flex items-center rounded-md bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-700"
+                    >
+                        {{ business_hour.get_business_hour_type_display }}
+                    </span>
+                    {% if business_hour.business_hour_type == "custom" %}
+                        <span
+                            class="inline-flex items-center rounded-md bg-primary-200/80 px-2.5 py-0.5 text-xs font-normal text-primary-700"
+                        >
+                            {{ business_hour.get_timing_type_display }}
+                        </span>
+                    {% endif %}
+                </div>
+                {% has_perm "core.change_businesshour" as can_change_bh %}
+                {% if can_change_bh %}
+                    <div class="flex items-center gap-2 shrink-0">
+                        <button
+                            type="button"
+                            class="text-sm px-4 py-2 bg-primary-600 rounded-md text-white"
+                            hx-get="{% url 'core:business_hour_add_holiday' business_hour.pk %}"
+                            hx-target="#modalBox"
+                            hx-swap="innerHTML"
+                            onclick="openModal()"
+                            title="{% trans 'Add Holiday' %}"
+                        >
+                            {% trans "Add Holiday" %}
+                        </button>
+                        <button
+                            type="button"
+                            class="text-sm px-4 py-2 rounded-md border border-primary-500 text-primary-600"
+                            hx-get="{{ business_hour.get_edit_url }}"
+                            hx-target="#modalBox"
+                            hx-swap="innerHTML"
+                            onclick="openModal()"
+                            title="{% trans 'Edit' %}"
+                            aria-label="{% trans 'Edit' %}"
+                        >
+                            {% trans "Edit" %}
+                        </button>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="px-5 pb-4 pt-2">
+            <div class="flex flex-col">
+                {% with per_day_rows=business_hour.get_card_different_hours_week_rows lines=business_hour.get_card_hours_lines %}
+                    {# Week start — hint inline with label (not stretched across label column) #}
+                    <div class="flex flex-col gap-1 py-2 sm:flex-row sm:items-baseline sm:gap-x-4">
+                        <div class="shrink-0 sm:w-52">
+                            <span class="inline-flex items-center gap-1 text-xs font-bold text-color-600">
+                                {% trans "Week starts on" %}
+                                <span
+                                    class="inline-flex cursor-pointer text-[#a19e9e]"
+                                    title="{% trans 'First day of the week for calendars and reporting.' %}"
+                                    aria-label="{% trans 'First day of the week for calendars and reporting.' %}"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="15"
+                                        height="15"
+                                        viewBox="0 0 20 20"
+                                    >
+                                        <path
+                                            fill="currentColor"
+                                            d="M2.93 17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07m12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32M9 11V9h2v6H9zm0-6h2v2H9z"
+                                        />
+                                    </svg>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="min-w-0 flex-1 text-sm font-normal text-gray-900">
+                            {{ business_hour.get_week_start_day_display }}
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-1 py-2 sm:flex-row sm:items-baseline sm:gap-x-4">
+                        <div class="shrink-0 text-xs font-bold text-color-600 sm:w-52">
+                            {% trans "Time zone" %}
+                        </div>
+                        <div class="min-w-0 flex-1 text-sm font-normal text-gray-900">
+                            {{ business_hour.get_time_zone_display }}
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-1 py-2 sm:flex-row sm:items-start sm:gap-x-4">
+                        <div class="shrink-0 text-xs font-bold text-color-600 sm:w-52 sm:pt-0.5">
+                            {% trans "Business days" %}
+                        </div>
+                        <div class="min-w-0 flex-1 text-sm font-normal text-gray-900">
+                            {% if per_day_rows %}
+                                <div class="flex flex-col gap-1">
+                                    {% for row in per_day_rows %}
+                                        <div class="grid grid-cols-[minmax(6.5rem,7.5rem)_1fr] gap-4">
+                                            <span class="text-xs text-color-600">{{ row.day }}</span>
+                                            <span class="text-sm text-gray-900">{{ row.hours }}</span>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ business_hour.get_card_business_days_compact }}
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    {% if lines %}
+                        <div class="flex flex-col gap-1 py-2 sm:flex-row sm:items-baseline sm:gap-x-4">
+                            <div class="shrink-0 text-xs font-bold text-color-600 sm:w-52">
+                                {% trans "Business hours" %}
+                            </div>
+                            <div class="min-w-0 flex-1 text-sm font-normal text-gray-900">
+                                <ul class="m-0 list-none space-y-1 p-0">
+                                    {% for line in lines %}
+                                        <li>{{ line }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {# Per-day custom schedule already marks closed days; 24/7 has no closed days — omit redundant row. #}
+                    {% if per_day_rows is None and business_hour.business_hour_type != "24_7" %}
+                        <div class="flex flex-col gap-1 py-2 sm:flex-row sm:items-baseline sm:gap-x-4">
+                            <div class="shrink-0 text-xs font-bold text-color-600 sm:w-52">
+                                {% trans "Closed" %}
+                            </div>
+                            <div class="min-w-0 flex-1 text-sm font-normal text-gray-900">
+                                {{ business_hour.get_card_closed_days_label }}
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+
+        {% with holiday_count=business_hour.holidays.count %}
+            <div class="flex items-center justify-between border-t border-dark-50 px-5 py-3 mt-1">
+                <div class="flex items-center gap-2">
+                    <span class="text-xs font-bold text-color-600">{% trans "Holidays" %}</span>
+                    {% if holiday_count %}
+                        <span
+                            class="inline-flex items-center rounded-full bg-primary-100 px-2 py-0.5 text-xs font-medium text-primary-700"
+                        >
+                            {{ holiday_count }}
+                        </span>
+                    {% endif %}
+                </div>
+                <button
+                    type="button"
+                    class="text-xs text-primary-600 hover:text-primary-800 font-medium transition-colors duration-150"
+                    hx-get="{% url 'core:business_hour_holiday_modal' business_hour.pk %}"
+                    hx-target="#contentModalBox"
+                    hx-swap="innerHTML"
+                    onclick="openContentModal()"
+                >
+                    {% trans "Manage" %}
+                </button>
+            </div>
+        {% endwith %}
+    </div>
+{% else %}
+    <div class="relative max-w-6xl rounded-lg border border-dashed border-dark-50 bg-white p-8 text-center shadow-sm">
+        <p class="mb-1 text-sm text-color-600">{% trans "No business hour configured yet." %}</p>
+        <p class="text-xs text-gray-500">{% trans "Use Add Business Hour to create your company schedule." %}</p>
+    </div>
+{% endif %}

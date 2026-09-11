@@ -1,0 +1,724 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Booking"
+msgstr "Buchung"
+
+msgid ""
+"Public scheduling pages with slot availability, online meeting links (Zoom, "
+"Google Meet, Microsoft Teams), CRM lead integration, and confirmation, "
+"reminder, reschedule, and cancellation emails."
+msgstr ""
+"Öffentliche Terminplanungsseiten mit Slot-Verfügbarkeit, Online-Meeting-"
+"Links (Zoom, Google Meet, Microsoft Teams), CRM-Lead-Integration sowie "
+"Bestätigungs-, Erinnerungs-, Umbuchungs- und Stornierungsmails."
+
+msgid "Registered Booking for export_data."
+msgstr ""
+
+#, fuzzy
+#| msgid ""
+#| "Added HorillaModalDetailView with clickable rows, prev/next navigation, "
+#| "and status change actions; replaced hardcoded modal colors with Horilla "
+#| "theme variables. Split booking/views.py into booking_page, booking_list, "
+#| "and public modules. Use load_branding() TITLE as the fallback company "
+#| "name in reminder and confirmation emails."
+msgid ""
+"Added ModalDetailView with clickable rows, prev/next navigation, and status "
+"change actions; replaced hardcoded modal colors with theme variables. Split "
+"booking/views.py into booking_page, booking_list, and public modules. Use "
+"load_branding() TITLE as the fallback company name in reminder and "
+"confirmation emails."
+msgstr ""
+"HorillaModalDetailView mit anklickbaren Zeilen, Vor-/Zurück-Navigation und "
+"Statusänderungsaktionen hinzugefügt; hartcodierte Modal-Farben durch Horilla-"
+"Theme-Variablen ersetzt. booking/views.py in die Module booking_page, "
+"booking_list und public aufgeteilt. load_branding() TITLE als Fallback-"
+"Firmenname in Erinnerungs- und Bestätigungsmails verwendet."
+
+#, fuzzy
+#| msgid ""
+#| "Improved booking calendar UX with timezone-aware slot display and "
+#| "confirmation rendering. Fixed the public date-strip to read date-object "
+#| "properties instead of stale outer-scope month/day variables. Adopted the "
+#| "horilla.utils.timezone shim and standardized first-party import groups "
+#| "across booking models, tasks, utils, and views."
+msgid ""
+"Improved booking calendar UX with timezone-aware slot display and "
+"confirmation rendering. Fixed the public date-strip to read date-object "
+"properties instead of stale outer-scope month/day variables. Adopted the "
+"utils.timezone shim and standardized first-party import groups across "
+"booking models, tasks, utils, and views."
+msgstr ""
+"Buchungskalender-UX mit zeitzonenbewusster Slot-Anzeige und "
+"Bestätigungsdarstellung verbessert. Den öffentlichen Datumsstreifen "
+"korrigiert, sodass er Datumsobjekt-Eigenschaften statt veralteter äußerer "
+"month/day-Variablen liest. Den horilla.utils.timezone-Shim übernommen und "
+"First-Party-Importgruppen in Buchungsmodellen, Tasks, Utils und Views "
+"vereinheitlicht."
+
+msgid ""
+"Select2 timezone picker and clearer public scheduling layout. HTMX toggles "
+"for allow_cancel, allow_reschedule, and is_online with better online/offline "
+"location controls and brand-color widget rendering. Per-booking-page mail "
+"templates for confirmation, cancellation, and reschedule — plus Celery "
+"reminder emails aligned with CRM lead/contact/activity hooks."
+msgstr ""
+"Select2-Zeitzonenauswahl und übersichtlicheres öffentliches Planungslayout. "
+"HTMX-Umschalter für allow_cancel, allow_reschedule und is_online mit "
+"verbesserten Online-/Offline-Standortsteuerungen und Markenfarben-Widget-"
+"Darstellung. Seitenspezifische Mail-Vorlagen für Bestätigung, Stornierung "
+"und Umbuchung – plus Celery-Erinnerungsmails, abgestimmt auf CRM-Lead-/"
+"Kontakt-/Aktivitäts-Hooks."
+
+msgid ""
+"Initial release: booking pages with business-hour or shift-hour "
+"availability, public booking forms, embed URLs, custom questions and brand "
+"colors, My Bookings under My Jobs, settings under General Settings, optional "
+"mail templates for confirmation/cancellation/reschedule, Celery reminder "
+"tasks, and automatic lead and activity creation on booking submission."
+msgstr ""
+"Erstveröffentlichung: Buchungsseiten mit Geschäftsstunden- oder "
+"Schichtstunden-Verfügbarkeit, öffentliche Buchungsformulare, Einbettungs-"
+"URLs, benutzerdefinierte Fragen und Markenfarben, Meine Buchungen unter "
+"Meine Jobs, Einstellungen unter Allgemeine Einstellungen, optionale Mail-"
+"Vorlagen für Bestätigung/Stornierung/Umbuchung, Celery-Erinnerungsaufgaben "
+"und automatische Lead- und Aktivitätserstellung bei Buchungseingang."
+
+msgid "e.g. 30-Minute Intro Call"
+msgstr "z. B. 30-minütiges Einführungsgespräch"
+
+msgid "Booking Form Information"
+msgstr "Buchungsformular-Informationen"
+
+msgid "Meeting Scheduling Settings"
+msgstr "Terminplanungseinstellungen"
+
+msgid ""
+"Meeting details that are not collected from the user but required for "
+"scheduling."
+msgstr ""
+"Besprechungsdetails, die nicht vom Benutzer erfasst werden, aber für die "
+"Terminplanung erforderlich sind."
+
+msgid "Minimum minutes before a slot can be booked"
+msgstr "Mindestminuten vor der Buchung eines Slots"
+
+msgid "How many days ahead visitors can book"
+msgstr "Wie viele Tage im Voraus Besucher buchen können"
+
+msgid "Minutes before each meeting"
+msgstr "Minuten vor jedem Meeting"
+
+msgid "Minutes after each meeting"
+msgstr "Minuten nach jedem Meeting"
+
+msgid "Send reminder email X hours before the meeting. Leave blank to disable."
+msgstr ""
+"Erinnerungsmail X Stunden vor dem Meeting senden. Leer lassen zum "
+"Deaktivieren."
+
+msgid "Meeting provider is required for online meetings."
+msgstr "Ein Meeting-Anbieter ist für Online-Meetings erforderlich."
+
+msgid "Your Name"
+msgstr "Ihr Name"
+
+msgid "Full name"
+msgstr "Vollständiger Name"
+
+msgid "Your Email"
+msgstr "Ihre E-Mail"
+
+msgid "email@example.com"
+msgstr "email@beispiel.de"
+
+msgid "Notes"
+msgstr "Anmerkungen"
+
+msgid "Any additional information..."
+msgstr "Weitere Informationen..."
+
+msgid "My Bookings"
+msgstr "Meine Buchungen"
+
+msgid "Calendar Booking"
+msgstr "Kalenderbuchung"
+
+msgid "Zoom"
+msgstr "Zoom"
+
+msgid "Google Meet"
+msgstr "Google Meet"
+
+msgid "Microsoft Teams"
+msgstr "Microsoft Teams"
+
+msgid "Pending"
+msgstr "Ausstehend"
+
+msgid "Confirmed"
+msgstr "Bestätigt"
+
+msgid "Cancelled"
+msgstr "Storniert"
+
+msgid "Completed"
+msgstr "Abgeschlossen"
+
+msgid "No Show"
+msgstr "Nicht erschienen"
+
+msgid "Business Hour"
+msgstr "Geschäftsstunde"
+
+msgid "Company business hours that govern available booking slots."
+msgstr ""
+"Geschäftliche Öffnungszeiten des Unternehmens, die die verfügbaren "
+"Buchungsslots bestimmen."
+
+msgid "Shift Hours"
+msgstr "Schichtstunden"
+
+msgid ""
+"Use shift hours schedule for slot availability instead of business hours."
+msgstr ""
+"Schichtstundenplan statt Geschäftsstunden für die Slot-Verfügbarkeit "
+"verwenden."
+
+msgid "Slug"
+msgstr "Slug"
+
+msgid "Unique URL identifier for the booking page."
+msgstr "Eindeutiger URL-Bezeichner für die Buchungsseite."
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "Duration (minutes)"
+msgstr "Dauer (Minuten)"
+
+msgid "Online Meeting"
+msgstr "Online-Meeting"
+
+msgid "Meeting Provider"
+msgstr "Meeting-Anbieter"
+
+msgid "Required when Online Meeting is enabled."
+msgstr "Erforderlich, wenn Online-Meeting aktiviert ist."
+
+msgid "Location"
+msgstr "Ort"
+
+msgid "Physical address for in-person meetings."
+msgstr "Physische Adresse für persönliche Meetings."
+
+msgid "Buffer Before (minutes)"
+msgstr "Puffer vor dem Meeting (Minuten)"
+
+msgid "Buffer After (minutes)"
+msgstr "Puffer nach dem Meeting (Minuten)"
+
+msgid "Max Bookings Per Day"
+msgstr "Max. Buchungen pro Tag"
+
+msgid "Leave blank for unlimited."
+msgstr "Leer lassen für unbegrenzt."
+
+msgid "Advance Notice (minutes)"
+msgstr "Vorlaufzeit (Minuten)"
+
+msgid "Minimum notice required before a booking can be made."
+msgstr "Mindestvorlaufzeit, die vor einer Buchung erforderlich ist."
+
+msgid "Booking Window (days)"
+msgstr "Buchungszeitraum (Tage)"
+
+msgid "How many days into the future visitors can book."
+msgstr "Wie viele Tage in die Zukunft Besucher buchen können."
+
+msgid "Custom Questions"
+msgstr "Benutzerdefinierte Fragen"
+
+msgid "List of questions to ask the booker."
+msgstr "Liste der Fragen, die dem Buchenden gestellt werden."
+
+msgid "Reminder (hours before)"
+msgstr "Erinnerung (Stunden vorher)"
+
+msgid "Allow Rescheduling"
+msgstr "Umbuchung erlauben"
+
+msgid "Reschedule Cutoff (days)"
+msgstr "Umbuchungsfrist (Tage)"
+
+msgid "Prevent rescheduling if less than X days before the meeting."
+msgstr "Umbuchung verhindern, wenn weniger als X Tage vor dem Meeting."
+
+msgid "Allow Cancellation"
+msgstr "Stornierung erlauben"
+
+msgid "Cancel Cutoff (days)"
+msgstr "Stornierungsfrist (Tage)"
+
+msgid "Prevent cancellation if less than X days before the meeting."
+msgstr "Stornierung verhindern, wenn weniger als X Tage vor dem Meeting."
+
+msgid "Brand Color"
+msgstr "Markenfarbe"
+
+msgid "Hex color used on the public booking page (e.g. #e54f38)."
+msgstr "Hex-Farbe für die öffentliche Buchungsseite (z. B. #e54f38)."
+
+msgid "Host"
+msgstr "Gastgeber"
+
+msgid "Participants"
+msgstr "Teilnehmer"
+
+msgid ""
+"Users who will be added as participants to every meeting booked via this "
+"page."
+msgstr ""
+"Benutzer, die als Teilnehmer zu jedem über diese Seite gebuchten Meeting "
+"hinzugefügt werden."
+
+msgid "Confirmation Email Template"
+msgstr "Bestätigungs-E-Mail-Vorlage"
+
+msgid "Optional. Overrides the default confirmation email design."
+msgstr "Optional. Überschreibt das Standard-Design der Bestätigungs-E-Mail."
+
+msgid "Cancellation Email Template"
+msgstr "Stornierungsmail-Vorlage"
+
+msgid "Optional. Overrides the default cancellation email design."
+msgstr "Optional. Überschreibt das Standard-Design der Stornierungsmail."
+
+msgid "Reschedule Email Template"
+msgstr "Umbuchungsmail-Vorlage"
+
+msgid "Optional. Overrides the default reschedule email design."
+msgstr "Optional. Überschreibt das Standard-Design der Umbuchungsmail."
+
+msgid "Booking Page"
+msgstr "Buchungsseite"
+
+msgid "Booking Pages"
+msgstr "Buchungsseiten"
+
+msgid "Booker Name"
+msgstr "Name des Buchenden"
+
+msgid "Booker Email"
+msgstr "E-Mail des Buchenden"
+
+msgid "Start Date & Time"
+msgstr "Startdatum und -uhrzeit"
+
+msgid "End Date & Time"
+msgstr "Enddatum und -uhrzeit"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Question Answers"
+msgstr "Antworten auf Fragen"
+
+msgid "Meeting URL"
+msgstr "Meeting-URL"
+
+msgid "Cancellation Token"
+msgstr "Stornierungstoken"
+
+msgid "Cancellation Reason"
+msgstr "Stornierungsgrund"
+
+msgid "Booker Timezone"
+msgstr "Zeitzone des Buchenden"
+
+msgid "Meeting Activity"
+msgstr "Meeting-Aktivität"
+
+msgid "Bookings"
+msgstr "Buchungen"
+
+msgid "Enter meeting location"
+msgstr "Meetingort eingeben"
+
+msgid "Select a date to see available times."
+msgstr "Wählen Sie ein Datum, um verfügbare Zeiten anzuzeigen."
+
+msgid "Available times"
+msgstr "Verfügbare Zeiten"
+
+msgid "No available slots for this date."
+msgstr "Keine verfügbaren Slots für dieses Datum."
+
+msgid "Cancel Booking"
+msgstr "Buchung stornieren"
+
+msgid "Booking Cancelled"
+msgstr "Buchung storniert"
+
+msgid "Your booking for"
+msgstr "Ihre Buchung für"
+
+msgid "has been cancelled."
+msgstr "wurde storniert."
+
+msgid "Already "
+msgstr "Bereits "
+
+msgid "This booking has already been"
+msgstr "Diese Buchung wurde bereits"
+
+msgid "Cancellation Unavailable"
+msgstr "Stornierung nicht möglich"
+
+msgid "Cancellation is no longer available as the meeting is too soon."
+msgstr ""
+"Eine Stornierung ist nicht mehr möglich, da das Meeting zu kurzfristig ist."
+
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "            Cancellation is not allowed within %(days)s day(s) of the "
+#| "meeting.\n"
+#| "            "
+msgid ""
+"\n"
+"                        Cancellation is not allowed within %(days)s day(s) "
+"of the meeting.\n"
+"                    "
+msgstr ""
+"\n"
+"            Eine Stornierung ist nicht innerhalb von %(days)s Tag(en) vor "
+"dem Meeting möglich.\n"
+"            "
+
+msgid "Cancel Booking?"
+msgstr "Buchung stornieren?"
+
+msgid "Meeting:"
+msgstr "Meeting:"
+
+msgid "Date:"
+msgstr "Datum:"
+
+msgid "at"
+msgstr "um"
+
+msgid "Host:"
+msgstr "Gastgeber:"
+
+msgid "Reason for cancellation"
+msgstr "Grund der Stornierung"
+
+msgid "optional"
+msgstr "optional"
+
+msgid "Let the host know why you are cancelling..."
+msgstr "Teilen Sie dem Gastgeber den Grund Ihrer Stornierung mit..."
+
+msgid "Yes, Cancel Booking"
+msgstr "Ja, Buchung stornieren"
+
+msgid "Booking Confirmed"
+msgstr "Buchung bestätigt"
+
+msgid "You're booked!"
+msgstr "Sie sind gebucht!"
+
+msgid "A confirmation has been sent to your email."
+msgstr "Eine Bestätigung wurde an Ihre E-Mail-Adresse gesendet."
+
+msgid "Your booking has been rescheduled successfully."
+msgstr "Ihre Buchung wurde erfolgreich umgebucht."
+
+msgid "Meeting"
+msgstr "Meeting"
+
+msgid "Date & Time"
+msgstr "Datum und Uhrzeit"
+
+msgid "Duration"
+msgstr "Dauer"
+
+msgid "min"
+msgstr "Min."
+
+msgid "Meeting Link"
+msgstr "Meeting-Link"
+
+msgid "Join Meeting"
+msgstr "Meeting beitreten"
+
+msgid "Reschedule"
+msgstr "Umbuchen"
+
+msgid "Hosted by"
+msgstr "Gehostet von"
+
+msgid "Online"
+msgstr "Online"
+
+msgid "Select Date"
+msgstr "Datum auswählen"
+
+msgid "Select Time"
+msgstr "Uhrzeit auswählen"
+
+msgid "Your Details"
+msgstr "Ihre Angaben"
+
+msgid "Back"
+msgstr "Zurück"
+
+msgid "12hr"
+msgstr "12-Std."
+
+msgid "24hr"
+msgstr "24-Std."
+
+msgid "Pick a date first"
+msgstr "Wählen Sie zuerst ein Datum"
+
+msgid "Booking Summary"
+msgstr "Buchungsübersicht"
+
+msgid "Personal Details"
+msgstr "Persönliche Angaben"
+
+msgid "Full Name"
+msgstr "Vollständiger Name"
+
+msgid "Enter your full name"
+msgstr "Geben Sie Ihren vollständigen Namen ein"
+
+msgid "Email Address"
+msgstr "E-Mail-Adresse"
+
+msgid "Select"
+msgstr "Auswählen"
+
+msgid "Additional Notes"
+msgstr "Weitere Anmerkungen"
+
+msgid "Previous"
+msgstr "Zurück"
+
+msgid "Confirm Booking"
+msgstr "Buchung bestätigen"
+
+msgid "No slots available for this day"
+msgstr "Keine verfügbaren Slots für diesen Tag"
+
+msgid "Failed to load slots."
+msgstr "Slots konnten nicht geladen werden."
+
+msgid "Reschedule Booking"
+msgstr "Buchung umbuchen"
+
+msgid "Current:"
+msgstr "Aktuell:"
+
+msgid "Rescheduling Unavailable"
+msgstr "Umbuchung nicht möglich"
+
+msgid "This booking cannot be rescheduled."
+msgstr "Diese Buchung kann nicht umgebucht werden."
+
+msgid "Status:"
+msgstr "Status:"
+
+msgid "Loading..."
+msgstr "Wird geladen..."
+
+msgid "Confirm Reschedule"
+msgstr "Umbuchung bestätigen"
+
+msgid "No slots available."
+msgstr "Keine Slots verfügbar."
+
+msgid "Availability"
+msgstr "Verfügbarkeit"
+
+msgid "Close"
+msgstr "Schließen"
+
+msgid "Business Hours"
+msgstr "Geschäftszeiten"
+
+msgid "Weekly Schedule"
+msgstr "Wochenplan"
+
+msgid "Closed"
+msgstr "Geschlossen"
+
+msgid "Host Unavailability"
+msgstr "Abwesenheit des Gastgebers"
+
+msgid "User"
+msgstr "Benutzer"
+
+msgid "From"
+msgstr "Von"
+
+msgid "To"
+msgstr "Bis"
+
+msgid "Reason"
+msgstr "Grund"
+
+msgid "Open-ended"
+msgstr "Unbegrenzt"
+
+msgid "No unavailability blocks set."
+msgstr "Keine Abwesenheitsblöcke festgelegt."
+
+msgid "Share & Embed"
+msgstr "Teilen und Einbetten"
+
+msgid "Public Booking Link"
+msgstr "Öffentlicher Buchungslink"
+
+msgid "Copy"
+msgstr "Kopieren"
+
+msgid "Link copied!"
+msgstr "Link kopiert!"
+
+msgid "Embed Code"
+msgstr "Einbettungscode"
+
+msgid "Embed code copied!"
+msgstr "Einbettungscode kopiert!"
+
+msgid "New Booking Page"
+msgstr "Neue Buchungsseite"
+
+msgid "Business Hours Required"
+msgstr "Geschäftszeiten erforderlich"
+
+msgid ""
+"Please configure Business Hours for your company before creating a Booking "
+"Page."
+msgstr ""
+"Bitte konfigurieren Sie die Geschäftszeiten Ihres Unternehmens, bevor Sie "
+"eine Buchungsseite erstellen."
+
+msgid "Set up Business Hours"
+msgstr "Geschäftszeiten einrichten"
+
+msgid "Change Booking Status"
+msgstr "Buchungsstatus ändern"
+
+msgid "New Status"
+msgstr "Neuer Status"
+
+msgid "Update"
+msgstr "Aktualisieren"
+
+msgid "Booker"
+msgstr "Buchender"
+
+msgid "Email"
+msgstr "E-Mail"
+
+msgid "Change Status"
+msgstr "Status ändern"
+
+msgid "Booking Detail"
+msgstr "Buchungsdetail"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "End"
+msgstr "Ende"
+
+msgid "Timezone"
+msgstr "Zeitzone"
+
+msgid "Monday"
+msgstr "Montag"
+
+msgid "Tuesday"
+msgstr "Dienstag"
+
+msgid "Wednesday"
+msgstr "Mittwoch"
+
+msgid "Thursday"
+msgstr "Donnerstag"
+
+msgid "Friday"
+msgstr "Freitag"
+
+msgid "Saturday"
+msgstr "Samstag"
+
+msgid "Sunday"
+msgstr "Sonntag"
+
+msgid "Create booking pages so others can schedule time with you."
+msgstr ""
+
+msgid "Duration (min)"
+msgstr "Dauer (Min.)"
+
+msgid "Active"
+msgstr "Aktiv"
+
+msgid "Edit"
+msgstr "Bearbeiten"
+
+msgid "Embed"
+msgstr "Einbetten"
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "Your name is required."
+msgstr "Ihr Name ist erforderlich."
+
+msgid "Your email is required."
+msgstr "Ihre E-Mail-Adresse ist erforderlich."
+
+msgid "Please select a date."
+msgstr "Bitte wählen Sie ein Datum aus."
+
+msgid "Please select a time slot."
+msgstr "Bitte wählen Sie einen Zeitslot aus."
+
+msgid "Invalid date or time."
+msgstr "Ungültiges Datum oder ungültige Uhrzeit."
+
+msgid "That slot is no longer available. Please choose another."
+msgstr "Dieser Slot ist nicht mehr verfügbar. Bitte wählen Sie einen anderen."
+
+msgid "Please select a date and time."
+msgstr "Bitte wählen Sie ein Datum und eine Uhrzeit aus."
+
+msgid "That slot is no longer available."
+msgstr "Dieser Slot ist nicht mehr verfügbar."

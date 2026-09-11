@@ -1,0 +1,60 @@
+# Horilla contrib Utils app — deep dive (`horilla.contrib.utils`)
+
+## What this app is (and is not)
+
+- **`horilla.contrib.utils`** is a **Django app** used for **cross-app Python helpers**, **middleware**, and **management commands**.
+- It is **not** the top-level **`horilla.utils`** package (branding, choices, decorators—see [../../utils/utils.md](../../utils/utils.md)).
+
+`UtilsConfig` is intentionally minimal: only `name`, `label`, and `default_auto_field`—**no URLs** in `apps.py`. The app exists so Django loads `default_app_config` modules and discovers `management/commands`.
+
+---
+
+## Modules
+
+### `middlewares.py`
+
+- **`ThreadLocalMiddleware`** — stores `request` on **`_thread_local`** so code running deep inside signals (e.g. **automations**) can recover `request.user` and `request.active_company` without threading the request through every call stack.
+- Must appear in **`MIDDLEWARE`** after auth/company middleware—see [../core/Settings/base.md](../core/Settings/base.md) ordering in project settings.
+
+### `methods.py`
+
+Large utility surface, including:
+
+- **`get_horilla_model_class(app_label, model)`** — resolves ORM class via **`HorillaContentType`** rows (not Django stock ContentType).
+- **Template helpers** — `render_template` used across dashboard, activity columns, duplicates, etc.
+- **Queryset helpers** — `apply_conditions`, `get_queryset_for_module`, and related functions consumed by dashboards, reports, and generics filter pipeline.
+
+Import paths typically look like:
+
+```python
+from horilla.contrib.utils.methods import render_template, get_horilla_model_class
+```
+
+### `views.py`
+
+Small/supporting HTTP endpoints if present (read file for current exports).
+
+### `management/commands/start_horilla_app.py`
+
+Scaffolds a new Horilla CRM app with `AppLauncher`, `registration.py`, `menu.py`, etc.—the recommended starting point for modules.
+
+### `models.py`
+
+Empty placeholder—no migrations required for models today.
+
+### `tests.py`
+
+App-level unit tests for utilities.
+
+---
+
+## Why automations depend on this app
+
+`horilla.contrib.automations.signals` reads **`_thread_local.request`** set by **`ThreadLocalMiddleware`**. Removing the middleware breaks recipient resolution for `mail_to` patterns referencing `self` or `instance.owner`.
+
+---
+
+## Related documentation
+
+- Core `HorillaContentType`: [../core/models.md](../core/models.md)
+- Automations signal flow: [../automations/automations.md](../automations/automations.md)

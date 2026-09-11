@@ -1,0 +1,106 @@
+{% extends "settings/settings.html" %}
+{% block settings %}
+    <div id="google-integration-settings-view">
+        {% include "messages.html" %}
+
+        <h3 class="text-md font-semibold">{% trans "Google Integration" %}</h3>
+        <p class="text-xs text-gray-500 mb-4">
+            {% trans 'Sync your calendar and meetings with your Google account.' %}
+        </p>
+
+        <div class="rounded-md mb-3 border border-primary-400">
+            <h3 class="text-md font-semibold mb-2 border-b border-primary-400 p-2 bg-primary-100 text-primary-600">
+                {% trans "Google Calendar" %}
+            </h3>
+            <div class="p-4">
+                <p class="text-sm text-gray-600 mb-4">
+                    {% trans "Enable Google Calendar integration to allow users in your company to connect their Google account and sync calendar events." %}
+                </p>
+
+                <div class="text-sm font-semibold flex gap-2 relative mb-3">
+                    {% trans "Enable Google Calendar" %}
+                    <label class="inline-flex items-center cursor-pointer">
+                        {# Visual-only checkbox — does NOT submit; confirm dialog triggers the hidden buttons below #}
+                        <input
+                            type="checkbox"
+                            class="sr-only peer"
+                            {% if integration_setting.is_google_calendar_enabled %}
+                                checked
+                            {% endif %}
+                            data-enabled="{{ integration_setting.is_google_calendar_enabled|yesno:'true,false' }}"
+                            onclick="event.preventDefault();
+                            if (this.dataset.enabled === 'true') {
+                                hxConfirm(document.getElementById('gcal-disable-btn'), '{% trans "Disable Google Calendar integration?" %}', '{% trans "All user connections and credentials under this company will be permanently removed." %}');
+                            } else {
+                                hxConfirm(document.getElementById('gcal-enable-btn'), '{% trans "Enable Google Calendar integration?" %}');
+                            }"
+                        >
+                        <div class="relative w-11 h-5 bg-gray-200 rounded-full peer peer-checked:bg-primary-600 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-6">
+                        </div>
+                    </label>
+
+                    {# Hidden enable button #}
+                    <button
+                        id="gcal-enable-btn"
+                        type="button"
+                        class="hidden"
+                        hx-post="{% url 'calendar:google_integration_settings' %}"
+                        hx-trigger="confirmed"
+                        hx-target="#google-integration-settings-view"
+                        hx-select="#google-integration-settings-view"
+                        hx-swap="outerHTML"
+                        hx-vals='{"is_google_calendar_enabled": "true"}'
+                        hx-include="[name=csrfmiddlewaretoken]"
+                    >
+                    </button>
+
+                    {# Hidden disable button — hxConfirm fires 'confirmed' on it after user confirms #}
+                    <button
+                        id="gcal-disable-btn"
+                        type="button"
+                        class="hidden"
+                        hx-post="{% url 'calendar:google_integration_settings' %}"
+                        hx-trigger="confirmed"
+                        hx-target="#google-integration-settings-view"
+                        hx-select="#google-integration-settings-view"
+                        hx-swap="outerHTML"
+                        hx-vals='{"is_google_calendar_enabled": "false"}'
+                        hx-include="[name=csrfmiddlewaretoken]"
+                    >
+                    </button>
+                </div>
+                {% csrf_token %}
+
+                <div class="mt-4 flex items-center gap-2">
+                    {% if integration_setting.is_google_calendar_enabled %}
+                        <span
+                            class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-green-100 text-green-700"
+                        >
+                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"
+                                />
+                            </svg>
+                            {% trans "Integration enabled — users can now connect Google Calendar" %}
+                        </span>
+                    {% else %}
+                        <span
+                            class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600"
+                        >
+                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"
+                                />
+                            </svg>
+                            {% trans "Integration disabled — users cannot connect Google Calendar" %}
+                        </span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock settings %}

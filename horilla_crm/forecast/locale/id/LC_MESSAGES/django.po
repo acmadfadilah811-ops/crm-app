@@ -1,0 +1,449 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Forecast"
+msgstr "Ramalan"
+
+msgid "Role-Based Assignment"
+msgstr "Penugasan Berbasis Peran"
+
+msgid "Filter users by selected role"
+msgstr "Filter pengguna berdasarkan peran yang dipilih"
+
+msgid "Same Period for All"
+msgstr "Periode yang Sama untuk Semua"
+
+msgid "Apply the same period for all users"
+msgstr "Terapkan periode yang sama untuk semua pengguna"
+
+msgid "Same Target for All"
+msgstr "Target yang Sama untuk Semua"
+
+msgid "Apply the same target amount for all users"
+msgstr "Terapkan jumlah target yang sama untuk semua pengguna"
+
+msgid "Same Forecast Type for All"
+msgstr "Jenis Perkiraan yang Sama untuk Semua"
+
+msgid "Apply the same forecast type for all users"
+msgstr "Terapkan jenis perkiraan yang sama untuk semua pengguna"
+
+msgid "Enter target"
+msgstr "Masukkan sasaran"
+
+msgid "Target amount cannot be negative."
+msgstr "Jumlah target tidak boleh negatif."
+
+msgid "Deal Revenue Amount"
+msgstr "Jumlah Pendapatan Transaksi"
+
+msgid "Deal Revenue Expected Amount"
+msgstr "Pendapatan Kesepakatan Jumlah yang Diharapkan"
+
+msgid "Deal Quantity"
+msgstr "Kuantitas Kesepakatan"
+
+msgid "Forecast Type Name"
+msgstr "Nama Jenis Perkiraan"
+
+msgid "Description"
+msgstr "Keterangan"
+
+msgid "Forecast Type"
+msgstr "Jenis Ramalan"
+
+msgid "Include Pipeline"
+msgstr "Sertakan Saluran Pipa"
+
+msgid "Include Best Case"
+msgstr "Sertakan Kasus Terbaik"
+
+msgid "Include Commit"
+msgstr "Sertakan Komit"
+
+msgid "Include Closed"
+msgstr "Termasuk Tertutup"
+
+msgid "Forecast Types"
+msgstr "Jenis Ramalan"
+
+msgid "Field Name"
+msgstr "Nama Bidang"
+
+msgid "Operator"
+msgstr "Operator"
+
+msgid "Value"
+msgstr "Nilai"
+
+msgid "Logical Operator"
+msgstr "Operator Logis"
+
+msgid "Order"
+msgstr "Memesan"
+
+msgid "Forecast Condition"
+msgstr "Kondisi Prakiraan"
+
+msgid "Forecast Conditions"
+msgstr "Kondisi Prakiraan"
+
+msgid "Draft"
+msgstr "Draf"
+
+msgid "Submitted"
+msgstr "Dikirim"
+
+msgid "Approved"
+msgstr "Disetujui"
+
+msgid "Rejected"
+msgstr "Ditolak"
+
+msgid "Forecast Name"
+msgstr "Nama Ramalan"
+
+msgid "Period"
+msgstr "Periode"
+
+msgid "Quarter"
+msgstr "Seperempat"
+
+msgid "Fiscal Year"
+msgstr "Tahun Anggaran"
+
+msgid "Forecast Owner"
+msgstr "Pemilik Ramalan"
+
+msgid "Target Amount"
+msgstr "Jumlah Sasaran"
+
+msgid "Pipeline Amount"
+msgstr "Jumlah Saluran Pipa"
+
+msgid "Best Case Amount"
+msgstr "Jumlah Kasus Terbaik"
+
+msgid "Commit Amount"
+msgstr "Jumlah Komit"
+
+msgid "Closed Amount"
+msgstr "Jumlah Tertutup"
+
+msgid "Actual Amount"
+msgstr "Jumlah Sebenarnya"
+
+msgid "Target Quantity"
+msgstr "Kuantitas Sasaran"
+
+msgid "Pipeline Quantity"
+msgstr "Kuantitas Pipa"
+
+msgid "Best Case Quantity"
+msgstr "Kuantitas Kasus Terbaik"
+
+msgid "Commit Quantity"
+msgstr "Kuantitas Komit"
+
+msgid "Closed Quantity"
+msgstr "Kuantitas Tertutup"
+
+msgid "Actual Quantity"
+msgstr "Kuantitas Sebenarnya"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Submitted At"
+msgstr "Dikirim Pada"
+
+msgid "Approved At"
+msgstr "Disetujui Pada"
+
+msgid "Approved By"
+msgstr "Disetujui Oleh"
+
+msgid "Notes"
+msgstr "Catatan"
+
+msgid "Forecasts"
+msgstr "Prakiraan"
+
+msgid "Assigned User"
+msgstr "Pengguna yang Ditugaskan"
+
+msgid "Role"
+msgstr "Peran"
+
+msgid "Forecast Period"
+msgstr "Periode Perkiraan"
+
+msgid "Target"
+msgstr "Target"
+
+msgid "Target amount (revenue or quantity)"
+msgstr "Jumlah target (pendapatan atau kuantitas)"
+
+msgid "Currency"
+msgstr "Mata uang"
+
+msgid "Currency code (e.g., USD, EUR, INR)"
+msgstr "Kode mata uang (misalnya USD, EUR, INR)"
+
+msgid "Current Achievement"
+msgstr "Prestasi Saat Ini"
+
+msgid "Current achieved amount (auto-calculated)"
+msgstr "Jumlah yang dicapai saat ini (dihitung otomatis)"
+
+msgid "Forecast Target"
+msgstr "Target Perkiraan"
+
+msgid "Forecast Targets"
+msgstr "Target Perkiraan"
+
+msgid "User"
+msgstr "Pengguna"
+
+msgid "User Revenue Target"
+msgstr "Target Pendapatan Pengguna"
+
+msgid "Individual revenue target for this user"
+msgstr "Target pendapatan individu untuk pengguna ini"
+
+msgid "User Quantity Target"
+msgstr "Target Kuantitas Pengguna"
+
+msgid "Individual quantity target for this user"
+msgstr "Target kuantitas individual untuk pengguna ini"
+
+msgid "Current Revenue Achieved"
+msgstr "Pendapatan Saat Ini Dicapai"
+
+msgid "Current achieved revenue for this user"
+msgstr "Pendapatan yang dicapai saat ini untuk pengguna ini"
+
+msgid "Current Quantity Achieved"
+msgstr "Kuantitas Saat Ini yang Dicapai"
+
+msgid "Current achieved quantity for this user"
+msgstr "Kuantitas yang dicapai saat ini untuk pengguna ini"
+
+msgid "Is Active"
+msgstr "Aktif"
+
+msgid "Forecast Target User"
+msgstr "Perkiraan Target Pengguna"
+
+msgid "Forecast Target Users"
+msgstr "Perkiraan Target Pengguna"
+
+msgid "Chart Analysis"
+msgstr "Analisis Grafik"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Values in number of deals."
+msgstr "Nilai dalam jumlah transaksi."
+
+msgid "Values in"
+msgstr "Nilai dalam"
+
+msgid "Forecast vs Actual"
+msgstr "Prakiraan vs Aktual"
+
+msgid "Trend"
+msgstr "Kecenderungan"
+
+msgid "Forecast Category"
+msgstr "Kategori Prakiraan"
+
+msgid "Forecast (Target)"
+msgstr "Perkiraan (Target)"
+
+msgid "Actual"
+msgstr "Sebenarnya"
+
+msgid "Amount"
+msgstr "Jumlah"
+
+msgid "No chart data available for this forecast."
+msgstr "Tidak ada data diagram yang tersedia untuk perkiraan ini."
+
+msgid "My Forecast"
+msgstr "Ramalan Saya"
+
+msgid "All Users"
+msgstr "Semua Pengguna"
+
+msgid "Showing all periods"
+msgstr "Menampilkan semua periode"
+
+msgid "Beginning Period"
+msgstr "Periode Awal"
+
+msgid "Current"
+msgstr "Saat ini"
+
+msgid "Ending Period"
+msgstr "Periode Berakhir"
+
+msgid "Apply"
+msgstr "Terapkan"
+
+msgid "deals"
+msgstr "penawaran"
+
+msgid "Total:"
+msgstr "Total:"
+
+msgid "opportunities"
+msgstr "peluang"
+
+msgid "Total Quantity:"
+msgstr "Jumlah Total:"
+
+msgid "Total Amount:"
+msgstr "Jumlah Total:"
+
+msgid "Select User"
+msgstr "Pilih Pengguna"
+
+msgid "This field is required."
+msgstr "Bidang ini wajib diisi."
+
+msgid "Select Period"
+msgstr "Pilih Periode"
+
+msgid "Select Forecast Type"
+msgstr "Pilih Jenis Perkiraan"
+
+msgid "Remove"
+msgstr "Hapus"
+
+msgid "Enter the target amount"
+msgstr "Masukkan jumlah target"
+
+msgid "Conditions"
+msgstr "Kondisi"
+
+msgid "Save"
+msgstr "Simpan"
+
+msgid "Activate company"
+msgstr "Aktifkan perusahaan"
+
+msgid "Please create or activate your company."
+msgstr "Silakan buat atau aktifkan perusahaan Anda."
+
+msgid "Not found"
+msgstr "Tidak ditemukan"
+
+msgid "No Forecast Type set. Set it from settings."
+msgstr "Tidak ada Jenis Perkiraan yang disetel.Atur dari pengaturan."
+
+msgid "Go To Forecast Type"
+msgstr "Buka Jenis Perkiraan"
+
+msgid "Forecast Type:"
+msgstr "Jenis Perkiraan:"
+
+msgid "Loading..."
+msgstr "Memuat..."
+
+msgid "Achievement"
+msgstr "Pencapaian"
+
+msgid "Gap"
+msgstr "Celah"
+
+msgid "Closed"
+msgstr "Tertutup"
+
+msgid "Commit Forecast"
+msgstr "Komit Prakiraan"
+
+msgid "Best Case"
+msgstr "Kasus Terbaik"
+
+msgid "Open Pipeline"
+msgstr "Buka Saluran Pipa"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "Periods"
+msgstr "Periode"
+
+msgid "Up trend"
+msgstr "Tren naik"
+
+msgid "Down trend"
+msgstr "Tren turun"
+
+msgid "Loading more users for"
+msgstr "Memuat lebih banyak pengguna untuk"
+
+msgid "No forecast data available for this period"
+msgstr "Tidak ada data perkiraan yang tersedia untuk periode ini"
+
+msgid "Permission Denied"
+msgstr "Izin Ditolak"
+
+msgid "You do not have permission to view this page."
+msgstr "Anda tidak memiliki izin untuk melihat halaman ini."
+
+#, python-format
+msgid "Period %(num)s"
+msgstr "Periode%(num)s"
+
+msgid "Commit"
+msgstr "Melakukan"
+
+msgid "Pipeline"
+msgstr "Saluran pipa"
+
+msgid "Committed"
+msgstr "Berkomitmen"
+
+#, python-format
+msgid "Invalid value for: %(params)s."
+msgstr "Nilai tidak valid untuk:%(params)s."
+
+msgid "Set sales targets for your team's forecasts."
+msgstr "Tetapkan target penjualan untuk perkiraan tim Anda."
+
+msgid "Enter the quantity"
+msgstr "Masukkan jumlahnya"
+
+msgid "Enter the revenue amount"
+msgstr "Masukkan jumlah pendapatan"
+
+msgid "Update Target"
+msgstr "Perbarui Target"
+
+msgid "Define the categories used to group your sales forecasts."
+msgstr ""
+"Tentukan kategori yang digunakan untuk mengelompokkan perkiraan penjualan "
+"Anda."
+
+msgid "Filter Opportunities"
+msgstr "Filter Peluang"

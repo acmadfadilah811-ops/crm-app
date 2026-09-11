@@ -1,0 +1,364 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-12 09:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+msgid "Review Process"
+msgstr ""
+
+msgid "Select field(s)"
+msgstr ""
+
+msgid "Fields to Review"
+msgstr ""
+
+msgid "Please select at least one field to review."
+msgstr ""
+
+msgid "Please select at least one approver user."
+msgstr ""
+
+msgid "Please select at least one approver role."
+msgstr ""
+
+msgid "Review Processes"
+msgstr ""
+
+msgid "Review Jobs"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Method Title"
+msgstr ""
+
+msgid "Module"
+msgstr ""
+
+msgid "Notify on Resubmission"
+msgstr ""
+
+msgid "Notify on Approval"
+msgstr ""
+
+msgid "Notify on Rejection"
+msgstr ""
+
+msgid "Title is required."
+msgstr ""
+
+msgid ""
+"An active review process already exists for this model and company. Only one "
+"active process is allowed per model per company."
+msgstr ""
+
+msgid "Field Name"
+msgstr ""
+
+msgid "Operator"
+msgstr ""
+
+msgid "Value"
+msgstr ""
+
+msgid "AND"
+msgstr ""
+
+msgid "OR"
+msgstr ""
+
+msgid "Logical Operator"
+msgstr ""
+
+msgid "Order"
+msgstr ""
+
+msgid "Review Condition"
+msgstr ""
+
+msgid "Review Conditions"
+msgstr ""
+
+msgid "User"
+msgstr ""
+
+msgid "Role"
+msgstr ""
+
+msgid "Approver Type"
+msgstr ""
+
+msgid "Approver Users"
+msgstr ""
+
+msgid "Approver Roles"
+msgstr ""
+
+msgid "Review Rule"
+msgstr ""
+
+msgid "Review Rules"
+msgstr ""
+
+msgid "Review Rule Condition"
+msgstr ""
+
+msgid "Review Rule Conditions"
+msgstr ""
+
+msgid "Pending"
+msgstr ""
+
+msgid "Approved"
+msgstr ""
+
+msgid "Rejected"
+msgstr ""
+
+msgid "Content Type"
+msgstr ""
+
+msgid "Object ID"
+msgstr ""
+
+msgid "Assigned To"
+msgstr ""
+
+msgid "Review Fields Snapshot"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Reviewed By"
+msgstr ""
+
+msgid "Reviewed At"
+msgstr ""
+
+msgid "Review Note"
+msgstr ""
+
+msgid "Review Job"
+msgstr ""
+
+msgid "Add More"
+msgstr ""
+
+msgid "Field Review"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Your Decision"
+msgstr ""
+
+msgid "Comment"
+msgstr ""
+
+msgid "Add reason for this field decision"
+msgstr ""
+
+msgid "Reject"
+msgstr ""
+
+msgid "Approve"
+msgstr ""
+
+msgid "Process"
+msgstr ""
+
+msgid "Record"
+msgstr ""
+
+#, python-format
+msgid ""
+"\n"
+"                            %(done)s / %(total)s approved.\n"
+"                        "
+msgstr ""
+
+msgid "Record Details"
+msgstr ""
+
+msgid "No additional record details available."
+msgstr ""
+
+msgid "Fields To Review"
+msgstr ""
+
+msgid "Review field"
+msgstr ""
+
+msgid "Edit rejected field"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Save and resubmit"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "No review fields captured for this job."
+msgstr ""
+
+msgid "Multi-Step Form"
+msgstr ""
+
+msgid "Single-Step Form"
+msgstr ""
+
+msgid "Choose File"
+msgstr ""
+
+msgid "No file chosen"
+msgstr ""
+
+msgid "Clear"
+msgstr ""
+
+msgid "Read Only"
+msgstr ""
+
+msgid "Add"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
+
+msgid "Conditions"
+msgstr ""
+
+msgid "Remove"
+msgstr ""
+
+msgid "Save & New"
+msgstr ""
+
+msgid "Entry Criteria"
+msgstr ""
+
+msgid ""
+"No entry criteria set. This review process applies to all records in the "
+"module."
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "Resubmission"
+msgstr ""
+
+msgid "Approval"
+msgstr ""
+
+msgid "Rejection"
+msgstr ""
+
+msgid "Fields"
+msgstr ""
+
+msgid "No review rules added"
+msgstr ""
+
+msgid ""
+"Add a rule to assign an approver. Criteria is optional — if left empty, the "
+"rule applies to all records."
+msgstr ""
+
+msgid "Rule"
+msgstr ""
+
+msgid "Edit Rule"
+msgstr ""
+
+msgid "Delete Rule"
+msgstr ""
+
+msgid "Approver"
+msgstr ""
+
+#, python-format
+msgid "You have a pending review request for %(record)s in %(process)s."
+msgstr ""
+
+msgid "Add Rule"
+msgstr ""
+
+msgid "Edit Process"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Criteria"
+msgstr ""
+
+msgid "Condition"
+msgstr ""
+
+msgid "activated"
+msgstr ""
+
+msgid "deactivated"
+msgstr ""
+
+msgid "An active review process already exists for this model and company."
+msgstr ""
+
+msgid "My Review Jobs"
+msgstr ""
+
+msgid "Review"
+msgstr ""
+
+msgid "The module for this review record is no longer available."
+msgstr ""
+
+#, python-format
+msgid "%(owner)s resubmitted %(field)s in %(process)s for %(record)s."
+msgstr ""
+
+msgid "Invalid decision."
+msgstr ""
+
+#, python-format
+msgid ""
+"%(field)s was approved in %(process)s by %(approver)s. Comment: %(comment)s"
+msgstr ""
+
+#, python-format
+msgid ""
+"%(field)s was rejected in %(process)s by %(approver)s. Reason: %(comment)s"
+msgstr ""
+
+msgid ""
+"All approvers have approved all review fields. Review completed successfully."
+msgstr ""
+
+msgid ""
+"You have approved all fields. Waiting for other approvers to complete their "
+"review."
+msgstr ""

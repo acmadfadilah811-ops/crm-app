@@ -1,0 +1,129 @@
+# Arabic translations for Horilla Notifications module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+msgid "Notifications"
+msgstr "الإشعارات"
+
+msgid "Template title is required."
+msgstr "عنوان القالب مطلوب."
+
+msgid "Template message is required."
+msgstr "رسالة القالب مطلوبة."
+
+msgid ""
+"URL contains potentially dangerous content. Please remove any scripts or "
+"malicious code."
+msgstr ""
+"يحتوي الرابط على محتوى قد يكون خطيراً. يرجى إزالة أي سكريبتات أو كود ضار."
+
+msgid "Notification"
+msgstr "إشعار"
+
+msgid "muted"
+msgstr "مكتوم"
+
+msgid "unmuted"
+msgstr "غير مكتوم"
+
+msgid "Notification Sound Preference"
+msgstr "تفضيل صوت الإشعار"
+
+msgid "Notification Sound Preferences"
+msgstr "تفضيلات صوت الإشعار"
+
+msgid "Template Title"
+msgstr "عنوان القالب"
+
+msgid "Message"
+msgstr "الرسالة"
+
+msgid "Related Model"
+msgstr "النموذج المرتبط"
+
+msgid "Notification Template"
+msgstr "قالب الإشعار"
+
+msgid "Notification Templates"
+msgstr "قوالب الإشعار"
+
+msgid "Unmute notifications"
+msgstr "إلغاء كتم الإشعارات"
+
+msgid "Mute notifications"
+msgstr "كتم الإشعارات"
+
+msgid "Mark all as read"
+msgstr "وضع علامة مقروء للكل"
+
+msgid "No unread notifications"
+msgstr "لا توجد إشعارات غير مقروءة"
+
+msgid "View all Notification"
+msgstr "عرض جميع الإشعارات"
+
+msgid "All Notifications"
+msgstr "جميع الإشعارات"
+
+msgid "Clear All"
+msgstr "مسح الكل"
+
+msgid "No notifications"
+msgstr "لا توجد إشعارات"
+
+msgid "Close"
+msgstr "إغلاق"
+
+msgid "Enter template title"
+msgstr "أدخل عنوان القالب"
+
+msgid "Select content type (optional)"
+msgstr "حدد نوع المحتوى (اختياري)"
+
+msgid "Insert Field"
+msgstr "إدراج حقل"
+
+msgid "Loading..."
+msgstr "جارٍ التحميل..."
+
+msgid "All notifications marked as read."
+msgstr "تم وضع علامة مقروء على جميع الإشعارات."
+
+msgid "Notification Deleted."
+msgstr "تم حذف الإشعار."
+
+msgid "Customize the content of notifications sent to your users."
+msgstr ""
+
+msgid "Update Notification Template"
+msgstr "تحديث قالب الإشعار"
+
+msgid "Update Template"
+msgstr "تحديث القالب"
+
+msgid "Create Notification Template"
+msgstr "إنشاء قالب إشعار"
+
+msgid "Save Template"
+msgstr "حفظ القالب"
+
+msgid "Notification template \"{}\" updated successfully."
+msgstr "تم تحديث قالب الإشعار \"{}\" بنجاح."
+
+msgid "Notification template \"{}\" created successfully."
+msgstr "تم إنشاء قالب الإشعار \"{}\" بنجاح."

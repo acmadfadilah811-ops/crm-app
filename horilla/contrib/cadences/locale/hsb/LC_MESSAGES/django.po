@@ -1,0 +1,424 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3);\n"
+
+msgid "Module for managing cadence workflows and runtime activity sequences."
+msgstr ""
+
+msgid ""
+"Standardized exception chaining in cadence forms to preserve root-cause "
+"tracebacks."
+msgstr ""
+
+msgid ""
+"Migrated signal and timezone imports to the horilla shims, standardized "
+"first-party import groups, and added class and method docstrings for pylint "
+"compliance."
+msgstr ""
+
+msgid ""
+"Cadence forms aligned with HorillaModelForm layout: field_order, Meta.fields "
+"= \"__all__\", Meta.exclude, and keep_on_form; save logic and HTMX unchanged."
+msgstr ""
+
+msgid ""
+"Release 1.10: cadences ship under contrib with app label cadences. Signals, "
+"registrations, URLs, and static paths updated to match the new contrib "
+"layout."
+msgstr ""
+
+msgid ""
+"Implemented cadence signals for runtime activities, enabling automated "
+"cadence-driven workflow execution and activity tracking."
+msgstr ""
+
+msgid "Cadences"
+msgstr ""
+
+msgid "At least one condition is required."
+msgstr ""
+
+msgid "Each condition row must include Field, Operator, and Value."
+msgstr ""
+
+msgid "Mail to"
+msgstr ""
+
+msgid ""
+"Choose which user or email field on the record should receive this mail."
+msgstr ""
+
+msgid ""
+"Email follow-up is unavailable until an outgoing mail server is configured."
+msgstr ""
+
+msgid "Parent follow-up is required for this stage."
+msgstr ""
+
+msgid "Invalid cadence for branch."
+msgstr ""
+
+msgid "Parent must belong to the previous follow-up stage."
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Module"
+msgstr ""
+
+msgid "Target module"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Cadence"
+msgstr ""
+
+msgid "Field Name"
+msgstr ""
+
+msgid "Operator"
+msgstr ""
+
+msgid "Value"
+msgstr ""
+
+msgid "AND"
+msgstr ""
+
+msgid "OR"
+msgstr ""
+
+msgid "Logical Operator"
+msgstr ""
+
+msgid "Order"
+msgstr ""
+
+msgid "Cadence Condition"
+msgstr ""
+
+msgid "Cadence Conditions"
+msgstr ""
+
+msgid "Task"
+msgstr ""
+
+msgid "Call"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Overdue"
+msgstr ""
+
+msgid "Immediately"
+msgstr ""
+
+msgid "Minute"
+msgstr ""
+
+msgid "Hour"
+msgstr ""
+
+msgid "Day"
+msgstr ""
+
+msgid "Month"
+msgstr ""
+
+msgid "Follow up"
+msgstr ""
+
+msgid "Stage number (1 = first follow-up)."
+msgstr ""
+
+msgid "Follow up Type"
+msgstr ""
+
+msgid "Branched from"
+msgstr ""
+
+msgid ""
+"Set when this step was created from a specific parent card’s + (next stage)."
+msgstr ""
+
+msgid "Do This"
+msgstr ""
+
+msgid "Do This Value"
+msgstr ""
+
+msgid "Required for minute/hour/day/month."
+msgstr ""
+
+msgid "After Previous Status Is"
+msgstr ""
+
+msgid "Required from follow up 2 onwards."
+msgstr ""
+
+msgid "Subject"
+msgstr ""
+
+msgid "Trigger Date + Days"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Priority"
+msgstr ""
+
+msgid "Task Owner"
+msgstr ""
+
+msgid "Call Type"
+msgstr ""
+
+msgid "Call Status"
+msgstr ""
+
+msgid "Call Start + Days"
+msgstr ""
+
+msgid "Call Owner"
+msgstr ""
+
+msgid "Purpose"
+msgstr ""
+
+msgid "Recipients for this step. Choose user/email fields from the record"
+msgstr ""
+
+msgid "Mail Template"
+msgstr ""
+
+msgid "Cadence Follow up"
+msgstr ""
+
+msgid "Cadence Follow ups"
+msgstr ""
+
+msgid "Follow up 1 can only contain one item."
+msgstr ""
+
+msgid "Select status condition from previous follow-up."
+msgstr ""
+
+msgid "Cannot add this follow-up before creating previous follow-up bucket."
+msgstr ""
+
+msgid "Enter value for selected Do This unit."
+msgstr ""
+
+msgid "This field is required for selected follow-up type."
+msgstr ""
+
+msgid "Invalid follow-up type."
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "View Reports"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "Menu"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Do this"
+msgstr ""
+
+msgid "After previous status is"
+msgstr ""
+
+msgid "Due Date"
+msgstr ""
+
+msgid "Trigger date +"
+msgstr ""
+
+msgid "day(s)"
+msgstr ""
+
+msgid "Mail template"
+msgstr ""
+
+msgid "Add follow-up in next stage"
+msgstr ""
+
+msgid "Add follow-up in this stage"
+msgstr ""
+
+msgid "Add another follow-up in this stage"
+msgstr ""
+
+msgid ""
+"Get started by adding an Email, Task, or Call follow-up to your Cadence."
+msgstr ""
+
+msgid "Add Follow Ups"
+msgstr ""
+
+msgid "Add Follow-up"
+msgstr ""
+
+msgid "Cadence Name"
+msgstr ""
+
+msgid "Start Date"
+msgstr ""
+
+msgid "Last Follow-up Response"
+msgstr ""
+
+msgid "Next Follow-up"
+msgstr ""
+
+msgid "No active cadences match this record right now."
+msgstr ""
+
+msgid "Total Triggered Calls"
+msgstr ""
+
+msgid "Completed Calls"
+msgstr ""
+
+msgid "Scheduled Calls"
+msgstr ""
+
+msgid "Cancelled Calls"
+msgstr ""
+
+msgid "Total Triggered Mails"
+msgstr ""
+
+msgid "Email Delivered"
+msgstr ""
+
+msgid "Bounced Emails"
+msgstr ""
+
+msgid "Opened Emails"
+msgstr ""
+
+msgid "Failed Mails"
+msgstr ""
+
+msgid "Report"
+msgstr ""
+
+msgid "Cadences Report"
+msgstr ""
+
+msgid "Total Triggered Tasks"
+msgstr ""
+
+msgid "Completed Tasks"
+msgstr ""
+
+msgid "Pending Tasks"
+msgstr ""
+
+msgid "Unresolved"
+msgstr ""
+
+msgid "Mail Configuration Required"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Cannot add Email Follow-up"
+msgstr ""
+
+msgid "Configure outgoing mail to use Email follow-ups in cadence."
+msgstr ""
+
+msgid "Configure"
+msgstr ""
+
+msgid "Follow-Up"
+msgstr ""
+
+msgid "Completed"
+msgstr ""
+
+msgid "Pending"
+msgstr ""
+
+msgid "Scheduled"
+msgstr ""
+
+msgid "Cancelled"
+msgstr ""
+
+msgid "Email Template"
+msgstr ""
+
+msgid "Delivered"
+msgstr ""
+
+msgid "Bounced"
+msgstr ""
+
+msgid "Opened"
+msgstr ""
+
+msgid "Failed"
+msgstr ""
+
+msgid "New"
+msgstr ""
+
+msgid "Conditions"
+msgstr ""
+
+msgid "Follow-up removed."
+msgstr ""
+
+msgid ""
+"Remove or reassign follow-ups in later stages before deleting this step."
+msgstr ""
+
+msgid "Next Follow-up Response"
+msgstr ""
+
+msgid "Invalid model for cadence tab."
+msgstr ""
+
+msgid "Object not found."
+msgstr ""
+
+msgid "You don't have permission to view this item."
+msgstr ""

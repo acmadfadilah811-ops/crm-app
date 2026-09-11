@@ -1,0 +1,669 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Module for building and customizing interactive dashboards."
+msgstr "Modul untuk membuat dan menyesuaikan dasbor interaktif."
+
+msgid ""
+"Store relative referer URLs and fall back to full navigation from dashboard "
+"views. Use the theme primary color for the home dashboard record-count "
+"label."
+msgstr ""
+"Simpan URL perujuk relatif dan kembali ke navigasi penuh dari tampilan "
+"dasbor.Gunakan warna utama tema untuk label penghitungan rekaman dasbor "
+"beranda."
+
+msgid ""
+"Handle missing component safely when moving a widget to another dashboard."
+msgstr ""
+"Tangani komponen yang hilang dengan aman saat memindahkan widget ke dasbor "
+"lain."
+
+msgid ""
+"Re-raise HttpNotFound with exception chaining in dashboard detail views to "
+"preserve context."
+msgstr ""
+"Naikkan kembali HttpNotFound dengan rangkaian pengecualian di tampilan "
+"detail dasbor untuk menjaga konteks."
+
+msgid ""
+"Removed redundant fields attributes superseded by form_class on dashboard "
+"action views, and added admin and component view docstrings for pylint "
+"compliance."
+msgstr ""
+"Menghapus atribut bidang yang berlebihan yang digantikan oleh form_class "
+"pada tampilan tindakan dasbor, dan menambahkan dokumen tampilan admin dan "
+"komponen untuk kepatuhan pylint."
+
+msgid ""
+"Dashboard forms aligned with HorillaModelForm layout: field_order and "
+"Meta.fields = \"__all__\" with Meta.exclude; component form __init__ "
+"unchanged."
+msgstr ""
+"Formulir dasbor selaras dengan tata letak HorillaModelForm: field_order dan "
+"Meta.fields = \"__all__\" dengan Meta.exclude;bentuk komponen __init__ tidak"
+" berubah."
+
+msgid ""
+"Release 1.10: dashboards ship under contrib with app label dashboard. Widget"
+" and KPI wiring aligned to short app labels across contrib modules so "
+"filters and lookups resolve consistently."
+msgstr ""
+"Rilis 1.10: dasbor dikirimkan berdasarkan kontribusi dengan dasbor label "
+"aplikasi.Pengkabelan widget dan KPI diselaraskan dengan label aplikasi "
+"pendek di seluruh modul kontrib sehingga filter dan pencarian diselesaikan "
+"secara konsisten."
+
+msgid ""
+"Extended dashboard generator to support multiple charts, multiple table "
+"widgets, and custom KPI functions. Added more KPI widgets and improved "
+"charts and reporting components for the dashboard."
+msgstr ""
+"Generator dasbor yang diperluas untuk mendukung banyak bagan, beberapa "
+"widget tabel, dan fungsi KPI khusus.Menambahkan lebih banyak widget KPI dan "
+"menyempurnakan bagan serta komponen pelaporan untuk dasbor."
+
+msgid ""
+"Added configurable Y-axis metrics for charts reusing KPI options, plus new "
+"chart types: Area, Tree Map, Heat Map, Radar, Sankey, and Scatter."
+msgstr ""
+"Menambahkan metrik sumbu Y yang dapat dikonfigurasi untuk bagan yang "
+"menggunakan kembali opsi KPI, ditambah jenis bagan baru: Area, Peta Pohon, "
+"Peta Panas, Radar, Sankey, dan Sebar."
+
+msgid ""
+"Added advanced visualization capabilities including multi-series charts, "
+"improved stacked chart rendering, interactive chart previews in dashboard "
+"editor, and enhanced analytics widgets for deeper insights."
+msgstr ""
+"Menambahkan kemampuan visualisasi tingkat lanjut termasuk bagan multi-seri, "
+"peningkatan rendering bagan bertumpuk, pratinjau bagan interaktif di editor "
+"dasbor, dan widget analitik yang ditingkatkan untuk wawasan yang lebih "
+"mendalam."
+
+msgid ""
+"Migrated from Django AppConfig to Horilla AppLauncher and and replaced "
+"Django utilitieswith horilla.utils.decorators, horilla.utils.translation, "
+"and horilla.shortcuts where applicable."
+msgstr ""
+"Bermigrasi dari Django AppConfig ke Horilla AppLauncher dan mengganti "
+"utilitas Django dengan horilla.utils.decorators, horilla.utils.translation, "
+"dan horilla.shortcuts jika berlaku."
+
+msgid ""
+"Added drag and drop reordering from home page, date range filter,and set to "
+"default options for enhanced dashboard customization and data visualization."
+msgstr ""
+"Menambahkan penataan ulang seret dan lepas dari laman beranda, filter "
+"rentang tanggal, dan disetel ke opsi default untuk penyesuaian dasbor dan "
+"visualisasi data yang ditingkatkan."
+
+msgid "Dashboard"
+msgstr "Dasbor"
+
+msgid "Home"
+msgstr "Rumah"
+
+msgid "Dashboards"
+msgstr "Dasbor"
+
+msgid "Folder Name"
+msgstr "Nama Folder"
+
+msgid "Description"
+msgstr "Keterangan"
+
+msgid "Folder"
+msgstr "Map"
+
+msgid "Favourited By"
+msgstr "Disukai Oleh"
+
+msgid "Folder Owner"
+msgstr "Pemilik Folder"
+
+msgid "Dashboard Folder"
+msgstr "Folder Dasbor"
+
+msgid "Dashboard Folders"
+msgstr "Folder Dasbor"
+
+msgid "Dashboard Owner"
+msgstr "Pemilik Dasbor"
+
+msgid "Dashboard Name"
+msgstr "Nama Dasbor"
+
+msgid "Is Default"
+msgstr "Apakah Bawaan"
+
+msgid "Charts"
+msgstr "Grafik"
+
+msgid "Table Data"
+msgstr "Data Tabel"
+
+msgid "KPI"
+msgstr "KPI"
+
+msgid "Column Chart"
+msgstr "Bagan Kolom"
+
+msgid "Line Chart"
+msgstr "Bagan Garis"
+
+msgid "Pie Chart"
+msgstr "Bagan Pai"
+
+msgid "Funnel"
+msgstr "Corong"
+
+msgid "Bar Chart"
+msgstr "Bagan Batang"
+
+msgid "Donut"
+msgstr "Donat"
+
+msgid "Stacked Vertical Chart"
+msgstr "Bagan Vertikal Bertumpuk"
+
+msgid "Stacked Horizontal Chart"
+msgstr "Bagan Horisontal Bertumpuk"
+
+msgid "Scatter"
+msgstr "Menyebarkan"
+
+msgid "Heat Map"
+msgstr "Peta Panas"
+
+msgid "Tree Map"
+msgstr "Peta Pohon"
+
+msgid "Area Chart"
+msgstr "Bagan Area"
+
+msgid "Sankey Chart"
+msgstr "Bagan Sankey"
+
+msgid "Radar Chart"
+msgstr "Bagan Radar"
+
+msgid "Component Name"
+msgstr "Nama Komponen"
+
+msgid "Component Type"
+msgstr "Tipe Komponen"
+
+msgid "Chart Type"
+msgstr "Jenis Bagan"
+
+msgid "Reports"
+msgstr "Laporan"
+
+msgid "Module"
+msgstr "Modul"
+
+msgid "Metric Type"
+msgstr "Tipe Metrik"
+
+msgid "Grouping Field"
+msgstr "Bidang Pengelompokan"
+
+msgid "Secondary Grouping"
+msgstr "Pengelompokan Sekunder"
+
+msgid "Y-axis Metric Type"
+msgstr "Tipe Metrik sumbu Y"
+
+msgid "Table Columns"
+msgstr "Kolom Tabel"
+
+msgid "Sequence"
+msgstr "Urutan"
+
+msgid "KPI Icon"
+msgstr "Ikon KPI"
+
+msgid "Component Owner"
+msgstr "Pemilik Komponen"
+
+msgid "Dashboard Component"
+msgstr "Komponen Dasbor"
+
+msgid "Dashboard Components"
+msgstr "Komponen Dasbor"
+
+msgid "Component"
+msgstr "Komponen"
+
+msgid "Field Name"
+msgstr "Nama Bidang"
+
+msgid "Operator"
+msgstr "Operator"
+
+msgid "Value"
+msgstr "Nilai"
+
+msgid "Component Criteria"
+msgstr "Kriteria Komponen"
+
+msgid "User"
+msgstr "Pengguna"
+
+msgid ""
+"For default home: {\"kpi\": [\"default-kpi-0\", ...], \"chartsAndTables\": "
+"[...]}. For dashboard: {\"kpi\": [id, ...], \"components\": [id, ...]}."
+msgstr ""
+"Untuk beranda default: {\"kpi\": [\"default-kpi-0\", ...], "
+"\"chartsAndTables\": [...]}.Untuk dasbor: {\"kpi\": [id, ...], "
+"\"components\": [id, ...]}."
+
+msgid "Default Home Layout Order"
+msgstr "Urutan Tata Letak Rumah Default"
+
+msgid "Default Home Layout Orders"
+msgstr "Urutan Tata Letak Rumah Default"
+
+#, python-format
+msgid "Layout order for %(user)s - %(dashboard)s"
+msgstr "Urutan tata letak untuk%(user)s-%(dashboard)s"
+
+#, python-format
+msgid "Default home layout order for %(user)s"
+msgstr "Urutan tata letak rumah default untuk%(user)s"
+
+msgid "Company Name"
+msgstr "Nama perusahaan"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Contact Number"
+msgstr "Nomor Kontak"
+
+msgid "Summit Logistics"
+msgstr "Logistik KTT"
+
+msgid "sales@summitlogistics.com"
+msgstr "penjualan@summitlogistics.com"
+
+msgid "+1 (415) 555-0182"
+msgstr "+1 (415) 555-0182"
+
+msgid "Brightline Media"
+msgstr "Media Garis Terang"
+
+msgid "hello@brightlinemedia.io"
+msgstr "halo@brightlinemedia.io"
+
+msgid "+1 (312) 555-0247"
+msgstr "+1 (312) 555-0247"
+
+msgid "Northstar Consulting"
+msgstr "Konsultasi Bintang Utara"
+
+msgid "contact@northstarconsulting.co"
+msgstr "hubungi@northstarconsulting.co"
+
+msgid "+1 (646) 555-0119"
+msgstr "+1 (646) 555-0119"
+
+msgid "BluePeak Technologies"
+msgstr "Teknologi BluePeak"
+
+msgid "info@bluepeaktech.ai"
+msgstr "info@bluepeaktech.ai"
+
+msgid "+1 (206) 555-0134"
+msgstr "+1 (206) 555-0134"
+
+msgid "Evergreen Retail Group"
+msgstr "Grup Ritel Evergreen"
+
+msgid "partnerships@evergreenretail.com"
+msgstr "kemitraan@evergreenretail.com"
+
+msgid "+1 (718) 555-0176"
+msgstr "+1 (718) 555-0176"
+
+msgid "Edit"
+msgstr "Sunting"
+
+msgid "Change Owner"
+msgstr "Ganti Pemilik"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Preview"
+msgstr "Pratinjau"
+
+msgid "Select component type to see preview"
+msgstr "Pilih jenis komponen untuk melihat pratinjau"
+
+msgid "Choose File"
+msgstr "Pilih File"
+
+msgid "No file chosen"
+msgstr "Tidak ada file yang dipilih"
+
+msgid "Conditions"
+msgstr "Kondisi"
+
+msgid "Remove"
+msgstr "Hapus"
+
+msgid "Save"
+msgstr "Simpan"
+
+msgid "Add components"
+msgstr "Tambahkan komponen"
+
+msgid "Reorder"
+msgstr "Susun ulang"
+
+msgid "Cancel"
+msgstr "Batal"
+
+msgid "Drag to reorder"
+msgstr "Tarik untuk menyusun ulang"
+
+msgid "Loading KPI..."
+msgstr "Memuat KPI..."
+
+msgid "Charts & Data"
+msgstr "Bagan & Data"
+
+msgid "Export as PNG"
+msgstr "Ekspor sebagai PNG"
+
+msgid "Export as PDF"
+msgstr "Ekspor sebagai PDF"
+
+msgid "Update"
+msgstr "Perbarui"
+
+msgid "Add to Another Dashboard"
+msgstr "Tambahkan ke Dasbor Lain"
+
+msgid " Loading chart..."
+msgstr "Memuat diagram..."
+
+msgid "Created From report"
+msgstr "Dibuat Dari laporan"
+
+msgid "No Components Added"
+msgstr "Tidak Ada Komponen yang Ditambahkan"
+
+msgid ""
+"This dashboard doesn't have any components yet. Add charts, tables, KPIs, or"
+" targets to visualize your data."
+msgstr ""
+"Dasbor ini belum memiliki komponen apa pun.Tambahkan diagram, tabel, KPI, "
+"atau target untuk memvisualisasikan data Anda."
+
+msgid "breadcrumb"
+msgstr "remah roti"
+
+msgid "All Dashboards"
+msgstr "Semua Dasbor"
+
+msgid "Folders"
+msgstr "Folder"
+
+msgid "All Folders"
+msgstr "Semua Folder"
+
+msgid "Favourites"
+msgstr "Favorit"
+
+msgid "From"
+msgstr "Dari"
+
+msgid "to"
+msgstr "ke"
+
+msgid "Until"
+msgstr "Sampai"
+
+msgid "Custom"
+msgstr "Kebiasaan"
+
+msgid "Last"
+msgstr "Terakhir"
+
+msgid "Days"
+msgstr "hari"
+
+msgid "All Time"
+msgstr "Sepanjang Waktu"
+
+msgid "Reset Range"
+msgstr "Atur Ulang Rentang"
+
+msgid "Custom Range"
+msgstr "Rentang Kustom"
+
+msgid "Start date"
+msgstr "Tanggal mulai"
+
+msgid "End date"
+msgstr "Tanggal akhir"
+
+msgid "Apply"
+msgstr "Terapkan"
+
+msgid "Welcome"
+msgstr "Selamat datang"
+
+msgid "Set to default"
+msgstr "Setel ke default"
+
+msgid "View All Dashboards"
+msgstr "Lihat Semua Dasbor"
+
+msgid ""
+"Get started by creating your first dashboard or explore the overview below."
+msgstr ""
+"Mulailah dengan membuat dasbor pertama Anda atau jelajahi ikhtisar di bawah."
+
+msgid ""
+"You currently don't have access to dashboard. Please contact your "
+"administrator to request permissions or explore available features."
+msgstr ""
+"Saat ini Anda tidak memiliki akses ke dasbor.Silakan hubungi administrator "
+"Anda untuk meminta izin atau menjelajahi fitur yang tersedia."
+
+msgid "Nothing to show yet. Please add your data."
+msgstr "Belum ada yang bisa ditampilkan.Silakan tambahkan data Anda."
+
+msgid "Records"
+msgstr "Catatan"
+
+msgid "Failed to reset layout to default."
+msgstr "Gagal menyetel ulang tata letak ke default."
+
+msgid " Delete"
+msgstr "Hapus"
+
+msgid " Add to Another Dashboard"
+msgstr "Tambahkan ke Dasbor Lain"
+
+msgid "KPI icon"
+msgstr "ikon KPI"
+
+msgid "Metric type"
+msgstr "Tipe metrik"
+
+msgid "Secondary Grouping Field"
+msgstr "Bidang Pengelompokan Sekunder"
+
+msgid "Y-axis metric"
+msgstr "Metrik sumbu Y"
+
+#, python-format
+msgid "Total %(name)s"
+msgstr "Jumlah%(name)s"
+
+#, python-format
+msgid "%(name)s (%(index)d)"
+msgstr "%(name)s(%(index)d)"
+
+#, python-format
+msgid "No %(name)s found."
+msgstr "Tidak ada%(name)syang ditemukan."
+
+msgid "Move to Dashboard"
+msgstr "Pindah ke Dasbor"
+
+msgid "Original component not found."
+msgstr "Komponen asli tidak ditemukan."
+
+msgid "Chart successfully added to another dashboard."
+msgstr "Bagan berhasil ditambahkan ke dasbor lain."
+
+msgid "Add to Dashboard"
+msgstr "Tambahkan ke Dasbor"
+
+msgid "This report '{}' is already added to the '{}' dashboard."
+msgstr "Laporan '{}' ini sudah ditambahkan ke dasbor '{}'."
+
+msgid "Report added to dashboard successfully."
+msgstr "Laporan berhasil ditambahkan ke dasbor."
+
+msgid "Report not found."
+msgstr "Laporan tidak ditemukan."
+
+msgid "Component name"
+msgstr "Nama komponen"
+
+msgid "Enter component name"
+msgstr "Masukkan nama komponen"
+
+msgid "Missing module or grouping field; reload the chart and try again."
+msgstr ""
+"Modul atau bidang pengelompokan tidak ada;muat ulang grafik dan coba lagi."
+
+msgid "Invalid module."
+msgstr "Modul tidak valid."
+
+msgid "Please enter a component name."
+msgstr "Silakan masukkan nama komponen."
+
+msgid "Chart added to dashboard successfully."
+msgstr "Bagan berhasil ditambahkan ke dasbor."
+
+msgid "No component order provided. Please try reordering again."
+msgstr ""
+"Tidak ada pesanan komponen yang disediakan.Silakan coba menyusun ulang lagi."
+
+msgid "No component order provided."
+msgstr "Tidak ada pesanan komponen yang disediakan."
+
+msgid "Invalid component order. Please refresh and try again."
+msgstr "Urutan komponen tidak valid.Silakan segarkan dan coba lagi."
+
+msgid "Invalid component order."
+msgstr "Urutan komponen tidak valid."
+
+msgid "Components reordered successfully."
+msgstr "Komponen berhasil disusun ulang."
+
+msgid "New Dashboard"
+msgstr "Dasbor Baru"
+
+msgid "New Folder"
+msgstr "Folder Baru"
+
+msgid "Dashboard layout reset to default order."
+msgstr "Tata letak dasbor disetel ulang ke urutan default."
+
+msgid "Dashboard layout reset to default."
+msgstr "Tata letak dasbor disetel ulang ke default."
+
+msgid "Favourite Dashboards"
+msgstr "Dasbor Favorit"
+
+msgid "Select Grouping Field"
+msgstr "Pilih Bidang Pengelompokan"
+
+msgid "Select Secondary Grouping Field"
+msgstr "Pilih Bidang Pengelompokan Sekunder"
+
+msgid "Name"
+msgstr "Nama"
+
+msgid "Type"
+msgstr "Jenis"
+
+msgid ""
+"Your saved layout order was invalid and has been reset. Please reorder the "
+"dashboard again if needed."
+msgstr ""
+"Urutan tata letak yang Anda simpan tidak valid dan telah disetel "
+"ulang.Silakan susun ulang dasbor lagi jika diperlukan."
+
+msgid "KPI data is missing in the request"
+msgstr "Data KPI tidak ada dalam permintaan"
+
+msgid "Charts and tables data is missing in the request"
+msgstr "Data bagan dan tabel tidak ada dalam permintaan"
+
+msgid "KPI data is invalid. Expected a list"
+msgstr "Data KPI tidak valid.Diharapkan sebuah daftar"
+
+msgid "Charts and tables data is invalid. Expected a list"
+msgstr "Data bagan dan tabel tidak valid.Diharapkan sebuah daftar"
+
+msgid "KPI order is empty."
+msgstr "Pesanan KPI kosong."
+
+msgid "Charts and tables order cannot be empty."
+msgstr "Urutan grafik dan tabel tidak boleh kosong."
+
+msgid "Invalid KPI id in order."
+msgstr "ID KPI tidak valid secara berurutan."
+
+msgid "Invalid chart or table id in order."
+msgstr "Urutan ID bagan atau tabel tidak valid."
+
+msgid "Invalid KPI order: IDs must match the current default home KPIs."
+msgstr ""
+"Urutan KPI tidak valid: ID harus cocok dengan KPI beranda default saat ini."
+
+msgid ""
+"Invalid charts/tables order: IDs must match the current default home charts "
+"and tables."
+msgstr ""
+"Urutan bagan/tabel tidak valid: ID harus cocok dengan bagan dan tabel "
+"beranda default saat ini."
+
+msgid "Layout order saved successfully"
+msgstr "Urutan tata letak berhasil disimpan"
+
+msgid "Layout order saved."
+msgstr "Urutan tata letak disimpan."
+
+msgid "Layout reset to default."
+msgstr "Tata letak disetel ulang ke default."

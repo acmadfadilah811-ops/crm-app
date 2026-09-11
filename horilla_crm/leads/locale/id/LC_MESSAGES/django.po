@@ -1,0 +1,717 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Leads"
+msgstr "Memimpin"
+
+msgid "Leads by Source"
+msgstr "Dipimpin berdasarkan Sumber"
+
+msgid "Lead Conversion Status"
+msgstr "Status Konversi Prospek"
+
+msgid "Leads by Status"
+msgstr "Memimpin berdasarkan Status"
+
+msgid "Leads by Stage"
+msgstr "Memimpin berdasarkan Tahap"
+
+msgid "Total Leads"
+msgstr "Total Prospek"
+
+msgid "Won Leads"
+msgstr "Memenangkan Prospek"
+
+msgid "Open Leads (pipeline)"
+msgstr "Buka Prospek (pipa)"
+
+msgid "Enter Account Name"
+msgstr "Masukkan Nama Akun"
+
+msgid "Select Account"
+msgstr "Pilih Akun"
+
+msgid "Enter First Name"
+msgstr "Masukkan Nama Depan"
+
+msgid "Enter Last Name"
+msgstr "Masukkan Nama Belakang"
+
+msgid "Select Contact"
+msgstr "Pilih Kontak"
+
+msgid "Enter Opportunity Name"
+msgstr "Masukkan Nama Peluang"
+
+msgid "Select Opportunity"
+msgstr "Pilih Peluang"
+
+msgid "Select Owner"
+msgstr "Pilih Pemilik"
+
+msgid "CRM"
+msgstr "CRM"
+
+msgid "CRM module for managing leads, contacts, and opportunities."
+msgstr "Modul CRM untuk mengelola prospek, kontak, dan peluang."
+
+msgid "Horilla CRM"
+msgstr "Gorila CRM"
+
+msgid "Welcome to Horilla CRM"
+msgstr "Selamat datang di Horilla CRM"
+
+msgid "Please sign up to access Horilla CRM"
+msgstr "Silakan mendaftar untuk mengakses Horilla CRM"
+
+msgid "Lead"
+msgstr "Memimpin"
+
+msgid "Assignment Rules"
+msgstr "Aturan Penugasan"
+
+msgid "Mail to Lead"
+msgstr "Surat ke Pimpinan"
+
+msgid "Web to Lead"
+msgstr "Web untuk Memimpin"
+
+msgid "Sales"
+msgstr "Penjualan"
+
+msgid "Notify as Email"
+msgstr "Beritahukan sebagai Email"
+
+msgid "Notify as Notification"
+msgstr "Beritahu sebagai Pemberitahuan"
+
+msgid "Both"
+msgstr "Keduanya"
+
+msgid "User"
+msgstr "Pengguna"
+
+msgid "Role"
+msgstr "Peran"
+
+msgid "Rule Name"
+msgstr "Nama Aturan"
+
+msgid "Description"
+msgstr "Keterangan"
+
+msgid "Lead Assignment Rule"
+msgstr "Aturan Penugasan Pemimpin"
+
+msgid "Lead Assignment Rules"
+msgstr "Aturan Penugasan Pemimpin"
+
+msgid "Assignment Rule"
+msgstr "Aturan Penugasan"
+
+msgid "Assign To"
+msgstr "Tetapkan Ke"
+
+msgid "Assign To Users"
+msgstr "Tetapkan Kepada Pengguna"
+
+msgid "Assign To Roles"
+msgstr "Tetapkan Ke Peran"
+
+msgid "Notify Method"
+msgstr "Metode Beritahu"
+
+msgid "Mail Template"
+msgstr "Templat Surat"
+
+msgid "Notification Template"
+msgstr "Templat Pemberitahuan"
+
+msgid "Lead Assignment Condition"
+msgstr "Kondisi Penugasan Pemimpin"
+
+msgid "Lead Assignment Conditions"
+msgstr "Kondisi Penugasan Pemimpin"
+
+msgid "Mail template is required for email notification."
+msgstr "Templat email diperlukan untuk pemberitahuan email."
+
+msgid "Notification template is required for in-app notification."
+msgstr "Templat notifikasi diperlukan untuk notifikasi dalam aplikasi."
+
+msgid "Assignment Condition"
+msgstr "Kondisi Penugasan"
+
+msgid "Field"
+msgstr "Bidang"
+
+msgid "Operator"
+msgstr "Operator"
+
+msgid "Value"
+msgstr "Nilai"
+
+msgid "AND"
+msgstr "DAN"
+
+msgid "OR"
+msgstr "ATAU"
+
+msgid "Logical Operator"
+msgstr "Operator Logis"
+
+msgid "Lead Assignment Match Criteria"
+msgstr "Kriteria Kecocokan Penugasan Pemimpin"
+
+msgid "Status Name"
+msgstr "Nama Status"
+
+msgid "Status Order"
+msgstr "Status Pesanan"
+
+msgid "Status Color"
+msgstr "Warna Status"
+
+msgid "Leave blank for default (primary theme colour)."
+msgstr "Biarkan kosong untuk default (warna tema utama)."
+
+msgid "Is Final Stage"
+msgstr "Adalah Tahap Akhir"
+
+msgid "Probability"
+msgstr "Kemungkinan"
+
+msgid "Default probability percentage for this stage"
+msgstr "Persentase probabilitas default untuk tahap ini"
+
+msgid "Lead Stage"
+msgstr "Panggung Pimpin"
+
+msgid "Lead Stages"
+msgstr "Tahapan Pimpin"
+
+msgid "Order must be a non-negative integer."
+msgstr "Urutan harus berupa bilangan bulat bukan negatif."
+
+msgid "Website"
+msgstr "Situs web"
+
+msgid "Referral"
+msgstr "Rujukan"
+
+msgid "Event"
+msgstr "Peristiwa"
+
+msgid "Campaign"
+msgstr "Kampanye"
+
+msgid "Phone"
+msgstr "Telepon"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Social Media"
+msgstr "Media Sosial"
+
+msgid "Partner"
+msgstr "Mitra"
+
+msgid "Other"
+msgstr "Lainnya"
+
+msgid "Finance"
+msgstr "Keuangan"
+
+msgid "Healthcare"
+msgstr "Kesehatan"
+
+msgid "Manufacturing"
+msgstr "Manufaktur"
+
+msgid "Agriculture"
+msgstr "Pertanian"
+
+msgid "Construction"
+msgstr "Konstruksi"
+
+msgid "Banking"
+msgstr "Perbankan"
+
+msgid "Education"
+msgstr "Pendidikan"
+
+msgid "Insurance"
+msgstr "Asuransi"
+
+msgid "Title"
+msgstr "Judul"
+
+msgid "First Name"
+msgstr "Nama depan"
+
+msgid "Last Name"
+msgstr "Nama Belakang"
+
+msgid "Lead Owner"
+msgstr "Pemilik Utama"
+
+msgid "Contact Number"
+msgstr "Nomor Kontak"
+
+msgid "Fax"
+msgstr "Fax"
+
+msgid "Lead Source"
+msgstr "Sumber Utama"
+
+msgid "Company"
+msgstr "Perusahaan"
+
+msgid "Total Employees"
+msgstr "Jumlah Karyawan"
+
+msgid "Industry"
+msgstr "Industri"
+
+msgid "Annual Revenue"
+msgstr "Pendapatan Tahunan"
+
+msgid "City"
+msgstr "Kota"
+
+msgid "State"
+msgstr "Negara"
+
+msgid "Country"
+msgstr "Negara"
+
+msgid "Zip"
+msgstr "Ritsleting"
+
+msgid "Requirements"
+msgstr "Persyaratan"
+
+msgid "Lead Score"
+msgstr "Skor Utama"
+
+msgid "Incoming Mail"
+msgstr "Surat Masuk"
+
+msgid ""
+"Comma-separated list of allowed sender email addresses. Leave blank to "
+"accept all."
+msgstr ""
+"Daftar alamat email pengirim yang diizinkan yang dipisahkan koma.Biarkan "
+"kosong untuk menerima semua."
+
+msgid "Accept Emails From"
+msgstr "Terima Email Dari"
+
+msgid ""
+"Comma-separated keywords to filter emails. Email must contain at least one "
+"keyword in subject OR body."
+msgstr ""
+"Kata kunci yang dipisahkan koma untuk memfilter email.Email harus mengandung"
+" setidaknya satu kata kunci di subjek ATAU isi."
+
+msgid "Keywords"
+msgstr "Kata kunci"
+
+msgid "Last Fetched On"
+msgstr "Terakhir Diambil Pada"
+
+msgid "Mail to Lead Config"
+msgstr "Konfigurasi Email ke Prospek"
+
+msgid "English"
+msgstr "Bahasa inggris"
+
+msgid "Arabic"
+msgstr "Arab"
+
+msgid "German"
+msgstr "Jerman"
+
+msgid "French"
+msgstr "Perancis"
+
+msgid "Form Name"
+msgstr "Nama Formulir"
+
+msgid "Selected Fields"
+msgstr "Bidang yang Dipilih"
+
+msgid "Enable Return URL"
+msgstr "Aktifkan URL Pengembalian"
+
+msgid "Return URL"
+msgstr "URL kembali"
+
+msgid "Success Message"
+msgstr "Pesan Sukses"
+
+msgid "Success Description"
+msgstr "Deskripsi Kesuksesan"
+
+msgid "Enable Recaptcha"
+msgstr "Aktifkan Recaptcha"
+
+msgid "Language"
+msgstr "Bahasa"
+
+msgid "Header Color"
+msgstr "Warna Tajuk"
+
+msgid "Generated HTML"
+msgstr "HTML yang dihasilkan"
+
+msgid "Lead Capture Form"
+msgstr "Formulir Pengambilan Timbal"
+
+msgid "Lead Capture Forms"
+msgstr "Formulir Penangkapan Timbal"
+
+msgid "Filter"
+msgstr "Filter"
+
+msgid "Select Assign To Users"
+msgstr "Pilih Tetapkan Ke Pengguna"
+
+msgid "Select Assign To Roles"
+msgstr "Pilih Tetapkan Ke Peran"
+
+msgid "No conditions added"
+msgstr "Tidak ada ketentuan yang ditambahkan"
+
+msgid "Add a condition to define when and to whom a lead should be assigned."
+msgstr ""
+"Tambahkan kondisi untuk menentukan kapan dan kepada siapa prospek harus "
+"ditetapkan."
+
+msgid "Rule"
+msgstr "Aturan"
+
+msgid "Edit"
+msgstr "Sunting"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Conditions"
+msgstr "Kondisi"
+
+msgid "Users"
+msgstr "Pengguna"
+
+msgid "Roles"
+msgstr "Peran"
+
+msgid "Select Mail Template"
+msgstr "Pilih Templat Surat"
+
+msgid "Select Notification Template"
+msgstr "Pilih Templat Pemberitahuan"
+
+msgid "Lead Conversion"
+msgstr "Konversi Prospek"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Account"
+msgstr "Akun"
+
+msgid "Create New"
+msgstr "Buat Baru"
+
+msgid "Select Existing"
+msgstr "Pilih Yang Ada"
+
+msgid "Contact"
+msgstr "Kontak"
+
+msgid "Opportunity"
+msgstr "Peluang"
+
+msgid "Owner"
+msgstr "Pemilik"
+
+msgid "Select owner"
+msgstr "Pilih pemilik"
+
+msgid "Convert"
+msgstr "Konversi"
+
+msgid "Account Name"
+msgstr "Nama Akun"
+
+msgid "Select account"
+msgstr "Pilih akun"
+
+msgid "Opportunity Name"
+msgstr "Nama Peluang"
+
+msgid "Select opportunity"
+msgstr "Pilih peluang"
+
+msgid "Please select an account first"
+msgstr "Silakan pilih akun terlebih dahulu"
+
+msgid "Select an account to see available opportunities"
+msgstr "Pilih akun untuk melihat peluang yang tersedia"
+
+msgid "Success"
+msgstr "Kesuksesan"
+
+msgid "Your lead has been converted"
+msgstr "Prospek Anda telah dikonversi"
+
+msgid "Comapny"
+msgstr "Perusahaan"
+
+msgid "crown"
+msgstr "mahkota"
+
+msgid "Go to Leads"
+msgstr "Buka Prospek"
+
+msgid "Manage Custom Stages"
+msgstr "Kelola Tahapan Kustom"
+
+msgid "Drag"
+msgstr "Menyeret"
+
+msgid "Final"
+msgstr "Terakhir"
+
+msgid "Add Stage"
+msgstr "Tambahkan Panggung"
+
+msgid "Save"
+msgstr "Simpan"
+
+msgid "Cancel"
+msgstr "Batal"
+
+msgid "Initialize Database"
+msgstr "Inisialisasi Basis Data"
+
+msgid "Get started by using default stages or adding your custom stages."
+msgstr ""
+"Mulailah dengan menggunakan tahapan default atau menambahkan tahapan khusus "
+"Anda."
+
+msgid "Default Stages"
+msgstr "Tahapan Bawaan"
+
+msgid "Stages"
+msgstr "Tahapan"
+
+msgid "Select Lead Stages for"
+msgstr "Pilih Tahapan Prospek untuk"
+
+msgid "Custom Stages"
+msgstr "Tahapan Kustom"
+
+msgid "Order"
+msgstr "Memesan"
+
+msgid "Enter Order"
+msgstr "Masukkan Pesanan"
+
+msgid "Enter return url"
+msgstr "Masukkan url pengembalian"
+
+msgid "Enter success message"
+msgstr "Masukkan pesan sukses"
+
+msgid "Enter success description"
+msgstr "Masukkan deskripsi keberhasilan"
+
+msgid "We have received your information and will get back to you soon."
+msgstr ""
+"Kami telah menerima informasi Anda dan akan segera menghubungi Anda kembali."
+
+msgid "Contact Us"
+msgstr "Hubungi kami"
+
+#, python-format
+msgid "Enter %(vname)s"
+msgstr "Masukkan%(vname)s"
+
+#, python-format
+msgid ""
+"Select\n"
+"                        %(vname)s"
+msgstr "Pilih%(vname)s"
+
+msgid "Submit"
+msgstr "Kirim"
+
+msgid "Select fields to preview form"
+msgstr "Pilih bidang untuk melihat pratinjau formulir"
+
+msgid "Your lead capture form is ready to use."
+msgstr "Formulir pengambilan prospek Anda siap digunakan."
+
+msgid "IFRAME EMBED CODE"
+msgstr "KODE PENYEDIAAN IFRAME"
+
+msgid "Copy Embed"
+msgstr "Salin Sematkan"
+
+msgid ""
+"Copy and paste this embed code into your website's HTML where you want the "
+"form to appear."
+msgstr ""
+"Salin dan tempel kode semat ini ke dalam HTML situs web Anda di tempat yang "
+"Anda inginkan untuk menampilkan formulir."
+
+msgid "GENERATED HTML CODE"
+msgstr "KODE HTML YANG DIHASILKAN"
+
+msgid "Copy Code"
+msgstr "Salin Kode"
+
+msgid "Preview"
+msgstr "Pratinjau"
+
+msgid "Build a web form to capture leads directly from your website."
+msgstr ""
+"Buat formulir web untuk mendapatkan prospek langsung dari situs web Anda."
+
+msgid "Form Builder"
+msgstr "Pembuat Formulir"
+
+msgid "Enter form name"
+msgstr "Masukkan nama formulir"
+
+msgid "Fields"
+msgstr "bidang"
+
+msgid "Click fields to add"
+msgstr "Klik bidang untuk menambahkan"
+
+msgid "https://example.com/thank-you"
+msgstr "https://example.com/thank-you"
+
+msgid "Select Lead Owner"
+msgstr "Pilih Pemilik Utama"
+
+msgid "Color"
+msgstr "Warna"
+
+msgid "Default (primary color)"
+msgstr "Default (warna primer)"
+
+msgid "Generate"
+msgstr "Menghasilkan"
+
+msgid "Select"
+msgstr "Pilih"
+
+msgid "Enter"
+msgstr "Memasuki"
+
+msgid "Submitting..."
+msgstr "Mengirimkan..."
+
+msgid "Loading..."
+msgstr "Memuat..."
+
+msgid "Page Not Found"
+msgstr "Halaman Tidak Ditemukan"
+
+msgid "Automatically assign new leads to the right owners."
+msgstr "Secara otomatis menetapkan prospek baru ke pemilik yang tepat."
+
+msgid "The requested data does not exist."
+msgstr "Data yang diminta tidak ada."
+
+msgid "Add Condition"
+msgstr "Tambahkan Kondisi"
+
+msgid "Edit Rule"
+msgstr "Sunting Aturan"
+
+msgid "Converted Lead"
+msgstr "Prospek yang Dikonversi"
+
+msgid "Duplicate"
+msgstr "Duplikat"
+
+msgid "Selected Y-axis field must be numeric."
+msgstr "Bidang sumbu Y yang dipilih harus berupa angka."
+
+msgid "No data after excluding final stages."
+msgstr "Tidak ada data setelah mengecualikan tahap akhir."
+
+msgid "You don't have permission to convert this lead"
+msgstr "Anda tidak memiliki izin untuk mengonversi prospek ini"
+
+msgid "Basic Information"
+msgstr "Informasi Dasar"
+
+msgid "Company Details"
+msgstr "Detail Perusahaan"
+
+msgid "Location"
+msgstr "Lokasi"
+
+msgid "Change Owner"
+msgstr "Ganti Pemilik"
+
+msgid "Lead not found or no longer exists."
+msgstr "Timbal tidak ditemukan atau sudah tidak ada lagi."
+
+msgid "convert this lead"
+msgstr "mengonversi petunjuk ini"
+
+msgid "create an account"
+msgstr "membuat akun"
+
+msgid "link the selected account"
+msgstr "tautkan akun yang dipilih"
+
+msgid "create a contact"
+msgstr "membuat kontak"
+
+msgid "link the selected contact"
+msgstr "menghubungkan kontak yang dipilih"
+
+msgid "create an opportunity"
+msgstr "menciptakan peluang"
+
+msgid "link the selected opportunity"
+msgstr "menghubungkan peluang yang dipilih"
+
+#, python-format
+msgid "You don't have permission to %(actions)s."
+msgstr "Anda tidak memiliki izin untuk%(actions)s."
+
+msgid "Define the stages a lead moves through in your pipeline."
+msgstr "Tentukan tahapan yang dilalui prospek dalam saluran Anda."
+
+msgid "Final Stage  changed successfully."
+msgstr "Tahap Akhir berhasil diubah."
+
+msgid "Automatically create leads from incoming emails."
+msgstr "Secara otomatis membuat prospek dari email masuk."

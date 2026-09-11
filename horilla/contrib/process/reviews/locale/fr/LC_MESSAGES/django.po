@@ -1,0 +1,368 @@
+# French translations for Horilla Reviews module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-12 09:44+0000\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Review Process"
+msgstr "Processus de revue"
+
+msgid "Select field(s)"
+msgstr "Selectionner le(s) champ(s)"
+
+msgid "Fields to Review"
+msgstr "Champs a reviser"
+
+msgid "Please select at least one field to review."
+msgstr "Veuillez selectionner au moins un champ a reviser."
+
+msgid "Please select at least one approver user."
+msgstr "Veuillez selectionner au moins un utilisateur approbateur."
+
+msgid "Please select at least one approver role."
+msgstr "Veuillez selectionner au moins un role approbateur."
+
+msgid "Review Processes"
+msgstr "Processus de revue"
+
+msgid "Review Jobs"
+msgstr "Taches de revue"
+
+msgid "Title"
+msgstr "Titre"
+
+msgid "Method Title"
+msgstr "Titre de la methode"
+
+msgid "Module"
+msgstr "Module"
+
+msgid "Notify on Resubmission"
+msgstr "Notifier lors de la resoumission"
+
+msgid "Notify on Approval"
+msgstr "Notifier lors de l'approbation"
+
+msgid "Notify on Rejection"
+msgstr "Notifier lors du rejet"
+
+msgid "Title is required."
+msgstr "Le titre est requis."
+
+msgid ""
+"An active review process already exists for this model and company. Only one "
+"active process is allowed per model per company."
+msgstr ""
+"Un processus de revue actif existe deja pour ce modele et cette entreprise. "
+"Un seul processus actif est autorise par modele par entreprise."
+
+msgid "Field Name"
+msgstr "Nom du champ"
+
+msgid "Operator"
+msgstr "Operateur"
+
+msgid "Value"
+msgstr "Valeur"
+
+msgid "AND"
+msgstr "ET"
+
+msgid "OR"
+msgstr "OU"
+
+msgid "Logical Operator"
+msgstr "Operateur logique"
+
+msgid "Order"
+msgstr "Ordre"
+
+msgid "Review Condition"
+msgstr "Condition de revue"
+
+msgid "Review Conditions"
+msgstr "Conditions de revue"
+
+msgid "User"
+msgstr "Utilisateur"
+
+msgid "Role"
+msgstr "Role"
+
+msgid "Approver Type"
+msgstr "Type d'approbateur"
+
+msgid "Approver Users"
+msgstr "Utilisateurs approbateurs"
+
+msgid "Approver Roles"
+msgstr "Roles approbateurs"
+
+msgid "Review Rule"
+msgstr "Regle de revue"
+
+msgid "Review Rules"
+msgstr "Regles de revue"
+
+msgid "Review Rule Condition"
+msgstr "Condition de regle de revue"
+
+msgid "Review Rule Conditions"
+msgstr "Conditions de regle de revue"
+
+msgid "Pending"
+msgstr "En attente"
+
+msgid "Approved"
+msgstr "Approuve"
+
+msgid "Rejected"
+msgstr "Rejete"
+
+msgid "Content Type"
+msgstr "Type de contenu"
+
+msgid "Object ID"
+msgstr "ID de l'objet"
+
+msgid "Assigned To"
+msgstr "Assigne a"
+
+msgid "Review Fields Snapshot"
+msgstr "Instantane des champs de revue"
+
+msgid "Status"
+msgstr "Statut"
+
+msgid "Reviewed By"
+msgstr "Revise par"
+
+msgid "Reviewed At"
+msgstr "Revise le"
+
+msgid "Review Note"
+msgstr "Note de revue"
+
+msgid "Review Job"
+msgstr "Tache de revue"
+
+msgid "Add More"
+msgstr "Ajouter plus"
+
+msgid "Field Review"
+msgstr "Revue de champ"
+
+msgid "Close"
+msgstr "Fermer"
+
+msgid "Your Decision"
+msgstr "Votre decision"
+
+msgid "Comment"
+msgstr "Commentaire"
+
+msgid "Add reason for this field decision"
+msgstr "Ajouter une raison pour cette decision de champ"
+
+msgid "Reject"
+msgstr "Rejeter"
+
+msgid "Approve"
+msgstr "Approuver"
+
+msgid "Process"
+msgstr "Processus"
+
+msgid "Record"
+msgstr "Enregistrement"
+
+#, python-format
+msgid ""
+"\n"
+"                            %(done)s / %(total)s approved.\n"
+"                        "
+msgstr ""
+"\n"
+"                            %(done)s / %(total)s approuve(s).\n"
+"                        "
+
+msgid "Record Details"
+msgstr "Details de l'enregistrement"
+
+msgid "No additional record details available."
+msgstr "Aucun detail supplementaire disponible pour cet enregistrement."
+
+msgid "Fields To Review"
+msgstr "Champs a reviser"
+
+msgid "Review field"
+msgstr "Reviser le champ"
+
+msgid "Edit rejected field"
+msgstr "Modifier le champ rejete"
+
+msgid "Edit"
+msgstr "Modifier"
+
+msgid "Save and resubmit"
+msgstr "Enregistrer et resoumettre"
+
+msgid "Save"
+msgstr "Enregistrer"
+
+msgid "Cancel"
+msgstr "Annuler"
+
+msgid "No review fields captured for this job."
+msgstr "Aucun champ de revue capture pour cette tache."
+
+msgid "Multi-Step Form"
+msgstr "Formulaire multi-etapes"
+
+msgid "Single-Step Form"
+msgstr "Formulaire a une etape"
+
+msgid "Choose File"
+msgstr "Choisir un fichier"
+
+msgid "No file chosen"
+msgstr "Aucun fichier choisi"
+
+msgid "Clear"
+msgstr "Effacer"
+
+msgid "Read Only"
+msgstr "Lecture seule"
+
+msgid "Add"
+msgstr "Ajouter"
+
+msgid "Loading..."
+msgstr "Chargement..."
+
+msgid "Conditions"
+msgstr "Conditions"
+
+msgid "Remove"
+msgstr "Supprimer"
+
+msgid "Save & New"
+msgstr "Enregistrer et nouveau"
+
+msgid "Entry Criteria"
+msgstr "Criteres d'entree"
+
+msgid ""
+"No entry criteria set. This review process applies to all records in the "
+"module."
+msgstr "Aucun critere d'entree defini. Ce processus de revue s'applique a tous les enregistrements du module."
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "Resubmission"
+msgstr "Resoumission"
+
+msgid "Approval"
+msgstr "Approbation"
+
+msgid "Rejection"
+msgstr "Rejet"
+
+msgid "Fields"
+msgstr "Champs"
+
+msgid "No review rules added"
+msgstr "Aucune regle de revue ajoutee"
+
+msgid ""
+"Add a rule to assign an approver. Criteria is optional — if left empty, the "
+"rule applies to all records."
+msgstr "Ajoutez une regle pour assigner un approbateur. Les criteres sont optionnels — si laisses vides, la regle s'applique a tous les enregistrements."
+
+msgid "Rule"
+msgstr "Regle"
+
+msgid "Edit Rule"
+msgstr "Modifier la regle"
+
+msgid "Delete Rule"
+msgstr "Supprimer la regle"
+
+msgid "Approver"
+msgstr "Approbateur"
+
+#, python-format
+msgid "You have a pending review request for %(record)s in %(process)s."
+msgstr "Vous avez une demande de revue en attente pour %(record)s dans %(process)s."
+
+msgid "Add Rule"
+msgstr "Ajouter une regle"
+
+msgid "Edit Process"
+msgstr "Modifier le processus"
+
+msgid "Delete"
+msgstr "Supprimer"
+
+msgid "Criteria"
+msgstr "Criteres"
+
+msgid "Condition"
+msgstr "Condition"
+
+msgid "activated"
+msgstr "active"
+
+msgid "deactivated"
+msgstr "desactive"
+
+msgid "An active review process already exists for this model and company."
+msgstr "Un processus de revue actif existe deja pour ce modele et cette entreprise."
+
+msgid "My Review Jobs"
+msgstr "Mes taches de revue"
+
+msgid "Review"
+msgstr "Revue"
+
+msgid "The module for this review record is no longer available."
+msgstr "Le module pour cet enregistrement de revue n'est plus disponible."
+
+#, python-format
+msgid "%(owner)s resubmitted %(field)s in %(process)s for %(record)s."
+msgstr "%(owner)s a ressoumis %(field)s dans %(process)s pour %(record)s."
+
+msgid "Invalid decision."
+msgstr "Decision invalide."
+
+#, python-format
+msgid ""
+"%(field)s was approved in %(process)s by %(approver)s. Comment: %(comment)s"
+msgstr "%(field)s a ete approuve dans %(process)s par %(approver)s. Commentaire : %(comment)s"
+
+#, python-format
+msgid ""
+"%(field)s was rejected in %(process)s by %(approver)s. Reason: %(comment)s"
+msgstr "%(field)s a ete rejete dans %(process)s par %(approver)s. Raison : %(comment)s"
+
+msgid ""
+"All approvers have approved all review fields. Review completed successfully."
+msgstr "Tous les approbateurs ont approuve tous les champs de revue. Revue terminee avec succes."
+
+msgid ""
+"You have approved all fields. Waiting for other approvers to complete their "
+"review."
+msgstr "Vous avez approuve tous les champs. En attente que les autres approbateurs completent leur revue."

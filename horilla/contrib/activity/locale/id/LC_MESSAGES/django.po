@@ -1,0 +1,462 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid ""
+"Module for tracking and managing activities such as tasks,calls, events, and"
+" emails."
+msgstr ""
+"Modul untuk melacak dan mengelola aktivitas seperti tugas, panggilan, acara,"
+" dan email."
+
+msgid ""
+"Prioritize the Duplicate list action on global and tab activity list views."
+msgstr ""
+"Prioritaskan tindakan Daftar duplikat pada tampilan daftar aktivitas global "
+"dan tab."
+
+msgid ""
+"Fix TaskCreateForm refresh targeting #TaskTab so new tasks appear without a "
+"full reload; enable table_auto on activity tab list views so sticky Actions "
+"columns are not clipped. Meeting create: harden invite permissions, "
+"timezones, and Meet link handling. Clear email suggestions on blur for "
+"activity and meeting forms."
+msgstr ""
+"Perbaiki penyegaran TaskCreateForm yang menargetkan #TaskTab sehingga tugas "
+"baru muncul tanpa memuat ulang sepenuhnya;aktifkan table_auto pada tampilan "
+"daftar tab aktivitas sehingga kolom Tindakan yang melekat tidak "
+"terpotong.Pembuatan rapat: memperketat izin undangan, zona waktu, dan "
+"penanganan link Meet.Hapus saran email tentang blur untuk aktivitas dan "
+"formulir rapat."
+
+msgid ""
+"Registered Activity for export_data. Improved activity tab hover styles and "
+"replaced fixed viewport list widths with flex-based layout."
+msgstr ""
+"Aktivitas Terdaftar untuk ekspor_data.Peningkatan gaya hover tab aktivitas "
+"dan penggantian lebar daftar area pandang tetap dengan tata letak berbasis "
+"fleksibel."
+
+msgid ""
+"Optional Calls integration without a hard dependency: calls_enabled and "
+"get_phone_number template tags gate Call Now in the activity tab when the "
+"Calls app is installed. CallListView excludes telephony-purpose logs from "
+"the manual call history list. Activity create form excludes "
+"call_duration_display."
+msgstr ""
+"Integrasi Panggilan opsional tanpa ketergantungan yang kuat: tag templat "
+"call_enabled dan get_phone_number memanggil Panggilan Sekarang di tab "
+"aktivitas saat aplikasi Panggilan diinstal.CallListView mengecualikan log "
+"tujuan telepon dari daftar riwayat panggilan manual.Formulir pembuatan "
+"aktivitas tidak termasuk call_duration_display."
+
+msgid ""
+"Simplified mail visibility so can_send_mail and can_view_mail follow parent-"
+"record change and view access. Activity tab Edit/Delete actions and email "
+"Send/Cancel/Snooze actions are gated on parent-record change/delete access "
+"with subordinate-aware ownership via get_allowed_user_ids()."
+msgstr ""
+"Visibilitas email yang disederhanakan sehingga can_send_mail dan "
+"can_view_mail mengikuti perubahan catatan induk dan melihat akses.Tab "
+"aktivitas Tindakan Edit/Hapus dan tindakan Kirim/Batal/Tunda email dibatasi "
+"pada akses ubah/hapus catatan induk dengan kepemilikan sadar bawahan melalui"
+" get_allowed_user_ids()."
+
+msgid ""
+"Constrained activity tab list table height for consistent scrolling. Added "
+"cursor-pointer to Pending and Completed Calls sub-tabs."
+msgstr ""
+"Tinggi tabel daftar tab aktivitas dibatasi untuk pengguliran yang "
+"konsisten.Menambahkan penunjuk kursor ke sub-tab Panggilan Tertunda dan "
+"Panggilan Selesai."
+
+msgid ""
+"Disabled base owner_filtration on EmailListView. Centralised get_main_url in"
+" the list-view mixin and fixed tab-calls typo in status update and activity "
+"tab template. Task and activity creates now navigate directly to the correct"
+" tab instead of reverting to the first tab after reload; aligned task-create"
+" reload trigger with project-wide jQuery convention. Fixed delete and bulk-"
+"action views that reverted to the wrong tab."
+msgstr ""
+"Menonaktifkan pemilik_penyaringan dasar di EmailListView.Get_main_url "
+"terpusat dalam mixin tampilan daftar dan memperbaiki kesalahan ketik "
+"panggilan tab dalam pembaruan status dan templat tab aktivitas.Pembuatan "
+"tugas dan aktivitas kini menavigasi langsung ke tab yang benar alih-alih "
+"kembali ke tab pertama setelah memuat ulang;menyelaraskan pemicu pemuatan "
+"ulang pembuatan tugas dengan konvensi jQuery di seluruh proyek.Memperbaiki "
+"tampilan penghapusan dan tindakan massal yang dikembalikan ke tab yang "
+"salah."
+
+msgid ""
+"Fixed call duration field ordering and removed redundant validation; history"
+" tab now correctly identifies CallLog entries and displays call status. Use "
+"load_branding() TITLE as the fallback company name in meeting invitation "
+"emails. Allow ActivityView for users with view_own_activity as well as "
+"view_activity. Added meeting provider choices (Zoom, Google Meet, Microsoft "
+"Teams) on the Activity model."
+msgstr ""
+"Memperbaiki pemesanan bidang durasi panggilan dan menghapus validasi "
+"berlebihan;tab riwayat sekarang mengidentifikasi entri CallLog dengan benar "
+"dan menampilkan status panggilan.Gunakan load_branding() TITLE sebagai nama "
+"perusahaan pengganti dalam email undangan rapat.Izinkan ActivityView untuk "
+"pengguna dengan view_own_activity serta view_activity.Menambahkan pilihan "
+"penyedia rapat (Zoom, Google Meet, Microsoft Teams) pada model Aktivitas."
+
+msgid ""
+"Email-tab permissions corrected to add/view/change/delete own-record checks."
+" Removed redundant fields attributes from create-view forms superseded by "
+"form_class. Adopted the utils.timezone shim, standardized first-party "
+"imports, and added class and method docstrings for pylint compliance."
+msgstr ""
+"Izin tab email diperbaiki untuk menambah/melihat/mengubah/menghapus "
+"pemeriksaan catatan sendiri.Menghapus atribut bidang yang berlebihan dari "
+"formulir tampilan buat yang digantikan oleh form_class.Mengadopsi shim "
+"utils.timezone, standarisasi impor pihak pertama, dan menambahkan dokumen "
+"kelas dan metode untuk kepatuhan pylint."
+
+msgid ""
+"Activity forms aligned with ModelForm layout: field_order, Meta.fields = "
+"\"__all__\", and Meta.exclude; save logic and HTMX behavior unchanged."
+msgstr ""
+"Formulir aktivitas selaras dengan tata letak ModelForm: field_order, "
+"Meta.fields = \"__all__\", dan Meta.exclude;simpan logika dan perilaku HTML "
+"tidak berubah."
+
+msgid ""
+"Meeting integration in activities: schedule meetings from activities, send "
+"invites and reminders, and display generated Zoom/Teams meeting links on "
+"activity records."
+msgstr ""
+"Integrasi rapat dalam aktivitas: menjadwalkan rapat dari aktivitas, mengirim"
+" undangan dan pengingat, dan menampilkan tautan rapat Zoom/Tim yang "
+"dihasilkan pada catatan aktivitas."
+
+msgid ""
+"Release 1.10: activity ships under contrib with app label activity. "
+"AppLauncher, imports, namespaces, registrations, templates, and metadata "
+"references updated from the legacy activity package name to the contrib "
+"layout."
+msgstr ""
+"Rilis 1.10: aktivitas dikirimkan berdasarkan kontribusi dengan aktivitas "
+"label aplikasi.AppLauncher, impor, namespace, registrasi, templat, dan "
+"referensi metadata diperbarui dari nama paket aktivitas lama ke tata letak "
+"kontrib."
+
+msgid ""
+"Reduced redundant history entries, improved Many-to-Many field "
+"representation, and added cleaner labels for mail events and activity "
+"creation with new template filters for better rendering."
+msgstr ""
+"Mengurangi entri riwayat yang berlebihan, meningkatkan representasi bidang "
+"Banyak-ke-Banyak, dan menambahkan label yang lebih rapi untuk aktivitas "
+"email dan pembuatan aktivitas dengan filter templat baru untuk rendering "
+"yang lebih baik."
+
+msgid ""
+"Improved activity workflow behavior. The Pending tab now shows all "
+"incomplete activitiesregardless of status label, and activity type "
+"configuration handling was enhanced for improved workflow accuracy."
+msgstr ""
+"Perilaku alur kerja aktivitas yang ditingkatkan.Tab Tertunda sekarang "
+"memperlihatkan semua aktivitas yang belum selesai, apa pun label statusnya, "
+"dan penanganan konfigurasi jenis aktivitas ditingkatkan untuk meningkatkan "
+"akurasi alur kerja."
+
+msgid ""
+"Migrated from AppConfig to AppLauncher and replaced utilities "
+"withutils.decorators, utils.translation, and shortcuts where applicable."
+msgstr ""
+"Bermigrasi dari AppConfig ke AppLauncher dan mengganti utilitas dengan "
+"utils.decorators, utils.translation, dan pintasan jika memungkinkan."
+
+msgid "Activity"
+msgstr "Aktivitas"
+
+msgid "Meeting Provider"
+msgstr "Penyedia Pertemuan"
+
+msgid "Activities"
+msgstr "Kegiatan"
+
+msgid "Event"
+msgstr "Peristiwa"
+
+msgid "Meeting"
+msgstr "Pertemuan"
+
+msgid "Task"
+msgstr "Tugas"
+
+msgid "Log Call"
+msgstr "Catat Panggilan"
+
+msgid "Not Started"
+msgstr "Belum Dimulai"
+
+msgid "Scheduled"
+msgstr "Dijadwalkan"
+
+msgid "In Progress"
+msgstr "Sedang Berlangsung"
+
+msgid "Waiting on Someone"
+msgstr "Menunggu Seseorang"
+
+msgid "Completed"
+msgstr "Selesai"
+
+msgid "Cancelled"
+msgstr "Dibatalkan"
+
+msgid "Deferred"
+msgstr "Ditunda"
+
+msgid "High"
+msgstr "Tinggi"
+
+msgid "Medium"
+msgstr "Sedang"
+
+msgid "Low"
+msgstr "Rendah"
+
+msgid "Inbound"
+msgstr "Masuk"
+
+msgid "Outbound"
+msgstr "Keluar"
+
+msgid "Zoom"
+msgstr "Perbesar"
+
+msgid "Google Meet"
+msgstr "Google bertemu"
+
+msgid "Microsoft Teams"
+msgstr "Tim Microsoft"
+
+msgid "Subject"
+msgstr "Subjek"
+
+msgid "Description"
+msgstr "Keterangan"
+
+msgid "Activity Type"
+msgstr "Jenis Aktivitas"
+
+msgid "Related Content Type"
+msgstr "Jenis Konten Terkait"
+
+msgid "Related To"
+msgstr "Terkait dengan"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Title"
+msgstr "Judul"
+
+msgid "Start Date"
+msgstr "Tanggal Mulai"
+
+msgid "End Date"
+msgstr "Tanggal Berakhir"
+
+msgid "Location"
+msgstr "Lokasi"
+
+msgid "Online Meeting"
+msgstr "Pertemuan Daring"
+
+msgid "Meeting Link"
+msgstr "Tautan Rapat"
+
+msgid "All Day"
+msgstr "Sepanjang hari"
+
+msgid "Assigned To"
+msgstr "Ditugaskan Ke"
+
+msgid "Participants"
+msgstr "Peserta"
+
+msgid "Meeting Host"
+msgstr "Tuan Rumah Pertemuan"
+
+msgid "Activity Owner"
+msgstr "Pemilik Aktivitas"
+
+msgid "Priority"
+msgstr "Prioritas"
+
+msgid "Due Date"
+msgstr "Tenggat waktu"
+
+msgid "Recipient Email"
+msgstr "Email Penerima"
+
+msgid "Call Duration"
+msgstr "Durasi Panggilan"
+
+msgid "Call Duration (Seconds)"
+msgstr "Durasi Panggilan (Detik)"
+
+msgid "Call Type"
+msgstr "Jenis Panggilan"
+
+msgid "Notes"
+msgstr "Catatan"
+
+msgid "Google Calendar Event ID"
+msgstr "ID Acara Google Kalender"
+
+msgid "Call Purpose"
+msgstr "Tujuan Panggilan"
+
+msgid "External Participants"
+msgstr "Peserta Eksternal"
+
+msgid "No Reminder"
+msgstr "Tidak Ada Pengingat"
+
+msgid "5 minutes before"
+msgstr "5 menit sebelumnya"
+
+msgid "10 minutes before"
+msgstr "10 menit sebelumnya"
+
+msgid "15 minutes before"
+msgstr "15 menit sebelumnya"
+
+msgid "30 minutes before"
+msgstr "30 menit sebelumnya"
+
+msgid "1 hour before"
+msgstr "1 jam sebelumnya"
+
+msgid "1 day before"
+msgstr "1 hari sebelumnya"
+
+msgid "Reminder"
+msgstr "Pengingat"
+
+msgid "Invitation Email Template"
+msgstr "Templat Email Undangan"
+
+msgid "External guests will receive a meeting invite email."
+msgstr "Tamu eksternal akan menerima email undangan rapat."
+
+msgid "Tasks"
+msgstr "Tugas"
+
+msgid "Meetings"
+msgstr "Rapat"
+
+msgid "Call"
+msgstr "Panggilan"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Events"
+msgstr "Acara"
+
+msgid "Pending Tasks"
+msgstr "Tugas yang Tertunda"
+
+msgid "Completed Tasks"
+msgstr "Tugas Selesai"
+
+msgid "Add Task"
+msgstr "Tambahkan Tugas"
+
+msgid "Pending Meetings"
+msgstr "Rapat yang Tertunda"
+
+msgid "Completed Meetings"
+msgstr "Rapat yang Selesai"
+
+msgid "Add Meetings"
+msgstr "Tambahkan Rapat"
+
+msgid "Pending Calls"
+msgstr "Panggilan Tertunda"
+
+msgid "Completed Calls"
+msgstr "Panggilan Selesai"
+
+msgid "Call History"
+msgstr "Riwayat Panggilan"
+
+msgid "Call Now"
+msgstr "Hubungi Sekarang"
+
+msgid "Add Call"
+msgstr "Tambahkan Panggilan"
+
+msgid "Mails"
+msgstr "Surat"
+
+msgid "Drafts"
+msgstr "Draf"
+
+msgid "Pending Events"
+msgstr "Acara yang Tertunda"
+
+msgid "Completed Events"
+msgstr "Acara yang Selesai"
+
+msgid "Add Events"
+msgstr "Tambahkan Acara"
+
+msgid "Join"
+msgstr "Bergabung"
+
+msgid "Send Email"
+msgstr "Kirim Email"
+
+msgid "Calls"
+msgstr "Panggilan"
+
+msgid "You do not have permission to modify this item."
+msgstr "Anda tidak memiliki izin untuk mengubah item ini."
+
+msgid "Purpose"
+msgstr "Tujuan"
+
+msgid "Type"
+msgstr "Jenis"
+
+msgid "Duration"
+msgstr "Lamanya"
+
+msgid "Schedule"
+msgstr "Jadwal"
+
+msgid "Duplicate"
+msgstr "Duplikat"
+
+msgid "Invalid status."
+msgstr "Statusnya tidak valid."
+
+msgid "Activity not found."
+msgstr "Aktivitas tidak ditemukan."
+
+msgid "Status Updated."
+msgstr "Status Diperbarui."

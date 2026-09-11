@@ -1,0 +1,385 @@
+# French translations for Horilla Duplicates module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid ""
+"Module for detecting potential duplicate records and supporting merge "
+"workflows."
+msgstr ""
+"Module de detection des enregistrements en double potentiels et de prise en "
+"charge des flux de fusion."
+
+msgid ""
+"Avoid RelatedObjectDoesNotExist in DuplicateRule.clean when related objects "
+"are missing."
+msgstr ""
+
+msgid "Removed deprecated merge_views compatibility shim."
+msgstr ""
+
+msgid ""
+"Standardized first-party import groups and aligned with the platform 1.11.1 "
+"release; rules, criteria, and merge behavior unchanged."
+msgstr ""
+"Standardisation des groupes d'imports internes et alignement avec la version "
+"1.11.1 de la plateforme ; regles, criteres et comportement de fusion "
+"inchanges."
+
+msgid ""
+"Duplicate rule forms aligned with HorillaModelForm layout: field_order and "
+"Meta.fields = \"__all__\"; criteria rows and validation unchanged."
+msgstr ""
+"Formulaires de regles de doublons alignes sur le layout HorillaModelForm : "
+"field_order et Meta.fields ; lignes de criteres et validation inchangees."
+
+msgid ""
+"Release 1.10: duplicate control ships under contrib with app label "
+"duplicates. Feature registration, merge flows, and cross-model references "
+"use contrib paths and matching app labels for clone and duplicate tooling."
+msgstr ""
+"Version 1.10 : le controle des doublons est integre sous contrib avec le "
+"label d'application duplicates. L'enregistrement des fonctionnalites, les "
+"flux de fusion et les references inter-modeles utilisent les chemins contrib."
+
+msgid ""
+"Renamed Clone Management to Duplicate Control. Added duplicate validation "
+"for inline field edits with warning modal for duplicate conflicts. Fixed "
+"duplicate detail tab injection issue and improved merge flow handling for "
+"edge cases."
+msgstr ""
+"Renomme Gestion des clones en Controle des doublons. Ajout de la validation "
+"des doublons pour les editions de champs en ligne avec une fenetre "
+"d'avertissement. Correction du probleme d'injection d'onglet de details."
+
+msgid ""
+"Introduced duplicate management capabilities with matching rules, potential "
+"duplicate detection, and merge comparison and summary workflows."
+msgstr ""
+"Introduction des fonctionnalites de gestion des doublons avec des regles de "
+"correspondance, la detection de doublons potentiels et les flux de "
+"comparaison et de resume de fusion."
+
+msgid "Clone Management"
+msgstr "Gestion des clones"
+
+msgid "Potential Duplicates"
+msgstr "Doublons potentiels"
+
+msgid "Similar records were found. Do you want to proceed?"
+msgstr ""
+"Des enregistrements similaires ont ete trouves. Voulez-vous continuer ?"
+
+#, python-format
+msgid ""
+"Each matching criterion must use a different field. The following field(s) "
+"appear more than once: %(fields)s"
+msgstr ""
+"Chaque critere de correspondance doit utiliser un champ different. Le(s) "
+"champ(s) suivant(s) apparaissent plus d'une fois : %(fields)s"
+
+msgid "Matching Criteria row has missing required field: Field."
+msgstr ""
+"La ligne de criteres de correspondance manque d'un champ requis : Champ."
+
+msgid "At least one matching criterion is required."
+msgstr "Au moins un critere de correspondance est requis."
+
+msgid ""
+"Matching rule must apply to the same content type as duplicate rule. Please "
+"select a matching rule for the selected module."
+msgstr ""
+"La regle de correspondance doit s'appliquer au meme type de contenu que la "
+"regle de doublon. Veuillez selectionner une regle de correspondance pour le "
+"module selectionne."
+
+msgid "Duplicate Control"
+msgstr "Controle des doublons"
+
+msgid "Matching Rules"
+msgstr "Regles de correspondance"
+
+msgid "Duplicate Rules"
+msgstr "Regles de doublons"
+
+msgid "Exact Match"
+msgstr "Correspondance exacte"
+
+msgid "Fuzzy Match"
+msgstr "Correspondance approximative"
+
+msgid "Phonetic Match"
+msgstr "Correspondance phonetique"
+
+msgid "Edit Distance"
+msgstr "Distance d'edition"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "The model this matching rule applies to"
+msgstr "Le modele auquel s'applique cette regle de correspondance"
+
+msgid "Module"
+msgstr "Module"
+
+msgid "Matching Rule"
+msgstr "Regle de correspondance"
+
+msgid "Exact"
+msgstr "Exact"
+
+msgid "Fuzzy"
+msgstr "Approximatif"
+
+msgid "Field"
+msgstr "Champ"
+
+msgid "Field name to match on"
+msgstr "Nom du champ sur lequel effectuer la correspondance"
+
+msgid "Matching Method"
+msgstr "Methode de correspondance"
+
+msgid "Match Blank Fields"
+msgstr "Correspondre aux champs vides"
+
+msgid "If checked, blank fields will be considered a match"
+msgstr "Si coche, les champs vides seront consideres comme une correspondance"
+
+msgid "Order of evaluation"
+msgstr "Ordre d'evaluation"
+
+msgid "Matching Criterion"
+msgstr "Critere de correspondance"
+
+msgid "Matching Criteria"
+msgstr "Criteres de correspondance"
+
+msgid "Allow"
+msgstr "Autoriser"
+
+msgid "Block"
+msgstr "Bloquer"
+
+msgid "The model this duplicate rule applies to"
+msgstr "Le modele auquel s'applique cette regle de doublon"
+
+msgid "The matching rule to use for detection"
+msgstr "La regle de correspondance a utiliser pour la detection"
+
+msgid "Action on Create"
+msgstr "Action a la creation"
+
+msgid "Action on Edit"
+msgstr "Action a la modification"
+
+msgid "Title shown in the alert dialog"
+msgstr "Titre affiche dans la boite de dialogue d'alerte"
+
+msgid "Alert Title"
+msgstr "Titre de l'alerte"
+
+msgid "Message to show in alert when duplicates are detected"
+msgstr "Message a afficher dans l'alerte lors de la detection de doublons"
+
+msgid "Alert Message"
+msgstr "Message d'alerte"
+
+msgid "Show list of potential duplicates in the alert"
+msgstr "Afficher la liste des doublons potentiels dans l'alerte"
+
+msgid "Show Duplicate Records"
+msgstr "Afficher les enregistrements en double"
+
+msgid "Duplicate Rule"
+msgstr "Regle de doublon"
+
+msgid "Field Name"
+msgstr "Nom du champ"
+
+msgid "Field name to evaluate"
+msgstr "Nom du champ a evaluer"
+
+msgid "Operator"
+msgstr "Operateur"
+
+msgid "Value"
+msgstr "Valeur"
+
+msgid "Value to compare against"
+msgstr "Valeur a comparer"
+
+msgid "Logical Operator"
+msgstr "Operateur logique"
+
+msgid "How to combine with next condition"
+msgstr "Comment combiner avec la condition suivante"
+
+msgid "Duplicate Rule Condition"
+msgstr "Condition de regle de doublon"
+
+msgid "Duplicate Rule Conditions"
+msgstr "Conditions de regle de doublon"
+
+msgid "Close"
+msgstr "Fermer"
+
+msgid "Potential Duplicate Records:"
+msgstr "Enregistrements en double potentiels :"
+
+msgid "Cancel"
+msgstr "Annuler"
+
+msgid "Continue"
+msgstr "Continuer"
+
+msgid "Edit"
+msgstr "Modifier"
+
+msgid "Delete"
+msgstr "Supprimer"
+
+msgid "Nothing to show yet. Please add your Matching Rules."
+msgstr ""
+"Rien a afficher pour l'instant. Veuillez ajouter vos regles de "
+"correspondance."
+
+msgid "Potential Duplicate Records"
+msgstr "Enregistrements en double potentiels"
+
+msgid "Compare"
+msgstr "Comparer"
+
+msgid ""
+"When you merge, the master record is updated with the values you choose, and "
+"relationships to other items are shifted to the master record."
+msgstr ""
+"Lors de la fusion, l'enregistrement principal est mis a jour avec les "
+"valeurs que vous choisissez, et les relations avec les autres elements sont "
+"transferees vers l'enregistrement principal."
+
+msgid "Master Record"
+msgstr "Enregistrement principal"
+
+msgid "Use as master record"
+msgstr "Utiliser comme enregistrement principal"
+
+msgid "Next"
+msgstr "Suivant"
+
+msgid "Merge Summary"
+msgstr "Resume de la fusion"
+
+msgid "You're about to merge these records. You can't undo merging."
+msgstr ""
+"Vous etes sur le point de fusionner ces enregistrements. La fusion ne peut "
+"pas etre annulee."
+
+msgid "Selected Values"
+msgstr "Valeurs selectionnees"
+
+msgid "Selected Value"
+msgstr "Valeur selectionnee"
+
+msgid "Merge"
+msgstr "Fusionner"
+
+msgid "Select"
+msgstr "Selectionner"
+
+msgid "of"
+msgstr "sur"
+
+msgid "Unselect"
+msgstr "Deselectionner"
+
+msgid "Clear Session"
+msgstr "Effacer la session"
+
+msgid "Select Visible Items"
+msgstr "Selectionner les elements visibles"
+
+msgid "No potential duplicates found."
+msgstr "Aucun doublon potentiel trouve."
+
+msgid "You can only merge up to"
+msgstr "Vous ne pouvez fusionner que"
+
+msgid "items at a time"
+msgstr "elements a la fois"
+
+msgid "Set how duplicate records are handled once matched."
+msgstr ""
+
+msgid "Conditions"
+msgstr "Conditions"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Define which fields are compared to detect matching records."
+msgstr ""
+
+msgid "You do not have permission to view this."
+msgstr "Vous n'avez pas la permission de voir ceci."
+
+msgid "Invalid request for potential duplicates."
+msgstr "Requete invalide pour les doublons potentiels."
+
+msgid "Missing required parameters."
+msgstr "Parametres requis manquants."
+
+msgid "Model not found."
+msgstr "Modele introuvable."
+
+msgid "No duplicates selected."
+msgstr "Aucun doublon selectionne."
+
+#, python-brace-format
+msgid "Error loading merge comparison: {error}"
+msgstr "Erreur lors du chargement de la comparaison de fusion : {error}"
+
+#, python-brace-format
+msgid "Error: {error}"
+msgstr "Erreur : {error}"
+
+#, python-brace-format
+msgid "Error loading merge summary: {error}"
+msgstr "Erreur lors du chargement du resume de fusion : {error}"
+
+#, python-brace-format
+msgid "Successfully merged {count} duplicate(s) into master record."
+msgstr ""
+"{count} doublon(s) fusionne(s) avec succes dans l'enregistrement principal."
+
+msgid ""
+"The master record is different from the current record. You will be "
+"redirected to the master record."
+msgstr ""
+
+#, python-brace-format
+msgid "Error merging duplicates: {error}"
+msgstr "Erreur lors de la fusion des doublons : {error}"
+
+msgid "Merge Selected"
+msgstr "Fusionner la selection"
+
+msgid "Record"
+msgstr "Enregistrement"

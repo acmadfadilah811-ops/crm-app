@@ -1,0 +1,474 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Workflow"
+msgstr "Alur kerja"
+
+msgid ""
+"Record-triggered workflow rules with field conditions, immediate actions "
+"(update field, assign task, email, notification), and time-based triggers "
+"scheduled relative to record or rule dates."
+msgstr ""
+"Aturan alur kerja yang dipicu rekaman dengan kondisi bidang, tindakan "
+"langsung (perbarui bidang, penetapan tugas, email, pemberitahuan), dan "
+"pemicu berbasis waktu yang dijadwalkan relatif terhadap tanggal rekaman atau"
+" aturan."
+
+msgid ""
+"Re-raise HttpNotFound with exception chaining in workflow detail views to "
+"preserve context."
+msgstr ""
+"Naikkan kembali HttpNotFound dengan rangkaian pengecualian dalam tampilan "
+"detail alur kerja untuk mempertahankan konteks."
+
+msgid ""
+"Migrated workflow execution engine transaction imports from django.db to "
+"horilla.db."
+msgstr ""
+"Impor transaksi mesin eksekusi alur kerja yang dimigrasi dari Django.db ke "
+"horilla.db."
+
+msgid ""
+"Migrated signal imports to the horilla.db.models.signals shim and "
+"standardized first-party import groups; behavior unchanged."
+msgstr ""
+"Impor sinyal yang dimigrasikan ke shim horilla.db.models.signals dan grup "
+"impor pihak pertama yang distandarisasi;perilaku tidak berubah."
+
+msgid ""
+"Workflow automation engine: WorkflowRule / WorkflowCondition / "
+"WorkflowAction models, dynamic condition evaluation, immediate dispatch on "
+"record saves, Celery WorkflowTimeTriggerAction and "
+"ScheduledWorkflowExecution, execution history modal, FilterSet support, "
+"auto-registration for workflow-enabled models via feature registration (e.g."
+" users, departments, holidays), modular views, hidden-field action "
+"configuration fixes, restored workflow detail pages, and improved routing "
+"namespaces."
+msgstr ""
+"Mesin otomatisasi alur kerja: model WorkflowRule / WorkflowCondition / "
+"WorkflowAction, evaluasi kondisi dinamis, pengiriman segera pada penyimpanan"
+" catatan, Celery WorkflowTimeTriggerAction dan ScheduledWorkflowExecution, "
+"modal riwayat eksekusi, dukungan FilterSet, registrasi otomatis untuk model "
+"yang mendukung alur kerja melalui registrasi fitur (misalnya pengguna, "
+"departemen, hari libur), tampilan modular, perbaikan konfigurasi tindakan "
+"bidang tersembunyi, halaman detail alur kerja yang dipulihkan, dan ruang "
+"nama perutean yang ditingkatkan."
+
+msgid ""
+"WorkflowRuleForm aligned with HorillaModelForm layout: field_order, "
+"Meta.fields = \"__all__\", and keep_on_form for is_active; action forms "
+"unchanged."
+msgstr ""
+"WorkflowRuleForm selaras dengan tata letak HorillaModelForm: field_order, "
+"Meta.fields = \"__all__\", dan keep_on_form untuk is_active;bentuk tindakan "
+"tidak berubah."
+
+msgid ""
+"Initial release: workflow rules per ContentType with create/edit triggers, "
+"AND/OR conditions, ordered immediate actions, time-trigger actions with "
+"Celery scheduling and execution history, Settings → Automations → Workflow "
+"Rules, and integration with registered models via feature registration."
+msgstr ""
+"Rilis awal: aturan alur kerja per ContentType dengan pemicu buat/edit, "
+"kondisi DAN/ATAU, tindakan segera yang diurutkan, tindakan pemicu waktu "
+"dengan penjadwalan Celery dan riwayat eksekusi, Pengaturan → Otomatisasi → "
+"Aturan Alur Kerja, dan integrasi dengan model terdaftar melalui registrasi "
+"fitur."
+
+msgid "Rule Trigger Date"
+msgstr "Tanggal Pemicu Aturan"
+
+msgid "Workflow Rules"
+msgstr "Aturan Alur Kerja"
+
+msgid "Rule Name"
+msgstr "Nama Aturan"
+
+msgid "Module"
+msgstr "Modul"
+
+msgid "The module (record type) this rule applies to."
+msgstr "Modul (tipe rekaman) yang menerapkan aturan ini."
+
+msgid "Description"
+msgstr "Keterangan"
+
+msgid "When record is created"
+msgstr "Saat rekaman dibuat"
+
+msgid "Run this workflow when a new record is created."
+msgstr "Jalankan alur kerja ini ketika rekaman baru dibuat."
+
+msgid "When record is edited"
+msgstr "Saat rekaman diedit"
+
+msgid "Run this workflow when an existing record is edited."
+msgstr "Jalankan alur kerja ini ketika rekaman yang sudah ada diedit."
+
+msgid "Workflow Rule"
+msgstr "Aturan Alur Kerja"
+
+msgid "Create and Edit"
+msgstr "Buat dan Edit"
+
+msgid "Create only"
+msgstr "Buat saja"
+
+msgid "Edit only"
+msgstr "Sunting saja"
+
+msgid "Not set"
+msgstr "Tidak disetel"
+
+msgid "Field Name"
+msgstr "Nama Bidang"
+
+msgid "Operator"
+msgstr "Operator"
+
+msgid "Value"
+msgstr "Nilai"
+
+msgid "AND"
+msgstr "DAN"
+
+msgid "OR"
+msgstr "ATAU"
+
+msgid "Logical Operator"
+msgstr "Operator Logis"
+
+msgid "Order"
+msgstr "Memesan"
+
+msgid "Workflow Condition"
+msgstr "Kondisi Alur Kerja"
+
+msgid "Workflow Conditions"
+msgstr "Kondisi Alur Kerja"
+
+msgid "Update Field"
+msgstr "Perbarui Bidang"
+
+msgid "Assign Task"
+msgstr "Tetapkan Tugas"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Notification"
+msgstr "Pemberitahuan"
+
+msgid "Action"
+msgstr "Tindakan"
+
+msgid ""
+"Type-specific configuration. update_field: {field, value}. assign_task: "
+"{subject, due_days, priority, owner_id}. email: {template_id, to}. "
+"notification: {message, user_ids}."
+msgstr ""
+"Konfigurasi khusus tipe.update_field: {bidang, nilai}.tugas_tugas: {subjek, "
+"hari_jatuh tempo, prioritas, pemilik_id}.email: {template_id, "
+"ke}.pemberitahuan: {message, user_ids}."
+
+msgid "Workflow Action"
+msgstr "Tindakan Alur Kerja"
+
+msgid "Workflow Actions"
+msgstr "Tindakan Alur Kerja"
+
+msgid "Minutes"
+msgstr "Menit"
+
+msgid "Hours"
+msgstr "Jam"
+
+msgid "Days"
+msgstr "hari"
+
+msgid "After"
+msgstr "Setelah"
+
+msgid "Before"
+msgstr "Sebelum"
+
+msgid "Delay"
+msgstr "Menunda"
+
+msgid "Unit"
+msgstr "Satuan"
+
+msgid "Direction"
+msgstr "Arah"
+
+msgid "Trigger Date"
+msgstr "Tanggal Pemicu"
+
+msgid ""
+"Use 'rule_trigger_date' to fire relative to when the rule triggered, or "
+"enter a date field name from the target model."
+msgstr ""
+"Gunakan 'rule_trigger_date' untuk mengaktifkan kapan aturan dipicu, atau "
+"masukkan nama kolom tanggal dari model target."
+
+msgid "Action Type"
+msgstr "Jenis Tindakan"
+
+msgid "Action Config"
+msgstr "Konfigurasi Tindakan"
+
+msgid "Workflow Time Trigger Action"
+msgstr "Tindakan Pemicu Waktu Alur Kerja"
+
+msgid "Workflow Time Trigger Actions"
+msgstr "Tindakan Pemicu Waktu Alur Kerja"
+
+msgid "Pending"
+msgstr "Tertunda"
+
+msgid "Completed"
+msgstr "Selesai"
+
+msgid "Failed"
+msgstr "Gagal"
+
+msgid "Time Trigger"
+msgstr "Pemicu Waktu"
+
+msgid "Record ID"
+msgstr "Rekam ID"
+
+msgid "Scheduled At"
+msgstr "Dijadwalkan Pada"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Executed At"
+msgstr "Dieksekusi Pada"
+
+msgid "Error"
+msgstr "Kesalahan"
+
+msgid "Scheduled Workflow Execution"
+msgstr "Eksekusi Alur Kerja Terjadwal"
+
+msgid "Scheduled Workflow Executions"
+msgstr "Eksekusi Alur Kerja Terjadwal"
+
+msgid "Field"
+msgstr "Bidang"
+
+msgid "Select field"
+msgstr "Pilih bidang"
+
+msgid "Task title"
+msgstr "Judul tugas"
+
+msgid "Due basis"
+msgstr "Dasar jatuh tempo"
+
+msgid "Record submission date"
+msgstr "Catat tanggal penyerahan"
+
+msgid "Record update date"
+msgstr "Catat tanggal pembaruan"
+
+msgid "Due in days"
+msgstr "Jatuh tempo dalam beberapa hari"
+
+msgid "Not Started"
+msgstr "Belum Dimulai"
+
+msgid "In Progress"
+msgstr "Sedang Berlangsung"
+
+msgid "Priority"
+msgstr "Prioritas"
+
+msgid "Low"
+msgstr "Rendah"
+
+msgid "Medium"
+msgstr "Sedang"
+
+msgid "High"
+msgstr "Tinggi"
+
+msgid "Task description"
+msgstr "Deskripsi tugas"
+
+msgid "Mail template"
+msgstr "Templat surat"
+
+msgid "Select template"
+msgstr "Pilih templat"
+
+msgid "To (email field / email / self)"
+msgstr "Ke (bidang email / email / diri sendiri)"
+
+msgid "Also send to"
+msgstr "Kirim juga ke"
+
+msgid "Notification template"
+msgstr "Templat pemberitahuan"
+
+msgid "To (record field / self)"
+msgstr "Kepada (bidang rekaman / diri sendiri)"
+
+msgid "Also notify to"
+msgstr "Beritahukan juga kepada"
+
+msgid "Custom message (optional, overrides template)"
+msgstr "Pesan khusus (opsional, menggantikan template)"
+
+msgid "Edit Action"
+msgstr "Sunting Tindakan"
+
+msgid "Add Action"
+msgstr "Tambahkan Tindakan"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Action type"
+msgstr "Jenis tindakan"
+
+msgid "Select action type"
+msgstr "Pilih jenis tindakan"
+
+msgid "Mail"
+msgstr "Surat"
+
+msgid "Cancel"
+msgstr "Batal"
+
+msgid "Save"
+msgstr "Simpan"
+
+msgid "Select value"
+msgstr "Pilih nilai"
+
+msgid "Edit Condition"
+msgstr "Sunting Kondisi"
+
+msgid "Add Condition"
+msgstr "Tambahkan Kondisi"
+
+msgid "---------"
+msgstr "---------"
+
+msgid "Logical Operator (join with next condition)"
+msgstr "Operator Logika (gabung dengan kondisi berikutnya)"
+
+msgid "Are you sure you want to deactivate this workflow rule?"
+msgstr "Apakah Anda yakin ingin menonaktifkan aturan alur kerja ini?"
+
+msgid "Are you sure you want to activate this workflow rule?"
+msgstr "Apakah Anda yakin ingin mengaktifkan aturan alur kerja ini?"
+
+msgid "Entry Criteria"
+msgstr "Kriteria Masuk"
+
+msgid "No conditions set."
+msgstr "Tidak ada ketentuan yang ditetapkan."
+
+msgid "Immediate Actions"
+msgstr "Tindakan Segera"
+
+msgid "Add"
+msgstr "Tambah"
+
+msgid "Delete Action"
+msgstr "Hapus Tindakan"
+
+msgid "No actions added yet"
+msgstr "Belum ada tindakan yang ditambahkan"
+
+msgid "Use the Add button to configure what happens when this rule fires."
+msgstr ""
+"Gunakan tombol Tambah untuk mengonfigurasi apa yang terjadi ketika aturan "
+"ini diaktifkan."
+
+msgid "Time Trigger Actions"
+msgstr "Tindakan Pemicu Waktu"
+
+msgid "Execution History"
+msgstr "Sejarah Eksekusi"
+
+msgid "Edit"
+msgstr "Sunting"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "No time triggers added yet"
+msgstr "Belum ada pemicu waktu yang ditambahkan"
+
+msgid "Use the Add button to schedule actions after a delay."
+msgstr "Gunakan tombol Tambah untuk menjadwalkan tindakan setelah penundaan."
+
+msgid "Edit Time Trigger"
+msgstr "Sunting Pemicu Waktu"
+
+msgid "Add Time Trigger"
+msgstr "Tambahkan Pemicu Waktu"
+
+msgid "Trigger Timing"
+msgstr "Waktu Pemicu"
+
+msgid "Time Trigger Execution History"
+msgstr "Riwayat Eksekusi Pemicu Waktu"
+
+msgid "activated"
+msgstr "diaktifkan"
+
+msgid "deactivated"
+msgstr "dinonaktifkan"
+
+msgid "When should this rule apply?"
+msgstr "Kapan aturan ini berlaku?"
+
+msgid "At least one condition is required."
+msgstr "Setidaknya satu syarat diperlukan."
+
+msgid "Model"
+msgstr "Model"
+
+msgid "Execute on"
+msgstr "Jalankan pada"
+
+msgid "Active"
+msgstr "Aktif"
+
+msgid "Record"
+msgstr "Catatan"
+
+msgid "Workflow rule not found."
+msgstr "Aturan alur kerja tidak ditemukan."
+
+msgid "Condition saved."
+msgstr "Kondisi terselamatkan."
+
+msgid "Action saved."
+msgstr "Tindakan disimpan."
+
+msgid "Time trigger action saved."
+msgstr "Tindakan pemicu waktu disimpan."

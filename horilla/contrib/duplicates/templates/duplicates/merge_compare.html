@@ -1,0 +1,149 @@
+<div class="modal-content" style="max-height: 90vh; overflow-y: auto">
+    <div class="p-6">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-lg font-semibold">{% trans "Potential Duplicate Records" %}</h2>
+            <button
+                type="button"
+                onclick="closeContentModal()"
+                class="text-gray-500 hover:text-red-500 text-xl cursor-pointer"
+            >
+                <img src="{% static 'assets/icons/close.svg' %}" alt="{% trans 'Close' %}">
+            </button>
+        </div>
+
+        <h2 class="text-md mb-1 font-semibold">{% trans "Compare" %} {{ main_object|model_name|title }}s</h2>
+
+        <p class="text-sm mb-3">
+            {% trans "When you merge, the master record is updated with the values you choose, and relationships to other items are shifted to the master record." %}
+        </p>
+
+        <form method="post" action="{% url 'duplicates:merge_duplicates' %}" id="merge-form">
+            {% csrf_token %}
+            <input type="hidden" name="object_id" value="{{ object_id }}">
+            <input type="hidden" name="content_type_id" value="{{ content_type_id }}">
+            {% for dup_id in duplicate_ids %}
+                <input type="hidden" name="duplicate_ids" value="{{ dup_id }}">
+            {% endfor %}
+
+            <div class="overflow-x-auto custom-scroll" style="max-height: 60vh; overflow-y: auto">
+                <table class="w-full">
+                    <thead class="bg-primary-300 text-primary-600 sticky top-0 z-50">
+                        <tr>
+                            <th class="text-sm font-bold text-left p-3 bg-primary-300 z-50"></th>
+                            {% for selected_obj in selected_objects %}
+                                <th class="text-sm font-bold text-left p-3 bg-primary-300 z-50">
+                                    {{ selected_obj }}
+                                </th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-sm border border-[#efefef] text-left p-3">
+                                {% trans "Master Record" %}
+                            </td>
+                            {% for selected_obj in selected_objects %}
+                                <td class="text-sm border border-[#efefef] text-left p-3">
+                                    <label class="radio-group flex items-center gap-2 cursor-pointer">
+                                        <input
+                                            hidden
+                                            type="radio"
+                                            name="master_record_select"
+                                            class="master-record-radio"
+                                            value="record_{{ forloop.counter0 }}"
+                                            data-column="{{ forloop.counter0 }}"
+                                            data-record-name="{{ selected_obj }}"
+                                            {% if forloop.counter0 == 1 %}
+                                                checked
+                                            {% endif %}
+                                        >
+                                        <span class="custom-radio"></span>
+                                        {% trans "Use as master record" %}
+                                    </label>
+                                </td>
+                            {% endfor %}
+                        </tr>
+                        {% for field in fields %}
+                            <tr>
+                                <td class="text-sm border border-[#efefef] text-left p-3">
+                                    {{ field.verbose_name }}
+                                </td>
+                                {% for selected_obj in selected_objects %}
+                                    <td class="text-sm border border-[#efefef] text-left p-3">
+                                        <label class="radio-group flex items-center gap-2 cursor-pointer">
+                                            <input
+                                                hidden
+                                                type="radio"
+                                                name="row_user_select{% if forloop.parentloop.counter0 > 0 %}{{ forloop.parentloop.counter0 }}{% endif %}"
+                                                value="record_{{ forloop.counter0 }}"
+                                                data-column="{{ forloop.counter0 }}"
+                                                data-field="{{ field.name }}"
+                                                {% if forloop.counter0 == 1 %}
+                                                    checked
+                                                {% endif %}
+                                            >
+                                            <span class="custom-radio"></span>
+                                            {% if forloop.counter0 == 0 %}
+                                                {% if field.values.record_0 %}
+                                                    {{ field.values.record_0 }}
+                                                {% else %}
+                                                    [empty]
+                                                {% endif %}
+                                            {% elif forloop.counter0 == 1 %}
+                                                {% if field.values.record_1 %}
+                                                    {{ field.values.record_1 }}
+                                                {% else %}
+                                                    [empty]
+                                                {% endif %}
+                                            {% elif forloop.counter0 == 2 %}
+                                                {% if field.values.record_2 %}
+                                                    {{ field.values.record_2 }}
+                                                {% else %}
+                                                    [empty]
+                                                {% endif %}
+                                            {% else %}
+                                                [empty]
+                                            {% endif %}
+                                        </label>
+                                    </td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="flex justify-end gap-2 mt-4">
+                <button
+                    type="submit"
+                    class="px-4 py-2 text-sm font-medium text-white bg-primary-600 rounded-md hover:bg-primary-700"
+                    hx-post="{% url 'duplicates:merge_duplicates_summary' %}"
+                    hx-include="#merge-form"
+                    hx-target="#contentModalBoxSecond"
+                    hx-swap="innerHTML"
+                    hx-on:click="openContentModalSecond()"
+                >
+                    {% trans "Next" %}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    // When master record radio is selected, select all field radios in that column
+    document.addEventListener('change', function(e) {
+        if (e.target.classList.contains('master-record-radio')) {
+            const columnIndex = parseInt(e.target.dataset.column);
+
+            // Select all field radio buttons in this column
+            const allFieldRadios = document.querySelectorAll('input[name^="row_user_select"]');
+            allFieldRadios.forEach(function(radio) {
+                if (parseInt(radio.dataset.column) === columnIndex) {
+                    radio.checked = true;
+                    radio.dispatchEvent(new Event('change'));
+                }
+            });
+        }
+    });
+</script>

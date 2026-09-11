@@ -1,0 +1,449 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-18 14:05+0000\n"
+"PO-Revision-Date: 2026-08-01 12:00+0330\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Module for creating and customizing reports across all system modules."
+msgstr "ماژول برای ایجاد و سفارشی‌سازی گزارش‌ها در تمام ماژول‌های سیستم."
+
+msgid ""
+"Seed default CRM reports and extend the engine to load them. Add an empty "
+"state for report filters and refresh report-detail navbar button styles. "
+"Store relative referer URLs with a full-nav fallback from report detail."
+msgstr ""
+
+msgid ""
+"Gate report export through export permissions and get_export_queryset / "
+"is_exportable_field helpers."
+msgstr ""
+
+msgid ""
+"Avoid RelatedObjectDoesNotExist in create-report form_invalid when related "
+"objects are missing."
+msgstr ""
+
+msgid ""
+"Re-raise HttpNotFound with exception chaining in report detail, export, and "
+"CRUD views to preserve context."
+msgstr ""
+
+msgid ""
+"Added pivot cell active state and filter badge with clear action. Fixed "
+"detail table filtering for empty and null pivot group values."
+msgstr ""
+
+msgid ""
+"Removed redundant fields attributes superseded by form_class on report CRUD "
+"views, standardized first-party import groups, and added docstrings for "
+"pylint compliance."
+msgstr ""
+"ویژگی‌های فیلد اضافی که توسط form_class در نمایش‌های CRUD گزارش جایگزین شده "
+"بودند حذف شدند، گروه‌های واردات طرف اول استاندارد شدند و مستندسازی برای "
+"انطباق با pylint اضافه شد."
+
+#| msgid ""
+#| "Report forms aligned with HorillaModelForm layout: field_order and "
+#| "Meta.fields = \"__all__\" with Meta.exclude; folder and column HTMX "
+#| "unchanged."
+msgid ""
+"Report forms aligned with ModelForm layout: field_order and Meta.fields = "
+"\"__all__\" with Meta.exclude; folder and column HTMX unchanged."
+msgstr ""
+"فرم‌های گزارش با چیدمان HorillaModelForm هماهنگ شدند: field_order و "
+"Meta.fields = \"__all__\" با Meta.exclude؛ پوشه و HTMX ستون بدون تغییر."
+
+msgid ""
+"Release 1.10: reports ship under contrib with app label reports. Cross-app "
+"report wiring, ContentType references, namespaces, and registrations updated"
+" for the contrib naming scheme."
+msgstr ""
+"نسخه ۱.۱۰: گزارش‌ها تحت contrib با برچسب برنامه reports ارائه می‌شوند. اتصال"
+" گزارش بین برنامه‌ها، ارجاعات ContentType، فضای نام و ثبت‌نام‌ها برای طرح "
+"نام‌گذاری contrib به‌روزرسانی شدند."
+
+msgid ""
+"Improved report compatibility with dashboard multi-widget support, enhanced "
+"chart_value_field handling, and minor stability improvements for report "
+"rendering and filter processing."
+msgstr ""
+"سازگاری گزارش با پشتیبانی چند ویجت داشبورد بهبود یافت، مدیریت "
+"chart_value_field بهبود یافت و بهبودهای پایداری جزئی برای رندر گزارش و "
+"پردازش فیلتر."
+
+msgid ""
+"Added support for advanced chart types including Treemap, Area charts, "
+"Heatmaps, Sankey diagrams, and Radar charts. Improved compatibility with the"
+" new visualization and analytics framework."
+msgstr ""
+"پشتیبانی از انواع نمودار پیشرفته شامل Treemap، نمودارهای مساحت، نقشه‌های "
+"حرارتی، نمودارهای سانکی و نمودارهای رادار اضافه شد. سازگاری با چارچوب جدید "
+"نمایش و تحلیل بهبود یافت."
+
+#| msgid ""
+#| "Migrated from Django AppConfig to Horilla AppLauncher and and replacedDjango"
+#| " utilities with horilla.utils.decorators, horilla.utils.translation,and "
+#| "horilla.shortcuts where applicable."
+msgid ""
+"Migrated from AppConfig to AppLauncher and and replacedutilities with "
+"utils.decorators, utils.translation,and shortcuts where applicable."
+msgstr ""
+"از Django AppConfig به Horilla AppLauncher مهاجرت داده شد و ابزارهای Django "
+"با horilla.utils.decorators، horilla.utils.translation و horilla.shortcuts "
+"در صورت لزوم جایگزین شدند."
+
+msgid "Reports"
+msgstr "گزارش‌ها"
+
+msgid "Analytics"
+msgstr "تحلیل"
+
+msgid "Folder Name"
+msgstr "نام پوشه"
+
+msgid "Folder"
+msgstr "پوشه"
+
+msgid "Folder Owner"
+msgstr "مالک پوشه"
+
+msgid "Report Folder"
+msgstr "پوشه گزارش"
+
+msgid "Report Folders"
+msgstr "پوشه‌های گزارش"
+
+msgid "Column Chart"
+msgstr "نمودار ستونی"
+
+msgid "Line Chart"
+msgstr "نمودار خطی"
+
+msgid "Pie Chart"
+msgstr "نمودار دایره‌ای"
+
+msgid "Funnel"
+msgstr "قیف"
+
+msgid "Bar Chart"
+msgstr "نمودار میله‌ای"
+
+msgid "Donut"
+msgstr "دونات"
+
+msgid "Stacked Vertical Chart"
+msgstr "نمودار انباشته عمودی"
+
+msgid "Stacked Horizontal Chart"
+msgstr "نمودار انباشته افقی"
+
+msgid "Scatter Chart"
+msgstr "نمودار پراکندگی"
+
+msgid "Treemap"
+msgstr "نقشه درختی"
+
+msgid "Area Chart"
+msgstr "نمودار مساحت"
+
+msgid "Heatmap"
+msgstr "نقشه حرارتی"
+
+msgid "Sankey"
+msgstr "سانکی"
+
+msgid "Radar Chart"
+msgstr "نمودار رادار"
+
+msgid "Report Owner"
+msgstr "مالک گزارش"
+
+msgid "Report Name"
+msgstr "نام گزارش"
+
+msgid "Module"
+msgstr "ماژول"
+
+msgid "Chart Field"
+msgstr "فیلد نمودار"
+
+msgid "Secondary Field"
+msgstr "فیلد ثانویه"
+
+msgid "Value Field (Y-axis)"
+msgstr "فیلد مقدار (محور Y)"
+
+msgid "Report"
+msgstr "گزارش"
+
+msgid "breadcrumb"
+msgstr ""
+
+msgid " All Reports"
+msgstr "همه گزارش‌ها"
+
+msgid "Folders"
+msgstr "پوشه‌ها"
+
+msgid "All Folders"
+msgstr "همه پوشه‌ها"
+
+msgid "Favourites"
+msgstr "علاقه‌مندی‌ها"
+
+msgid "All Reports"
+msgstr "همه گزارش‌ها"
+
+msgid "You are already selected this field"
+msgstr "شما قبلاً این فیلد را انتخاب کرده‌اید"
+
+msgid "No matching columns found"
+msgstr "هیچ ستون منطبقی یافت نشد"
+
+msgid "No fields found matching your search"
+msgstr "هیچ فیلدی مطابق با جستجوی شما یافت نشد"
+
+msgid "R"
+msgstr "ر"
+
+msgid "C"
+msgstr "س"
+
+msgid "A"
+msgstr "م"
+
+msgid "Summary Report"
+msgstr "گزارش خلاصه"
+
+msgid "Total Count"
+msgstr "تعداد کل"
+
+msgid "Total"
+msgstr "مجموع"
+
+msgid "Subtotal"
+msgstr "جمع جزئی"
+
+msgid "Grand Total"
+msgstr "مجموع کل"
+
+msgid "Count"
+msgstr "تعداد"
+
+msgid "Overall Grand Total"
+msgstr "مجموع کلی کل"
+
+msgid "Error"
+msgstr "خطا"
+
+msgid "Configuration not supported"
+msgstr "پیکربندی پشتیبانی نمی‌شود"
+
+msgid "Columns"
+msgstr "ستون‌ها"
+
+msgid "Grouping"
+msgstr "گروه‌بندی"
+
+msgid "Filter"
+msgstr "فیلتر"
+
+msgid "Search Columns"
+msgstr "جستجوی ستون‌ها"
+
+msgid "Search"
+msgstr "جستجو"
+
+msgid "Selected Columns"
+msgstr "ستون‌های انتخاب شده"
+
+msgid "Grouped Columns"
+msgstr "ستون‌های گروه‌بندی شده"
+
+msgid "Row Groups"
+msgstr "گروه‌های سطر"
+
+msgid "Column Groups"
+msgstr "گروه‌های ستون"
+
+msgid "Aggregate Columns"
+msgstr "ستون‌های تجمیعی"
+
+msgid "Sum"
+msgstr "جمع"
+
+msgid "Avg"
+msgstr "میانگین"
+
+msgid "Max"
+msgstr "حداکثر"
+
+msgid "Min"
+msgstr "حداقل"
+
+msgid "Seacrch"
+msgstr "جستجو"
+
+msgid "Apply Filters"
+msgstr "اعمال فیلترها"
+
+msgid "value1,value2"
+msgstr ""
+
+msgid "Select..."
+msgstr "انتخاب..."
+
+msgid "No filters applied. Add a filter to refine your results."
+msgstr ""
+
+msgid "Report:"
+msgstr "گزارش:"
+
+msgid "Refresh"
+msgstr "بازخوانی"
+
+msgid "Save"
+msgstr "ذخیره"
+
+msgid "Discard Changes"
+msgstr "لغو تغییرات"
+
+msgid "Close"
+msgstr "بستن"
+
+msgid "Close Panel"
+msgstr "بستن پنل"
+
+msgid "Edit Report"
+msgstr "ویرایش گزارش"
+
+msgid "Edit"
+msgstr "ویرایش"
+
+msgid "Actions"
+msgstr "اقدامات"
+
+msgid "You have unsaved changes. Click"
+msgstr "شما تغییرات ذخیره نشده دارید. کلیک کنید"
+
+msgid "to keep your changes or"
+msgstr "برای حفظ تغییرات خود یا"
+
+msgid "Discard"
+msgstr "لغو"
+
+msgid "to revert."
+msgstr "برای بازگشت."
+
+msgid "Detail table"
+msgstr "جدول جزئیات"
+
+msgid "Filtered by pivot:"
+msgstr "فیلتر شده توسط محور:"
+
+msgid "Clear pivot filter"
+msgstr "پاک کردن فیلتر محور"
+
+msgid "Pivot table"
+msgstr "جدول محوری"
+
+msgid "Report Chart"
+msgstr "نمودار گزارش"
+
+msgid "Change Chart"
+msgstr "تغییر نمودار"
+
+msgid "Export as PDF"
+msgstr "خروجی به عنوان PDF"
+
+msgid "Export as PNG"
+msgstr "خروجی به عنوان PNG"
+
+msgid "Add to Dashboard"
+msgstr "افزودن به داشبورد"
+
+msgid "Record Count:"
+msgstr "تعداد رکوردها:"
+
+msgid "Favourite"
+msgstr "علاقه‌مندی"
+
+msgid "Move"
+msgstr "انتقال"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Select Default Reports"
+msgstr "انتخاب گزارش‌های پیش‌فرض"
+
+msgid "Select All"
+msgstr "انتخاب همه"
+
+msgid "Create"
+msgstr "ایجاد"
+
+msgid "No reports found."
+msgstr "هیچ گزارشی یافت نشد."
+
+msgid "New Report"
+msgstr "گزارش جدید"
+
+msgid "Load Default Reports"
+msgstr "بارگذاری گزارش‌های پیش‌فرض"
+
+msgid "New Folder"
+msgstr "پوشه جدید"
+
+msgid "Name"
+msgstr "نام"
+
+msgid "Type"
+msgstr "نوع"
+
+msgid "Average"
+msgstr "میانگین"
+
+msgid "Minimum"
+msgstr "حداقل"
+
+msgid "Maximum"
+msgstr "حداکثر"
+
+msgid "Record count"
+msgstr "تعداد رکوردها"
+
+#, python-format
+msgid "%(metric)s of %(field)s"
+msgstr "%(metric)s از %(field)s"
+
+msgid "Chart type"
+msgstr "نوع نمودار"
+
+msgid "X-axis (Group by)"
+msgstr "محور X (گروه‌بندی بر اساس)"
+
+msgid "Stack by (second group)"
+msgstr "انباشته بر اساس (گروه دوم)"
+
+msgid "Y-axis (Value)"
+msgstr "محور Y (مقدار)"
+
+msgid "Invalid field '{}'. This field does not exist on the model."
+msgstr "فیلد نامعتبر '{}'. این فیلد در مدل وجود ندارد."
+
+msgid "Invalid filter value: {}"
+msgstr "مقدار فیلتر نامعتبر: {}"

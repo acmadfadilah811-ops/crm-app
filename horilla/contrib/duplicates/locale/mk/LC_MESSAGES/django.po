@@ -1,0 +1,356 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;\n"
+
+msgid ""
+"Module for detecting potential duplicate records and supporting merge "
+"workflows."
+msgstr ""
+
+msgid ""
+"Avoid RelatedObjectDoesNotExist in DuplicateRule.clean when related objects "
+"are missing."
+msgstr ""
+
+msgid "Removed deprecated merge_views compatibility shim."
+msgstr ""
+
+msgid ""
+"Standardized first-party import groups and aligned with the platform 1.11.1 "
+"release; rules, criteria, and merge behavior unchanged."
+msgstr ""
+
+msgid ""
+"Duplicate rule forms aligned with HorillaModelForm layout: field_order and "
+"Meta.fields = \"__all__\"; criteria rows and validation unchanged."
+msgstr ""
+
+msgid ""
+"Release 1.10: duplicate control ships under contrib with app label "
+"duplicates. Feature registration, merge flows, and cross-model references "
+"use contrib paths and matching app labels for clone and duplicate tooling."
+msgstr ""
+
+msgid ""
+"Renamed Clone Management to Duplicate Control. Added duplicate validation "
+"for inline field edits with warning modal for duplicate conflicts. Fixed "
+"duplicate detail tab injection issue and improved merge flow handling for "
+"edge cases."
+msgstr ""
+
+msgid ""
+"Introduced duplicate management capabilities with matching rules, potential "
+"duplicate detection, and merge comparison and summary workflows."
+msgstr ""
+
+msgid "Clone Management"
+msgstr ""
+
+msgid "Potential Duplicates"
+msgstr ""
+
+msgid "Similar records were found. Do you want to proceed?"
+msgstr ""
+
+#, python-format
+msgid ""
+"Each matching criterion must use a different field. The following field(s) "
+"appear more than once: %(fields)s"
+msgstr ""
+
+msgid "Matching Criteria row has missing required field: Field."
+msgstr ""
+
+msgid "At least one matching criterion is required."
+msgstr ""
+
+msgid ""
+"Matching rule must apply to the same content type as duplicate rule. Please "
+"select a matching rule for the selected module."
+msgstr ""
+
+msgid "Duplicate Control"
+msgstr ""
+
+msgid "Matching Rules"
+msgstr ""
+
+msgid "Duplicate Rules"
+msgstr ""
+
+msgid "Exact Match"
+msgstr ""
+
+msgid "Fuzzy Match"
+msgstr ""
+
+msgid "Phonetic Match"
+msgstr ""
+
+msgid "Edit Distance"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "The model this matching rule applies to"
+msgstr ""
+
+msgid "Module"
+msgstr ""
+
+msgid "Matching Rule"
+msgstr ""
+
+msgid "Exact"
+msgstr ""
+
+msgid "Fuzzy"
+msgstr ""
+
+msgid "Field"
+msgstr ""
+
+msgid "Field name to match on"
+msgstr ""
+
+msgid "Matching Method"
+msgstr ""
+
+msgid "Match Blank Fields"
+msgstr ""
+
+msgid "If checked, blank fields will be considered a match"
+msgstr ""
+
+msgid "Order of evaluation"
+msgstr ""
+
+msgid "Matching Criterion"
+msgstr ""
+
+msgid "Matching Criteria"
+msgstr ""
+
+msgid "Allow"
+msgstr ""
+
+msgid "Block"
+msgstr ""
+
+msgid "The model this duplicate rule applies to"
+msgstr ""
+
+msgid "The matching rule to use for detection"
+msgstr ""
+
+msgid "Action on Create"
+msgstr ""
+
+msgid "Action on Edit"
+msgstr ""
+
+msgid "Title shown in the alert dialog"
+msgstr ""
+
+msgid "Alert Title"
+msgstr ""
+
+msgid "Message to show in alert when duplicates are detected"
+msgstr ""
+
+msgid "Alert Message"
+msgstr ""
+
+msgid "Show list of potential duplicates in the alert"
+msgstr ""
+
+msgid "Show Duplicate Records"
+msgstr ""
+
+msgid "Duplicate Rule"
+msgstr ""
+
+msgid "Field Name"
+msgstr ""
+
+msgid "Field name to evaluate"
+msgstr ""
+
+msgid "Operator"
+msgstr ""
+
+msgid "Value"
+msgstr ""
+
+msgid "Value to compare against"
+msgstr ""
+
+msgid "Logical Operator"
+msgstr ""
+
+msgid "How to combine with next condition"
+msgstr ""
+
+msgid "Duplicate Rule Condition"
+msgstr ""
+
+msgid "Duplicate Rule Conditions"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Potential Duplicate Records:"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Continue"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Nothing to show yet. Please add your Matching Rules."
+msgstr ""
+
+msgid "Potential Duplicate Records"
+msgstr ""
+
+msgid "Compare"
+msgstr ""
+
+msgid ""
+"When you merge, the master record is updated with the values you choose, and "
+"relationships to other items are shifted to the master record."
+msgstr ""
+
+msgid "Master Record"
+msgstr ""
+
+msgid "Use as master record"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Merge Summary"
+msgstr ""
+
+msgid "You're about to merge these records. You can't undo merging."
+msgstr ""
+
+msgid "Selected Values"
+msgstr ""
+
+msgid "Selected Value"
+msgstr ""
+
+msgid "Merge"
+msgstr ""
+
+msgid "Select"
+msgstr ""
+
+msgid "of"
+msgstr ""
+
+msgid "Unselect"
+msgstr ""
+
+msgid "Clear Session"
+msgstr ""
+
+msgid "Select Visible Items"
+msgstr ""
+
+msgid "No potential duplicates found."
+msgstr ""
+
+msgid "You can only merge up to"
+msgstr ""
+
+msgid "items at a time"
+msgstr ""
+
+msgid "Set how duplicate records are handled once matched."
+msgstr ""
+
+msgid "Conditions"
+msgstr ""
+
+msgid "Details"
+msgstr ""
+
+msgid "Define which fields are compared to detect matching records."
+msgstr ""
+
+msgid "You do not have permission to view this."
+msgstr ""
+
+msgid "Invalid request for potential duplicates."
+msgstr ""
+
+msgid "Missing required parameters."
+msgstr ""
+
+msgid "Model not found."
+msgstr ""
+
+msgid "No duplicates selected."
+msgstr ""
+
+#, python-brace-format
+msgid "Error loading merge comparison: {error}"
+msgstr ""
+
+#, python-brace-format
+msgid "Error: {error}"
+msgstr ""
+
+#, python-brace-format
+msgid "Error loading merge summary: {error}"
+msgstr ""
+
+#, python-brace-format
+msgid "Successfully merged {count} duplicate(s) into master record."
+msgstr ""
+
+msgid ""
+"The master record is different from the current record. You will be "
+"redirected to the master record."
+msgstr ""
+
+#, python-brace-format
+msgid "Error merging duplicates: {error}"
+msgstr ""
+
+msgid "Merge Selected"
+msgstr ""
+
+msgid "Record"
+msgstr ""

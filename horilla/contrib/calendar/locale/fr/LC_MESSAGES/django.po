@@ -1,0 +1,688 @@
+# French translations for Horilla Calendar module.
+# Copyright (C) 2024 Horilla
+# This file is distributed under the same license as the Horilla package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Horilla\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: 2026-06-12 00:00+0000\n"
+"Last-Translator: Horilla Team\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Module for managing calendar events and schedules."
+msgstr "Module de gestion des evenements de calendrier et des plannings."
+
+msgid ""
+"Harden Google Calendar sync (service, sync, and views) and surface meeting "
+"links more reliably when events are created or updated."
+msgstr ""
+
+msgid ""
+"Google Calendar sync uses max() to ensure end datetime is never before "
+"start. Standardized exception chaining in calendar forms."
+msgstr ""
+
+msgid ""
+"Resolve Google Calendar integration settings from the user's company with "
+"all_objects. Use all_objects for GoogleCalendarConfig lookups to prevent "
+"missing config and UNIQUE constraint errors when admins switch company "
+"context. Scope disconnect to active company when admin disables integration."
+msgstr ""
+
+msgid ""
+"Restored CSRF protection on SaveCalendarPreferencesView (removed "
+"@csrf_exempt). Migrated signal and timezone imports to the horilla shims and "
+"standardized first-party import groups; behavior unchanged."
+msgstr ""
+"Protection CSRF restauree sur SaveCalendarPreferencesView. Migration des "
+"imports de signaux et de fuseaux horaires vers les shims horilla ; "
+"comportement inchange."
+
+msgid ""
+"Custom calendar form aligned with HorillaModelForm layout: field_order, "
+"Meta.fields = \"__all__\", and Meta.exclude; save logic and HTMX behavior "
+"unchanged."
+msgstr ""
+"Formulaire de calendrier personnalise aligne sur le layout "
+"HorillaModelForm : field_order, Meta.fields et Meta.exclude ; logique de "
+"sauvegarde et HTMX inchanges."
+
+msgid ""
+"Google Calendar integration settings now pass the full request on POST so "
+"get_or_create uses the active company consistently with GET."
+msgstr ""
+"Les parametres d'integration Google Calendar transmettent maintenant la "
+"requete complete sur POST afin que get_or_create utilise la societe active "
+"de facon coherente avec GET."
+
+msgid ""
+"Release 1.10: calendar ships under contrib with app label calendar. Google "
+"Calendar sync, webhook settings, namespaces, templates, and integrations "
+"updated from the legacy calendar app naming."
+msgstr ""
+"Version 1.10 : le calendrier est integre sous contrib avec le label "
+"d'application calendar. La synchronisation Google Calendar, les parametres "
+"webhook, les espaces de noms, les modeles et les integrations ont ete mis a "
+"jour."
+
+msgid ""
+"Introduced Google Calendar integration with sync capabilities, service "
+"configuration, and settings management for seamless external calendar "
+"connectivity."
+msgstr ""
+"Introduction de l'integration Google Calendar avec des capacites de "
+"synchronisation, la configuration du service et la gestion des parametres "
+"pour une connectivite externe fluide."
+
+msgid ""
+"Compatibility updates and minor internal improvements to align with platform "
+"architecture and generics framework updates."
+msgstr ""
+"Mises a jour de compatibilite et ameliorations internes mineures pour "
+"s'aligner sur l'architecture de la plateforme et les mises a jour du "
+"framework generics."
+
+#, fuzzy
+#| msgid ""
+#| "Migrated from Django AppConfig to Horilla AppLauncher and replaced Django "
+#| "utilities with horilla.utils.decorators, horilla.utils.translation, and "
+#| "horilla.shortcuts where applicable."
+msgid ""
+"Migrated from Django AppConfig to Horilla AppLauncher and replaced Django "
+"utilitieswith horilla.utils.decorators, horilla.utils.translation, and "
+"horilla.shortcuts where applicable."
+msgstr ""
+"Migration de Django AppConfig vers Horilla AppLauncher et remplacement des "
+"utilitaires Django par horilla.utils.decorators, horilla.utils.translation "
+"et horilla.shortcuts selon le cas."
+
+msgid "Calendar"
+msgstr "Calendrier"
+
+msgid "Please select a module."
+msgstr "Veuillez selectionner un module."
+
+msgid "End date field must differ from start date field."
+msgstr "Le champ date de fin doit etre different du champ date de debut."
+
+msgid "Google OAuth JSON file"
+msgstr "Fichier JSON OAuth Google"
+
+msgid ""
+"Upload the client_secret_*.json file downloaded from Google Cloud Console."
+msgstr ""
+
+msgid "Redirect URI"
+msgstr "URI de redirection"
+
+msgid ""
+"Must match exactly what you registered in Google Cloud Console. E.g. https://"
+"yourdomain.com/calendar/google-calendar/callback/"
+msgstr ""
+
+msgid "Invalid JSON file."
+msgstr "Fichier JSON invalide."
+
+msgid ""
+"Not a valid Google OAuth2 credentials file. Expected a JSON with a 'web' or "
+"'installed' key."
+msgstr ""
+
+msgid "Google Calendar integration is not enabled."
+msgstr "L'integration Google Calendar n'est pas activee."
+
+msgid "Google Calendar integration has not been enabled by your administrator."
+msgstr ""
+"L'integration Google Calendar n'a pas ete activee par votre administrateur."
+
+msgid "Google credentials saved. Click 'Connect Google Account' to authorize."
+msgstr ""
+"Identifiants Google enregistres. Cliquez sur 'Connecter un compte Google' "
+"pour autoriser."
+
+msgid "Please upload your Google OAuth credentials first."
+msgstr "Veuillez d'abord telecharger vos identifiants Google OAuth."
+
+#, python-format
+msgid "Google authorization was denied: %(error)s"
+msgstr "L'autorisation Google a ete refusee : %(error)s"
+
+msgid "Invalid OAuth2 callback parameters."
+msgstr "Parametres de rappel OAuth2 invalides."
+
+msgid "OAuth state mismatch. Please try again."
+msgstr "Inadapte d'etat OAuth. Veuillez reessayer."
+
+msgid "Failed to connect Google Calendar. Please try again."
+msgstr "Echec de la connexion a Google Calendar. Veuillez reessayer."
+
+#, python-format
+msgid "Google Calendar connected as %(email)s."
+msgstr "Google Calendar connecte en tant que %(email)s."
+
+msgid "Sync direction saved."
+msgstr "Direction de synchronisation enregistree."
+
+msgid "Google Calendar is already disconnected."
+msgstr "Google Calendar est deja deconnecte."
+
+msgid "Google Calendar disconnected."
+msgstr "Google Calendar deconnecte."
+
+msgid "Google Calendar is not connected."
+msgstr "Google Calendar n'est pas connecte."
+
+msgid ""
+"Webhook registered. Google Calendar will now push changes automatically."
+msgstr ""
+
+#, python-format
+msgid ""
+"Webhook registration failed: the URL %(url)s is not HTTPS. Access the app "
+"via an HTTPS URL (e.g. your dev tunnel) and try again."
+msgstr ""
+
+#, python-format
+msgid "Failed to register webhook: %(error)s"
+msgstr "Echec de l'enregistrement du webhook : %(error)s"
+
+msgid "No active company found. Cannot save settings."
+msgstr ""
+"Aucune entreprise active trouvee. Impossible d'enregistrer les parametres."
+
+msgid "Google Calendar integration has been enabled for users."
+msgstr "L'integration Google Calendar a ete activee pour les utilisateurs."
+
+#, fuzzy
+#| msgid "Google Calendar integration has been enabled for users."
+msgid ""
+"Google Calendar integration has been disabled. All user connections have "
+"been removed."
+msgstr "L'integration Google Calendar a ete activee pour les utilisateurs."
+
+msgid "Google Calendar Sync"
+msgstr "Synchronisation Google Calendar"
+
+msgid "Schedule"
+msgstr "Planning"
+
+msgid "Google Calendar"
+msgstr "Google Calendar"
+
+msgid "Task"
+msgstr "Tache"
+
+msgid "Event"
+msgstr "Evenement"
+
+msgid "Meeting"
+msgstr "Reunion"
+
+msgid "Un Availability"
+msgstr "Indisponibilite"
+
+msgid "User"
+msgstr "Utilisateur"
+
+msgid "Calendar Type"
+msgstr "Type de calendrier"
+
+msgid "Color"
+msgstr "Couleur"
+
+msgid "Is Selected"
+msgstr "Selectionne"
+
+msgid "User Calendar Preference"
+msgstr "Preference de calendrier utilisateur"
+
+msgid "User Calendar Preferences"
+msgstr "Preferences de calendrier utilisateur"
+
+msgid "From"
+msgstr "De"
+
+msgid "To"
+msgstr "A"
+
+msgid "Reason"
+msgstr "Raison"
+
+msgid "User Unavailability"
+msgstr "Indisponibilite de l'utilisateur"
+
+msgid "User Unavailabilities"
+msgstr "Indisponibilites de l'utilisateur"
+
+msgid "Google Calendar Event ID"
+msgstr "ID d'evenement Google Calendar"
+
+msgid "Calendar Name"
+msgstr "Nom du calendrier"
+
+msgid "Module"
+msgstr "Module"
+
+msgid "Start Date Field"
+msgstr "Champ date de debut"
+
+msgid "End Date Field"
+msgstr "Champ date de fin"
+
+msgid "Display Name Field"
+msgstr "Champ nom d'affichage"
+
+msgid "Custom Calendar"
+msgstr "Calendrier personnalise"
+
+msgid "Custom Calendars"
+msgstr "Calendriers personnalises"
+
+msgid "Field Name"
+msgstr "Nom du champ"
+
+msgid "Operator"
+msgstr "Operateur"
+
+msgid "Value"
+msgstr "Valeur"
+
+msgid "Sequence"
+msgstr "Sequence"
+
+msgid "Custom Calendar Condition"
+msgstr "Condition de calendrier personnalise"
+
+msgid "Custom Calendar Conditions"
+msgstr "Conditions de calendrier personnalise"
+
+msgid "Enable Google Calendar Integration"
+msgstr "Activer l'integration Google Calendar"
+
+msgid "When enabled, users in this company can connect their Google Calendar."
+msgstr ""
+"Lorsqu'elle est activee, les utilisateurs de cette entreprise peuvent "
+"connecter leur Google Calendar."
+
+msgid "Google Integration Setting"
+msgstr "Parametre d'integration Google"
+
+msgid "Google Integration Settings"
+msgstr "Parametres d'integration Google"
+
+msgid "enabled"
+msgstr "active"
+
+msgid "disabled"
+msgstr "desactive"
+
+msgid "Credentials JSON"
+msgstr "Identifiants JSON"
+
+msgid "Connected Google Account"
+msgstr "Compte Google connecte"
+
+msgid "OAuth Token"
+msgstr "Jeton OAuth"
+
+msgid "OAuth State"
+msgstr "Etat OAuth"
+
+msgid "One-way: App → Google Calendar"
+msgstr "Unidirectionnel : Application → Google Calendar"
+
+msgid "Two-way: App ↔ Google Calendar"
+msgstr "Bidirectionnel : Application ↔ Google Calendar"
+
+msgid "Sync Direction"
+msgstr "Direction de synchronisation"
+
+msgid "Last Synced At"
+msgstr "Derniere synchronisation le"
+
+msgid "Google Sync Token"
+msgstr "Jeton de synchronisation Google"
+
+msgid "Watch Channel ID"
+msgstr "ID du canal de surveillance"
+
+msgid "Watch Resource ID"
+msgstr "ID de ressource de surveillance"
+
+msgid "Watch Channel Expiration"
+msgstr "Expiration du canal de surveillance"
+
+msgid "Watch Channel Token"
+msgstr "Jeton du canal de surveillance"
+
+msgid "Google Calendar Configuration"
+msgstr "Configuration Google Calendar"
+
+msgid "Google Calendar Configurations"
+msgstr "Configurations Google Calendar"
+
+msgid "Mark Unavailable"
+msgstr "Marquer comme indisponible"
+
+msgid "New Activity"
+msgstr "Nouvelle activite"
+
+msgid "Today"
+msgstr "Aujourd'hui"
+
+msgid "Day"
+msgstr "Jour"
+
+msgid "Week"
+msgstr "Semaine"
+
+msgid "Month"
+msgstr "Mois"
+
+msgid "Year"
+msgstr "Annee"
+
+msgid "Failed to load edit form"
+msgstr "Echec du chargement du formulaire d'edition"
+
+msgid "Start Date"
+msgstr "Date de debut"
+
+msgid "End Date"
+msgstr "Date de fin"
+
+msgid "Edit"
+msgstr "Modifier"
+
+msgid "Delete"
+msgstr "Supprimer"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Due Date"
+msgstr "Date d'echeance"
+
+msgid "Subject"
+msgstr "Objet"
+
+msgid "Assigned to"
+msgstr "Assigne a"
+
+msgid "Status"
+msgstr "Statut"
+
+msgid "Mark as Complete"
+msgstr "Marquer comme termine"
+
+msgid "Mark as Unavailable"
+msgstr "Marquer comme indisponible"
+
+msgid "My Calendars"
+msgstr "Mes calendriers"
+
+msgid "Add custom calendar"
+msgstr "Ajouter un calendrier personnalise"
+
+msgid "Dropdown"
+msgstr "Liste deroulante"
+
+msgid "Display This Only"
+msgstr "Afficher uniquement ceci"
+
+msgid "Update"
+msgstr "Mettre a jour"
+
+msgid "Connect your Google account to sync your calendar and meetings."
+msgstr ""
+
+msgid "OAuth Credentials"
+msgstr "Identifiants OAuth"
+
+msgid "Choose File"
+msgstr "Choisir un fichier"
+
+msgid "No file chosen"
+msgstr "Aucun fichier selectionne"
+
+msgid "How to configure Google Cloud Console"
+msgstr "Comment configurer Google Cloud Console"
+
+msgid "Go to Google Cloud Console"
+msgstr "Aller sur Google Cloud Console"
+
+msgid "Visit"
+msgstr "Visiter"
+
+msgid "and sign in."
+msgstr "et se connecter."
+
+msgid "Create or select a project"
+msgstr "Creer ou selectionner un projet"
+
+msgid ""
+"Click the project dropdown at the top → \"New Project\" (or choose an "
+"existing one)."
+msgstr ""
+
+msgid "Enable the required APIs"
+msgstr "Activer les API requises"
+
+msgid ""
+"Navigate to \"APIs &amp; Services\" → \"Library\". Search for and enable:"
+msgstr ""
+
+msgid "Google Calendar API"
+msgstr "API Google Calendar"
+
+msgid "Tasks API"
+msgstr "API Tasks"
+
+msgid "Configure the OAuth consent screen"
+msgstr "Configurer l'ecran de consentement OAuth"
+
+msgid ""
+"Go to \"APIs &amp; Services\" → \"OAuth consent screen\". Choose "
+"\"External\" (or \"Internal\" for Google Workspace), fill in App name, "
+"support email, and developer contact. Save."
+msgstr ""
+
+msgid "Create OAuth 2.0 credentials"
+msgstr "Creer des identifiants OAuth 2.0"
+
+msgid ""
+"Go to \"APIs &amp; Services\" → \"Credentials\" → \"+ Create Credentials\" → "
+"\"OAuth client ID\". Select Application type: Web application. Under "
+"\"Authorized redirect URIs\", click \"+ Add URI\" and paste the URI below."
+msgstr ""
+
+msgid "Copy this exact redirect URI:"
+msgstr "Copiez cet URI de redirection exact :"
+
+msgid "Download and upload credentials"
+msgstr "Telecharger et importer les identifiants"
+
+#, fuzzy
+#| msgid ""
+#| "After creating the OAuth client, click the download icon (↓) to get the\n"
+#| "file. Upload that file using the field above."
+msgid "After creating the OAuth client, click the download icon (↓) to get the"
+msgstr ""
+"Apres avoir cree le client OAuth, cliquez sur l'icone de telechargement (↓) "
+"pour obtenir le fichier. Importez ce fichier via le champ ci-dessus."
+
+msgid "file. Upload that file using the field above."
+msgstr ""
+
+msgid "Save Credentials"
+msgstr "Enregistrer les identifiants"
+
+msgid "Connection Status"
+msgstr "Etat de la connexion"
+
+msgid "Connected Account"
+msgstr "Compte connecte"
+
+msgid "Last Synced"
+msgstr "Derniere synchronisation"
+
+msgid "Never"
+msgstr "Jamais"
+
+msgid "Auto-sync (Webhook)"
+msgstr "Synchronisation automatique (Webhook)"
+
+msgid "Active"
+msgstr "Actif"
+
+msgid "expires"
+msgstr "expire"
+
+msgid "Not registered"
+msgstr "Non enregistre"
+
+msgid "must access via HTTPS"
+msgstr "doit etre accessible via HTTPS"
+
+msgid "Google will push changes to:"
+msgstr "Google enverra les modifications a :"
+
+msgid "Open the app via your HTTPS dev tunnel URL and click \\"
+msgstr ""
+"Ouvrez l'application via l'URL de votre tunnel HTTPS de developpement et "
+"cliquez sur \\"
+
+msgid "Open via HTTPS to register webhook"
+msgstr "Ouvrir via HTTPS pour enregistrer le webhook"
+
+msgid "Loading..."
+msgstr "Chargement..."
+
+msgid "Renew Webhook"
+msgstr "Renouveler le Webhook"
+
+msgid "Register Webhook"
+msgstr "Enregistrer le Webhook"
+
+msgid "Disconnect"
+msgstr "Deconnecter"
+
+msgid "Not connected. Click the button to authorize with Google."
+msgstr "Non connecte. Cliquez sur le bouton pour autoriser avec Google."
+
+msgid "Connect Google Account"
+msgstr "Connecter un compte Google"
+
+msgid "Change Credentials"
+msgstr "Modifier les identifiants"
+
+#, python-format
+msgid ""
+"Switch to one-way sync?\n"
+"                                        Changes in Google Calendar will no "
+"longer sync to\n"
+"                                        %(title)s."
+msgstr ""
+
+#, python-format
+msgid ""
+"Switch to two-way sync?\n"
+"                                        Changes in Google Calendar will sync "
+"to %(title)s."
+msgstr ""
+
+#, python-format
+msgid ""
+"One-way: %(title)s →\n"
+"                                                    Google"
+msgstr ""
+
+#, python-format
+msgid ""
+"Two-way: %(title)s ↔\n"
+"                                                    Google"
+msgstr ""
+
+#, python-format
+msgid ""
+"%(title)s activities are pushed\n"
+"                                                    to Google Calendar. "
+"Changes made in Google are\n"
+"                                                    ignored."
+msgstr ""
+
+#, python-format
+msgid ""
+"Changes sync in both directions\n"
+"                                                    between %(title)s and "
+"Google Calendar."
+msgstr ""
+
+msgid "Google Integration"
+msgstr "Integration Google"
+
+msgid "Sync your calendar and meetings with your Google account."
+msgstr ""
+
+msgid ""
+"Enable Google Calendar integration to allow users in your company to connect "
+"their Google account and sync calendar events."
+msgstr ""
+"Activez l'integration Google Calendar pour permettre aux utilisateurs de "
+"votre entreprise de connecter leur compte Google et de synchroniser les "
+"evenements du calendrier."
+
+msgid "Enable Google Calendar"
+msgstr "Activer Google Calendar"
+
+msgid "Disable Google Calendar integration?"
+msgstr "Desactiver l'integration Google Calendar ?"
+
+msgid ""
+"All user connections and credentials under this company will be permanently "
+"removed."
+msgstr ""
+
+msgid "Enable Google Calendar integration?"
+msgstr "Activer l'integration Google Calendar ?"
+
+msgid "Integration enabled — users can now connect Google Calendar"
+msgstr ""
+"Integration activee — les utilisateurs peuvent maintenant connecter Google "
+"Calendar"
+
+msgid "Integration disabled — users cannot connect Google Calendar"
+msgstr ""
+"Integration desactivee — les utilisateurs ne peuvent pas connecter Google "
+"Calendar"
+
+msgid "Tasks"
+msgstr "Taches"
+
+msgid "Events"
+msgstr "Evenements"
+
+msgid "Meetings"
+msgstr "Reunions"
+
+msgid "Unavailability"
+msgstr "Indisponibilite"
+
+msgid "Preferences saved successfully"
+msgstr "Preferences enregistrees avec succes"
+
+msgid "User Unavailable"
+msgstr "Utilisateur indisponible"
+
+msgid "Marked as completed successfully."
+msgstr "Marque comme termine avec succes."
+
+msgid "Mark Unavailability"
+msgstr "Marquer l'indisponibilite"

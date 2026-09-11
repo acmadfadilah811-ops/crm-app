@@ -1,0 +1,427 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
+"(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
+"n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+msgid "Module for creating and customizing reports across all system modules."
+msgstr ""
+
+msgid ""
+"Seed default CRM reports and extend the engine to load them. Add an empty "
+"state for report filters and refresh report-detail navbar button styles. "
+"Store relative referer URLs with a full-nav fallback from report detail."
+msgstr ""
+
+msgid ""
+"Gate report export through export permissions and get_export_queryset / "
+"is_exportable_field helpers."
+msgstr ""
+
+msgid ""
+"Avoid RelatedObjectDoesNotExist in create-report form_invalid when related "
+"objects are missing."
+msgstr ""
+
+msgid ""
+"Re-raise HttpNotFound with exception chaining in report detail, export, and "
+"CRUD views to preserve context."
+msgstr ""
+
+msgid ""
+"Added pivot cell active state and filter badge with clear action. Fixed "
+"detail table filtering for empty and null pivot group values."
+msgstr ""
+
+msgid ""
+"Removed redundant fields attributes superseded by form_class on report CRUD "
+"views, standardized first-party import groups, and added docstrings for "
+"pylint compliance."
+msgstr ""
+
+msgid ""
+"Report forms aligned with ModelForm layout: field_order and Meta.fields = "
+"\"__all__\" with Meta.exclude; folder and column HTMX unchanged."
+msgstr ""
+
+msgid ""
+"Release 1.10: reports ship under contrib with app label reports. Cross-app "
+"report wiring, ContentType references, namespaces, and registrations updated "
+"for the contrib naming scheme."
+msgstr ""
+
+msgid ""
+"Improved report compatibility with dashboard multi-widget support, enhanced "
+"chart_value_field handling, and minor stability improvements for report "
+"rendering and filter processing."
+msgstr ""
+
+msgid ""
+"Added support for advanced chart types including Treemap, Area charts, "
+"Heatmaps, Sankey diagrams, and Radar charts. Improved compatibility with the "
+"new visualization and analytics framework."
+msgstr ""
+
+msgid ""
+"Migrated from AppConfig to AppLauncher and and replacedutilities with "
+"utils.decorators, utils.translation,and shortcuts where applicable."
+msgstr ""
+
+msgid "Reports"
+msgstr ""
+
+msgid "Analytics"
+msgstr ""
+
+msgid "Folder Name"
+msgstr ""
+
+msgid "Folder"
+msgstr ""
+
+msgid "Folder Owner"
+msgstr ""
+
+msgid "Report Folder"
+msgstr ""
+
+msgid "Report Folders"
+msgstr ""
+
+msgid "Column Chart"
+msgstr ""
+
+msgid "Line Chart"
+msgstr ""
+
+msgid "Pie Chart"
+msgstr ""
+
+msgid "Funnel"
+msgstr ""
+
+msgid "Bar Chart"
+msgstr ""
+
+msgid "Donut"
+msgstr ""
+
+msgid "Stacked Vertical Chart"
+msgstr ""
+
+msgid "Stacked Horizontal Chart"
+msgstr ""
+
+msgid "Scatter Chart"
+msgstr ""
+
+msgid "Treemap"
+msgstr ""
+
+msgid "Area Chart"
+msgstr ""
+
+msgid "Heatmap"
+msgstr ""
+
+msgid "Sankey"
+msgstr ""
+
+msgid "Radar Chart"
+msgstr ""
+
+msgid "Report Owner"
+msgstr ""
+
+msgid "Report Name"
+msgstr ""
+
+msgid "Module"
+msgstr ""
+
+msgid "Chart Field"
+msgstr ""
+
+msgid "Secondary Field"
+msgstr ""
+
+msgid "Value Field (Y-axis)"
+msgstr ""
+
+msgid "Report"
+msgstr ""
+
+msgid "breadcrumb"
+msgstr ""
+
+msgid " All Reports"
+msgstr ""
+
+msgid "Folders"
+msgstr ""
+
+msgid "All Folders"
+msgstr ""
+
+msgid "Favourites"
+msgstr ""
+
+msgid "All Reports"
+msgstr ""
+
+msgid "You are already selected this field"
+msgstr ""
+
+msgid "No matching columns found"
+msgstr ""
+
+msgid "No fields found matching your search"
+msgstr ""
+
+msgid "R"
+msgstr ""
+
+msgid "C"
+msgstr ""
+
+msgid "A"
+msgstr ""
+
+msgid "Summary Report"
+msgstr ""
+
+msgid "Total Count"
+msgstr ""
+
+msgid "Total"
+msgstr ""
+
+msgid "Subtotal"
+msgstr ""
+
+msgid "Grand Total"
+msgstr ""
+
+msgid "Count"
+msgstr ""
+
+msgid "Overall Grand Total"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Configuration not supported"
+msgstr ""
+
+msgid "Columns"
+msgstr ""
+
+msgid "Grouping"
+msgstr ""
+
+msgid "Filter"
+msgstr ""
+
+msgid "Search Columns"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Selected Columns"
+msgstr ""
+
+msgid "Grouped Columns"
+msgstr ""
+
+msgid "Row Groups"
+msgstr ""
+
+msgid "Column Groups"
+msgstr ""
+
+msgid "Aggregate Columns"
+msgstr ""
+
+msgid "Sum"
+msgstr ""
+
+msgid "Avg"
+msgstr ""
+
+msgid "Max"
+msgstr ""
+
+msgid "Min"
+msgstr ""
+
+msgid "Seacrch"
+msgstr ""
+
+msgid "Apply Filters"
+msgstr ""
+
+msgid "value1,value2"
+msgstr ""
+
+msgid "Select..."
+msgstr ""
+
+msgid "No filters applied. Add a filter to refine your results."
+msgstr ""
+
+msgid "Report:"
+msgstr ""
+
+msgid "Refresh"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Discard Changes"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Close Panel"
+msgstr ""
+
+msgid "Edit Report"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "You have unsaved changes. Click"
+msgstr ""
+
+msgid "to keep your changes or"
+msgstr ""
+
+msgid "Discard"
+msgstr ""
+
+msgid "to revert."
+msgstr ""
+
+msgid "Detail table"
+msgstr ""
+
+msgid "Filtered by pivot:"
+msgstr ""
+
+msgid "Clear pivot filter"
+msgstr ""
+
+msgid "Pivot table"
+msgstr ""
+
+msgid "Report Chart"
+msgstr ""
+
+msgid "Change Chart"
+msgstr ""
+
+msgid "Export as PDF"
+msgstr ""
+
+msgid "Export as PNG"
+msgstr ""
+
+msgid "Add to Dashboard"
+msgstr ""
+
+msgid "Record Count:"
+msgstr ""
+
+msgid "Favourite"
+msgstr ""
+
+msgid "Move"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Select Default Reports"
+msgstr ""
+
+msgid "Select All"
+msgstr ""
+
+msgid "Create"
+msgstr ""
+
+msgid "No reports found."
+msgstr ""
+
+msgid "New Report"
+msgstr ""
+
+msgid "Load Default Reports"
+msgstr ""
+
+msgid "New Folder"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Average"
+msgstr ""
+
+msgid "Minimum"
+msgstr ""
+
+msgid "Maximum"
+msgstr ""
+
+msgid "Record count"
+msgstr ""
+
+#, python-format
+msgid "%(metric)s of %(field)s"
+msgstr ""
+
+msgid "Chart type"
+msgstr ""
+
+msgid "X-axis (Group by)"
+msgstr ""
+
+msgid "Stack by (second group)"
+msgstr ""
+
+msgid "Y-axis (Value)"
+msgstr ""
+
+msgid "Invalid field '{}'. This field does not exist on the model."
+msgstr ""
+
+msgid "Invalid filter value: {}"
+msgstr ""

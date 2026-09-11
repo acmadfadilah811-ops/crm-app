@@ -1,0 +1,3440 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-02 12:37+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Core System"
+msgstr "Sistem Inti"
+
+msgid ""
+"Core system providing authentication, configuration, utilities, and "
+"platform-level services."
+msgstr ""
+"Sistem inti menyediakan otentikasi, konfigurasi, utilitas, dan layanan "
+"tingkat platform."
+
+msgid ""
+"Generics: stretch list columns on wide viewports; collapsible day-accordion "
+"history tab with cleaned rich-text and long values in diffs; Add button on "
+"empty-state list views; fix column sort in tab and related-list fragments; "
+"show and edit state as subdivision name not code; fix drag-handle visibility"
+" on permissioned columns. Core: shared settings_list_shell for settings list"
+" pages; Initialize Database Go To Home with default lead and opportunity "
+"stages via initialize_database_go_home; view-driven company and branch "
+"detail fields; normalize Title Case verbose_name labels; exclude extension "
+"model classes from permission listings; fix Role init Next Step button wrap;"
+" horilla.views.generic View/FormView/ListView/DetailView re-exports; "
+"f-strings in get_object_or_404. UI: dark-mode contrast fixes in history and "
+"detail surfaces; keep multi-select dropdowns open after selection; djangofmt"
+" on shared layout and template partials."
+msgstr ""
+"Generik: kolom daftar regangan pada area pandang lebar;tab riwayat akordeon "
+"hari yang dapat dilipat dengan teks kaya yang dibersihkan dan nilai panjang "
+"dalam perbedaan;Tombol Tambah pada tampilan daftar keadaan "
+"kosong;memperbaiki pengurutan kolom di tab dan fragmen daftar "
+"terkait;tampilkan dan edit status sebagai nama subdivisi, bukan "
+"kode;memperbaiki visibilitas drag-handle pada kolom yang diizinkan.Inti: "
+"settings_list_shell bersama untuk halaman daftar pengaturan;Inisialisasi "
+"Database Go To Home dengan tahap prospek dan peluang default melalui "
+"inisialisasi_database_go_home;bidang detail perusahaan dan cabang "
+"berdasarkan tampilan;menormalkan label nama_verbose Judul "
+"Kasus;mengecualikan kelas model ekstensi dari daftar izin;perbaiki Peran "
+"init Langkah Berikutnya bungkus tombol;horilla.views.generic "
+"View/FormView/ListView/DetailView mengekspor ulang;f-string di "
+"get_object_or_404.UI: perbaikan kontras mode gelap pada riwayat dan "
+"permukaan detail;biarkan dropdown multi-pilih tetap terbuka setelah "
+"pemilihan;djangofmt pada tata letak bersama dan sebagian templat."
+
+msgid ""
+"Generics: nested multi-level group-by with lazy-loaded subtrees; distinguish"
+" empty list vs no filter matches; restore empty groups, company-scope FK "
+"groups, and Group By Settings; reuse list empty-state markup in chart/split "
+"views; restrict quick filters to plain list layout; viewport-fit list and "
+"detail tables; open-in-new-tab only for previewable attachments; delete-"
+"modal Cancel contrast; navbar second_button font size. Core: Horilla "
+"DetailView wrapper and package re-export; TemplateView fieldsets for My "
+"Profile; settings fieldsets via shared includes; user number_format drives "
+"currency/number display; gate Regional Formatting behind can_change_profile;"
+" company-scope User Kanban/Group-By; avoid N+1 in permission utils and role "
+"hierarchy; scope import/export and settings-search spinners; stepper theming"
+" and Excel sample-data fixes; demo user departments; SHORT_TO_DAY_PREFIX in "
+"BusinessHourForm. UI: full-page Connection Lost on HTMX sendError / "
+"ERR_CONNECTION_REFUSED with Retry; runtime viewport fit for settings lists; "
+"center read-only field lock icon. I18N: Persian catalog expansion with bulk-"
+"update and RTL breadcrumb fixes."
+msgstr ""
+"Generik: pengelompokan bertingkat bertingkat dengan subpohon yang dimuat "
+"dengan lambat;membedakan daftar kosong vs tidak ada filter yang "
+"cocok;memulihkan grup yang kosong, grup FK lingkup perusahaan, dan "
+"Pengaturan Grup Berdasarkan;menggunakan kembali daftar markup keadaan kosong"
+" dalam tampilan bagan/split;membatasi filter cepat pada tata letak daftar "
+"biasa;daftar viewport-fit dan tabel detail;buka di tab baru hanya untuk "
+"lampiran yang dapat dipratinjau;delete-modal Batalkan kontras;ukuran font "
+"tombol_kedua navbar.Inti: Pembungkus Horilla DetailView dan ekspor ulang "
+"paket;Kumpulan bidang TemplateView untuk Profil Saya;pengaturan fieldset "
+"melalui shared include;format_nomor pengguna menggerakkan tampilan mata "
+"uang/angka;gerbang Pemformatan Regional di belakang "
+"can_change_profile;Kanban Pengguna/Grup-Oleh lingkup perusahaan;hindari N+1 "
+"dalam utilitas izin dan hierarki peran;lingkup impor/ekspor dan pemintal "
+"pencarian pengaturan;tema stepper dan perbaikan data sampel Excel;departemen"
+" pengguna demo;SHORT_TO_DAY_PREFIX di Formulir Jam Bisnis.UI: Koneksi satu "
+"halaman penuh Hilang pada HTMX sendError / ERR_CONNECTION_REFUSED dengan "
+"Coba Lagi;area pandang waktu proses cocok untuk daftar pengaturan;ikon kunci"
+" bidang baca-saja di tengah.I18N: Perluasan katalog Persia dengan pembaruan "
+"massal dan perbaikan runut tautan RTL."
+
+msgid ""
+"Extension: DateTimeFormatter with _inherit_formatter; _inherit_view "
+"composition for View/ListView (including EditFieldView); FormView applies "
+"_inherit_form; fieldsets_insert on _inherit_detail; form fieldsets merge so "
+"extensions can inject fields. Generics: parse edit/list/bulk dates through "
+"DateTimeFormatter; preserve image uploads across single-step validation "
+"errors; scope list-view navigation session keys per model with opt-out; "
+"populate Available Fields for mixed-column views; list-cell-border CSS "
+"classes; user detail sections driven by HorillaDetailView fieldsets. Core: "
+"demo fixtures for contrib and CRM apps (batched password derivation, roles, "
+"country-coded phones); AuditlogMiddleware; Add Column to List on branches; "
+"regional formatting rendered from form fieldsets; shared accent-color "
+"default for color inputs; rename Update to Edit; remove settings-search "
+"spinner; fix duplicate Core System version card and Export Data after Esc or"
+" HTMX tab navigation. API: enforce HorillaModelPermissions on main-table "
+"endpoints. UI: RTL foundation and main-shell mirroring."
+msgstr ""
+"Ekstensi: DateTimeFormatter dengan _inherit_formatter;_inherit_view "
+"komposisi untuk View/ListView (termasuk EditFieldView);FormView menerapkan "
+"_inherit_form;fieldsets_insert pada _inherit_detail;kumpulan bidang formulir"
+" digabungkan sehingga ekstensi dapat memasukkan bidang.Generik: parsing "
+"edit/daftar/tanggal massal melalui DateTimeFormatter;mempertahankan unggahan"
+" gambar di seluruh kesalahan validasi satu langkah;kunci sesi navigasi "
+"tampilan daftar cakupan per model dengan pilihan untuk tidak ikut "
+"serta;mengisi Bidang yang Tersedia untuk tampilan kolom campuran;kelas CSS "
+"daftar-sel-perbatasan;bagian detail pengguna didorong oleh kumpulan bidang "
+"HorillaDetailView.Inti: perlengkapan demo untuk aplikasi contrib dan CRM "
+"(penghasilan kata sandi batch, peran, telepon berkode "
+"negara);AuditlogMiddleware;Tambahkan Kolom ke Daftar di cabang;format "
+"regional yang diberikan dari kumpulan bidang formulir;default warna aksen "
+"bersama untuk input warna;ganti nama Perbarui menjadi Edit;hapus pemintal "
+"pengaturan-pencarian;memperbaiki duplikat kartu versi Sistem Inti dan Ekspor"
+" Data setelah navigasi tab Esc atau HTMX.API: menerapkan "
+"HorillaModelPermissions pada titik akhir tabel utama.UI: Fondasi RTL dan "
+"mirroring shell utama."
+
+msgid ""
+"Generics: multi-select choice and foreign-key filters; permission-gated user"
+" chips for User FK fields (without leaking raw HTML into the details tab); "
+"live avatar preview on image fields; navbar descriptions; prioritize the "
+"full-detail action; deny bulk update and hard-delete when the user lacks "
+"change/delete permission; refine navbar, tab, and settings layouts. Utils: "
+"add horilla.utils.html, text, and functional shims. API: move shared docs, "
+"mixins, and permissions to horilla.api. Core: require permission before "
+"toggling cross-company visibility; prefer profile image in get_avatar; store"
+" relative referer URLs with full-nav fallback; extract template BUILTINS and"
+" LOADERS. UI: mask-image nav/sidebar icons and restore theme-colored hover "
+"states in dark mode. Added Persian (fa) language support."
+msgstr ""
+"Generik: pilihan multi-pilih dan filter kunci asing;chip pengguna dengan "
+"izin untuk bidang FK Pengguna (tanpa membocorkan HTML mentah ke tab "
+"detail);pratinjau avatar langsung di bidang gambar;deskripsi bilah "
+"navigasi;memprioritaskan tindakan yang penuh detail;menolak pembaruan massal"
+" dan menghapus secara permanen ketika pengguna tidak memiliki izin "
+"mengubah/menghapus;menyempurnakan tata letak bilah navigasi, tab, dan "
+"pengaturan.Kegunaan: tambahkan horilla.utils.html, teks, dan shim "
+"fungsional.API: pindahkan dokumen, mixin, dan izin bersama ke "
+"horilla.api.Inti: memerlukan izin sebelum mengubah visibilitas lintas "
+"perusahaan;lebih suka gambar profil di get_avatar;menyimpan URL perujuk "
+"relatif dengan fallback navigasi penuh;ekstrak template BUILTINS dan "
+"LOADERS.UI: ikon nav/sidebar gambar topeng dan pulihkan status hover "
+"berwarna tema dalam mode gelap.Menambahkan dukungan bahasa Persia (fa)."
+
+msgid ""
+"Generics: AND/OR logic between filter rows; default new-record time zone to "
+"the user's zone; CheckboxGridSelect for weekday/multi-option grids; stop "
+"hidden multi-step fields from reappearing on other steps; cap form modal "
+"body height with max-h instead of fixed h-[500px]. Settings: content search "
+"over the Settings sidebar; fiscal year modal body can shrink below its max "
+"height; Business Hour per-day times grouped into day cards. UI: move header "
+"notification/theme script into global.js; stop Select2 multi-select clipping"
+" of wrapped choices; realign viewport-height offsets with the 60px header."
+msgstr ""
+"Generik: logika AND/OR antar baris filter;zona waktu rekor baru default ke "
+"zona pengguna;CheckboxGridSelect untuk grid hari kerja/multi-"
+"opsi;menghentikan bidang multi-langkah yang tersembunyi agar tidak muncul "
+"kembali di langkah lain;topi membentuk tinggi badan modal dengan max-h alih-"
+"alih h-[500px] tetap.Pengaturan: pencarian konten melalui sidebar "
+"Pengaturan;badan modal tahun fiskal dapat menyusut di bawah ketinggian "
+"maksimalnya;Waktu Jam Kerja per hari dikelompokkan ke dalam kartu harian.UI:"
+" pindahkan notifikasi header/skrip tema ke global.js;hentikan kliping multi-"
+"pilih Select2 dari pilihan yang dibungkus;menyelaraskan kembali offset "
+"ketinggian area pandang dengan header 60px."
+
+msgid ""
+"Export: added export/export_own permissions with optional column selection "
+"for one-off and scheduled exports, plus get_export_queryset and "
+"is_exportable_field helpers used by core, bulk, list, and report export "
+"paths. Generics: relative date filter operators (Today, Yesterday, This "
+"Week, This Month); PhoneField validation; inline edit validation errors; "
+"preserve export modal content on Escape; keep MultiWidget structure on "
+"hidden multi-step fields; replace delete-view alert() with the message "
+"framework; fix related-list no-else-continue; update split-view detail tab "
+"width. UI: compact header to 60px with refined search and action buttons; "
+"replace dots.svg menus with consistent SVG icons. Core: wrap form "
+"placeholders with gettext_lazy."
+msgstr ""
+"Ekspor: menambahkan izin ekspor/export_own dengan pilihan kolom opsional "
+"untuk ekspor satu kali dan terjadwal, ditambah pembantu get_export_queryset "
+"dan is_exportable_field yang digunakan oleh jalur ekspor inti, massal, "
+"daftar, dan laporan.Generik: operator filter tanggal relatif (Hari Ini, "
+"Kemarin, Minggu Ini, Bulan Ini);validasi PhoneField;kesalahan validasi edit "
+"sebaris;pertahankan konten modal ekspor di Escape;pertahankan struktur "
+"MultiWidget pada bidang multi-langkah yang tersembunyi;ganti delete-view "
+"alert() dengan kerangka pesan;perbaiki daftar terkait, tidak ada yang lain-"
+"lanjutkan;perbarui lebar tab detail tampilan terpisah.UI: header ringkas "
+"hingga 60 piksel dengan tombol pencarian dan tindakan yang "
+"disempurnakan;ganti menu dot.svg dengan ikon SVG yang konsisten.Inti: "
+"bungkus placeholder formulir dengan gettext_lazy."
+
+msgid ""
+"Added ScriptResponse and HxTriggerResponse for shared HTMX modal, reload, "
+"and htmx.trigger script returns. Generics: show a loading spinner on the "
+"Save & New button. Core: guard missing model on field-permission save, "
+"validate recycle-bin retention days, and return 405 for POST on fiscal-year "
+"HTMX field endpoints."
+msgstr ""
+"Menambahkan ScriptResponse dan HxTriggerResponse untuk modal HTMX bersama, "
+"memuat ulang, dan pengembalian skrip htmx.trigger.Generik: menampilkan "
+"spinner pemuatan pada tombol Simpan & Baru.Inti: menjaga model yang hilang "
+"pada penyimpanan izin lapangan, memvalidasi hari penyimpanan keranjang "
+"sampah, dan mengembalikan 405 untuk POST pada titik akhir bidang HTMX tahun "
+"fiskal."
+
+msgid ""
+"Registered the Calls app in INSTALLED_APPS and wired calls WebSocket routes "
+"into ASGI. Generics: inline edit supports phone fields with the country-code"
+" widget. Trusted X-Forwarded-Proto and X-Forwarded-Host so "
+"request.is_secure() and build_absolute_uri() work behind reverse proxies and"
+" dev tunnels."
+msgstr ""
+"Mendaftarkan aplikasi Panggilan di INSTALLED_APPS dan panggilan kabel yang "
+"dirutekan WebSocket ke ASGI.Generik: pengeditan sebaris mendukung bidang "
+"telepon dengan widget kode negara.X-Forwarded-Proto dan X-Forwarded-Host "
+"tepercaya sehingga request.is_secure() dan build_absolute_uri() bekerja di "
+"belakang proxy terbalik dan terowongan pengembang."
+
+msgid ""
+"Core: added get_allowed_user_ids() for subordinate-aware ownership and fixed"
+" sync_role_permissions_on_role_change to assign role permissions to new "
+"users via transaction.on_commit. Generics: unified record-level access with "
+"check_record_access(), check_record_change_access(), and "
+"check_record_delete_access(); extended view_own filtering to global search, "
+"detail tabs, mail compose and drafts, notes and attachments, related lists, "
+"and activity sections. Parent-record change and delete access now gates tab "
+"actions, add buttons, and col_attr row links; callable action labels, icons,"
+" and hidden_if supported in render_action_button. HorillaModelForm skips "
+"ownership filtering when the user has global view permission. Fixed "
+"HorillaSingleDeleteView model resolution, ColumnSelectionForm self.data "
+"access, sanitize_html font-colour passthrough, and related-list add-column "
+"permission and URL handling."
+msgstr ""
+"Inti: menambahkan get_allowed_user_ids() untuk kepemilikan sadar bawahan dan"
+" memperbaiki sync_role_permissions_on_role_change untuk menetapkan izin "
+"peran kepada pengguna baru melalui transaksi.on_commit.Generik: akses "
+"tingkat rekaman terpadu dengan check_record_access(), "
+"check_record_change_access(), dan check_record_delete_access();pemfilteran "
+"view_own diperluas ke pencarian global, tab detail, penulisan dan draf "
+"email, catatan dan lampiran, daftar terkait, dan bagian aktivitas.Rekam "
+"induk mengubah dan menghapus akses sekarang tindakan tab gerbang, "
+"menambahkan tombol, dan tautan baris col_attr;label tindakan yang dapat "
+"dipanggil, ikon, dan Hidden_if didukung di "
+"render_action_button.HorillaModelForm melewati pemfilteran kepemilikan "
+"ketika pengguna memiliki izin tampilan global.Memperbaiki resolusi model "
+"HorillaSingleDeleteView, akses data mandiri ColumnSelectionForm, passthrough"
+" warna font sanitize_html, dan izin penambahan kolom daftar terkait serta "
+"penanganan URL."
+
+msgid ""
+"Redesigned sidebar to a fixed-width icon-nav with text labels and corrected "
+"the sub-sidebar toggle button position when collapsed. Extension framework: "
+"renamed model _inherit to _inherit_model across metaclass, registry, and "
+"migration ops. Core: auto-sync user permissions when a role changes via "
+"signals; filter allowed_users by active company in OwnerQuerysetMixin. "
+"Generics: fixed Add Column to List in tabbed list views."
+msgstr ""
+"Mendesain ulang sidebar menjadi navigasi ikon dengan lebar tetap dengan "
+"label teks dan memperbaiki posisi tombol sakelar sub-sidebar saat "
+"diciutkan.Kerangka ekstensi: mengganti nama model _inherit menjadi "
+"_inherit_model di seluruh metaclass, registri, dan operasi migrasi.Inti: "
+"sinkronisasi otomatis izin pengguna ketika peran berubah melalui "
+"sinyal;filter diperbolehkan_pengguna berdasarkan perusahaan aktif di "
+"OwnerQuerysetMixin.Generik: memperbaiki Tambahkan Kolom ke Daftar dalam "
+"tampilan daftar tab."
+
+msgid ""
+"Added IP-based brute-force lockout on login and uniform forgot-password "
+"responses to prevent user enumeration. Fixed local settings to apply after "
+"app extensions. Generics: fixed filter-panel toggle in tabbed views with "
+"duplicate element IDs; sanitized notes-and-attachments fields against XSS "
+"and updated delete-button styling with themed icons. Menu: improved sub-"
+"sidebar active-link detection and unique item IDs."
+msgstr ""
+"Menambahkan penguncian brute force berbasis IP pada login dan respons lupa "
+"kata sandi yang seragam untuk mencegah penghitungan pengguna.Memperbaiki "
+"pengaturan lokal untuk diterapkan setelah ekstensi aplikasi.Generik: tombol "
+"panel filter tetap dalam tampilan tab dengan ID elemen duplikat;membersihkan"
+" bidang catatan dan lampiran terhadap XSS dan memperbarui gaya tombol hapus "
+"dengan ikon bertema.Menu: peningkatan deteksi tautan aktif sub-sidebar dan "
+"ID item unik."
+
+msgid ""
+"Extension tests now use contrib.core examples instead of CRM-specific "
+"modules. Added centralized sanitize_html and sanitize_plain_text helpers "
+"with bleach CSS allowlisting, Summernote DOMPurify mirroring, CSV/XLSX cell "
+"sanitization against formula injection, and notification template XSS "
+"sanitization with validation-error field clearing. Fixed generics Select2 "
+"edit-mode FK filtering by loading parent instances via all_objects and "
+"scoping request.active_company to the record tenant; fixed navbar search "
+"losing focus by removing hx-select-oob/hx-preserve. Core: restricted login "
+"history to the current user, improved role empty state, refined User and "
+"RegionalFormatting forms, showed company on ChangeUserCompanyForm, debounced"
+" saveActiveTab for SQLite, and rendered readable user-agent details in login"
+" history. Registered static, i18n, and horilla_tags as template builtins."
+msgstr ""
+"Pengujian ekstensi sekarang menggunakan contoh contrib.core, bukan modul "
+"khusus CRM.Menambahkan pembantu sanitize_html dan sanitize_plain_text "
+"terpusat dengan daftar izin CSS pemutih, pencerminan Summernote DOMPurify, "
+"sanitasi sel CSV/XLSX terhadap injeksi formula, dan sanitasi templat "
+"pemberitahuan XSS dengan pembersihan bidang kesalahan validasi.Memperbaiki "
+"pemfilteran FK mode edit Select2 generik dengan memuat instans induk melalui"
+" all_objects dan pelingkupan request.active_company ke penyewa "
+"rekaman;memperbaiki pencarian navbar yang kehilangan fokus dengan menghapus "
+"hx-select-oob/hx-preserve.Inti: membatasi riwayat login untuk pengguna saat "
+"ini, meningkatkan status kosong peran, menyempurnakan formulir Pengguna dan "
+"RegionalFormatting, menunjukkan perusahaan di ChangeUserCompanyForm, "
+"membatalkan saveActiveTab untuk SQLite, dan memberikan detail agen pengguna "
+"yang dapat dibaca dalam riwayat login.Statis terdaftar, i18n, dan "
+"horilla_tags sebagai templat bawaan."
+
+msgid ""
+"Expanded extension framework with _inherit_form, _inherit_list, "
+"_inherit_card, _inherit_filter, _inherit_nav, _inherit_kanban, and "
+"_inherit_detail composition with caching and per-request resolution. "
+"Introduced PhoneWidget and PhoneField for international phone numbers. Fixed"
+" generics bulk-delete Prefetch slicing, action button text wrapping, and "
+"HolidayForm user-selection defaults. Centralized horilla.db transaction and "
+"connection imports and standardized first-party import groups."
+msgstr ""
+"Kerangka ekstensi yang diperluas dengan komposisi _inherit_form, "
+"_inherit_list, _inherit_card, _inherit_filter, _inherit_nav, "
+"_inherit_kanban, dan _inherit_detail dengan caching dan resolusi per "
+"permintaan.Memperkenalkan PhoneWidget dan PhoneField untuk nomor telepon "
+"internasional.Memperbaiki pemotongan Prefetch penghapusan massal generik, "
+"pembungkusan teks tombol tindakan, dan default pilihan pengguna "
+"HolidayForm.Transaksi horilla.db terpusat dan impor koneksi serta grup impor"
+" pihak pertama yang terstandarisasi."
+
+msgid ""
+"Custom CSRF failure view and csrf_failure.html for DEBUG=False. CSRF "
+"protection restored on state-mutating stage and calendar-preference views. "
+"FiscalYear, RegionalFormatting, Company, and User forms switched to "
+"fields=\"__all__\" with field_order and keep_on_form so HorillaModelForm "
+"base fields are no longer dropped, with sensitive user fields excluded. "
+"Business Hour add-button hides without reload, and "
+"BusinessHourHolidayModalView is guarded for deleted records. Generics skip "
+"M2M relations in bulk-delete to avoid ProtectedError and add cursor-pointer "
+"to note, attachment, and related-list actions. Added horilla.utils.timezone "
+"and horilla.db.models.signals shims, standardized first-party import groups,"
+" and broad docstring coverage for pylint compliance."
+msgstr ""
+"Tampilan kegagalan CSRF khusus dan csrf_failure.html untuk "
+"DEBUG=False.Perlindungan CSRF dipulihkan pada tampilan tahapan mutasi negara"
+" dan preferensi kalender.Formulir Tahun Fiskal, RegionalFormatting, "
+"Perusahaan, dan Pengguna dialihkan ke field=\"__all__\" dengan field_order "
+"dan keep_on_form sehingga bidang dasar HorillaModelForm tidak lagi dihapus, "
+"dengan bidang pengguna yang sensitif dikecualikan.Tombol tambahan Jam Bisnis"
+" disembunyikan tanpa memuat ulang, dan BusinessHourHolidayModalView "
+"dilindungi dari catatan yang dihapus.Generik melewatkan relasi M2M dalam "
+"penghapusan massal untuk menghindari ProtectedError dan menambahkan penunjuk"
+" kursor ke tindakan catatan, lampiran, dan daftar terkait.Menambahkan shim "
+"horilla.utils.timezone dan horilla.db.models.signals, grup impor pihak "
+"pertama yang terstandarisasi, dan cakupan dokumen yang luas untuk kepatuhan "
+"pylint."
+
+msgid ""
+"Workflow automation engine (rules, conditions, actions, Celery time "
+"triggers, execution history). Public booking platform with slots, public "
+"pages, reminders, and booking/activity integration. ERP-style _inherit model"
+" extensions with InjectField and extension-owned migrations. ShiftHour "
+"scheduling and BusinessHour enhancements with holiday support. HTMX-first "
+"UX, multi-step form refactors, django-countries subdivisions, permission "
+"inheritance fixes, activity/booking mail templates, and Django 6.0 generics "
+"stability improvements."
+msgstr ""
+"Mesin otomatisasi alur kerja (aturan, ketentuan, tindakan, pemicu waktu "
+"seledri, riwayat eksekusi).Platform pemesanan publik dengan slot, halaman "
+"publik, pengingat, dan integrasi pemesanan/aktivitas.Ekstensi model _inherit"
+" bergaya ERP dengan InjectField dan migrasi milik ekstensi.Penjadwalan "
+"ShiftHour dan penyempurnaan BusinessHour dengan dukungan hari libur.UX "
+"pertama HTMX, pemfaktoran ulang formulir multi-langkah, subdivisi negara "
+"Django, perbaikan pewarisan izin, templat email aktivitas/pemesanan, dan "
+"peningkatan stabilitas generik Django 6.0."
+
+msgid ""
+"Meeting Integration contrib app (Zoom/Teams OAuth, meeting links, activity "
+"hooks). Generics export and JSONField display improvements. My Profile panel"
+" scrolls within a fixed viewport. Calendar Google settings respect active "
+"company on POST. Scheduled automations use corrected Celery task paths."
+msgstr ""
+"Aplikasi kontribusi Integrasi Rapat (Zoom/Teams OAuth, tautan rapat, kait "
+"aktivitas).Ekspor generik dan peningkatan tampilan JSONField.Panel Profil "
+"saya bergulir dalam area pandang tetap.Pengaturan Kalender Google "
+"menghormati perusahaan yang aktif di POST.Otomatisasi terjadwal menggunakan "
+"jalur tugas Seledri yang diperbaiki."
+
+msgid ""
+"Major platform 1.10 layout: support apps consolidated under the contrib "
+"namespace with short Django app labels (activity, core, mail, theme, and "
+"related modules). AppLauncher configs, imports, URL namespaces, static "
+"paths, and permission or content-type strings updated to match the new "
+"labels. Added sync tooling to align migration records, content types, audit "
+"log references, and related data when upgrading existing databases."
+msgstr ""
+"Tata letak platform utama 1.10: mendukung aplikasi yang dikonsolidasikan di "
+"bawah ruang nama contrib dengan label aplikasi Django pendek (aktivitas, "
+"inti, email, tema, dan modul terkait).Konfigurasi AppLauncher, impor, ruang "
+"nama URL, jalur statis, dan string izin atau tipe konten diperbarui agar "
+"sesuai dengan label baru.Menambahkan alat sinkronisasi untuk menyelaraskan "
+"catatan migrasi, tipe konten, referensi log audit, dan data terkait saat "
+"memutakhirkan database yang ada."
+
+msgid ""
+"Added Google Calendar integration with sync, service, and settings support. "
+"Implemented cadence signals for runtime activities. Centralized HorillaView "
+"layout resolution with get_layout_url() for backend-driven layout selection."
+msgstr ""
+"Menambahkan integrasi Google Kalender dengan dukungan sinkronisasi, layanan,"
+" dan pengaturan.Sinyal irama yang diterapkan untuk aktivitas "
+"runtime.Resolusi tata letak HorillaView terpusat dengan get_layout_url() "
+"untuk pemilihan tata letak berbasis backend."
+
+msgid ""
+"Switched Channels backend from InMemoryChannelLayer to RedisChannelLayer. "
+"Moved Holiday model to dedicated holidays.py. Improved branch list layout, "
+"business hour and holiday bulk select, and viewport-based table heights. "
+"Added SECURITY.md documentation."
+msgstr ""
+"Mengalihkan backend Saluran dari InMemoryChannelLayer ke "
+"RedisChannelLayer.Memindahkan model Liburan ke holiday.py khusus.Peningkatan"
+" tata letak daftar cabang, pemilihan massal jam kerja dan hari libur, serta "
+"ketinggian tabel berbasis area pandang.Menambahkan dokumentasi SECURITY.md."
+
+msgid ""
+"Introduced unified Process Builder system combining reviews and approvals. "
+"Added async notification and mail handling with background thread execution."
+" Improved health check endpoint and version changelog modal system. Updated "
+"assign_first_company_to_all_users signal to use User model directly."
+msgstr ""
+"Memperkenalkan sistem Pembangun Proses terpadu yang menggabungkan tinjauan "
+"dan persetujuan.Menambahkan notifikasi async dan penanganan email dengan "
+"eksekusi thread latar belakang.Peningkatan titik akhir pemeriksaan kesehatan"
+" dan sistem modal changelog versi.Memperbarui sinyal "
+"Assign_first_company_to_all_users untuk menggunakan model Pengguna secara "
+"langsung."
+
+msgid ""
+"Strengthened core validation with strict enforcement of include_models "
+"during feature registration, validation of subsection-to-section mappings, "
+"and export of StreamingHttpResponse via Horilla HTTP utilities."
+msgstr ""
+"Validasi inti yang diperkuat dengan penerapan ketat include_models selama "
+"pendaftaran fitur, validasi pemetaan subbagian ke bagian, dan ekspor "
+"StreamingHttpResponse melalui utilitas HTTP Horilla."
+
+msgid ""
+"Added health check endpoint, synced fiscal year and period logic, improved "
+"version changelog modal system, and switched Django Channels backend to "
+"Redis for better performance and reliability."
+msgstr ""
+"Menambahkan titik akhir pemeriksaan kesehatan, menyinkronkan tahun fiskal "
+"dan logika periode, meningkatkan sistem modal log perubahan versi, dan "
+"mengalihkan backend Saluran Django ke Redis untuk kinerja dan keandalan yang"
+" lebih baik."
+
+msgid ""
+"Improved global search model registry loading, standardized error handling "
+"with dedicated 403, 404, 405, and 500 templates, strengthened authentication"
+" flow using Django authenticate(), and applied multiple security and "
+"stability improvements across internal views."
+msgstr ""
+"Peningkatan pemuatan registri model pencarian global, penanganan kesalahan "
+"standar dengan templat 403, 404, 405, dan 500 khusus, memperkuat aliran "
+"otentikasi menggunakan Django authenticate(), dan menerapkan beberapa "
+"peningkatan keamanan dan stabilitas di seluruh tampilan internal."
+
+msgid ""
+"Introduced the Horilla AppLauncher system for dynamic application "
+"registration. Added horilla.shortcuts, horilla.urls, and horilla.utils "
+"utilities. Refactored project URL handling and improved internal framework "
+"architecture for modular applications."
+msgstr ""
+"Memperkenalkan sistem Horilla AppLauncher untuk pendaftaran aplikasi "
+"dinamis.Menambahkan utilitas horilla.shortcuts, horilla.urls, dan "
+"horilla.utils.Penanganan URL proyek yang difaktorkan ulang dan arsitektur "
+"kerangka kerja internal yang ditingkatkan untuk aplikasi modular."
+
+msgid ""
+"Improved system configuration handling, strengthened dashboard layout "
+"validation, enhanced filter processing reliability, and added multiple "
+"defensive validation improvements across core components."
+msgstr ""
+"Peningkatan penanganan konfigurasi sistem, penguatan validasi tata letak "
+"dasbor, peningkatan keandalan pemrosesan filter, dan penambahan beberapa "
+"peningkatan validasi defensif di seluruh komponen inti."
+
+msgid ""
+"Added an 'All Companies' option to the company dropdown, allowing users to "
+"view data irrespective of company selection."
+msgstr ""
+"Menambahkan opsi 'Semua Perusahaan' ke dropdown perusahaan, memungkinkan "
+"pengguna melihat data apa pun pilihan perusahaannya."
+
+msgid "Users"
+msgstr "Pengguna"
+
+msgid "e.g. US Business Hours"
+msgstr "misalnyaJam Kerja AS"
+
+msgid "Start"
+msgstr "Awal"
+
+msgid "End"
+msgstr "Akhir"
+
+msgid "You can only add one business hour per company."
+msgstr "Anda hanya dapat menambahkan satu jam kerja per perusahaan."
+
+msgid "You can select a maximum of 5 days for 24x5 business hours."
+msgstr "Anda dapat memilih maksimal 5 hari untuk jam kerja 24x5."
+
+msgid "Date Time Format"
+msgstr "Format Tanggal Waktu"
+
+msgid "Language and Time Zone"
+msgstr "Bahasa dan Zona Waktu"
+
+msgid "Currency"
+msgstr "Mata uang"
+
+msgid "Enter current password"
+msgstr "Masukkan kata sandi saat ini"
+
+msgid "Current Password"
+msgstr "Kata Sandi Saat Ini"
+
+msgid "Enter new password"
+msgstr "Masukkan kata sandi baru"
+
+msgid "New Password"
+msgstr "Kata Sandi Baru"
+
+msgid "Confirm your password"
+msgstr "Konfirmasikan kata sandi Anda"
+
+msgid "Confirm New Password"
+msgstr "Konfirmasi Kata Sandi Baru"
+
+msgid "Current password is incorrect."
+msgstr "Kata sandi saat ini salah."
+
+msgid "Confirm password and new password must be match"
+msgstr "Konfirmasi kata sandi dan kata sandi baru harus sesuai"
+
+msgid "New password must be different from current password."
+msgstr "Kata sandi baru harus berbeda dengan kata sandi saat ini."
+
+msgid "Select a currency"
+msgstr "Pilih mata uang"
+
+msgid "New Currency"
+msgstr "Mata Uang Baru"
+
+msgid "Select a new default currency"
+msgstr "Pilih mata uang default baru"
+
+msgid "Change Default Currency"
+msgstr "Ubah Mata Uang Default"
+
+msgid "Start Date"
+msgstr "Tanggal Mulai"
+
+msgid "Effective date for these conversion rates"
+msgstr "Tanggal efektif untuk tingkat konversi ini"
+
+msgid "Select one or more users to assign to the role."
+msgstr "Pilih satu atau beberapa pengguna untuk ditetapkan ke peran tersebut."
+
+msgid "The following user(s) are already assigned to this role"
+msgstr "Pengguna berikut telah ditetapkan untuk peran ini"
+
+msgid "Select one or more users to grant superuser privileges."
+msgstr "Pilih satu atau lebih pengguna untuk memberikan hak pengguna super."
+
+#, python-brace-format
+msgid "The following user(s) are already superusers: {users}"
+msgstr "Pengguna berikut sudah menjadi pengguna super:{users}"
+
+msgid "Mon"
+msgstr "Senin"
+
+msgid "Tue"
+msgstr "Selasa"
+
+msgid "Wed"
+msgstr "Menikahi"
+
+msgid "Thu"
+msgstr "Kam"
+
+msgid "Fri"
+msgstr "Jumat"
+
+msgid "Sat"
+msgstr "Duduk"
+
+msgid "Sun"
+msgstr "Matahari"
+
+msgid "B1"
+msgstr "B1"
+
+msgid "B2"
+msgstr "B2"
+
+msgid ""
+"Uses 24-hour time: morning stays 01:00–12:59; 5:30 PM is 17:30 (not 05:30, "
+"which is 5:30 AM)."
+msgstr ""
+"Menggunakan waktu 24 jam: menginap pagi hari pukul 01:00–12:59;17.30 adalah "
+"17.30 (bukan 05.30, yaitu 05.30)."
+
+msgid ""
+"End time must be after start on the same day. Use 24-hour time (for example "
+"5:30 PM as 17:30, not 05:30)."
+msgstr ""
+"Waktu berakhir harus setelah dimulainya pada hari yang sama.Gunakan waktu 24"
+" jam (misalnya 17:30 sebagai 17:30, bukan 05:30)."
+
+msgid "e.g. US Shift, APAC Support"
+msgstr "misalnyaPergeseran AS, Dukungan APAC"
+
+msgid "Shift name"
+msgstr "Pergeseran nama"
+
+msgid "- start"
+msgstr "- awal"
+
+msgid "- end"
+msgstr "- akhir"
+
+#, python-format
+msgid "%(slot)s %(day)s%(tail)s"
+msgstr "%(slot)s%(day)s%(tail)s"
+
+#, python-format
+msgid "You can define at most %(limit)s shift hours per company."
+msgstr "Anda dapat menentukan maksimal%(limit)sjam shift per perusahaan."
+
+msgid "Select at least one weekday for the shift."
+msgstr "Pilih setidaknya satu hari kerja untuk shift tersebut."
+
+msgid "Start and end time are required when using the same hours every day."
+msgstr ""
+"Waktu mulai dan berakhir diperlukan bila menggunakan jam yang sama setiap "
+"hari."
+
+msgid "Set start and end times for at least one weekday for the shift."
+msgstr ""
+"Tetapkan waktu mulai dan berakhir setidaknya satu hari kerja untuk shift "
+"tersebut."
+
+msgid "Start and end are required for each selected shift day."
+msgstr "Awal dan akhir wajib diisi untuk setiap hari shift yang dipilih."
+
+msgid "Enter start and end for at least one break day."
+msgstr "Masukkan awal dan akhir untuk setidaknya satu hari istirahat."
+
+msgid "Select at least one weekday for this break."
+msgstr "Pilih setidaknya satu hari kerja untuk istirahat ini."
+
+msgid "Break days must be among the shift working days."
+msgstr "Hari istirahat harus berada di antara hari kerja shift."
+
+msgid "Break start and end are required for this mode."
+msgstr "Istirahat awal dan akhir diperlukan untuk mode ini."
+
+msgid ""
+"Break end must be after break start. Use 24-hour time (5:30 PM is 17:30, not"
+" 05:30)."
+msgstr ""
+"Istirahat akhir harus dilakukan setelah istirahat dimulai.Gunakan waktu 24 "
+"jam (17.30 adalah 17.30, bukan 05.30)."
+
+#, python-format
+msgid "Break on %(day)s must fall within the shift hours for that day."
+msgstr "Istirahat pada%(day)sharus jatuh pada jam shift hari itu."
+
+msgid "Invalid break time format."
+msgstr "Format waktu istirahat tidak valid."
+
+msgid "A user with this email already exists."
+msgstr "Pengguna dengan email ini sudah ada."
+
+msgid "Password"
+msgstr "Kata sandi"
+
+msgid "Enter a secure password"
+msgstr "Masukkan kata sandi yang aman"
+
+msgid "Confirm Password"
+msgstr "Konfirmasi Kata Sandi"
+
+msgid "Enter the same password again for verification"
+msgstr "Masukkan kata sandi yang sama lagi untuk verifikasi"
+
+msgid "Enter username"
+msgstr "Masukkan nama pengguna"
+
+msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr "Diperlukan.150 karakter atau kurang.Hanya huruf, angka dan @/./+/-/_."
+
+msgid "Leave blank to keep current password"
+msgstr "Biarkan kosong untuk menyimpan kata sandi saat ini"
+
+msgid "Username is required."
+msgstr "Nama pengguna diperlukan."
+
+msgid "A user with this username already exists."
+msgstr "Pengguna dengan nama pengguna ini sudah ada."
+
+msgid "The two password fields must match."
+msgstr "Kedua bidang kata sandi harus cocok."
+
+msgid "Password is required for new users."
+msgstr "Kata sandi diperlukan untuk pengguna baru."
+
+msgid "Profile"
+msgstr "Profil"
+
+msgid "Regional & Formatting"
+msgstr "Regional & Pemformatan"
+
+msgid "Change Password"
+msgstr "Ubah Kata Sandi"
+
+msgid "Login History"
+msgstr "Riwayat Masuk"
+
+msgid "Holiday"
+msgstr "Hari libur"
+
+msgid "General"
+msgstr "Umum"
+
+msgid "Company Information"
+msgstr "Informasi Perusahaan"
+
+msgid "Roles and Permissions"
+msgstr "Peran dan Izin"
+
+msgid "Base"
+msgstr "Basis"
+
+msgid "Branches"
+msgstr "Cabang"
+
+msgid "Data Mangement"
+msgstr "Manajemen Data"
+
+msgid "Import Data"
+msgstr "Impor Data"
+
+msgid "Export Data"
+msgstr "Ekspor Data"
+
+msgid "Recycle Bin"
+msgstr "Tempat Sampah"
+
+msgid "About System"
+msgstr "Tentang Sistem"
+
+msgid "Version Info"
+msgstr "Info Versi"
+
+msgid "Integrations"
+msgstr "Integrasi"
+
+msgid "Title"
+msgstr "Judul"
+
+msgid "Related Object Type"
+msgstr "Jenis Objek Terkait"
+
+msgid "The type of object this attachment is related to."
+msgstr "Jenis objek yang terkait dengan lampiran ini."
+
+msgid "Related Object ID"
+msgstr "ID Objek Terkait"
+
+msgid "The ID of the object this attachment is related to."
+msgstr "ID objek yang terkait dengan lampiran ini."
+
+msgid "File"
+msgstr "Mengajukan"
+
+msgid "Optional file attached to this record."
+msgstr "File opsional terlampir pada catatan ini."
+
+msgid "Notes"
+msgstr "Catatan"
+
+msgid "Optional description or notes about the attachment."
+msgstr "Deskripsi atau catatan opsional tentang lampiran."
+
+msgid "Attachment"
+msgstr "Lampiran"
+
+msgid "Attachments"
+msgstr "Lampiran"
+
+msgid "Model"
+msgstr "Model"
+
+msgid "Models"
+msgstr "Model"
+
+msgid "Company Name"
+msgstr "Nama perusahaan"
+
+msgid "Email Address"
+msgstr "Alamat Surel"
+
+msgid "Website"
+msgstr "Situs web"
+
+msgid "Company Icon"
+msgstr "Ikon Perusahaan"
+
+msgid "Contact Number"
+msgstr "Nomor Kontak"
+
+msgid "Fax Number"
+msgstr "Nomor Faks"
+
+msgid "Annual Revenue"
+msgstr "Pendapatan Tahunan"
+
+msgid "Number of Employees"
+msgstr "Jumlah karyawan"
+
+msgid "Head Quarter"
+msgstr "Kantor Pusat"
+
+msgid "Country"
+msgstr "Negara"
+
+msgid "State/Province"
+msgstr "Negara Bagian/Provinsi"
+
+msgid "City"
+msgstr "Kota"
+
+msgid "ZIP/Postal Code"
+msgstr "ZIP/Kode Pos"
+
+msgid "Language"
+msgstr "Bahasa"
+
+msgid "Time Zone"
+msgstr "Zona Waktu"
+
+msgid "Select your preferred currency"
+msgstr "Pilih mata uang pilihan Anda"
+
+msgid "Select your preferred time format."
+msgstr "Pilih format waktu pilihan Anda."
+
+msgid "Time Format"
+msgstr "Format Waktu"
+
+msgid "Select your preferred date format."
+msgstr "Pilih format tanggal pilihan Anda."
+
+msgid "Date Format"
+msgstr "Format Tanggal"
+
+msgid "Select your preferred date time format."
+msgstr "Pilih format waktu tanggal pilihan Anda."
+
+msgid "Activate Multiple Currencies"
+msgstr "Aktifkan Banyak Mata Uang"
+
+msgid "Created At"
+msgstr "Dibuat Pada"
+
+msgid "Updated At"
+msgstr "Diperbarui Pada"
+
+msgid "Created By"
+msgstr "Dibuat Oleh"
+
+msgid "Updated By"
+msgstr "Diperbarui Oleh"
+
+msgid "Branch"
+msgstr "Cabang"
+
+msgid "Is Active"
+msgstr "Aktif"
+
+msgid "Additional Info"
+msgstr "Info Tambahan"
+
+msgid "Company"
+msgstr "Perusahaan"
+
+msgid "Monday Start Time"
+msgstr "Waktu Mulai Senin"
+
+msgid "Monday End Time"
+msgstr "Senin Waktu Berakhir"
+
+msgid "Tuesday Start Time"
+msgstr "Selasa Waktu Mulai"
+
+msgid "Tuesday End Time"
+msgstr "Selasa Waktu Berakhir"
+
+msgid "Wednesday Start Time"
+msgstr "Rabu Waktu Mulai"
+
+msgid "Wednesday End Time"
+msgstr "Rabu Waktu Berakhir"
+
+msgid "Thursday Start Time"
+msgstr "Waktu Mulai Kamis"
+
+msgid "Thursday End Time"
+msgstr "Kamis Waktu Berakhir"
+
+msgid "Friday Start Time"
+msgstr "Waktu Mulai Jumat"
+
+msgid "Friday End Time"
+msgstr "Waktu Berakhir Jumat"
+
+msgid "Saturday Start Time"
+msgstr "Waktu Mulai Sabtu"
+
+msgid "Saturday End Time"
+msgstr "Sabtu Waktu Berakhir"
+
+msgid "Sunday Start Time"
+msgstr "Waktu Mulai Minggu"
+
+msgid "Sunday End Time"
+msgstr "Waktu Berakhir Minggu"
+
+msgid "24 Hours x 7 days"
+msgstr "24 Jam x 7 hari"
+
+msgid "24 Hours x 5 days"
+msgstr "24 Jam x 5 hari"
+
+msgid "Custom Hours"
+msgstr "Jam Khusus"
+
+msgid "Name"
+msgstr "Nama"
+
+msgid "Type of business hours"
+msgstr "Jenis jam kerja"
+
+msgid "Business Hour Type"
+msgstr "Jenis Jam Kerja"
+
+msgid "Week Start Day"
+msgstr "Hari Awal Minggu"
+
+msgid "Week Days"
+msgstr "Hari Minggu"
+
+msgid "Same hours every day or different hours per day"
+msgstr "Jam yang sama setiap hari atau jam yang berbeda setiap hari"
+
+msgid "Timing Type"
+msgstr "Jenis Waktu"
+
+msgid "Default start time"
+msgstr "Waktu mulai bawaan"
+
+msgid "Default Start Time"
+msgstr "Waktu Mulai Default"
+
+msgid "Default end time"
+msgstr "Waktu berakhir default"
+
+msgid "Default End Time"
+msgstr "Waktu Berakhir Default"
+
+msgid "Default Business Hour"
+msgstr "Jam Kerja Default"
+
+msgid "Is Default"
+msgstr "Apakah Bawaan"
+
+msgid "Holidays"
+msgstr "Hari libur"
+
+msgid "Company holidays associated with this business hour schedule."
+msgstr "Hari libur perusahaan yang terkait dengan jadwal jam kerja ini."
+
+msgid "Business Hour"
+msgstr "Jam Kerja"
+
+msgid "Business Hours"
+msgstr "Jam Kerja"
+
+msgid "Closed"
+msgstr "Tertutup"
+
+msgid "None"
+msgstr "Tidak ada"
+
+msgid "24 hours"
+msgstr "24 jam"
+
+msgid "No break hours"
+msgstr "Tidak ada jam istirahat"
+
+msgid "Same hours every day"
+msgstr "Jam yang sama setiap hari"
+
+msgid "Different hours every day"
+msgstr "Jam berbeda setiap harinya"
+
+msgid "Shift Hours"
+msgstr "Jam Shift"
+
+msgid "Break Hours 1"
+msgstr "Jam Istirahat 1"
+
+msgid "Break 1 Default Start"
+msgstr "Hancurkan 1 Awal Default"
+
+msgid "Break 1 Default End"
+msgstr "Hancurkan 1 Akhir Default"
+
+msgid "Per-day break times when mode is \"different\" (mon..sun keys)."
+msgstr "Waktu istirahat per hari ketika mode \"berbeda\" (tombol mon..sun)."
+
+msgid "Break 1 Per-Day Times"
+msgstr "Istirahat 1 Kali Per Hari"
+
+msgid "Break Hours 2"
+msgstr "Jam Istirahat 2"
+
+msgid "Break 2 Default Start"
+msgstr "Hancurkan 2 Awal Default"
+
+msgid "Break 2 Default End"
+msgstr "Hancurkan 2 Akhir Default"
+
+msgid "Break 2 Per-Day Times"
+msgstr "Istirahat 2 Kali Per Hari"
+
+msgid "Assigned Users"
+msgstr "Pengguna yang Ditugaskan"
+
+msgid "Shift Hour"
+msgstr "Jam Shift"
+
+msgid "Yes"
+msgstr "Ya"
+
+msgid "No"
+msgstr "TIDAK"
+
+msgid "Same (incomplete)"
+msgstr "Sama (tidak lengkap)"
+
+msgid "Different per day"
+msgstr "Berbeda setiap harinya"
+
+msgid "Kanban"
+msgstr "Kanban"
+
+msgid "Group By"
+msgstr "Kelompokkan Berdasarkan"
+
+msgid "Column User"
+msgstr "Pengguna Kolom"
+
+msgid "Name of the model (e.g., 'User') to group by."
+msgstr "Nama model (misalnya, 'Pengguna') yang akan dikelompokkan."
+
+msgid "Whether this setting is for Kanban view or Group By view."
+msgstr ""
+"Apakah pengaturan ini untuk tampilan Kanban atau tampilan Kelompokkan "
+"Berdasarkan."
+
+msgid ""
+"Name of the field that can be used for grouping (ChoiceField or ForeignKey)."
+msgstr ""
+"Nama bidang yang dapat digunakan untuk pengelompokan (ChoiceField atau "
+"ForeignKey)."
+
+msgid "User"
+msgstr "Pengguna"
+
+msgid "Model name for which timeline span fields apply."
+msgstr "Nama model yang bidang rentang garis waktunya berlaku."
+
+msgid "Field used as bar start date."
+msgstr "Bidang yang digunakan sebagai bar tanggal mulai."
+
+msgid "Field used as bar end date (may equal start for single-day bars)."
+msgstr ""
+"Bidang yang digunakan sebagai tanggal akhir bilah (mungkin sama dengan "
+"tanggal awal untuk bilah satu hari)."
+
+#, python-format
+msgid "'%(field)s' is not a valid date field for this model."
+msgstr "'%(field)s' bukan kolom tanggal yang valid untuk model ini."
+
+msgid "Timeline Span Settings"
+msgstr "Pengaturan Rentang Garis Waktu"
+
+msgid "When set, this filter is available to all users in this list/position."
+msgstr ""
+"Jika disetel, filter ini tersedia untuk semua pengguna di daftar/posisi ini."
+
+msgid "conversion rate from default currency"
+msgstr "tingkat konversi dari mata uang default"
+
+msgid "Conversion Rate"
+msgstr "Tingkat Konversi"
+
+msgid "Decimal Places"
+msgstr "Tempat Desimal"
+
+msgid "Default Currency"
+msgstr "Mata Uang Default"
+
+msgid "Mark this currency as the default for the system"
+msgstr "Tandai mata uang ini sebagai default untuk sistem"
+
+msgid "Multiple Currency"
+msgstr "Banyak Mata Uang"
+
+msgid "Multiple Currencies"
+msgstr "Berbagai Mata Uang"
+
+msgid "Conversion rate from default currency"
+msgstr "Tingkat konversi dari mata uang default"
+
+msgid "The date from which this conversion rate is effective"
+msgstr "Tanggal mulai berlakunya tingkat konversi ini"
+
+msgid "Dated Conversion Rate"
+msgstr "Tingkat Konversi Tanggal"
+
+msgid "Dated Conversion Rates"
+msgstr "Tingkat Konversi Tanggal"
+
+msgid "Standard Fiscal Year"
+msgstr "Tahun Anggaran Standar"
+
+msgid "Custom Fiscal Year"
+msgstr "Tahun Anggaran Khusus"
+
+msgid "Fiscal Year Type"
+msgstr "Jenis Tahun Anggaran"
+
+msgid "Year Based"
+msgstr "Berdasarkan Tahun"
+
+msgid "Quarter Based"
+msgstr "Berbasis Kuartal"
+
+msgid "Format"
+msgstr "Format"
+
+msgid ""
+"4-4-5 In each quarter, Period 1 has 4 weeks, Period 2 has 4 weeks, Period 3 "
+"has 5 weeks"
+msgstr ""
+"4-4-5 Tiap triwulan, Periode 1 4 minggu, Periode 2 4 minggu, Periode 3 5 "
+"minggu"
+
+msgid ""
+"4-5-4 In each quarter, Period 1 has 4 weeks, Period 2 has 5 weeks, Period 3 "
+"has 4 weeks"
+msgstr ""
+"4-5-4 Tiap triwulan, Periode 1 4 minggu, Periode 2 5 minggu, Periode 3 4 "
+"minggu"
+
+msgid ""
+"5-4-4 In each quarter, Period 1 has 5 weeks, Period 2 has 4 weeks, Period 3 "
+"has 4 weeks"
+msgstr ""
+"5-4-4 Tiap triwulan, Periode 1 5 minggu, Periode 2 4 minggu, Periode 3 4 "
+"minggu"
+
+msgid "Quarter Based Format"
+msgstr "Format Berbasis Kuartal"
+
+msgid ""
+"3-3-3-4 Quarter 1 has 3 Periods, Quarter 2 has 3 Periods, Quarter 3 has 3 "
+"Periods, Quarter 4 has 4 Periods"
+msgstr ""
+"3-3-3-4 Kuartal 1 ada 3 Periode, Kuartal 2 ada 3 Periode, Kuartal 3 ada 3 "
+"Periode, Kuartal 4 ada 4 Periode"
+
+msgid ""
+"3-3-4-3 Quarter 1 has 3 Periods, Quarter 2 has 3 Periods, Quarter 3 has 4 "
+"Periods, Quarter 4 has 3 Periods"
+msgstr ""
+"3-3-4-3 Kuartal 1 ada 3 Periode, Kuartal 2 ada 3 Periode, Kuartal 3 ada 4 "
+"Periode, Kuartal 4 ada 3 Periode"
+
+msgid ""
+"3-4-3-3 Quarter 1 has 3 Periods, Quarter 2 has 4 Periods, Quarter 3 has 3 "
+"Periods, Quarter 4 has 3 Periods"
+msgstr ""
+"3-4-3-3 Kuartal 1 ada 3 Periode, Kuartal 2 ada 4 Periode, Kuartal 3 ada 3 "
+"Periode, Kuartal 4 ada 3 Periode"
+
+msgid ""
+"4-3-3-3 Quarter 1 has 4 Periods, Quarter 2 has 3 Periods, Quarter 3 has 3 "
+"Periods, Quarter 4 has 3 Periods"
+msgstr ""
+"4-3-3-3 Kuartal 1 ada 4 Periode, Kuartal 2 ada 3 Periode, Kuartal 3 ada 3 "
+"Periode, Kuartal 4 ada 3 Periode"
+
+msgid "Year Based Format"
+msgstr "Format Berbasis Tahun"
+
+msgid "Start Date Month"
+msgstr "Tanggal Mulai Bulan"
+
+msgid "Start Date Day"
+msgstr "Tanggal Mulai Hari"
+
+msgid "Starting Year"
+msgstr "Tahun Awal"
+
+msgid "Ending Year"
+msgstr "Tahun Berakhir"
+
+msgid "Display Fiscal Year Based On"
+msgstr "Menampilkan Tahun Anggaran Berdasarkan"
+
+msgid "Year"
+msgstr "Tahun"
+
+msgid "Quarter"
+msgstr "Seperempat"
+
+msgid "Period"
+msgstr "Periode"
+
+msgid "Number Weeks By"
+msgstr "Jumlah Minggu Oleh"
+
+msgid "Number by Year"
+msgstr "Nomor per Tahun"
+
+msgid "Number by Quarter"
+msgstr "Jumlah per Kuartal"
+
+msgid "Period Display Option"
+msgstr "Opsi Tampilan Periode"
+
+msgid "Fiscal Year"
+msgstr "Tahun Anggaran"
+
+msgid "Fiscal Years"
+msgstr "Tahun Anggaran"
+
+msgid "Fiscal Year Configuration"
+msgstr "Konfigurasi Tahun Anggaran"
+
+msgid "End Date"
+msgstr "Tanggal Berakhir"
+
+msgid "Fiscal Year Name"
+msgstr "Nama Tahun Anggaran"
+
+msgid "Is Current"
+msgstr "Apakah Terkini"
+
+msgid "Fiscal Year Instance"
+msgstr "Contoh Tahun Anggaran"
+
+msgid "Fiscal Year Instances"
+msgstr "Contoh Tahun Anggaran"
+
+msgid "Quarter Name"
+msgstr "Nama Kuartal"
+
+msgid "Quarter Number"
+msgstr "Nomor Seperempat"
+
+msgid "Quarters"
+msgstr "Perempat"
+
+msgid "Period Name"
+msgstr "Nama Periode"
+
+msgid "Period Number"
+msgstr "Nomor Periode"
+
+msgid "Periods"
+msgstr "Periode"
+
+msgid "Weekly"
+msgstr "Mingguan"
+
+msgid "Monthly"
+msgstr "Bulanan"
+
+msgid "Yearly"
+msgstr "Tahunan"
+
+msgid "On Day"
+msgstr "Pada Hari"
+
+msgid "On the"
+msgstr "Di"
+
+msgid "On every"
+msgstr "Pada setiap"
+
+msgid "Holiday Name"
+msgstr "Nama Liburan"
+
+msgid "All Users"
+msgstr "Semua Pengguna"
+
+msgid "Specific Users"
+msgstr "Pengguna Tertentu"
+
+msgid "Recurring"
+msgstr "Berulang"
+
+msgid "Holiday Frequency"
+msgstr "Frekuensi Liburan"
+
+msgid "Recurs Every (weeks)"
+msgstr "Berulang Setiap (minggu)"
+
+msgid "Weekly Days"
+msgstr "Hari Mingguan"
+
+msgid "Monthly Repeat Type"
+msgstr "Jenis Pengulangan Bulanan"
+
+msgid "Day of Month"
+msgstr "Hari dalam Bulan"
+
+msgid "Monthly Interval"
+msgstr "Interval Bulanan"
+
+msgid "Day of Week"
+msgstr "Hari dalam Seminggu"
+
+msgid "Week of Month"
+msgstr "Minggu Bulan"
+
+msgid "Yearly Repeat Type"
+msgstr "Jenis Pengulangan Tahunan"
+
+msgid "Month"
+msgstr "Bulan"
+
+msgid "Start date cannot be after end date"
+msgstr "Tanggal mulai tidak boleh setelah tanggal akhir"
+
+msgid "Frequency is required for recurring holidays"
+msgstr "Frekuensi diperlukan untuk liburan berulang"
+
+msgid "Weekly days must be specified for weekly recurrence"
+msgstr "Hari mingguan harus ditentukan untuk pengulangan mingguan"
+
+msgid "Recurs every weeks must be at least 1"
+msgstr "Berulang setiap minggu minimal harus 1"
+
+msgid "Day of month is required for monthly recurrence"
+msgstr "Hari dalam sebulan diperlukan untuk pengulangan bulanan"
+
+msgid "Both day of week and week of month are required for monthly recurrence"
+msgstr ""
+"Hari dalam seminggu dan minggu dalam sebulan diperlukan untuk pengulangan "
+"bulanan"
+
+msgid "Please select a valid monthly repeat type"
+msgstr "Silakan pilih jenis pengulangan bulanan yang valid"
+
+msgid "Month is required for yearly recurrence"
+msgstr "Bulan diperlukan untuk pengulangan tahunan"
+
+msgid "Day of month is required for yearly recurrence"
+msgstr "Hari dalam sebulan diperlukan untuk pengulangan tahunan"
+
+msgid "Both week of month and day of week are required for yearly recurrence"
+msgstr ""
+"Minggu dalam bulan dan hari dalam seminggu diperlukan untuk pengulangan "
+"tahunan"
+
+msgid "Please select a valid yearly repeat type"
+msgstr "Silakan pilih jenis pengulangan tahunan yang valid"
+
+msgid "1st"
+msgstr "1"
+
+msgid "2nd"
+msgstr "ke-2"
+
+msgid "3rd"
+msgstr "ke-3"
+
+msgid "4th"
+msgstr "ke-4"
+
+msgid "5th"
+msgstr "tanggal 5"
+
+msgid "One-time holiday"
+msgstr "Liburan satu kali"
+
+msgid "Weekly on {}"
+msgstr "Mingguan pada{}"
+
+msgid "Every {} weeks on {}"
+msgstr "Setiap{}minggu pada{}"
+
+msgid "Monthly on day {}"
+msgstr "Bulanan pada hari{}"
+
+msgid "Every {} months on day {}"
+msgstr "Setiap{}bulan pada hari{}"
+
+msgid "Monthly on {} {} of month"
+msgstr "Bulanan pada{}{}bulan"
+
+msgid "Every {} months on {} {} of month"
+msgstr "Setiap{}bulan pada{}{}setiap bulan"
+
+msgid "Yearly on {} {}"
+msgstr "Setiap tahun pada{}{}"
+
+msgid "Yearly on {} {} of {}"
+msgstr "Tahunan pada{}{}dari{}"
+
+msgid "Custom recurrence"
+msgstr "Pengulangan khusus"
+
+msgid "Can View Global Import"
+msgstr "Dapat Melihat Impor Global"
+
+msgid "Global Import"
+msgstr "Impor Global"
+
+msgid "Processing"
+msgstr "Pengolahan"
+
+msgid "Success"
+msgstr "Kesuksesan"
+
+msgid "Partial Success"
+msgstr "Sukses Parsial"
+
+msgid "Failed"
+msgstr "Gagal"
+
+msgid "Import Name"
+msgstr "Impor Nama"
+
+msgid "Module Name"
+msgstr "Nama Modul"
+
+msgid "App Label"
+msgstr "Label Aplikasi"
+
+msgid "Filename"
+msgstr "Nama file"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Total Counts"
+msgstr "Jumlah Total"
+
+msgid "Success Rate (%)"
+msgstr "Tingkat Keberhasilan (%)"
+
+msgid "Imported File"
+msgstr "File yang Diimpor"
+
+msgid "Error File"
+msgstr "Berkas Kesalahan"
+
+msgid "1=create, 2=update, 3=both"
+msgstr "1=buat, 2=perbarui, 3=keduanya"
+
+msgid "Duration (seconds)"
+msgstr "Durasi (detik)"
+
+msgid "Import History"
+msgstr "Impor Riwayat"
+
+msgid "Import Histories"
+msgstr "Impor Sejarah"
+
+msgid "Can View Global Export"
+msgstr "Dapat Melihat Ekspor Global"
+
+msgid "Global Export"
+msgstr "Ekspor Global"
+
+msgid "Daily"
+msgstr "Sehari-hari"
+
+msgid "List of model names, e.g. ['Employee', 'Department']"
+msgstr "Daftar nama model, mis.['Karyawan', 'Departemen']"
+
+msgid "Modules"
+msgstr "Modul"
+
+msgid ""
+"Dict of {model_name: [field_name, ...]}. Empty/missing entries export all "
+"exportable fields for that model."
+msgstr ""
+"Dikte {nama_model: [nama_bidang, ...]}.Entri yang kosong/hilang mengekspor "
+"semua bidang yang dapat diekspor untuk model itu."
+
+msgid "Fields"
+msgstr "bidang"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Excel"
+msgstr "Unggul"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Export Format"
+msgstr "Format Ekspor"
+
+msgid "Frequency"
+msgstr "Frekuensi"
+
+msgid "1-31 for monthly"
+msgstr "1-31 untuk bulanan"
+
+msgid "Last Executed On"
+msgstr "Terakhir Dieksekusi Pada"
+
+msgid "Export Schedule"
+msgstr "Jadwal Ekspor"
+
+msgid "Export Schedules"
+msgstr "Ekspor Jadwal"
+
+msgid "Not run yet"
+msgstr "Belum dijalankan"
+
+msgid "Every day"
+msgstr "Setiap hari"
+
+msgid "Every"
+msgstr "Setiap"
+
+msgid "Day"
+msgstr "Hari"
+
+msgid "of every month"
+msgstr "setiap bulan"
+
+msgid "Department Name"
+msgstr "Nama Departemen"
+
+msgid "Description"
+msgstr "Keterangan"
+
+msgid "Department"
+msgstr "Departemen"
+
+msgid "Departments"
+msgstr "Departemen"
+
+msgid "Role"
+msgstr "Peran"
+
+msgid "Parent Role"
+msgstr "Peran Orang Tua"
+
+msgid "Permissions"
+msgstr "Izin"
+
+msgid "Roles"
+msgstr "Peran"
+
+msgid "Team Role Name"
+msgstr "Nama Peran Tim"
+
+msgid "Team Role"
+msgstr "Peran Tim"
+
+msgid "Team Roles"
+msgstr "Peran Tim"
+
+msgid "Customer Role Name"
+msgstr "Nama Peran Pelanggan"
+
+msgid "Customer Role"
+msgstr "Peran Pelanggan"
+
+msgid "Customer Roles"
+msgstr "Peran Pelanggan"
+
+msgid "Partner Role Name"
+msgstr "Nama Peran Mitra"
+
+msgid "Partner Role"
+msgstr "Peran Mitra"
+
+msgid "Partner Roles"
+msgstr "Peran Mitra"
+
+msgid "Deleted At"
+msgstr "Dihapus Pada"
+
+msgid "Retention Period (days)"
+msgstr "Periode Retensi (hari)"
+
+msgid "Recycle Bin Policy"
+msgstr "Kebijakan Tempat Sampah"
+
+msgid "Recycle Bin Policies"
+msgstr "Kebijakan Tempat Sampah"
+
+msgid "Can View Global Settings"
+msgstr "Dapat Melihat Pengaturan Global"
+
+msgid "Global Settings"
+msgstr "Pengaturan Global"
+
+msgid "Can View About System"
+msgstr "Dapat Melihat Tentang Sistem"
+
+msgid "Profile Image"
+msgstr "Gambar Profil"
+
+msgid "User's preferred currency for display"
+msgstr "Mata uang pilihan pengguna untuk ditampilkan"
+
+msgid "Preferred Currency"
+msgstr "Mata Uang Pilihan"
+
+msgid "Select your preferred number format."
+msgstr "Pilih format angka pilihan Anda."
+
+msgid "Number Format"
+msgstr "Format Angka"
+
+msgid "Username"
+msgstr "Nama belakang"
+
+msgid "First Name"
+msgstr "Nama depan"
+
+msgid "Last Name"
+msgstr "Nama Belakang"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Administrator"
+msgstr "Administrator"
+
+msgid "Active"
+msgstr "Aktif"
+
+msgid "Can Switch Company"
+msgstr "Bisa Pindah Perusahaan"
+
+msgid "Switch Company"
+msgstr "Ganti Perusahaan"
+
+msgid "Can View Profile"
+msgstr "Dapat Melihat Profil"
+
+msgid "Can Change Profile"
+msgstr "Dapat Mengubah Profil"
+
+msgid "User Profile"
+msgstr "Profil Pengguna"
+
+msgid "Field Permission"
+msgstr "Izin Lapangan"
+
+msgid "Field Permissions"
+msgstr "Izin Lapangan"
+
+msgid "Either user or role must be set"
+msgstr "Pengguna atau peran harus ditetapkan"
+
+msgid "Cannot set both user and role"
+msgstr "Tidak dapat menetapkan pengguna dan peran"
+
+msgid "Scheduled Export - {}"
+msgstr "Ekspor Terjadwal -{}"
+
+msgid "Avatar"
+msgstr "Avatar"
+
+msgid "Edit"
+msgstr "Sunting"
+
+msgid "Permission Denied"
+msgstr "Izin Ditolak"
+
+msgid ""
+"You are allowed to access the settings, but some details are hidden due to "
+"limited permissions."
+msgstr ""
+"Anda diperbolehkan mengakses pengaturan, tetapi beberapa detail "
+"disembunyikan karena izin terbatas."
+
+msgid "Export records to a file, or schedule recurring exports."
+msgstr "Ekspor catatan ke file, atau jadwalkan ekspor berulang."
+
+msgid "Select Module"
+msgstr "Pilih Modul"
+
+msgid "Choose Module"
+msgstr "Pilih Modul"
+
+msgid "Select Export Format"
+msgstr "Pilih Format Ekspor"
+
+msgid "Schedule"
+msgstr "Jadwal"
+
+msgid "Export"
+msgstr "Ekspor"
+
+msgid "Select Columns to Export (Optional)"
+msgstr "Pilih Kolom untuk Diekspor (Opsional)"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Unselect All"
+msgstr "Batalkan pilihan Semua"
+
+msgid "Cancel"
+msgstr "Batal"
+
+msgid "Scheduled Exports"
+msgstr "Ekspor Terjadwal"
+
+msgid "Quick Tips"
+msgstr "Tip Cepat"
+
+msgid "Select multiple modules to export data from different sections at once"
+msgstr ""
+"Pilih beberapa modul untuk mengekspor data dari bagian berbeda sekaligus"
+
+msgid "Choose from Excel, CSV, or PDF formats based on your needs"
+msgstr "Pilih dari format Excel, CSV, atau PDF berdasarkan kebutuhan Anda"
+
+msgid ""
+"You can set an end date for scheduled exports or leave it blank for "
+"indefinite scheduling"
+msgstr ""
+"Anda dapat menetapkan tanggal akhir untuk ekspor terjadwal atau "
+"membiarkannya kosong untuk penjadwalan tanpa batas"
+
+msgid ""
+"Export immediately by clicking the Export button, or schedule for automated "
+"recurring exports"
+msgstr ""
+"Ekspor segera dengan mengklik tombol Ekspor, atau jadwalkan ekspor berulang "
+"otomatis"
+
+msgid "Select All"
+msgstr "Pilih Semua"
+
+msgid "Schedule Export"
+msgstr "Jadwalkan Ekspor"
+
+msgid "Columns (Optional)"
+msgstr "Kolom (Opsional)"
+
+msgid "Day of week"
+msgstr "Hari dalam seminggu"
+
+msgid "Day of month"
+msgstr "Hari dalam sebulan"
+
+msgid "End Date (optional)"
+msgstr "Tanggal Berakhir (opsional)"
+
+msgid "Logo"
+msgstr "logo"
+
+msgid "Forgot Password?"
+msgstr "Lupa Kata Sandi?"
+
+msgid "Username or Email"
+msgstr "Nama Pengguna atau Email"
+
+msgid "Enter your email or username"
+msgstr "Masukkan email atau nama pengguna Anda"
+
+msgid "arrow"
+msgstr "anak panah"
+
+msgid "Send reset link"
+msgstr "Kirim tautan setel ulang"
+
+msgid "Loading..."
+msgstr "Memuat..."
+
+msgid " Reset link will be sent to your registered email"
+msgstr "Tautan reset akan dikirimkan ke email Anda yang terdaftar"
+
+msgid "Back to login"
+msgstr "Kembali untuk masuk"
+
+msgid "Email Sent!"
+msgstr "Email Terkirim!"
+
+msgid "Password reset link has been sent to your email."
+msgstr "Tautan pengaturan ulang kata sandi telah dikirimkan ke email Anda."
+
+msgid ""
+"Please check your inbox and click the link to reset your password. The link "
+"will expire in 24 hours."
+msgstr ""
+"Silakan periksa kotak masuk Anda dan klik tautan untuk mengatur ulang kata "
+"sandi Anda.Tautan akan kedaluwarsa dalam 24 jam."
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Back to Login"
+msgstr "Kembali ke Masuk"
+
+msgid "Didn't receive the email? Try again"
+msgstr "Tidak menerima email?Coba lagi"
+
+msgid "Reset Your Password"
+msgstr "Atur Ulang Kata Sandi Anda"
+
+msgid "Please enter your new password"
+msgstr "Silakan masukkan kata sandi baru Anda"
+
+msgid "Toggle visibility"
+msgstr "Alihkan visibilitas"
+
+msgid "Confirm new password"
+msgstr "Konfirmasikan kata sandi baru"
+
+msgid "Arrow"
+msgstr "Anak panah"
+
+msgid "Reset Password"
+msgstr "Atur Ulang Kata Sandi"
+
+msgid "Invalid Link"
+msgstr "Tautan Tidak Valid"
+
+msgid "This password reset link is invalid or has expired."
+msgstr ""
+"Tautan pengaturan ulang kata sandi ini tidak valid atau telah kedaluwarsa."
+
+msgid "Please request a new password reset link."
+msgstr "Silakan minta tautan pengaturan ulang kata sandi baru."
+
+msgid "Password Reset Request"
+msgstr "Permintaan Reset Kata Sandi"
+
+msgid "We received a request to reset your password for your"
+msgstr "Kami menerima permintaan untuk mengatur ulang kata sandi Anda"
+
+msgid "account. Click the button below to reset your password:"
+msgstr "akun.Klik tombol di bawah untuk mengatur ulang kata sandi Anda:"
+
+msgid ""
+"If the button above doesn't work, copy and paste this link into your "
+"browser:"
+msgstr ""
+"Jika tombol di atas tidak berfungsi, salin dan tempel tautan ini ke browser "
+"Anda:"
+
+msgid "Security Notice:"
+msgstr "Pemberitahuan Keamanan:"
+
+msgid ""
+"If you didn't request a password reset, please ignore this email or contact "
+"support if you have concerns. This link will expire in 24 hours."
+msgstr ""
+"Jika Anda tidak meminta pengaturan ulang kata sandi, abaikan email ini atau "
+"hubungi dukungan jika Anda memiliki kekhawatiran.Tautan ini akan kedaluwarsa"
+" dalam 24 jam."
+
+msgid "This is an automated message from the system. Please do not reply."
+msgstr "Ini adalah pesan otomatis dari sistem.Tolong jangan membalas."
+
+msgid "All rights reserved."
+msgstr "Semua hak dilindungi undang-undang."
+
+msgid "Are you sure you want to delete this holiday?"
+msgstr "Apakah Anda yakin ingin menghapus hari libur ini?"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Import progress"
+msgstr "Impor kemajuan"
+
+msgid "Upload Files"
+msgstr "Unggah File"
+
+msgid "Map Fields"
+msgstr "Bidang Peta"
+
+msgid "Action"
+msgstr "Tindakan"
+
+msgid "Import"
+msgstr "Impor"
+
+msgid "Select Fields for Template"
+msgstr "Pilih Bidang untuk Templat"
+
+msgid "File Format"
+msgstr "Format Berkas"
+
+msgid "Excel (XLSX)"
+msgstr "Unggul (XLSX)"
+
+msgid "Download Template"
+msgstr "Unduh Templat"
+
+msgid "Download"
+msgstr "Unduh"
+
+msgid "Enter Import Name"
+msgstr "Masukkan Nama Impor"
+
+msgid "Upload File"
+msgstr "Unggah Berkas"
+
+msgid "File already uploaded"
+msgstr "File sudah diunggah"
+
+msgid "CSV, XLS, XLSX ( Max 10MB )"
+msgstr "CSV, XLS, XLSX ( Maks 10 MB )"
+
+msgid "Next"
+msgstr "Berikutnya"
+
+msgid "Choose the module you want to bring records into"
+msgstr "Pilih modul tempat Anda ingin menyimpan catatan"
+
+msgid ""
+"Download the template to see the expected columns, or upload your own "
+"CSV/XLS/XLSX file"
+msgstr ""
+"Unduh templat untuk melihat kolom yang diharapkan, atau unggah file "
+"CSV/XLS/XLSX Anda sendiri"
+
+msgid "Next, you'll map your file's columns to the module's fields"
+msgstr "Selanjutnya, Anda akan memetakan kolom file Anda ke kolom modul"
+
+msgid ""
+"Finally, choose whether to create new records, update existing ones, or both"
+msgstr ""
+"Terakhir, pilih apakah akan membuat rekaman baru, memperbarui rekaman yang "
+"sudah ada, atau keduanya"
+
+msgid "Model Field"
+msgstr "Bidang Model"
+
+msgid "File Header"
+msgstr "Tajuk Berkas"
+
+msgid "Default Values"
+msgstr "Nilai Bawaan"
+
+msgid "Sample Data"
+msgstr "Contoh Data"
+
+msgid "Select Header"
+msgstr "Pilih Tajuk"
+
+msgid "Select Default Value"
+msgstr "Pilih Nilai Default"
+
+msgid "Default value"
+msgstr "Nilai bawaan"
+
+msgid "Auto Mapped"
+msgstr "Dipetakan Otomatis"
+
+msgid "Not Mapped"
+msgstr "Tidak Dipetakan"
+
+msgid "No model fields available"
+msgstr "Tidak ada bidang model yang tersedia"
+
+msgid "Previous"
+msgstr "Sebelumnya"
+
+msgid "Import Option:"
+msgstr "Opsi Impor:"
+
+msgid "Create new record"
+msgstr "Buat rekor baru"
+
+msgid "Update existing"
+msgstr "Perbarui yang ada"
+
+msgid "Create new and update existing"
+msgstr "Buat yang baru dan perbarui yang sudah ada"
+
+msgid "Record match by"
+msgstr "Rekam pertandingan berdasarkan"
+
+msgid "Module"
+msgstr "Modul"
+
+msgid "Import Action"
+msgstr "Tindakan Impor"
+
+msgid "Create New"
+msgstr "Buat Baru"
+
+msgid "Update Existing"
+msgstr "Perbarui yang Ada"
+
+msgid "Create New and Update Existing"
+msgstr "Buat Baru dan Perbarui yang Ada"
+
+msgid "Mapped"
+msgstr "Dipetakan"
+
+msgid "Unmapped"
+msgstr "Belum dipetakan"
+
+msgid "Import Completed Successfully!"
+msgstr "Impor Berhasil Selesai!"
+
+msgid "Your data has been imported successfully."
+msgstr "Data Anda telah berhasil diimpor."
+
+msgid "Records Created"
+msgstr "Catatan Dibuat"
+
+msgid "Records Updated"
+msgstr "Catatan Diperbarui"
+
+msgid "Errors"
+msgstr "Kesalahan"
+
+msgid "Total Rows Processed:"
+msgstr "Total Baris yang Diproses:"
+
+msgid "Success Rate:"
+msgstr "Tingkat Keberhasilan:"
+
+msgid "Errors encountered:"
+msgstr "Kesalahan yang ditemui:"
+
+msgid "Download Full Error Report"
+msgstr "Unduh Laporan Kesalahan Lengkap"
+
+msgid "... and"
+msgstr "... Dan"
+
+msgid "more errors."
+msgstr "lebih banyak kesalahan."
+
+msgid "Download the full report above to see all errors."
+msgstr "Unduh laporan lengkap di atas untuk melihat semua kesalahan."
+
+msgid "Import More Data"
+msgstr "Impor Lebih Banyak Data"
+
+msgid "Bulk import records from a file."
+msgstr "Impor catatan secara massal dari sebuah file."
+
+msgid "Map Values for"
+msgstr "Nilai Peta untuk"
+
+msgid "File Value"
+msgstr "Nilai Berkas"
+
+msgid "Replace With"
+msgstr "Ganti Dengan"
+
+msgid "Select Choice"
+msgstr "Pilih Pilihan"
+
+msgid "Select Related Object"
+msgstr "Pilih Objek Terkait"
+
+msgid "No unique values found"
+msgstr "Tidak ada nilai unik yang ditemukan"
+
+msgid "Initialize Database"
+msgstr "Inisialisasi Basis Data"
+
+msgid "Company  Information"
+msgstr "Informasi Perusahaan"
+
+msgid "Database Authentication"
+msgstr "Otentikasi Basis Data"
+
+msgid "Authenticate with your password intialize the Database"
+msgstr "Otentikasi dengan kata sandi Anda, inisialisasi Database"
+
+msgid "Database authentication password"
+msgstr "Kata sandi otentikasi basis data"
+
+msgid "Authenticate"
+msgstr "Otentikasi"
+
+msgid "Go To Home"
+msgstr "Pergi ke rumah"
+
+msgid "Click to edit"
+msgstr "Klik untuk mengedit"
+
+msgid "Delete role"
+msgstr "Hapus peran"
+
+msgid "Role Name"
+msgstr "Nama Peran"
+
+msgid "Enter role name"
+msgstr "Masukkan nama peran"
+
+msgid "Role Description"
+msgstr "Deskripsi Peran"
+
+msgid "Description..."
+msgstr "Keterangan..."
+
+msgid "Select Parent Role"
+msgstr "Pilih Peran Orang Tua"
+
+msgid "Save"
+msgstr "Simpan"
+
+msgid "Sign In"
+msgstr "Masuk"
+
+msgid "Next Step"
+msgstr "Langkah Selanjutnya"
+
+msgid "Sign Up"
+msgstr "Daftar"
+
+msgid "Configure Demo Data"
+msgstr "Konfigurasikan Data Demo"
+
+msgid "Select the number of records to load for each data type"
+msgstr "Pilih jumlah rekaman yang akan dimuat untuk setiap tipe data"
+
+msgid "No configurable entities found"
+msgstr "Tidak ditemukan entitas yang dapat dikonfigurasi"
+
+msgid "Note:"
+msgstr "Catatan:"
+
+msgid ""
+"Loading large datasets may take several minutes. Higher values will require "
+"more processing time and storage space."
+msgstr ""
+"Memuat kumpulan data besar mungkin memerlukan waktu beberapa menit.Nilai "
+"yang lebih tinggi akan memerlukan lebih banyak waktu pemrosesan dan ruang "
+"penyimpanan."
+
+msgid "Back"
+msgstr "Kembali"
+
+msgid "Start Loading"
+msgstr "Mulai Memuat"
+
+msgid "Authenticate with your password to load demo database"
+msgstr "Otentikasi dengan kata sandi Anda untuk memuat database demo"
+
+msgid "Loading Demo Database"
+msgstr "Memuat Basis Data Demo"
+
+msgid "Please wait while we load the demo data..."
+msgstr "Harap tunggu sementara kami memuat data demo..."
+
+msgid "Initializing..."
+msgstr "Menginisialisasi..."
+
+msgid ""
+"Success! Demo database loaded. You can now login with username 'admin' and "
+"password 'admin'."
+msgstr ""
+"Kesuksesan!Basis data demo dimuat.Anda sekarang dapat login dengan nama "
+"pengguna 'admin' dan kata sandi 'admin'."
+
+msgid "Loading"
+msgstr "Memuat"
+
+msgid "Error:"
+msgstr "Kesalahan:"
+
+msgid "Network error occurred"
+msgstr "Terjadi kesalahan jaringan"
+
+msgid ""
+"Are you sure you want to change the default currency? The previous default "
+"will be unset."
+msgstr ""
+"Apakah Anda yakin ingin mengubah mata uang default?Default sebelumnya tidak "
+"akan disetel."
+
+msgid "Assign Users"
+msgstr "Tetapkan Pengguna"
+
+msgid "Filter"
+msgstr "Filter"
+
+msgid "Select users"
+msgstr "Pilih pengguna"
+
+msgid "Search models..."
+msgstr "Telusuri model..."
+
+msgid "Field permissions not available for this model"
+msgstr "Izin bidang tidak tersedia untuk model ini"
+
+msgid "Field Level Permissions"
+msgstr "Izin Tingkat Lapangan"
+
+msgid "Role:"
+msgstr "Peran:"
+
+msgid "User:"
+msgstr "Pengguna:"
+
+msgid "Selected Users:"
+msgstr "Pengguna Terpilih:"
+
+msgid "Model:"
+msgstr "Model:"
+
+msgid "Warning:"
+msgstr "Peringatan:"
+
+msgid "No users selected. Please select atleast one user."
+msgstr ""
+"Tidak ada pengguna yang dipilih.Silakan pilih setidaknya satu pengguna."
+
+msgid ""
+"Required fields are always visible when creating or duplicating. Permissions"
+" for these fields apply only during editing."
+msgstr ""
+"Bidang yang wajib diisi selalu terlihat saat membuat atau menggandakan.Izin "
+"untuk bidang ini hanya berlaku selama pengeditan."
+
+msgid "Read Only"
+msgstr "Hanya Baca"
+
+msgid "Read and Write"
+msgstr "Membaca dan Menulis"
+
+msgid "Don't Show"
+msgstr "Jangan Tampilkan"
+
+msgid "Mandatory field"
+msgstr "Bidang wajib"
+
+msgid "No fields found for this model."
+msgstr "Tidak ada kolom yang ditemukan untuk model ini."
+
+msgid "Save All Changes"
+msgstr "Simpan Semua Perubahan"
+
+msgid "To manage field-level permissions, simply click the name of a model."
+msgstr "Untuk mengelola izin tingkat bidang, cukup klik nama model."
+
+msgid "User Roles"
+msgstr "Peran Pengguna"
+
+msgid "Add Roles"
+msgstr "Tambahkan Peran"
+
+msgid "Control what each role can view, create, edit, or delete."
+msgstr ""
+"Kontrol apa yang dapat dilihat, dibuat, diedit, atau dihapus oleh setiap "
+"peran."
+
+msgid "Members"
+msgstr "Anggota"
+
+msgid "User Permissions"
+msgstr "Izin Pengguna"
+
+msgid "Search users..."
+msgstr "Telusuri pengguna..."
+
+msgid "Assign"
+msgstr "Tetapkan"
+
+msgid "Add Member"
+msgstr "Tambahkan Anggota"
+
+msgid "No models found matching your search."
+msgstr "Tidak ada model yang cocok dengan pencarian Anda."
+
+msgid "No models available."
+msgstr "Tidak ada model yang tersedia."
+
+msgid "Are you sure you want to remove superuser status from this user?"
+msgstr ""
+"Apakah Anda yakin ingin menghapus status pengguna super dari pengguna ini?"
+
+msgid "Remove"
+msgstr "Hapus"
+
+msgid "No users available."
+msgstr "Tidak ada pengguna yang tersedia."
+
+msgid "Regional Formatting"
+msgstr "Pemformatan Wilayah"
+
+msgid "Configure how dates, times, and other values are displayed for you."
+msgstr ""
+"Konfigurasikan bagaimana tanggal, waktu, dan nilai lainnya ditampilkan untuk"
+" Anda."
+
+msgid "roles"
+msgstr "peran"
+
+msgid "Zoom In"
+msgstr "Perbesar"
+
+msgid "Zoom Out"
+msgstr "Perkecil"
+
+msgid "Reset Zoom"
+msgstr "Setel Ulang Zoom"
+
+msgid "Move Up"
+msgstr "Pindah ke Atas"
+
+msgid "Move Left"
+msgstr "Pindah ke Kiri"
+
+msgid "Move Right"
+msgstr "Bergerak ke Kanan"
+
+msgid "Move Down"
+msgstr "Pindah ke Bawah"
+
+msgid "Nothing to show yet. Please add your Role."
+msgstr "Belum ada yang bisa ditampilkan.Silakan tambahkan Peran Anda."
+
+msgid "users"
+msgstr "pengguna"
+
+msgid "Add Users"
+msgstr "Tambahkan Pengguna"
+
+msgid "Add Sub Role"
+msgstr "Tambahkan Sub Peran"
+
+msgid "View Users"
+msgstr "Lihat Pengguna"
+
+msgid "Delete Role"
+msgstr "Hapus Peran"
+
+msgid "No settings found"
+msgstr "Tidak ada pengaturan yang ditemukan"
+
+msgid "Business and shift hours"
+msgstr "Jam kerja dan shift"
+
+msgid "Business hours"
+msgstr "Jam kerja"
+
+msgid "Shift hours"
+msgstr "Jam shift"
+
+msgid ""
+"Set up shift-based working hours for employees with non-standard schedules."
+msgstr ""
+"Menetapkan jam kerja berbasis shift bagi karyawan dengan jadwal yang tidak "
+"standar."
+
+msgid "Add Shift Hour"
+msgstr "Tambahkan Jam Shift"
+
+msgid "Define the working hours your company operates on each day."
+msgstr "Tentukan jam kerja perusahaan Anda beroperasi setiap hari."
+
+msgid "Add Business Hour"
+msgstr "Tambahkan Jam Kerja"
+
+msgid "Add Holiday"
+msgstr "Tambahkan Hari Libur"
+
+msgid "Week starts on"
+msgstr "Minggu dimulai"
+
+msgid "First day of the week for calendars and reporting."
+msgstr "Hari pertama dalam seminggu untuk kalender dan pelaporan."
+
+msgid "Time zone"
+msgstr "Zona waktu"
+
+msgid "Business days"
+msgstr "Hari kerja"
+
+msgid "Manage"
+msgstr "Mengelola"
+
+msgid "No business hour configured yet."
+msgstr "Belum ada jam kerja yang dikonfigurasi."
+
+msgid "Use Add Business Hour to create your company schedule."
+msgstr "Gunakan Tambahkan Jam Kerja untuk membuat jadwal perusahaan Anda."
+
+msgid "Current Default Currency"
+msgstr "Mata Uang Default Saat Ini"
+
+msgid "Password Management"
+msgstr "Manajemen Kata Sandi"
+
+msgid "Update your password to keep your account secure."
+msgstr "Perbarui kata sandi Anda untuk menjaga keamanan akun Anda."
+
+msgid "Last Updated"
+msgstr "Terakhir Diperbarui"
+
+msgid "Change Your Password"
+msgstr "Ubah Kata Sandi Anda"
+
+msgid ""
+"View and update your company profile, fiscal year, working hours, and other "
+"core settings."
+msgstr ""
+"Lihat dan perbarui profil perusahaan Anda, tahun fiskal, jam kerja, dan "
+"pengaturan inti lainnya."
+
+msgid "Enter Conversion Rate"
+msgstr "Masukkan Tingkat Konversi"
+
+msgid "Conversion Rates"
+msgstr "Tingkat Konversi"
+
+msgid "Active Currencies"
+msgstr "Mata Uang Aktif"
+
+msgid "Preview in Calendar"
+msgstr "Pratinjau di Kalender"
+
+msgid " Standard Fiscal Year"
+msgstr "Tahun Anggaran Standar"
+
+msgid "Here using standard fiscal year"
+msgstr "Di sini menggunakan tahun fiskal standar"
+
+msgid "Week"
+msgstr "Pekan"
+
+msgid "Configure how your fiscal year and reporting periods are structured."
+msgstr "Konfigurasikan struktur tahun fiskal dan periode pelaporan Anda."
+
+msgid "Preview Calendar"
+msgstr "Pratinjau Kalender"
+
+msgid "Manage Fiscal Year"
+msgstr "Kelola Tahun Anggaran"
+
+msgid "No active company"
+msgstr "Tidak ada perusahaan yang aktif"
+
+msgid "Configuration Preview"
+msgstr "Pratinjau Konfigurasi"
+
+msgid "Period Display:"
+msgstr "Tampilan Periode:"
+
+msgid "Manage the holidays observed by your company."
+msgstr "Kelola hari libur yang dirayakan oleh perusahaan Anda."
+
+msgid "Add Holidays"
+msgstr "Tambahkan Hari Libur"
+
+msgid "Dated Exchange  Rates"
+msgstr "Nilai Tukar Tanggal"
+
+msgid "Select a Date Range"
+msgstr "Pilih Rentang Tanggal"
+
+msgid "New Exchange Rates"
+msgstr "Nilai Tukar Baru"
+
+msgid "Currency Management"
+msgstr "Manajemen Mata Uang"
+
+msgid "Set your default currency and manage exchange rates."
+msgstr "Tetapkan mata uang default Anda dan kelola nilai tukar."
+
+msgid "Add Currency"
+msgstr "Tambahkan Mata Uang"
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "Edit Conversion Rates"
+msgstr "Edit Tingkat Konversi"
+
+msgid "Dated Exchange Rates"
+msgstr "Nilai Tukar Tanggal"
+
+msgid "Enable Multiple Currency"
+msgstr "Aktifkan Banyak Mata Uang"
+
+msgid "My Settings"
+msgstr "Pengaturan Saya"
+
+msgid "Manage your personal profile, password, and preferences."
+msgstr "Kelola profil pribadi, kata sandi, dan preferensi Anda."
+
+msgid ""
+"Set how many days deleted records stay in the recycle bin before being "
+"permanently removed."
+msgstr ""
+"Tetapkan berapa hari catatan yang dihapus tetap berada di keranjang sampah "
+"sebelum dihapus secara permanen."
+
+msgid "Default Expire Days"
+msgstr "Hari Kedaluwarsa Default"
+
+msgid "Days"
+msgstr "hari"
+
+msgid "Settings"
+msgstr "Pengaturan"
+
+msgid "Manage your company, users, and system configuration."
+msgstr "Kelola perusahaan, pengguna, dan konfigurasi sistem Anda."
+
+msgid "Search settings..."
+msgstr "Setelan penelusuran..."
+
+msgid "My Profile"
+msgstr "Profil Saya"
+
+msgid "View and update your personal details."
+msgstr "Lihat dan perbarui detail pribadi Anda."
+
+msgid "View Login History"
+msgstr "Lihat Riwayat Masuk"
+
+msgid "Select"
+msgstr "Pilih"
+
+msgid "Modules & Versions"
+msgstr "Modul dan Versi"
+
+msgid "Version Information & Installed Packages"
+msgstr "Informasi Versi & Paket Terpasang"
+
+msgid "View version details"
+msgstr "Lihat detail versi"
+
+msgid "Icon"
+msgstr "Ikon"
+
+msgid "Release date"
+msgstr "Tanggal rilis"
+
+msgid "What's new"
+msgstr "Apa yang baru"
+
+msgid "No changelog available."
+msgstr "Tidak ada log perubahan yang tersedia."
+
+msgid "Manage your organization's branches."
+msgstr "Kelola cabang organisasi Anda."
+
+msgid "Add Column to List"
+msgstr "Tambahkan Kolom ke Daftar"
+
+msgid "Branch Information"
+msgstr "Informasi Cabang"
+
+msgid "Address"
+msgstr "Alamat"
+
+msgid "Localization"
+msgstr "Lokalisasi"
+
+msgid "Details"
+msgstr "Detail"
+
+msgid "Working hours"
+msgstr "Jam kerja"
+
+msgid "Currencies"
+msgstr "Mata uang"
+
+msgid "Basic Information"
+msgstr "Informasi Dasar"
+
+msgid "Business Details"
+msgstr "Detail Bisnis"
+
+msgid "Location & Locale"
+msgstr "Lokasi dan Lokal"
+
+msgid "Preferences"
+msgstr "Preferensi"
+
+msgid "Business Hour Form"
+msgstr "Formulir Jam Kerja"
+
+msgid "Are you sure you want to remove this holiday?"
+msgstr "Apakah Anda yakin ingin menghapus hari libur ini?"
+
+msgid "The requested record does not exist."
+msgstr "Catatan yang diminta tidak ada."
+
+msgid "The requested holiday does not exist."
+msgstr "Liburan yang diminta tidak ada."
+
+msgid "Your password has been changed successfully."
+msgstr "Kata sandi Anda telah berhasil diubah."
+
+msgid "Too many failed login attempts. Please try again in 15 minutes."
+msgstr ""
+"Terlalu banyak upaya login yang gagal.Silakan coba lagi dalam 15 menit."
+
+msgid "Invalid credentials. Please check and try again."
+msgstr "Kredensial tidak valid.Silakan periksa dan coba lagi."
+
+msgid "This user is archived or blocked. Please contact support."
+msgstr "Pengguna ini diarsipkan atau diblokir.Silakan hubungi dukungan."
+
+msgid "Login successful."
+msgstr "Masuk berhasil."
+
+msgid "Define roles for the customer contacts you work with."
+msgstr "Tentukan peran untuk kontak pelanggan yang bekerja dengan Anda."
+
+msgid "The requested data does not exist."
+msgstr "Data yang diminta tidak ada."
+
+msgid "Organize employees into departments across your company."
+msgstr "Atur karyawan ke dalam departemen di seluruh perusahaan Anda."
+
+msgid ""
+"Your session may have expired, or this form was open too long. Refresh the "
+"page and try again."
+msgstr ""
+"Sesi Anda mungkin telah kedaluwarsa, atau formulir ini dibuka terlalu "
+"lama.Segarkan halaman dan coba lagi."
+
+msgid "Please select at least one model and export format."
+msgstr "Silakan pilih setidaknya satu model dan format ekspor."
+
+msgid "Selected module not found."
+msgstr "Modul yang dipilih tidak ditemukan."
+
+msgid "You do not have permission to export this module."
+msgstr "Anda tidak memiliki izin untuk mengekspor modul ini."
+
+msgid "Export failed. Please try again."
+msgstr "Ekspor gagal.Silakan coba lagi."
+
+msgid "Export completed successfully."
+msgstr "Ekspor berhasil diselesaikan."
+
+msgid "Schedule not found."
+msgstr "Jadwal tidak ditemukan."
+
+msgid "Please select at least one module before scheduling."
+msgstr "Silakan pilih setidaknya satu modul sebelum menjadwalkan."
+
+msgid "January"
+msgstr "Januari"
+
+msgid "February"
+msgstr "Februari"
+
+msgid "March"
+msgstr "Berbaris"
+
+msgid "April"
+msgstr "April"
+
+msgid "May"
+msgstr "Mungkin"
+
+msgid "June"
+msgstr "Juni"
+
+msgid "July"
+msgstr "Juli"
+
+msgid "August"
+msgstr "Agustus"
+
+msgid "September"
+msgstr "September"
+
+msgid "October"
+msgstr "Oktober"
+
+msgid "November"
+msgstr "November"
+
+msgid "December"
+msgstr "Desember"
+
+msgid "Start date is required."
+msgstr "Tanggal mulai wajib diisi."
+
+msgid "Start date cannot be in the past."
+msgstr "Tanggal mulai tidak boleh lewat."
+
+msgid "Invalid date format."
+msgstr "Format tanggal tidak valid."
+
+msgid "End date must be after start date."
+msgstr "Tanggal akhir harus setelah tanggal mulai."
+
+msgid "Day of month and month are required for yearly schedule."
+msgstr "Hari dalam bulan dan bulan diperlukan untuk jadwal tahunan."
+
+msgid "Day of week is required for weekly schedule."
+msgstr "Hari dalam seminggu diperlukan untuk jadwal mingguan."
+
+msgid "Day of month is required for monthly schedule."
+msgstr "Hari dalam sebulan diperlukan untuk jadwal bulanan."
+
+msgid "Scheduled export updated successfully."
+msgstr "Ekspor terjadwal berhasil diperbarui."
+
+msgid "Scheduled export created successfully."
+msgstr "Ekspor terjadwal berhasil dibuat."
+
+msgid "Schedule Details"
+msgstr "Detail Jadwal"
+
+msgid "Scheduled Export Details"
+msgstr "Detail Ekspor Terjadwal"
+
+msgid "Please fill in all password fields."
+msgstr "Silakan isi semua kolom kata sandi."
+
+msgid "Passwords do not match."
+msgstr "Kata sandi tidak cocok."
+
+msgid "Invalid password reset link."
+msgstr "Tautan setel ulang kata sandi tidak valid."
+
+msgid "Role does not exist"
+msgstr "Peran tidak ada"
+
+msgid "User does not exist"
+msgstr "Pengguna tidak ada"
+
+msgid "Model not found"
+msgstr "Model tidak ditemukan"
+
+msgid "Field-level permissions are not available for this model."
+msgstr "Izin tingkat bidang tidak tersedia untuk model ini."
+
+msgid "Super Users"
+msgstr "Pengguna Super"
+
+msgid "Are you sure you want to delete the user from this role?"
+msgstr "Apakah Anda yakin ingin menghapus pengguna dari peran ini?"
+
+msgid "Permission added successfully."
+msgstr "Izin berhasil ditambahkan."
+
+msgid "Permission removed successfully."
+msgstr "Izin berhasil dihapus."
+
+msgid "Please select at least one user."
+msgstr "Silakan pilih setidaknya satu pengguna."
+
+msgid "Please select at least one permission."
+msgstr "Silakan pilih setidaknya satu izin."
+
+#, python-brace-format
+msgid ""
+"Successfully assigned {permissions_count} permission(s) to {users_count} "
+"user(s)."
+msgstr ""
+"Berhasil memberikan izin{permissions_count}kepada{users_count}pengguna."
+
+#, python-brace-format
+msgid "Error assigning permissions: {error}"
+msgstr "Kesalahan saat menetapkan izin:{error}"
+
+msgid "Role Does not Exist"
+msgstr "Peran Tidak Ada"
+
+msgid "No users selected. Please select at least one user."
+msgstr ""
+"Tidak ada pengguna yang dipilih.Silakan pilih setidaknya satu pengguna."
+
+msgid "Invalid user selection."
+msgstr "Pilihan pengguna tidak valid."
+
+msgid "App label and model name are required"
+msgstr "Label aplikasi dan nama model wajib diisi"
+
+msgid "No field permissions to save."
+msgstr "Tidak ada izin lapangan untuk disimpan."
+
+msgid "No valid users found."
+msgstr "Tidak ditemukan pengguna valid."
+
+#, python-brace-format
+msgid ""
+"Successfully saved {count} field permission(s) for {user_count} user(s) on "
+"{model}."
+msgstr ""
+"Berhasil menyimpan{count}izin bidang untuk{user_count}pengguna di{model}."
+
+#, python-brace-format
+msgid "Error saving field permissions: {error}"
+msgstr "Terjadi kesalahan saat menyimpan izin bidang:{error}"
+
+msgid "Either role or user must be specified"
+msgstr "Peran atau pengguna harus ditentukan"
+
+msgid "Create"
+msgstr "Buat"
+
+msgid "Change"
+msgstr "Ubah"
+
+msgid "View"
+msgstr "Lihat"
+
+msgid "Create Own"
+msgstr "Buat Sendiri"
+
+msgid "Change Own"
+msgstr "Ubah Milik Sendiri"
+
+msgid "View Own"
+msgstr "Lihat Milik Sendiri"
+
+msgid "Delete Own"
+msgstr "Hapus Milik Sendiri"
+
+msgid "Export Own"
+msgstr "Ekspor Sendiri"
+
+msgid "User Does not Exist"
+msgstr "Pengguna Tidak Ada"
+
+msgid "Add Super Users"
+msgstr "Tambahkan Pengguna Super"
+
+#, python-brace-format
+msgid "Successfully added {count} user(s) as superuser(s)."
+msgstr "Berhasil menambahkan{count}pengguna sebagai pengguna super."
+
+msgid "Holiday Form"
+msgstr "Formulir Liburan"
+
+msgid "Holiday Start Date"
+msgstr "Tanggal Mulai Liburan"
+
+msgid "Holiday End Date"
+msgstr "Tanggal Akhir Liburan"
+
+msgid "Error: Missing parameters"
+msgstr "Kesalahan: Parameter tidak ada"
+
+msgid "Error: Field not found"
+msgstr "Kesalahan: Bidang tidak ditemukan"
+
+msgid "Error: Invalid field type"
+msgstr "Kesalahan: Jenis bidang tidak valid"
+
+msgid "Please select a module first"
+msgstr "Silakan pilih modul terlebih dahulu"
+
+msgid "Invalid module selected"
+msgstr "Modul yang dipilih tidak valid"
+
+msgid "Selected module is not available for import"
+msgstr "Modul yang dipilih tidak tersedia untuk diimpor"
+
+msgid "Error loading fields"
+msgstr "Terjadi kesalahan saat memuat kolom"
+
+msgid "Invalid module selection. Please choose a valid module from the list."
+msgstr ""
+"Pemilihan modul tidak valid.Silakan pilih modul yang valid dari daftar."
+
+msgid "Module and Import Name are required"
+msgstr "Modul dan Nama Impor diperlukan"
+
+msgid "No valid fields found for the selected model"
+msgstr "Tidak ditemukan kolom valid untuk model yang dipilih"
+
+msgid "All fields are required"
+msgstr "Semua bidang wajib diisi"
+
+msgid "Please upload a CSV or Excel file"
+msgstr "Silakan unggah file CSV atau Excel"
+
+msgid "Missing module or app_label in session"
+msgstr "Modul atau app_label tidak ada dalam sesi"
+
+#, python-format
+msgid "Unmapped choice values: %(values)s%(ellipsis)s"
+msgstr "Nilai pilihan yang belum dipetakan:%(values)s%(ellipsis)s"
+
+#, python-format
+msgid "Invalid choice value: %(value)s"
+msgstr "Nilai pilihan tidak valid:%(value)s"
+
+#, python-format
+msgid "Unmapped foreign key values: %(values)s%(ellipsis)s"
+msgstr "Nilai kunci asing yang belum dipetakan:%(values)s%(ellipsis)s"
+
+#, python-format
+msgid "Invalid foreign key ID: %(id)s"
+msgstr "ID kunci asing tidak valid:%(id)s"
+
+msgid "Foreign key must be a valid ID"
+msgstr "Kunci asing harus berupa ID yang valid"
+
+#, python-format
+msgid ""
+"Field type mismatch: '%(field)s' expects DATE format, but file column "
+"'%(column)s' contains invalid date: '%(value)s'"
+msgstr ""
+"Jenis bidang tidak cocok: '%(field)s' mengharapkan format DATE, tetapi kolom"
+" file '%(column)s' berisi tanggal tidak valid: '%(value)s'"
+
+msgid "INTEGER"
+msgstr "BILANGAN BULAT"
+
+msgid "DECIMAL"
+msgstr "DESIMAL"
+
+#, python-format
+msgid ""
+"Field type mismatch: '%(field)s' expects %(type)s format, but file column "
+"'%(column)s' contains invalid number: '%(value)s'"
+msgstr ""
+"Jenis bidang tidak cocok: '%(field)s' mengharapkan format%(type)s, tetapi "
+"kolom file '%(column)s' berisi nomor yang tidak valid: '%(value)s'"
+
+#, python-format
+msgid ""
+"Field type mismatch: '%(field)s' expects BOOLEAN (true/false/yes/no/1/0), "
+"but file column '%(column)s' contains like: '%(value)s'"
+msgstr ""
+"Jenis bidang tidak cocok: '%(field)s' mengharapkan BOOLEAN "
+"(benar/salah/ya/tidak/1/0), tetapi kolom file '%(column)s' berisi seperti: "
+"'%(value)s'"
+
+#, python-format
+msgid ""
+"Field type mismatch: '%(field)s' expects EMAIL format, but file column "
+"'%(column)s' contains invalid email"
+msgstr ""
+"Jenis bidang tidak cocok: '%(field)s' mengharapkan format EMAIL, tetapi "
+"kolom file '%(column)s' berisi email yang tidak valid"
+
+#, python-format
+msgid ""
+"Field type mismatch: '%(field)s' expects URL format, but file column "
+"'%(column)s' contains invalid URL: '%(value)s'"
+msgstr ""
+"Jenis bidang tidak cocok: '%(field)s' mengharapkan format URL, tetapi kolom "
+"file '%(column)s' berisi URL yang tidak valid: '%(value)s'"
+
+#, python-format
+msgid ""
+"Error: '%(field)s' is a TEXT field, but file column '%(column)s' appears to "
+"contain DATES. Consider mapping to a DateField instead."
+msgstr ""
+"Kesalahan: '%(field)s' adalah bidang TEKS, tetapi kolom file '%(column)s' "
+"tampaknya berisi TANGGAL.Pertimbangkan untuk memetakan ke DateField sebagai "
+"gantinya."
+
+#, python-format
+msgid ""
+"Error: '%(field)s' is a TEXT field, but file column '%(column)s' appears to "
+"contain EMAIL addresses. Consider mapping to an EmailField instead."
+msgstr ""
+"Kesalahan: '%(field)s' adalah bidang TEKS, tetapi kolom file '%(column)s' "
+"tampaknya berisi alamat EMAIL.Pertimbangkan untuk memetakan ke EmailField "
+"sebagai gantinya."
+
+#, python-format
+msgid ""
+"Error: '%(field)s' is a TEXT field, but file column '%(column)s' appears to "
+"contain NUMBERS. Consider mapping to a numeric field instead."
+msgstr ""
+"Kesalahan: '%(field)s' adalah bidang TEKS, tetapi kolom file '%(column)s' "
+"tampaknya berisi ANGKA.Pertimbangkan untuk memetakan ke bidang numerik."
+
+#, python-format
+msgid "Required field '%(field)s' must be mapped to a file column."
+msgstr "Bidang yang wajib diisi '%(field)s' harus dipetakan ke kolom file."
+
+msgid "Error processing field mappings"
+msgstr "Terjadi kesalahan saat memproses pemetaan lapangan"
+
+msgid "No import data found in session"
+msgstr "Tidak ada data impor yang ditemukan dalam sesi"
+
+msgid "Complete user sign-up and company setup before going to home."
+msgstr ""
+"Selesaikan pendaftaran pengguna dan penyiapan perusahaan sebelum pulang."
+
+msgid "Unauthorized. Please authenticate first."
+msgstr "Tidak sah.Harap autentikasi terlebih dahulu."
+
+msgid "Database already initialized"
+msgstr "Basis data sudah diinisialisasi"
+
+msgid "Invalid password. Please try again."
+msgstr "Kata sandi tidak valid.Silakan coba lagi."
+
+msgid ""
+"Demo database loaded successfully! You can now login with username 'admin' "
+"and password 'admin'."
+msgstr ""
+"Basis data demo berhasil dimuat!Anda sekarang dapat login dengan nama "
+"pengguna 'admin' dan kata sandi 'admin'."
+
+msgid "Database loaded successfully."
+msgstr "Basis data berhasil dimuat."
+
+msgid "Data file not found: {}"
+msgstr "File data tidak ditemukan:{}"
+
+msgid "Loading {}"
+msgstr "Memuat{}"
+
+msgid "Error loading {}. All changes have been rolled back."
+msgstr "Kesalahan saat memuat{}.Semua perubahan telah dibatalkan."
+
+msgid "Currency Code"
+msgstr "Kode Mata Uang"
+
+msgid "Default currency can't be deleted"
+msgstr "Mata uang default tidak dapat dihapus"
+
+msgid "Currency is already the default."
+msgstr "Mata uang sudah menjadi default."
+
+msgid "Default currency changed successfully."
+msgstr "Mata uang default berhasil diubah."
+
+msgid "Edit Currency Information"
+msgstr "Edit Informasi Mata Uang"
+
+msgid "Fetching conversion rate..."
+msgstr "Mengambil rasio konversi..."
+
+msgid "Define roles for the partner contacts you work with."
+msgstr "Tentukan peran untuk kontak mitra yang bekerja dengan Anda."
+
+msgid "Restore or permanently delete records removed from Horilla."
+msgstr ""
+"Pulihkan atau hapus secara permanen catatan yang dihapus dari Horilla."
+
+msgid "Are you sure you want to restore the selected items?"
+msgstr "Apakah Anda yakin ingin memulihkan item yang dipilih?"
+
+msgid "Are you sure you want to delete the selected items?"
+msgstr "Apakah Anda yakin ingin menghapus item yang dipilih?"
+
+msgid ""
+"When deleting the items, its dependent data will be set to NULL or "
+"reassigned."
+msgstr ""
+"Saat menghapus item, data dependennya akan disetel ke NULL atau ditugaskan "
+"ulang."
+
+msgid "Are you sure you want to empty this bin?"
+msgstr "Apakah Anda yakin ingin mengosongkan sampah ini?"
+
+msgid "Record Name"
+msgstr "Nama Rekam"
+
+msgid "Type"
+msgstr "Jenis"
+
+msgid "Deleted By"
+msgstr "Dihapus Oleh"
+
+msgid "Are you sure you want to restore this item?"
+msgstr "Apakah Anda yakin ingin memulihkan item ini?"
+
+msgid "Are you sure you want to delete this item?"
+msgstr "Apakah Anda yakin ingin menghapus item ini?"
+
+msgid ""
+"When deleting the item, its dependent data will be set to NULL or "
+"reassigned."
+msgstr ""
+"Saat menghapus item, data dependennya akan disetel ke NULL atau ditugaskan "
+"ulang."
+
+msgid "No records selected for deletion."
+msgstr "Tidak ada catatan yang dipilih untuk dihapus."
+
+msgid "No records selected for restoration."
+msgstr "Tidak ada rekaman yang dipilih untuk dipulihkan."
+
+msgid "You don't have permission to do this change"
+msgstr "Anda tidak memiliki izin untuk melakukan perubahan ini"
+
+msgid "Enter a valid retention period in days."
+msgstr "Masukkan periode retensi yang valid dalam hari."
+
+msgid "Recycle bin policy updated successfully."
+msgstr "Kebijakan keranjang sampah berhasil diperbarui."
+
+msgid "Your preferences have been updated successfully."
+msgstr "Preferensi Anda telah berhasil diperbarui."
+
+msgid "There was an error updating your preferences."
+msgstr "Terjadi kesalahan saat memperbarui preferensi Anda."
+
+msgid "The requested role does not exist."
+msgstr "Peran yang diminta tidak ada."
+
+msgid "Please select a role to continue."
+msgstr "Silakan pilih peran untuk melanjutkan."
+
+msgid "The requested user does not exist."
+msgstr "Pengguna yang diminta tidak ada."
+
+msgid "Define roles and their position in your organization's hierarchy."
+msgstr "Tentukan peran dan posisinya dalam hierarki organisasi Anda."
+
+msgid "Add Role"
+msgstr "Tambahkan Peran"
+
+msgid "Shift Timing"
+msgstr "Pergeseran Waktu"
+
+msgid "Shift Days"
+msgstr "Pergeseran Hari"
+
+msgid "No of Users"
+msgstr "Jumlah Pengguna"
+
+msgid "Shift hour"
+msgstr "Jam shift"
+
+msgid "Shift hour details"
+msgstr "Detail jam shift"
+
+msgid "Main hours"
+msgstr "Jam utama"
+
+msgid "Break 1"
+msgstr "Istirahat 1"
+
+msgid "Break 2"
+msgstr "Istirahat 2"
+
+msgid "Assigned users"
+msgstr "Pengguna yang ditugaskan"
+
+msgid "Define roles for members collaborating on team-selling deals."
+msgstr ""
+"Tentukan peran bagi anggota yang berkolaborasi dalam kesepakatan penjualan "
+"tim."
+
+msgid "My Holidays"
+msgstr "Liburanku"
+
+msgid "View the holidays that apply to you."
+msgstr "Lihat hari libur yang berlaku untuk Anda."
+
+msgid "Holiday Type"
+msgstr "Jenis Liburan"
+
+msgid "My Login History"
+msgstr "Riwayat Masuk Saya"
+
+msgid "Review the sign-in activity on your account."
+msgstr "Tinjau aktivitas masuk di akun Anda."
+
+msgid "Browser"
+msgstr "Peramban"
+
+msgid "Login Time"
+msgstr "Waktu Masuk"
+
+msgid "IP"
+msgstr "AKU P"
+
+msgid "Manage user accounts, roles, and access across your organization."
+msgstr "Kelola akun pengguna, peran, dan akses di seluruh organisasi Anda."
+
+msgid "Personal Information"
+msgstr "Informasi Pribadi"
+
+msgid "Address Information"
+msgstr "Informasi Alamat"
+
+msgid "Work Information"
+msgstr "Informasi Pekerjaan"
+
+msgid "Localization Information"
+msgstr "Informasi Lokalisasi"
+
+msgid "Change Company"
+msgstr "Ganti Perusahaan"
+
+msgid "Work Info"
+msgstr "Informasi Pekerjaan"
+
+msgid "Review sign-in activity for users across your organization."
+msgstr "Tinjau aktivitas masuk untuk pengguna di seluruh organisasi Anda."
+
+msgid "Process Builder"
+msgstr "Pembangun Proses"
+
+msgid "My Jobs"
+msgstr "Pekerjaan saya"
+
+msgid ""
+"Module for managing the process, including approval processes and review "
+"processes."
+msgstr ""
+"Modul untuk mengelola proses, termasuk proses persetujuan dan proses "
+"peninjauan."
+
+msgid ""
+"Apply runtime viewport fit on approval/review process lists and approval "
+"job/history detail screens."
+msgstr ""
+"Terapkan kesesuaian area pandang runtime pada daftar proses "
+"persetujuan/peninjauan dan layar detail pekerjaan/riwayat persetujuan."
+
+msgid ""
+"Reviews: cap review process form modal body height with max-h so short forms"
+" no longer reserve a fixed 500px empty area."
+msgstr ""
+"Ulasan: proses peninjauan topi bentuk modal tinggi badan dengan max-h "
+"sehingga bentuk pendek tidak lagi mencadangkan area kosong tetap 500px."
+
+msgid ""
+"Approvals: scope delegation to ApprovalInstance.delegated_approver instead "
+"of mutating shared process rules; replace alert()-based responses with "
+"messages.error and HTMX reload; register ApprovalInstance for export_data. "
+"Wrap approval form placeholders with gettext_lazy."
+msgstr ""
+"Persetujuan: delegasi cakupan ke ApprovalInstance.delegated_approver alih-"
+"alih mengubah aturan proses bersama;ganti respons berbasis alert() dengan "
+"messages.error dan pemuatan ulang HTML;daftarkan ApprovalInstance untuk "
+"ekspor_data.Bungkus placeholder formulir persetujuan dengan gettext_lazy."
+
+msgid ""
+"Re-raise HttpNotFound with exception chaining in process detail views to "
+"preserve context."
+msgstr ""
+"Naikkan kembali HttpNotFound dengan rangkaian pengecualian dalam tampilan "
+"detail proses untuk menjaga konteks."
+
+msgid ""
+"Approvals: fixed type mismatch when excluding pending approval objects from "
+"list view; added job detail body template and adjusted tab container height."
+msgstr ""
+"Persetujuan: memperbaiki ketidakcocokan tipe saat mengecualikan objek "
+"persetujuan yang tertunda dari tampilan daftar;menambahkan templat badan "
+"detail pekerjaan dan menyesuaikan tinggi wadah tab."
+
+msgid ""
+"ApprovalRuleForm refactored to fields=\"__all__\" with field_order, dropping"
+" the unused process_config field and the redundant view fields list. Fixed a"
+" KeyError on review-process create by adding keep_on_form for is_active. "
+"Migrated signal imports to the db.models.signals shim and added docstrings "
+"for pylint compliance."
+msgstr ""
+"ApprovalRuleForm difaktorkan ulang menjadi field=\"__all__\" dengan "
+"field_order, menghapus bidang process_config yang tidak digunakan dan daftar"
+" bidang tampilan yang berlebihan.Memperbaiki KeyError pada pembuatan proses "
+"peninjauan dengan menambahkan keep_on_form untuk is_active.Impor sinyal "
+"dimigrasikan ke shim db.models.signals dan menambahkan dokumen untuk "
+"kepatuhan pylint."
+
+msgid ""
+"Release 1.10: Process Builder consolidated under contrib.process with "
+"approvals and reviews sub-apps. Django app labels for approvals and reviews "
+"are unchanged; import paths and includes now use the contrib package layout."
+msgstr ""
+"Rilis 1.10: Pembuat Proses dikonsolidasikan dalam contrib.process dengan "
+"sub-aplikasi persetujuan dan ulasan.Label aplikasi Django untuk persetujuan "
+"dan tinjauan tidak berubah;jalur impor dan penyertaannya sekarang "
+"menggunakan tata letak paket contrib."
+
+msgid ""
+"Enhanced approval workflow with delete support in approval history, standard"
+" HTMX modal delete flow, and inline edit enforcement for pending/rejected "
+"records. Improved approval signals cleanup, review process table viewport "
+"handling, and redirect behavior."
+msgstr ""
+"Alur kerja persetujuan yang ditingkatkan dengan dukungan penghapusan dalam "
+"riwayat persetujuan, aliran penghapusan modal HTMX standar, dan penerapan "
+"pengeditan sebaris untuk catatan yang tertunda/ditolak.Peningkatan "
+"pembersihan sinyal persetujuan, proses peninjauan penanganan area pandang "
+"tabel, dan perilaku pengalihan."
+
+msgid ""
+"Introduced unified Process Builder combining reviews and approvals into a "
+"flexible, condition-driven workflow engine with configurable approvers, "
+"field-level controls, and per-app process configuration."
+msgstr ""
+"Memperkenalkan Pembangun Proses terpadu yang menggabungkan tinjauan dan "
+"persetujuan ke dalam mesin alur kerja yang fleksibel dan berdasarkan kondisi"
+" dengan pemberi persetujuan yang dapat dikonfigurasi, kontrol tingkat "
+"lapangan, dan konfigurasi proses per aplikasi."
+
+msgid "Related To"
+msgstr "Terkait dengan"
+
+msgid "The page you are looking for does not exist or may have been moved."
+msgstr "Halaman yang Anda cari tidak ada atau mungkin sudah dipindahkan."
+
+msgid "You do not have permission to view this page."
+msgstr "Anda tidak memiliki izin untuk melihat halaman ini."
+
+msgid "Page Not Found"
+msgstr "Halaman Tidak Ditemukan"
+
+msgid "Go to Dashboard"
+msgstr "Buka Dasbor"
+
+msgid "Method Not Allowed"
+msgstr "Metode Tidak Diizinkan"
+
+msgid "The request method is not allowed for this resource."
+msgstr "Metode permintaan tidak diperbolehkan untuk sumber daya ini."
+
+msgid "Server Error"
+msgstr "Kesalahan Server"
+
+msgid ""
+"There’s been an error. It’s been reported to the site administrators via "
+"email and should be fixed shortly. Thanks for your patience."
+msgstr ""
+"Telah terjadi kesalahan.Masalah ini telah dilaporkan ke administrator situs "
+"melalui email dan akan segera diperbaiki.Terima kasih atas kesabaran Anda."
+
+msgid "Activate company"
+msgstr "Aktifkan perusahaan"
+
+msgid "Please create or activate your company."
+msgstr "Silakan buat atau aktifkan perusahaan Anda."
+
+msgid "Search anything..."
+msgstr "Telusuri apa saja..."
+
+msgid "Toggle theme"
+msgstr "Beralih tema"
+
+msgid "Recently viewed"
+msgstr "Baru-baru ini dilihat"
+
+msgid "Recently Viewed"
+msgstr "Baru Dilihat"
+
+#, python-format
+msgid "%(time)s ago"
+msgstr "%(time)syang lalu"
+
+msgid "No recent items"
+msgstr "Tidak ada item terbaru"
+
+msgid "icon"
+msgstr "ikon"
+
+msgid "Switch company"
+msgstr "Ganti perusahaan"
+
+msgid "All Company"
+msgstr "Semua Perusahaan"
+
+msgid "No companies available"
+msgstr "Tidak ada perusahaan yang tersedia"
+
+msgid "Logout"
+msgstr "Keluar"
+
+msgid "Quick actions"
+msgstr "Tindakan cepat"
+
+msgid "Security check failed"
+msgstr "Pemeriksaan keamanan gagal"
+
+msgid "Security Check Failed"
+msgstr "Pemeriksaan Keamanan Gagal"
+
+msgid "We could not verify this request. Refresh the page and submit again."
+msgstr ""
+"Kami tidak dapat memverifikasi permintaan ini.Refresh halaman dan kirimkan "
+"lagi."
+
+msgid "Enter Username"
+msgstr "Masukkan Nama Pengguna"
+
+msgid "Enter Password"
+msgstr "Masukkan Kata Sandi"
+
+msgid "Load Demo Data"
+msgstr "Muat Data Demo"

@@ -1,0 +1,1140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-10 21:48+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n "
+">= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
+
+msgid "Contains"
+msgstr ""
+
+msgid "Equals"
+msgstr ""
+
+msgid "Not Equals"
+msgstr ""
+
+msgid "Starts with"
+msgstr ""
+
+msgid "Ends with"
+msgstr ""
+
+msgid "Is empty"
+msgstr ""
+
+msgid "Is not empty"
+msgstr ""
+
+msgid "Greater than"
+msgstr ""
+
+msgid "Less than"
+msgstr ""
+
+msgid "Greater than or equal"
+msgstr ""
+
+msgid "Less than or equal"
+msgstr ""
+
+msgid "Between"
+msgstr ""
+
+msgid "After"
+msgstr ""
+
+msgid "Before"
+msgstr ""
+
+msgid "Today"
+msgstr ""
+
+msgid "Yesterday"
+msgstr ""
+
+msgid "This Week"
+msgstr ""
+
+msgid "This Month"
+msgstr ""
+
+#, python-format
+msgid "Select %(field)s"
+msgstr ""
+
+#, python-format
+msgid "Enter %(field)s"
+msgstr ""
+
+msgid "Operator is required when a field is selected."
+msgstr ""
+
+msgid "Select a valid field. That choice is not one of the available fields."
+msgstr ""
+
+msgid "Value is required when a field and operator are selected."
+msgstr ""
+
+msgid "This field is read-only and cannot be modified."
+msgstr ""
+
+msgid "List View Name"
+msgstr ""
+
+msgid "Specify the list view name"
+msgstr ""
+
+msgid "Make as public"
+msgstr ""
+
+msgid "Select date to filter"
+msgstr ""
+
+msgid "Enter phone number"
+msgstr ""
+
+msgid "Enter a valid phone number."
+msgstr ""
+
+msgid "Enter title"
+msgstr ""
+
+#, python-format
+msgid "Upload %(field)s"
+msgstr ""
+
+#, python-format
+msgid "Enter %(field)s here..."
+msgstr ""
+
+msgid "Select Fields to Display"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Available Fields"
+msgstr ""
+
+msgid "Search fields..."
+msgstr ""
+
+msgid "Visible Fields"
+msgstr ""
+
+msgid "Reset to Default"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Change Detail View Fields"
+msgstr ""
+
+msgid "Header Portion Fields"
+msgstr ""
+
+msgid "Search..."
+msgstr ""
+
+msgid "All fields added"
+msgstr ""
+
+msgid "No fields"
+msgstr ""
+
+msgid "Details Tab Fields"
+msgstr ""
+
+#, python-format
+msgid ""
+"\n"
+"                            Nothing to show yet. The %(view)s list doesn't "
+"have any data.\n"
+"                        "
+msgstr ""
+
+msgid "Nothing to show yet. Please add your"
+msgstr ""
+
+msgid "Delete List"
+msgstr ""
+
+msgid "Add New"
+msgstr ""
+
+msgid "Chart view"
+msgstr ""
+
+msgid "X-axis (Group by)"
+msgstr ""
+
+msgid "Y-axis (Value)"
+msgstr ""
+
+msgid "Stack by"
+msgstr ""
+
+msgid "Single dimension"
+msgstr ""
+
+msgid "Chart type"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "Export as PDF"
+msgstr ""
+
+msgid "Export as PNG"
+msgstr ""
+
+msgid "Add to Dashboard"
+msgstr ""
+
+msgid "Fields"
+msgstr ""
+
+msgid "Previous"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Menu"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Read Only"
+msgstr ""
+
+msgid "Drag to move"
+msgstr ""
+
+msgid "Filters"
+msgstr ""
+
+msgid "Shrink panel"
+msgstr ""
+
+msgid "Expand panel"
+msgstr ""
+
+msgid "Filter"
+msgstr ""
+
+msgid "Add more filter"
+msgstr ""
+
+msgid "Applied Filters"
+msgstr ""
+
+msgid "Clear All"
+msgstr ""
+
+msgid "Save to List"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "OR"
+msgstr ""
+
+msgid "AND"
+msgstr ""
+
+msgid "Drag to resize width (left)"
+msgstr ""
+
+msgid "Resize width left"
+msgstr ""
+
+msgid "Drag to resize width (right)"
+msgstr ""
+
+msgid "Resize width right"
+msgstr ""
+
+msgid "Drag to resize height"
+msgstr ""
+
+msgid "Resize height"
+msgstr ""
+
+msgid "Multi-Step Form"
+msgstr ""
+
+msgid "Single-Step Form"
+msgstr ""
+
+msgid "JPG or PNG"
+msgstr ""
+
+msgid "Remove photo"
+msgstr ""
+
+msgid "Choose File"
+msgstr ""
+
+msgid "No file chosen"
+msgstr ""
+
+msgid "Clear"
+msgstr ""
+
+msgid "Add"
+msgstr ""
+
+msgid "Save & New"
+msgstr ""
+
+msgid "Add Notes and Attachment"
+msgstr ""
+
+msgid "Upload File"
+msgstr ""
+
+msgid "File already uploaded"
+msgstr ""
+
+msgid "Click to upload or drag & drop"
+msgstr ""
+
+msgid "Any file (Max 10MB)"
+msgstr ""
+
+msgid "Clear file"
+msgstr ""
+
+msgid "File selected"
+msgstr ""
+
+msgid "We searched for"
+msgstr ""
+
+msgid "No search results found"
+msgstr ""
+
+msgid "Select Visible Items"
+msgstr ""
+
+msgid "No items in this group."
+msgstr ""
+
+msgid "Clear Filters"
+msgstr ""
+
+msgid "Call"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Initiated"
+msgstr ""
+
+msgid "New"
+msgstr ""
+
+msgid "created"
+msgstr ""
+
+msgid "status"
+msgstr ""
+
+msgid "Added call task to this"
+msgstr ""
+
+msgid "Send email to this"
+msgstr ""
+
+msgid "Activity logged for this"
+msgstr ""
+
+msgid "Event scheduled for this"
+msgstr ""
+
+msgid "Meeting scheduled with this"
+msgstr ""
+
+msgid "Action performed by"
+msgstr ""
+
+msgid "No history available for this object."
+msgstr ""
+
+msgid "Kanban Settings"
+msgstr ""
+
+msgid "Select Columns to Export (Optional)"
+msgstr ""
+
+msgid "Export Format"
+msgstr ""
+
+msgid "Excel"
+msgstr ""
+
+msgid "CSV"
+msgstr ""
+
+msgid "PDF"
+msgstr ""
+
+msgid "Available Columns"
+msgstr ""
+
+msgid "Select which columns to export"
+msgstr ""
+
+msgid "Add Additional Columns"
+msgstr ""
+
+msgid "Select more fields you want to export"
+msgstr ""
+
+msgid "Export"
+msgstr ""
+
+msgid "Select"
+msgstr ""
+
+msgid "Unselect"
+msgstr ""
+
+msgid "Export Selected"
+msgstr ""
+
+msgid "Bulk Update"
+msgstr ""
+
+msgid "Bulk Delete"
+msgstr ""
+
+msgid "Edit List"
+msgstr ""
+
+#, python-format
+msgid ""
+"\n"
+"                        Nothing to show yet. The %(view)s list does not have "
+"any data.\n"
+"                    "
+msgstr ""
+
+msgid " Nothing to show yet. Please add your"
+msgstr ""
+
+msgid "All Items"
+msgstr ""
+
+msgid "Recently Viewed"
+msgstr ""
+
+msgid "Recently Created"
+msgstr ""
+
+msgid "Recently Modified"
+msgstr ""
+
+msgid "List View"
+msgstr ""
+
+msgid "Unpin default view"
+msgstr ""
+
+msgid "Unpin"
+msgstr ""
+
+msgid "Set as default view"
+msgstr ""
+
+msgid "Pin as default"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Reload"
+msgstr ""
+
+msgid "Applied filters"
+msgstr ""
+
+msgid "Views"
+msgstr ""
+
+msgid "Layout"
+msgstr ""
+
+msgid "Split View"
+msgstr ""
+
+msgid "Chart"
+msgstr ""
+
+msgid "List"
+msgstr ""
+
+msgid "Card"
+msgstr ""
+
+msgid "Kanban"
+msgstr ""
+
+msgid "Timeline"
+msgstr ""
+
+msgid "Group By"
+msgstr ""
+
+msgid "Chart View"
+msgstr ""
+
+msgid "Notes and Attachments"
+msgstr ""
+
+msgid "Open file in new tab"
+msgstr ""
+
+msgid "Notes"
+msgstr ""
+
+msgid "Created By"
+msgstr ""
+
+msgid "Created At"
+msgstr ""
+
+msgid "File Size"
+msgstr ""
+
+msgid "Related To"
+msgstr ""
+
+msgid "Delete Attachment"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Add Quick Filter"
+msgstr ""
+
+msgid "Select Fields"
+msgstr ""
+
+msgid "No available fields to add as quick filter."
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
+
+msgid "Hard Delete Confirmation"
+msgstr ""
+
+msgid "Are you sure you want to hard delete the selected"
+msgstr ""
+
+msgid "Deletable Records"
+msgstr ""
+
+msgid "Protected Records"
+msgstr ""
+
+msgid "Delete All"
+msgstr ""
+
+msgid " Confirm"
+msgstr ""
+
+msgid "Bulk Update Selected"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+#, python-format
+msgid ""
+"Select\n"
+"                                            %(field)s"
+msgstr ""
+
+#, python-format
+msgid ""
+"Select\n"
+"                                                %(field)s"
+msgstr ""
+
+msgid "No fields available for bulk update."
+msgstr ""
+
+msgid "Update"
+msgstr ""
+
+msgid "Remove"
+msgstr ""
+
+msgid "Select Delete Mode"
+msgstr ""
+
+msgid "Choose the deletion mode for the selected records"
+msgstr ""
+
+msgid "Hard Delete will permanently delete data."
+msgstr ""
+
+msgid "Soft Delete allows you to restore deleted records."
+msgstr ""
+
+msgid "Hard Delete"
+msgstr ""
+
+msgid "Soft Delete"
+msgstr ""
+
+msgid "Select Field"
+msgstr ""
+
+msgid "No value needed"
+msgstr ""
+
+msgid "Start"
+msgstr ""
+
+msgid "End"
+msgstr ""
+
+msgid "and"
+msgstr ""
+
+msgid "True"
+msgstr ""
+
+msgid "False"
+msgstr ""
+
+msgid "Enter value"
+msgstr ""
+
+msgid "Remove filter"
+msgstr ""
+
+msgid "Apply"
+msgstr ""
+
+msgid "Drag"
+msgstr ""
+
+msgid "More actions"
+msgstr ""
+
+msgid "Select Operator"
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "Are you sure you want to delete this quick filter"
+msgstr ""
+
+msgid "Bulk Reassign Dependencies"
+msgstr ""
+
+msgid "Reassign all dependent"
+msgstr ""
+
+msgid "to a new target before deleting"
+msgstr ""
+
+msgid "New Target"
+msgstr ""
+
+msgid "No other targets available"
+msgstr ""
+
+msgid "Confirm"
+msgstr ""
+
+msgid "Confirm Deletion"
+msgstr ""
+
+msgid "Soft deleting this"
+msgstr ""
+
+msgid "will also soft delete all its related"
+msgstr ""
+
+msgid "Permanently deleting this"
+msgstr ""
+
+msgid "will also permanently delete all its related"
+msgstr ""
+
+msgid "Are you sure you want to proceed ?"
+msgstr ""
+
+msgid "with Dependencies"
+msgstr ""
+
+msgid "Confirm Delete"
+msgstr ""
+
+msgid "The"
+msgstr ""
+
+msgid "has dependencies and cannot be deleted directly."
+msgstr ""
+
+msgid "Reassign All"
+msgstr ""
+
+msgid "Reassign Individually"
+msgstr ""
+
+msgid "Are you sure you want to delete the"
+msgstr ""
+
+msgid "Choose the deletion mode for"
+msgstr ""
+
+msgid "Individual Reassign or Delete Dependencies"
+msgstr ""
+
+msgid "Choose actions for each dependent"
+msgstr ""
+
+msgid "before deleting"
+msgstr ""
+
+msgid "Dependent Data"
+msgstr ""
+
+msgid "Select Target"
+msgstr ""
+
+msgid "Set null for all"
+msgstr ""
+
+msgid "Set to Null"
+msgstr ""
+
+msgid "Delete all"
+msgstr ""
+
+msgid "Set Null"
+msgstr ""
+
+msgid "Are you sure you want to soft delete this dependency ? "
+msgstr ""
+
+msgid "Are you sure you want to hard delete this dependency ? "
+msgstr ""
+
+msgid "No dependent records found."
+msgstr ""
+
+msgid "Soft Delete Confirmation"
+msgstr ""
+
+msgid "Are you sure you want to soft delete the selected"
+msgstr ""
+
+msgid "Are you sure you want to soft delete all dependencies of this record ? "
+msgstr ""
+
+msgid "No Records to Delete"
+msgstr ""
+
+msgid "Value"
+msgstr ""
+
+msgid "No results found"
+msgstr ""
+
+msgid "Select All"
+msgstr ""
+
+msgid "Select an option"
+msgstr ""
+
+msgid "From"
+msgstr ""
+
+msgid "To"
+msgstr ""
+
+msgid "No related lists found for this"
+msgstr ""
+
+msgid "Add Column to List"
+msgstr ""
+
+msgid "Edit List View"
+msgstr ""
+
+msgid "New List View"
+msgstr ""
+
+msgid "Add filter"
+msgstr ""
+
+msgid "No filter parameters available."
+msgstr ""
+
+msgid "Conditions"
+msgstr ""
+
+msgid "Add More"
+msgstr ""
+
+msgid "Select an item from the list to view details"
+msgstr ""
+
+msgid "Timeline settings"
+msgstr ""
+
+msgid "Group by"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "Timeline bar start and end are taken from these record fields."
+msgstr ""
+
+msgid "Enter Value"
+msgstr ""
+
+msgid "Task added"
+msgstr ""
+
+msgid "Event added"
+msgstr ""
+
+msgid "Meeting added"
+msgstr ""
+
+msgid "Call added"
+msgstr ""
+
+msgid "Email sent"
+msgstr ""
+
+msgid "Draft saved"
+msgstr ""
+
+msgid "Scheduled mail"
+msgstr ""
+
+msgid "Mail failed"
+msgstr ""
+
+msgid "Notes and Attachment"
+msgstr ""
+
+msgid "You don't have permission to edit this attachment."
+msgstr ""
+
+msgid "The requested attachment does not exist."
+msgstr ""
+
+msgid "You don't have permission to add attachments to this record."
+msgstr ""
+
+msgid "Invalid related object."
+msgstr ""
+
+msgid "You don't have permission to delete this attachment."
+msgstr ""
+
+msgid "Column Chart"
+msgstr ""
+
+msgid "Line Chart"
+msgstr ""
+
+msgid "Pie Chart"
+msgstr ""
+
+msgid "Funnel"
+msgstr ""
+
+msgid "Bar Chart"
+msgstr ""
+
+msgid "Donut"
+msgstr ""
+
+msgid "Stacked Vertical"
+msgstr ""
+
+msgid "Stacked Horizontal"
+msgstr ""
+
+msgid "Scatter"
+msgstr ""
+
+msgid "Treemap"
+msgstr ""
+
+msgid "Area Chart"
+msgstr ""
+
+msgid "Heatmap"
+msgstr ""
+
+msgid "Sankey"
+msgstr ""
+
+msgid "Radar Chart"
+msgstr ""
+
+msgid "Sum"
+msgstr ""
+
+msgid "Average"
+msgstr ""
+
+msgid "Minimum"
+msgstr ""
+
+msgid "Maximum"
+msgstr ""
+
+msgid "Record count"
+msgstr ""
+
+#, python-format
+msgid "%(metric)s of %(field)s"
+msgstr ""
+
+msgid "(empty)"
+msgstr ""
+
+msgid "This field cannot be used as chart dimension."
+msgstr ""
+
+msgid "Selected Y-axis field must be numeric."
+msgstr ""
+
+msgid "Both fields must support chart grouping."
+msgstr ""
+
+msgid "Not enough data for stacked chart."
+msgstr ""
+
+msgid ""
+"No suitable field for chart grouping (need a choice, foreign key, or boolean "
+"field)."
+msgstr ""
+
+msgid ""
+"Selected record is not associated with any company. Activate a company to "
+"proceed with deletion."
+msgstr ""
+
+msgid "Invalid target ID"
+msgstr ""
+
+msgid "Details"
+msgstr ""
+
+msgid "Activity"
+msgstr ""
+
+msgid "Cadence"
+msgstr ""
+
+msgid "Related Lists"
+msgstr ""
+
+msgid "Notes & Attachments"
+msgstr ""
+
+msgid "History"
+msgstr ""
+
+msgid "View full detail"
+msgstr ""
+
+msgid "You don't have permission to update this record."
+msgstr ""
+
+msgid "Invalid choice"
+msgstr ""
+
+msgid "Detailed View"
+msgstr ""
+
+msgid "The requested record does not exist."
+msgstr ""
+
+msgid ""
+"No grouping field specified or you don't have permission to view any "
+"grouping fields."
+msgstr ""
+
+#, python-format
+msgid "Field '%(field)s' is not a Choice field or ForeignKey field."
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+#, python-format
+msgid "Invalid grouping field '%(field)s': %(err)s"
+msgstr ""
+
+#, python-format
+msgid "Error grouping by field '%(field)s': %(err)s"
+msgstr ""
+
+msgid "Select value(s)"
+msgstr ""
+
+msgid "Enter Number"
+msgstr ""
+
+msgid "Enter Email"
+msgstr ""
+
+msgid "Enter URL"
+msgstr ""
+
+msgid "You do not have permission to edit this."
+msgstr ""
+
+#, python-format
+msgid "Error updating field: %(message)s"
+msgstr ""
+
+#, python-format
+msgid "Invalid decimal value: %(value)s"
+msgstr ""
+
+#, python-format
+msgid "Invalid datetime format: %(value)s"
+msgstr ""
+
+#, python-format
+msgid "Invalid date format: %(value)s"
+msgstr ""
+
+msgid "You do not have permission to view this."
+msgstr ""
+
+msgid "Invalid saved list ID."
+msgstr ""
+
+msgid "Group By Settings"
+msgstr ""
+
+msgid "You don't have permission to configure columns for this list."
+msgstr ""
+
+msgid "Equals (case insensitive)"
+msgstr ""
+
+msgid "Greater than or equal to"
+msgstr ""
+
+msgid "Less than or equal to"
+msgstr ""
+
+msgid "Create"
+msgstr ""
+
+msgid "Import"
+msgstr ""
+
+msgid "duplicated"
+msgstr ""
+
+msgid "updated"
+msgstr ""
+
+#, python-format
+msgid "%(model)s %(action)s successfully."
+msgstr ""
+
+#, python-format
+msgid "A %(model)s with this %(field)s already exists."
+msgstr ""
+
+#, python-format
+msgid "A %(model)s with this combination of %(fields)s already exists."
+msgstr ""
+
+#, python-format
+msgid ""
+"This %(model)s could not be saved due to a duplicate entry. Please check "
+"your input and try again."
+msgstr ""
+
+msgid "An error occurred while saving. Please try again or contact support."
+msgstr ""
+
+msgid "Timeline view requires timeline_start_field to be set."
+msgstr ""
+
+#, python-format
+msgid "Invalid timeline_start_field: %(field)s."
+msgstr ""
+
+msgid "Days"
+msgstr ""
+
+msgid "Weeks"
+msgstr ""
+
+msgid "Months"
+msgstr ""
+
+msgid "Quarters"
+msgstr ""
+
+#, python-format
+msgid "Bars use: %(field)s"
+msgstr ""
+
+#, python-format
+msgid "From %(start)s → %(end)s"
+msgstr ""
+
+msgid "No rows selected for deletion."
+msgstr ""
+
+msgid "You do not have permission to delete this data."
+msgstr ""
+
+msgid "Please select a valid choice for the operator field."
+msgstr ""
+
+msgid "Please select a valid choice for the field."
+msgstr ""

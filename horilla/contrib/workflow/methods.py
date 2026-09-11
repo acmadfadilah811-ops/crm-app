@@ -1,0 +1,860 @@
+"""
+Workflow execution engine: condition evaluation and action executors.
+"""
+
+# Standard library imports
+import logging
+import sys
+import threading
+
+# Third-party imports (Django)
+from django.template import engines
+
+from horilla.auth.models import User
+from horilla.contrib.automations.tasks import MockRequest as _WorkflowMockRequest
+from horilla.contrib.core.models import HorillaContentType
+from horilla.contrib.mail.models import (
+    HorillaMail,
+    HorillaMailConfiguration,
+    HorillaMailTemplate,
+)
+from horilla.contrib.mail.services import HorillaMailManager
+from horilla.contrib.notifications.methods import create_notification
+from horilla.contrib.utils.middlewares import _thread_local
+from horilla.db import connection, transaction
+
+# First party imports (Horilla)
+from horilla.utils import timezone
+
+# Local imports
+from .models import ScheduledWorkflowExecution, WorkflowRule
+
+logger = logging.getLogger(__name__)
+
+
+def is_running_migrations():
+    """Return True when Django migrations are running (tables may not exist yet)."""
+    if "migrate" in sys.argv:
+        return True
+    try:
+        db_table_names = connection.introspection.table_names()
+        if "auditlog_logentry" not in db_table_names:
+            return True
+    except Exception:
+        pass
+    return False
+
+
+# ---------------------------------------------------------------------------
+# Condition evaluation
+# ---------------------------------------------------------------------------
+
+
+def evaluate_workflow_condition(condition, instance):
+    """
+    Evaluate a single WorkflowCondition against a model instance.
+
+    Returns True if the condition is satisfied, False otherwise.
+    """
+    try:
+        field_value = getattr(instance, condition.field, None)
+
+        try:
+            field = instance._meta.get_field(condition.field)
+        except Exception:
+            field = None
+
+        is_numeric = False
+        is_date = False
+        is_datetime = False
+
+        if field and hasattr(field, "get_internal_type"):
+            ftype = field.get_internal_type()
+            is_numeric = ftype in (
+                "IntegerField",
+                "BigIntegerField",
+                "SmallIntegerField",
+                "PositiveIntegerField",
+                "PositiveSmallIntegerField",
+                "DecimalField",
+                "FloatField",
+            )
+            is_date = ftype == "DateField"
+            is_datetime = ftype == "DateTimeField"
+
+        # FK → use pk as string. All Django fields have related_model attr; check it is not None.
+        if field and getattr(field, "related_model", None) is not None:
+            field_value = (
+                str(field_value.pk)
+                if field_value and hasattr(field_value, "pk")
+                else ""
+            )
+        else:
+            field_value = "" if field_value is None else str(field_value)
+
+        value = condition.value or ""
+        op = condition.operator
+
+        # Date / datetime comparisons
+        if is_date or is_datetime:
+            from django.utils.dateparse import parse_date, parse_datetime
+
+            raw = getattr(instance, condition.field, None)
+            parse = parse_date if is_date else parse_datetime
+            if op == "isnull":
+                return raw is None
+            if op == "isnotnull":
+                return raw is not None
+            if op == "exact":
+                comp = parse(value)
+                return raw is not None and raw == comp if comp else str(raw) == value
+            if op == "gt":
+                comp = parse(value)
+                return raw is not None and raw > comp if comp else False
+            if op == "lt":
+                comp = parse(value)
+                return raw is not None and raw < comp if comp else False
+            if op == "between":
+                parts = [p.strip() for p in value.split(",") if p.strip()]
+                if len(parts) >= 2:
+                    s, e = parse(parts[0]), parse(parts[1])
+                    return (
+                        s is not None
+                        and e is not None
+                        and raw is not None
+                        and s <= raw <= e
+                    )
+                return False
+
+        # Numeric equality shortcuts
+        if is_numeric and op in ("exact", "ne"):
+            try:
+                fn = float(field_value) if field_value else None
+                vn = float(value) if value else None
+                if op == "exact":
+                    return fn == vn
+                return fn != vn
+            except (ValueError, TypeError):
+                pass
+
+        # String operators
+        if op == "exact":
+            return field_value == value
+        if op == "ne":
+            return field_value != value
+        if op == "icontains":
+            return value.lower() in field_value.lower()
+        if op == "not_contains":
+            return value.lower() not in field_value.lower()
+        if op == "istartswith":
+            return field_value.lower().startswith(value.lower())
+        if op == "iendswith":
+            return field_value.lower().endswith(value.lower())
+        if op == "gt":
+            try:
+                return float(field_value) > float(value)
+            except (ValueError, TypeError):
+                return False
+        if op == "gte":
+            try:
+                return float(field_value) >= float(value)
+            except (ValueError, TypeError):
+                return False
+        if op == "lt":
+            try:
+                return float(field_value) < float(value)
+            except (ValueError, TypeError):
+                return False
+        if op == "lte":
+            try:
+                return float(field_value) <= float(value)
+            except (ValueError, TypeError):
+                return False
+        if op == "isnull":
+            return not field_value or field_value.strip() == ""
+        if op == "isnotnull":
+            return bool(field_value and field_value.strip())
+        if op == "between":
+            parts = [p.strip() for p in value.split(",") if p.strip()]
+            if len(parts) >= 2:
+                try:
+                    return float(parts[0]) <= float(field_value) <= float(parts[1])
+                except (ValueError, TypeError):
+                    return False
+        return False
+
+    except Exception as exc:
+        logger.error("Error evaluating workflow condition %s: %s", condition, exc)
+        return False
+
+
+def evaluate_workflow_conditions(rule, instance):
+    """
+    Evaluate all conditions for a WorkflowRule against an instance.
+
+    Returns True if the overall result passes (AND/OR chain), or if there are no conditions.
+    """
+    conditions = rule.conditions.all().order_by("order", "created_at")
+
+    if not conditions.exists():
+        return True
+
+    result = None
+    previous_logical_op = None
+
+    for condition in conditions:
+        cond_result = evaluate_workflow_condition(condition, instance)
+
+        if result is None:
+            result = cond_result
+        elif previous_logical_op == "or":
+            result = result or cond_result
+        else:
+            result = result and cond_result
+
+        previous_logical_op = condition.logical_operator
+
+    return bool(result)
+
+
+# ---------------------------------------------------------------------------
+# Recipient helpers
+# ---------------------------------------------------------------------------
+
+
+def _resolve_email_recipients(to_value, also_send_to, instance, user):
+    """
+    Resolve email recipient addresses.
+
+    Each comma-separated spec can be:
+      - "self"                    → the triggering user's email
+      - "instance.field.subfield" → dotted path on the instance (e.g. instance.assigned_to.email)
+      - an integer PK             → looked up in User table
+      - a raw email address       → used directly
+    """
+    recipients = []
+
+    def _add(spec):
+        spec = (spec or "").strip()
+        if not spec:
+            return
+        if spec == "self":
+            if user and user.email:
+                recipients.append(user.email)
+            return
+        # Dotted path traversal: instance.field.subfield
+        if spec.startswith("instance."):
+            field_path = spec[len("instance.") :]
+            value = instance
+            for attr in field_path.split("."):
+                value = getattr(value, attr, None)
+                if value is None:
+                    break
+            if value and isinstance(value, str) and "@" in value:
+                recipients.append(value)
+            elif value and hasattr(value, "email") and value.email:
+                recipients.append(value.email)
+            return
+        # Integer PK → User lookup
+        try:
+            pk = int(spec)
+            u = User.objects.filter(pk=pk).first()
+            if u and u.email:
+                recipients.append(u.email)
+            return
+        except (ValueError, TypeError):
+            pass
+        # Raw email address
+        if "@" in spec:
+            recipients.append(spec)
+
+    for s in (to_value or "").split(","):
+        _add(s)
+    for s in (also_send_to or "").split(","):
+        _add(s)
+
+    # De-duplicate preserving order
+    seen = set()
+    result = []
+    for r in recipients:
+        if r not in seen:
+            seen.add(r)
+            result.append(r)
+    return result
+
+
+def _resolve_notification_users(to_value, also_notify_to, instance, user):
+    """
+    Resolve User objects for notification delivery.
+    Same resolution logic as _resolve_email_recipients but returns User instances.
+    """
+    users = []
+
+    def _add(spec):
+        spec = (spec or "").strip()
+        if not spec:
+            return
+        if spec == "self":
+            if user:
+                users.append(user)
+            return
+        # Dotted path traversal: instance.field.subfield
+        if spec.startswith("instance."):
+            field_path = spec[len("instance.") :]
+            value = instance
+            for attr in field_path.split("."):
+                value = getattr(value, attr, None)
+                if value is None:
+                    break
+            if value and isinstance(value, User):
+                users.append(value)
+            elif value and hasattr(value, "email"):
+                u = User.objects.filter(email=value.email).first()
+                if u:
+                    users.append(u)
+            return
+        try:
+            pk = int(spec)
+            u = User.objects.filter(pk=pk).first()
+            if u:
+                users.append(u)
+            return
+        except (ValueError, TypeError):
+            pass
+        if "@" in spec:
+            u = User.objects.filter(email=spec).first()
+            if u:
+                users.append(u)
+
+    for s in (to_value or "").split(","):
+        _add(s)
+    for s in (also_notify_to or "").split(","):
+        _add(s)
+
+    seen_pks = set()
+    result = []
+    for u in users:
+        if u.pk not in seen_pks:
+            seen_pks.add(u.pk)
+            result.append(u)
+    return result
+
+
+# ---------------------------------------------------------------------------
+# Action executors
+# ---------------------------------------------------------------------------
+
+
+def _execute_update_field(action, instance, user):
+    """Update a field on the record to the configured value."""
+    config = action.action_config or {}
+    field_name = config.get("field", "").strip()
+    new_value = config.get("value", "")
+
+    if not field_name:
+        logger.warning("update_field action %s has no field configured", action.pk)
+        return
+
+    try:
+        field = instance._meta.get_field(field_name)
+    except Exception:
+        logger.warning(
+            "update_field action %s: field '%s' not found on %s",
+            action.pk,
+            field_name,
+            instance.__class__.__name__,
+        )
+        return
+
+    try:
+        # Coerce value for numeric/boolean fields
+        ftype = field.get_internal_type() if hasattr(field, "get_internal_type") else ""
+        if ftype in (
+            "IntegerField",
+            "BigIntegerField",
+            "SmallIntegerField",
+            "PositiveIntegerField",
+            "PositiveSmallIntegerField",
+        ):
+            new_value = int(new_value)
+        elif ftype in ("FloatField", "DecimalField"):
+            from decimal import Decimal
+
+            new_value = (
+                Decimal(str(new_value)) if ftype == "DecimalField" else float(new_value)
+            )
+        elif ftype == "BooleanField":
+            new_value = str(new_value).lower() in ("true", "1", "yes")
+        elif hasattr(field, "related_model") and field.related_model:
+            # FK — store by PK
+            related_model = field.related_model
+            new_value = related_model.objects.filter(pk=int(new_value)).first()
+
+        setattr(instance, field_name, new_value)
+        # Use update_fields to avoid triggering unrelated signals recursively
+        instance.save(update_fields=[field_name])
+        logger.info(
+            "Workflow update_field: set %s.%s = %r (instance pk=%s)",
+            instance.__class__.__name__,
+            field_name,
+            new_value,
+            instance.pk,
+        )
+    except Exception as exc:
+        logger.error(
+            "Error in update_field action %s: %s", action.pk, exc, exc_info=True
+        )
+
+
+def _execute_email(action, instance, user):
+    """Send an email using the configured mail template and recipient list."""
+    config = action.action_config or {}
+    template_id = config.get("template_id")
+    to = config.get("to", "")
+    also_send_to = config.get("also_send_to", "")
+
+    if not template_id:
+        logger.warning("email action %s has no template_id configured", action.pk)
+        return
+
+    try:
+        template = HorillaMailTemplate.objects.filter(pk=int(template_id)).first()
+    except (ValueError, TypeError):
+        template = None
+
+    if not template:
+        logger.warning(
+            "email action %s: mail template %s not found", action.pk, template_id
+        )
+        return
+
+    recipients = _resolve_email_recipients(to, also_send_to, instance, user)
+    if not recipients:
+        logger.warning("email action %s: no valid recipients resolved", action.pk)
+        return
+
+    # Resolve actor and company
+    actor = (
+        user
+        or getattr(instance, "updated_by", None)
+        or getattr(instance, "created_by", None)
+    )
+    request = getattr(_thread_local, "request", None)
+    company = getattr(request, "active_company", None) if request else None
+    if not company and hasattr(instance, "company"):
+        company = instance.company
+
+    # Find outgoing mail server
+    sender = None
+    if company:
+        sender = (
+            HorillaMailConfiguration.objects.filter(
+                company=company, mail_channel="outgoing", is_primary=True
+            ).first()
+            or HorillaMailConfiguration.objects.filter(
+                company=company, mail_channel="outgoing"
+            ).first()
+        )
+    if not sender:
+        sender = HorillaMailConfiguration.objects.filter(
+            mail_channel="outgoing", is_primary=True
+        ).first()
+
+    content_type = HorillaContentType.objects.get_for_model(instance)
+
+    try:
+        mail = HorillaMail.objects.create(
+            sender=sender,
+            to=",".join(recipients),
+            subject=template.subject or "",
+            body=template.body or "",
+            content_type=content_type,
+            object_id=instance.pk,
+            mail_status="draft",
+            created_by=actor,
+            updated_by=actor,
+            company=company,
+            created_at=timezone.now(),
+            updated_at=timezone.now(),
+        )
+    except Exception as exc:
+        logger.error(
+            "email action %s: failed to create HorillaMail: %s",
+            action.pk,
+            exc,
+            exc_info=True,
+        )
+        return
+
+    context = {
+        "instance": instance,
+        "user": user,
+        "self": user,
+    }
+    if request:
+        context["request"] = request
+        context["active_company"] = company
+
+    # Capture request metadata from the current thread before spawning
+    _captured_request = getattr(_thread_local, "request", None)
+    _request_info = {}
+    if _captured_request:
+        _request_info = {
+            "meta": getattr(_captured_request, "META", {}),
+            "host": (
+                _captured_request.get_host()
+                if hasattr(_captured_request, "get_host")
+                else ""
+            ),
+            "scheme": getattr(_captured_request, "scheme", "https"),
+        }
+
+    def _send():
+        try:
+            if sender:
+                setattr(_thread_local, "from_mail_id", sender.pk)
+
+            setattr(
+                _thread_local,
+                "request",
+                _WorkflowMockRequest(actor, company, _request_info),
+            )
+            HorillaMailManager.send_mail(mail, context=context)
+            logger.info(
+                "Workflow email sent: action=%s instance=%s recipients=%s",
+                action.pk,
+                instance.pk,
+                recipients,
+            )
+        except Exception as exc:
+            logger.error(
+                "Workflow email action %s failed in thread: %s",
+                action.pk,
+                exc,
+                exc_info=True,
+            )
+            try:
+                mail.refresh_from_db()
+                mail.mail_status = "failed"
+                mail.mail_status_message = str(exc)
+                mail.save(update_fields=["mail_status", "mail_status_message"])
+            except Exception:
+                pass
+        finally:
+            for attr in ("from_mail_id", "request"):
+                try:
+                    delattr(_thread_local, attr)
+                except AttributeError:
+                    pass
+
+    threading.Thread(target=_send, daemon=True).start()
+
+
+def _execute_assign_task(action, instance, user):
+    """Create an Activity task and assign it to the record owner (or triggering user)."""
+    from datetime import timedelta
+
+    from horilla.contrib.activity.models import Activity
+
+    config = action.action_config or {}
+    title = (config.get("title") or "").strip()
+    description = (config.get("description") or "").strip() or None
+    status = (config.get("status") or "not_started").strip()
+    priority = (config.get("priority") or "").strip() or None
+
+    # Compute due date
+    due_datetime = None
+    try:
+        due_in_days = int(config.get("due_in_days") or 1)
+        due_basis = (config.get("due_basis") or "rule_trigger_date").strip()
+        if due_basis == "rule_trigger_date":
+            base_date = timezone.now()
+        else:
+            base_date = getattr(instance, due_basis, None)
+            if base_date is None:
+                base_date = timezone.now()
+            # If it's a plain date (not datetime), convert to datetime
+            import datetime as _dt
+
+            if isinstance(base_date, _dt.date) and not isinstance(
+                base_date, _dt.datetime
+            ):
+                from django.utils.timezone import make_aware
+
+                base_date = make_aware(_dt.datetime.combine(base_date, _dt.time.min))
+        due_datetime = base_date + timedelta(days=due_in_days)
+    except Exception:
+        due_datetime = None
+
+    # Resolve owner: try common owner FK names (OWNER_FIELDS-style) on the instance.
+    owner = user
+    for attr in ("owner", "assigned_to", "created_by", "lead_owner"):
+        candidate = getattr(instance, attr, None)
+        if candidate and isinstance(candidate, User):
+            owner = candidate
+            break
+
+    try:
+        content_type = HorillaContentType.objects.get_for_model(instance)
+        company = getattr(instance, "company", None)
+        task = Activity.objects.create(
+            subject=title or f"Task for {instance}",
+            description=description,
+            activity_type="task",
+            content_type=content_type,
+            object_id=instance.pk,
+            status=status,
+            task_priority=priority,
+            due_datetime=due_datetime,
+            owner=owner,
+            company=company,
+            created_by=user or owner,
+            updated_by=user or owner,
+        )
+        task.assigned_to.add(owner)
+        logger.info(
+            "Workflow assign_task: created task pk=%s for %s pk=%s assigned to user pk=%s",
+            task.pk,
+            instance.__class__.__name__,
+            instance.pk,
+            owner.pk if owner else None,
+        )
+    except Exception as exc:
+        logger.error(
+            "Error in assign_task action %s: %s", action.pk, exc, exc_info=True
+        )
+
+
+def _execute_notification(action, instance, user):
+    """Send an in-app notification using the configured template and recipient list."""
+    from horilla.contrib.notifications.models import NotificationTemplate
+
+    config = action.action_config or {}
+    template_id = config.get("template_id")
+    to = config.get("to", "")
+    also_notify_to = config.get("also_notify_to", "")
+    custom_message = config.get("custom_message", "").strip()
+
+    # Resolve message text
+    message = ""
+    if custom_message:
+        message = custom_message
+    elif template_id:
+        try:
+            tmpl = NotificationTemplate.objects.filter(pk=int(template_id)).first()
+            if tmpl and tmpl.message:
+                # Render Django template tags inside the message
+                django_engine = engines["django"]
+                request = getattr(_thread_local, "request", None)
+                ctx = {"instance": instance, "user": user, "self": user}
+                if request:
+                    ctx["request"] = request
+                raw = "{% load horilla_tags %}\n" + tmpl.message
+                try:
+                    message = django_engine.from_string(raw).render(ctx)
+                except Exception:
+                    message = tmpl.message
+        except (ValueError, TypeError):
+            pass
+
+    if not message:
+        message = f"Workflow rule triggered for {instance}"
+
+    message = message[:500]
+
+    users_to_notify = _resolve_notification_users(to, also_notify_to, instance, user)
+    if not users_to_notify:
+        logger.warning("notification action %s: no users resolved", action.pk)
+        return
+
+    # Resolve a URL for the notification (use the instance's detail URL if available)
+    instance_url = None
+    for attr in dir(instance):
+        if attr.startswith("get_detail_"):
+            try:
+                url = getattr(instance, attr)()
+                if url and str(url).strip() and str(url) != "#":
+                    instance_url = str(url).strip()
+                    break
+            except Exception:
+                pass
+
+    try:
+        with transaction.atomic():
+            for notify_user in users_to_notify:
+                create_notification(
+                    user=notify_user,
+                    message=message,
+                    sender=user,
+                    url=instance_url,
+                    instance=instance,
+                    read=False,
+                )
+        logger.info(
+            "Workflow notification sent: action=%s instance=%s users=%s",
+            action.pk,
+            instance.pk,
+            [u.pk for u in users_to_notify],
+        )
+    except Exception as exc:
+        logger.error(
+            "Workflow notification action %s failed: %s", action.pk, exc, exc_info=True
+        )
+
+
+# ---------------------------------------------------------------------------
+# Rule execution
+# ---------------------------------------------------------------------------
+
+
+def execute_workflow_rule(rule, instance, user, trigger_type):
+    """
+    Execute all actions for a single WorkflowRule in order.
+
+    trigger_type is "on_create" or "on_update".
+    """
+    # Check trigger flags
+    if trigger_type == "on_create" and not rule.trigger_on_create:
+        return
+    if trigger_type == "on_update" and not rule.trigger_on_edit:
+        return
+
+    # Evaluate entry criteria
+    if not evaluate_workflow_conditions(rule, instance):
+        logger.debug(
+            "Workflow rule '%s' conditions not met for %s pk=%s",
+            rule.name,
+            instance.__class__.__name__,
+            instance.pk,
+        )
+        return
+
+    logger.info(
+        "Workflow rule '%s' matched for %s pk=%s (trigger=%s)",
+        rule.name,
+        instance.__class__.__name__,
+        instance.pk,
+        trigger_type,
+    )
+
+    actions = rule.actions.filter(is_active=True).order_by("order", "created_at")
+    for action in actions:
+        try:
+            if action.action_type == "update_field":
+                _execute_update_field(action, instance, user)
+            elif action.action_type == "assign_task":
+                _execute_assign_task(action, instance, user)
+            elif action.action_type == "email":
+                _execute_email(action, instance, user)
+            elif action.action_type == "notification":
+                _execute_notification(action, instance, user)
+            else:
+                logger.debug(
+                    "Workflow action type '%s' not yet implemented (action pk=%s)",
+                    action.action_type,
+                    action.pk,
+                )
+        except Exception as exc:
+            logger.error(
+                "Error executing workflow action %s (%s): %s",
+                action.pk,
+                action.action_type,
+                exc,
+                exc_info=True,
+            )
+
+    _schedule_time_triggers(rule, instance)
+
+
+def _schedule_time_triggers(rule, instance):
+    """
+    For each active time trigger on the rule, calculate the fire datetime and
+    create a ScheduledWorkflowExecution row.  Skips if the calculated time
+    is in the past (would fire immediately via the next periodic poll instead
+    of being silently dropped).
+    """
+    from datetime import timedelta
+
+    time_triggers = rule.time_trigger_actions.filter(is_active=True)
+    if not time_triggers.exists():
+        return
+
+    now = timezone.now()
+
+    for tt in time_triggers:
+        try:
+            if tt.trigger_date_field == "rule_trigger_date":
+                base_dt = now
+            else:
+                base_val = getattr(instance, tt.trigger_date_field, None)
+                if base_val is None:
+                    continue
+                # Convert date → datetime if needed
+                if not hasattr(base_val, "hour"):
+                    from datetime import datetime
+
+                    base_val = datetime.combine(base_val, datetime.min.time())
+                    base_val = timezone.make_aware(base_val)
+                base_dt = base_val
+
+            delta = timedelta(**{tt.delay_unit: tt.delay_value})
+            fire_at = (
+                base_dt + delta if tt.delay_direction == "after" else base_dt - delta
+            )
+
+            ScheduledWorkflowExecution.objects.create(
+                time_trigger=tt,
+                object_id=instance.pk,
+                scheduled_at=fire_at,
+                company=getattr(instance, "company", None),
+            )
+
+            logger.info(
+                "Scheduled workflow time trigger pk=%s for %s pk=%s at %s",
+                tt.pk,
+                instance.__class__.__name__,
+                instance.pk,
+                fire_at,
+            )
+        except Exception as exc:
+            logger.error(
+                "Error scheduling time trigger pk=%s: %s", tt.pk, exc, exc_info=True
+            )
+
+
+def trigger_workflow_rules(instance, trigger_type="on_create", user=None):
+    """
+    Find all active WorkflowRules for the given instance's model and execute them.
+
+    Called from the post_save signal handler.
+    """
+    try:
+        content_type = HorillaContentType.objects.get_for_model(instance)
+
+        company = getattr(instance, "company", None)
+        if not company:
+            request = getattr(_thread_local, "request", None)
+            if request:
+                company = getattr(request, "active_company", None)
+
+        filter_kwargs = {"model": content_type, "is_active": True}
+        if company:
+            filter_kwargs["company"] = company
+
+        rules = WorkflowRule.objects.filter(**filter_kwargs).prefetch_related(
+            "conditions", "actions"
+        )
+
+        for rule in rules:
+            try:
+                execute_workflow_rule(rule, instance, user, trigger_type)
+            except Exception as exc:
+                logger.error(
+                    "Error executing workflow rule '%s': %s",
+                    rule.name,
+                    exc,
+                    exc_info=True,
+                )
+
+    except Exception as exc:
+        logger.error("Error in trigger_workflow_rules: %s", exc, exc_info=True)
