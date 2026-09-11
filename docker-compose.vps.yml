@@ -1,0 +1,13 @@
+# Overlay khusus VPS Bintang: hubungkan web ke jaringan Docker milik stack
+# utama (bintang_default) supaya container cloudflared (di stack lain) bisa
+# menjangkau CRM lewat nama service, TANPA membuka port ke IP publik VPS --
+# akses publik cuma lewat Cloudflare Tunnel, sama seperti Horilla HR.
+networks:
+  bintang_default:
+    external: true
+
+services:
+  web:
+    networks:
+      - default
+      - bintang_default
