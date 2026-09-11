@@ -1,9 +1,7 @@
 <div class="h-[60px] flex justify-end md:justify-between items-center bg-[#fff] py-5 px-5 border-b border-b-primary-100 fixed w-[calc(100%-76px)] z-[50]">
-    {# min-w-0 + truncate: PAGE_HEADER shows the translated page/module title
-       (mis. "Kondisi Penugasan Prospek") -- without these, a long translated
-       title has no width limit inside this flex/justify-between bar and can
-       push the whole top bar wider than the viewport (owner-reported bug),
-       instead of just eliding with "...". #}
+    <!-- min-w-0 + truncate: long translated PAGE_HEADER titles get a width
+         limit inside this flex/justify-between bar instead of pushing it
+         wider than the viewport (owner-reported bug). -->
     <h1 class="hidden lg:block min-w-0 flex-1 truncate text-2xl font-semibold text-primary-800" title="{{ PAGE_HEADER }}">{{ PAGE_HEADER }}</h1>
     <div class="relative hidden md:block w-[240px] xl:w-[300px]">
         <input
