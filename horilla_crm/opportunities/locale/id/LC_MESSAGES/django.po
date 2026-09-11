@@ -74,7 +74,7 @@ msgid "Closed Lost"
 msgstr "Tertutup Hilang"
 
 msgid "Stage Name"
-msgstr "Nama panggung"
+msgstr "Nama tahap"
 
 msgid "Order"
 msgstr "Memesan"
@@ -89,7 +89,7 @@ msgid "Is Final Stage"
 msgstr "Adalah Tahap Akhir"
 
 msgid "Stage Type"
-msgstr "Tipe Panggung"
+msgstr "Tipe Tahap"
 
 msgid "Type of stage - Open, Closed Won, or Closed Lost"
 msgstr "Jenis tahapan - Terbuka, Tertutup Menang, atau Tertutup Kalah"
@@ -149,7 +149,7 @@ msgid "Close Date"
 msgstr "Tanggal Tutup"
 
 msgid "Stage"
-msgstr "Panggung"
+msgstr "Tahap"
 
 msgid "Probability percentage (0-100)"
 msgstr "Persentase probabilitas (0-100)"
@@ -545,7 +545,7 @@ msgid "Final"
 msgstr "Terakhir"
 
 msgid "Add Stage"
-msgstr "Tambahkan Panggung"
+msgstr "Tambahkan Tahap"
 
 msgid "Cancel"
 msgstr "Batal"
@@ -672,13 +672,13 @@ msgid "Add Contact Role"
 msgstr "Tambahkan Peran Kontak"
 
 msgid "Please select a stage"
-msgstr "Silakan pilih panggung"
+msgstr "Silakan pilih tahap"
 
 msgid "Invalid stage selected"
 msgstr "Tahap yang dipilih tidak valid"
 
 msgid "Stage not found"
-msgstr "Panggung tidak ditemukan"
+msgstr "Tahap tidak ditemukan"
 
 msgid "Opportunity Information"
 msgstr "Informasi Peluang"
@@ -775,7 +775,7 @@ msgid "Final stage changed successfully."
 msgstr "Tahap akhir berhasil diubah."
 
 msgid "Stage not found."
-msgstr "Panggung tidak ditemukan."
+msgstr "Tahap tidak ditemukan."
 
 msgid "Prospecting"
 msgstr "Pencarian"

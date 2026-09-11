@@ -67,7 +67,7 @@ msgid "Responded"
 msgstr "Menanggapi"
 
 msgid "Lead"
-msgstr "Memimpin"
+msgstr "Prospek"
 
 msgid "Contact"
 msgstr "Kontak"
@@ -88,7 +88,7 @@ msgid "Campaign Members"
 msgstr "Anggota Kampanye"
 
 msgid "This lead already has this campaign."
-msgstr "Pemimpin ini sudah memiliki kampanye ini."
+msgstr "Prospek ini sudah memiliki kampanye ini."
 
 msgid "This contact already has this campaign."
 msgstr "Kontak ini sudah memiliki kampanye ini."
@@ -163,7 +163,7 @@ msgid "Parent Campaign"
 msgstr "Kampanye Orang Tua"
 
 msgid "Leads in Campaign"
-msgstr "Memimpin dalam Kampanye"
+msgstr "Prospek dalam Kampanye"
 
 msgid "Converted Leads in Campaign"
 msgstr "Prospek yang Dikonversi dalam Kampanye"

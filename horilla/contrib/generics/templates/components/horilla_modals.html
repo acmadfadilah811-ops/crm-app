@@ -76,9 +76,15 @@
     class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 bg-[#00000030] flex"
 >
     <!-- Modal Box -->
+    <!-- max-h-[90vh] + overflow-y-auto: this box had no height limit of its
+         own, so a tall multi-step create/edit form (mis. longer translated
+         field labels wrapping to more lines) could grow past the viewport
+         -- the parent overlay is `items-center` and not scrollable itself,
+         so the Save button at the bottom just rendered off-screen
+         (owner-reported bug). Scrolls internally instead now. -->
     <div
         id="modalBox"
-        class="bg-white w-full max-w-md rounded-lg shadow-lg p-0 opacity-0 scale-95 transition-all duration-300 w-full md:min-w-[650px] modal-box"
+        class="bg-white w-full max-w-md rounded-lg shadow-lg p-0 opacity-0 scale-95 transition-all duration-300 w-full md:min-w-[650px] modal-box max-h-[90vh] overflow-y-auto"
     >
     </div>
 </div>

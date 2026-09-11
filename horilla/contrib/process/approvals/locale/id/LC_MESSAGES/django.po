@@ -461,7 +461,7 @@ msgid "Record modification"
 msgstr "Rekam modifikasi"
 
 msgid "Stage"
-msgstr "Panggung"
+msgstr "Tahap"
 
 msgid "While waiting for approval"
 msgstr "Sambil menunggu persetujuan"

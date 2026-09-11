@@ -48,7 +48,7 @@ msgid "Please select a valid account."
 msgstr "Silakan pilih akun yang valid."
 
 msgid "People"
-msgstr "Rakyat"
+msgstr "Orang"
 
 msgid "Website"
 msgstr "Situs web"

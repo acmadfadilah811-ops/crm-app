@@ -291,7 +291,7 @@ msgid "Related Model"
 msgstr "Model Terkait"
 
 msgid "'lead' or 'contact'"
-msgstr "'memimpin' atau 'kontak'"
+msgstr "'prospek' atau 'kontak'"
 
 msgid "Related Object ID"
 msgstr "ID Objek Terkait"

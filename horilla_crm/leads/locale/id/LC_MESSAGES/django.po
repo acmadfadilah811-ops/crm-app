@@ -19,19 +19,19 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "Leads"
-msgstr "Memimpin"
+msgstr "Prospek"
 
 msgid "Leads by Source"
-msgstr "Dipimpin berdasarkan Sumber"
+msgstr "Prospek berdasarkan Sumber"
 
 msgid "Lead Conversion Status"
 msgstr "Status Konversi Prospek"
 
 msgid "Leads by Status"
-msgstr "Memimpin berdasarkan Status"
+msgstr "Prospek berdasarkan Status"
 
 msgid "Leads by Stage"
-msgstr "Memimpin berdasarkan Tahap"
+msgstr "Prospek berdasarkan Tahap"
 
 msgid "Total Leads"
 msgstr "Total Prospek"
@@ -82,16 +82,16 @@ msgid "Please sign up to access Horilla CRM"
 msgstr "Silakan mendaftar untuk mengakses Horilla CRM"
 
 msgid "Lead"
-msgstr "Memimpin"
+msgstr "Prospek"
 
 msgid "Assignment Rules"
 msgstr "Aturan Penugasan"
 
 msgid "Mail to Lead"
-msgstr "Surat ke Pimpinan"
+msgstr "Surat ke Prospek"
 
 msgid "Web to Lead"
-msgstr "Web untuk Memimpin"
+msgstr "Web untuk Prospek"
 
 msgid "Sales"
 msgstr "Penjualan"
@@ -118,10 +118,10 @@ msgid "Description"
 msgstr "Keterangan"
 
 msgid "Lead Assignment Rule"
-msgstr "Aturan Penugasan Pemimpin"
+msgstr "Aturan Penugasan Prospek"
 
 msgid "Lead Assignment Rules"
-msgstr "Aturan Penugasan Pemimpin"
+msgstr "Aturan Penugasan Prospek"
 
 msgid "Assignment Rule"
 msgstr "Aturan Penugasan"
@@ -145,10 +145,10 @@ msgid "Notification Template"
 msgstr "Templat Pemberitahuan"
 
 msgid "Lead Assignment Condition"
-msgstr "Kondisi Penugasan Pemimpin"
+msgstr "Kondisi Penugasan Prospek"
 
 msgid "Lead Assignment Conditions"
-msgstr "Kondisi Penugasan Pemimpin"
+msgstr "Kondisi Penugasan Prospek"
 
 msgid "Mail template is required for email notification."
 msgstr "Templat email diperlukan untuk pemberitahuan email."
@@ -178,7 +178,7 @@ msgid "Logical Operator"
 msgstr "Operator Logis"
 
 msgid "Lead Assignment Match Criteria"
-msgstr "Kriteria Kecocokan Penugasan Pemimpin"
+msgstr "Kriteria Kecocokan Penugasan Prospek"
 
 msgid "Status Name"
 msgstr "Nama Status"
@@ -202,10 +202,10 @@ msgid "Default probability percentage for this stage"
 msgstr "Persentase probabilitas default untuk tahap ini"
 
 msgid "Lead Stage"
-msgstr "Panggung Pimpin"
+msgstr "Tahap Prospek"
 
 msgid "Lead Stages"
-msgstr "Tahapan Pimpin"
+msgstr "Tahapan Prospek"
 
 msgid "Order must be a non-negative integer."
 msgstr "Urutan harus berupa bilangan bulat bukan negatif."
@@ -503,7 +503,7 @@ msgid "Final"
 msgstr "Terakhir"
 
 msgid "Add Stage"
-msgstr "Tambahkan Panggung"
+msgstr "Tambahkan Tahap"
 
 msgid "Save"
 msgstr "Simpan"

@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "Forecast"
-msgstr "Ramalan"
+msgstr "Perkiraan"
 
 msgid "Role-Based Assignment"
 msgstr "Penugasan Berbasis Peran"
@@ -67,10 +67,10 @@ msgid "Description"
 msgstr "Keterangan"
 
 msgid "Forecast Type"
-msgstr "Jenis Ramalan"
+msgstr "Jenis Perkiraan"
 
 msgid "Include Pipeline"
-msgstr "Sertakan Saluran Pipa"
+msgstr "Sertakan Pipeline"
 
 msgid "Include Best Case"
 msgstr "Sertakan Kasus Terbaik"
@@ -82,7 +82,7 @@ msgid "Include Closed"
 msgstr "Termasuk Tertutup"
 
 msgid "Forecast Types"
-msgstr "Jenis Ramalan"
+msgstr "Jenis Perkiraan"
 
 msgid "Field Name"
 msgstr "Nama Bidang"
@@ -118,7 +118,7 @@ msgid "Rejected"
 msgstr "Ditolak"
 
 msgid "Forecast Name"
-msgstr "Nama Ramalan"
+msgstr "Nama Perkiraan"
 
 msgid "Period"
 msgstr "Periode"
@@ -130,13 +130,13 @@ msgid "Fiscal Year"
 msgstr "Tahun Anggaran"
 
 msgid "Forecast Owner"
-msgstr "Pemilik Ramalan"
+msgstr "Pemilik Perkiraan"
 
 msgid "Target Amount"
 msgstr "Jumlah Sasaran"
 
 msgid "Pipeline Amount"
-msgstr "Jumlah Saluran Pipa"
+msgstr "Jumlah Pipeline"
 
 msgid "Best Case Amount"
 msgstr "Jumlah Kasus Terbaik"
@@ -289,7 +289,7 @@ msgid "No chart data available for this forecast."
 msgstr "Tidak ada data diagram yang tersedia untuk perkiraan ini."
 
 msgid "My Forecast"
-msgstr "Ramalan Saya"
+msgstr "Perkiraan Saya"
 
 msgid "All Users"
 msgstr "Semua Pengguna"
@@ -385,7 +385,7 @@ msgid "Best Case"
 msgstr "Kasus Terbaik"
 
 msgid "Open Pipeline"
-msgstr "Buka Saluran Pipa"
+msgstr "Buka Pipeline"
 
 msgid "Total"
 msgstr "Total"
@@ -419,7 +419,7 @@ msgid "Commit"
 msgstr "Melakukan"
 
 msgid "Pipeline"
-msgstr "Saluran pipa"
+msgstr "Pipeline"
 
 msgid "Committed"
 msgstr "Berkomitmen"
