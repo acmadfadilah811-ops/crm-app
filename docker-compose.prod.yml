@@ -46,6 +46,13 @@ services:
       REDIS_URL: ${REDIS_URL:?Set REDIS_URL in .env}
       CELERY_BROKER_URL: ${CELERY_BROKER_URL:?Set CELERY_BROKER_URL in .env}
       CELERY_RESULT_BACKEND: ${CELERY_RESULT_BACKEND:?Set CELERY_RESULT_BACKEND in .env}
+    # Base compose bind-mounts the host source tree (`.:/app`) here; on the
+    # VPS that tree is root-owned (cloned as root), but the container runs
+    # as non-root appuser, so celery beat can't write its
+    # celerybeat-schedule tracking file there. Drop the bind mount --
+    # image contents only, same as web/celery-worker above -- so /app is
+    # the appuser-owned copy baked in at build time.
+    volumes: !override []
 
   db:
     environment:
