@@ -20,6 +20,12 @@ echo "PostgreSQL is ready!"
 # Run migrations
 python manage.py migrate --noinput
 
+# Compile .po translation catalogs to .mo -- not done at build time (unlike
+# the HR image), and *.mo is gitignored, so this must happen before the
+# server starts or every template falls back to English regardless of the
+# active language.
+python manage.py compilemessages
+
 # Collect static files
 python manage.py collectstatic --noinput
 
