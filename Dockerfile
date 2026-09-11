@@ -52,6 +52,13 @@ COPY --from=builder --chown=appuser:appuser /opt/venv /opt/venv
 
 WORKDIR /app
 
+# WORKDIR creates /app owned by root before anything below runs, and none
+# of the COPY --chown calls touch the directory itself (only what's copied
+# into it) -- so appuser can edit existing files but can't create new ones
+# directly under /app (e.g. celery beat's celerybeat-schedule file).
+# Single directory, not recursive, so this doesn't duplicate a layer.
+RUN chown appuser:appuser /app
+
 # Copy application code
 COPY --chown=appuser:appuser . .
 
