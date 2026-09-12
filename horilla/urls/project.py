@@ -22,6 +22,7 @@ from django.urls import include, path
 from django.views.i18n import JavaScriptCatalog
 
 from horilla import settings
+from horilla.contrib.core.views.hr_bridge import HRBridgeCreateAccountView
 
 
 def health_check(request):
@@ -36,6 +37,11 @@ urlpatterns = [
     path("jsi18n/", JavaScriptCatalog.as_view(), name="javascript-catalog"),
     path("summernote/", include("django_summernote.urls")),
     path("api/", include("horilla.api_urls")),
+
+    # Jembatan HR (Horilla HR) -> CRM: auto-provision akun tim marketing
+    # saat HR buat karyawan baru/approve rekrutmen (lihat
+    # horilla/contrib/core/views/hr_bridge.py).
+    path("api/bridge/hr-employee/", HRBridgeCreateAccountView.as_view(), name="hr-bridge-create-account"),
 ]
 
 if settings.DEBUG:

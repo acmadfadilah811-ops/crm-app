@@ -89,6 +89,11 @@ class HorillaUser(AbstractUser):
         related_name="users",
         verbose_name=_("Role"),
     )
+    # ID karyawan dari sistem HR (Horilla HR) -- kunci penghubung lintas
+    # sistem, sama pola dengan CustomUser.hr_employee_id di Bintang. Diisi
+    # OTOMATIS oleh endpoint bridge (horilla/contrib/core/views/hr_bridge.py)
+    # saat HR membuat karyawan tim marketing baru, BUKAN diisi manual.
+    hr_employee_id = models.IntegerField(null=True, blank=True, unique=True)
     language = models.CharField(
         max_length=50,
         choices=settings.LANGUAGES,
