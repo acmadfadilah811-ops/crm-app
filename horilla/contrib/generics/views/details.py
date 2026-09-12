@@ -1214,8 +1214,8 @@ class HorillaModalDetailView(DetailView):
     title = _("Detailed View")
     template_name = "single_detail_view.html"
     header: dict = {
-        "title": "Horilla",
-        "subtitle": "Horilla Detailed View",
+        "title": "",
+        "subtitle": "Detailed View",
         "avatar": "",
     }
     body: list = []

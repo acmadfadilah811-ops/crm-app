@@ -109,7 +109,7 @@ class GenericDuplicateDetailView(LoginRequiredMixin, HorillaModalDetailView):
         if obj is None:
             obj = getattr(self, "object", None) or getattr(self, "instance", None)
         if not obj:
-            return {"title": "Horilla", "subtitle": "", "avatar": ""}
+            return {"title": "", "subtitle": "", "avatar": ""}
 
         title_field = None
         for field_name in ["name", "title", "first_name", "email", "__str__"]:
