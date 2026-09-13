@@ -42,7 +42,7 @@
     </ul>
 </div>
 
-<div id="{{ view_id }}-content" class="overflow-hidden flex-1 min-h-0">
+<div id="{{ view_id }}-content" class="overflow-y-auto flex-1 min-h-0">
     {% for tab in tabs %}
         <div
             class="{% if active_target != 'tab-'|add:tab.id|add:'-content' %}hidden{% endif %}"
