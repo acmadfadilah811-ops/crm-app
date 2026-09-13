@@ -27,7 +27,13 @@ from horilla.contrib.utils.middlewares import _thread_local
 # First party imports (Horilla)
 from horilla.db import transaction
 from horilla.db.models import Q
-from horilla.db.models.signals import post_delete, post_migrate, post_save, pre_save
+from horilla.db.models.signals import (
+    m2m_changed,
+    post_delete,
+    post_migrate,
+    post_save,
+    pre_save,
+)
 from horilla.utils import timezone
 
 from .models import (
@@ -806,6 +812,77 @@ def ensure_role_view_own_permissions(sender, instance, created, **kwargs):
             print(f"✗ Error assigning permissions to role '{instance.role_name}': {e}")
 
     transaction.on_commit(assign_permissions)
+
+
+# Snapshot of a Role's permission ids just before .permissions.clear() runs,
+# so the paired post_clear signal (which gets no pk_set) still knows what was
+# removed. Keyed by role pk; entries are consumed (popped) in post_clear.
+_role_perms_before_clear = {}
+
+
+@receiver(m2m_changed, sender=Role.permissions.through)
+def sync_users_when_role_permissions_change(sender, instance, action, pk_set, reverse, **kwargs):
+    """
+    Mirror a Role's permission edits onto every user currently assigned that
+    role.
+
+    sync_role_permissions_on_role_change (above) only fires when a USER's
+    role assignment changes -- it copies whatever the role grants at that
+    moment. If the role's own permission set is edited later (tightened or
+    widened), users provisioned earlier are never revisited, so they silently
+    keep stale access (observed: a role narrowed down to view_own_campaign
+    left an already-provisioned user with add_campaign it should no longer
+    have). This listens on the Role<->Permission through table directly and
+    replays the exact add/remove delta onto every member of the affected
+    role(s), so editing a Role takes effect for its existing users too.
+    """
+    if action == "pre_clear":
+        if not reverse:
+            _role_perms_before_clear[instance.pk] = set(
+                instance.permissions.values_list("id", flat=True)
+            )
+        return
+
+    if action == "post_add" and pk_set:
+        changed_perm_ids = set(pk_set)
+        removing = False
+    elif action == "post_remove" and pk_set:
+        changed_perm_ids = set(pk_set)
+        removing = True
+    elif action == "post_clear" and not reverse:
+        changed_perm_ids = _role_perms_before_clear.pop(instance.pk, set())
+        removing = True
+    else:
+        return
+
+    if not changed_perm_ids:
+        return
+
+    role_ids = pk_set if reverse and action != "post_clear" else {instance.pk}
+    if not role_ids:
+        return
+
+    def resync():
+        try:
+            perms = list(Permission.objects.filter(id__in=changed_perm_ids))
+            if not perms:
+                return
+            for role in Role.objects.filter(pk__in=role_ids).prefetch_related("users"):
+                for member in role.users.all():
+                    if member.is_superuser:
+                        continue
+                    if removing:
+                        member.user_permissions.remove(*perms)
+                    else:
+                        member.user_permissions.add(*perms)
+        except Exception as e:
+            logger.error(
+                "Error resyncing users after role permission change for role(s) %s: %s",
+                role_ids,
+                e,
+            )
+
+    transaction.on_commit(resync)
 
 
 @receiver(post_save, sender=User)
