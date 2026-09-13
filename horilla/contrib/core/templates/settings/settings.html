@@ -6,7 +6,7 @@
                 <h3 class="text-md font-semibold">{% trans 'Settings' %}</h3>
                 <p class="text-xs text-gray-500">{% trans 'Manage your company, users, and system configuration.' %}</p>
                 <div class="grid grid-cols-12 gap-3 pt-3">
-                    <div class="col-span-12 xl:col-span-2">
+                    <div class="col-span-12 lg:col-span-3 xl:col-span-2">
                         <div
                             id="settings-sidebar"
                             class="bg-white rounded-xl [box-shadow:0px_0px_20px_0px_rgb(0_0_0_/_5%)]"
@@ -48,9 +48,9 @@
 
                     <!-- Company Information Card -->
                     {% has_perm "core.view_company" as can_view_company %}
-                    <div class="col-span-12 xl:col-span-10">
+                    <div class="col-span-12 lg:col-span-9 xl:col-span-10">
                         <div
-                            class="bg-white rounded-xl [box-shadow:0px_0px_20px_0px_rgb(0_0_0_/_5%)] p-5 h-[calc(_100vh_-_140px_)] overflow-y-hidden"
+                            class="bg-white rounded-xl [box-shadow:0px_0px_20px_0px_rgb(0_0_0_/_5%)] p-5 h-full lg:h-[calc(_100vh_-_140px_)] overflow-y-hidden"
                             id="settings-content"
                         >
                             {% block settings %}
