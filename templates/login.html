@@ -114,19 +114,27 @@
 
                         <div class="mb-3">
                             <label for="username" class="text-sm text-color-600">{% trans "Username" %}</label>
-                            <input
-                                id="username"
-                                type="text"
-                                name="username"
-                                autocomplete="off"
-                                placeholder="{% trans 'Enter Username' %}"
-                                required
-                                class="bg-white/80 text-color-600 w-full border border-dark-50 rounded-md p-3 mt-1 placeholder:text-dark-100 text-sm focus:border-primary-600 focus-visible:outline-0"
-                            >
+                            <div class="flex items-stretch border border-dark-50 rounded-md overflow-hidden mt-1 bg-white/80 focus-within:border-primary-600">
+                                <span class="flex items-center justify-center w-11 shrink-0 border-r border-dark-50 text-dark-100">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                                <input
+                                    id="username"
+                                    type="text"
+                                    name="username"
+                                    autocomplete="off"
+                                    placeholder="{% trans 'Enter Username' %}"
+                                    required
+                                    class="flex-1 min-w-0 bg-transparent text-color-600 p-3 placeholder:text-dark-100 text-sm focus-visible:outline-0"
+                                >
+                            </div>
                         </div>
 
                         <label for="passwordInput" class="text-sm text-color-600">{% trans "Password" %}</label>
-                        <div class="relative {% if not show_forgot_password %}mb-4{% endif %}">
+                        <div class="relative flex items-stretch border border-dark-50 rounded-md overflow-hidden mt-1 bg-white/80 focus-within:border-primary-600 {% if not show_forgot_password %}mb-4{% endif %}">
+                            <span class="flex items-center justify-center w-11 shrink-0 border-r border-dark-50 text-dark-100">
+                                <i class="fas fa-lock"></i>
+                            </span>
                             <input
                                 id="passwordInput"
                                 type="password"
@@ -134,7 +142,7 @@
                                 autocomplete="off"
                                 placeholder="{% trans 'Enter Password' %}"
                                 required
-                                class="bg-white/80 text-color-600 p-3 pr-[40px] w-full border border-dark-50 rounded-md mt-1 placeholder:text-dark-100 text-sm focus:border-primary-600 focus-visible:outline-0"
+                                class="flex-1 min-w-0 bg-transparent text-color-600 p-3 pr-[40px] placeholder:text-dark-100 text-sm focus-visible:outline-0"
                             >
                             <button
                                 type="button"
