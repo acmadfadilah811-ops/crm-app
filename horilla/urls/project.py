@@ -23,6 +23,11 @@ from django.views.i18n import JavaScriptCatalog
 
 from horilla import settings
 from horilla.contrib.core.views.hr_bridge import HRBridgeCreateAccountView
+from horilla.contrib.core.views.insights_bridge import (
+    InsightsCampaignsView,
+    InsightsLeadsView,
+    InsightsPipelineView,
+)
 
 
 def health_check(request):
@@ -42,6 +47,13 @@ urlpatterns = [
     # saat HR buat karyawan baru/approve rekrutmen (lihat
     # horilla/contrib/core/views/hr_bridge.py).
     path("api/bridge/hr-employee/", HRBridgeCreateAccountView.as_view(), name="hr-bridge-create-account"),
+
+    # Dashboard Insight Owner (Bintang): agregasi baca-saja lintas
+    # sistem, auth sama seperti bridge HR->CRM di atas (lihat
+    # horilla/contrib/core/views/insights_bridge.py).
+    path("api/insights/crm/leads/", InsightsLeadsView.as_view(), name="insights-crm-leads"),
+    path("api/insights/crm/pipeline/", InsightsPipelineView.as_view(), name="insights-crm-pipeline"),
+    path("api/insights/crm/campaigns/", InsightsCampaignsView.as_view(), name="insights-crm-campaigns"),
 ]
 
 if settings.DEBUG:
