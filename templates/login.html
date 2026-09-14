@@ -158,7 +158,15 @@
                         </div>
 
                         {% if show_forgot_password %}
-                            <div class="flex justify-end">
+                            <div class="flex items-center justify-between mt-2 mb-3">
+                                <label class="flex items-center gap-2 text-sm text-color-600 cursor-pointer select-none">
+                                    <input
+                                        type="checkbox"
+                                        name="remember"
+                                        class="w-4 h-4 rounded border-dark-50 text-primary-600 focus:ring-0 cursor-pointer"
+                                    >
+                                    {% trans "Remember me" %}
+                                </label>
                                 <button
                                     type="button"
                                     hx-get="{% url 'core:forgot_password' %}"
@@ -166,7 +174,7 @@
                                     hx-select="#sec2"
                                     hx-push-url="true"
                                     hx-swap="outerHTML"
-                                    class="text-sm font-medium text-red-500 mb-3 mt-2 cursor-pointer text-red-600"
+                                    class="text-sm font-medium text-red-600 cursor-pointer"
                                 >
                                     {% trans "Forgot Password?" %}
                                 </button>
