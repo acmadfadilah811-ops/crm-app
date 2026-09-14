@@ -108,8 +108,8 @@
                         <input type="hidden" name="next" value="{{ next }}">
 
                         <div class="mb-3">
-                            <div class="flex items-stretch border border-dark-50 rounded-md overflow-hidden bg-white/80 focus-within:border-primary-600">
-                                <span class="flex items-center justify-center w-11 shrink-0 border-r border-dark-50 text-dark-100">
+                            <div class="flex items-stretch h-[52px] rounded-lg overflow-hidden border border-[#e2e8f0] shadow-sm bg-[#f8fafc] focus-within:border-primary-600">
+                                <span class="flex items-center justify-center w-[52px] h-full shrink-0 border-r border-[#e2e8f0] bg-[#f1f5f9] text-[#94a3b8]">
                                     <i class="fas fa-user"></i>
                                 </span>
                                 <input
@@ -119,13 +119,13 @@
                                     autocomplete="off"
                                     placeholder="{% trans 'Username' %}"
                                     required
-                                    class="flex-1 min-w-0 bg-transparent text-color-600 p-3 placeholder:text-dark-100 text-sm focus-visible:outline-0"
+                                    class="flex-1 min-w-0 bg-transparent text-[#1e293b] font-semibold px-4 placeholder:text-[#94a3b8] placeholder:font-semibold text-sm focus-visible:outline-0"
                                 >
                             </div>
                         </div>
 
-                        <div class="relative flex items-stretch border border-dark-50 rounded-md overflow-hidden bg-white/80 focus-within:border-primary-600 {% if not show_forgot_password %}mb-4{% endif %}">
-                            <span class="flex items-center justify-center w-11 shrink-0 border-r border-dark-50 text-dark-100">
+                        <div class="relative flex items-stretch h-[52px] rounded-lg overflow-hidden border border-[#e2e8f0] shadow-sm bg-[#f8fafc] focus-within:border-primary-600 {% if not show_forgot_password %}mb-4{% endif %}">
+                            <span class="flex items-center justify-center w-[52px] h-full shrink-0 border-r border-[#e2e8f0] bg-[#f1f5f9] text-[#94a3b8]">
                                 <i class="fas fa-lock"></i>
                             </span>
                             <input
@@ -135,7 +135,7 @@
                                 autocomplete="off"
                                 placeholder="{% trans 'Password' %}"
                                 required
-                                class="flex-1 min-w-0 bg-transparent text-color-600 p-3 pr-[40px] placeholder:text-dark-100 text-sm focus-visible:outline-0"
+                                class="flex-1 min-w-0 bg-transparent text-[#1e293b] font-semibold px-4 pr-[40px] placeholder:text-[#94a3b8] placeholder:font-semibold text-sm focus-visible:outline-0"
                             >
                             <button
                                 type="button"
