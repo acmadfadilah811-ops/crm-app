@@ -64,7 +64,21 @@
         {% endfor %}
     </head>
 
-    <body class="bg-[#f8f8f9] font-[Inter,_sans-serif]">
+    <!--
+        Login redesign: full-bleed StarFoto/Star Advertising "Welcome to STAR
+        CRM" artwork as page background (its right two-thirds is empty
+        space, so the card docks there instead of covering the mascot/
+        wordmark) -- same layout as the HR login redesign, which itself
+        mirrors the main Bintang ERP login. Background art already carries
+        the welcome/branding copy, so the logo+heading on the card itself
+        was dropped as redundant. Card has no background/blur/shadow at any
+        screen size -- only the input fields carry a light background, so
+        the artwork stays visible behind the form.
+    -->
+    <body
+        class="min-h-screen w-full font-[Inter,_sans-serif] bg-cover bg-center bg-no-repeat flex items-center justify-center lg:items-end lg:justify-end p-6 lg:pr-[8vw] lg:pb-[8vh]"
+        style="background-image: url('{% static 'assets/img/ui/crm-login-bg.png' %}'); background-color: #eaf6fd;"
+    >
         <!-- Body Start: Early body initialization -->
         {% load_registered_html "body_start" "login" as body_start_html %}
         {% for tpl in body_start_html %}
@@ -82,17 +96,16 @@
         </script>
 
         <!-- Main Content Wrapper -->
-        <div class="h-screen w-full flex items-center justify-center">
+        <div class="w-full flex items-center justify-center lg:justify-end">
             <!-- Messages Container -->
             {% include "messages.html" %}
 
             {% block login %}
                 <!-- LOGIN FORM -->
-                <div id="sec1" class="bg-white p-[50px] rounded-md [box-shadow:0px_0px_20px_#ebebeb] w-[450px]">
-                    <img src="{% static LOGO_PATH %}" alt="{% trans 'Logo' %}" class="m-auto mb-4">
-                    <h1 class="text-3xl font-bold mb-2 text-center">{{ LOGIN_WELCOME_LINE }}</h1>
+                <div id="sec1" class="bg-transparent p-[50px] rounded-md w-[450px]">
+                    <h1 class="text-2xl font-bold mb-2 text-center">{% trans "Sign In" %}</h1>
                     <p class="mb-5 text-center text-sm text-color-600">
-                        {{ LOGIN_TAG_LINE }}
+                        {% trans "Please login to access the dashboard." %}
                     </p>
 
                     <form method="post" action="{% url 'core:login' %}">
@@ -108,7 +121,7 @@
                                 autocomplete="off"
                                 placeholder="{% trans 'Enter Username' %}"
                                 required
-                                class="text-color-600 w-full border border-dark-50 rounded-md p-3 mt-1 placeholder:text-dark-100 text-sm focus:border-primary-600 focus-visible:outline-0"
+                                class="bg-white/80 text-color-600 w-full border border-dark-50 rounded-md p-3 mt-1 placeholder:text-dark-100 text-sm focus:border-primary-600 focus-visible:outline-0"
                             >
                         </div>
 
@@ -121,7 +134,7 @@
                                 autocomplete="off"
                                 placeholder="{% trans 'Enter Password' %}"
                                 required
-                                class="text-color-600 p-3 pr-[40px] w-full border border-dark-50 rounded-md mt-1 placeholder:text-dark-100 text-sm focus:border-primary-600 focus-visible:outline-0"
+                                class="bg-white/80 text-color-600 p-3 pr-[40px] w-full border border-dark-50 rounded-md mt-1 placeholder:text-dark-100 text-sm focus:border-primary-600 focus-visible:outline-0"
                             >
                             <button
                                 type="button"
