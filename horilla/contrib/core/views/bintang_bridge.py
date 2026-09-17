@@ -106,7 +106,11 @@ class BintangBridgeSaleView(APIView):
         contact_number = nomor_wa
         alamat_kota = str(request.data.get('kota') or '').strip()
         alamat_provinsi = str(request.data.get('provinsi') or '').strip()
-        alamat_negara = str(request.data.get('negara') or 'ID').strip() or 'ID'
+        # address_country adalah CountryField (kode ISO 2 huruf) -- Customer
+        # Bintang free-text (mis. "Indonesia"), jadi apa pun selain kode
+        # 2-huruf yang valid, default ke 'ID' (bisnis Indonesia-only).
+        alamat_negara_raw = str(request.data.get('negara') or '').strip().upper()
+        alamat_negara = alamat_negara_raw if len(alamat_negara_raw) == 2 else 'ID'
         alamat_zip = str(request.data.get('kode_pos') or '').strip()
 
         contact = Contact.objects.filter(bintang_contact_id=nomor_wa).first()

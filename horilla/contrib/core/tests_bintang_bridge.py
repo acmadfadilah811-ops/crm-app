@@ -73,6 +73,17 @@ class BintangBridgeSaleTests(TestCase):
         self.assertEqual(contact.first_name, "Budi")
         self.assertEqual(contact.last_name, "S. (updated)")
 
+    def test_negara_nama_lengkap_dinormalisasi_ke_kode_iso(self):
+        # address_country adalah CountryField (varchar(2)) -- Customer
+        # Bintang kirim nama lengkap ("Indonesia"), bukan kode ISO. Regresi
+        # untuk StringDataRightTruncation yang sempat kejadian di produksi.
+        response = self._post({
+            "nomor_wa": "6281200000001", "nama": "Budi Santoso", "negara": "Indonesia",
+        })
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        contact = Contact.objects.get(bintang_contact_id="6281200000001")
+        self.assertEqual(str(contact.address_country), "ID")
+
     def test_sale_bikin_opportunity_won_dan_dedup_by_bintang_sale_id(self):
         payload = {
             "nomor_wa": "6289999999999", "nama": "Citra Dewi",
