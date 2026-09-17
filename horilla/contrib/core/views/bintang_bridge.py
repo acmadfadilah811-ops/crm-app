@@ -114,10 +114,14 @@ class BintangBridgeSaleView(APIView):
         alamat_negara = alamat_negara_raw if len(alamat_negara_raw) == 2 else 'ID'
         alamat_zip = str(request.data.get('kode_pos') or '').strip()
 
+        # CompanyFilteredManager (objects) hanya nampilin baris yang
+        # company-nya cocok sama active_company sesi browser -- tanpa ini,
+        # Contact/Opportunity hasil sync JADI ADA di database tapi TIDAK
+        # KELIHATAN sama sekali di UI CRM (ditemukan lewat audit data dummy).
         contact = Contact.objects.filter(bintang_contact_id=nomor_wa).first()
         contact_created = contact is None
         if contact is None:
-            contact = Contact(bintang_contact_id=nomor_wa, contact_owner=owner)
+            contact = Contact(bintang_contact_id=nomor_wa, contact_owner=owner, company=owner.company)
 
         contact.first_name = first_name or contact.first_name or 'Pelanggan'
         contact.last_name = last_name
@@ -183,6 +187,7 @@ class BintangBridgeSaleView(APIView):
             stage=stage_won,
             probability=100,
             owner=owner,
+            company=owner.company,
             opportunity_type='new_customer',
             lead_source='other',
             forecast_category='closed',

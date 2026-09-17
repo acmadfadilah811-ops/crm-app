@@ -21,6 +21,7 @@ from rest_framework.response import Response
 from rest_framework.throttling import AnonRateThrottle
 from rest_framework.views import APIView
 
+from horilla.contrib.core.models.base import Company
 from horilla.contrib.core.models.organization import Role
 from horilla.contrib.core.models.user import HorillaUser
 
@@ -99,6 +100,11 @@ class HRBridgeCreateAccountView(APIView):
         job_position = str(request.data.get('job_position') or '').strip()
         role = _map_job_position_ke_role(job_position)
 
+        # Akun tanpa company jadi tidak konsisten dengan data lain yang
+        # discope per-company (mis. CompanyFilteredManager di model lain)
+        # -- default ke satu-satunya Company (deployment ini single-tenant).
+        company = Company.objects.first()
+
         existing = HorillaUser.objects.filter(hr_employee_id=hr_employee_id).first()
         if existing:
             existing.first_name = first_name or existing.first_name
@@ -106,6 +112,8 @@ class HRBridgeCreateAccountView(APIView):
             existing.email = email or existing.email
             existing.contact_number = no_hp or existing.contact_number
             existing.role = role
+            if company and not existing.company_id:
+                existing.company = company
             existing.save()
             return Response({
                 'id': existing.id, 'username': existing.username,
@@ -125,6 +133,7 @@ class HRBridgeCreateAccountView(APIView):
             role=role,
             hr_employee_id=hr_employee_id,
             country='ID',
+            company=company,
         )
         user.set_password(password_sementara)
         user.save()

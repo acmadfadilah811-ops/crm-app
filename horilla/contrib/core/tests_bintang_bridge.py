@@ -8,6 +8,7 @@ from django.test import TestCase
 from rest_framework import status
 from rest_framework.test import APIClient
 
+from horilla.contrib.core.models.base import Company
 from horilla.contrib.core.models.user import HorillaUser
 from horilla_crm.contacts.models import Contact
 from horilla_crm.opportunities.models import Opportunity, OpportunityStage
@@ -39,8 +40,10 @@ class BintangBridgeSaleTests(TestCase):
         self.env_patch = mock.patch.dict(os.environ, {"BINTANG_BRIDGE_API_KEY": "kunci-uji"})
         self.env_patch.start()
         self.addCleanup(self.env_patch.stop)
+        self.company = Company.objects.create(name="Star Photo & Advertising", email="info@contoh.com")
         self.owner = HorillaUser.objects.create(
             username="spv.salesmarketingcreative", first_name="SPV", last_name="Marketing",
+            company=self.company,
         )
         self.stage_won = OpportunityStage.objects.create(
             name="Closed Won", order=3, probability=100, stage_type="won",
@@ -63,6 +66,10 @@ class BintangBridgeSaleTests(TestCase):
         self.assertEqual(contact.first_name, "Budi")
         self.assertEqual(contact.last_name, "Santoso")
         self.assertEqual(contact.contact_owner_id, self.owner.id)
+        # Tanpa ini, Contact ADA di database tapi TIDAK KELIHATAN di UI CRM
+        # (CompanyFilteredManager filter by company sesi browser) -- bug
+        # nyata yang ditemukan user lewat audit data dummy.
+        self.assertEqual(contact.company_id, self.company.id)
 
         # Panggilan kedua dengan nomor_wa sama -> update, bukan duplikat.
         response2 = self._post({"nomor_wa": "6281234567890", "nama": "Budi S. (updated)"})
@@ -112,6 +119,7 @@ class BintangBridgeSaleTests(TestCase):
         self.assertEqual(opp.stage_id, self.stage_won.id)
         self.assertEqual(float(opp.amount), 250000.0)
         self.assertEqual(opp.contact_roles.count(), 1)
+        self.assertEqual(opp.company_id, self.company.id)
 
         # Sale ID sama dikirim lagi -> tidak boleh bikin Opportunity kedua.
         response2 = self._post(payload)
