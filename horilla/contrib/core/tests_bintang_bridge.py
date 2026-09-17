@@ -94,7 +94,11 @@ class BintangBridgeSaleTests(TestCase):
         self.assertEqual(Opportunity.objects.filter(bintang_sale_id="possale:42").count(), 1)
 
     def test_tanpa_stage_won_opportunity_dilewati_bukan_500(self):
-        self.stage_won.delete()
+        # .update() (bukan .delete()) -- sengaja lewati post_delete signal
+        # handle_bulk_delete milik CRM sendiri, yang punya bug tak terkait
+        # (AttributeError saat instance.company None) pada objek tanpa
+        # company seperti fixture ini.
+        OpportunityStage.objects.filter(pk=self.stage_won.pk).update(stage_type='open')
         payload = {
             "nomor_wa": "6281212121212", "nama": "Tanpa Stage",
             "sale": {"id": "possale:99", "nomor": "POS-0099", "total": 100000},
