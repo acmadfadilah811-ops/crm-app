@@ -84,6 +84,20 @@ class BintangBridgeSaleTests(TestCase):
         contact = Contact.objects.get(bintang_contact_id="6281200000001")
         self.assertEqual(str(contact.address_country), "ID")
 
+    def test_sale_total_float_tidak_crash_expected_revenue(self):
+        # Opportunity.save() menghitung expected_revenue = amount *
+        # (probability/100), probability Decimal -- payload JSON dari
+        # Bintang kirim total sebagai float (mis. 7500.0), yang sempat
+        # bikin TypeError (float * Decimal) di produksi.
+        response = self._post({
+            "nomor_wa": "6281200000055", "nama": "Total Float",
+            "sale": {"id": "possale:float-total", "nomor": "POS-0055", "total": 7500.0, "tanggal": "2026-09-17"},
+        })
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertTrue(response.data["opportunity_created"])
+        opp = Opportunity.objects.get(bintang_sale_id="possale:float-total")
+        self.assertEqual(float(opp.amount), 7500.0)
+
     def test_sale_bikin_opportunity_won_dan_dedup_by_bintang_sale_id(self):
         payload = {
             "nomor_wa": "6289999999999", "nama": "Citra Dewi",

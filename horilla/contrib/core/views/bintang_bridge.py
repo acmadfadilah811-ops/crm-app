@@ -11,6 +11,7 @@ header, constant_time_compare.
 import datetime
 import logging
 import os
+from decimal import Decimal, InvalidOperation
 
 from django.db import transaction
 from django.utils.crypto import constant_time_compare
@@ -160,7 +161,14 @@ class BintangBridgeSaleView(APIView):
             return None, False
 
         nomor = str(sale.get('nomor') or bintang_sale_id)
-        total = sale.get('total') or 0
+        # Opportunity.save() menghitung expected_revenue = amount *
+        # (probability / 100) -- probability adalah Decimal, jadi amount
+        # HARUS Decimal juga (float * Decimal -> TypeError). Payload JSON
+        # dari Bintang bisa berupa float (mis. 7500.0).
+        try:
+            total = Decimal(str(sale.get('total') or 0))
+        except InvalidOperation:
+            total = Decimal('0')
         tanggal_raw = sale.get('tanggal')
         try:
             tanggal = datetime.date.fromisoformat(tanggal_raw) if tanggal_raw else datetime.date.today()
