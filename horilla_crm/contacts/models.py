@@ -98,6 +98,13 @@ class Contact(HorillaCoreModel):
     )
     is_primary = models.BooleanField(verbose_name=_("Is Primary"), default=False)
     contact_score = models.IntegerField(default=0, verbose_name=_("Contact Score"))
+    # Dedup key untuk jembatan Bintang -> CRM (nomor WA Contact Bintang,
+    # lihat horilla/contrib/core/views/bintang_bridge.py) -- null untuk
+    # Contact yang dibuat manual di CRM sendiri, bukan hasil sync.
+    bintang_contact_id = models.CharField(
+        max_length=32, unique=True, null=True, blank=True, db_index=True,
+        verbose_name=_("Bintang Contact ID"),
+    )
 
     OWNER_FIELDS = ["contact_owner"]
 

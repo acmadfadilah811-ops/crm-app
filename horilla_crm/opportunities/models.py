@@ -435,6 +435,13 @@ class Opportunity(HorillaCoreModel):
         verbose_name=_("Account"),
         related_name="opportunity_account",
     )
+    # Dedup key untuk jembatan Bintang -> CRM (mis. "possale:123", lihat
+    # horilla/contrib/core/views/bintang_bridge.py) -- null untuk
+    # Opportunity yang dibuat manual di CRM sendiri.
+    bintang_sale_id = models.CharField(
+        max_length=40, unique=True, null=True, blank=True, db_index=True,
+        verbose_name=_("Bintang Sale ID"),
+    )
 
     OWNER_FIELDS = ["owner"]
     CURRENCY_FIELDS = ["amount", "expected_revenue"]
