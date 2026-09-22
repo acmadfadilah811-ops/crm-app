@@ -144,3 +144,54 @@ class HRBridgeCreateAccountView(APIView):
             'hr_employee_id': user.hr_employee_id, 'created': True,
             'temp_password': password_sementara,
         }, status=status.HTTP_201_CREATED)
+
+
+class HRBridgeSetStatusView(APIView):
+    """POST /api/bridge/hr-employee-status/
+
+    Dipanggil HR begitu karyawan tim marketing diarsipkan/diaktifkan
+    kembali -- supaya akun login CRM-nya ikut nonaktif/aktif otomatis.
+    Pola & auth sama persis dengan HRBridgeCreateAccountView & padanannya
+    di Bintang (bintang-advertising-backend/api/views/hr_bridge.py).
+
+    Body: {"hr_employee_id": 42, "is_active": false}
+    """
+    permission_classes = [AllowAny]
+    throttle_classes = [HRBridgeThrottle]
+
+    def _cek_api_key(self, request):
+        expected = os.getenv("HR_BRIDGE_API_KEY")
+        if not expected:
+            logger.error("HR_BRIDGE_API_KEY belum dikonfigurasi. Endpoint HR bridge ditutup.")
+            return Response({'error': 'HR bridge API belum dikonfigurasi di server.'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        diberikan = request.headers.get('X-Api-Key', '') or ''
+        if not diberikan or not constant_time_compare(diberikan, expected):
+            logger.warning("HR bridge API: X-Api-Key tidak valid.")
+            return Response({'error': 'Unauthorized'}, status=status.HTTP_401_UNAUTHORIZED)
+        return None
+
+    @transaction.atomic
+    def post(self, request, *args, **kwargs):
+        auth_error = self._cek_api_key(request)
+        if auth_error:
+            return auth_error
+
+        hr_employee_id = request.data.get('hr_employee_id')
+        if not hr_employee_id:
+            return Response({'error': "Field 'hr_employee_id' wajib diisi."}, status=status.HTTP_400_BAD_REQUEST)
+        if 'is_active' not in request.data:
+            return Response({'error': "Field 'is_active' wajib diisi."}, status=status.HTTP_400_BAD_REQUEST)
+
+        is_active = bool(request.data.get('is_active'))
+
+        user = HorillaUser.objects.filter(hr_employee_id=hr_employee_id).first()
+        if not user:
+            return Response({'skipped': True, 'reason': 'Belum punya akun CRM.'}, status=status.HTTP_200_OK)
+
+        user.is_active = is_active
+        user.save(update_fields=['is_active'])
+
+        return Response({
+            'id': user.id, 'hr_employee_id': user.hr_employee_id,
+            'is_active': user.is_active,
+        }, status=status.HTTP_200_OK)

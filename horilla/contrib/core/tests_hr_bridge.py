@@ -84,3 +84,52 @@ class HRBridgeCreateAccountTests(TestCase):
     def test_field_wajib_hr_employee_id_kosong_ditolak_400(self):
         response = self._post({"first_name": "Tanpa", "last_name": "Id"})
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
+
+class HRBridgeSetStatusTests(TestCase):
+    """AKS-13 (lanjutan, 2026-09-22): POST /api/bridge/hr-employee-status/
+    -- HR memanggil ini saat karyawan tim marketing diarsipkan/diaktifkan
+    kembali, supaya akun login CRM yang tertaut ikut nonaktif/aktif."""
+
+    URL_STATUS = "/api/bridge/hr-employee-status/"
+
+    def setUp(self):
+        self.client = APIClient()
+        self.env_patch = mock.patch.dict(os.environ, {"HR_BRIDGE_API_KEY": "kunci-uji"})
+        self.env_patch.start()
+        self.addCleanup(self.env_patch.stop)
+        self.role = Role.objects.create(role_name="Tim Sales Marketing & Creative")
+        self.user = HorillaUser.objects.create_user(
+            username="sinta_status_bridge", password="pw12345",
+            hr_employee_id=301, role=self.role, is_active=True,
+        )
+
+    def _post_status(self, payload, api_key="kunci-uji"):
+        return self.client.post(self.URL_STATUS, payload, format="json", HTTP_X_API_KEY=api_key)
+
+    def test_nonaktifkan_akun_lewat_hr_employee_id(self):
+        response = self._post_status({"hr_employee_id": 301, "is_active": False})
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.user.refresh_from_db()
+        self.assertFalse(self.user.is_active)
+
+    def test_aktifkan_kembali_akun_lewat_hr_employee_id(self):
+        self.user.is_active = False
+        self.user.save(update_fields=["is_active"])
+        response = self._post_status({"hr_employee_id": 301, "is_active": True})
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.user.refresh_from_db()
+        self.assertTrue(self.user.is_active)
+
+    def test_hr_employee_id_tidak_ditemukan_skip_bukan_error(self):
+        response = self._post_status({"hr_employee_id": 99999, "is_active": False})
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertTrue(response.data.get("skipped"))
+
+    def test_tanpa_is_active_400(self):
+        response = self._post_status({"hr_employee_id": 301})
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
+    def test_api_key_salah_ditolak_401(self):
+        response = self._post_status({"hr_employee_id": 301, "is_active": False}, api_key="salah")
+        self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)

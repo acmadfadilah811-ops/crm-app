@@ -23,7 +23,10 @@ from django.views.i18n import JavaScriptCatalog
 
 from horilla import settings
 from horilla.contrib.core.views.bintang_bridge import BintangBridgeSaleView
-from horilla.contrib.core.views.hr_bridge import HRBridgeCreateAccountView
+from horilla.contrib.core.views.hr_bridge import (
+    HRBridgeCreateAccountView,
+    HRBridgeSetStatusView,
+)
 from horilla.contrib.core.views.insights_bridge import (
     InsightsCampaignsView,
     InsightsLeadsView,
@@ -48,6 +51,7 @@ urlpatterns = [
     # saat HR buat karyawan baru/approve rekrutmen (lihat
     # horilla/contrib/core/views/hr_bridge.py).
     path("api/bridge/hr-employee/", HRBridgeCreateAccountView.as_view(), name="hr-bridge-create-account"),
+    path("api/bridge/hr-employee-status/", HRBridgeSetStatusView.as_view(), name="hr-bridge-set-status"),
 
     # Jembatan Bintang -> CRM: auto-sync Contact + Opportunity ("won")
     # saat POS Sale berstatus 'paid' (lihat
