@@ -15,10 +15,11 @@ import pycountry
 
 # Third-party imports (Django)
 from django.contrib import messages
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, get_user_model, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.core.cache import cache
+from django.core.mail import send_mail
 from django.test import RequestFactory
 from django.urls import resolve
 from django.utils._os import safe_join
@@ -31,6 +32,19 @@ from rest_framework_simplejwt.exceptions import InvalidToken, TokenError
 from rest_framework_simplejwt.tokens import UntypedToken
 
 from horilla import settings
+from horilla.contrib.core.login_lock import (
+    DURASI_KUNCI_IP,
+    DURASI_KUNCI_LOGIN,
+    MAKS_GAGAL_LOGIN,
+    catat_gagal,
+    catat_gagal_ip,
+    format_menit_detik,
+    reset as reset_kunci_login,
+    simpan_otp_unlock,
+    sisa_waktu_kunci,
+    sisa_waktu_kunci_ip,
+    verifikasi_otp_unlock,
+)
 from horilla.contrib.mail.models import HorillaMailConfiguration
 from horilla.menu.settings_menu import get_settings_menu
 from horilla.shortcuts import redirect, render
@@ -197,6 +211,8 @@ class LoginUserView(View):
             "next": next_url,
             "initialize_database": initialize_database,
             "show_forgot_password": show_forgot_password,
+            "locked_scope": request.GET.get("locked") or None,
+            "locked_username": request.GET.get("u") or "",
         }
 
         _responses = pre_login_render_signal.send(
@@ -211,6 +227,7 @@ class LoginUserView(View):
         """
         identifier = request.POST.get("username")
         secret = request.POST.get("password")
+        otp_input = (request.POST.get("otp") or "").strip()
         next_url = safe_url(request, request.POST.get("next", "/"))
 
         ip = (
@@ -220,36 +237,80 @@ class LoginUserView(View):
             .split(",")[0]
             .strip()
         )
-        lockout_key = f"login_lockout_{ip}"
-        attempt_key = f"login_attempts_{ip}"
 
-        # Block IP if currently locked out
-        if cache.get(lockout_key):
+        def kembali_terkunci(scope, sisa):
             messages.error(
                 request,
-                _("Too many failed login attempts. Please try again in 15 minutes."),
+                _(
+                    "%(pesan)s Coba lagi dalam %(waktu)s menit, atau minta kode OTP di bawah "
+                    "untuk membuka lebih cepat."
+                )
+                % {
+                    "pesan": (
+                        _("IP ini diblokir sementara karena beberapa akun berbeda gagal login dari sini.")
+                        if scope == "ip"
+                        else _("Akun dikunci sementara karena terlalu banyak percobaan login yang gagal.")
+                    ),
+                    "waktu": format_menit_detik(sisa),
+                },
             )
-            return redirect(reverse_lazy("core:login") + f"?next={next_url}")
+            return redirect(
+                reverse_lazy("core:login") + f"?next={next_url}&locked={scope}&u={identifier or ''}"
+            )
+
+        # OTP membuka kunci AKUN INI SAJA -- tidak mencabut kunci IP untuk akun lain
+        # (satu email yang terbukti dikuasai tidak boleh dipakai membuka jalan bagi akun
+        # lain yang sedang diserang dari IP yang sama).
+        otp_verified = bool(otp_input) and verifikasi_otp_unlock(identifier, otp_input)
+        if otp_verified:
+            reset_kunci_login(identifier, ip)
+        else:
+            # Penguncian: 3 gagal utk (username, IP) -> kunci 10 menit (lihat login_lock.py).
+            # Lapisan kedua: 3 akun BERBEDA gagal dari 1 IP -> IP itu diblokir, supaya
+            # penyerang tidak bisa mencoba banyak akun sekali per akun untuk menghindari
+            # kunci per-akun.
+            sisa_ip = sisa_waktu_kunci_ip(ip)
+            if sisa_ip:
+                return kembali_terkunci("ip", sisa_ip)
+            sisa = sisa_waktu_kunci(identifier, ip)
+            if sisa:
+                return kembali_terkunci("akun", sisa)
 
         user = authenticate(request, username=identifier, password=secret)
 
         if not user:
-            attempts = cache.get(attempt_key, 0) + 1
-            if attempts >= 5:
-                cache.set(lockout_key, True, timeout=900)  # lock for 15 minutes
-                cache.delete(attempt_key)
-                logger.warning("Brute force lockout triggered for IP %s", ip)
+            gagal, terkunci = catat_gagal(identifier, ip)
+            ip_terkunci = catat_gagal_ip(ip, identifier)
+            if ip_terkunci:
                 messages.error(
                     request,
                     _(
-                        "Too many failed login attempts. Please try again in 15 minutes."
-                    ),
+                        "IP ini diblokir sementara karena beberapa akun berbeda gagal login dari sini. "
+                        "Coba lagi dalam %(waktu)s menit, atau minta kode OTP untuk membuka lebih cepat."
+                    )
+                    % {"waktu": format_menit_detik(DURASI_KUNCI_IP)},
                 )
-            else:
-                cache.set(attempt_key, attempts, timeout=900)
+                return redirect(
+                    reverse_lazy("core:login") + f"?next={next_url}&locked=ip&u={identifier or ''}"
+                )
+            if terkunci:
                 messages.error(
-                    request, _("Invalid credentials. Please check and try again.")
+                    request,
+                    _(
+                        "Akun dikunci sementara karena terlalu banyak percobaan login yang gagal. "
+                        "Coba lagi dalam %(waktu)s menit, atau minta kode OTP untuk membuka lebih cepat."
+                    )
+                    % {"waktu": format_menit_detik(DURASI_KUNCI_LOGIN)},
                 )
+                return redirect(
+                    reverse_lazy("core:login") + f"?next={next_url}&locked=akun&u={identifier or ''}"
+                )
+            sisa_coba = max(0, MAKS_GAGAL_LOGIN - gagal)
+            messages.error(
+                request,
+                _("Username atau password salah. Sisa percobaan: %(sisa)s.")
+                % {"sisa": sisa_coba},
+            )
             return redirect(reverse_lazy("core:login") + f"?next={next_url}")
 
         if not user.is_active:
@@ -259,14 +320,56 @@ class LoginUserView(View):
             )
             return redirect(reverse_lazy("core:login") + f"?next={next_url}")
 
-        # Clear failed attempt counters on successful login
-        cache.delete(attempt_key)
-        cache.delete(lockout_key)
+        # Login berhasil: hitungan gagal dikembalikan ke nol
+        reset_kunci_login(identifier, ip)
 
         login(request, user)
         messages.success(request, _("Login successful."))
         next_url = safe_url(request, next_url)
         return redirect(next_url)
+
+
+class LoginUnlockOtpView(View):
+    """POST /login/unlock-otp/ -- kirim OTP verifikasi ke email akun yang terkunci
+    (akun atau IP), supaya pemilik akun bisa login lebih cepat daripada menunggu.
+    Respons generik (anti-enumerasi), dipanggil lewat HTMX dari login.html."""
+
+    def post(self, request):
+        username = (request.POST.get("username") or "").strip()
+        generik = _("Jika akun ada, kode OTP verifikasi login sudah dikirim ke email terdaftar.")
+        if username:
+            cd_key = f"login_unlock_otp_cd:{username.lower()}"
+            if cache.get(cd_key):
+                return HttpResponse(
+                    f'<p class="text-xs text-amber-600">{generik} '
+                    f'{_("Tunggu sebentar sebelum minta lagi.")}</p>'
+                )
+            cache.set(cd_key, True, 60)
+            user = get_user_model().objects.filter(username=username).first()
+            if user and user.email:
+                otp = simpan_otp_unlock(username)
+                if otp:
+                    try:
+                        primary_config = HorillaMailConfiguration.objects.filter(
+                            is_primary=True, company=getattr(user, "company", None)
+                        ).first()
+                        send_mail(
+                            subject=str(_("Kode OTP Verifikasi Login")),
+                            message=(
+                                f"Halo {user.username},\n\nAda percobaan login yang gagal beberapa "
+                                f"kali ke akun Anda (atau dari jaringan Anda). Untuk login sekarang "
+                                f"tanpa menunggu, gunakan kode OTP berikut:\nKODE: {otp}\n\n"
+                                "Berlaku 5 menit. Kalau ini bukan Anda, segera ganti password."
+                            ),
+                            from_email=(
+                                primary_config.from_email if primary_config else settings.DEFAULT_FROM_EMAIL
+                            ),
+                            recipient_list=[user.email],
+                            fail_silently=False,
+                        )
+                    except Exception:
+                        logger.exception("Gagal mengirim OTP unlock login untuk: %s", username)
+        return HttpResponse(f'<p class="text-xs text-emerald-700">{generik}</p>')
 
 
 class LogoutView(View):

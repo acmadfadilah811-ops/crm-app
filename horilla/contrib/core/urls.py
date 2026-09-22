@@ -15,6 +15,7 @@ urlpatterns = [
     path("api/", include("horilla.contrib.core.api.urls")),
     path("", views.HomePageView.as_view(), name="home_view"),
     path("login/", views.LoginUserView.as_view(), name="login"),
+    path("login/unlock-otp/", views.LoginUnlockOtpView.as_view(), name="login_unlock_otp"),
     path("logout/", views.LogoutView.as_view(), name="logout"),
     path("active-tab/", views.SaveActiveTabView.as_view(), name="active_tab"),
     path("favicon.ico", views.FaviconRedirectView.as_view()),

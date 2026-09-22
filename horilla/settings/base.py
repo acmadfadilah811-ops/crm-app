@@ -240,6 +240,25 @@ else:
 # Connection persistence for better performance
 DATABASES["default"]["CONN_MAX_AGE"] = env.int("DB_CONN_MAX_AGE", default=60)
 
+# Cache. "default" tetap LocMemCache (perilaku lama, tidak diubah). Alias "login_lock"
+# khusus hitungan gagal login: Redis bila REDIS_URL ada agar dibagi antar worker
+# gunicorn (LocMem itu per proses, jadi batas percobaan bisa dikali jumlah worker).
+CACHES = {
+    "default": {"BACKEND": "django.core.cache.backends.locmem.LocMemCache"},
+    "login_lock": (
+        {
+            "BACKEND": "django.core.cache.backends.redis.RedisCache",
+            "LOCATION": env("REDIS_URL", default=None),
+            "KEY_PREFIX": "crm",
+        }
+        if env("REDIS_URL", default=None)
+        else {
+            "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+            "LOCATION": "login-lock",
+        }
+    ),
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
