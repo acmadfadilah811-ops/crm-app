@@ -627,6 +627,15 @@ function togglePassword() {
         eyeIcon.classList.remove('hidden');
         eyeHideIcon.classList.add('hidden');
     }
+
+    // Kuirk Chrome/Edge: field yang nilainya diisi autofill password manager
+    // browser kadang tidak menggambar ulang teks aslinya walau atribut type
+    // sudah berubah jadi "text" -- baru "muncul" setelah field diketik/
+    // dihapus manual (keluhan user 2026-09-22). Paksa fokus ulang + pindahkan
+    // kursor ke akhir supaya browser render ulang isi field seketika.
+    passwordInput.focus();
+    const val = passwordInput.value;
+    passwordInput.setSelectionRange(val.length, val.length);
 }
 
 // Table Management
