@@ -31,6 +31,7 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework_simplejwt.exceptions import InvalidToken, TokenError
 from rest_framework_simplejwt.tokens import UntypedToken
 
+from django.conf import settings as django_conf_settings
 from horilla import settings
 from horilla.contrib.core.login_lock import (
     DURASI_KUNCI_IP,
@@ -361,8 +362,13 @@ class LoginUnlockOtpView(View):
                                 f"tanpa menunggu, gunakan kode OTP berikut:\nKODE: {otp}\n\n"
                                 "Berlaku 5 menit. Kalau ini bukan Anda, segera ganti password."
                             ),
+                            # `settings` di file ini = `horilla.settings` (lihat impor di atas),
+                            # bukan django.conf.settings -- tidak mewarisi default Django
+                            # DEFAULT_FROM_EMAIL ('webmaster@localhost'), jadi ambil eksplisit.
                             from_email=(
-                                primary_config.from_email if primary_config else settings.DEFAULT_FROM_EMAIL
+                                primary_config.from_email
+                                if primary_config
+                                else django_conf_settings.DEFAULT_FROM_EMAIL
                             ),
                             recipient_list=[user.email],
                             fail_silently=False,

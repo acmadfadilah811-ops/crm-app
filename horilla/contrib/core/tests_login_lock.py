@@ -7,8 +7,8 @@ from unittest import mock
 
 from django.contrib.messages import get_messages
 from django.core import mail
-from django.core.cache import caches
-from django.test import TestCase
+from django.core.cache import cache as default_cache, caches
+from django.test import Client, TestCase
 
 from horilla.contrib.core import login_lock
 from horilla.contrib.core.models.user import HorillaUser
@@ -23,6 +23,9 @@ class LoginLockTests(TestCase):
     def setUp(self):
         caches["login_lock"].clear()
         self.addCleanup(caches["login_lock"].clear)
+        default_cache.clear()   # cooldown kirim-OTP dipakai dari cache default, bukan login_lock
+        self.addCleanup(default_cache.clear)
+        self.client = Client(**UA)   # login_history.post_logout butuh User-Agent juga
         self.user = HorillaUser.objects.create(
             username="kunci.uji", email="kunci.uji@test.horilla"
         )
@@ -34,7 +37,7 @@ class LoginLockTests(TestCase):
         data = {"username": username, "password": sandi, "next": "/"}
         if otp:
             data["otp"] = otp
-        return self.client.post(self.url, data, HTTP_X_FORWARDED_FOR=ip, **UA)
+        return self.client.post(self.url, data, HTTP_X_FORWARDED_FOR=ip)
 
     def pesan(self, response):
         return " ".join(str(m) for m in get_messages(response.wsgi_request))
@@ -55,7 +58,7 @@ class LoginLockTests(TestCase):
         self.post("salah")
         self.post(SANDI)
         self.assertTrue(self.masuk())
-        self.client.logout()
+        self.client.get("/logout/")
         self.post("salah")
         self.post("salah")
         self.post(SANDI)
@@ -102,6 +105,9 @@ class KunciIpDanOtpTests(TestCase):
     def setUp(self):
         caches["login_lock"].clear()
         self.addCleanup(caches["login_lock"].clear)
+        default_cache.clear()   # cooldown kirim-OTP dipakai dari cache default, bukan login_lock
+        self.addCleanup(default_cache.clear)
+        self.client = Client(**UA)   # login_history.post_logout butuh User-Agent juga
         self.users = {}
         for u in ("ip_a", "ip_b", "ip_c", "ip_d"):
             user = HorillaUser.objects.create(username=u, email=f"{u}@test.horilla")
@@ -114,7 +120,7 @@ class KunciIpDanOtpTests(TestCase):
         data = {"username": username, "password": sandi, "next": "/"}
         if otp:
             data["otp"] = otp
-        return self.client.post(self.url, data, HTTP_X_FORWARDED_FOR=ip, **UA)
+        return self.client.post(self.url, data, HTTP_X_FORWARDED_FOR=ip)
 
     def kirim_otp(self, username):
         self.client.post("/login/unlock-otp/", {"username": username})
@@ -151,7 +157,7 @@ class KunciIpDanOtpTests(TestCase):
         otp = self.ambil_otp()
         r = self.post("ip_a", SANDI + "ip_a", otp=otp)
         self.assertTrue(self.masuk())
-        self.client.logout()
+        self.client.get("/logout/")
         r2 = self.post("ip_d", SANDI + "ip_d")   # akun lain tetap diblokir kunci IP
         self.assertIn("IP ini diblokir", self.pesan(r2))
 
@@ -169,7 +175,7 @@ class KunciIpDanOtpTests(TestCase):
         otp = self.ambil_otp()
         self.post("ip_a", SANDI + "ip_a", otp=otp)
         self.assertTrue(self.masuk())
-        self.client.logout()
+        self.client.get("/logout/")
         r = self.post("ip_b", SANDI + "ip_b", otp=otp)   # otp lama dipakai lagi
         self.assertFalse(self.masuk())
 

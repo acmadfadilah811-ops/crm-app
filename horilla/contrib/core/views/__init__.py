@@ -5,6 +5,7 @@ from horilla.contrib.core.views.core import (
     ReloadMessages,
     SaveActiveTabView,
     LoginUserView,
+    LoginUnlockOtpView,
     LogoutView,
     SettingView,
     SettingsSearchView,
