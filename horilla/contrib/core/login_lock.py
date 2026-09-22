@@ -162,3 +162,22 @@ def verifikasi_otp_unlock(username, otp_input):
     except Exception:  # noqa: BLE001
         logger.warning("login_lock: cache tidak tersedia (verifikasi otp)", exc_info=True)
         return False
+
+
+def matikan_sesi_lain(user):
+    """UAT poin 29: satu akun tidak boleh login dari banyak perangkat sekaligus.
+    Dipanggil TEPAT SEBELUM django.contrib.auth.login() berhasil membuat sesi
+    baru -- semua Session Django lain yang masih menunjuk ke user ini dihapus,
+    supaya perangkat/browser lama langsung ter-logout. Pola sama persis dengan
+    Horilla HR (base/login_lock.py)."""
+    from django.contrib.sessions.models import Session
+    from django.utils import timezone
+
+    target_id = str(user.pk)
+    for session in Session.objects.filter(expire_date__gte=timezone.now()):
+        try:
+            data = session.get_decoded()
+        except Exception:
+            continue
+        if data.get("_auth_user_id") == target_id:
+            session.delete()

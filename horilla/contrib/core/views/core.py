@@ -40,6 +40,7 @@ from horilla.contrib.core.login_lock import (
     catat_gagal,
     catat_gagal_ip,
     format_menit_detik,
+    matikan_sesi_lain,
     reset as reset_kunci_login,
     simpan_otp_unlock,
     sisa_waktu_kunci,
@@ -324,6 +325,7 @@ class LoginUserView(View):
         # Login berhasil: hitungan gagal dikembalikan ke nol
         reset_kunci_login(identifier, ip)
 
+        matikan_sesi_lain(user)
         login(request, user)
         messages.success(request, _("Login successful."))
         next_url = safe_url(request, next_url)
