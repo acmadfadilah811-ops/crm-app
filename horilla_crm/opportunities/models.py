@@ -1148,3 +1148,7 @@ class OpportunitySplit(HorillaCoreModel):
                 "disabled": disabled,
             },
         )
+
+
+# Target Sales (2026-09-26): model di file terpisah agar models.py tidak makin besar.
+from .target_models import TargetSales  # noqa: E402,F401

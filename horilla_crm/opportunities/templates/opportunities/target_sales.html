@@ -1,0 +1,90 @@
+{% extends "components/modelcontent_layout.html" %}
+{% block main %}
+<div class="p-4" id="target-sales">
+    <div class="flex flex-wrap justify-between items-end gap-3 mb-4">
+        <div>
+            <h2 class="text-lg font-semibold">Target Sales</h2>
+            <p class="text-xs text-gray-500">
+                Realisasi dari order Bintang yang dibuat Sales dalam periode (order batal tidak dihitung).
+                Nilai dihitung dari order yang sudah lunas.
+            </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+            <form method="get" class="flex gap-2 items-center" hx-boost="true" hx-target="#mainContent" hx-select="#mainContent" hx-swap="outerHTML">
+                {% if kelola %}
+                    <select name="sales" class="border border-dark-50 rounded-md px-2 py-1 text-sm">
+                        <option value="">Semua Sales</option>
+                        {% for u in daftar_sales %}
+                            <option value="{{ u.pk }}" {% if sales_id == u.pk|stringformat:"s" %}selected{% endif %}>{{ u.get_full_name|default:u.username }}</option>
+                        {% endfor %}
+                    </select>
+                {% endif %}
+                <select name="periode" class="border border-dark-50 rounded-md px-2 py-1 text-sm">
+                    <option value="">Periode berjalan &amp; mendatang</option>
+                    <option value="semua" {% if semua_periode %}selected{% endif %}>Semua periode</option>
+                </select>
+                <button type="submit" class="px-3 py-1 text-sm border border-dark-50 rounded-md">Tampilkan</button>
+            </form>
+            {% if kelola %}
+                <button type="button" hx-get="{% url 'opportunities:target_sales_tambah' %}" hx-target="#modalBox" hx-swap="innerHTML" onclick="openModal()"
+                        class="px-3 py-1 text-sm font-medium text-white bg-primary-600 rounded-md hover:bg-primary-800">+ Tambah Target</button>
+            {% endif %}
+        </div>
+    </div>
+
+    {% if galat %}
+        <div class="mb-3 p-3 text-sm text-red-700 bg-red-50 border border-red-200 rounded-md">Realisasi tidak bisa dimuat: {{ galat }}</div>
+    {% endif %}
+
+    <div class="overflow-x-auto border border-dark-50 rounded-md">
+        <table class="w-full text-sm">
+            <thead class="text-left text-xs text-gray-500 bg-gray-50">
+                <tr>
+                    <th class="px-3 py-2">Sales</th>
+                    <th class="px-3 py-2">Periode</th>
+                    <th class="px-3 py-2 w-64">Nilai (order lunas)</th>
+                    <th class="px-3 py-2 w-56">Jumlah order</th>
+                    <th class="px-3 py-2">Belum lunas</th>
+                    {% if kelola %}<th class="px-3 py-2"></th>{% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for t in targets %}
+                    <tr class="border-t border-dark-50 align-top">
+                        <td class="px-3 py-2 font-medium">{{ t.sales.get_full_name|default:t.sales.username }}</td>
+                        <td class="px-3 py-2">
+                            {{ t.nama_periode }}
+                            <div class="text-xs text-gray-500">{{ t.tanggal_mulai|date:"d/m/Y" }} – {{ t.tanggal_selesai|date:"d/m/Y" }} · {{ t.keadaan }}</div>
+                            {% if t.catatan %}<div class="text-xs text-gray-500">{{ t.catatan }}</div>{% endif %}
+                        </td>
+                        <td class="px-3 py-2">
+                            {% if t.persen_nilai is not None %}
+                                <div class="text-xs">{{ t.nilai_rp }} / {{ t.target_rp }} <b>({{ t.persen_nilai }}%)</b></div>
+                                <div class="h-2 bg-gray-100 rounded mt-1"><div class="h-2 bg-primary-600 rounded" style="width: {{ t.lebar_nilai|stringformat:'s' }}%"></div></div>
+                            {% else %}<span class="text-xs text-gray-400">Tidak ada target nilai</span>{% endif %}
+                        </td>
+                        <td class="px-3 py-2">
+                            {% if t.persen_jumlah is not None %}
+                                <div class="text-xs">{{ t.real.jumlah_order }} / {{ t.target_jumlah_order }} order <b>({{ t.persen_jumlah }}%)</b></div>
+                                <div class="h-2 bg-gray-100 rounded mt-1"><div class="h-2 bg-primary-600 rounded" style="width: {{ t.lebar_jumlah|stringformat:'s' }}%"></div></div>
+                            {% else %}<span class="text-xs text-gray-400">Tidak ada target jumlah</span>{% endif %}
+                            <div class="text-xs text-gray-500 mt-1">{{ t.real.jumlah_lunas }} sudah lunas</div>
+                        </td>
+                        <td class="px-3 py-2 text-xs">{{ t.belum_lunas_rp }}</td>
+                        {% if kelola %}
+                            <td class="px-3 py-2 text-xs whitespace-nowrap">
+                                <button type="button" class="text-primary-600 hover:underline" hx-get="{% url 'opportunities:target_sales_ubah' t.pk %}" hx-target="#modalBox" hx-swap="innerHTML" onclick="openModal()">Ubah</button>
+                                <button type="button" class="text-red-600 hover:underline ml-2" hx-post="{% url 'opportunities:target_sales_hapus' t.pk %}" hx-confirm="Hapus target {{ t.nama_periode }} untuk {{ t.sales.get_full_name|default:t.sales.username }}?" hx-target="body" hx-swap="beforeend">Hapus</button>
+                            </td>
+                        {% endif %}
+                    </tr>
+                {% empty %}
+                    <tr><td colspan="6" class="px-3 py-6 text-center text-sm text-gray-500">
+                        Belum ada target{% if not semua_periode %} untuk periode berjalan{% endif %}.{% if kelola %} Klik "Tambah Target".{% endif %}
+                    </td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

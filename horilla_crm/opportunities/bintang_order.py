@@ -107,3 +107,12 @@ def tandai_menang(opportunity_id, total=None):
                 pass
         opp.save()
         return True
+
+
+def rekap_sales(mulai, selesai, crm_user_ids):
+    """Realisasi per Sales dalam periode: {crm_user_id: {...}} (lihat rekap_sales di Bintang)."""
+    hasil = _panggil("GET", "rekap-sales/", params={
+        "mulai": mulai.isoformat(), "selesai": selesai.isoformat(),
+        "crm_user_ids": ",".join(str(i) for i in crm_user_ids),
+    }).get("hasil", [])
+    return {r["crm_user_id"]: r for r in hasil}

@@ -64,6 +64,26 @@ class OrderBintangSubSection:
     ]
 
 
+@sub_section_menu.register
+class TargetSalesSubSection:
+    """Target Sales per orang dengan periode bebas + pencapaian dari Bintang."""
+
+    section = "sales"
+    app_label = "opportunities"
+    position = 4
+
+    verbose_name = "Target Sales"
+    icon = "/assets/icons/opportunities.svg"
+
+    url = reverse_lazy("opportunities:target_sales")
+    attrs = MAIN_CONTENT_HX_ATTRS
+
+    perm = [
+        "opportunities.view_opportunity",
+        "opportunities.view_own_opportunity",
+    ]
+
+
 @floating_menu.register
 class OpportunitiesFloating:
     """Floating menu configuration for the Opportunity model."""

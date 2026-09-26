@@ -14,6 +14,11 @@ from horilla_crm.opportunities.views.bintang_order import (
     OrderSayaView,
     ProdukBintangCariView,
 )
+from horilla_crm.opportunities.views.target_sales import (
+    TargetSalesFormView,
+    TargetSalesHapusView,
+    TargetSalesView,
+)
 
 urlpatterns = [
     # Order dari Sales ke Bintang (2026-09-26).
@@ -21,6 +26,10 @@ urlpatterns = [
     path("opportunity-order-bintang-form/<int:pk>/", OpportunityOrderBintangFormView.as_view(), name="order_bintang_form"),
     path("produk-bintang-cari/", ProdukBintangCariView.as_view(), name="produk_bintang_cari"),
     path("order-saya/", OrderSayaView.as_view(), name="order_saya"),
+    path("target-sales/", TargetSalesView.as_view(), name="target_sales"),
+    path("target-sales/form/", TargetSalesFormView.as_view(), name="target_sales_tambah"),
+    path("target-sales/form/<int:pk>/", TargetSalesFormView.as_view(), name="target_sales_ubah"),
+    path("target-sales/hapus/<int:pk>/", TargetSalesHapusView.as_view(), name="target_sales_hapus"),
     path(
         "opportunities-view/",
         views.OpportunityView.as_view(),

@@ -1,0 +1,35 @@
+{% load static %}
+<div class="p-5 relative bg-white rounded-lg shadow-sm w-full" style="min-width: min(560px, 92vw);">
+    <div class="flex justify-between items-center mb-3">
+        <h2 class="text-md font-semibold">{% if obj %}Ubah{% else %}Tambah{% endif %} Target Sales</h2>
+        <button type="button" onclick="closeModal()" class="text-gray-500 hover:text-red-500 text-xl cursor-pointer">
+            <img src="{% static 'assets/icons/close.svg' %}" alt="Tutup">
+        </button>
+    </div>
+    <p class="text-xs text-gray-500 mb-4">
+        Periode bebas. Isi target nilai, target jumlah order, atau keduanya.
+        Realisasi dihitung otomatis dari order Bintang milik Sales tersebut.
+    </p>
+
+    {% if form.non_field_errors %}
+        <div class="mb-3 p-3 text-sm text-red-700 bg-red-50 border border-red-200 rounded-md">{{ form.non_field_errors|join:" " }}</div>
+    {% endif %}
+
+    <form hx-post="{% if obj %}{% url 'opportunities:target_sales_ubah' obj.pk %}{% else %}{% url 'opportunities:target_sales_tambah' %}{% endif %}"
+          hx-target="#modalBox" hx-swap="innerHTML">
+        {% csrf_token %}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+            {% for field in form %}
+                <div class="{% if field.name == 'catatan' or field.name == 'sales' %}md:col-span-2{% endif %}">
+                    <label class="text-xs text-gray-600" for="{{ field.id_for_label }}">{{ field.label }}{% if field.field.required %} *{% endif %}</label>
+                    {{ field }}
+                    {% for e in field.errors %}<div class="text-xs text-red-600 mt-1">{{ e }}</div>{% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="flex justify-end gap-2">
+            <button type="button" onclick="closeModal()" class="px-4 py-2 text-sm border border-dark-50 rounded-md">Batal</button>
+            <button type="submit" class="px-4 py-2 text-sm font-medium text-white bg-primary-600 rounded-md hover:bg-primary-800">Simpan</button>
+        </div>
+    </form>
+</div>
