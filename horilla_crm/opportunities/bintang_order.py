@@ -61,3 +61,40 @@ def buat_order(payload):
 
 def order_per_opportunity(opportunity_id):
     return _panggil("GET", "order-status/", params={"crm_opportunity_id": opportunity_id}).get("hasil", [])
+
+
+def tandai_menang(opportunity_id, total=None):
+    """Order Bintang dari Opportunity ini sudah lunas -> Opportunity jadi Closed Won.
+
+    Dipanggil oleh jembatan Bintang -> CRM saat order lunas, dan sebagai
+    cadangan saat tab Order Bintang dibuka. Idempoten: stage yang sudah won
+    tidak disentuh. Nilai amount yang sudah diisi Sales tidak ditimpa.
+    Return: True bila diubah, False bila sudah won, None bila tidak ada.
+    """
+    import datetime
+    from decimal import Decimal, InvalidOperation
+
+    from django.db import transaction
+
+    from horilla_crm.opportunities.models import Opportunity, OpportunityStage
+
+    with transaction.atomic():
+        opp = Opportunity.all_objects.select_for_update().filter(pk=opportunity_id).first()
+        if opp is None:
+            return None
+        if opp.stage_id and opp.stage.stage_type == "won":
+            return False
+        won = OpportunityStage.all_objects.filter(stage_type="won")
+        stage = won.filter(company_id=opp.company_id).order_by("order").first() or won.order_by("order").first()
+        if stage is None:
+            logger.error("Tidak ada OpportunityStage stage_type='won'; Opportunity %s tidak diubah.", opp.pk)
+            return None
+        opp.stage = stage
+        opp.close_date = datetime.date.today()
+        if not opp.amount:
+            try:
+                opp.amount = Decimal(str(total or 0))
+            except InvalidOperation:
+                pass
+        opp.save()
+        return True

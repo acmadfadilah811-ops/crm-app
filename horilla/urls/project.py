@@ -22,7 +22,7 @@ from django.urls import include, path
 from django.views.i18n import JavaScriptCatalog
 
 from horilla import settings
-from horilla.contrib.core.views.bintang_bridge import BintangBridgeSaleView
+from horilla.contrib.core.views.bintang_bridge import BintangBridgeOrderLunasView, BintangBridgeSaleView
 from horilla.contrib.core.views.hr_bridge import (
     HRBridgeCreateAccountView,
     HRBridgeSetStatusView,
@@ -57,6 +57,7 @@ urlpatterns = [
     # saat POS Sale berstatus 'paid' (lihat
     # horilla/contrib/core/views/bintang_bridge.py).
     path("api/bridge/bintang-sale/", BintangBridgeSaleView.as_view(), name="bintang-bridge-sale"),
+    path("api/bridge/bintang-order-lunas/", BintangBridgeOrderLunasView.as_view(), name="bintang-bridge-order-lunas"),
 
     # Dashboard Insight Owner (Bintang): agregasi baca-saja lintas
     # sistem, auth sama seperti bridge HR->CRM di atas (lihat

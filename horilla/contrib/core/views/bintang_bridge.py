@@ -196,3 +196,29 @@ class BintangBridgeSaleView(APIView):
         )
         OpportunityContactRole.objects.create(contact=contact, opportunity=opportunity, is_primary=True)
         return opportunity.id, True
+
+
+class BintangBridgeOrderLunasView(BintangBridgeSaleView):
+    """POST /api/bridge/bintang-order-lunas/
+
+    Dipanggil Bintang saat order yang dibuat Sales dari CRM menjadi lunas.
+    Body: {"crm_opportunity_id": 12, "order_id": "ORD-...", "total_harga": 125000}
+    Opportunity tersebut dipindah ke stage won (Closed Won). Idempoten.
+    Response: {"opportunity_id":.., "diubah": true/false}.
+    """
+
+    def post(self, request, *args, **kwargs):
+        auth_error = self._cek_api_key(request)
+        if auth_error:
+            return auth_error
+        from horilla_crm.opportunities.bintang_order import tandai_menang
+
+        try:
+            opp_id = int(request.data.get('crm_opportunity_id'))
+        except (TypeError, ValueError):
+            return Response({'error': "Field 'crm_opportunity_id' wajib angka."}, status=status.HTTP_400_BAD_REQUEST)
+        hasil = tandai_menang(opp_id, request.data.get('total_harga'))
+        if hasil is None:
+            return Response({'error': 'Opportunity tidak ditemukan.'}, status=status.HTTP_404_NOT_FOUND)
+        logger.info('Bintang order %s lunas -> Opportunity %s won (diubah=%s).', request.data.get('order_id'), opp_id, hasil)
+        return Response({'opportunity_id': opp_id, 'diubah': hasil})

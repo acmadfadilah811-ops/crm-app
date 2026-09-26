@@ -2,6 +2,7 @@
 yang dikirim ke Bintang. Klien Bintang di-mock."""
 
 import datetime
+import os
 from unittest import mock
 
 from django.contrib.auth.models import Permission
@@ -17,7 +18,7 @@ from horilla_crm.opportunities.models import Opportunity, OpportunityStage
 H = {"HTTP_HX_REQUEST": "true", "secure": True}
 
 
-class OrderBintangTabTests(TestCase):
+class _DasarOrderBintang(TestCase):
     def setUp(self):
         # login_history mencatat User-Agent saat login; force_login tidak punya header itu.
         from login_history.models import post_login
@@ -43,6 +44,9 @@ class OrderBintangTabTests(TestCase):
         s = self.client.session
         s["active_company_id"] = self.company.pk
         s.save()
+
+
+class OrderBintangTabTests(_DasarOrderBintang):
 
     @mock.patch.object(bintang_order, "order_per_opportunity")
     def test_tab_menampilkan_order_prospek(self, m):
@@ -110,3 +114,53 @@ class OrderBintangTabTests(TestCase):
         res = self.client.get(reverse("opportunities:produk_bintang_cari"), {"q": "ban"}, secure=True, follow=True)
         self.assertEqual(res.json()["hasil"][0]["nama"], "Banner")
         self.assertEqual(self.client.get(reverse("opportunities:produk_bintang_cari"), {"q": "b"}, secure=True, follow=True).json()["hasil"], [])
+
+
+@mock.patch.dict(os.environ, {"BINTANG_BRIDGE_API_KEY": "kunci-uji"})
+class OpportunityWonOtomatisTests(_DasarOrderBintang):
+    """Order Bintang lunas -> Opportunity otomatis Closed Won."""
+
+    URL = "/api/bridge/bintang-order-lunas/"
+
+    def setUp(self):
+        super().setUp()
+        self.won = OpportunityStage.objects.create(
+            name="Closed Won", order=9, probability=100, stage_type="won", company=self.company,
+        )
+
+    def _kirim(self, kunci="kunci-uji", **data):
+        body = {"crm_opportunity_id": self.opp.pk, "order_id": "ORD-1", "total_harga": 125000}
+        body.update(data)
+        return self.client.post(self.URL, body, content_type="application/json", secure=True, HTTP_X_API_KEY=kunci)
+
+    def test_kunci_api_wajib(self):
+        self.assertEqual(self._kirim(kunci="salah").status_code, 401)
+        self.opp.refresh_from_db()
+        self.assertNotEqual(self.opp.stage_id, self.won.pk)
+
+    def test_lunas_menjadi_closed_won_dan_idempoten(self):
+        res = self._kirim()
+        self.assertEqual(res.status_code, 200)
+        self.assertTrue(res.json()["diubah"])
+        self.opp.refresh_from_db()
+        self.assertEqual(self.opp.stage_id, self.won.pk)
+        self.assertEqual((int(self.opp.probability), int(self.opp.amount)), (100, 125000))
+        self.assertEqual(self.opp.forecast_category, "closed")
+        self.assertFalse(self._kirim().json()["diubah"])
+        self.assertEqual(self._kirim(crm_opportunity_id=999999).status_code, 404)
+        self.assertEqual(self._kirim(crm_opportunity_id="x").status_code, 400)
+
+    def test_nilai_dari_sales_tidak_ditimpa(self):
+        Opportunity.all_objects.filter(pk=self.opp.pk).update(amount=500000)
+        self._kirim()
+        self.opp.refresh_from_db()
+        self.assertEqual((self.opp.stage_id, int(self.opp.amount)), (self.won.pk, 500000))
+
+    @mock.patch.object(bintang_order, "order_per_opportunity")
+    def test_tab_memperbaiki_stage_bila_kiriman_gagal(self, m):
+        m.return_value = [{"id": "ORD-1", "status_label": "Selesai", "total_harga": 125000,
+                           "sisa_tagihan": 0, "lunas": True, "items": []}]
+        self._as(self.sales)
+        self.client.get(reverse("opportunities:order_bintang_tab", args=[self.opp.pk]), **H)
+        self.opp.refresh_from_db()
+        self.assertEqual(self.opp.stage_id, self.won.pk)

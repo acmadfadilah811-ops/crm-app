@@ -66,6 +66,11 @@ class OpportunityOrderBintangTabView(LoginRequiredMixin, View):
                 o["total_rp"], o["sisa_rp"] = _rp(o.get("total_harga")), _rp(o.get("sisa_tagihan"))
         except bintang.BintangOrderError as exc:
             galat = str(exc)
+        # Cadangan bila kiriman otomatis Bintang saat lunas gagal sampai.
+        lunas = [o for o in orders if o.get("lunas")]
+        if lunas and not (opp.stage_id and opp.stage.stage_type == "won"):
+            if bintang.tandai_menang(opp.pk, sum(int(o.get("total_harga") or 0) for o in lunas)):
+                opp.refresh_from_db()
         return render(request, self.template_name, {
             "opportunity": opp, "orders": orders, "galat": galat,
             "bisa_buat": _boleh(request.user, opp, "change"),
