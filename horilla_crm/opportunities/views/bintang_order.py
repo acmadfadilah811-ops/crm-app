@@ -12,7 +12,7 @@ from django.http import HttpResponse, JsonResponse
 from django.views import View
 
 from horilla.shortcuts import get_object_or_404, render
-from horilla.utils.decorators import htmx_required, method_decorator
+from horilla.utils.decorators import htmx_required, method_decorator, permission_required_or_denied
 from horilla.web import ScriptResponse
 from horilla_crm.opportunities import bintang_order as bintang
 from horilla_crm.opportunities.models import Opportunity
@@ -149,3 +149,49 @@ class ProdukBintangCariView(LoginRequiredMixin, View):
             return JsonResponse({"hasil": bintang.cari_produk(q)})
         except bintang.BintangOrderError as exc:
             return JsonResponse({"error": str(exc)}, status=502)
+
+
+FILTER_STATUS = {
+    "": "Semua",
+    "belum_lunas": "Belum lunas",
+    "lunas": "Lunas",
+}
+
+
+@method_decorator(
+    permission_required_or_denied(["opportunities.view_opportunity", "opportunities.view_own_opportunity"]),
+    name="dispatch",
+)
+class OrderSayaView(LoginRequiredMixin, View):
+    """Halaman "Order Saya" (UAT MKT-06): semua order Bintang yang dibuat Sales ini.
+    Pemegang izin umum view_opportunity (SPV/Manager) melihat order seluruh Sales."""
+
+    template_name = "opportunities/order_saya.html"
+
+    def get(self, request):
+        user = request.user
+        lihat_semua = user.has_perm("opportunities.view_opportunity")
+        status = request.GET.get("status", "")
+        if status not in FILTER_STATUS:
+            status = ""
+        orders, galat = [], None
+        try:
+            orders = bintang.semua_order() if lihat_semua else bintang.order_per_sales(user.pk)
+        except bintang.BintangOrderError as exc:
+            galat = str(exc)
+        ringkasan = {
+            "jumlah": len(orders),
+            "total": _rp(sum(int(o.get("total_harga") or 0) for o in orders)),
+            "lunas": sum(1 for o in orders if o.get("lunas")),
+            "sisa": _rp(sum(int(o.get("sisa_tagihan") or 0) for o in orders if o.get("status") != "batal")),
+        }
+        if status == "lunas":
+            orders = [o for o in orders if o.get("lunas")]
+        elif status == "belum_lunas":
+            orders = [o for o in orders if not o.get("lunas") and o.get("status") != "batal"]
+        for o in orders:
+            o["total_rp"], o["sisa_rp"] = _rp(o.get("total_harga")), _rp(o.get("sisa_tagihan"))
+        return render(request, self.template_name, {
+            "orders": orders, "galat": galat, "ringkasan": ringkasan, "lihat_semua": lihat_semua,
+            "status": status, "filter_status": FILTER_STATUS,
+        })

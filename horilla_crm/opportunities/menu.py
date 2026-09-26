@@ -44,6 +44,26 @@ class OpportunitiesSubSection:
     ]
 
 
+@sub_section_menu.register
+class OrderBintangSubSection:
+    """Halaman "Order Saya": order Bintang yang dibuat Sales dari CRM."""
+
+    section = "sales"
+    app_label = "opportunities"
+    position = 4
+
+    verbose_name = "Order Saya"
+    icon = "/assets/icons/opportunities.svg"
+
+    url = reverse_lazy("opportunities:order_saya")
+    attrs = MAIN_CONTENT_HX_ATTRS
+
+    perm = [
+        "opportunities.view_opportunity",
+        "opportunities.view_own_opportunity",
+    ]
+
+
 @floating_menu.register
 class OpportunitiesFloating:
     """Floating menu configuration for the Opportunity model."""

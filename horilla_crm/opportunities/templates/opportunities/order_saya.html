@@ -1,0 +1,75 @@
+{% extends "components/modelcontent_layout.html" %}
+{% block main %}
+<div class="p-4" id="order-saya">
+    <div class="flex flex-wrap justify-between items-end gap-3 mb-4">
+        <div>
+            <h2 class="text-lg font-semibold">{% if lihat_semua %}Order dari CRM (semua Sales){% else %}Order Saya{% endif %}</h2>
+            <p class="text-xs text-gray-500">
+                Order yang dibuat dari Opportunity dan dikirim ke Antrean kasir Bintang. Status diambil langsung dari Bintang.
+            </p>
+        </div>
+        <div class="flex gap-1">
+            {% for kode, label in filter_status.items %}
+                <a href="?status={{ kode }}" hx-boost="true" hx-target="#mainContent" hx-select="#mainContent" hx-swap="outerHTML"
+                   class="px-3 py-1 text-xs rounded-md border {% if status == kode %}border-primary-600 text-primary-600 font-medium{% else %}border-dark-50 text-gray-600{% endif %}">{{ label }}</a>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% if galat %}
+        <div class="mb-3 p-3 text-sm text-red-700 bg-red-50 border border-red-200 rounded-md">{{ galat }}</div>
+    {% endif %}
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+        <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Jumlah order</div><div class="text-md font-semibold">{{ ringkasan.jumlah }}</div></div>
+        <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Total nilai</div><div class="text-md font-semibold">{{ ringkasan.total }}</div></div>
+        <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Sudah lunas</div><div class="text-md font-semibold">{{ ringkasan.lunas }}</div></div>
+        <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Sisa tagihan</div><div class="text-md font-semibold">{{ ringkasan.sisa }}</div></div>
+    </div>
+
+    <div class="overflow-x-auto border border-dark-50 rounded-md">
+        <table class="w-full text-sm">
+            <thead class="text-left text-xs text-gray-500 bg-gray-50">
+                <tr>
+                    <th class="px-3 py-2">Order</th>
+                    <th class="px-3 py-2">Waktu</th>
+                    <th class="px-3 py-2">Pelanggan</th>
+                    {% if lihat_semua %}<th class="px-3 py-2">Sales</th>{% endif %}
+                    <th class="px-3 py-2">Item</th>
+                    <th class="px-3 py-2">Status</th>
+                    <th class="px-3 py-2 text-right">Total</th>
+                    <th class="px-3 py-2 text-right">Sisa</th>
+                    <th class="px-3 py-2">Prospek</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for o in orders %}
+                    <tr class="border-t border-dark-50 align-top">
+                        <td class="px-3 py-2 font-medium">{{ o.id }}</td>
+                        <td class="px-3 py-2 text-xs text-gray-600">{{ o.waktu|slice:":10" }}</td>
+                        <td class="px-3 py-2">{{ o.pelanggan }}</td>
+                        {% if lihat_semua %}<td class="px-3 py-2">{{ o.sales_nama|default:"-" }}</td>{% endif %}
+                        <td class="px-3 py-2 text-xs">{% for i in o.items %}{{ i.nama }} ×{{ i.qty }}{% if not forloop.last %}<br>{% endif %}{% endfor %}</td>
+                        <td class="px-3 py-2">
+                            {{ o.status_label }}
+                            {% if o.lunas %}<span class="ml-1 text-xs text-green-700">· Lunas</span>{% endif %}
+                        </td>
+                        <td class="px-3 py-2 text-right">{{ o.total_rp }}</td>
+                        <td class="px-3 py-2 text-right">{{ o.sisa_rp }}</td>
+                        <td class="px-3 py-2">
+                            {% if o.crm_opportunity_id %}
+                                <a class="text-primary-600 hover:underline" href="{% url 'opportunities:opportunity_detail_view' o.crm_opportunity_id %}">Buka</a>
+                            {% else %}-{% endif %}
+                        </td>
+                    </tr>
+                {% empty %}
+                    <tr><td colspan="9" class="px-3 py-6 text-center text-sm text-gray-500">
+                        {% if galat %}Data tidak bisa dimuat.{% else %}Belum ada order. Buat order dari tab "Order Bintang" di detail Opportunity.{% endif %}
+                    </td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% if ringkasan.jumlah >= 100 %}<p class="text-xs text-gray-500 mt-2">Menampilkan 100 order terbaru.</p>{% endif %}
+</div>
+{% endblock %}

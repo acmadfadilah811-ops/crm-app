@@ -164,3 +164,59 @@ class OpportunityWonOtomatisTests(_DasarOrderBintang):
         self.client.get(reverse("opportunities:order_bintang_tab", args=[self.opp.pk]), **H)
         self.opp.refresh_from_db()
         self.assertEqual(self.opp.stage_id, self.won.pk)
+
+
+class OrderSayaTests(_DasarOrderBintang):
+    """Halaman Order Saya (MKT-06)."""
+
+    ORDERS = [
+        {"id": "ORD-A", "status": "proses", "status_label": "Proses", "total_harga": 100000, "sisa_tagihan": 40000,
+         "lunas": False, "waktu": "2026-09-26T10:00:00", "pelanggan": "Budi", "items": [], "sales_nama": "Tim Sales",
+         "crm_opportunity_id": 1},
+        {"id": "ORD-B", "status": "selesai", "status_label": "Selesai", "total_harga": 50000, "sisa_tagihan": 0,
+         "lunas": True, "waktu": "2026-09-25T10:00:00", "pelanggan": "Sari", "items": [], "sales_nama": "Tim Sales",
+         "crm_opportunity_id": None},
+    ]
+
+    def _get(self, **params):
+        return self.client.get(reverse("opportunities:order_saya"), params, secure=True, follow=True)
+
+    @mock.patch.object(bintang_order, "semua_order")
+    @mock.patch.object(bintang_order, "order_per_sales")
+    def test_sales_hanya_melihat_order_sendiri(self, per_sales, semua):
+        per_sales.return_value = [dict(o) for o in self.ORDERS]
+        self._as(self.sales)
+        html = self._get().content.decode()
+        per_sales.assert_called_once_with(self.sales.pk)
+        semua.assert_not_called()
+        self.assertIn("ORD-A", html)
+        self.assertIn("ORD-B", html)
+        self.assertIn("Rp 150.000", html)
+        self.assertIn("Rp 40.000", html)
+
+    @mock.patch.object(bintang_order, "order_per_sales")
+    def test_filter_status(self, per_sales):
+        per_sales.side_effect = lambda _pk: [dict(o) for o in self.ORDERS]
+        self._as(self.sales)
+        lunas = self._get(status="lunas").content.decode()
+        self.assertIn("ORD-B", lunas)
+        self.assertNotIn("ORD-A", lunas)
+        belum = self._get(status="belum_lunas").content.decode()
+        self.assertIn("ORD-A", belum)
+        self.assertNotIn("ORD-B", belum)
+
+    @mock.patch.object(bintang_order, "semua_order", return_value=[])
+    @mock.patch.object(bintang_order, "order_per_sales")
+    def test_spv_melihat_semua_order(self, per_sales, semua):
+        spv = self._user("spv.sales", ["view_opportunity"])
+        self._as(spv)
+        self.assertEqual(self._get().status_code, 200)
+        semua.assert_called_once_with()
+        per_sales.assert_not_called()
+
+    @mock.patch.object(bintang_order, "order_per_sales")
+    def test_tanpa_izin_ditolak(self, per_sales):
+        tamu = self._user("tamu", [])
+        self._as(tamu)
+        self._get()
+        per_sales.assert_not_called()

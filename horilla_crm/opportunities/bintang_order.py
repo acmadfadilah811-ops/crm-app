@@ -63,6 +63,15 @@ def order_per_opportunity(opportunity_id):
     return _panggil("GET", "order-status/", params={"crm_opportunity_id": opportunity_id}).get("hasil", [])
 
 
+def order_per_sales(crm_user_id):
+    return _panggil("GET", "order-status/", params={"crm_user_id": crm_user_id}).get("hasil", [])
+
+
+def semua_order():
+    """Seluruh order asal CRM (100 terbaru), untuk SPV/Manager."""
+    return _panggil("GET", "order-status/", params={"semua": "1"}).get("hasil", [])
+
+
 def tandai_menang(opportunity_id, total=None):
     """Order Bintang dari Opportunity ini sudah lunas -> Opportunity jadi Closed Won.
 

@@ -11,6 +11,7 @@ app_name = "opportunities"
 from horilla_crm.opportunities.views.bintang_order import (
     OpportunityOrderBintangFormView,
     OpportunityOrderBintangTabView,
+    OrderSayaView,
     ProdukBintangCariView,
 )
 
@@ -19,6 +20,7 @@ urlpatterns = [
     path("opportunity-order-bintang/<int:pk>/", OpportunityOrderBintangTabView.as_view(), name="order_bintang_tab"),
     path("opportunity-order-bintang-form/<int:pk>/", OpportunityOrderBintangFormView.as_view(), name="order_bintang_form"),
     path("produk-bintang-cari/", ProdukBintangCariView.as_view(), name="produk_bintang_cari"),
+    path("order-saya/", OrderSayaView.as_view(), name="order_saya"),
     path(
         "opportunities-view/",
         views.OpportunityView.as_view(),
