@@ -84,6 +84,23 @@ class TargetSalesSubSection:
     ]
 
 
+@sub_section_menu.register
+class LaporanSalesSubSection:
+    """Laporan penjualan, pelanggan, per Sales, lead, dan campaign (SPV/Manager)."""
+
+    section = "sales"
+    app_label = "opportunities"
+    position = 5
+
+    verbose_name = "Laporan Sales"
+    icon = "/assets/icons/opportunities.svg"
+
+    url = reverse_lazy("opportunities:laporan_sales")
+    attrs = MAIN_CONTENT_HX_ATTRS
+
+    perm = ["opportunities.view_opportunity"]
+
+
 @floating_menu.register
 class OpportunitiesFloating:
     """Floating menu configuration for the Opportunity model."""

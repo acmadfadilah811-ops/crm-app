@@ -1,0 +1,129 @@
+{% extends "components/modelcontent_layout.html" %}
+{% block main %}
+<div class="p-4" id="laporan-sales">
+    <div class="flex flex-wrap justify-between items-end gap-3 mb-4">
+        <div>
+            <h2 class="text-lg font-semibold">Laporan Sales &amp; Marketing</h2>
+            <p class="text-xs text-gray-500">Penjualan dan pelanggan dari Bintang; lead, opportunity, dan campaign dari CRM.</p>
+        </div>
+        <form method="get" class="flex flex-wrap gap-2 items-center" hx-boost="true" hx-target="#mainContent" hx-select="#mainContent" hx-swap="outerHTML">
+            <input type="date" name="mulai" value="{{ mulai|date:'Y-m-d' }}" class="border border-dark-50 rounded-md px-2 py-1 text-sm">
+            <span class="text-xs text-gray-500">s.d.</span>
+            <input type="date" name="selesai" value="{{ selesai|date:'Y-m-d' }}" class="border border-dark-50 rounded-md px-2 py-1 text-sm">
+            <button type="submit" class="px-3 py-1 text-sm border border-dark-50 rounded-md">Tampilkan</button>
+        </form>
+    </div>
+
+    {% if galat %}
+        <div class="mb-4 p-3 text-sm text-red-700 bg-red-50 border border-red-200 rounded-md">{{ galat }}</div>
+    {% endif %}
+
+    {% if bintang %}
+        {% with r=bintang.ringkasan %}
+        <h3 class="text-md font-semibold mb-2">Penjualan (Bintang)</h3>
+        <p class="text-xs text-gray-500 mb-2">Omzet = penjualan POS lunas + order yang tidak batal, sama dengan angka Pendapatan di Dashboard Eksekutif Bintang.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+            <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Omzet</div><div class="text-md font-semibold">{{ r.omzet_rp }}</div></div>
+            <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Sudah dibayar</div><div class="text-md font-semibold">{{ r.dibayar_rp }}</div></div>
+            <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Belum dibayar</div><div class="text-md font-semibold">{{ r.belum_dibayar_rp }}</div></div>
+            <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Transaksi</div><div class="text-md font-semibold">{{ r.transaksi }}</div></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+            <div class="border border-dark-50 rounded-md overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead class="text-left text-xs text-gray-500 bg-gray-50"><tr><th class="px-3 py-2">Kanal</th><th class="px-3 py-2 text-right">Transaksi</th><th class="px-3 py-2 text-right">Omzet</th><th class="px-3 py-2 text-right">Porsi</th></tr></thead>
+                    <tbody>
+                        {% for k in bintang.per_kanal %}
+                            <tr class="border-t border-dark-50"><td class="px-3 py-2">{{ k.kanal }}</td><td class="px-3 py-2 text-right">{{ k.transaksi }}</td><td class="px-3 py-2 text-right">{{ k.omzet_rp }}</td><td class="px-3 py-2 text-right">{{ k.porsi }}%</td></tr>
+                        {% empty %}
+                            <tr><td colspan="4" class="px-3 py-4 text-center text-xs text-gray-500">Tidak ada penjualan di periode ini.</td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="border border-dark-50 rounded-md overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead class="text-left text-xs text-gray-500 bg-gray-50"><tr><th class="px-3 py-2">Bulan</th><th class="px-3 py-2 text-right">Transaksi</th><th class="px-3 py-2 text-right">Omzet</th><th class="px-3 py-2 text-right">Pelanggan baru</th></tr></thead>
+                    <tbody>
+                        {% for b in bintang.per_bulan %}
+                            <tr class="border-t border-dark-50"><td class="px-3 py-2">{{ b.bulan }}</td><td class="px-3 py-2 text-right">{{ b.transaksi }}</td><td class="px-3 py-2 text-right">{{ b.omzet_rp }}</td><td class="px-3 py-2 text-right">{{ b.pelanggan_baru }}</td></tr>
+                        {% empty %}
+                            <tr><td colspan="4" class="px-3 py-4 text-center text-xs text-gray-500">-</td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <h3 class="text-md font-semibold mb-2">Pertumbuhan Pelanggan</h3>
+        <p class="text-xs text-gray-500 mb-2">Dihitung per nomor HP. Baru = transaksi pertamanya di periode ini; kembali = sudah pernah belanja sebelumnya.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+            <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Pelanggan aktif</div><div class="text-md font-semibold">{{ r.pelanggan_aktif }}</div></div>
+            <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Pelanggan baru</div><div class="text-md font-semibold">{{ r.pelanggan_baru }}</div></div>
+            <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Pelanggan kembali</div><div class="text-md font-semibold">{{ r.pelanggan_kembali }}</div></div>
+            <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Database pelanggan</div><div class="text-md font-semibold">{{ r.pelanggan_terdaftar_total }} <span class="text-xs font-normal text-gray-500">(+{{ r.pelanggan_terdaftar_baru }} periode ini)</span></div></div>
+        </div>
+        {% endwith %}
+
+        <h3 class="text-md font-semibold mb-2">Kinerja per Sales (order dari CRM)</h3>
+        <div class="border border-dark-50 rounded-md overflow-x-auto mb-6">
+            <table class="w-full text-sm">
+                <thead class="text-left text-xs text-gray-500 bg-gray-50"><tr><th class="px-3 py-2">Sales</th><th class="px-3 py-2 text-right">Order</th><th class="px-3 py-2 text-right">Lunas</th><th class="px-3 py-2 text-right">Nilai lunas</th><th class="px-3 py-2 text-right">Nilai belum lunas</th></tr></thead>
+                <tbody>
+                    {% for s in per_sales %}
+                        <tr class="border-t border-dark-50"><td class="px-3 py-2">{{ s.nama }}</td><td class="px-3 py-2 text-right">{{ s.jumlah_order }}</td><td class="px-3 py-2 text-right">{{ s.jumlah_lunas }}</td><td class="px-3 py-2 text-right">{{ s.nilai_rp }}</td><td class="px-3 py-2 text-right">{{ s.belum_rp }}</td></tr>
+                    {% empty %}
+                        <tr><td colspan="5" class="px-3 py-4 text-center text-xs text-gray-500">Belum ada order dari CRM di periode ini.</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+
+    {% if crm %}
+        <h3 class="text-md font-semibold mb-2">Lead &amp; Opportunity (CRM)</h3>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-4">
+            <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Lead baru</div><div class="text-md font-semibold">{{ crm.lead_baru }}</div></div>
+            <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Lead terkonversi</div><div class="text-md font-semibold">{{ crm.lead_konversi }} <span class="text-xs font-normal text-gray-500">({{ crm.lead_persen }}%)</span></div></div>
+            <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Opportunity baru</div><div class="text-md font-semibold">{{ crm.opp_baru }}</div></div>
+            <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Menang / kalah</div><div class="text-md font-semibold">{{ crm.opp_menang }} / {{ crm.opp_kalah }}</div></div>
+            <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Nilai menang</div><div class="text-md font-semibold">{{ crm.opp_menang_rp }}</div></div>
+        </div>
+        <div class="border border-dark-50 rounded-md overflow-x-auto mb-6">
+            <table class="w-full text-sm">
+                <thead class="text-left text-xs text-gray-500 bg-gray-50"><tr><th class="px-3 py-2">Sumber lead</th><th class="px-3 py-2 text-right">Lead</th><th class="px-3 py-2 text-right">Terkonversi</th><th class="px-3 py-2 text-right">Konversi</th></tr></thead>
+                <tbody>
+                    {% for s in crm.lead_per_sumber %}
+                        <tr class="border-t border-dark-50"><td class="px-3 py-2">{{ s.sumber }}</td><td class="px-3 py-2 text-right">{{ s.jumlah }}</td><td class="px-3 py-2 text-right">{{ s.konversi }}</td><td class="px-3 py-2 text-right">{{ s.persen }}%</td></tr>
+                    {% empty %}
+                        <tr><td colspan="4" class="px-3 py-4 text-center text-xs text-gray-500">Tidak ada lead baru di periode ini.</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-md font-semibold mb-2">Campaign</h3>
+        <p class="text-xs text-gray-500 mb-2">Campaign yang berjalan di periode ini. Angka lead/respon/opportunity adalah akumulasi campaign.</p>
+        <div class="border border-dark-50 rounded-md overflow-x-auto">
+            <table class="w-full text-sm">
+                <thead class="text-left text-xs text-gray-500 bg-gray-50"><tr><th class="px-3 py-2">Campaign</th><th class="px-3 py-2">Status</th><th class="px-3 py-2">Periode</th><th class="px-3 py-2 text-right">Lead</th><th class="px-3 py-2 text-right">Konversi</th><th class="px-3 py-2 text-right">Respon</th><th class="px-3 py-2 text-right">Opp. menang</th><th class="px-3 py-2 text-right">Biaya</th></tr></thead>
+                <tbody>
+                    {% for c in crm.campaigns %}
+                        <tr class="border-t border-dark-50">
+                            <td class="px-3 py-2">{{ c.nama }}<div class="text-xs text-gray-500">{{ c.jenis }}</div></td>
+                            <td class="px-3 py-2">{{ c.status }}</td>
+                            <td class="px-3 py-2 text-xs">{{ c.mulai|date:"d/m/Y"|default:"-" }} – {{ c.selesai|date:"d/m/Y"|default:"-" }}</td>
+                            <td class="px-3 py-2 text-right">{{ c.lead }}</td><td class="px-3 py-2 text-right">{{ c.konversi }}</td><td class="px-3 py-2 text-right">{{ c.respon }}</td>
+                            <td class="px-3 py-2 text-right">{{ c.menang }}<div class="text-xs text-gray-500">{{ c.menang_rp }}</div></td>
+                            <td class="px-3 py-2 text-right">{{ c.biaya_rp }}</td>
+                        </tr>
+                    {% empty %}
+                        <tr><td colspan="8" class="px-3 py-4 text-center text-xs text-gray-500">Tidak ada campaign di periode ini.</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

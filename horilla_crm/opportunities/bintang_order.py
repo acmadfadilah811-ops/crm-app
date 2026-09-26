@@ -121,3 +121,8 @@ def rekap_sales(mulai, selesai, crm_user_ids):
 def riwayat_pelanggan(nomor):
     """Semua transaksi Bintang satu pelanggan (order semua kanal + POS), per nomor HP."""
     return _panggil("GET", "riwayat-pelanggan/", params={"nomor": nomor})
+
+
+def laporan_penjualan(mulai, selesai):
+    """Omzet per kanal/bulan + pertumbuhan pelanggan dari Bintang (definisi = Dashboard Eksekutif)."""
+    return _panggil("GET", "laporan-penjualan/", params={"mulai": mulai.isoformat(), "selesai": selesai.isoformat()})
