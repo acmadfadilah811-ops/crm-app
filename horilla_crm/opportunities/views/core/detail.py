@@ -272,6 +272,14 @@ class OpportunityDetailViewTabView(LoginRequiredMixin, HorillaDetailTabView):
         self.object_id = self.request.GET.get("object_id")
         self.model = Opportunity
         super()._prepare_detail_tabs()
+        # Tab order ke Bintang (2026-09-26): Sales membuat & memantau order.
+        if self.object_id:
+            self.tabs.insert(1, {
+                "title": "Order Bintang",
+                "url": reverse_lazy("opportunities:order_bintang_tab", kwargs={"pk": self.object_id}),
+                "target": "tab-order-bintang-content",
+                "id": "order-bintang",
+            })
 
     urls = {
         "details": "opportunities:opportunity_details_tab",

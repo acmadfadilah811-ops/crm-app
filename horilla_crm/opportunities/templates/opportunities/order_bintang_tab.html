@@ -1,0 +1,57 @@
+{% load i18n %}
+<div class="p-4 space-y-4">
+    <div class="flex items-center justify-between gap-3 flex-wrap">
+        <div>
+            <h3 class="text-md font-semibold">Order ke Bintang</h3>
+            <p class="text-xs text-gray-500">Order masuk ke Antrean kasir Bintang sebagai draft. Harga dari katalog Bintang; kasir memfinalkan.</p>
+        </div>
+        {% if bisa_buat %}
+            <button type="button"
+                    class="px-4 py-2 text-sm font-medium text-white bg-primary-600 rounded-md hover:bg-primary-800"
+                    hx-get="{% url 'opportunities:order_bintang_form' opportunity.pk %}"
+                    hx-target="#modalBox" hx-swap="innerHTML" onclick="openModal()">
+                + Buat Order
+            </button>
+        {% endif %}
+    </div>
+
+    {% if galat %}
+        <div class="p-3 text-sm text-red-700 bg-red-50 border border-red-200 rounded-md">{{ galat }}</div>
+    {% endif %}
+
+    {% if orders %}
+        <div class="overflow-x-auto border border-dark-50 rounded-lg">
+            <table class="w-full text-sm">
+                <thead class="bg-gray-50 text-left text-xs text-gray-500">
+                    <tr>
+                        <th class="px-3 py-2">No. Order</th>
+                        <th class="px-3 py-2">Tanggal</th>
+                        <th class="px-3 py-2">Produk</th>
+                        <th class="px-3 py-2">Status</th>
+                        <th class="px-3 py-2 text-right">Total</th>
+                        <th class="px-3 py-2 text-right">Sisa Tagihan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for o in orders %}
+                    <tr class="border-t border-dark-50 align-top">
+                        <td class="px-3 py-2 font-medium">{{ o.id }}<div class="text-xs text-gray-500">oleh {{ o.sales_nama|default:"-" }}</div></td>
+                        <td class="px-3 py-2">{{ o.waktu|slice:":10" }}</td>
+                        <td class="px-3 py-2">
+                            {% for i in o.items %}<div>{{ i.nama }} × {{ i.qty }}</div>{% endfor %}
+                        </td>
+                        <td class="px-3 py-2">
+                            {{ o.status_label }}
+                            {% if o.lunas %}<div class="text-xs text-green-700">Lunas</div>{% endif %}
+                        </td>
+                        <td class="px-3 py-2 text-right">{{ o.total_rp }}</td>
+                        <td class="px-3 py-2 text-right">{{ o.sisa_rp }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% elif not galat %}
+        <p class="text-sm text-gray-500 border border-dashed border-dark-50 rounded-lg p-4">Belum ada order untuk prospek ini.</p>
+    {% endif %}
+</div>

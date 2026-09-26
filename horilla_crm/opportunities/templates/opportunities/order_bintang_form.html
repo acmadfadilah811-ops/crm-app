@@ -1,0 +1,121 @@
+{% load i18n static %}
+<div class="p-5 relative bg-white rounded-lg shadow-sm w-full" style="min-width: min(720px, 92vw);">
+    <div class="flex justify-between items-center mb-3">
+        <h2 class="text-md font-semibold">Buat Order ke Bintang</h2>
+        <button type="button" onclick="closeModal()" class="text-gray-500 hover:text-red-500 text-xl cursor-pointer">
+            <img src="{% static 'assets/icons/close.svg' %}" alt="{% trans 'Close' %}">
+        </button>
+    </div>
+    <p class="text-xs text-gray-500 mb-4">
+        Prospek: <b>{{ opportunity.name }}</b>. Order masuk ke Antrean kasir sebagai draft.
+        Harga dihitung Bintang dari katalog; diskon dan penyesuaian dilakukan kasir.
+    </p>
+
+    {% if galat %}
+        <div class="mb-3 p-3 text-sm text-red-700 bg-red-50 border border-red-200 rounded-md">{{ galat }}</div>
+    {% endif %}
+
+    <form hx-post="{% url 'opportunities:order_bintang_form' opportunity.pk %}" hx-target="#modalBox" hx-swap="innerHTML" id="formOrderBintang">
+        {% csrf_token %}
+        <input type="hidden" name="kunci" value="{{ data.kunci }}">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
+            <div>
+                <label class="text-xs text-gray-600">Nama pelanggan *</label>
+                <input name="nama" value="{{ data.nama }}" required class="w-full border border-dark-50 rounded-md px-3 py-2 text-sm">
+            </div>
+            <div>
+                <label class="text-xs text-gray-600">Nomor HP / WA *</label>
+                <input name="nomor_hp" value="{{ data.nomor_hp }}" required placeholder="08..." class="w-full border border-dark-50 rounded-md px-3 py-2 text-sm">
+            </div>
+            <div>
+                <label class="text-xs text-gray-600">Email</label>
+                <input name="email" type="email" value="{{ data.email }}" class="w-full border border-dark-50 rounded-md px-3 py-2 text-sm">
+            </div>
+        </div>
+        <p class="text-xs text-gray-500 -mt-2 mb-4">Pelanggan otomatis masuk database Pelanggan Bintang (tidak dobel bila nomor sudah ada).</p>
+
+        <label class="text-xs text-gray-600">Cari produk di katalog Bintang</label>
+        <div class="relative mb-3">
+            <input type="text" id="cariProdukBintang" autocomplete="off" placeholder="Ketik minimal 2 huruf, mis. banner"
+                   class="w-full border border-dark-50 rounded-md px-3 py-2 text-sm">
+            <div id="hasilProdukBintang" class="absolute z-50 w-full bg-white border border-dark-50 rounded-md shadow-sm mt-1 max-h-60 overflow-y-auto hidden"></div>
+        </div>
+
+        <table class="w-full text-sm mb-2">
+            <thead class="text-left text-xs text-gray-500">
+                <tr><th class="py-1">Produk</th><th class="py-1 w-24">Qty</th><th class="py-1">Keterangan (ukuran, finishing, dll)</th><th class="py-1 w-8"></th></tr>
+            </thead>
+            <tbody id="barisOrderBintang">
+                {% for b in data.baris %}
+                    <tr class="border-t border-dark-50">
+                        <td class="py-1 pr-2">{{ b.nama }}<input type="hidden" name="product_id" value="{{ b.product_id }}"><input type="hidden" name="product_nama" value="{{ b.nama }}"></td>
+                        <td class="py-1 pr-2"><input name="qty" type="number" min="1" value="{{ b.qty }}" required class="w-20 border border-dark-50 rounded-md px-2 py-1"></td>
+                        <td class="py-1 pr-2"><input name="keterangan" value="{{ b.keterangan }}" class="w-full border border-dark-50 rounded-md px-2 py-1"></td>
+                        <td class="py-1"><button type="button" class="text-red-600" onclick="this.closest('tr').remove()">×</button></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <p id="kosongOrderBintang" class="text-xs text-gray-500 mb-3 {% if data.baris %}hidden{% endif %}">Belum ada produk. Cari lalu klik produk untuk menambahkan.</p>
+
+        <label class="text-xs text-gray-600">Catatan untuk kasir</label>
+        <textarea name="catatan" rows="2" class="w-full border border-dark-50 rounded-md px-3 py-2 text-sm mb-4">{{ data.catatan }}</textarea>
+
+        <div class="flex justify-end gap-2">
+            <button type="button" onclick="closeModal()" class="px-4 py-2 text-sm border border-dark-50 rounded-md">Batal</button>
+            <button type="submit" class="px-4 py-2 text-sm font-medium text-white bg-primary-600 rounded-md hover:bg-primary-800">Kirim Order ke Bintang</button>
+        </div>
+    </form>
+</div>
+
+<script>
+(function () {
+    var input = document.getElementById("cariProdukBintang");
+    var kotak = document.getElementById("hasilProdukBintang");
+    var tbody = document.getElementById("barisOrderBintang");
+    var kosong = document.getElementById("kosongOrderBintang");
+    var url = "{% url 'opportunities:produk_bintang_cari' %}";
+    var jeda;
+    function rp(n) { return "Rp " + Number(n || 0).toLocaleString("id-ID"); }
+    function esc(s) { var d = document.createElement("div"); d.textContent = s == null ? "" : String(s); return d.innerHTML; }
+    function tambah(p) {
+        var tr = document.createElement("tr");
+        tr.className = "border-t border-dark-50";
+        tr.innerHTML =
+            '<td class="py-1 pr-2">' + esc(p.nama) + '<div class="text-xs text-gray-500">' + esc(p.kategori) + " · " + rp(p.harga) + "/" + esc(p.satuan) + "</div>" +
+            '<input type="hidden" name="product_id" value="' + esc(p.id) + '"><input type="hidden" name="product_nama" value="' + esc(p.nama) + '"></td>' +
+            '<td class="py-1 pr-2"><input name="qty" type="number" min="1" value="1" required class="w-20 border border-dark-50 rounded-md px-2 py-1"></td>' +
+            '<td class="py-1 pr-2"><input name="keterangan" class="w-full border border-dark-50 rounded-md px-2 py-1"></td>' +
+            '<td class="py-1"><button type="button" class="text-red-600">×</button></td>';
+        tr.querySelector("button").onclick = function () { tr.remove(); };
+        tbody.appendChild(tr);
+        kosong.classList.add("hidden");
+        kotak.classList.add("hidden");
+        input.value = "";
+    }
+    input.addEventListener("input", function () {
+        clearTimeout(jeda);
+        var q = input.value.trim();
+        if (q.length < 2) { kotak.classList.add("hidden"); return; }
+        jeda = setTimeout(function () {
+            fetch(url + "?q=" + encodeURIComponent(q), { credentials: "same-origin" })
+                .then(function (r) { return r.json(); })
+                .then(function (d) {
+                    kotak.innerHTML = "";
+                    if (d.error) { kotak.innerHTML = '<div class="p-2 text-xs text-red-600">' + esc(d.error) + "</div>"; }
+                    else if (!d.hasil.length) { kotak.innerHTML = '<div class="p-2 text-xs text-gray-500">Produk tidak ditemukan.</div>'; }
+                    d.hasil && d.hasil.forEach(function (p) {
+                        var el = document.createElement("div");
+                        el.className = "px-3 py-2 text-sm cursor-pointer hover:bg-gray-50";
+                        el.innerHTML = esc(p.nama) + ' <span class="text-xs text-gray-500">' + esc(p.kategori) + " · " + rp(p.harga) + "</span>";
+                        el.onclick = function () { tambah(p); };
+                        kotak.appendChild(el);
+                    });
+                    kotak.classList.remove("hidden");
+                })
+                .catch(function () { kotak.innerHTML = '<div class="p-2 text-xs text-red-600">Gagal memuat katalog.</div>'; kotak.classList.remove("hidden"); });
+        }, 300);
+    });
+})();
+</script>
