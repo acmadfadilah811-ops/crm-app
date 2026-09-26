@@ -1,0 +1,47 @@
+<div class="p-4" id="riwayat-bintang">
+    <p class="text-xs text-gray-500 mb-3">
+        Semua transaksi pelanggan di Bintang (order Antrean dari WA, kasir, staf, CRM, dan penjualan POS)
+        {% if nomor %}untuk nomor <b>{{ nomor }}</b>{% endif %}. Interaksi CRM ada di tab Activity.
+    </p>
+
+    {% if galat %}
+        <div class="p-3 text-sm text-red-700 bg-red-50 border border-red-200 rounded-md">{{ galat }}</div>
+    {% elif data %}
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+            <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Transaksi</div><div class="text-md font-semibold">{{ data.jumlah_transaksi }}</div></div>
+            <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Total belanja lunas</div><div class="text-md font-semibold">{{ data.total_rp }}</div></div>
+            <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Sisa tagihan</div><div class="text-md font-semibold">{{ data.sisa_rp }}</div></div>
+            <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Pertama / terakhir</div><div class="text-sm font-semibold">{{ data.pertama|default:"-"|slice:":10" }} / {{ data.terakhir|default:"-"|slice:":10" }}</div></div>
+        </div>
+        {% if not data.terdaftar %}
+            <p class="text-xs text-gray-500 mb-3">Nomor ini belum terdaftar di database Pelanggan Bintang.</p>
+        {% endif %}
+        <div class="overflow-x-auto border border-dark-50 rounded-md">
+            <table class="w-full text-sm">
+                <thead class="text-left text-xs text-gray-500 bg-gray-50">
+                    <tr>
+                        <th class="px-3 py-2">Waktu</th><th class="px-3 py-2">No.</th><th class="px-3 py-2">Kanal</th>
+                        <th class="px-3 py-2">Item</th><th class="px-3 py-2">Status</th>
+                        <th class="px-3 py-2 text-right">Total</th><th class="px-3 py-2 text-right">Sisa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for e in data.riwayat %}
+                        <tr class="border-t border-dark-50 align-top {% if e.batal %}text-gray-400{% endif %}">
+                            <td class="px-3 py-2 text-xs">{{ e.waktu|slice:":10" }}</td>
+                            <td class="px-3 py-2 font-medium">{{ e.id }}</td>
+                            <td class="px-3 py-2">{{ e.kanal }}</td>
+                            <td class="px-3 py-2 text-xs">{{ e.ringkasan|default:"-" }}</td>
+                            <td class="px-3 py-2">{{ e.status }}{% if e.lunas and e.jenis == "order" %}<span class="ml-1 text-xs text-green-700">· Lunas</span>{% endif %}</td>
+                            <td class="px-3 py-2 text-right">{{ e.total_rp }}</td>
+                            <td class="px-3 py-2 text-right">{{ e.sisa_rp }}</td>
+                        </tr>
+                    {% empty %}
+                        <tr><td colspan="7" class="px-3 py-6 text-center text-sm text-gray-500">Belum ada transaksi di Bintang untuk nomor ini.</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% if data.riwayat|length >= 50 %}<p class="text-xs text-gray-500 mt-2">Menampilkan 50 transaksi terbaru.</p>{% endif %}
+    {% endif %}
+</div>

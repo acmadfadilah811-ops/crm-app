@@ -116,3 +116,8 @@ def rekap_sales(mulai, selesai, crm_user_ids):
         "crm_user_ids": ",".join(str(i) for i in crm_user_ids),
     }).get("hasil", [])
     return {r["crm_user_id"]: r for r in hasil}
+
+
+def riwayat_pelanggan(nomor):
+    """Semua transaksi Bintang satu pelanggan (order semua kanal + POS), per nomor HP."""
+    return _panggil("GET", "riwayat-pelanggan/", params={"nomor": nomor})

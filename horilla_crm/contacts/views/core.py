@@ -505,6 +505,14 @@ class ContactDetailViewTabs(LoginRequiredMixin, HorillaDetailTabView):
         self.object_id = self.request.GET.get("object_id")
         self.model = Contact
         super()._prepare_detail_tabs()
+        # Riwayat transaksi di Bintang (2026-09-26, UAT SLS-04).
+        if self.object_id:
+            self.tabs.insert(1, {
+                "title": "Riwayat Bintang",
+                "url": reverse_lazy("contacts:riwayat_bintang_tab", kwargs={"pk": self.object_id}),
+                "target": "tab-riwayat-bintang-content",
+                "id": "riwayat-bintang",
+            })
 
     urls = {
         "details": "contacts:contact_details_tab",

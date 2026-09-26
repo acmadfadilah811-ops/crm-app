@@ -7,10 +7,13 @@ from horilla.urls import path
 
 # Local imports
 from . import views
+from .views.riwayat_bintang import ContactRiwayatBintangTabView
 
 app_name = "contacts"
 
 urlpatterns = [
+    # Riwayat transaksi Bintang per pelanggan (2026-09-26).
+    path("contact-riwayat-bintang/<int:pk>/", ContactRiwayatBintangTabView.as_view(), name="riwayat_bintang_tab"),
     path("contacts-view/", views.ContactView.as_view(), name="contacts_view"),
     path("contacts-navbar/", views.ContactNavbar.as_view(), name="contacts_navbar"),
     path(
