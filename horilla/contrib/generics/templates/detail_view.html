@@ -4,7 +4,7 @@
 {% block messages %}{% endblock %}
 
 {% block main %}
-    <div class="p-5 flex flex-col" id="detailViewport" data-viewport-fit>
+    <div class="p-5 flex flex-col" id="detailViewport" data-viewport-fit data-viewport-min-vh="75">
         {% include "messages.html" %}
         <div class="flex flex-wrap items-center justify-between gap-3 mb-3 flex-shrink-0">
             <ul class="flex flex-wrap gap-y-3 gap-x-5 text-[14px] text-gray-500">

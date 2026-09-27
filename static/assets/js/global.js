@@ -3481,7 +3481,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 totalWeight += parseFloat(el.getAttribute('data-viewport-flex')) || 1;
             });
 
-            var minHeight = 60;
+            // data-viewport-min-vh (2026-09-27): tinggi minimum bagian fleksibel
+            // dalam % tinggi layar. Detail view memakai 75 -- kartu data yang
+            // panjang (mis. Prospek) tidak lagi menyisakan tab setinggi 60px;
+            // halaman di-scroll ke bawah seperti biasa.
+            var minVh = parseFloat(root.getAttribute('data-viewport-min-vh')) || 0;
+            var minHeight = Math.max(60, (window.innerHeight * minVh) / 100);
             flexEls.forEach(function (el) {
                 var weight = parseFloat(el.getAttribute('data-viewport-flex')) || 1;
                 var height = Math.max(minHeight, (available * weight) / totalWeight);
