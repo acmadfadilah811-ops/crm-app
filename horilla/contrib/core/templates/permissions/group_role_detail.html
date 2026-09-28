@@ -103,7 +103,7 @@
                                 </label>
                                 {% if model.is_managed %}
                                     <button
-                                        class="whitespace-nowrap text-left hover:text-primary-600"
+                                        class="text-left leading-snug hover:text-primary-600"
                                         hx-get="{% url 'core:model_fields_modal_role' role.id model.app_label model.model_name %}"
                                         hx-target="#modalBox"
                                         hx-swap="innerHTML"
@@ -113,7 +113,7 @@
                                     </button>
                                 {% else %}
                                     <div
-                                        class="inline-block cursor-pointer whitespace-nowrap text-black"
+                                        class="inline-block cursor-pointer leading-snug text-black"
                                         title="{% trans 'Field permissions not available for this model' %}"
                                         aria-label="{% trans 'Field permissions not available for this model' %}"
                                     >
@@ -124,7 +124,7 @@
 
                             <div class="grid grid-cols-1 sm:grid-cols-2 {% if model.has_export %}lg:grid-cols-5{% else %}lg:grid-cols-4{% endif %} gap-x-4 gap-y-3 sm:gap-x-6 lg:gap-x-8 text-xs text-dark-300 w-[calc(100%-15rem)] px-4 sm:px-0">
                                 {% for perm in model.permissions %}
-                                    <label class="flex items-center whitespace-nowrap">
+                                    <label class="flex items-start min-w-0 leading-snug [&>input]:shrink-0 [&>input]:mt-[1px]">
                                         <input
                                             type="checkbox"
                                             name="permissions"
