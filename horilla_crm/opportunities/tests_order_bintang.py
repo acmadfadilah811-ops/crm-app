@@ -71,6 +71,8 @@ class OrderBintangTabTests(_DasarOrderBintang):
     @mock.patch.object(bintang_order, "buat_order")
     def test_kirim_order_membawa_identitas_sales_tanpa_harga(self, m):
         m.return_value = {"id": "ORD-2"}
+        self.sales.hr_employee_id = 13
+        self.sales.save(update_fields=["hr_employee_id"])
         self._as(self.sales)
         res = self.client.post(reverse("opportunities:order_bintang_form", args=[self.opp.pk]), {
             "kunci": "crm-opp-x", "nama": "Budi", "nomor_hp": "0812", "email": "", "catatan": "Jumat",
@@ -82,6 +84,7 @@ class OrderBintangTabTests(_DasarOrderBintang):
         payload = m.call_args.args[0]
         self.assertEqual(payload["crm_opportunity_id"], self.opp.pk)
         self.assertEqual(payload["crm_user_id"], self.sales.pk)
+        self.assertEqual(payload["sales_hr_employee_id"], 13)
         self.assertEqual(payload["kunci"], "crm-opp-x")
         self.assertEqual(payload["items"], [
             {"product_id": "5", "qty": "2", "keterangan": "3x1 m"},

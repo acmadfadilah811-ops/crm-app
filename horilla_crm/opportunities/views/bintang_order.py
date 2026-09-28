@@ -122,6 +122,8 @@ class OpportunityOrderBintangFormView(LoginRequiredMixin, View):
             "crm_user_id": request.user.pk,
             "crm_username": request.user.get_username(),
             "sales_nama": request.user.get_full_name() or request.user.get_username(),
+            # Bintang mengisi PIC pesanan dari profil sales dgn nomor karyawan HR ini (2026-09-28).
+            "sales_hr_employee_id": getattr(request.user, "hr_employee_id", None),
             "crm_opportunity_id": opp.pk,
             "crm_contact_id": getattr(kontak, "pk", None),
             "pelanggan": {"nama": data["nama"], "nomor_hp": data["nomor_hp"], "email": data["email"]},
