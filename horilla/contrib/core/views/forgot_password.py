@@ -12,7 +12,8 @@ from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.password_validation import validate_password
 from django.contrib.auth.tokens import default_token_generator
-from django.core.mail import EmailMessage
+from django.core.mail import EmailMultiAlternatives
+from django.core.mail.message import make_msgid
 from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes, force_str
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
@@ -91,7 +92,12 @@ class ForgotPasswordView(View):
             )
             plain_message = strip_tags(html_message)
 
-            email = EmailMessage(
+            # Teks biasa + HTML dengan Message-ID ber-domain (2026-09-28): email
+            # yang hanya berisi HTML dan Message-ID bernama container
+            # (@<hash docker>) diterima SMTP Gmail tetapi tidak pernah tampil
+            # di kotak masuk penerima, sementara email reset HR (multipart)
+            # dari akun pengirim yang sama sampai.
+            email = EmailMultiAlternatives(
                 subject=f"Reset Password - {NAMA_SITUS}",
                 body=plain_message,
                 from_email=(
@@ -100,10 +106,9 @@ class ForgotPasswordView(View):
                     else settings.DEFAULT_FROM_EMAIL
                 ),
                 to=[user.email],
+                headers={"Message-ID": make_msgid(domain=request.get_host().split(":")[0] or None)},
             )
-
-            email.content_subtype = "html"
-            email.body = html_message
+            email.attach_alternative(html_message, "text/html")
 
             email.send(fail_silently=False)
 

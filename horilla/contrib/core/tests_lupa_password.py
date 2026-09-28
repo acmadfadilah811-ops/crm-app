@@ -41,4 +41,9 @@ class LupaPasswordTests(TestCase):
         self.assertEqual(len(mail.outbox), 1)
         self.assertIn("CRM Star Photo & Advertising", mail.outbox[0].subject)
         self.assertNotIn("Horilla", mail.outbox[0].subject)
-        self.assertIn("/reset-password/", mail.outbox[0].body)
+        pesan = mail.outbox[0]
+        # Teks biasa berisi tautan + versi HTML (multipart), Message-ID ber-domain.
+        self.assertIn("/reset-password/", pesan.body)
+        self.assertEqual([t for _, t in pesan.alternatives], ["text/html"])
+        self.assertNotIn("<html", pesan.body.lower())
+        self.assertTrue(pesan.extra_headers["Message-ID"].endswith("@testserver>"))
