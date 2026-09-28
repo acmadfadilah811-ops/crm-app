@@ -50,6 +50,9 @@ class OrderBintangSubSection:
 
     section = "sales"
     app_label = "opportunities"
+    # id unik (2026-09-28): tanpa ini id menu = app_label "opportunities",
+    # sama dengan menu Peluang, sehingga keempat menu menyala bersamaan.
+    id = "order_saya"
     position = 4
 
     verbose_name = "Order Saya"
@@ -70,6 +73,9 @@ class TargetSalesSubSection:
 
     section = "sales"
     app_label = "opportunities"
+    # id unik (2026-09-28): tanpa ini id menu = app_label "opportunities",
+    # sama dengan menu Peluang, sehingga keempat menu menyala bersamaan.
+    id = "target_sales"
     position = 4
 
     verbose_name = "Target Sales"
@@ -90,6 +96,9 @@ class LaporanSalesSubSection:
 
     section = "sales"
     app_label = "opportunities"
+    # id unik (2026-09-28): tanpa ini id menu = app_label "opportunities",
+    # sama dengan menu Peluang, sehingga keempat menu menyala bersamaan.
+    id = "laporan_sales"
     position = 5
 
     verbose_name = "Laporan Sales"
