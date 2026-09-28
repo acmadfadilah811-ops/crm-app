@@ -208,6 +208,11 @@ class LoginUserView(View):
             show_forgot_password = HorillaMailConfiguration.objects.filter(
                 company=hq_company
             ).exists()
+        # Konfigurasi email utama yang belum tertaut perusahaan tetap dipakai
+        # untuk kirim tautan reset (lihat ForgotPasswordView), jadi tautan
+        # "Lupa password" juga ditampilkan (2026-09-28).
+        if not show_forgot_password:
+            show_forgot_password = HorillaMailConfiguration.objects.filter(is_primary=True).exists()
 
         context = {
             "next": next_url,

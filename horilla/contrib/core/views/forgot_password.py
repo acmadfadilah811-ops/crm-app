@@ -34,6 +34,8 @@ from ..models import Company
 
 logger = logging.getLogger(__name__)
 
+NAMA_SITUS = "CRM Star Photo & Advertising"
+
 
 class ForgotPasswordView(View):
     """
@@ -74,11 +76,14 @@ class ForgotPasswordView(View):
                     primary_config = HorillaMailConfiguration.objects.filter(
                         is_primary=True, company=hq_company
                     ).first()
+            if not primary_config:
+                # Konfigurasi utama yang belum tertaut perusahaan (2026-09-28).
+                primary_config = HorillaMailConfiguration.objects.filter(is_primary=True).first()
 
             context = {
                 "user": user,
                 "reset_link": reset_link,
-                "site_name": getattr(settings, "SITE_NAME", "Horilla"),
+                "site_name": getattr(settings, "SITE_NAME", NAMA_SITUS),
             }
 
             html_message = render_to_string(
@@ -87,7 +92,7 @@ class ForgotPasswordView(View):
             plain_message = strip_tags(html_message)
 
             email = EmailMessage(
-                subject="Password Reset Request - Horilla",
+                subject=f"Reset Password - {NAMA_SITUS}",
                 body=plain_message,
                 from_email=(
                     primary_config.from_email
