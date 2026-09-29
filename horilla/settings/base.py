@@ -151,6 +151,9 @@ MIDDLEWARE = [
     "django.middleware.locale.LocaleMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
+    # Gerbang absensi HR (2026-09-29): wajib absen masuk di HR sebelum
+    # memakai CRM -- setelah Auth & Message supaya bisa logout + pesan.
+    "horilla.contrib.core.absensi_hr_gate.AbsensiHRGateMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "horilla.contrib.utils.middlewares.ThreadLocalMiddleware",
 ]

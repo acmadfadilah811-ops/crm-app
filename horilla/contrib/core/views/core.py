@@ -330,6 +330,15 @@ class LoginUserView(View):
         # Login berhasil: hitungan gagal dikembalikan ke nol
         reset_kunci_login(identifier, ip)
 
+        # Gerbang absensi HR (2026-09-29): kredensial benar tapi belum absen
+        # masuk / sudah absen pulang di HR -> sesi tidak dibuat.
+        from horilla.contrib.core.absensi_hr_gate import cek_gerbang
+
+        gerbang = cek_gerbang(user, pakai_cache=False)
+        if not gerbang.boleh:
+            messages.error(request, gerbang.pesan)
+            return redirect(reverse_lazy("core:login") + f"?next={next_url}")
+
         matikan_sesi_lain(user)
         login(request, user)
         messages.success(request, _("Login successful."))
