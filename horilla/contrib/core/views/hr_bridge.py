@@ -121,8 +121,25 @@ class HRBridgeCreateAccountView(APIView):
                 'hr_employee_id': existing.hr_employee_id, 'created': False,
             }, status=status.HTTP_200_OK)
 
-        username = _buat_username_unik(first_name, last_name)
-        password_sementara = secrets.token_urlsafe(9)
+        # Kredensial seragam (2026-09-29): lihat catatan di jembatan Bintang.
+        # HR mengirim username & password awal yang sama untuk HR/mobile dan
+        # CRM; username terpakai dijawab 409 supaya HR mencoba kandidat lain.
+        username_diminta = str(request.data.get('username') or '').strip().lower()
+        password_diminta = str(request.data.get('password') or '')
+        if username_diminta:
+            if not re.fullmatch(r'[a-z0-9.]{3,50}', username_diminta):
+                return Response({'error': 'Format username tidak valid.'}, status=status.HTTP_400_BAD_REQUEST)
+            if HorillaUser.objects.filter(username=username_diminta).exists():
+                return Response(
+                    {'username_terpakai': True, 'error': f"Username '{username_diminta}' sudah dipakai di CRM."},
+                    status=status.HTTP_409_CONFLICT,
+                )
+            username = username_diminta
+        else:
+            username = _buat_username_unik(first_name, last_name)
+        if password_diminta and len(password_diminta) < 8:
+            return Response({'error': 'Password awal minimal 8 karakter.'}, status=status.HTTP_400_BAD_REQUEST)
+        password_sementara = None if password_diminta else secrets.token_urlsafe(9)
 
         user = HorillaUser(
             username=username,
@@ -135,15 +152,17 @@ class HRBridgeCreateAccountView(APIView):
             country='ID',
             company=company,
         )
-        user.set_password(password_sementara)
+        user.set_password(password_diminta or password_sementara)
         user.save()
 
-        return Response({
+        hasil = {
             'id': user.id, 'username': user.username,
             'role': role.role_name if role else None,
             'hr_employee_id': user.hr_employee_id, 'created': True,
-            'temp_password': password_sementara,
-        }, status=status.HTTP_201_CREATED)
+        }
+        if password_sementara:
+            hasil['temp_password'] = password_sementara
+        return Response(hasil, status=status.HTTP_201_CREATED)
 
 
 class HRBridgeSetStatusView(APIView):
