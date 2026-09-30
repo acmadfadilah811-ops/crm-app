@@ -27,6 +27,7 @@ from horilla.contrib.core.views.hr_bridge import (
     HRBridgeCreateAccountView,
     HRBridgeSetStatusView,
 )
+from horilla.contrib.core.views.hr_organisasi import HROrganisasiView
 from horilla.contrib.core.views.insights_bridge import (
     InsightsCampaignsView,
     InsightsLeadsView,
@@ -52,6 +53,7 @@ urlpatterns = [
     # horilla/contrib/core/views/hr_bridge.py).
     path("api/bridge/hr-employee/", HRBridgeCreateAccountView.as_view(), name="hr-bridge-create-account"),
     path("api/bridge/hr-employee-status/", HRBridgeSetStatusView.as_view(), name="hr-bridge-set-status"),
+    path("api/bridge/hr-organisasi/", HROrganisasiView.as_view(), name="hr-bridge-organisasi"),
 
     # Jembatan Bintang -> CRM: auto-sync Contact + Opportunity ("won")
     # saat POS Sale berstatus 'paid' (lihat
