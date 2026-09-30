@@ -58,6 +58,7 @@ class HRBridgeKredensialView(APIView):
         sandi_diubah = False
         if password and user.has_usable_password():
             user.set_password(str(password))
+            user._tanpa_sinkron_sandi = True  # sandi ini berasal dari HR
             sandi_diubah = True
         user.save()
         return Response({"username": user.username, "sandi_diubah": sandi_diubah})
