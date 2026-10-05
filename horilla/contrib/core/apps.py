@@ -76,6 +76,7 @@ class CoreConfig(AppLauncher):
     def ready(self):
         super().ready()
         from horilla.contrib.core import sinkron_sandi  # noqa: F401  (ganti sandi -> HR ikut)
+        from horilla.contrib.core import sinkron_foto  # noqa: F401  (ganti foto profil -> HR ikut)
 
         try:
             from django.apps import apps as django_apps
