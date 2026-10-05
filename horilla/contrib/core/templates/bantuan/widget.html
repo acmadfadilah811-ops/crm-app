@@ -1,0 +1,119 @@
+{% if tampil %}
+{# Pusat Bantuan (2026-10-05): katalog tata cara per peran, tanpa AI. Data: horilla/contrib/core/bantuan.py #}
+{{ data_bantuan|json_script:"pb-data" }}
+<style>
+  #pb-tombol{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;align-items:center;gap:6px;height:40px;padding:0 14px;border:0;border-radius:999px;background:#1e293b;color:#fff;font-size:12px;font-weight:600;cursor:pointer;box-shadow:0 6px 16px rgba(15,23,42,.25)}
+  #pb-tombol:hover{background:#0f172a}
+  #pb-panel{position:fixed;right:16px;bottom:64px;z-index:60;width:360px;max-width:calc(100vw - 32px);height:70vh;max-height:620px;display:none;flex-direction:column;background:#fff;border:1px solid #e2e8f0;border-radius:12px;box-shadow:0 20px 40px rgba(15,23,42,.18);font-size:12px;color:#1e293b}
+  #pb-panel.pb-buka{display:flex}
+  .pb-kepala{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid #f1f5f9}
+  .pb-kepala h3{margin:0;font-size:14px;font-weight:700}
+  .pb-kepala p{margin:2px 0 0;font-size:11px;color:#64748b}
+  .pb-tutup{border:0;background:none;color:#94a3b8;font-size:18px;line-height:1;cursor:pointer}
+  .pb-isi{flex:1;overflow-y:auto;padding:12px}
+  .pb-cari{width:100%;height:36px;box-sizing:border-box;border:1px solid #cbd5e1;border-radius:6px;padding:0 10px;font-size:12px;margin-bottom:12px;outline:none}
+  .pb-cari:focus{border-color:#94a3b8}
+  .pb-grup{margin-bottom:12px}
+  .pb-grup-judul{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#94a3b8;padding:0 4px;margin-bottom:4px}
+  .pb-baris{display:block;width:100%;text-align:left;border:0;background:none;padding:8px 10px;border-radius:6px;cursor:pointer}
+  .pb-baris:hover{background:#f8fafc}
+  .pb-baris b{display:block;font-size:12px;color:#1e293b}
+  .pb-baris span{display:block;font-size:11px;color:#64748b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pb-kembali{border:0;background:none;color:#64748b;font-size:12px;font-weight:600;cursor:pointer;padding:0;margin-bottom:8px}
+  .pb-modul{font-size:10px;font-weight:700;text-transform:uppercase;color:#94a3b8}
+  .pb-detail h4{margin:2px 0 4px;font-size:14px}
+  .pb-detail ol{padding-left:18px;margin:4px 0}
+  .pb-detail li{margin-bottom:6px}
+  .pb-sub{font-size:11px;font-weight:700;text-transform:uppercase;color:#64748b;margin:12px 0 4px}
+  .pb-catatan{margin-top:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:8px 10px;color:#475569;font-size:11px}
+  .pb-buka-hal{display:inline-block;margin-top:12px;background:#1e293b;color:#fff !important;border-radius:6px;padding:6px 12px;font-weight:600;text-decoration:none}
+  .pb-chip{display:inline-block;border:1px solid #cbd5e1;border-radius:4px;padding:1px 6px;margin:0 4px 4px 0;font-size:10px;font-weight:600;color:#475569}
+</style>
+<div id="pb-panel" role="dialog" aria-label="Pusat Bantuan">
+  <div class="pb-kepala">
+    <div><h3>Pusat Bantuan</h3><p>Tata cara sesuai peran Anda</p></div>
+    <button type="button" class="pb-tutup" id="pb-tutup" title="Tutup">&times;</button>
+  </div>
+  <div class="pb-isi" id="pb-isi"></div>
+</div>
+<button type="button" id="pb-tombol" title="Pusat Bantuan">? Bantuan</button>
+<script>
+(function () {
+  var data = JSON.parse(document.getElementById('pb-data').textContent);
+  var panel = document.getElementById('pb-panel');
+  var isi = document.getElementById('pb-isi');
+  var kata = '';
+  var dipilih = null;
+
+  function esc(t) {
+    return String(t == null ? '' : t).replace(/[&<>"']/g, function (c) {
+      return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c];
+    });
+  }
+  function cari(daftar, q) {
+    q = q.toLowerCase().trim();
+    if (!q) return daftar;
+    var p = q.split(/\s+/);
+    return daftar.filter(function (l) {
+      var teks = [l.judul, l.ringkas, l.modul].concat(l.kata_kunci || [], l.uat || [], l.langkah || []).join(' ').toLowerCase();
+      return p.every(function (x) { return teks.indexOf(x) !== -1; });
+    });
+  }
+  function baris(l) {
+    return '<button type="button" class="pb-baris" data-id="' + esc(l.id) + '"><b>' + esc(l.judul) + '</b><span>' + esc(l.ringkas) + '</span></button>';
+  }
+  function gambarDaftar() {
+    var hasil = cari(data.layanan, kata);
+    var html = '<input class="pb-cari" id="pb-cari" placeholder="Cari: prospek, order, target, E2E-03 ..." value="' + esc(kata) + '">';
+    var jalur = window.location.pathname;
+    var terkait = kata ? [] : data.layanan.filter(function (l) { return l.url && l.url !== '/' && jalur.indexOf(l.url) === 0; });
+    if (terkait.length) {
+      html += '<div class="pb-grup"><div class="pb-grup-judul">Terkait halaman ini</div>' + terkait.map(baris).join('') + '</div>';
+    }
+    var ada = false;
+    data.modul.forEach(function (m) {
+      var d = hasil.filter(function (l) { return l.modul === m; });
+      if (!d.length) return;
+      ada = true;
+      html += '<div class="pb-grup"><div class="pb-grup-judul">' + esc(m) + '</div>' + d.map(baris).join('') + '</div>';
+    });
+    if (!ada) html += '<p style="color:#64748b">Tidak ada layanan yang cocok untuk peran Anda. Coba kata lain.</p>';
+    isi.innerHTML = html;
+    var input = document.getElementById('pb-cari');
+    input.addEventListener('input', function (e) {
+      kata = e.target.value;
+      var posisi = e.target.selectionStart;
+      gambarDaftar();
+      var baru = document.getElementById('pb-cari');
+      baru.focus();
+      baru.setSelectionRange(posisi, posisi);
+    });
+  }
+  function gambarDetail(l) {
+    var html = '<button type="button" class="pb-kembali" id="pb-kembali">&larr; Kembali</button><div class="pb-detail">';
+    html += '<div class="pb-modul">' + esc(l.modul) + '</div><h4>' + esc(l.judul) + '</h4><div style="color:#475569">' + esc(l.ringkas) + '</div>';
+    html += '<div class="pb-sub">Tata cara</div><ol>' + l.langkah.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol>';
+    if (l.catatan) html += '<div class="pb-catatan">' + esc(l.catatan) + '</div>';
+    if (l.url) html += '<a class="pb-buka-hal" href="' + esc(l.url) + '">Buka halaman &rsaquo;</a>';
+    else if (l.url_luar) html += '<a class="pb-buka-hal" href="' + esc(l.url_luar) + '" target="_blank" rel="noopener noreferrer">Buka aplikasi &#8599;</a>';
+    if (l.uat && l.uat.length) {
+      html += '<div class="pb-sub">Skenario UAT</div>' + l.uat.map(function (u) { return '<span class="pb-chip">' + esc(u) + '</span>'; }).join('');
+    }
+    isi.innerHTML = html + '</div>';
+    document.getElementById('pb-kembali').addEventListener('click', function () { dipilih = null; gambarDaftar(); });
+  }
+  isi.addEventListener('click', function (e) {
+    var b = e.target.closest('.pb-baris');
+    if (!b) return;
+    dipilih = data.layanan.filter(function (l) { return l.id === b.getAttribute('data-id'); })[0];
+    if (dipilih) gambarDetail(dipilih);
+  });
+  document.getElementById('pb-tombol').addEventListener('click', function () {
+    var buka = !panel.classList.contains('pb-buka');
+    panel.classList.toggle('pb-buka', buka);
+    if (buka) { dipilih ? gambarDetail(dipilih) : gambarDaftar(); }
+  });
+  document.getElementById('pb-tutup').addEventListener('click', function () { panel.classList.remove('pb-buka'); });
+})();
+</script>
+{% endif %}

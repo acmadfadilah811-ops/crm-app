@@ -146,6 +146,8 @@
 
         {% block extra_js %}{% endblock extra_js %}
 
+        {% load bantuan_tags %}{% pusat_bantuan %}
+
         <!-- Body End: Deferred scripts & event bindings -->
         {% load_registered_html "body_end" as body_end_html %}
         {% for tpl in body_end_html %}
