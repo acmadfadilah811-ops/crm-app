@@ -8,6 +8,18 @@ networks:
 
 services:
   web:
+    restart: unless-stopped
     networks:
       - default
       - bintang_default
+
+  # Kontainer harus nyala lagi sendiri setelah server restart (2026-10-05:
+  # restart VPS mematikan HR ~8 jam karena tidak ada kebijakan restart).
+  db:
+    restart: unless-stopped
+  redis:
+    restart: unless-stopped
+  celery-worker:
+    restart: unless-stopped
+  celery-beat:
+    restart: unless-stopped
