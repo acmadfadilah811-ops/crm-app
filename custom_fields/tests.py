@@ -29,7 +29,21 @@ from horilla_crm.leads.models import Lead, LeadStatus
 from horilla_crm.opportunities.forms import OpportunityFormClass
 
 
-class CustomFieldDefinitionModelTests(TestCase):
+class _BersihTestCase(TestCase):
+    """Tes di modul ini memasang _thread_local.request tanpa membersihkannya; request
+    lama lalu terbawa ke tes berikutnya (manager memfilter perusahaan tes lama, save()
+    mengisi created_by user yang sudah dihapus). Audit 2026-10-06."""
+
+    def _pre_setup(self):
+        super()._pre_setup()
+        _thread_local.__dict__.pop("request", None)
+
+    def _post_teardown(self):
+        _thread_local.__dict__.pop("request", None)
+        super()._post_teardown()
+
+
+class CustomFieldDefinitionModelTests(_BersihTestCase):
     """Tests for CustomFieldDefinition model."""
 
     def setUp(self):
@@ -73,7 +87,7 @@ class CustomFieldDefinitionModelTests(TestCase):
             )
 
 
-class CustomFieldValueModelTests(TestCase):
+class CustomFieldValueModelTests(_BersihTestCase):
     """Tests for CustomFieldValue storage and retrieval."""
 
     def setUp(self):
@@ -117,7 +131,7 @@ class CustomFieldValueModelTests(TestCase):
         self.assertEqual(cfv.value_text, "")
 
 
-class BuildCustomFormFieldsTests(TestCase):
+class BuildCustomFormFieldsTests(_BersihTestCase):
     """Tests for building Django form fields from definitions."""
 
     def setUp(self):
@@ -197,7 +211,7 @@ class BuildCustomFormFieldsTests(TestCase):
         self.assertNotIn("Other Field", labels)
 
 
-class SaveLoadCustomFieldValuesTests(TestCase):
+class SaveLoadCustomFieldValuesTests(_BersihTestCase):
     """Tests for save/load utility functions."""
 
     def setUp(self):
@@ -247,7 +261,7 @@ class SaveLoadCustomFieldValuesTests(TestCase):
         self.assertEqual(CustomFieldValue.objects.filter(object_id=42).count(), 1)
 
 
-class FormIntegrationTests(TestCase):
+class FormIntegrationTests(_BersihTestCase):
     """Tests that custom fields are injected into Lead/Opportunity forms."""
 
     def setUp(self):
@@ -449,7 +463,7 @@ class FormIntegrationTests(TestCase):
         self.assertEqual(form_data[cf_key], ["A", "C"])
 
 
-class CustomFieldListActionTests(TestCase):
+class CustomFieldListActionTests(_BersihTestCase):
     """List-view action attrs must survive str.format() placeholder replacement."""
 
     def setUp(self):
@@ -478,7 +492,7 @@ class CustomFieldListActionTests(TestCase):
         self.assertIn(str(self.defn.get_delete_url()), html)
 
 
-class CustomFieldDetailViewTests(TestCase):
+class CustomFieldDetailViewTests(_BersihTestCase):
     """Custom fields must appear on Lead/Opportunity detail pages."""
 
     def setUp(self):
@@ -596,7 +610,7 @@ class CustomFieldDetailViewTests(TestCase):
         )
 
 
-class CustomFieldSelectorTests(TestCase):
+class CustomFieldSelectorTests(_BersihTestCase):
     """Custom fields must appear in the Change Detail View Fields modal."""
 
     def setUp(self):
@@ -734,7 +748,7 @@ class CustomFieldSelectorTests(TestCase):
         self.assertNotEqual(in_details_available, in_details_visible)
 
 
-class CustomFieldDetailDisplayTests(TestCase):
+class CustomFieldDetailDisplayTests(_BersihTestCase):
     """Selected custom fields must render on Lead detail header and Details tab."""
 
     def setUp(self):
@@ -963,7 +977,7 @@ class CustomFieldDetailDisplayTests(TestCase):
         self.assertIn(f'id="{self.defn.name}-details-tab"', html)
 
 
-class CustomFieldInlineEditTests(TestCase):
+class CustomFieldInlineEditTests(_BersihTestCase):
     """Pen-icon inline edit must work for custom fields."""
 
     def setUp(self):
@@ -1158,7 +1172,7 @@ class CustomFieldInlineEditTests(TestCase):
         self.assertIn("multiple", html)
 
 
-class CustomFieldMultiStepCleanTests(TestCase):
+class CustomFieldMultiStepCleanTests(_BersihTestCase):
     """Last-step clean must handle cf_* without editing Horilla multi_step.py."""
 
     def setUp(self):
@@ -1193,7 +1207,7 @@ class CustomFieldMultiStepCleanTests(TestCase):
         self.assertIn("except models.FieldDoesNotExist:", text)
 
 
-class CustomFieldListColumnTests(TestCase):
+class CustomFieldListColumnTests(_BersihTestCase):
     """Custom fields must appear in the Add Column to List modal."""
 
     def setUp(self):
@@ -1438,7 +1452,7 @@ class CustomFieldListColumnTests(TestCase):
         self.assertEqual(getattr(rows[0], cf_key), "Aerospace")
 
 
-class CustomFieldChoicesVisibilityTests(TestCase):
+class CustomFieldChoicesVisibilityTests(_BersihTestCase):
     """Choices textarea is shown only for Multiple Choice fields."""
 
     def setUp(self):
@@ -1582,7 +1596,7 @@ class CustomFieldChoicesVisibilityTests(TestCase):
         self.assertIn("This field is required", str(form.errors["name"]))
 
 
-class CustomFieldSettingsMenuTests(TestCase):
+class CustomFieldSettingsMenuTests(_BersihTestCase):
     """Settings sidebar section is Custom Field, not CRM."""
 
     def test_section_title_is_custom_field(self):
@@ -1617,7 +1631,7 @@ class CustomFieldSettingsMenuTests(TestCase):
         )
 
 
-class CustomFieldPermissionTests(TestCase):
+class CustomFieldPermissionTests(_BersihTestCase):
     """Settings views follow the Field Requirements permission pattern."""
 
     @classmethod
@@ -1755,7 +1769,7 @@ class CustomFieldPermissionTests(TestCase):
         self.assertFalse(expected - names, expected - names)
 
 
-class CustomFieldI18NTests(TestCase):
+class CustomFieldI18NTests(_BersihTestCase):
     """Locale catalogs match other apps and Persian strings are filled."""
 
     app_dir = Path(__file__).resolve().parent
@@ -1878,7 +1892,7 @@ def _unwrap_po_string(value):
     return value
 
 
-class CustomFieldVersionTests(TestCase):
+class CustomFieldVersionTests(_BersihTestCase):
     """The app must ship a Horilla __version__ module for About System."""
 
     def test_version_module_is_discoverable(self):
@@ -1905,7 +1919,7 @@ class CustomFieldVersionTests(TestCase):
         self.assertIn("Custom Fields", names)
 
 
-class CustomFieldFilterTests(TestCase):
+class CustomFieldFilterTests(_BersihTestCase):
     """Custom fields must appear in Filter Records and filter the queryset."""
 
     def setUp(self):
@@ -2073,7 +2087,7 @@ class CustomFieldFilterTests(TestCase):
         self.assertIn("Contains", html)
 
 
-class CustomFieldExportTests(TestCase):
+class CustomFieldExportTests(_BersihTestCase):
     """Custom fields must appear in Select Columns to Export and exported files."""
 
     def setUp(self):
