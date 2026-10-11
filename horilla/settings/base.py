@@ -210,9 +210,14 @@ CHANNEL_LAYERS = {
     "default": {
         # "BACKEND": "channels.layers.InMemoryChannelLayer",
         "BACKEND": "channels_redis.core.RedisChannelLayer",
-        # "CONFIG": {
-        #     "hosts": [("127.0.0.1", 6379)],  # Redis server
-        # },
+        # Tanpa CONFIG, channels_redis memakai localhost:6379 -- di Docker Redis
+        # ada di container `redis` (beserta password), sehingga websocket
+        # notifikasi selalu gagal "Error 111 connecting to localhost:6379"
+        # (temuan audit log produksi 2026-10-11). Pakai REDIS_URL yang sama
+        # dengan cache/Celery.
+        "CONFIG": {
+            "hosts": [env("REDIS_URL", default="redis://127.0.0.1:6379/0")],
+        },
     },
 }
 
