@@ -144,3 +144,68 @@ class BintangBridgeSaleTests(TestCase):
     def test_nomor_wa_kosong_ditolak_400(self):
         response = self._post({"nama": "Tanpa Nomor"})
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
+
+class BintangBridgeOrderKasirTests(BintangBridgeSaleTests):
+    """Order kasir (StarFoto/Advertising) dikirim dari Bintang (2026-10-12): Open saat
+    belum lunas, Closed Won saat lunas; pemilik = penjual bila punya akun CRM."""
+
+    def setUp(self):
+        super().setUp()
+        self.stage_open = OpportunityStage.objects.create(
+            name="Negotiation", order=1, probability=50, stage_type="open",
+        )
+        self.staff = HorillaUser.objects.create(
+            username="sales.uji", first_name="Sales", last_name="Uji", company=self.company, hr_employee_id=44,
+        )
+
+    def _kirim(self, lunas, total=200000, penjual=None, sale_id="POS-ORD-ABC123"):
+        payload = {
+            "nomor_wa": "6281300000001", "nama": "Dinda Foto",
+            "sale": {"id": sale_id, "nomor": sale_id, "total": total, "tanggal": "2026-10-12",
+                     "lunas": lunas, "unit_bisnis": "StarFoto"},
+        }
+        if penjual is not None:
+            payload["penjual_hr_employee_id"] = penjual
+        return self._post(payload)
+
+    def test_belum_lunas_open_lalu_lunas_jadi_won_tanpa_duplikat(self):
+        r = self._kirim(False, total=100000)
+        self.assertEqual(r.status_code, status.HTTP_201_CREATED, r.data)
+        opp = Opportunity.objects.get(bintang_sale_id="POS-ORD-ABC123")
+        self.assertEqual(opp.stage_id, self.stage_open.id)
+        self.assertEqual(opp.name, "Penjualan StarFoto POS-ORD-ABC123")
+
+        # Total naik (usulan tambahan dikonfirmasi) selama masih Open: amount ikut.
+        self._kirim(False, total=150000)
+        opp.refresh_from_db()
+        self.assertEqual(float(opp.amount), 150000.0)
+        self.assertEqual(opp.stage_id, self.stage_open.id)
+
+        # Lunas -> Closed Won, tetap satu Opportunity.
+        r = self._kirim(True, total=150000)
+        self.assertFalse(r.data["opportunity_created"])
+        opp.refresh_from_db()
+        self.assertEqual(opp.stage_id, self.stage_won.id)
+        self.assertEqual(Opportunity.objects.filter(bintang_sale_id="POS-ORD-ABC123").count(), 1)
+
+    def test_langsung_lunas_membuat_opportunity_won(self):
+        self._kirim(True, sale_id="POS-ORD-LUNAS")
+        self.assertEqual(Opportunity.objects.get(bintang_sale_id="POS-ORD-LUNAS").stage_id, self.stage_won.id)
+
+    def test_penjual_punya_akun_crm_jadi_pemilik_selain_itu_akun_atasan(self):
+        self._kirim(False, penjual=44)
+        opp = Opportunity.objects.get(bintang_sale_id="POS-ORD-ABC123")
+        self.assertEqual(opp.owner_id, self.staff.id)
+        self.assertEqual(Contact.objects.get(bintang_contact_id="6281300000001").contact_owner_id, self.staff.id)
+
+        # Penjual tanpa akun CRM (kasir) -> pemilik bawaan = akun atasan.
+        self._post({"nomor_wa": "6281300000002", "nama": "Kasir Order",
+                    "penjual_hr_employee_id": 21,
+                    "sale": {"id": "POS-ORD-KASIR", "nomor": "POS-ORD-KASIR", "total": 50000, "lunas": False}})
+        self.assertEqual(Opportunity.objects.get(bintang_sale_id="POS-ORD-KASIR").owner_id, self.owner.id)
+
+    def test_id_order_40_karakter_muat(self):
+        sale_id = "POS-ORD-" + "A" * 32
+        self.assertEqual(len(sale_id), 40)
+        self.assertEqual(self._kirim(False, sale_id=sale_id).status_code, status.HTTP_201_CREATED)

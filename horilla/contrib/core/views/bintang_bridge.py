@@ -85,6 +85,24 @@ class BintangBridgeSaleView(APIView):
         from horilla.contrib.core.models.user import HorillaUser
         return HorillaUser.objects.filter(username=DEFAULT_OWNER_USERNAME).first()
 
+    def _owner_untuk(self, request):
+        """Pemilik data = penjual order bila punya akun CRM (tertaut hr_employee_id),
+        sehingga staff hanya melihat penjualannya sendiri (peran staff di CRM hanya
+        punya view_own_*). Selain itu pemilik bawaan = akun atasan (SPV), yang
+        melihat semuanya lewat izin view_*. Order kasir saja yang mengirim
+        `penjual_hr_employee_id`; penjualan POS lama tetap ke pemilik bawaan."""
+        from horilla.contrib.core.models.user import HorillaUser
+
+        try:
+            hr_id = int(request.data.get('penjual_hr_employee_id'))
+        except (TypeError, ValueError):
+            hr_id = None
+        if hr_id:
+            penjual = HorillaUser.objects.filter(hr_employee_id=hr_id, is_active=True).first()
+            if penjual is not None and penjual.company_id:
+                return penjual
+        return self._default_owner()
+
     @transaction.atomic
     def post(self, request, *args, **kwargs):
         auth_error = self._cek_api_key(request)
@@ -97,7 +115,7 @@ class BintangBridgeSaleView(APIView):
         if not nomor_wa:
             return Response({'error': "Field 'nomor_wa' wajib diisi."}, status=status.HTTP_400_BAD_REQUEST)
 
-        owner = self._default_owner()
+        owner = self._owner_untuk(request)
         if owner is None:
             logger.error("Bintang bridge: user owner default ('%s') tidak ditemukan di CRM.", DEFAULT_OWNER_USERNAME)
             return Response({'error': 'Owner default CRM belum dikonfigurasi.'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -154,15 +172,21 @@ class BintangBridgeSaleView(APIView):
             Opportunity, OpportunityContactRole, OpportunityStage,
         )
 
-        bintang_sale_id = str(sale.get('id'))
+        bintang_sale_id = str(sale.get('id'))[:40]
+        # Order kasir mengirim `lunas`: False -> Opportunity Open, True -> Closed Won.
+        # Tanpa field itu (penjualan POS) perilaku lama: langsung Closed Won.
+        lunas = sale.get('lunas', True)
         existing = Opportunity.objects.filter(bintang_sale_id=bintang_sale_id).first()
         if existing:
+            self._perbarui_opportunity(existing, sale, lunas)
             return existing.id, False
 
         stage_won = OpportunityStage.objects.filter(stage_type='won').order_by('order').first()
         if stage_won is None:
             logger.error("Bintang bridge: tidak ada OpportunityStage stage_type='won' di CRM -- opportunity dilewati.")
             return None, False
+        stage_open = OpportunityStage.objects.filter(stage_type='open').order_by('order').first()
+        stage = stage_won if (lunas or stage_open is None) else stage_open
 
         nomor = str(sale.get('nomor') or bintang_sale_id)
         # Opportunity.save() menghitung expected_revenue = amount *
@@ -179,23 +203,43 @@ class BintangBridgeSaleView(APIView):
         except ValueError:
             tanggal = datetime.date.today()
 
+        unit = str(sale.get('unit_bisnis') or '').strip() or 'Bintang'
+        menang = stage.stage_type == 'won'
         opportunity = Opportunity.objects.create(
-            name=f'Penjualan Bintang {nomor}',
+            name=f'Penjualan {unit} {nomor}'[:120],
             amount=total,
-            expected_revenue=total,
+            expected_revenue=total if menang else total * (stage.probability or 0) / 100,
             close_date=tanggal,
-            stage=stage_won,
-            probability=100,
+            stage=stage,
+            probability=100 if menang else stage.probability,
             owner=owner,
             company=owner.company,
             opportunity_type='new_customer',
             lead_source='other',
-            forecast_category='closed',
+            forecast_category='closed' if menang else 'pipeline',
             order_number=nomor[:8],
             bintang_sale_id=bintang_sale_id,
         )
         OpportunityContactRole.objects.create(contact=contact, opportunity=opportunity, is_primary=True)
         return opportunity.id, True
+
+    def _perbarui_opportunity(self, opportunity, sale, lunas):
+        """Order kasir berubah: perbarui nilai selama masih Open; pindah ke Closed Won
+        saat lunas. Opportunity yang sudah Won/Lost tidak diubah lagi."""
+        from horilla_crm.opportunities.bintang_order import tandai_menang
+
+        if opportunity.stage_id and opportunity.stage.stage_type != 'open':
+            return
+        try:
+            total = Decimal(str(sale.get('total') or 0))
+        except InvalidOperation:
+            return
+        if total and opportunity.amount != total:
+            opportunity.amount = total
+            opportunity.expected_revenue = total * (opportunity.probability or 0) / 100
+            opportunity.save()
+        if lunas is True:
+            tandai_menang(opportunity.pk, total)
 
 
 class BintangBridgeOrderLunasView(BintangBridgeSaleView):
