@@ -37,6 +37,7 @@ from horilla.contrib.core.login_lock import (
     DURASI_KUNCI_IP,
     DURASI_KUNCI_LOGIN,
     MAKS_GAGAL_LOGIN,
+    PESAN_WAJIB_EMAIL,
     catat_gagal,
     catat_gagal_ip,
     format_menit_detik,
@@ -45,6 +46,7 @@ from horilla.contrib.core.login_lock import (
     simpan_otp_unlock,
     sisa_waktu_kunci,
     sisa_waktu_kunci_ip,
+    username_dari_email,
     verifikasi_otp_unlock,
 )
 from horilla.contrib.mail.models import HorillaMailConfiguration
@@ -232,8 +234,13 @@ class LoginUserView(View):
         """
         Handle login attempt
         """
-        identifier = request.POST.get("username")
         secret = request.POST.get("password")
+        # Login memakai email (2026-10-12): email dipetakan ke username akun;
+        # kunci gagal-login & OTP memakai email (identifier).
+        identifier, username_akun = username_dari_email(request.POST.get("username"))
+        if not identifier:
+            messages.error(request, _(PESAN_WAJIB_EMAIL))
+            return redirect(reverse_lazy("core:login") + f"?next={safe_url(request, request.POST.get('next', '/'))}")
         otp_input = (request.POST.get("otp") or "").strip()
         next_url = safe_url(request, request.POST.get("next", "/"))
 
@@ -283,7 +290,7 @@ class LoginUserView(View):
             if sisa:
                 return kembali_terkunci("akun", sisa)
 
-        user = authenticate(request, username=identifier, password=secret)
+        user = authenticate(request, username=username_akun or identifier, password=secret)
 
         if not user:
             gagal, terkunci = catat_gagal(identifier, ip)
@@ -315,7 +322,7 @@ class LoginUserView(View):
             sisa_coba = max(0, MAKS_GAGAL_LOGIN - gagal)
             messages.error(
                 request,
-                _("Username atau password salah. Sisa percobaan: %(sisa)s.")
+                _("Email atau password salah. Sisa percobaan: %(sisa)s.")
                 % {"sisa": sisa_coba},
             )
             return redirect(reverse_lazy("core:login") + f"?next={next_url}")
@@ -352,7 +359,8 @@ class LoginUnlockOtpView(View):
     Respons generik (anti-enumerasi), dipanggil lewat HTMX dari login.html."""
 
     def post(self, request):
-        username = (request.POST.get("username") or "").strip()
+        # Email login (2026-10-12): kunci OTP memakai email, sama dengan LoginUserView.
+        username, username_akun = username_dari_email(request.POST.get("username"))
         generik = _("Jika akun ada, kode OTP verifikasi login sudah dikirim ke email terdaftar.")
         if username:
             cd_key = f"login_unlock_otp_cd:{username.lower()}"
@@ -362,7 +370,7 @@ class LoginUnlockOtpView(View):
                     f'{_("Tunggu sebentar sebelum minta lagi.")}</p>'
                 )
             cache.set(cd_key, True, 60)
-            user = get_user_model().objects.filter(username=username).first()
+            user = get_user_model().objects.filter(username=username_akun).first() if username_akun else None
             if user and user.email:
                 otp = simpan_otp_unlock(username)
                 if otp:

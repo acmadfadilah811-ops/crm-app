@@ -69,7 +69,7 @@ class ForgotPasswordView(View):
         sampai dan tidak masuk spam dibanding versi HTML."""
         email_or_username = (request.POST.get("email") or "").strip()
         if not email_or_username:
-            return self._form_error(request, "", _("Isi username atau email akun CRM Anda."))
+            return self._form_error(request, "", _("Isi email akun CRM Anda."))
 
         ip = request.META.get("HTTP_X_FORWARDED_FOR", request.META.get("REMOTE_ADDR", "")).split(",")[0].strip()
         kunci_ip = f"lupa_pw_ip:{ip}"
@@ -79,15 +79,16 @@ class ForgotPasswordView(View):
             )
         cache.set(kunci_ip, True, 60)
 
+        # Lupa password memakai email saja (2026-10-12).
         user = (
-            User.objects.filter(username__iexact=email_or_username).first()
-            or User.objects.filter(email__iexact=email_or_username).order_by("pk").first()
+            User.objects.filter(email__iexact=email_or_username).order_by("pk").first()
+            if "@" in email_or_username else None
         )
         if user is None or not user.is_active:
             logger.info("Password reset requested for unknown account: %s", email_or_username)
             return self._form_error(
                 request, email_or_username,
-                _("Username atau email tidak terdaftar di CRM. Periksa kembali ejaannya."),
+                _("Email tidak terdaftar di CRM. Periksa kembali ejaannya."),
             )
         if not user.email:
             return self._form_error(

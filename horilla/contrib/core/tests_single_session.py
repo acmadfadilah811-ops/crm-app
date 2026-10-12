@@ -26,7 +26,7 @@ class SatuAkunSatuSesiTests(TestCase):
         self.user.save()
 
     def login(self, client, username="dua_device_crm", sandi=SANDI):
-        return client.post("/login/", {"username": username, "password": sandi, "next": "/"})
+        return client.post("/login/", {"username": f"{username}@test.horilla", "password": sandi, "next": "/"})
 
     def test_login_kedua_mencabut_sesi_pertama(self):
         device1 = Client(**UA)

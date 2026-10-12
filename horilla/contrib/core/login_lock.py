@@ -127,6 +127,28 @@ def catat_gagal_ip(ip, username):
         return False
 
 
+PESAN_WAJIB_EMAIL = "Login memakai email. Masukkan email akun Anda, bukan username."
+
+
+def username_dari_email(nilai):
+    """Login CRM memakai EMAIL saja (keputusan user 2026-10-12, sama dengan ERP/HR).
+
+    Mengembalikan (identitas, username): identitas = email huruf kecil atau None
+    bila `nilai` bukan email; username = username akun aktif pemilik email itu,
+    atau None bila tidak ada / dipakai lebih dari satu akun aktif. Kunci gagal-login
+    & OTP tetap memakai `identitas`, jadi email tak dikenal ikut terhitung gagal."""
+    from django.contrib.auth import get_user_model
+
+    identitas = str(nilai or "").strip().lower()
+    if "@" not in identitas:
+        return None, None
+    akun = list(
+        get_user_model().objects.filter(email__iexact=identitas, is_active=True)
+        .values_list("username", flat=True)[:2]
+    )
+    return identitas, (akun[0] if len(akun) == 1 else None)
+
+
 def _otp_key(username):
     return f"login_unlock_otp:{str(username or '').strip().lower()}"
 

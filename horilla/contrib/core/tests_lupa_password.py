@@ -44,7 +44,7 @@ class LupaPasswordTests(TestCase):
     def test_email_reset_teks_biasa_bermerek_crm(self):
         self._konfigurasi_utama_tanpa_perusahaan()
         HorillaUser.objects.create(username="sales.uji", email="sales.uji@contoh.com")
-        res = self._minta("Sales.Uji")  # username tidak peka huruf besar
+        res = self._minta("Sales.Uji@Contoh.com")  # email tidak peka huruf besar
         self.assertContains(res, "s***i@contoh.com")
         self.assertEqual(len(mail.outbox), 1)
         pesan = mail.outbox[0]
@@ -63,15 +63,15 @@ class LupaPasswordTests(TestCase):
     def test_akun_tanpa_email_diberi_tahu(self):
         self._konfigurasi_utama_tanpa_perusahaan()
         HorillaUser.objects.create(username="tanpa.email", email="")
-        res = self._minta("tanpa.email")
-        self.assertContains(res, "belum punya email")
+        res = self._minta("tanpa.email")  # username tidak lagi diterima; akun tanpa email tak bisa ditemukan
+        self.assertContains(res, "tidak terdaftar")
         self.assertEqual(len(mail.outbox), 0)
 
     def test_dibatasi_sekali_per_menit(self):
         self._konfigurasi_utama_tanpa_perusahaan()
         HorillaUser.objects.create(username="sales.uji", email="sales.uji@contoh.com")
-        self._minta("sales.uji", ip="10.0.0.1")
-        res = self._minta("sales.uji", ip="10.0.0.2")  # IP lain, akun sama
+        self._minta("sales.uji@contoh.com", ip="10.0.0.1")
+        res = self._minta("sales.uji@contoh.com", ip="10.0.0.2")  # IP lain, akun sama
         self.assertContains(res, "Tunggu 1 menit")
         res = self._minta("lain@contoh.com", ip="10.0.0.1")  # IP sama, akun lain
         self.assertContains(res, "Tunggu 1 menit")

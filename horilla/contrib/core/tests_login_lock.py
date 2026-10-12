@@ -34,7 +34,7 @@ class LoginLockTests(TestCase):
         self.url = "/login/"
 
     def post(self, sandi, username="kunci.uji", ip="10.0.0.1", otp=None):
-        data = {"username": username, "password": sandi, "next": "/"}
+        data = {"username": f"{username}@test.horilla", "password": sandi, "next": "/"}
         if otp:
             data["otp"] = otp
         return self.client.post(self.url, data, HTTP_X_FORWARDED_FOR=ip)
@@ -79,7 +79,7 @@ class LoginLockTests(TestCase):
     def test_sisa_waktu_kunci_maksimal_10_menit(self):
         for _ in range(3):
             self.post("salah")
-        sisa = login_lock.sisa_waktu_kunci("kunci.uji", "10.0.0.1")
+        sisa = login_lock.sisa_waktu_kunci("kunci.uji@test.horilla", "10.0.0.1")
         self.assertGreater(sisa, 0)
         self.assertLessEqual(sisa, 600)
 
@@ -117,13 +117,13 @@ class KunciIpDanOtpTests(TestCase):
         self.url = "/login/"
 
     def post(self, username, sandi, ip="9.9.9.9", otp=None):
-        data = {"username": username, "password": sandi, "next": "/"}
+        data = {"username": f"{username}@test.horilla", "password": sandi, "next": "/"}
         if otp:
             data["otp"] = otp
         return self.client.post(self.url, data, HTTP_X_FORWARDED_FOR=ip)
 
     def kirim_otp(self, username):
-        self.client.post("/login/unlock-otp/", {"username": username})
+        self.client.post("/login/unlock-otp/", {"username": f"{username}@test.horilla"})
 
     def masuk(self):
         return "_auth_user_id" in self.client.session
@@ -180,7 +180,7 @@ class KunciIpDanOtpTests(TestCase):
         self.assertFalse(self.masuk())
 
     def test_unlock_otp_request_akun_tidak_ada_tetap_respons_generik(self):
-        r = self.client.post("/login/unlock-otp/", {"username": "hantu_tidak_ada"})
+        r = self.client.post("/login/unlock-otp/", {"username": "hantu_tidak_ada@test.horilla"})
         self.assertEqual(r.status_code, 200)
         self.assertIn("Jika akun ada", r.content.decode())
 
@@ -192,3 +192,28 @@ class KunciIpDanOtpTests(TestCase):
 
     def ambil_otp(self):
         return re.search(r"KODE: (\d{6})", mail.outbox[-1].body).group(1)
+
+
+class LoginEmailTests(TestCase):
+    """Login CRM memakai email saja (2026-10-12)."""
+
+    def setUp(self):
+        caches["login_lock"].clear()
+        self.addCleanup(caches["login_lock"].clear)
+        default_cache.clear()
+        self.addCleanup(default_cache.clear)
+        self.client = Client(**UA)
+        self.user = HorillaUser.objects.create(username="email.uji", email="Email.Uji@Contoh.com")
+        self.user.set_password(SANDI)
+        self.user.save()
+
+    def test_username_ditolak_minta_email(self):
+        r = self.client.post("/login/", {"username": "email.uji", "password": SANDI, "next": "/"}, follow=True)
+        pesan = " ".join(str(m) for m in r.context["messages"])
+        self.assertIn("memakai email", pesan)
+        self.assertFalse(r.context["user"].is_authenticated)
+
+    def test_email_diterima_tanpa_peduli_huruf_besar(self):
+        r = self.client.post("/login/", {"username": " email.uji@contoh.COM ", "password": SANDI, "next": "/"})
+        self.assertEqual(r.status_code, 302)
+        self.assertIn("_auth_user_id", self.client.session)
