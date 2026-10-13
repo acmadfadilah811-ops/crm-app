@@ -142,7 +142,7 @@ KATALOG = [
         "peran": SEMUA,
         "kata_kunci": ["order", "pesanan", "buat order", "erp", "bintang", "kasir"],
         "langkah": [
-            "Buka detail peluang, tab Order Bintang, tekan + Buat Order.",
+            "Buka detail peluang, tab Order ERP, tekan + Buat Order.",
             "Cari produk ERP, isi jumlah, periksa total, lalu kirim.",
             "Order masuk antrean kasir ERP sebagai draft untuk dibayar dan diterbitkan SPK-nya.",
         ],

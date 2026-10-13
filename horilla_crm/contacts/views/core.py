@@ -508,7 +508,7 @@ class ContactDetailViewTabs(LoginRequiredMixin, HorillaDetailTabView):
         # Riwayat transaksi di Bintang (2026-09-26, UAT SLS-04).
         if self.object_id:
             self.tabs.insert(1, {
-                "title": "Riwayat Bintang",
+                "title": "Riwayat ERP",
                 "url": reverse_lazy("contacts:riwayat_bintang_tab", kwargs={"pk": self.object_id}),
                 "target": "tab-riwayat-bintang-content",
                 "id": "riwayat-bintang",

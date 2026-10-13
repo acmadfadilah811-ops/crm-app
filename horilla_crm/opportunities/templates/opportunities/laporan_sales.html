@@ -4,7 +4,7 @@
     <div class="flex flex-wrap justify-between items-end gap-3 mb-4">
         <div>
             <h2 class="text-lg font-semibold">Laporan Sales &amp; Marketing</h2>
-            <p class="text-xs text-gray-500">Penjualan dan pelanggan dari Bintang; lead, opportunity, dan campaign dari CRM.</p>
+            <p class="text-xs text-gray-500">Penjualan dan pelanggan dari ERP; lead, opportunity, dan campaign dari CRM.</p>
         </div>
         <form method="get" class="flex flex-wrap gap-2 items-center" hx-boost="true" hx-target="#mainContent" hx-select="#mainContent" hx-swap="outerHTML">
             <input type="date" name="mulai" value="{{ mulai|date:'Y-m-d' }}" class="border border-dark-50 rounded-md px-2 py-1 text-sm">
@@ -20,8 +20,8 @@
 
     {% if bintang %}
         {% with r=bintang.ringkasan %}
-        <h3 class="text-md font-semibold mb-2">Penjualan (Bintang)</h3>
-        <p class="text-xs text-gray-500 mb-2">Omzet = penjualan POS lunas + order yang tidak batal, sama dengan angka Pendapatan di Dashboard Eksekutif Bintang.</p>
+        <h3 class="text-md font-semibold mb-2">Penjualan (ERP)</h3>
+        <p class="text-xs text-gray-500 mb-2">Omzet = penjualan POS lunas + order yang tidak batal, sama dengan angka Pendapatan di Dashboard Eksekutif ERP.</p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
             <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Omzet</div><div class="text-md font-semibold">{{ r.omzet_rp }}</div></div>
             <div class="p-3 border border-dark-50 rounded-md"><div class="text-xs text-gray-500">Sudah dibayar</div><div class="text-md font-semibold">{{ r.dibayar_rp }}</div></div>

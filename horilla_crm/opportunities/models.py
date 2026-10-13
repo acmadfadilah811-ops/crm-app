@@ -440,7 +440,7 @@ class Opportunity(HorillaCoreModel):
     # Opportunity yang dibuat manual di CRM sendiri.
     bintang_sale_id = models.CharField(
         max_length=40, unique=True, null=True, blank=True, db_index=True,
-        verbose_name=_("Bintang Sale ID"),
+        verbose_name=_("ERP Sale ID"),
     )
 
     OWNER_FIELDS = ["owner"]

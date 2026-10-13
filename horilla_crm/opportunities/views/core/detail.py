@@ -275,7 +275,7 @@ class OpportunityDetailViewTabView(LoginRequiredMixin, HorillaDetailTabView):
         # Tab order ke Bintang (2026-09-26): Sales membuat & memantau order.
         if self.object_id:
             self.tabs.insert(1, {
-                "title": "Order Bintang",
+                "title": "Order ERP",
                 "url": reverse_lazy("opportunities:order_bintang_tab", kwargs={"pk": self.object_id}),
                 "target": "tab-order-bintang-content",
                 "id": "order-bintang",

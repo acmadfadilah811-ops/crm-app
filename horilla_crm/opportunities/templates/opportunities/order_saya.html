@@ -5,7 +5,7 @@
         <div>
             <h2 class="text-lg font-semibold">{% if lihat_semua %}Order dari CRM (semua Sales){% else %}Order Saya{% endif %}</h2>
             <p class="text-xs text-gray-500">
-                Order yang dibuat dari Opportunity dan dikirim ke Antrean kasir Bintang. Status diambil langsung dari Bintang.
+                Order yang dibuat dari Opportunity dan dikirim ke Antrean kasir ERP. Status diambil langsung dari ERP.
             </p>
         </div>
         <div class="flex gap-1">
@@ -64,7 +64,7 @@
                     </tr>
                 {% empty %}
                     <tr><td colspan="9" class="px-3 py-6 text-center text-sm text-gray-500">
-                        {% if galat %}Data tidak bisa dimuat.{% else %}Belum ada order. Buat order dari tab "Order Bintang" di detail Opportunity.{% endif %}
+                        {% if galat %}Data tidak bisa dimuat.{% else %}Belum ada order. Buat order dari tab "Order ERP" di detail Opportunity.{% endif %}
                     </td></tr>
                 {% endfor %}
             </tbody>

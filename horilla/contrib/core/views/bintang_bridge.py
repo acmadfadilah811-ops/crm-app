@@ -121,7 +121,7 @@ class BintangBridgeSaleView(APIView):
             return Response({'error': 'Owner default CRM belum dikonfigurasi.'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         first_name, last_name = _split_nama(request.data.get('nama'))
-        email = str(request.data.get('email') or '').strip() or f'{nomor_wa}@bintang.local'
+        email = str(request.data.get('email') or '').strip() or f'{nomor_wa}@erp.local'
         contact_number = nomor_wa
         alamat_kota = str(request.data.get('kota') or '').strip()
         alamat_provinsi = str(request.data.get('provinsi') or '').strip()
@@ -203,7 +203,7 @@ class BintangBridgeSaleView(APIView):
         except ValueError:
             tanggal = datetime.date.today()
 
-        unit = str(sale.get('unit_bisnis') or '').strip() or 'Bintang'
+        unit = str(sale.get('unit_bisnis') or '').strip() or 'ERP'
         menang = stage.stage_type == 'won'
         opportunity = Opportunity.objects.create(
             name=f'Penjualan {unit} {nomor}'[:120],

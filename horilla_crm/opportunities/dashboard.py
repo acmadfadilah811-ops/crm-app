@@ -301,7 +301,7 @@ def follow_up_kpi_func(generator, model_info):
 DefaultDashboardGenerator.extra_models.append(
     {
         "model": Opportunity,
-        "name": _("Omzet Bintang"),
+        "name": _("Omzet ERP"),
         "icon": "fa-sack-dollar",
         "color": "green",
         "kpi_func": omzet_kpi_func,

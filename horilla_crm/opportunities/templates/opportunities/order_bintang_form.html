@@ -1,14 +1,14 @@
 {% load i18n static %}
 <div class="p-5 relative bg-white rounded-lg shadow-sm w-full" style="min-width: min(720px, 92vw);">
     <div class="flex justify-between items-center mb-3">
-        <h2 class="text-md font-semibold">Buat Order ke Bintang</h2>
+        <h2 class="text-md font-semibold">Buat Order ke ERP</h2>
         <button type="button" onclick="closeModal()" class="text-gray-500 hover:text-red-500 text-xl cursor-pointer">
             <img src="{% static 'assets/icons/close.svg' %}" alt="{% trans 'Close' %}">
         </button>
     </div>
     <p class="text-xs text-gray-500 mb-4">
         Prospek: <b>{{ opportunity.name }}</b>. Order masuk ke Antrean kasir sebagai draft.
-        Harga dihitung Bintang dari katalog; diskon dan penyesuaian dilakukan kasir.
+        Harga dihitung ERP dari katalog; diskon dan penyesuaian dilakukan kasir.
     </p>
 
     {% if galat %}
@@ -33,9 +33,9 @@
                 <input name="email" type="email" value="{{ data.email }}" class="w-full border border-dark-50 rounded-md px-3 py-2 text-sm">
             </div>
         </div>
-        <p class="text-xs text-gray-500 -mt-2 mb-4">Pelanggan otomatis masuk database Pelanggan Bintang (tidak dobel bila nomor sudah ada).</p>
+        <p class="text-xs text-gray-500 -mt-2 mb-4">Pelanggan otomatis masuk database Pelanggan ERP (tidak dobel bila nomor sudah ada).</p>
 
-        <label class="text-xs text-gray-600">Cari produk di katalog Bintang</label>
+        <label class="text-xs text-gray-600">Cari produk di katalog ERP</label>
         <div class="relative mb-3">
             <input type="text" id="cariProdukBintang" autocomplete="off" placeholder="Ketik minimal 2 huruf, mis. banner"
                    class="w-full border border-dark-50 rounded-md px-3 py-2 text-sm">
@@ -64,7 +64,7 @@
 
         <div class="flex justify-end gap-2">
             <button type="button" onclick="closeModal()" class="px-4 py-2 text-sm border border-dark-50 rounded-md">Batal</button>
-            <button type="submit" class="px-4 py-2 text-sm font-medium text-white bg-primary-600 rounded-md hover:bg-primary-800">Kirim Order ke Bintang</button>
+            <button type="submit" class="px-4 py-2 text-sm font-medium text-white bg-primary-600 rounded-md hover:bg-primary-800">Kirim Order ke ERP</button>
         </div>
     </form>
 </div>

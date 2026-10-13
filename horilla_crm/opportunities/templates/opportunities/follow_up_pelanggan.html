@@ -5,7 +5,7 @@
         <div>
             <h2 class="text-lg font-semibold">Follow Up Pelanggan</h2>
             <p class="text-xs text-gray-500">
-                Pelanggan yang sudah lama tidak order (≥ {{ pengaturan.hari_dorman }} hari, minimal {{ pengaturan.min_transaksi }} kali order), dari data transaksi Bintang.
+                Pelanggan yang sudah lama tidak order (≥ {{ pengaturan.hari_dorman }} hari, minimal {{ pengaturan.min_transaksi }} kali order), dari data transaksi ERP.
                 {% if lihat_semua %}Anda melihat semua pelanggan.{% else %}Anda melihat pelanggan milik Anda.{% endif %}
             </p>
             {% if pengaturan.sinkron_terakhir %}

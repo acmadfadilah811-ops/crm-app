@@ -103,7 +103,7 @@ class Contact(HorillaCoreModel):
     # Contact yang dibuat manual di CRM sendiri, bukan hasil sync.
     bintang_contact_id = models.CharField(
         max_length=32, unique=True, null=True, blank=True, db_index=True,
-        verbose_name=_("Bintang Contact ID"),
+        verbose_name=_("ERP Contact ID"),
     )
 
     OWNER_FIELDS = ["contact_owner"]

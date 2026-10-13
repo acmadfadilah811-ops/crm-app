@@ -36,7 +36,7 @@ class ContactRiwayatBintangTabView(LoginRequiredMixin, View):
         nomor = (contact.contact_number or contact.bintang_contact_id or "").strip()
         data, galat = None, None
         if not nomor:
-            galat = "Contact ini belum punya nomor HP, jadi riwayat Bintang tidak bisa dicari."
+            galat = "Contact ini belum punya nomor HP, jadi riwayat ERP tidak bisa dicari."
         else:
             try:
                 data = bintang.riwayat_pelanggan(nomor)

@@ -29,7 +29,7 @@ def _base():
 def _headers():
     kunci = os.getenv("BINTANG_BRIDGE_API_KEY")
     if not kunci:
-        raise BintangOrderError("Sambungan ke Bintang belum dikonfigurasi. Hubungi admin.")
+        raise BintangOrderError("Sambungan ke ERP belum dikonfigurasi. Hubungi admin.")
     return {"X-Api-Key": kunci, "X-Forwarded-Proto": "https"}
 
 
@@ -38,7 +38,7 @@ def _panggil(metode, jalur, timeout=TIMEOUT, **kwargs):
         r = requests.request(metode, _base() + jalur, headers=_headers(), timeout=timeout, **kwargs)
     except requests.RequestException as exc:
         logger.warning("Jembatan CRM->Bintang gagal (%s): %s", jalur, exc)
-        raise BintangOrderError("Bintang tidak bisa dihubungi. Coba lagi sebentar lagi.")
+        raise BintangOrderError("ERP tidak bisa dihubungi. Coba lagi sebentar lagi.")
     try:
         data = r.json()
     except ValueError:
@@ -47,7 +47,7 @@ def _panggil(metode, jalur, timeout=TIMEOUT, **kwargs):
         if r.status_code == 400 and data.get("error"):
             raise BintangOrderError(str(data["error"]))
         logger.warning("Jembatan CRM->Bintang %s menjawab %s", jalur, r.status_code)
-        raise BintangOrderError("Bintang menolak permintaan. Hubungi admin.")
+        raise BintangOrderError("ERP menolak permintaan. Hubungi admin.")
     return data
 
 
