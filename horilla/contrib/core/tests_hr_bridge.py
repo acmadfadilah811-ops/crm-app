@@ -81,6 +81,20 @@ class HRBridgeCreateAccountTests(TestCase):
         user = HorillaUser.objects.get(hr_employee_id=203)
         self.assertEqual(user.role_id, self.spv_role.id)
 
+    def test_update_tidak_mengosongkan_role_superuser(self):
+        admin = HorillaUser.objects.create_user(
+            username="admin_tertaut", password="pw12345", email="admin_tertaut@uji.test",
+            hr_employee_id=204, role=self.spv_role, is_superuser=True,
+        )
+        response = self._post({
+            "hr_employee_id": 204, "first_name": "Admin", "last_name": "Utama",
+            "job_position": "Jabatan Tanpa Role Di CRM", "department": "Sales Marketing & Creative",
+        })
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        admin.refresh_from_db()
+        self.assertEqual(admin.role_id, self.spv_role.id)
+        self.assertTrue(admin.is_superuser)
+
     def test_field_wajib_hr_employee_id_kosong_ditolak_400(self):
         response = self._post({"first_name": "Tanpa", "last_name": "Id"})
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
@@ -118,6 +132,15 @@ class HRBridgeSetStatusTests(TestCase):
         self.user.save(update_fields=["is_active"])
         response = self._post_status({"hr_employee_id": 301, "is_active": True})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.user.refresh_from_db()
+        self.assertTrue(self.user.is_active)
+
+    def test_akun_superuser_tidak_dinonaktifkan_dari_hr(self):
+        self.user.is_superuser = True
+        self.user.save(update_fields=["is_superuser"])
+        response = self._post_status({"hr_employee_id": 301, "is_active": False})
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertTrue(response.data.get("skipped"))
         self.user.refresh_from_db()
         self.assertTrue(self.user.is_active)
 

@@ -57,5 +57,7 @@ class HRHapusAkunCrmTests(TestCase):
         user = self.akun(804, "crm.super")
         user.is_superuser = True
         user.save()
-        self.assertEqual(self.hapus(804).data["mode"], "nonaktif")
-        self.assertTrue(HorillaUser.objects.filter(hr_employee_id=804).exists())
+        self.assertTrue(self.hapus(804).data["skipped"])
+        user.refresh_from_db()
+        self.assertTrue(user.is_active)
+        self.assertEqual(user.email, "crm.super@uji.test")

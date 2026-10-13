@@ -76,6 +76,10 @@ class HRBridgeHapusAkunView(APIView):
         user = HorillaUser.objects.select_for_update().filter(hr_employee_id=hr_employee_id).first()
         if user is None:
             return Response({'skipped': True, 'reason': 'Belum punya akun CRM.'})
+        if user.is_superuser:
+            # Admin CRM dikelola di CRM: menghapus/mengarsipkan karyawan HR yang tertaut
+            # tidak boleh mengunci akun superuser.
+            return Response({'skipped': True, 'reason': 'Akun superuser tidak diubah dari HR.'})
 
         bersih, alasan = bisa_dihapus_bersih(user)
         if bersih:

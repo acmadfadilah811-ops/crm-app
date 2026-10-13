@@ -111,7 +111,10 @@ class HRBridgeCreateAccountView(APIView):
             existing.last_name = last_name or existing.last_name
             existing.email = email or existing.email
             existing.contact_number = no_hp or existing.contact_number
-            existing.role = role
+            if not existing.is_superuser:
+                # Akun superuser (admin CRM) dikelola di CRM; jabatan HR tidak boleh
+                # menghapus/mengganti role-nya.
+                existing.role = role
             if company and not existing.company_id:
                 existing.company = company
             existing.save()
@@ -206,6 +209,8 @@ class HRBridgeSetStatusView(APIView):
         user = HorillaUser.objects.filter(hr_employee_id=hr_employee_id).first()
         if not user:
             return Response({'skipped': True, 'reason': 'Belum punya akun CRM.'}, status=status.HTTP_200_OK)
+        if user.is_superuser:
+            return Response({'skipped': True, 'reason': 'Akun superuser tidak diubah dari HR.'}, status=status.HTTP_200_OK)
 
         user.is_active = is_active
         user.save(update_fields=['is_active'])
