@@ -1152,3 +1152,6 @@ class OpportunitySplit(HorillaCoreModel):
 
 # Target Sales (2026-09-26): model di file terpisah agar models.py tidak makin besar.
 from .target_models import TargetSales  # noqa: E402,F401
+
+# Follow up pelanggan dorman (2026-10-13): model di file terpisah.
+from .followup_models import PelangganFollowUp, PengaturanFollowUp  # noqa: E402,F401

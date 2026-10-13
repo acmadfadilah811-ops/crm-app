@@ -14,6 +14,12 @@ from horilla_crm.opportunities.views.bintang_order import (
     OrderSayaView,
     ProdukBintangCariView,
 )
+from horilla_crm.opportunities.views.followup import (
+    FollowUpAksiView,
+    FollowUpPelangganView,
+    FollowUpPengaturanView,
+    FollowUpSinkronView,
+)
 from horilla_crm.opportunities.views.laporan_sales import LaporanSalesView
 from horilla_crm.opportunities.views.target_sales import (
     TargetSalesFormView,
@@ -28,6 +34,11 @@ urlpatterns = [
     path("produk-bintang-cari/", ProdukBintangCariView.as_view(), name="produk_bintang_cari"),
     path("order-saya/", OrderSayaView.as_view(), name="order_saya"),
     path("laporan-sales/", LaporanSalesView.as_view(), name="laporan_sales"),
+    # Follow up pelanggan yang lama tidak order (2026-10-13).
+    path("follow-up-pelanggan/", FollowUpPelangganView.as_view(), name="follow_up_pelanggan"),
+    path("follow-up-pelanggan/<int:pk>/<str:aksi>/", FollowUpAksiView.as_view(), name="follow_up_aksi"),
+    path("follow-up-pelanggan/pengaturan/", FollowUpPengaturanView.as_view(), name="follow_up_pengaturan"),
+    path("follow-up-pelanggan/sinkron/", FollowUpSinkronView.as_view(), name="follow_up_sinkron"),
     path("target-sales/", TargetSalesView.as_view(), name="target_sales"),
     path("target-sales/form/", TargetSalesFormView.as_view(), name="target_sales_tambah"),
     path("target-sales/form/<int:pk>/", TargetSalesFormView.as_view(), name="target_sales_ubah"),

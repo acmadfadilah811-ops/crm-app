@@ -1,0 +1,122 @@
+{% extends "components/modelcontent_layout.html" %}
+{% block main %}
+<div class="p-4" id="follow-up-pelanggan">
+    <div class="flex flex-wrap justify-between items-end gap-3 mb-3">
+        <div>
+            <h2 class="text-lg font-semibold">Follow Up Pelanggan</h2>
+            <p class="text-xs text-gray-500">
+                Pelanggan yang sudah lama tidak order (≥ {{ pengaturan.hari_dorman }} hari, minimal {{ pengaturan.min_transaksi }} kali order), dari data transaksi Bintang.
+                {% if lihat_semua %}Anda melihat semua pelanggan.{% else %}Anda melihat pelanggan milik Anda.{% endif %}
+            </p>
+            {% if pengaturan.sinkron_terakhir %}
+                <p class="text-xs text-gray-400">Diperbarui {{ pengaturan.sinkron_terakhir|date:"d/m/Y H:i" }} — {{ pengaturan.sinkron_hasil }}</p>
+            {% else %}
+                <p class="text-xs text-gray-400">Belum pernah disinkron. Sinkron berjalan otomatis tiap pagi pukul 08.00 WIB.</p>
+            {% endif %}
+        </div>
+        <form method="get" class="flex gap-2 items-center" hx-boost="true" hx-target="#mainContent" hx-select="#mainContent" hx-swap="outerHTML">
+            <input type="hidden" name="tab" value="{{ tab }}">
+            <input type="search" name="q" value="{{ q }}" placeholder="Cari nama / nomor" class="border border-dark-50 rounded-md px-2 py-1 text-sm">
+            <button type="submit" class="px-3 py-1 text-sm border border-dark-50 rounded-md">Cari</button>
+        </form>
+    </div>
+
+    <div class="flex flex-wrap gap-1 mb-3 border-b border-dark-50">
+        {% for kode, nama, n in tabs %}
+            <a href="?tab={{ kode }}{% if q %}&q={{ q|urlencode }}{% endif %}" hx-boost="true" hx-target="#mainContent" hx-select="#mainContent" hx-swap="outerHTML"
+               class="px-3 py-2 text-sm -mb-px border-b-2 {% if tab == kode %}border-primary-600 text-primary-600 font-medium{% else %}border-transparent text-gray-500 hover:text-gray-800{% endif %}">
+                {{ nama }} <span class="text-xs text-gray-400">({{ n }})</span>
+            </a>
+        {% endfor %}
+    </div>
+
+    <div class="overflow-x-auto border border-dark-50 rounded-md">
+        <table class="w-full text-sm">
+            <thead class="text-left text-xs text-gray-500 bg-gray-50">
+                <tr>
+                    <th class="px-3 py-2">Pelanggan</th>
+                    <th class="px-3 py-2">Order terakhir</th>
+                    <th class="px-3 py-2 text-right">Transaksi</th>
+                    <th class="px-3 py-2 text-right">Total belanja</th>
+                    {% if lihat_semua %}<th class="px-3 py-2">Pemilik</th>{% endif %}
+                    <th class="px-3 py-2">Status</th>
+                    <th class="px-3 py-2"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for r in rows %}
+                    <tr class="border-t border-dark-50 align-top">
+                        <td class="px-3 py-2">
+                            <div class="font-medium">{{ r.nama|default:"(tanpa nama)" }}</div>
+                            <div class="text-xs text-gray-500">+{{ r.nomor }}</div>
+                            {% if r.contact_id %}<a class="text-xs text-primary-600 hover:underline" href="{% url 'contacts:contact_detail_view' r.contact_id %}">Buka Contact</a>{% endif %}
+                        </td>
+                        <td class="px-3 py-2">
+                            {{ r.terakhir_order|date:"d/m/Y" }}
+                            <div class="text-xs text-gray-500">{{ r.hari_sejak }} hari lalu</div>
+                        </td>
+                        <td class="px-3 py-2 text-right">{{ r.jumlah_transaksi }}</td>
+                        <td class="px-3 py-2 text-right whitespace-nowrap">{{ r.belanja_rp }}</td>
+                        {% if lihat_semua %}<td class="px-3 py-2 text-xs">{% if r.pemilik %}{{ r.pemilik.get_full_name|default:r.pemilik.username }}{% else %}<span class="text-gray-400">-</span>{% endif %}</td>{% endif %}
+                        <td class="px-3 py-2 text-xs">
+                            {{ r.get_status_display }}
+                            {% if r.status == "ditunda" and r.ditunda_sampai %}<div class="text-gray-500">sampai {{ r.ditunda_sampai|date:"d/m/Y" }}</div>{% endif %}
+                            {% if r.ditangani_oleh and r.status != "baru" %}<div class="text-gray-500">oleh {{ r.ditangani_oleh.get_full_name|default:r.ditangani_oleh.username }}, {{ r.ditangani_pada|date:"d/m/Y" }}</div>{% endif %}
+                            {% if r.catatan %}<div class="text-gray-500">“{{ r.catatan }}”</div>{% endif %}
+                        </td>
+                        <td class="px-3 py-2 text-xs whitespace-nowrap">
+                            <a href="{{ r.wa }}" target="_blank" rel="noopener" class="text-green-700 hover:underline">Chat WhatsApp</a>
+                            {% if r.status == "baru" or r.status == "ditunda" or r.status == "dihubungi" %}
+                                <button type="button" class="text-primary-600 hover:underline ml-2" hx-post="{% url 'opportunities:follow_up_aksi' r.pk 'dihubungi' %}" hx-prompt="Catatan hasil menghubungi (boleh dikosongkan)" hx-target="body" hx-swap="beforeend">Sudah dihubungi</button>
+                            {% endif %}
+                            {% if r.status == "baru" %}
+                                <span class="ml-2">Tunda:</span>
+                                {% for h in hari_tunda %}
+                                    <button type="button" class="text-gray-600 hover:underline" hx-post="{% url 'opportunities:follow_up_aksi' r.pk 'tunda' %}" hx-vals='{"hari": {{ h }}}' hx-target="body" hx-swap="beforeend">{{ h }}h</button>
+                                {% endfor %}
+                                <button type="button" class="text-red-600 hover:underline ml-2" hx-post="{% url 'opportunities:follow_up_aksi' r.pk 'abaikan' %}" hx-confirm="Abaikan pelanggan ini? Ia tidak akan muncul lagi sampai order kembali." hx-target="body" hx-swap="beforeend">Abaikan</button>
+                            {% elif r.status == "ditunda" or r.status == "dihubungi" or r.status == "abaikan" %}
+                                <button type="button" class="text-gray-600 hover:underline ml-2" hx-post="{% url 'opportunities:follow_up_aksi' r.pk 'buka' %}" hx-target="body" hx-swap="beforeend">Buka lagi</button>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% empty %}
+                    <tr><td colspan="7" class="px-3 py-6 text-center text-sm text-gray-500">
+                        {% if tab == "baru" %}Tidak ada pelanggan yang perlu di-follow up saat ini.{% else %}Tidak ada data pada tab ini.{% endif %}
+                    </td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% if dipotong %}<p class="text-xs text-gray-500 mt-2">Menampilkan {{ rows|length }} pelanggan dengan belanja terbesar. Gunakan pencarian untuk menemukan yang lain.</p>{% endif %}
+
+    {% if kelola %}
+        <div class="mt-6 border border-dark-50 rounded-md p-4">
+            <h3 class="text-md font-semibold mb-1">Pengaturan</h3>
+            <p class="text-xs text-gray-500 mb-3">Berlaku untuk sinkron berikutnya.</p>
+            <form hx-post="{% url 'opportunities:follow_up_pengaturan' %}" hx-target="#fu-galat" hx-swap="innerHTML" class="grid grid-cols-1 md:grid-cols-3 gap-3 items-end">
+                <label class="text-sm flex items-center gap-2 md:col-span-3">
+                    <input type="checkbox" name="aktif" {% if form.aktif.value %}checked{% endif %}> Aktifkan sinkron &amp; notifikasi harian
+                </label>
+                <label class="text-sm">Dianggap lama tidak order setelah (hari)
+                    <input type="number" name="hari_dorman" min="7" max="1100" value="{{ form.hari_dorman.value }}" class="mt-1 w-full border border-dark-50 rounded-md px-2 py-1 text-sm">
+                </label>
+                <label class="text-sm">Minimal sudah order (kali)
+                    <input type="number" name="min_transaksi" min="1" max="100" value="{{ form.min_transaksi.value }}" class="mt-1 w-full border border-dark-50 rounded-md px-2 py-1 text-sm">
+                </label>
+                <label class="text-sm">Muncul lagi bila belum order setelah dihubungi (hari)
+                    <input type="number" name="jeda_ulang_hari" min="1" max="365" value="{{ form.jeda_ulang_hari.value }}" class="mt-1 w-full border border-dark-50 rounded-md px-2 py-1 text-sm">
+                </label>
+                <label class="text-sm flex items-center gap-2 md:col-span-3">
+                    <input type="checkbox" name="kirim_ke_atasan" {% if form.kirim_ke_atasan.value %}checked{% endif %}> Atasan ikut menerima ringkasan notifikasi semua pelanggan
+                </label>
+                <div class="md:col-span-3 flex flex-wrap items-center gap-2">
+                    <button type="submit" class="px-3 py-1 text-sm font-medium text-white bg-primary-600 rounded-md hover:bg-primary-800">Simpan pengaturan</button>
+                    <button type="button" hx-post="{% url 'opportunities:follow_up_sinkron' %}" hx-target="#fu-galat" hx-swap="innerHTML" hx-confirm="Sinkron sekarang? Notifikasi untuk pelanggan baru akan terkirim." class="px-3 py-1 text-sm border border-dark-50 rounded-md">Sinkron sekarang</button>
+                    <span id="fu-galat"></span>
+                </div>
+            </form>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

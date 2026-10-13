@@ -2,8 +2,11 @@
 
 # Standard library imports
 import logging
+from datetime import timedelta
 
 # Third-party imports (Django)
+from django.core.cache import cache
+from django.utils import timezone
 from django.utils.http import urlencode
 
 from horilla.contrib.dashboard.utils import DefaultDashboardGenerator
@@ -15,6 +18,9 @@ from horilla.utils.choices import TABLE_FALLBACK_FIELD_TYPES
 from horilla.utils.translation import gettext_lazy as _
 
 # Local imports
+from horilla.urls import reverse
+from horilla_crm.contacts.models import Contact
+
 from .models import Opportunity
 
 logger = logging.getLogger(__name__)
@@ -208,5 +214,106 @@ DefaultDashboardGenerator.extra_models.append(
         "chart_func": create_opportunity_charts,
         "table_func": opportunity_table_func,
         "table_fields_func": opportuntiy_table_fields,
+    }
+)
+
+
+# --- KPI omzet keseluruhan & follow up pelanggan (2026-10-13) -----------------
+
+IZIN_LIHAT_SEMUA_OPP = "opportunities.view_opportunity"
+MAKS_HARI_OMZET = 1099  # Bintang membatasi laporan 1100 hari.
+CACHE_OMZET_DETIK = 300
+CACHE_GAGAL_DETIK = 60
+
+
+def _periode_omzet(generator):
+    """Periode omzet mengikuti filter tanggal dasbor; 'semua' = 3 tahun terakhir."""
+    hari_ini = timezone.localdate()
+    rentang = generator.date_range
+    if rentang == "custom":
+        selesai = generator.date_to or hari_ini
+        mulai = generator.date_from or (selesai - timedelta(days=29))
+    elif rentang is None:
+        selesai, mulai = hari_ini, hari_ini - timedelta(days=MAKS_HARI_OMZET)
+    else:
+        selesai, mulai = hari_ini, hari_ini - timedelta(days=int(rentang))
+    if mulai > selesai:
+        mulai = selesai
+    if (selesai - mulai).days > MAKS_HARI_OMZET:
+        mulai = selesai - timedelta(days=MAKS_HARI_OMZET)
+    return mulai, selesai
+
+
+def _omzet_bintang(mulai, selesai):
+    """Ringkasan omzet dari Bintang, di-cache sebentar supaya dasbor tidak menunggu tiap dibuka."""
+    from . import bintang_order as bintang
+
+    kunci = f"crm:omzet:{mulai.isoformat()}:{selesai.isoformat()}"
+    hasil = cache.get(kunci)
+    if hasil is not None:
+        return hasil or None
+    try:
+        hasil = bintang.laporan_penjualan(mulai, selesai, timeout=10)["ringkasan"]
+    except (bintang.BintangOrderError, KeyError) as exc:
+        logger.warning("Dasbor: omzet Bintang tidak bisa dimuat: %s", exc)
+        cache.set(kunci, {}, CACHE_GAGAL_DETIK)
+        return None
+    cache.set(kunci, hasil, CACHE_OMZET_DETIK)
+    return hasil
+
+
+def omzet_kpi_func(generator, model_info):
+    """Omzet keseluruhan semua kanal Bintang untuk atasan (pemegang izin lihat semua peluang).
+    Definisi omzet sama dengan Laporan Sales dan Dashboard Eksekutif Bintang."""
+    if not generator.user.has_perm(IZIN_LIHAT_SEMUA_OPP):
+        return None
+    from .views.bintang_order import _rp
+
+    mulai, selesai = _periode_omzet(generator)
+    section_info = get_section_info_for_model(Opportunity)
+    url = f"{reverse('opportunities:laporan_sales')}?{urlencode({'mulai': mulai.isoformat(), 'selesai': selesai.isoformat()})}"
+    ringkasan = _omzet_bintang(mulai, selesai)
+    dasar = {"icon": "fa-sack-dollar", "type": "text", "url": url, "section": section_info.get("section")}
+    if ringkasan is None:
+        return [{**dasar, "title": _("Omzet Keseluruhan"), "value": _("Tidak bisa dimuat"), "color": "warning"}]
+    return [
+        {**dasar, "title": _("Omzet Keseluruhan"), "value": _rp(ringkasan["omzet"]), "color": "green"},
+        {**dasar, "title": _("Omzet Sudah Dibayar"), "value": _rp(ringkasan["dibayar"]), "color": "teal"},
+        {**dasar, "title": _("Omzet Belum Dibayar"), "value": _rp(ringkasan["belum_dibayar"]), "color": "orange"},
+    ]
+
+
+def follow_up_kpi_func(generator, model_info):
+    """Jumlah pelanggan lama tidak order yang perlu di-follow up (atasan: semua, staff: miliknya)."""
+    from .followup import jumlah_perlu_followup
+
+    return {
+        "title": _("Pelanggan Perlu Follow Up"),
+        "value": jumlah_perlu_followup(generator.user),
+        "type": "count",
+        "icon": "fa-user-clock",
+        "color": "orange",
+        "url": reverse("opportunities:follow_up_pelanggan"),
+        "section": get_section_info_for_model(Opportunity).get("section"),
+    }
+
+
+DefaultDashboardGenerator.extra_models.append(
+    {
+        "model": Opportunity,
+        "name": _("Omzet Bintang"),
+        "icon": "fa-sack-dollar",
+        "color": "green",
+        "kpi_func": omzet_kpi_func,
+    }
+)
+
+DefaultDashboardGenerator.extra_models.append(
+    {
+        "model": Contact,
+        "name": _("Follow Up Pelanggan"),
+        "icon": "fa-user-clock",
+        "color": "orange",
+        "kpi_func": follow_up_kpi_func,
     }
 )

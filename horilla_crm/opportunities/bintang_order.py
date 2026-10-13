@@ -33,9 +33,9 @@ def _headers():
     return {"X-Api-Key": kunci, "X-Forwarded-Proto": "https"}
 
 
-def _panggil(metode, jalur, **kwargs):
+def _panggil(metode, jalur, timeout=TIMEOUT, **kwargs):
     try:
-        r = requests.request(metode, _base() + jalur, headers=_headers(), timeout=TIMEOUT, **kwargs)
+        r = requests.request(metode, _base() + jalur, headers=_headers(), timeout=timeout, **kwargs)
     except requests.RequestException as exc:
         logger.warning("Jembatan CRM->Bintang gagal (%s): %s", jalur, exc)
         raise BintangOrderError("Bintang tidak bisa dihubungi. Coba lagi sebentar lagi.")
@@ -123,6 +123,16 @@ def riwayat_pelanggan(nomor):
     return _panggil("GET", "riwayat-pelanggan/", params={"nomor": nomor})
 
 
-def laporan_penjualan(mulai, selesai):
+def laporan_penjualan(mulai, selesai, timeout=TIMEOUT):
     """Omzet per kanal/bulan + pertumbuhan pelanggan dari Bintang (definisi = Dashboard Eksekutif)."""
-    return _panggil("GET", "laporan-penjualan/", params={"mulai": mulai.isoformat(), "selesai": selesai.isoformat()})
+    return _panggil("GET", "laporan-penjualan/", timeout=timeout,
+                    params={"mulai": mulai.isoformat(), "selesai": selesai.isoformat()})
+
+
+def pelanggan_dorman(hari, min_transaksi=1, nomor=None):
+    """Pelanggan yang order terakhirnya >= `hari` hari lalu; atau (dengan `nomor` "a,b") order
+    terakhir nomor-nomor itu tanpa ambang."""
+    params = {"hari": hari, "min_transaksi": min_transaksi}
+    if nomor:
+        params["nomor"] = nomor
+    return _panggil("GET", "pelanggan-dorman/", params=params)

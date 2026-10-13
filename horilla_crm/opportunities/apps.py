@@ -17,6 +17,7 @@ class OpportunitiesConfig(AppLauncher):
     url_prefix = "crm/opportunities/"
     url_module = "horilla_crm.opportunities.urls"
     url_namespace = "opportunities"
+    celery_schedule_module = "celery_schedules"
 
     auto_import_modules = [
         "registration",

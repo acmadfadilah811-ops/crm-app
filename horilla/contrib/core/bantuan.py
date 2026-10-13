@@ -192,6 +192,22 @@ KATALOG = [
         "uat": [],
     },
     {
+        "id": "follow-up-pelanggan",
+        "modul": "Pelanggan",
+        "judul": "Follow up pelanggan yang lama tidak order",
+        "ringkas": "Daftar pelanggan yang sudah lama tidak order, lengkap dengan tombol chat WhatsApp.",
+        "peran": SEMUA,
+        "kata_kunci": ["follow up", "followup", "dormant", "lama tidak order", "pelanggan lama", "notifikasi"],
+        "langkah": [
+            "Setiap pagi pukul 08.00 sistem memeriksa pelanggan yang order terakhirnya sudah lewat batas hari dan mengirim notifikasi.",
+            "Buka Follow Up Pelanggan, lalu klik Chat WhatsApp untuk menyapa pelanggan.",
+            "Setelah menghubungi, klik Sudah dihubungi (boleh dengan catatan), atau Tunda bila belum waktunya, atau Abaikan bila tidak perlu.",
+            "Pelanggan yang order lagi otomatis pindah ke tab Sudah order lagi. Pengelola dapat mengubah batas hari di bagian Pengaturan halaman ini.",
+        ],
+        "halaman": "opportunities:follow_up_pelanggan",
+        "uat": [],
+    },
+    {
         "id": "laporan-sales",
         "modul": "Laporan & Target",
         "judul": "Laporan sales",

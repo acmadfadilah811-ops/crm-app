@@ -110,6 +110,24 @@ class LaporanSalesSubSection:
     perm = ["opportunities.view_opportunity"]
 
 
+@sub_section_menu.register
+class FollowUpPelangganSubSection:
+    """Pelanggan yang lama tidak order, untuk di-follow up (2026-10-13)."""
+
+    section = "sales"
+    app_label = "opportunities"
+    id = "follow_up_pelanggan"
+    position = 6
+
+    verbose_name = "Follow Up Pelanggan"
+    icon = "/assets/icons/opportunities.svg"
+
+    url = reverse_lazy("opportunities:follow_up_pelanggan")
+    attrs = MAIN_CONTENT_HX_ATTRS
+
+    perm = ["contacts.view_contact", "contacts.view_own_contact"]
+
+
 @floating_menu.register
 class OpportunitiesFloating:
     """Floating menu configuration for the Opportunity model."""
