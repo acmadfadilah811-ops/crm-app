@@ -866,6 +866,11 @@ urlpatterns = [
         "forgot-password/", views.ForgotPasswordView.as_view(), name="forgot_password"
     ),
     path(
+        "reset-password/selesai/",
+        views.PasswordUpdatedView.as_view(),
+        name="password_updated",
+    ),
+    path(
         "reset-password/<uidb64>/<token>/",
         views.PasswordResetConfirmView.as_view(),
         name="password_reset_confirm",

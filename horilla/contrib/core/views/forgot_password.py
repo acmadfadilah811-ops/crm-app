@@ -28,7 +28,11 @@ from horilla.shortcuts import redirect, render
 from horilla.utils.translation import gettext_lazy as _
 from horilla.web import HttpResponse
 
+# First party imports (Horilla)
+from horilla.urls import reverse
+
 # Local imports
+from ..bantuan import URL_ERP, URL_HR
 from ..models import Company
 
 logger = logging.getLogger(__name__)
@@ -157,6 +161,22 @@ class ForgotPasswordView(View):
         return render(request, self.success_template, {"email_tujuan": _samarkan_email(user.email)})
 
 
+class PasswordUpdatedView(View):
+    """Halaman setelah sandi berhasil diganti lewat tautan email (publik)."""
+
+    template_name = "forgot_password/password_updated.html"
+
+    def get(self, request):
+        aplikasi = [
+            ("ERP", URL_ERP),
+            ("HR", URL_HR),
+            ("CRM", request.build_absolute_uri("/")),
+        ]
+        return render(request, self.template_name, {
+            "aplikasi": [(nama, url, url.split("://", 1)[-1].rstrip("/")) for nama, url in aplikasi],
+        })
+
+
 class PasswordResetConfirmView(View):
     """
     View to handle the password reset confirmation workflow.
@@ -222,13 +242,16 @@ class PasswordResetConfirmView(View):
                         request, "Your password has been reset successfully."
                     )
 
+                    # Setelah sandi diganti, jangan lempar ke satu aplikasi: sandi sama untuk
+                    # ERP/HR/CRM/mobile, jadi tampilkan halaman "login ulang" (2026-10-13).
+                    selesai = reverse("core:password_updated")
                     if request.headers.get("HX-Request") == "true":
                         response = HttpResponse()
-                        response["HX-Redirect"] = "/login/"
-                        response["HX-Push-Url"] = "/login/"
+                        response["HX-Redirect"] = selesai
+                        response["HX-Push-Url"] = selesai
                         return response
 
-                    return redirect("core:login")
+                    return redirect(selesai)
 
             context = {
                 "validlink": True,

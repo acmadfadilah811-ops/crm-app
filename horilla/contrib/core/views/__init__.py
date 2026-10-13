@@ -231,6 +231,7 @@ from horilla.contrib.core.views.change_password import (
 from horilla.contrib.core.views.forgot_password import (
     ForgotPasswordView,
     PasswordResetConfirmView,
+    PasswordUpdatedView,
 )
 
 from horilla.contrib.core.views.business_hour import (
