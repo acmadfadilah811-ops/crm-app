@@ -10,6 +10,7 @@ This module provides middleware for:
 import logging
 
 # Third-party imports (Django)
+from django.utils.cache import add_never_cache_headers
 from django.utils.deprecation import MiddlewareMixin
 
 from horilla.menu.sub_section_menu import sub_section_menu as menu_registry
@@ -285,3 +286,27 @@ class EnsureSectionMiddleware(MiddlewareMixin):
             logger.warning("Error in get_section_from_path: %s", e)
 
         return None
+
+
+class NoCacheAuthenticatedMiddleware:
+    """Halaman HTML untuk user login tidak boleh disimpan cache browser.
+
+    Tanpa ini, setelah logout tombol Kembali (Back) browser menampilkan lagi
+    dasbor dari cache/bfcache tanpa minta login. Dengan Cache-Control no-store
+    browser wajib meminta ulang ke server, yang lalu mengarahkan ke halaman
+    login (2026-10-14).
+    """
+
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        response = self.get_response(request)
+        user = getattr(request, "user", None)
+        if (
+            user is not None
+            and user.is_authenticated
+            and "text/html" in response.get("Content-Type", "")
+        ):
+            add_never_cache_headers(response)
+        return response

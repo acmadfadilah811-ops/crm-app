@@ -140,6 +140,8 @@ MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+    # Setelah logout, tombol Back tidak menampilkan dasbor dari cache.
+    "horilla.contrib.core.middlewares.NoCacheAuthenticatedMiddleware",
     "auditlog.middleware.AuditlogMiddleware",
     "horilla.contrib.core.middlewares.TimezoneMiddleware",
     "horilla.contrib.core.middlewares.ActiveCompanyMiddleware",
