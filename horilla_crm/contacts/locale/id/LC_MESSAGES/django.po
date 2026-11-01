@@ -46,7 +46,7 @@ msgid "Please select a valid contact."
 msgstr "Silakan pilih kontak yang valid."
 
 msgid "Web"
-msgstr "jaring"
+msgstr "Web"
 
 msgid "Phone Inquiry"
 msgstr "Pertanyaan Telepon"
@@ -61,10 +61,10 @@ msgid "Other"
 msgstr "Lainnya"
 
 msgid "Contact Owner"
-msgstr "Hubungi Pemilik"
+msgstr "Pemilik Kontak"
 
 msgid "Title"
-msgstr "Judul"
+msgstr "Jabatan"
 
 msgid "First Name"
 msgstr "Nama depan"
@@ -73,28 +73,28 @@ msgid "Last Name"
 msgstr "Nama Belakang"
 
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 msgid "Contact Number"
-msgstr "Nomor Kontak"
+msgstr "Nomor Telepon"
 
 msgid "Secondary Contact Number"
-msgstr "Nomor Kontak Sekunder"
+msgstr "Nomor Telepon Kedua"
 
 msgid "City"
 msgstr "Kota"
 
 msgid "State"
-msgstr "Negara"
+msgstr "Provinsi"
 
 msgid "Country"
 msgstr "Negara"
 
 msgid "Zip"
-msgstr "Ritsleting"
+msgstr "Kode Pos"
 
 msgid "Parent Contact"
-msgstr "Kontak Orang Tua"
+msgstr "Kontak Induk"
 
 msgid "Contact Source"
 msgstr "Sumber Kontak"
@@ -109,13 +109,13 @@ msgid "Assistant"
 msgstr "Asisten"
 
 msgid "Assistant Contact Number"
-msgstr "Nomor Kontak Asisten"
+msgstr "Nomor Telepon Asisten"
 
 msgid "Languages"
 msgstr "Bahasa"
 
 msgid "Is Primary"
-msgstr "Apakah Pratama"
+msgstr "Kontak Utama"
 
 msgid "Contact Score"
 msgstr "Skor Kontak"
@@ -130,13 +130,13 @@ msgid "Role"
 msgstr "Peran"
 
 msgid "Contact Account Relationship"
-msgstr "Hubungi Hubungan Akun"
+msgstr "Hubungan Kontak-Akun"
 
 msgid "Contact Account Relationships"
-msgstr "Hubungi Hubungan Akun"
+msgstr "Hubungan Kontak-Akun"
 
 msgid "contact Hierarchy"
-msgstr "hubungi Hirarki"
+msgstr "Hierarki Kontak"
 
 msgid "Close"
 msgstr "Tutup"
@@ -157,7 +157,7 @@ msgid "Add Account Contact Relationships"
 msgstr "Tambahkan Hubungan Kontak Akun"
 
 msgid "Add Child Contact"
-msgstr "Tambahkan Kontak Anak"
+msgstr "Tambah Kontak Turunan"
 
 msgid "You must be logged in to perform this action."
 msgstr "Anda harus masuk untuk melakukan tindakan ini."
@@ -187,7 +187,7 @@ msgid "An error occurred while removing the child contact."
 msgstr "Terjadi kesalahan saat menghapus kontak anak."
 
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 msgid "Duplicate"
 msgstr "Duplikat"
@@ -202,7 +202,7 @@ msgid "Related Accounts"
 msgstr "Akun Terkait"
 
 msgid "Child Contacts"
-msgstr "Kontak Anak"
+msgstr "Kontak Turunan"
 
 msgid "View Hierarchy"
-msgstr "Lihat Hirarki"
+msgstr "Lihat Hierarki"

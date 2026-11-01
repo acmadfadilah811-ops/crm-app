@@ -514,7 +514,7 @@ msgid "Role"
 msgstr "Peran"
 
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 msgid "Role Name"
 msgstr "Nama Peran"

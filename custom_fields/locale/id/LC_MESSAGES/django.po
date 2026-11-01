@@ -117,10 +117,10 @@ msgid "Type"
 msgstr "Jenis"
 
 msgid "Order"
-msgstr "Memesan"
+msgstr "Urutan"
 
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 msgid "Delete"
 msgstr "Hapus"

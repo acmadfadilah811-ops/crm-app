@@ -156,7 +156,7 @@ msgid "Template body is required."
 msgstr "Badan templat wajib diisi."
 
 msgid "Select Mail Template"
-msgstr "Pilih Templat Surat"
+msgstr "Pilih Templat Email"
 
 msgid "Choose a template"
 msgstr "Pilih templat"
@@ -195,7 +195,7 @@ msgid "Incoming Mail Server"
 msgstr "Server Surat Masuk"
 
 msgid "Mail Template"
-msgstr "Templat Surat"
+msgstr "Templat Email"
 
 msgid "Mail History"
 msgstr "Riwayat Surat"
@@ -470,7 +470,7 @@ msgid "Send Test Mail"
 msgstr "Kirim Surat Uji"
 
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 msgid "Delete"
 msgstr "Hapus"

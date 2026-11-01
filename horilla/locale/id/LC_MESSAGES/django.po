@@ -515,7 +515,7 @@ msgid "Users"
 msgstr "Pengguna"
 
 msgid "e.g. US Business Hours"
-msgstr "misalnyaJam Kerja AS"
+msgstr "mis. Jam Kerja AS"
 
 msgid "Start"
 msgstr "Awal"
@@ -597,25 +597,25 @@ msgid "The following user(s) are already superusers: {users}"
 msgstr "Pengguna berikut sudah menjadi pengguna super:{users}"
 
 msgid "Mon"
-msgstr "Senin"
+msgstr "Sen"
 
 msgid "Tue"
-msgstr "Selasa"
+msgstr "Sel"
 
 msgid "Wed"
-msgstr "Menikahi"
+msgstr "Rab"
 
 msgid "Thu"
 msgstr "Kam"
 
 msgid "Fri"
-msgstr "Jumat"
+msgstr "Jum"
 
 msgid "Sat"
-msgstr "Duduk"
+msgstr "Sab"
 
 msgid "Sun"
-msgstr "Matahari"
+msgstr "Min"
 
 msgid "B1"
 msgstr "B1"
@@ -638,10 +638,10 @@ msgstr ""
 " jam (misalnya 17:30 sebagai 17:30, bukan 05:30)."
 
 msgid "e.g. US Shift, APAC Support"
-msgstr "misalnyaPergeseran AS, Dukungan APAC"
+msgstr "mis. Shift AS, Dukungan APAC"
 
 msgid "Shift name"
-msgstr "Pergeseran nama"
+msgstr "Nama shift"
 
 msgid "- start"
 msgstr "- awal"
@@ -802,7 +802,7 @@ msgid "The ID of the object this attachment is related to."
 msgstr "ID objek yang terkait dengan lampiran ini."
 
 msgid "File"
-msgstr "Mengajukan"
+msgstr "Berkas"
 
 msgid "Optional file attached to this record."
 msgstr "File opsional terlampir pada catatan ini."
@@ -829,7 +829,7 @@ msgid "Company Name"
 msgstr "Nama perusahaan"
 
 msgid "Email Address"
-msgstr "Alamat Surel"
+msgstr "Alamat Email"
 
 msgid "Website"
 msgstr "Situs web"
@@ -838,7 +838,7 @@ msgid "Company Icon"
 msgstr "Ikon Perusahaan"
 
 msgid "Contact Number"
-msgstr "Nomor Kontak"
+msgstr "Nomor Telepon"
 
 msgid "Fax Number"
 msgstr "Nomor Faks"
@@ -856,13 +856,13 @@ msgid "Country"
 msgstr "Negara"
 
 msgid "State/Province"
-msgstr "Negara Bagian/Provinsi"
+msgstr "Provinsi"
 
 msgid "City"
 msgstr "Kota"
 
 msgid "ZIP/Postal Code"
-msgstr "ZIP/Kode Pos"
+msgstr "Kode Pos"
 
 msgid "Language"
 msgstr "Bahasa"
@@ -979,7 +979,7 @@ msgid "Week Start Day"
 msgstr "Hari Awal Minggu"
 
 msgid "Week Days"
-msgstr "Hari Minggu"
+msgstr "Hari dalam Seminggu"
 
 msgid "Same hours every day or different hours per day"
 msgstr "Jam yang sama setiap hari atau jam yang berbeda setiap hari"
@@ -1003,7 +1003,7 @@ msgid "Default Business Hour"
 msgstr "Jam Kerja Default"
 
 msgid "Is Default"
-msgstr "Apakah Bawaan"
+msgstr "Bawaan"
 
 msgid "Holidays"
 msgstr "Hari libur"
@@ -1042,10 +1042,10 @@ msgid "Break Hours 1"
 msgstr "Jam Istirahat 1"
 
 msgid "Break 1 Default Start"
-msgstr "Hancurkan 1 Awal Default"
+msgstr "Mulai Istirahat 1 (Bawaan)"
 
 msgid "Break 1 Default End"
-msgstr "Hancurkan 1 Akhir Default"
+msgstr "Selesai Istirahat 1 (Bawaan)"
 
 msgid "Per-day break times when mode is \"different\" (mon..sun keys)."
 msgstr "Waktu istirahat per hari ketika mode \"berbeda\" (tombol mon..sun)."
@@ -1057,10 +1057,10 @@ msgid "Break Hours 2"
 msgstr "Jam Istirahat 2"
 
 msgid "Break 2 Default Start"
-msgstr "Hancurkan 2 Awal Default"
+msgstr "Mulai Istirahat 2 (Bawaan)"
 
 msgid "Break 2 Default End"
-msgstr "Hancurkan 2 Akhir Default"
+msgstr "Selesai Istirahat 2 (Bawaan)"
 
 msgid "Break 2 Per-Day Times"
 msgstr "Istirahat 2 Kali Per Hari"
@@ -1075,7 +1075,7 @@ msgid "Yes"
 msgstr "Ya"
 
 msgid "No"
-msgstr "TIDAK"
+msgstr "Tidak"
 
 msgid "Same (incomplete)"
 msgstr "Sama (tidak lengkap)"
@@ -1256,19 +1256,19 @@ msgid "Year"
 msgstr "Tahun"
 
 msgid "Quarter"
-msgstr "Seperempat"
+msgstr "Kuartal"
 
 msgid "Period"
 msgstr "Periode"
 
 msgid "Number Weeks By"
-msgstr "Jumlah Minggu Oleh"
+msgstr "Penomoran Minggu Menurut"
 
 msgid "Number by Year"
 msgstr "Nomor per Tahun"
 
 msgid "Number by Quarter"
-msgstr "Jumlah per Kuartal"
+msgstr "Nomor per Kuartal"
 
 msgid "Period Display Option"
 msgstr "Opsi Tampilan Periode"
@@ -1289,7 +1289,7 @@ msgid "Fiscal Year Name"
 msgstr "Nama Tahun Anggaran"
 
 msgid "Is Current"
-msgstr "Apakah Terkini"
+msgstr "Terkini"
 
 msgid "Fiscal Year Instance"
 msgstr "Contoh Tahun Anggaran"
@@ -1301,10 +1301,10 @@ msgid "Quarter Name"
 msgstr "Nama Kuartal"
 
 msgid "Quarter Number"
-msgstr "Nomor Seperempat"
+msgstr "Nomor Kuartal"
 
 msgid "Quarters"
-msgstr "Perempat"
+msgstr "Kuartal"
 
 msgid "Period Name"
 msgstr "Nama Periode"
@@ -1334,7 +1334,7 @@ msgid "On every"
 msgstr "Pada setiap"
 
 msgid "Holiday Name"
-msgstr "Nama Liburan"
+msgstr "Nama Hari Libur"
 
 msgid "All Users"
 msgstr "Semua Pengguna"
@@ -1346,7 +1346,7 @@ msgid "Recurring"
 msgstr "Berulang"
 
 msgid "Holiday Frequency"
-msgstr "Frekuensi Liburan"
+msgstr "Frekuensi Hari Libur"
 
 msgid "Recurs Every (weeks)"
 msgstr "Berulang Setiap (minggu)"
@@ -1413,7 +1413,7 @@ msgid "Please select a valid yearly repeat type"
 msgstr "Silakan pilih jenis pengulangan tahunan yang valid"
 
 msgid "1st"
-msgstr "1"
+msgstr "ke-1"
 
 msgid "2nd"
 msgstr "ke-2"
@@ -1425,34 +1425,34 @@ msgid "4th"
 msgstr "ke-4"
 
 msgid "5th"
-msgstr "tanggal 5"
+msgstr "ke-5"
 
 msgid "One-time holiday"
-msgstr "Liburan satu kali"
+msgstr "Hari libur sekali"
 
 msgid "Weekly on {}"
-msgstr "Mingguan pada{}"
+msgstr "Mingguan pada {}"
 
 msgid "Every {} weeks on {}"
-msgstr "Setiap{}minggu pada{}"
+msgstr "Setiap {} minggu pada {}"
 
 msgid "Monthly on day {}"
-msgstr "Bulanan pada hari{}"
+msgstr "Bulanan pada tanggal {}"
 
 msgid "Every {} months on day {}"
-msgstr "Setiap{}bulan pada hari{}"
+msgstr "Setiap {} bulan pada tanggal {}"
 
 msgid "Monthly on {} {} of month"
-msgstr "Bulanan pada{}{}bulan"
+msgstr "Bulanan pada {} {} setiap bulan"
 
 msgid "Every {} months on {} {} of month"
 msgstr "Setiap{}bulan pada{}{}setiap bulan"
 
 msgid "Yearly on {} {}"
-msgstr "Setiap tahun pada{}{}"
+msgstr "Setiap tahun pada {} {}"
 
 msgid "Yearly on {} {} of {}"
-msgstr "Tahunan pada{}{}dari{}"
+msgstr "Setiap tahun pada {} {} bulan {}"
 
 msgid "Custom recurrence"
 msgstr "Pengulangan khusus"
@@ -1464,19 +1464,19 @@ msgid "Global Import"
 msgstr "Impor Global"
 
 msgid "Processing"
-msgstr "Pengolahan"
+msgstr "Memproses"
 
 msgid "Success"
-msgstr "Kesuksesan"
+msgstr "Berhasil"
 
 msgid "Partial Success"
-msgstr "Sukses Parsial"
+msgstr "Berhasil Sebagian"
 
 msgid "Failed"
 msgstr "Gagal"
 
 msgid "Import Name"
-msgstr "Impor Nama"
+msgstr "Nama Impor"
 
 msgid "Module Name"
 msgstr "Nama Modul"
@@ -1509,10 +1509,10 @@ msgid "Duration (seconds)"
 msgstr "Durasi (detik)"
 
 msgid "Import History"
-msgstr "Impor Riwayat"
+msgstr "Riwayat Impor"
 
 msgid "Import Histories"
-msgstr "Impor Sejarah"
+msgstr "Riwayat Impor"
 
 msgid "Can View Global Export"
 msgstr "Dapat Melihat Ekspor Global"
@@ -1521,7 +1521,7 @@ msgid "Global Export"
 msgstr "Ekspor Global"
 
 msgid "Daily"
-msgstr "Sehari-hari"
+msgstr "Harian"
 
 msgid "List of model names, e.g. ['Employee', 'Department']"
 msgstr "Daftar nama model, mis.['Karyawan', 'Departemen']"
@@ -1543,7 +1543,7 @@ msgid "CSV"
 msgstr "CSV"
 
 msgid "Excel"
-msgstr "Unggul"
+msgstr "Excel"
 
 msgid "PDF"
 msgstr "PDF"
@@ -1564,7 +1564,7 @@ msgid "Export Schedule"
 msgstr "Jadwal Ekspor"
 
 msgid "Export Schedules"
-msgstr "Ekspor Jadwal"
+msgstr "Jadwal Ekspor"
 
 msgid "Not run yet"
 msgstr "Belum dijalankan"
@@ -1597,7 +1597,7 @@ msgid "Role"
 msgstr "Peran"
 
 msgid "Parent Role"
-msgstr "Peran Orang Tua"
+msgstr "Peran Induk"
 
 msgid "Permissions"
 msgstr "Izin"
@@ -1669,7 +1669,7 @@ msgid "Number Format"
 msgstr "Format Angka"
 
 msgid "Username"
-msgstr "Nama belakang"
+msgstr "Nama Pengguna"
 
 msgid "First Name"
 msgstr "Nama depan"
@@ -1678,7 +1678,7 @@ msgid "Last Name"
 msgstr "Nama Belakang"
 
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 msgid "Administrator"
 msgstr "Administrator"
@@ -1702,10 +1702,10 @@ msgid "User Profile"
 msgstr "Profil Pengguna"
 
 msgid "Field Permission"
-msgstr "Izin Lapangan"
+msgstr "Izin Bidang"
 
 msgid "Field Permissions"
-msgstr "Izin Lapangan"
+msgstr "Izin Bidang"
 
 msgid "Either user or role must be set"
 msgstr "Pengguna atau peran harus ditetapkan"
@@ -1714,13 +1714,13 @@ msgid "Cannot set both user and role"
 msgstr "Tidak dapat menetapkan pengguna dan peran"
 
 msgid "Scheduled Export - {}"
-msgstr "Ekspor Terjadwal -{}"
+msgstr "Ekspor Terjadwal - {}"
 
 msgid "Avatar"
 msgstr "Avatar"
 
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 msgid "Permission Denied"
 msgstr "Izin Ditolak"
@@ -1766,7 +1766,7 @@ msgid "Scheduled Exports"
 msgstr "Ekspor Terjadwal"
 
 msgid "Quick Tips"
-msgstr "Tip Cepat"
+msgstr "Tips Cepat"
 
 msgid "Select multiple modules to export data from different sections at once"
 msgstr ""
@@ -1945,7 +1945,7 @@ msgid "File Format"
 msgstr "Format Berkas"
 
 msgid "Excel (XLSX)"
-msgstr "Unggul (XLSX)"
+msgstr "Excel (XLSX)"
 
 msgid "Download Template"
 msgstr "Unduh Templat"
@@ -2024,7 +2024,7 @@ msgid "Import Option:"
 msgstr "Opsi Impor:"
 
 msgid "Create new record"
-msgstr "Buat rekor baru"
+msgstr "Buat data baru"
 
 msgid "Update existing"
 msgstr "Perbarui yang ada"
@@ -2033,7 +2033,7 @@ msgid "Create new and update existing"
 msgstr "Buat yang baru dan perbarui yang sudah ada"
 
 msgid "Record match by"
-msgstr "Rekam pertandingan berdasarkan"
+msgstr "Cocokkan data berdasarkan"
 
 msgid "Module"
 msgstr "Modul"
@@ -2135,7 +2135,7 @@ msgid "Authenticate"
 msgstr "Otentikasi"
 
 msgid "Go To Home"
-msgstr "Pergi ke rumah"
+msgstr "Ke Beranda"
 
 msgid "Click to edit"
 msgstr "Klik untuk mengedit"
@@ -2165,7 +2165,7 @@ msgid "Sign In"
 msgstr "Masuk"
 
 msgid "Next Step"
-msgstr "Langkah Selanjutnya"
+msgstr "Langkah Berikutnya"
 
 msgid "Sign Up"
 msgstr "Daftar"
@@ -2247,7 +2247,7 @@ msgid "Field permissions not available for this model"
 msgstr "Izin bidang tidak tersedia untuk model ini"
 
 msgid "Field Level Permissions"
-msgstr "Izin Tingkat Lapangan"
+msgstr "Izin Tingkat Bidang"
 
 msgid "Role:"
 msgstr "Peran:"
@@ -2705,13 +2705,13 @@ msgid "February"
 msgstr "Februari"
 
 msgid "March"
-msgstr "Berbaris"
+msgstr "Maret"
 
 msgid "April"
 msgstr "April"
 
 msgid "May"
-msgstr "Mungkin"
+msgstr "Mei"
 
 msgid "June"
 msgstr "Juni"
@@ -2885,13 +2885,13 @@ msgid "Successfully added {count} user(s) as superuser(s)."
 msgstr "Berhasil menambahkan{count}pengguna sebagai pengguna super."
 
 msgid "Holiday Form"
-msgstr "Formulir Liburan"
+msgstr "Formulir Hari Libur"
 
 msgid "Holiday Start Date"
-msgstr "Tanggal Mulai Liburan"
+msgstr "Tanggal Mulai Hari Libur"
 
 msgid "Holiday End Date"
-msgstr "Tanggal Akhir Liburan"
+msgstr "Tanggal Akhir Hari Libur"
 
 msgid "Error: Missing parameters"
 msgstr "Kesalahan: Parameter tidak ada"
@@ -3059,10 +3059,10 @@ msgid "Database loaded successfully."
 msgstr "Basis data berhasil dimuat."
 
 msgid "Data file not found: {}"
-msgstr "File data tidak ditemukan:{}"
+msgstr "Berkas data tidak ditemukan: {}"
 
 msgid "Loading {}"
-msgstr "Memuat{}"
+msgstr "Memuat {}"
 
 msgid "Error loading {}. All changes have been rolled back."
 msgstr "Kesalahan saat memuat{}.Semua perubahan telah dibatalkan."
@@ -3167,10 +3167,10 @@ msgid "Add Role"
 msgstr "Tambahkan Peran"
 
 msgid "Shift Timing"
-msgstr "Pergeseran Waktu"
+msgstr "Jadwal Shift"
 
 msgid "Shift Days"
-msgstr "Pergeseran Hari"
+msgstr "Hari Shift"
 
 msgid "No of Users"
 msgstr "Jumlah Pengguna"
@@ -3199,13 +3199,13 @@ msgstr ""
 "tim."
 
 msgid "My Holidays"
-msgstr "Liburanku"
+msgstr "Hari Libur Saya"
 
 msgid "View the holidays that apply to you."
 msgstr "Lihat hari libur yang berlaku untuk Anda."
 
 msgid "Holiday Type"
-msgstr "Jenis Liburan"
+msgstr "Jenis Hari Libur"
 
 msgid "My Login History"
 msgstr "Riwayat Masuk Saya"
@@ -3220,7 +3220,7 @@ msgid "Login Time"
 msgstr "Waktu Masuk"
 
 msgid "IP"
-msgstr "AKU P"
+msgstr "IP"
 
 msgid "Manage user accounts, roles, and access across your organization."
 msgstr "Kelola akun pengguna, peran, dan akses di seluruh organisasi Anda."
@@ -3396,7 +3396,7 @@ msgstr "Baru Dilihat"
 
 #, python-format
 msgid "%(time)s ago"
-msgstr "%(time)syang lalu"
+msgstr "%(time)s yang lalu"
 
 msgid "No recent items"
 msgstr "Tidak ada item terbaru"

@@ -71,7 +71,7 @@ msgid "Description"
 msgstr "Keterangan"
 
 msgid "Is Default"
-msgstr "Apakah Bawaan"
+msgstr "Bawaan"
 
 msgid ""
 "Set as default theme for login page.            Only one theme can be "

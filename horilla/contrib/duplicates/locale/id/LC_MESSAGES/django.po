@@ -255,7 +255,7 @@ msgid "Continue"
 msgstr "Lanjutkan"
 
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 msgid "Delete"
 msgstr "Hapus"

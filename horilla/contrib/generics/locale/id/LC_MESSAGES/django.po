@@ -223,7 +223,7 @@ msgid "Menu"
 msgstr "Menu"
 
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 msgid "Read Only"
 msgstr "Hanya Baca"
@@ -349,7 +349,7 @@ msgid "Call"
 msgstr "Panggilan"
 
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 msgid "Status"
 msgstr "Status"
@@ -397,7 +397,7 @@ msgid "Export Format"
 msgstr "Format Ekspor"
 
 msgid "Excel"
-msgstr "Unggul"
+msgstr "Excel"
 
 msgid "CSV"
 msgstr "CSV"
@@ -436,7 +436,7 @@ msgid "Bulk Delete"
 msgstr "Hapus Massal"
 
 msgid "Edit List"
-msgstr "Sunting Daftar"
+msgstr "Ubah Daftar"
 
 #, python-format
 msgid ""
@@ -451,16 +451,16 @@ msgid " Nothing to show yet. Please add your"
 msgstr "Belum ada yang bisa ditampilkan.Silakan tambahkan milik Anda"
 
 msgid "All Items"
-msgstr "Semua Barang"
+msgstr "Semua Data"
 
 msgid "Recently Viewed"
 msgstr "Baru Dilihat"
 
 msgid "Recently Created"
-msgstr "Baru-baru ini Dibuat"
+msgstr "Baru Dibuat"
 
 msgid "Recently Modified"
-msgstr "Baru-baru ini Dimodifikasi"
+msgstr "Baru Diubah"
 
 msgid "List View"
 msgstr "Tampilan Daftar"
@@ -469,7 +469,7 @@ msgid "Unpin default view"
 msgstr "Lepas sematan tampilan default"
 
 msgid "Unpin"
-msgstr "Membuka peniti"
+msgstr "Lepas Sematan"
 
 msgid "Set as default view"
 msgstr "Tetapkan sebagai tampilan default"
@@ -556,7 +556,7 @@ msgid "Loading..."
 msgstr "Memuat..."
 
 msgid "Hard Delete Confirmation"
-msgstr "Konfirmasi Penghapusan Keras"
+msgstr "Konfirmasi Hapus Permanen"
 
 msgid "Are you sure you want to hard delete the selected"
 msgstr "Apakah Anda yakin ingin menghapus secara permanen yang dipilih"
@@ -580,7 +580,7 @@ msgid "Yes"
 msgstr "Ya"
 
 msgid "No"
-msgstr "TIDAK"
+msgstr "Tidak"
 
 #, python-format
 msgid ""
@@ -616,10 +616,10 @@ msgid "Soft Delete allows you to restore deleted records."
 msgstr "Soft Delete memungkinkan Anda memulihkan catatan yang dihapus."
 
 msgid "Hard Delete"
-msgstr "Hapus Keras"
+msgstr "Hapus Permanen"
 
 msgid "Soft Delete"
-msgstr "Hapus Lembut"
+msgstr "Hapus Sementara"
 
 msgid "Select Field"
 msgstr "Pilih Bidang"
@@ -637,10 +637,10 @@ msgid "and"
 msgstr "Dan"
 
 msgid "True"
-msgstr "BENAR"
+msgstr "Benar"
 
 msgid "False"
-msgstr "PALSU"
+msgstr "Salah"
 
 msgid "Enter value"
 msgstr "Masukkan nilai"
@@ -652,7 +652,7 @@ msgid "Apply"
 msgstr "Terapkan"
 
 msgid "Drag"
-msgstr "Menyeret"
+msgstr "Seret"
 
 msgid "More actions"
 msgstr "Lebih banyak tindakan"
@@ -688,7 +688,7 @@ msgid "Confirm Deletion"
 msgstr "Konfirmasi Penghapusan"
 
 msgid "Soft deleting this"
-msgstr "Menghapus ini dengan lembut"
+msgstr "Menghapus sementara"
 
 msgid "will also soft delete all its related"
 msgstr "juga akan menghapus sementara semua yang terkait"
@@ -763,7 +763,7 @@ msgid "No dependent records found."
 msgstr "Tidak ada catatan ketergantungan yang ditemukan."
 
 msgid "Soft Delete Confirmation"
-msgstr "Konfirmasi Penghapusan Sementara"
+msgstr "Konfirmasi Hapus Sementara"
 
 msgid "Are you sure you want to soft delete the selected"
 msgstr "Apakah Anda yakin ingin menghapus sementara yang dipilih"
@@ -801,7 +801,7 @@ msgid "Add Column to List"
 msgstr "Tambahkan Kolom ke Daftar"
 
 msgid "Edit List View"
-msgstr "Edit Tampilan Daftar"
+msgstr "Ubah Tampilan Daftar"
 
 msgid "New List View"
 msgstr "Tampilan Daftar Baru"
@@ -903,7 +903,7 @@ msgid "Stacked Horizontal"
 msgstr "Ditumpuk Horisontal"
 
 msgid "Scatter"
-msgstr "Menyebarkan"
+msgstr "Sebar"
 
 msgid "Treemap"
 msgstr "Peta Hierarki"
@@ -912,7 +912,7 @@ msgid "Area Chart"
 msgstr "Bagan Area"
 
 msgid "Heatmap"
-msgstr "Peta panas"
+msgstr "Peta Panas"
 
 msgid "Sankey"
 msgstr "Sankey"
@@ -978,7 +978,7 @@ msgid "Activity"
 msgstr "Aktivitas"
 
 msgid "Cadence"
-msgstr "Irama"
+msgstr "Cadence"
 
 msgid "Related Lists"
 msgstr "Daftar Terkait"
@@ -987,7 +987,7 @@ msgid "Notes & Attachments"
 msgstr "Catatan & Lampiran"
 
 msgid "History"
-msgstr "Sejarah"
+msgstr "Riwayat"
 
 msgid "View full detail"
 msgstr "Lihat detail selengkapnya"
@@ -1131,7 +1131,7 @@ msgid "Months"
 msgstr "Bulan"
 
 msgid "Quarters"
-msgstr "Perempat"
+msgstr "Kuartal"
 
 #, python-format
 msgid "Bars use: %(field)s"

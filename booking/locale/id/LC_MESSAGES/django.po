@@ -490,7 +490,7 @@ msgid "Enter your full name"
 msgstr "Masukkan nama lengkap Anda"
 
 msgid "Email Address"
-msgstr "Alamat Surel"
+msgstr "Alamat Email"
 
 msgid "Select"
 msgstr "Pilih"
@@ -617,7 +617,7 @@ msgid "Booker"
 msgstr "Pemesan"
 
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 msgid "Change Status"
 msgstr "Ubah Status"
@@ -667,7 +667,7 @@ msgid "Active"
 msgstr "Aktif"
 
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 msgid "Embed"
 msgstr "Menanamkan"

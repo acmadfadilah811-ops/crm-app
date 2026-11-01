@@ -195,7 +195,7 @@ msgid "Activities"
 msgstr "Kegiatan"
 
 msgid "Event"
-msgstr "Peristiwa"
+msgstr "Acara"
 
 msgid "Meeting"
 msgstr "Pertemuan"
@@ -372,7 +372,7 @@ msgid "Call"
 msgstr "Panggilan"
 
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 msgid "Events"
 msgstr "Acara"

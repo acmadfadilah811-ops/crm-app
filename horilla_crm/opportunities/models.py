@@ -319,6 +319,7 @@ class Opportunity(HorillaCoreModel):
         ("email", _("Email")),
         ("social media", _("Social Media")),
         ("partner", _("Partner")),
+        ("kasir", _("Cashier / Store")),
         ("other", _("Other")),
     ]
 

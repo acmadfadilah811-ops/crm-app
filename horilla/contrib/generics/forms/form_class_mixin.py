@@ -207,6 +207,35 @@ class HorillaFormMixin:
         "alternate_phone",
     }
 
+    def _apply_currency_labels(self):
+        """Beri keterangan mata uang pada field uang (CURRENCY_FIELDS model), mis. "Budget Cost (Rp.)".
+
+        Sebelumnya kolom Expected Revenue / Budget Cost / Actual Cost / Amount hanya berupa kotak angka
+        tanpa tanda mata uang. Mata uang = pilihan pengguna, atau bawaan perusahaan."""
+        model = getattr(getattr(self, "_meta", None), "model", None)
+        nama_field = getattr(model, "CURRENCY_FIELDS", None)
+        if not nama_field:
+            return
+        from horilla.contrib.core.models.finance import MultipleCurrency
+
+        request = getattr(self, "request", None)
+        user = getattr(request, "user", None) if request else None
+        if user is None:
+            from horilla.contrib.utils.middlewares import get_current_request
+
+            user = getattr(get_current_request(), "user", None)
+        mata_uang = MultipleCurrency.get_user_currency(user) if user else None
+        simbol = mata_uang.simbol() if mata_uang else ""
+        if not simbol:
+            return
+        for nama in nama_field:
+            field = self.fields.get(nama)
+            if field is None or getattr(field, "_label_mata_uang", False):
+                continue
+            field.label = f"{field.label or nama.replace('_', ' ').title()} ({simbol})"
+            field._label_mata_uang = True
+            field.widget.attrs.setdefault("placeholder", simbol)
+
     def _apply_default_time_zone(self):
         """Default a blank ``time_zone`` field to the requesting user's/company's
         configured time zone instead of the model's hardcoded "UTC" default.

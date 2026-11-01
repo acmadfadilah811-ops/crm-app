@@ -89,7 +89,7 @@ msgid "Logical Operator"
 msgstr "Operator Logis"
 
 msgid "Order"
-msgstr "Memesan"
+msgstr "Urutan"
 
 msgid "Review Condition"
 msgstr "Kondisi Tinjauan"
@@ -215,7 +215,7 @@ msgid "Edit rejected field"
 msgstr "Edit bidang yang ditolak"
 
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 msgid "Save and resubmit"
 msgstr "Simpan dan kirim ulang"
@@ -301,7 +301,7 @@ msgid "Rule"
 msgstr "Aturan"
 
 msgid "Edit Rule"
-msgstr "Sunting Aturan"
+msgstr "Ubah Aturan"
 
 msgid "Delete Rule"
 msgstr "Hapus Aturan"

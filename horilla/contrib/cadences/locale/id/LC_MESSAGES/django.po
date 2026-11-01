@@ -107,7 +107,7 @@ msgid "Description"
 msgstr "Keterangan"
 
 msgid "Cadence"
-msgstr "Irama"
+msgstr "Cadence"
 
 msgid "Field Name"
 msgstr "Nama Bidang"
@@ -128,7 +128,7 @@ msgid "Logical Operator"
 msgstr "Operator Logis"
 
 msgid "Order"
-msgstr "Memesan"
+msgstr "Urutan"
 
 msgid "Cadence Condition"
 msgstr "Kondisi Irama"
@@ -143,7 +143,7 @@ msgid "Call"
 msgstr "Panggilan"
 
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 msgid "Overdue"
 msgstr "Terlambat"
@@ -230,7 +230,7 @@ msgid "Recipients for this step. Choose user/email fields from the record"
 msgstr "Penerima untuk langkah ini.Pilih bidang pengguna/email dari catatan"
 
 msgid "Mail Template"
-msgstr "Templat Surat"
+msgstr "Templat Email"
 
 msgid "Cadence Follow up"
 msgstr "Tindak Lanjut Irama"
@@ -262,7 +262,7 @@ msgid "Back"
 msgstr "Kembali"
 
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 msgid "View Reports"
 msgstr "Lihat Laporan"

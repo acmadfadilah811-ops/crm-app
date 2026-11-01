@@ -55,6 +55,7 @@ class HorillaMultiStepForm(HorillaFormMixin, forms.ModelForm):
         self._step_hidden_fields = set()
 
         super().__init__(*args, **kwargs)
+        self._apply_currency_labels()
 
         # Get all step fields to identify fields that should be excluded
         all_step_fields = []

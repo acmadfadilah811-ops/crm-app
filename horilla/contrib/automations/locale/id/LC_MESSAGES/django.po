@@ -171,7 +171,7 @@ msgid "Trigger"
 msgstr "Pemicu"
 
 msgid "Mail Template"
-msgstr "Templat Surat"
+msgstr "Templat Email"
 
 msgid "Notification Template"
 msgstr "Templat Pemberitahuan"
@@ -318,7 +318,7 @@ msgid "Logical Operator"
 msgstr "Operator Logis"
 
 msgid "Order"
-msgstr "Memesan"
+msgstr "Urutan"
 
 msgid "Automation Condition"
 msgstr "Kondisi Otomatisasi"
