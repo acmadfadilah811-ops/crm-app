@@ -30,6 +30,35 @@ logger = logging.getLogger(__name__)
 DEFAULT_OWNER_USERNAME = 'spv.salesmarketingcreative'
 
 
+def normalisasi_nomor(nomor):
+    """Nomor WA -> angka saja berawalan 62 ('0812-3456', '+62 812 3456', '62812..' menjadi sama).
+
+    Nomor ERP tersimpan dalam format campuran; tanpa ini pelanggan yang sama dari dua jalur (pelanggan baru
+    dan order kasir) menjadi dua Contact di CRM."""
+    digit = "".join(ch for ch in str(nomor or "") if ch.isdigit())
+    if digit.startswith("0"):
+        digit = "62" + digit[1:]
+    elif digit.startswith("8"):
+        digit = "62" + digit
+    return digit
+
+
+def cari_kontak_per_nomor(nomor_wa):
+    """Contact CRM untuk nomor ini: cocok persis dulu, lalu cocok setelah dinormalisasi."""
+    from horilla_crm.contacts.models import Contact
+
+    ada = Contact.objects.filter(bintang_contact_id=nomor_wa).first()
+    if ada is not None:
+        return ada
+    baku = normalisasi_nomor(nomor_wa)
+    if len(baku) < 8:
+        return None
+    for kandidat in Contact.objects.filter(bintang_contact_id__endswith=baku[-6:]):
+        if normalisasi_nomor(kandidat.bintang_contact_id) == baku:
+            return kandidat
+    return None
+
+
 def _split_nama(nama: str):
     """Contact CRM wajib first_name+last_name terpisah; Bintang cuma
     punya satu field 'nama'. Kata pertama jadi first_name, sisanya last_name
@@ -121,8 +150,7 @@ class BintangBridgeSaleView(APIView):
             return Response({'error': 'Owner default CRM belum dikonfigurasi.'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         first_name, last_name = _split_nama(request.data.get('nama'))
-        email = str(request.data.get('email') or '').strip() or f'{nomor_wa}@erp.local'
-        contact_number = nomor_wa
+        email_masuk = str(request.data.get('email') or '').strip()
         alamat_kota = str(request.data.get('kota') or '').strip()
         alamat_provinsi = str(request.data.get('provinsi') or '').strip()
         # address_country adalah CountryField (kode ISO 2 huruf) -- Customer
@@ -136,15 +164,22 @@ class BintangBridgeSaleView(APIView):
         # company-nya cocok sama active_company sesi browser -- tanpa ini,
         # Contact/Opportunity hasil sync JADI ADA di database tapi TIDAK
         # KELIHATAN sama sekali di UI CRM (ditemukan lewat audit data dummy).
-        contact = Contact.objects.filter(bintang_contact_id=nomor_wa).first()
+        contact = cari_kontak_per_nomor(nomor_wa)
         contact_created = contact is None
         if contact is None:
             contact = Contact(bintang_contact_id=nomor_wa, contact_owner=owner, company=owner.company)
+            contact.contact_source = "other"
+            contact.description = self._deskripsi_kontak(request.data)
 
         contact.first_name = first_name or contact.first_name or 'Pelanggan'
         contact.last_name = last_name
-        contact.email = email
-        contact.contact_number = contact_number
+        # Email asli yang sudah tersimpan tidak ditimpa email pengganti (kiriman order sering tanpa email).
+        if email_masuk:
+            contact.email = email_masuk
+        elif not contact.email or contact.email.endswith('@erp.local'):
+            contact.email = f'{normalisasi_nomor(nomor_wa) or nomor_wa}@erp.local'
+        if contact_created:
+            contact.contact_number = nomor_wa
         if alamat_kota:
             contact.address_city = alamat_kota
         if alamat_provinsi:
@@ -158,7 +193,9 @@ class BintangBridgeSaleView(APIView):
         opportunity_id = None
         opportunity_created = False
         if isinstance(sale, dict) and sale.get('id'):
-            opportunity_id, opportunity_created = self._upsert_opportunity(contact, owner, sale)
+            opportunity_id, opportunity_created = self._upsert_opportunity(
+                contact, owner, sale, nomor_wa=nomor_wa, email=str(request.data.get('email') or '').strip(),
+            )
 
         return Response({
             'contact_id': contact.id,
@@ -167,7 +204,18 @@ class BintangBridgeSaleView(APIView):
             'opportunity_created': opportunity_created,
         }, status=status.HTTP_201_CREATED if contact_created else status.HTTP_200_OK)
 
-    def _upsert_opportunity(self, contact, owner, sale):
+    @staticmethod
+    def _deskripsi_kontak(data):
+        """Catatan asal-usul untuk Contact baru dari ERP (hanya diisi saat Contact dibuat)."""
+        bagian = ["Pelanggan dari ERP"]
+        if str(data.get("kode_pelanggan") or "").strip():
+            bagian.append(f"kode {str(data['kode_pelanggan']).strip()}")
+        if str(data.get("nama_perusahaan") or "").strip():
+            bagian.append(f"perusahaan {str(data['nama_perusahaan']).strip()}")
+        return ", ".join(bagian)
+
+    def _upsert_opportunity(self, contact, owner, sale, nomor_wa="", email=""):
+        from horilla_crm.opportunities import bintang_ringkasan
         from horilla_crm.opportunities.models import (
             Opportunity, OpportunityContactRole, OpportunityStage,
         )
@@ -178,7 +226,7 @@ class BintangBridgeSaleView(APIView):
         lunas = sale.get('lunas', True)
         existing = Opportunity.objects.filter(bintang_sale_id=bintang_sale_id).first()
         if existing:
-            self._perbarui_opportunity(existing, sale, lunas)
+            self._perbarui_opportunity(existing, sale, lunas, nomor_wa=nomor_wa)
             return existing.id, False
 
         stage_won = OpportunityStage.objects.filter(stage_type='won').order_by('order').first()
@@ -205,8 +253,14 @@ class BintangBridgeSaleView(APIView):
 
         unit = str(sale.get('unit_bisnis') or '').strip() or 'ERP'
         menang = stage.stage_type == 'won'
+        # Nama, deskripsi, jumlah barang, dan langkah berikutnya dari rincian order (lihat bintang_ringkasan).
+        ringkasan = bintang_ringkasan.susun(sale, nomor, unit, nomor_wa, bool(lunas))
         opportunity = Opportunity.objects.create(
-            name=f'Penjualan {unit} {nomor}'[:120],
+            name=ringkasan['name'],
+            description=ringkasan['description'],
+            next_step=ringkasan['next_step'],
+            quantity=ringkasan.get('quantity'),
+            email=email or None,
             amount=total,
             expected_revenue=total if menang else total * (stage.probability or 0) / 100,
             close_date=tanggal,
@@ -215,7 +269,7 @@ class BintangBridgeSaleView(APIView):
             owner=owner,
             company=owner.company,
             opportunity_type='new_customer',
-            lead_source='other',
+            lead_source='kasir',
             forecast_category='closed' if menang else 'pipeline',
             order_number=nomor[:8],
             bintang_sale_id=bintang_sale_id,
@@ -223,9 +277,10 @@ class BintangBridgeSaleView(APIView):
         OpportunityContactRole.objects.create(contact=contact, opportunity=opportunity, is_primary=True)
         return opportunity.id, True
 
-    def _perbarui_opportunity(self, opportunity, sale, lunas):
+    def _perbarui_opportunity(self, opportunity, sale, lunas, nomor_wa=""):
         """Order kasir berubah: perbarui nilai selama masih Open; pindah ke Closed Won
         saat lunas. Opportunity yang sudah Won/Lost tidak diubah lagi."""
+        from horilla_crm.opportunities import bintang_ringkasan
         from horilla_crm.opportunities.bintang_order import tandai_menang
 
         if opportunity.stage_id and opportunity.stage.stage_type != 'open':
@@ -234,6 +289,18 @@ class BintangBridgeSaleView(APIView):
             total = Decimal(str(sale.get('total') or 0))
         except InvalidOperation:
             return
+        # Rincian (item, DP/sisa, status) ikut diperbarui hanya bila ERP mengirimnya (order kasir baru);
+        # kiriman lama tanpa rincian tidak menimpa deskripsi yang sudah ada.
+        if sale.get('items') is not None or sale.get('pelanggan'):
+            nomor = str(sale.get('nomor') or opportunity.bintang_sale_id)
+            unit = str(sale.get('unit_bisnis') or '').strip() or 'ERP'
+            ringkasan = bintang_ringkasan.susun(sale, nomor, unit, nomor_wa, bool(lunas))
+            opportunity.name = ringkasan['name']
+            opportunity.description = ringkasan['description']
+            opportunity.next_step = ringkasan['next_step']
+            if ringkasan.get('quantity') is not None:
+                opportunity.quantity = ringkasan['quantity']
+            opportunity.save()
         if total and opportunity.amount != total:
             opportunity.amount = total
             opportunity.expected_revenue = total * (opportunity.probability or 0) / 100

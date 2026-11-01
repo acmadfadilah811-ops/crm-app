@@ -156,7 +156,7 @@ msgid "Logical Operator"
 msgstr "Operator Logis"
 
 msgid "Order"
-msgstr "Memesan"
+msgstr "Urutan"
 
 msgid "Workflow Condition"
 msgstr "Kondisi Alur Kerja"
@@ -171,7 +171,7 @@ msgid "Assign Task"
 msgstr "Tetapkan Tugas"
 
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 msgid "Notification"
 msgstr "Pemberitahuan"
@@ -414,7 +414,7 @@ msgid "Execution History"
 msgstr "Sejarah Eksekusi"
 
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 msgid "Delete"
 msgstr "Hapus"

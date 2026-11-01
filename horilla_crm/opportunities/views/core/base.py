@@ -147,13 +147,17 @@ class OpportunityListView(LoginRequiredMixin, HorillaListView):
             }
         return None
 
+    # Kolom daftar peluang (2026-11-02): pemilik, langkah berikutnya, dan sumber ditampilkan langsung supaya
+    # peluang dari order ERP bisa dipahami tanpa membuka satu per satu.
     columns = [
         "name",
         "amount",
-        "close_date",
         "stage",
+        "close_date",
+        "owner",
+        "next_step",
+        "lead_source",
         "opportunity_type",
-        "primary_campaign_source",
     ]
 
     opp_permissions = {

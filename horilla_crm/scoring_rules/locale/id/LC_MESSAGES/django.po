@@ -52,7 +52,7 @@ msgid "Operation Type"
 msgstr "Jenis Operasi"
 
 msgid "Order"
-msgstr "Memesan"
+msgstr "Urutan"
 
 msgid "Scoring Criterion"
 msgstr "Kriteria Penilaian"
@@ -103,7 +103,7 @@ msgid "Actions"
 msgstr "Tindakan"
 
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 msgid "Delete"
 msgstr "Hapus"

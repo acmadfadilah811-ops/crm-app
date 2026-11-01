@@ -209,3 +209,113 @@ class BintangBridgeOrderKasirTests(BintangBridgeSaleTests):
         sale_id = "POS-ORD-" + "A" * 32
         self.assertEqual(len(sale_id), 40)
         self.assertEqual(self._kirim(False, sale_id=sale_id).status_code, status.HTTP_201_CREATED)
+
+
+class BintangBridgePelangganBaruTests(BintangBridgeSaleTests):
+    """Pelanggan baru ERP (tanpa penjualan) masuk CRM sebagai Contact saja (2026-11-02)."""
+
+    def test_pelanggan_baru_membuat_contact_tanpa_opportunity(self):
+        r = self._post({
+            "nomor_wa": "6281234500001", "nama": "Rina Wulandari", "email": "rina@contoh.com",
+            "kota": "Bandung", "kode_pelanggan": "PLG-77", "nama_perusahaan": "CV Maju", "sumber": "erp-pelanggan",
+        })
+        self.assertEqual(r.status_code, status.HTTP_201_CREATED, r.data)
+        self.assertIsNone(r.data["opportunity_id"])
+        contact = Contact.objects.get(bintang_contact_id="6281234500001")
+        self.assertEqual(contact.first_name, "Rina")
+        self.assertEqual(contact.email, "rina@contoh.com")
+        self.assertEqual(contact.address_city, "Bandung")
+        self.assertEqual(contact.contact_source, "other")
+        self.assertIn("kode PLG-77", contact.description)
+        self.assertIn("CV Maju", contact.description)
+        self.assertEqual(Opportunity.objects.count(), 0)
+
+    def test_nomor_format_beda_tetap_satu_contact(self):
+        self._post({"nomor_wa": "081234500002", "nama": "Doni Pratama"})
+        for varian in ("6281234500002", "+62 812-3450-0002", "81234500002"):
+            r = self._post({"nomor_wa": varian, "nama": "Doni Pratama"})
+            self.assertEqual(r.status_code, status.HTTP_200_OK, (varian, r.data))
+            self.assertFalse(r.data["contact_created"], varian)
+        self.assertEqual(Contact.objects.count(), 1)
+        # Kunci ERP pertama tidak diganti: kiriman berikutnya tetap cocok lewat normalisasi.
+        self.assertEqual(Contact.objects.get().bintang_contact_id, "081234500002")
+
+    def test_nomor_berbeda_tetap_contact_berbeda(self):
+        self._post({"nomor_wa": "081234500003", "nama": "A"})
+        self._post({"nomor_wa": "081234500004", "nama": "B"})
+        self.assertEqual(Contact.objects.count(), 2)
+
+
+class BintangBridgePeluangJelasTests(BintangBridgeSaleTests):
+    """Peluang dari order ERP memuat pelanggan, rincian item, pembayaran, dan langkah berikutnya."""
+
+    def setUp(self):
+        super().setUp()
+        self.stage_open = OpportunityStage.objects.create(
+            name="Negotiation", order=1, probability=50, stage_type="open",
+        )
+
+    def _kirim(self, lunas, dp=50000, sisa=150000, status_order="Dalam Proses Produksi"):
+        return self._post({
+            "nomor_wa": "6281300000009", "nama": "Dinda Foto", "email": "dinda@contoh.com",
+            "sale": {
+                "id": "POS-ORD-JELAS", "nomor": "POS-ORD-JELAS", "total": 200000, "tanggal": "2026-11-02",
+                "lunas": lunas, "unit_bisnis": "StarFoto", "pelanggan": "Dinda Foto",
+                "status_order": status_order, "dp_dibayar": dp, "sisa_tagihan": sisa,
+                "metode_pembayaran": "tunai", "dilayani_oleh": "Kasir Foto", "catatan": "Cetak 2 rangkap",
+                "items": [
+                    {"nama": "Cetak Foto 4R", "qty": 10, "subtotal": 50000},
+                    {"nama": "Pigura 10R", "qty": 1.5, "subtotal": 150000},
+                ],
+            },
+        })
+
+    def test_peluang_baru_berisi_rincian(self):
+        r = self._kirim(False)
+        self.assertEqual(r.status_code, status.HTTP_201_CREATED, r.data)
+        opp = Opportunity.objects.get(bintang_sale_id="POS-ORD-JELAS")
+        self.assertEqual(opp.name, "Dinda Foto - StarFoto POS-ORD-JELAS")
+        self.assertEqual(opp.lead_source, "kasir")
+        self.assertEqual(opp.email, "dinda@contoh.com")
+        self.assertEqual(float(opp.quantity), 11.5)
+        self.assertEqual(opp.next_step, "Menunggu pelunasan sisa Rp. 150.000 (Dalam Proses Produksi)")
+        for potongan in (
+            "Pelanggan: Dinda Foto - WA 6281300000009", "Dilayani oleh: Kasir Foto",
+            "- Cetak Foto 4R x 10 = Rp. 50.000", "- Pigura 10R x 1.5 = Rp. 150.000",
+            "Total tagihan: Rp. 200.000", "Sudah dibayar: Rp. 50.000", "Sisa tagihan: Rp. 150.000",
+            "Catatan pelanggan: Cetak 2 rangkap",
+        ):
+            self.assertIn(potongan, opp.description)
+
+    def test_lunas_memperbarui_rincian_lalu_closed_won(self):
+        self._kirim(False)
+        self._kirim(True, dp=200000, sisa=0, status_order="Selesai Seluruhnya")
+        opp = Opportunity.objects.get(bintang_sale_id="POS-ORD-JELAS")
+        self.assertEqual(opp.stage_id, self.stage_won.id)
+        self.assertEqual(opp.next_step, "Lunas - tidak ada tagihan tersisa")
+        self.assertIn("Sudah dibayar: Rp. 200.000", opp.description)
+        self.assertIn("Sisa tagihan: Rp. 0", opp.description)
+        self.assertEqual(Opportunity.objects.count(), 1)
+
+    def test_kiriman_lama_tanpa_rincian_tidak_menimpa_deskripsi(self):
+        self._kirim(False)
+        self._post({
+            "nomor_wa": "6281300000009", "nama": "Dinda Foto",
+            "sale": {"id": "POS-ORD-JELAS", "nomor": "POS-ORD-JELAS", "total": 250000, "lunas": False, "unit_bisnis": "StarFoto"},
+        })
+        opp = Opportunity.objects.get(bintang_sale_id="POS-ORD-JELAS")
+        self.assertEqual(float(opp.amount), 250000.0)
+        self.assertIn("Rincian pesanan:", opp.description)
+        self.assertEqual(opp.name, "Dinda Foto - StarFoto POS-ORD-JELAS")
+
+
+class BintangRingkasanTests(TestCase):
+    def test_rupiah_dan_normalisasi(self):
+        from horilla.contrib.core.views.bintang_bridge import normalisasi_nomor
+        from horilla_crm.opportunities.bintang_ringkasan import rupiah
+
+        self.assertEqual(rupiah(1250000), "Rp. 1.250.000")
+        self.assertEqual(rupiah(None), "Rp. 0")
+        self.assertEqual(normalisasi_nomor("0812-3456-7890"), "6281234567890")
+        self.assertEqual(normalisasi_nomor("+62 812 3456 7890"), "6281234567890")
+        self.assertEqual(normalisasi_nomor("81234567890"), "6281234567890")

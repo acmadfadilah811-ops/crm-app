@@ -234,7 +234,7 @@ msgid "Task"
 msgstr "Tugas"
 
 msgid "Event"
-msgstr "Peristiwa"
+msgstr "Acara"
 
 msgid "Meeting"
 msgstr "Pertemuan"
@@ -413,7 +413,7 @@ msgid "End Date"
 msgstr "Tanggal Berakhir"
 
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 msgid "Delete"
 msgstr "Hapus"

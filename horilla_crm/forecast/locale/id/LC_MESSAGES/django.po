@@ -73,10 +73,10 @@ msgid "Include Pipeline"
 msgstr "Sertakan Pipeline"
 
 msgid "Include Best Case"
-msgstr "Sertakan Kasus Terbaik"
+msgstr "Sertakan Skenario Terbaik"
 
 msgid "Include Commit"
-msgstr "Sertakan Komit"
+msgstr "Sertakan Komitmen"
 
 msgid "Include Closed"
 msgstr "Termasuk Tertutup"
@@ -97,7 +97,7 @@ msgid "Logical Operator"
 msgstr "Operator Logis"
 
 msgid "Order"
-msgstr "Memesan"
+msgstr "Urutan"
 
 msgid "Forecast Condition"
 msgstr "Kondisi Prakiraan"
@@ -124,7 +124,7 @@ msgid "Period"
 msgstr "Periode"
 
 msgid "Quarter"
-msgstr "Seperempat"
+msgstr "Kuartal"
 
 msgid "Fiscal Year"
 msgstr "Tahun Anggaran"
@@ -139,10 +139,10 @@ msgid "Pipeline Amount"
 msgstr "Jumlah Pipeline"
 
 msgid "Best Case Amount"
-msgstr "Jumlah Kasus Terbaik"
+msgstr "Nilai Skenario Terbaik"
 
 msgid "Commit Amount"
-msgstr "Jumlah Komit"
+msgstr "Nilai Komitmen"
 
 msgid "Closed Amount"
 msgstr "Jumlah Tertutup"
@@ -157,10 +157,10 @@ msgid "Pipeline Quantity"
 msgstr "Kuantitas Pipa"
 
 msgid "Best Case Quantity"
-msgstr "Kuantitas Kasus Terbaik"
+msgstr "Jumlah Skenario Terbaik"
 
 msgid "Commit Quantity"
-msgstr "Kuantitas Komit"
+msgstr "Jumlah Komitmen"
 
 msgid "Closed Quantity"
 msgstr "Kuantitas Tertutup"
@@ -310,7 +310,7 @@ msgid "Apply"
 msgstr "Terapkan"
 
 msgid "deals"
-msgstr "penawaran"
+msgstr "transaksi"
 
 msgid "Total:"
 msgstr "Total:"
@@ -373,19 +373,19 @@ msgid "Achievement"
 msgstr "Pencapaian"
 
 msgid "Gap"
-msgstr "Celah"
+msgstr "Selisih"
 
 msgid "Closed"
 msgstr "Tertutup"
 
 msgid "Commit Forecast"
-msgstr "Komit Prakiraan"
+msgstr "Perkiraan Komitmen"
 
 msgid "Best Case"
-msgstr "Kasus Terbaik"
+msgstr "Skenario Terbaik"
 
 msgid "Open Pipeline"
-msgstr "Buka Pipeline"
+msgstr "Pipeline Terbuka"
 
 msgid "Total"
 msgstr "Total"
@@ -413,16 +413,16 @@ msgstr "Anda tidak memiliki izin untuk melihat halaman ini."
 
 #, python-format
 msgid "Period %(num)s"
-msgstr "Periode%(num)s"
+msgstr "Periode %(num)s"
 
 msgid "Commit"
-msgstr "Melakukan"
+msgstr "Komitmen"
 
 msgid "Pipeline"
 msgstr "Pipeline"
 
 msgid "Committed"
-msgstr "Berkomitmen"
+msgstr "Terkomitmen"
 
 #, python-format
 msgid "Invalid value for: %(params)s."

@@ -22,6 +22,10 @@ from horilla.utils.translation import gettext_lazy as _
 from .base import Company, HorillaCoreModel
 
 
+# Simbol tampilan per kode mata uang. Kode yang tidak ada di sini tetap tampil sebagai kodenya (USD 100.00).
+SIMBOL_MATA_UANG = {"IDR": "Rp."}
+
+
 class MultipleCurrency(HorillaCoreModel):
     """
     Multiple Currency model
@@ -186,10 +190,14 @@ class MultipleCurrency(HorillaCoreModel):
         # western_format (default)
         return western
 
+    def simbol(self):
+        """Simbol untuk tampilan: 'Rp.' untuk IDR, selain itu kode mata uangnya."""
+        return SIMBOL_MATA_UANG.get(self.currency, self.currency or "")
+
     def display_with_symbol(self, amount, user=None):
-        """Display amount with currency symbol - Example: USD 100.00"""
+        """Display amount with currency symbol - Example: USD 100.00, Rp. 100.000,00"""
         formatted = self.format_amount(amount, user=user)
-        return f"{self.currency} {formatted}"
+        return f"{self.simbol()} {formatted}"
 
     def convert_from_default(self, amount, conversion_date=None):
         """

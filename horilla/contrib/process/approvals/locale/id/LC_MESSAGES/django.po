@@ -163,7 +163,7 @@ msgstr ""
 "admin_proses (atau penggantian admin tingkat aturan)."
 
 msgid "Order"
-msgstr "Memesan"
+msgstr "Urutan"
 
 msgid "Sequence of this rule within the process."
 msgstr "Urutan aturan ini dalam proses."
@@ -422,7 +422,7 @@ msgid "Execute on"
 msgstr "Jalankan pada"
 
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 msgid "Delete"
 msgstr "Hapus"
@@ -437,7 +437,7 @@ msgid "Notify approver"
 msgstr "Beritahu pemberi persetujuan"
 
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 msgid "On approval"
 msgstr "Atas persetujuan"

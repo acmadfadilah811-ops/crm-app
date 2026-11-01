@@ -48,6 +48,9 @@ class OpportunityDetailView(RecentlyViewedMixin, LoginRequiredMixin, HorillaDeta
         "quantity",
         "close_date",
         "probability",
+        "owner",
+        "next_step",
+        "lead_source",
         "forecast_category",
     ]
 

@@ -105,6 +105,7 @@ class HorillaModelForm(HorillaFormMixin, forms.ModelForm):
         super().__init__(*args, **kwargs)
         self._setup_file_and_initial()
         self._apply_default_time_zone()
+        self._apply_currency_labels()
         if self.condition_fields:
             if self.condition_model:
                 condition_fields_module.add_condition_fields(self)

@@ -166,7 +166,7 @@ msgid "Area Chart"
 msgstr "Bagan Area"
 
 msgid "Heatmap"
-msgstr "Peta panas"
+msgstr "Peta Panas"
 
 msgid "Sankey"
 msgstr "Sankey"
@@ -339,7 +339,7 @@ msgid "Edit Report"
 msgstr "Sunting Laporan"
 
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 msgid "Actions"
 msgstr "Tindakan"

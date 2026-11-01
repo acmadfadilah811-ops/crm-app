@@ -22,19 +22,19 @@ msgid "Opportunities"
 msgstr "Peluang"
 
 msgid "Opportunities by Lead Source"
-msgstr "Peluang berdasarkan Sumber Utama"
+msgstr "Peluang berdasarkan Sumber"
 
 msgid "Opportunities by Stage"
 msgstr "Peluang Berdasarkan Tahapan"
 
 msgid "Opportunity Win Rate"
-msgstr "Tingkat Peluang Kemenangan"
+msgstr "Tingkat Kemenangan Peluang"
 
 msgid "Opportunities by Value Range"
 msgstr "Peluang berdasarkan Rentang Nilai"
 
 msgid "Closed Won Opportunities"
-msgstr "Peluang Kemenangan Tertutup"
+msgstr "Peluang Menang"
 
 #, python-format
 msgid "%(fields)s is required for each team member (row %(row_id)s)."
@@ -59,34 +59,34 @@ msgid "Opportunity Team Settings"
 msgstr "Pengaturan Tim Peluang"
 
 msgid "Opportunity Split Settings"
-msgstr "Pengaturan Pemisahan Peluang"
+msgstr "Pengaturan Pembagian Peluang"
 
 msgid "Big Deal Alerts"
-msgstr "Peringatan Masalah Besar"
+msgstr "Peringatan Transaksi Besar"
 
 msgid "Open"
-msgstr "Buka"
+msgstr "Terbuka"
 
 msgid "Closed Won"
-msgstr "Tertutup Menang"
+msgstr "Menang"
 
 msgid "Closed Lost"
-msgstr "Tertutup Hilang"
+msgstr "Kalah"
 
 msgid "Stage Name"
 msgstr "Nama tahap"
 
 msgid "Order"
-msgstr "Memesan"
+msgstr "Urutan"
 
 msgid "Probability"
-msgstr "Kemungkinan"
+msgstr "Probabilitas"
 
 msgid "Default probability percentage for this stage"
 msgstr "Persentase probabilitas default untuk tahap ini"
 
 msgid "Is Final Stage"
-msgstr "Adalah Tahap Akhir"
+msgstr "Tahap Akhir"
 
 msgid "Stage Type"
 msgstr "Tipe Tahap"
@@ -107,10 +107,10 @@ msgid "Website"
 msgstr "Situs web"
 
 msgid "Referral"
-msgstr "Rujukan"
+msgstr "Rekomendasi"
 
 msgid "Event"
-msgstr "Peristiwa"
+msgstr "Acara"
 
 msgid "Campaign"
 msgstr "Kampanye"
@@ -119,7 +119,7 @@ msgid "Phone"
 msgstr "Telepon"
 
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 msgid "Social Media"
 msgstr "Media Sosial"
@@ -134,19 +134,19 @@ msgid "Opportunity Name"
 msgstr "Nama Peluang"
 
 msgid "Amount"
-msgstr "Jumlah"
+msgstr "Nilai"
 
 msgid "Expected Revenue"
-msgstr "Pendapatan yang Diharapkan"
+msgstr "Perkiraan Pendapatan"
 
 msgid "Quantity"
-msgstr "Kuantitas"
+msgstr "Jumlah Barang"
 
 msgid "Total Opportunity Quantity"
-msgstr "Jumlah Peluang Total"
+msgstr "Total jumlah barang pada peluang"
 
 msgid "Close Date"
-msgstr "Tanggal Tutup"
+msgstr "Tanggal Penutupan"
 
 msgid "Stage"
 msgstr "Tahap"
@@ -158,7 +158,7 @@ msgid "Description"
 msgstr "Keterangan"
 
 msgid "Next Step"
-msgstr "Langkah Selanjutnya"
+msgstr "Langkah Berikutnya"
 
 msgid "Opportunity Score"
 msgstr "Skor Peluang"
@@ -176,7 +176,7 @@ msgid "Type"
 msgstr "Jenis"
 
 msgid "Lead Source"
-msgstr "Sumber Utama"
+msgstr "Sumber Peluang"
 
 msgid "Forecast Category"
 msgstr "Kategori Prakiraan"
@@ -191,10 +191,10 @@ msgid "Order Number"
 msgstr "Nomor Pesanan"
 
 msgid "Tracking Number"
-msgstr "Nomor Pelacakan"
+msgstr "Nomor Resi"
 
 msgid "Account"
-msgstr "Akun"
+msgstr "Akun (Perusahaan)"
 
 msgid "Role"
 msgstr "Peran"
@@ -239,10 +239,10 @@ msgid "Access Level"
 msgstr "Tingkat Akses"
 
 msgid "Default Opportunity Member"
-msgstr "Anggota Peluang Default"
+msgstr "Anggota Peluang Bawaan"
 
 msgid "Default Opportunity Members"
-msgstr "Anggota Peluang Default"
+msgstr "Anggota Peluang Bawaan"
 
 msgid "Enable Team Selling"
 msgstr "Aktifkan Penjualan Tim"
@@ -288,22 +288,22 @@ msgid "Opportunity Settings"
 msgstr "Pengaturan Peluang"
 
 msgid "Expected Revenue Overlay"
-msgstr "Hamparan Pendapatan yang Diharapkan"
+msgstr "Overlay Perkiraan Pendapatan"
 
 msgid "Overlay"
-msgstr "Hamparan"
+msgstr "Overlay"
 
 msgid "Revenue"
 msgstr "Pendapatan"
 
 msgid "Split Label"
-msgstr "Label Terpisah"
+msgstr "Label Pembagian"
 
 msgid "Name of the split type (e.g., Revenue, Overlay)"
 msgstr "Nama jenis pemisahan (misalnya, Pendapatan, Hamparan)"
 
 msgid "Split Field"
-msgstr "Bidang Terpisah"
+msgstr "Bidang Pembagian"
 
 msgid "Field to split: amount, expected_revenue, etc."
 msgstr "Bidang yang akan dibagi: jumlah, pendapatan_yang diharapkan, dll."
@@ -321,49 +321,49 @@ msgid "Require splits of this type to total exactly 100%"
 msgstr "Memerlukan pemisahan jenis ini agar totalnya tepat 100%"
 
 msgid "Opportunity Split Type"
-msgstr "Jenis Pemisahan Peluang"
+msgstr "Jenis Pembagian Peluang"
 
 msgid "Opportunity Split Types"
-msgstr "Jenis Pemisahan Peluang"
+msgstr "Jenis Pembagian Peluang"
 
 msgid "User receiving credit for this split."
 msgstr "Pengguna menerima kredit untuk pembagian ini."
 
 msgid "Split Type"
-msgstr "Tipe Terpisah"
+msgstr "Jenis Pembagian"
 
 msgid "Type of split, such as Revenue or Overlay."
 msgstr "Jenis pembagian, seperti Pendapatan atau Hamparan."
 
 msgid "Split Percentage"
-msgstr "Persentase Terpisah"
+msgstr "Persentase Pembagian"
 
 msgid "Percentage of total credit (e.g., 25.00 for 25%)."
 msgstr "Persentase total kredit (misalnya 25,00 untuk 25%)."
 
 msgid "Split Amount"
-msgstr "Jumlah Pemisahan"
+msgstr "Jumlah Pembagian"
 
 msgid "Calculated split amount based on percentage and opportunity amount."
 msgstr "Jumlah split dihitung berdasarkan persentase dan jumlah peluang."
 
 msgid "Opportunity Split"
-msgstr "Pemisahan Peluang"
+msgstr "Pembagian Peluang"
 
 msgid "Opportunity Splits"
-msgstr "Pemisahan Peluang"
+msgstr "Pembagian Peluang"
 
 msgid "Days Open"
-msgstr "Hari Terbuka"
+msgstr "Lama Terbuka (hari)"
 
 msgid "Close Month"
-msgstr "Tutup Bulan"
+msgstr "Bulan Penutupan"
 
 msgid "Days to Close"
-msgstr "Hari untuk Ditutup"
+msgstr "Hari hingga Penutupan"
 
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 msgid "Delete"
 msgstr "Hapus"
@@ -375,19 +375,19 @@ msgid "Trigger Probability"
 msgstr "Probabilitas Pemicu"
 
 msgid "Is Null"
-msgstr "Apakah Null"
+msgstr "Kosong"
 
 msgid "Is Not Null"
-msgstr "Bukan Null"
+msgstr "Tidak Kosong"
 
 msgid "Notify Emails"
-msgstr "Beritahu Email"
+msgstr "Email Pemberitahuan"
 
 msgid "Notify CC Emails"
-msgstr "Beritahu Email CC"
+msgstr "Email CC Pemberitahuan"
 
 msgid "Mail Template"
-msgstr "Templat Surat"
+msgstr "Templat Email"
 
 msgid "Sender Email"
 msgstr "Email Pengirim"
@@ -416,10 +416,10 @@ msgid "Current stage:"
 msgstr "Tahap saat ini:"
 
 msgid "Won"
-msgstr "Won"
+msgstr "Menang"
 
 msgid "Lost"
-msgstr "Hilang"
+msgstr "Kalah"
 
 msgid ""
 "No closed stages are configured for this company. Please configure Closed "
@@ -429,7 +429,7 @@ msgstr ""
 "konfigurasikan tahapan Closed Won dan Closed Lost terlebih dahulu."
 
 msgid "Update Stage"
-msgstr "Tahap Pembaruan"
+msgstr "Perbarui Tahap"
 
 msgid "Are you sure you want to delete this split?"
 msgstr "Apakah Anda yakin ingin menghapus pemisahan ini?"
@@ -456,10 +456,10 @@ msgstr ""
 "penambahan anggota baru saat mengedit perpecahan."
 
 msgid "split"
-msgstr "membelah"
+msgstr "pembagian"
 
 msgid "Quick Tips for Opportunity Splits"
-msgstr "Tip Cepat untuk Pembagian Peluang"
+msgstr "Tips Cepat Pembagian Peluang"
 
 msgid ""
 "Enable opportunity splits to distribute revenue and credit among multiple "
@@ -527,22 +527,22 @@ msgid "Save"
 msgstr "Simpan"
 
 msgid "Saving..."
-msgstr "Penghematan..."
+msgstr "Menyimpan..."
 
 msgid "TOTAL PERCENT"
-msgstr "JUMLAH PERSEN"
+msgstr "TOTAL PERSEN"
 
 msgid "TOTAL AMOUNT"
-msgstr "JUMLAH TOTAL"
+msgstr "TOTAL NILAI"
 
 msgid "Manage Custom Stages"
 msgstr "Kelola Tahapan Kustom"
 
 msgid "Drag"
-msgstr "Menyeret"
+msgstr "Seret"
 
 msgid "Final"
-msgstr "Terakhir"
+msgstr "Akhir"
 
 msgid "Add Stage"
 msgstr "Tambahkan Tahap"
@@ -571,7 +571,7 @@ msgid "Custom Stages"
 msgstr "Tahapan Kustom"
 
 msgid "Enter Order"
-msgstr "Masukkan Pesanan"
+msgstr "Masukkan Urutan"
 
 msgid "Team Selling Setup"
 msgstr "Pengaturan Penjualan Tim"
@@ -629,10 +629,10 @@ msgstr ""
 "tercipta."
 
 msgid "Update Big Deal Alert"
-msgstr "Perbarui Peringatan Masalah Besar"
+msgstr "Perbarui Peringatan Transaksi Besar"
 
 msgid "Create Big Deal Alert"
-msgstr "Buat Peringatan Masalah Besar"
+msgstr "Buat Peringatan Transaksi Besar"
 
 msgid "duplicated"
 msgstr "digandakan"
@@ -645,7 +645,7 @@ msgstr "dibuat"
 
 #, python-format
 msgid "%(model)s %(action)s successfully!"
-msgstr "%(model)s%(action)sberhasil!"
+msgstr "%(model)s berhasil %(action)s!"
 
 msgid "Change Owner"
 msgstr "Ganti Pemilik"
@@ -693,7 +693,7 @@ msgid "Opportunity splits saved successfully"
 msgstr "Pemisahan peluang berhasil disimpan"
 
 msgid "Added to opportunity team: {}"
-msgstr "Ditambahkan ke tim peluang:{}"
+msgstr "Ditambahkan ke tim peluang: {}"
 
 msgid "At least one split must be added."
 msgstr "Setidaknya satu pemisahan harus ditambahkan."
@@ -778,7 +778,7 @@ msgid "Stage not found."
 msgstr "Tahap tidak ditemukan."
 
 msgid "Prospecting"
-msgstr "Pencarian"
+msgstr "Penjajakan"
 
 msgid "Qualification"
 msgstr "Kualifikasi"
@@ -790,7 +790,7 @@ msgid "Value Proposition"
 msgstr "Proposisi Nilai"
 
 msgid "Id. Decision Makers"
-msgstr "Pengenal.Pembuat keputusan"
+msgstr "Identifikasi Pengambil Keputusan"
 
 msgid "Perception Analysis"
 msgstr "Analisis Persepsi"
@@ -839,3 +839,6 @@ msgid ""
 msgstr ""
 "Penjualan Tim telah dinonaktifkan dan semua tim peluang yang ada serta "
 "anggotanya telah dihapus."
+
+msgid "Cashier / Store"
+msgstr "Kasir / Toko"

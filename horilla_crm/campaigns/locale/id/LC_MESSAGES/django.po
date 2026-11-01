@@ -55,7 +55,7 @@ msgid "Please select a valid campaign."
 msgstr "Silakan pilih kampanye yang valid."
 
 msgid "Planned"
-msgstr "Berencana"
+msgstr "Direncanakan"
 
 msgid "Sent"
 msgstr "Terkirim"
@@ -64,7 +64,7 @@ msgid "Recieved"
 msgstr "Diterima"
 
 msgid "Responded"
-msgstr "Menanggapi"
+msgstr "Sudah Merespons"
 
 msgid "Lead"
 msgstr "Prospek"
@@ -106,10 +106,10 @@ msgid "Aborted"
 msgstr "Dibatalkan"
 
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 msgid "Event"
-msgstr "Peristiwa"
+msgstr "Acara"
 
 msgid "Social Media"
 msgstr "Media Sosial"
@@ -118,10 +118,10 @@ msgid "Other"
 msgstr "Lainnya"
 
 msgid "Webinar"
-msgstr "webinar"
+msgstr "Webinar"
 
 msgid "Referral"
-msgstr "Rujukan"
+msgstr "Rekomendasi"
 
 msgid "Advertisement"
 msgstr "Iklan"
@@ -142,25 +142,25 @@ msgid "End Date"
 msgstr "Tanggal Berakhir"
 
 msgid "Expected Revenue"
-msgstr "Pendapatan yang Diharapkan"
+msgstr "Perkiraan Pendapatan"
 
 msgid "Budget Cost"
-msgstr "Biaya Anggaran"
+msgstr "Anggaran Biaya"
 
 msgid "Actual Cost"
-msgstr "Biaya Sebenarnya"
+msgstr "Biaya Aktual"
 
 msgid "Expected Response (%)"
-msgstr "Respon yang Diharapkan (%)"
+msgstr "Perkiraan Respons (%)"
 
 msgid "Number Sent in Campaign"
-msgstr "Nomor Terkirim dalam Kampanye"
+msgstr "Jumlah Terkirim dalam Kampanye"
 
 msgid "Description"
 msgstr "Keterangan"
 
 msgid "Parent Campaign"
-msgstr "Kampanye Orang Tua"
+msgstr "Kampanye Induk"
 
 msgid "Leads in Campaign"
 msgstr "Prospek dalam Kampanye"
@@ -175,7 +175,7 @@ msgid "Opportunities in Campaign"
 msgstr "Peluang dalam Kampanye"
 
 msgid "Won Opportunities in Campaign"
-msgstr "Memenangkan Peluang dalam Kampanye"
+msgstr "Peluang Menang dalam Kampanye"
 
 msgid "Value Opportunities in Campaign"
 msgstr "Nilai Peluang dalam Kampanye"
@@ -208,7 +208,7 @@ msgid "Change Owner"
 msgstr "Ganti Pemilik"
 
 msgid "Add Child Campaign"
-msgstr "Tambahkan Kampanye Anak"
+msgstr "Tambah Kampanye Turunan"
 
 msgid "You must be logged in to perform this action."
 msgstr "Anda harus masuk untuk melakukan tindakan ini."
@@ -247,4 +247,4 @@ msgid "Duplicate"
 msgstr "Duplikat"
 
 msgid "View Hierarchy"
-msgstr "Lihat Hirarki"
+msgstr "Lihat Hierarki"

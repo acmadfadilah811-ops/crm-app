@@ -54,10 +54,10 @@ msgid "Website"
 msgstr "Situs web"
 
 msgid "Referral"
-msgstr "Rujukan"
+msgstr "Rekomendasi"
 
 msgid "Event"
-msgstr "Peristiwa"
+msgstr "Acara"
 
 msgid "Campaign"
 msgstr "Kampanye"
@@ -66,7 +66,7 @@ msgid "Phone"
 msgstr "Telepon"
 
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 msgid "Social Media"
 msgstr "Media Sosial"
@@ -132,7 +132,7 @@ msgid "Account Name"
 msgstr "Nama Akun"
 
 msgid "Account Number"
-msgstr "Nomor Rekening"
+msgstr "Nomor Akun"
 
 msgid "Account Owner"
 msgstr "Pemilik Akun"
@@ -153,28 +153,28 @@ msgid "Billing City"
 msgstr "Kota Penagihan"
 
 msgid "Billing State"
-msgstr "Negara Penagihan"
+msgstr "Provinsi Penagihan"
 
 msgid "Billing District"
 msgstr "Distrik Penagihan"
 
 msgid "Billing Zip"
-msgstr "Pos Penagihan"
+msgstr "Kode Pos Penagihan"
 
 msgid "Shipping City"
-msgstr "Kota Pelayaran"
+msgstr "Kota Pengiriman"
 
 msgid "Shipping State"
-msgstr "Negara Pengiriman"
+msgstr "Provinsi Pengiriman"
 
 msgid "Shipping District"
-msgstr "Distrik Pelayaran"
+msgstr "Distrik Pengiriman"
 
 msgid "Shipping Zip"
-msgstr "Pos Pengiriman"
+msgstr "Kode Pos Pengiriman"
 
 msgid "Is Customer Portal"
-msgstr "Apakah Portal Pelanggan"
+msgstr "Portal Pelanggan"
 
 msgid "Customer Priority"
 msgstr "Prioritas Pelanggan"
@@ -183,7 +183,7 @@ msgid "Parent Account"
 msgstr "Akun Induk"
 
 msgid "Is Partner"
-msgstr "Apakah Mitra"
+msgstr "Mitra"
 
 msgid "Description"
 msgstr "Keterangan"
@@ -195,10 +195,10 @@ msgid "Number of Employees"
 msgstr "Jumlah karyawan"
 
 msgid "Contact Number"
-msgstr "Nomor Kontak"
+msgstr "Nomor Telepon"
 
 msgid "Fax"
-msgstr "Fax"
+msgstr "Faks"
 
 msgid "Operating Hours"
 msgstr "Jam Operasional"
@@ -228,7 +228,7 @@ msgid "Partner Account Roles"
 msgstr "Peran Akun Mitra"
 
 msgid "Account Hierarchy"
-msgstr "Hirarki Akun"
+msgstr "Hierarki Akun"
 
 msgid "Close"
 msgstr "Tutup"
@@ -252,7 +252,7 @@ msgid "Account not found or no longer exists."
 msgstr "Akun tidak ditemukan atau sudah tidak ada lagi."
 
 msgid "Add Child Account"
-msgstr "Tambahkan Akun Anak"
+msgstr "Tambah Akun Turunan"
 
 msgid "You must be logged in to perform this action."
 msgstr "Anda harus masuk untuk melakukan tindakan ini."
@@ -282,7 +282,7 @@ msgid "An error occurred while removing the child account."
 msgstr "Terjadi kesalahan saat menghapus akun anak."
 
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 msgid "Duplicate"
 msgstr "Duplikat"
@@ -297,10 +297,10 @@ msgid "Related Contacts"
 msgstr "Kontak Terkait"
 
 msgid "Child Accounts"
-msgstr "Akun Anak"
+msgstr "Akun Turunan"
 
 msgid "View Hierarchy"
-msgstr "Lihat Hirarki"
+msgstr "Lihat Hierarki"
 
 msgid "Opportunities"
 msgstr "Peluang"

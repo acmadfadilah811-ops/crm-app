@@ -37,10 +37,10 @@ msgid "Total Leads"
 msgstr "Total Prospek"
 
 msgid "Won Leads"
-msgstr "Memenangkan Prospek"
+msgstr "Prospek Menang"
 
 msgid "Open Leads (pipeline)"
-msgstr "Buka Prospek (pipa)"
+msgstr "Prospek Terbuka (pipeline)"
 
 msgid "Enter Account Name"
 msgstr "Masukkan Nama Akun"
@@ -73,13 +73,13 @@ msgid "CRM module for managing leads, contacts, and opportunities."
 msgstr "Modul CRM untuk mengelola prospek, kontak, dan peluang."
 
 msgid "Horilla CRM"
-msgstr "Gorila CRM"
+msgstr "Star CRM"
 
 msgid "Welcome to Horilla CRM"
-msgstr "Selamat datang di Horilla CRM"
+msgstr "Selamat datang di Star CRM"
 
 msgid "Please sign up to access Horilla CRM"
-msgstr "Silakan mendaftar untuk mengakses Horilla CRM"
+msgstr "Silakan mendaftar untuk mengakses Star CRM"
 
 msgid "Lead"
 msgstr "Prospek"
@@ -88,10 +88,10 @@ msgid "Assignment Rules"
 msgstr "Aturan Penugasan"
 
 msgid "Mail to Lead"
-msgstr "Surat ke Prospek"
+msgstr "Email ke Prospek"
 
 msgid "Web to Lead"
-msgstr "Web untuk Prospek"
+msgstr "Web ke Prospek"
 
 msgid "Sales"
 msgstr "Penjualan"
@@ -139,7 +139,7 @@ msgid "Notify Method"
 msgstr "Metode Beritahu"
 
 msgid "Mail Template"
-msgstr "Templat Surat"
+msgstr "Templat Email"
 
 msgid "Notification Template"
 msgstr "Templat Pemberitahuan"
@@ -184,7 +184,7 @@ msgid "Status Name"
 msgstr "Nama Status"
 
 msgid "Status Order"
-msgstr "Status Pesanan"
+msgstr "Urutan Status"
 
 msgid "Status Color"
 msgstr "Warna Status"
@@ -193,10 +193,10 @@ msgid "Leave blank for default (primary theme colour)."
 msgstr "Biarkan kosong untuk default (warna tema utama)."
 
 msgid "Is Final Stage"
-msgstr "Adalah Tahap Akhir"
+msgstr "Tahap Akhir"
 
 msgid "Probability"
-msgstr "Kemungkinan"
+msgstr "Probabilitas"
 
 msgid "Default probability percentage for this stage"
 msgstr "Persentase probabilitas default untuk tahap ini"
@@ -214,10 +214,10 @@ msgid "Website"
 msgstr "Situs web"
 
 msgid "Referral"
-msgstr "Rujukan"
+msgstr "Rekomendasi"
 
 msgid "Event"
-msgstr "Peristiwa"
+msgstr "Acara"
 
 msgid "Campaign"
 msgstr "Kampanye"
@@ -226,7 +226,7 @@ msgid "Phone"
 msgstr "Telepon"
 
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 msgid "Social Media"
 msgstr "Media Sosial"
@@ -262,7 +262,7 @@ msgid "Insurance"
 msgstr "Asuransi"
 
 msgid "Title"
-msgstr "Judul"
+msgstr "Jabatan"
 
 msgid "First Name"
 msgstr "Nama depan"
@@ -271,16 +271,16 @@ msgid "Last Name"
 msgstr "Nama Belakang"
 
 msgid "Lead Owner"
-msgstr "Pemilik Utama"
+msgstr "Pemilik Prospek"
 
 msgid "Contact Number"
-msgstr "Nomor Kontak"
+msgstr "Nomor Telepon"
 
 msgid "Fax"
-msgstr "Fax"
+msgstr "Faks"
 
 msgid "Lead Source"
-msgstr "Sumber Utama"
+msgstr "Sumber Prospek"
 
 msgid "Company"
 msgstr "Perusahaan"
@@ -298,19 +298,19 @@ msgid "City"
 msgstr "Kota"
 
 msgid "State"
-msgstr "Negara"
+msgstr "Provinsi"
 
 msgid "Country"
 msgstr "Negara"
 
 msgid "Zip"
-msgstr "Ritsleting"
+msgstr "Kode Pos"
 
 msgid "Requirements"
 msgstr "Persyaratan"
 
 msgid "Lead Score"
-msgstr "Skor Utama"
+msgstr "Skor Prospek"
 
 msgid "Incoming Mail"
 msgstr "Surat Masuk"
@@ -342,7 +342,7 @@ msgid "Mail to Lead Config"
 msgstr "Konfigurasi Email ke Prospek"
 
 msgid "English"
-msgstr "Bahasa inggris"
+msgstr "Inggris"
 
 msgid "Arabic"
 msgstr "Arab"
@@ -351,7 +351,7 @@ msgid "German"
 msgstr "Jerman"
 
 msgid "French"
-msgstr "Perancis"
+msgstr "Prancis"
 
 msgid "Form Name"
 msgstr "Nama Formulir"
@@ -384,10 +384,10 @@ msgid "Generated HTML"
 msgstr "HTML yang dihasilkan"
 
 msgid "Lead Capture Form"
-msgstr "Formulir Pengambilan Timbal"
+msgstr "Formulir Penangkap Prospek"
 
 msgid "Lead Capture Forms"
-msgstr "Formulir Penangkapan Timbal"
+msgstr "Formulir Penangkap Prospek"
 
 msgid "Filter"
 msgstr "Filter"
@@ -410,7 +410,7 @@ msgid "Rule"
 msgstr "Aturan"
 
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 msgid "Delete"
 msgstr "Hapus"
@@ -425,7 +425,7 @@ msgid "Roles"
 msgstr "Peran"
 
 msgid "Select Mail Template"
-msgstr "Pilih Templat Surat"
+msgstr "Pilih Templat Email"
 
 msgid "Select Notification Template"
 msgstr "Pilih Templat Pemberitahuan"
@@ -479,7 +479,7 @@ msgid "Select an account to see available opportunities"
 msgstr "Pilih akun untuk melihat peluang yang tersedia"
 
 msgid "Success"
-msgstr "Kesuksesan"
+msgstr "Berhasil"
 
 msgid "Your lead has been converted"
 msgstr "Prospek Anda telah dikonversi"
@@ -497,10 +497,10 @@ msgid "Manage Custom Stages"
 msgstr "Kelola Tahapan Kustom"
 
 msgid "Drag"
-msgstr "Menyeret"
+msgstr "Seret"
 
 msgid "Final"
-msgstr "Terakhir"
+msgstr "Akhir"
 
 msgid "Add Stage"
 msgstr "Tambahkan Tahap"
@@ -532,10 +532,10 @@ msgid "Custom Stages"
 msgstr "Tahapan Kustom"
 
 msgid "Order"
-msgstr "Memesan"
+msgstr "Urutan"
 
 msgid "Enter Order"
-msgstr "Masukkan Pesanan"
+msgstr "Masukkan Urutan"
 
 msgid "Enter return url"
 msgstr "Masukkan url pengembalian"
@@ -551,11 +551,11 @@ msgstr ""
 "Kami telah menerima informasi Anda dan akan segera menghubungi Anda kembali."
 
 msgid "Contact Us"
-msgstr "Hubungi kami"
+msgstr "Hubungi Kami"
 
 #, python-format
 msgid "Enter %(vname)s"
-msgstr "Masukkan%(vname)s"
+msgstr "Masukkan %(vname)s"
 
 #, python-format
 msgid ""
@@ -614,7 +614,7 @@ msgid "https://example.com/thank-you"
 msgstr "https://example.com/thank-you"
 
 msgid "Select Lead Owner"
-msgstr "Pilih Pemilik Utama"
+msgstr "Pilih Pemilik Prospek"
 
 msgid "Color"
 msgstr "Warna"
@@ -623,13 +623,13 @@ msgid "Default (primary color)"
 msgstr "Default (warna primer)"
 
 msgid "Generate"
-msgstr "Menghasilkan"
+msgstr "Buat"
 
 msgid "Select"
 msgstr "Pilih"
 
 msgid "Enter"
-msgstr "Memasuki"
+msgstr "Masukkan"
 
 msgid "Submitting..."
 msgstr "Mengirimkan..."
@@ -650,7 +650,7 @@ msgid "Add Condition"
 msgstr "Tambahkan Kondisi"
 
 msgid "Edit Rule"
-msgstr "Sunting Aturan"
+msgstr "Ubah Aturan"
 
 msgid "Converted Lead"
 msgstr "Prospek yang Dikonversi"
@@ -680,32 +680,32 @@ msgid "Change Owner"
 msgstr "Ganti Pemilik"
 
 msgid "Lead not found or no longer exists."
-msgstr "Timbal tidak ditemukan atau sudah tidak ada lagi."
+msgstr "Prospek tidak ditemukan atau sudah tidak ada lagi."
 
 msgid "convert this lead"
-msgstr "mengonversi petunjuk ini"
+msgstr "mengonversi prospek ini"
 
 msgid "create an account"
 msgstr "membuat akun"
 
 msgid "link the selected account"
-msgstr "tautkan akun yang dipilih"
+msgstr "menautkan akun yang dipilih"
 
 msgid "create a contact"
 msgstr "membuat kontak"
 
 msgid "link the selected contact"
-msgstr "menghubungkan kontak yang dipilih"
+msgstr "menautkan kontak yang dipilih"
 
 msgid "create an opportunity"
-msgstr "menciptakan peluang"
+msgstr "membuat peluang"
 
 msgid "link the selected opportunity"
-msgstr "menghubungkan peluang yang dipilih"
+msgstr "menautkan peluang yang dipilih"
 
 #, python-format
 msgid "You don't have permission to %(actions)s."
-msgstr "Anda tidak memiliki izin untuk%(actions)s."
+msgstr "Anda tidak memiliki izin untuk %(actions)s."
 
 msgid "Define the stages a lead moves through in your pipeline."
 msgstr "Tentukan tahapan yang dilalui prospek dalam saluran Anda."

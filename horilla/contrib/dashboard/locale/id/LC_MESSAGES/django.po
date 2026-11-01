@@ -152,7 +152,7 @@ msgid "Dashboard Name"
 msgstr "Nama Dasbor"
 
 msgid "Is Default"
-msgstr "Apakah Bawaan"
+msgstr "Bawaan"
 
 msgid "Charts"
 msgstr "Grafik"
@@ -188,7 +188,7 @@ msgid "Stacked Horizontal Chart"
 msgstr "Bagan Horisontal Bertumpuk"
 
 msgid "Scatter"
-msgstr "Menyebarkan"
+msgstr "Sebar"
 
 msgid "Heat Map"
 msgstr "Peta Panas"
@@ -294,10 +294,10 @@ msgid "Company Name"
 msgstr "Nama perusahaan"
 
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 msgid "Contact Number"
-msgstr "Nomor Kontak"
+msgstr "Nomor Telepon"
 
 msgid "Summit Logistics"
 msgstr "Logistik KTT"
@@ -345,7 +345,7 @@ msgid "+1 (718) 555-0176"
 msgstr "+1 (718) 555-0176"
 
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 msgid "Change Owner"
 msgstr "Ganti Pemilik"

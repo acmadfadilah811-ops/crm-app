@@ -1,0 +1,14 @@
+{% comment %}
+    Ikon & manifest Star CRM (2026-11-02). Sebelumnya tidak ada <link rel="icon"> sama sekali, sehingga browser
+    mengambil ikon sendiri (gorila Horilla dari /static/favicons) saat halaman ditambahkan ke desktop/layar utama.
+    Dipakai di setiap <head> yang dirender ke pengguna. ?v= memecah cache ikon lama di browser.
+{% endcomment %}
+{% load static %}
+<link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}?v=20261102">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}?v=20261102">
+<link rel="shortcut icon" href="{% static 'favicons/favicon.ico' %}?v=20261102">
+<link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}?v=20261102">
+<link rel="manifest" href="{% static 'favicons/site.webmanifest' %}?v=20261102">
+<meta name="application-name" content="Star CRM">
+<meta name="apple-mobile-web-app-title" content="Star CRM">
+<meta name="theme-color" content="#ffffff">

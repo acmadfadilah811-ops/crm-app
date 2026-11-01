@@ -1,0 +1,16 @@
+{
+  "name": "Star CRM",
+  "short_name": "Star CRM",
+  "description": "Star CRM - Star Photo & Advertising",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    { "src": "/static/favicons/android-chrome-192x192.png?v=20261102", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/static/favicons/android-chrome-512x512.png?v=20261102", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/static/favicons/maskable-192x192.png?v=20261102", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/static/favicons/maskable-512x512.png?v=20261102", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
