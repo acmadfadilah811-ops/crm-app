@@ -131,4 +131,6 @@ class KartuKpiSayaTests(TestCase):
 
     def test_butuh_login(self):
         self.client.logout()
-        self.assertNotEqual(self.client.get(URL_KARTU, **HTMX).status_code, 200)
+        res = self.client.get(URL_KARTU)  # tanpa HTMX: pengalihan biasa ke halaman login
+        self.assertEqual(res.status_code, 302)
+        self.assertIn("login", res.url)
