@@ -3,8 +3,10 @@
 import datetime
 from unittest import mock
 
+from django.contrib.auth.signals import user_logged_in, user_logged_out
 from django.core.cache import cache
 from django.test import TestCase
+from login_history.models import post_login, post_logout
 
 from horilla.contrib.core.models.user import HorillaUser
 
@@ -71,6 +73,20 @@ class MetrikKpiCrmTests(TestCase):
 
 @mock.patch.dict("os.environ", {"INSIGHTS_BRIDGE_API_KEY": "kunci-benar"})
 class KartuKpiSayaTests(TestCase):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        # django-login-history membaca request.META["HTTP_USER_AGENT"] saat login; klien tes tidak
+        # mengirimnya, jadi sinyalnya dilepas selama kelas ini (pola sama dengan field_requirements/tests.py).
+        user_logged_in.disconnect(post_login)
+        user_logged_out.disconnect(post_logout)
+
+    @classmethod
+    def tearDownClass(cls):
+        user_logged_in.connect(post_login)
+        user_logged_out.connect(post_logout)
+        super().tearDownClass()
+
     def setUp(self):
         cache.clear()
         self.addCleanup(cache.clear)
