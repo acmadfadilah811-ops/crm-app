@@ -279,12 +279,13 @@ class BintangBridgeSaleView(APIView):
 
     def _perbarui_opportunity(self, opportunity, sale, lunas, nomor_wa=""):
         """Order kasir berubah: perbarui nilai selama masih Open; pindah ke Closed Won
-        saat lunas. Opportunity yang sudah Won/Lost tidak diubah lagi."""
+        saat lunas. Nilai dan tahap Opportunity yang sudah Won/Lost tidak diubah lagi,
+        tetapi teks rincian (nama, deskripsi, langkah berikutnya) tetap boleh diperbarui
+        supaya Peluang lama bisa dijelaskan lewat sinkron ulang."""
         from horilla_crm.opportunities import bintang_ringkasan
         from horilla_crm.opportunities.bintang_order import tandai_menang
 
-        if opportunity.stage_id and opportunity.stage.stage_type != 'open':
-            return
+        masih_open = not opportunity.stage_id or opportunity.stage.stage_type == 'open'
         try:
             total = Decimal(str(sale.get('total') or 0))
         except InvalidOperation:
@@ -294,13 +295,16 @@ class BintangBridgeSaleView(APIView):
         if sale.get('items') is not None or sale.get('pelanggan'):
             nomor = str(sale.get('nomor') or opportunity.bintang_sale_id)
             unit = str(sale.get('unit_bisnis') or '').strip() or 'ERP'
-            ringkasan = bintang_ringkasan.susun(sale, nomor, unit, nomor_wa, bool(lunas))
+            sudah_menang = bool(opportunity.stage_id) and opportunity.stage.stage_type == 'won'
+            ringkasan = bintang_ringkasan.susun(sale, nomor, unit, nomor_wa, bool(lunas) or sudah_menang)
             opportunity.name = ringkasan['name']
             opportunity.description = ringkasan['description']
             opportunity.next_step = ringkasan['next_step']
             if ringkasan.get('quantity') is not None:
                 opportunity.quantity = ringkasan['quantity']
             opportunity.save()
+        if not masih_open:
+            return
         if total and opportunity.amount != total:
             opportunity.amount = total
             opportunity.expected_revenue = total * (opportunity.probability or 0) / 100

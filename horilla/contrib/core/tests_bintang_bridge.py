@@ -308,6 +308,32 @@ class BintangBridgePeluangJelasTests(BintangBridgeSaleTests):
         self.assertIn("Rincian pesanan:", opp.description)
         self.assertEqual(opp.name, "Dinda Foto - StarFoto POS-ORD-JELAS")
 
+    def test_peluang_lama_closed_won_dijelaskan_lewat_kirim_ulang_tanpa_ubah_nilai_dan_tahap(self):
+        # Peluang lama: dibuat tanpa rincian dan langsung Closed Won (alur POS lama).
+        self._post({
+            "nomor_wa": "6281300000009", "nama": "Dinda Foto",
+            "sale": {"id": "possale:77", "nomor": "POS-2026110200001-AB12CD", "total": 90000, "tanggal": "2026-11-01"},
+        })
+        opp = Opportunity.objects.get(bintang_sale_id="possale:77")
+        self.assertEqual(opp.name, "Penjualan ERP POS-2026110200001-AB12CD")
+        self.assertEqual(opp.stage_id, self.stage_won.id)
+        # Kirim ulang dengan rincian (total berbeda sengaja: nilai Won tidak boleh berubah).
+        self._post({
+            "nomor_wa": "6281300000009", "nama": "Dinda Foto",
+            "sale": {
+                "id": "possale:77", "nomor": "POS-2026110200001-AB12CD", "total": 95000, "lunas": True,
+                "unit_bisnis": "StarFoto", "pelanggan": "Dinda Foto",
+                "items": [{"nama": "Cetak Foto 4R", "qty": 9, "subtotal": 90000}],
+            },
+        })
+        opp.refresh_from_db()
+        self.assertEqual(opp.name, "Dinda Foto - StarFoto POS-2026110200001-AB12CD")
+        self.assertEqual(opp.next_step, "Lunas - tidak ada tagihan tersisa")
+        self.assertIn("- Cetak Foto 4R x 9 = Rp. 90.000", opp.description)
+        self.assertEqual(float(opp.amount), 90000.0)
+        self.assertEqual(opp.stage_id, self.stage_won.id)
+        self.assertEqual(Opportunity.objects.count(), 1)
+
 
 class BintangRingkasanTests(TestCase):
     def test_rupiah_dan_normalisasi(self):
