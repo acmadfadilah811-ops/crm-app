@@ -187,3 +187,45 @@ class InsightsCampaignsView(APIView):
                 "average_response_rate": avg_response_rate,
             }
         )
+
+
+class InsightsMetrikKpiView(APIView):
+    """GET /api/insights/crm/metrik-kpi/?email=...&dari=YYYY-MM-DD&sampai=YYYY-MM-DD
+
+    Capaian CRM satu karyawan untuk KPI/OKR otomatis di HR (2026-11-02):
+    peluang_menang = jumlah peluang tahap menang milik karyawan itu yang ditutup di periode;
+    omzet_menang = jumlah nilainya. Tanggal tutup = close_date, atau tanggal perubahan terakhir
+    bila close_date kosong."""
+
+    permission_classes = [AllowAny]
+    throttle_classes = [InsightsBridgeThrottle]
+
+    def get(self, request):
+        auth_error = _check_insights_api_key(request)
+        if auth_error:
+            return auth_error
+
+        email = (request.query_params.get("email") or "").strip()
+        try:
+            dari = datetime.date.fromisoformat(request.query_params.get("dari", ""))
+            sampai = datetime.date.fromisoformat(request.query_params.get("sampai", ""))
+        except ValueError:
+            return Response({"error": "dari dan sampai wajib tanggal ISO."}, status=status.HTTP_400_BAD_REQUEST)
+        if not email or sampai < dari:
+            return Response({"error": "email wajib dan sampai tidak boleh sebelum dari."}, status=status.HTTP_400_BAD_REQUEST)
+
+        from django.db.models import Count, Q
+
+        from horilla_crm.opportunities.models import Opportunity
+
+        menang = Opportunity.objects.filter(owner__email__iexact=email, stage__stage_type="won").filter(
+            Q(close_date__range=(dari, sampai))
+            | Q(close_date__isnull=True, updated_at__date__range=(dari, sampai))
+        )
+        hasil = menang.aggregate(jumlah=Count("id"), nilai=Sum("amount"))
+        return Response(
+            {
+                "peluang_menang": hasil["jumlah"] or 0,
+                "omzet_menang": int(hasil["nilai"] or 0),
+            }
+        )

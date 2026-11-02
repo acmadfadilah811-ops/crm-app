@@ -12,6 +12,13 @@
         class="flex-[1_0] transition-all duration-300 ease-in-out pt-0 overflow-hidden overflow-y-auto h-[90vh]"
     >
         <div class="p-2 sm:p-5" id="default-home-view">
+            <div
+                id="kpi-saya"
+                class="mb-4"
+                hx-get="{% url 'dashboard:kpi_saya' %}"
+                hx-trigger="load, every 30s"
+                hx-swap="innerHTML"
+            ></div>
             <div class="pb-6">
                 <div class="flex flex-wrap justify-between gap-2 mb-2 items-center">
                     <h1 class="text-xl font-bold text-gray-800">

@@ -5,12 +5,14 @@ from horilla.urls import path
 
 # Local imports
 from . import views
+from .views.kpi_saya import KpiSayaView
 
 app_name = "dashboard"
 
 urlpatterns = [
     # Define your URL patterns here
     path("", views.HomePageView.as_view(), name="home_view"),
+    path("kpi-saya/", KpiSayaView.as_view(), name="kpi_saya"),
     path(
         "dashboard-list-view/",
         views.DashboardListView.as_view(),

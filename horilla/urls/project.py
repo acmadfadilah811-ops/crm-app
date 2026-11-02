@@ -33,6 +33,7 @@ from horilla.contrib.core.views.hr_foto import HRBridgeFotoView
 from horilla.contrib.core.views.hr_sandi import HRBridgeSandiView
 from horilla.contrib.core.views.hr_organisasi import HROrganisasiView
 from horilla.contrib.core.views.insights_bridge import (
+    InsightsMetrikKpiView,
     InsightsCampaignsView,
     InsightsLeadsView,
     InsightsPipelineView,
@@ -75,6 +76,7 @@ urlpatterns = [
     path("api/insights/crm/leads/", InsightsLeadsView.as_view(), name="insights-crm-leads"),
     path("api/insights/crm/pipeline/", InsightsPipelineView.as_view(), name="insights-crm-pipeline"),
     path("api/insights/crm/campaigns/", InsightsCampaignsView.as_view(), name="insights-crm-campaigns"),
+    path("api/insights/crm/metrik-kpi/", InsightsMetrikKpiView.as_view(), name="insights-crm-metrik-kpi"),
 ]
 
 if settings.DEBUG:

@@ -1,0 +1,45 @@
+{% load i18n %}
+{% comment %}
+  Isi kartu KPI Saya. Dimuat lewat HTMX dari beranda dan disegarkan tiap 30 detik.
+  Warna dibatasi netral; bilah progres memakai style langsung supaya tidak bergantung build Tailwind.
+{% endcomment %}
+{% if data and data.objektif %}
+    <div class="border border-gray-200 rounded-md bg-white p-4">
+        <div class="flex items-center justify-between mb-3">
+            <h2 class="text-sm font-bold text-gray-800">KPI Saya</h2>
+            <span class="text-xs text-gray-500">
+                {% if data.ringkasan.rata_rata_progres is not None %}Rata-rata {{ data.ringkasan.rata_rata_progres }}%{% endif %}
+            </span>
+        </div>
+        {% for obj in data.objektif %}
+            <div class="{% if not forloop.first %}mt-4 pt-4 border-t border-gray-100{% endif %}">
+                <div class="flex items-center justify-between gap-3">
+                    <p class="text-sm font-semibold text-gray-800">{{ obj.judul }}</p>
+                    <span class="text-sm font-bold text-gray-800">{{ obj.progres }}%</span>
+                </div>
+                {% if obj.mulai and obj.selesai %}
+                    <p class="text-xs text-gray-500">{{ obj.mulai }} s/d {{ obj.selesai }}</p>
+                {% endif %}
+                <div class="mt-2 h-2 rounded-full bg-gray-200">
+                    <div class="h-2 rounded-full" style="width: {{ obj.progres }}%; background: #334155; max-width: 100%;"></div>
+                </div>
+                {% for kr in obj.key_results %}
+                    <div class="mt-3">
+                        <div class="flex items-center justify-between gap-3 text-xs text-gray-700">
+                            <span>{{ kr.judul }}{% if kr.otomatis %} <span class="text-gray-400">(otomatis)</span>{% endif %}</span>
+                            <span class="font-semibold">{{ kr.capaian }} / {{ kr.target }}{% if kr.satuan and kr.satuan != "#" %} {{ kr.satuan }}{% endif %}</span>
+                        </div>
+                        <div class="mt-1 h-1.5 rounded-full bg-gray-100">
+                            <div class="h-1.5 rounded-full" style="width: {{ kr.progres }}%; background: #64748b; max-width: 100%;"></div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+        <p class="mt-3 text-[11px] text-gray-400">Diperbarui otomatis. Target diatur manager di HR.</p>
+    </div>
+{% elif pesan %}
+    <div class="border border-gray-200 rounded-md bg-white p-4 text-xs text-gray-500">KPI Saya: {{ pesan }}</div>
+{% elif data %}
+    <div class="border border-gray-200 rounded-md bg-white p-4 text-xs text-gray-500">KPI Saya: belum ada target KPI/OKR untuk Anda. Manager mengisinya di HR.</div>
+{% endif %}
