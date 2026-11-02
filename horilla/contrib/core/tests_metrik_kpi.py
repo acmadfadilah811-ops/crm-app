@@ -6,9 +6,13 @@ from unittest import mock
 from django.contrib.auth.signals import user_logged_in, user_logged_out
 from django.core.cache import cache
 from django.test import TestCase
+from django.urls import reverse
 from login_history.models import post_login, post_logout
 
 from horilla.contrib.core.models.user import HorillaUser
+
+
+URL_KARTU = reverse("dashboard:kpi_saya")  # /dashboard/kpi-saya/ (app dashboard dipasang dengan awalan dashboard/)
 
 
 def _owner(username):
@@ -111,7 +115,7 @@ class KartuKpiSayaTests(TestCase):
             }],
         }
         with mock.patch("horilla.contrib.dashboard.views.kpi_saya.requests.get", return_value=self._respons(data=data)) as get:
-            res = self.client.get("/kpi-saya/")
+            res = self.client.get(URL_KARTU)
         self.assertEqual(res.status_code, 200)
         isi = res.content.decode()
         self.assertIn("Target November", isi)
@@ -120,9 +124,9 @@ class KartuKpiSayaTests(TestCase):
 
     def test_karyawan_hr_tidak_ditemukan(self):
         with mock.patch("horilla.contrib.dashboard.views.kpi_saya.requests.get", return_value=self._respons(404)):
-            res = self.client.get("/kpi-saya/")
+            res = self.client.get(URL_KARTU)
         self.assertIn("belum terhubung", res.content.decode())
 
     def test_butuh_login(self):
         self.client.logout()
-        self.assertNotEqual(self.client.get("/kpi-saya/").status_code, 200)
+        self.assertNotEqual(self.client.get(URL_KARTU).status_code, 200)
