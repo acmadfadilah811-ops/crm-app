@@ -315,7 +315,7 @@ class BintangBridgePeluangJelasTests(BintangBridgeSaleTests):
             "sale": {"id": "possale:77", "nomor": "POS-2026110200001-AB12CD", "total": 90000, "tanggal": "2026-11-01"},
         })
         opp = Opportunity.objects.get(bintang_sale_id="possale:77")
-        self.assertEqual(opp.name, "Penjualan ERP POS-2026110200001-AB12CD")
+        self.assertEqual(opp.name, "Penjualan ERP #AB12CD")
         self.assertEqual(opp.stage_id, self.stage_won.id)
         # Kirim ulang dengan rincian (total berbeda sengaja: nilai Won tidak boleh berubah).
         self._post({
@@ -327,7 +327,7 @@ class BintangBridgePeluangJelasTests(BintangBridgeSaleTests):
             },
         })
         opp.refresh_from_db()
-        self.assertEqual(opp.name, "Dinda Foto - StarFoto POS-2026110200001-AB12CD")
+        self.assertEqual(opp.name, "Dinda Foto - StarFoto #AB12CD")
         self.assertEqual(opp.next_step, "Lunas - tidak ada tagihan tersisa")
         self.assertIn("- Cetak Foto 4R x 9 = Rp. 90.000", opp.description)
         self.assertEqual(float(opp.amount), 90000.0)
@@ -345,3 +345,20 @@ class BintangRingkasanTests(TestCase):
         self.assertEqual(normalisasi_nomor("0812-3456-7890"), "6281234567890")
         self.assertEqual(normalisasi_nomor("+62 812 3456 7890"), "6281234567890")
         self.assertEqual(normalisasi_nomor("81234567890"), "6281234567890")
+
+
+class BintangKodePendekTests(TestCase):
+    def test_nomor_panjang_dipendekkan_tapi_nomor_lain_dibiarkan(self):
+        from horilla_crm.opportunities.bintang_ringkasan import kode_pendek, nama_peluang
+
+        self.assertEqual(kode_pendek("POS-ORD-1B676123EF9A485C847ACEE12FEEF9F8"), "#1B676123")
+        self.assertEqual(kode_pendek("POS-20261026092908644939-12a80d"), "#12A80D")
+        self.assertEqual(kode_pendek("POS-ORD-ABC123"), "POS-ORD-ABC123")
+        self.assertEqual(kode_pendek("ORD-20261102-AB12"), "ORD-20261102-AB12")
+        self.assertEqual(
+            nama_peluang({"pelanggan": "Rury Eo"}, "POS-ORD-1B676123EF9A485C847ACEE12FEEF9F8", "Star Advertising"),
+            "Rury Eo - Star Advertising #1B676123",
+        )
+        self.assertEqual(
+            nama_peluang({}, "POS-20261026092908644939-12A80D", "ERP"), "Penjualan ERP #12A80D",
+        )

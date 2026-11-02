@@ -5,6 +5,7 @@ tahu siapa pelanggannya, apa yang dibeli, sudah dibayar berapa, dan apa langkah 
 menyusun nama, deskripsi, jumlah barang, dan "langkah berikutnya" dari rincian order yang dikirim ERP
 (blok `sale`). Fungsi murni tanpa akses database supaya mudah diuji."""
 
+import re
 from decimal import Decimal, InvalidOperation
 
 MAKS_DESKRIPSI = 4000
@@ -37,9 +38,26 @@ def jumlah_barang(items):
     return sum((_angka(i.get("qty")) for i in items if isinstance(i, dict)), Decimal("0"))
 
 
+_NOMOR_ORDER_PANJANG = re.compile(r"^POS-ORD-([0-9A-Fa-f]{16,})$")
+_NOMOR_POS_PANJANG = re.compile(r"^POS-\d{10,}-([0-9A-Fa-f]{4,8})$")
+
+
+def kode_pendek(nomor):
+    """Nomor ERP yang panjang (POS-ORD-<32 hex>, POS-<tanggal+jam>-<hex>) dipendekkan untuk NAMA Peluang.
+    Nomor lengkap tetap ada di Deskripsi untuk pencarian. Nomor lain dibiarkan apa adanya."""
+    nomor = str(nomor or "").strip()
+    cocok = _NOMOR_ORDER_PANJANG.match(nomor)
+    if cocok:
+        return "#" + cocok.group(1)[:8].upper()
+    cocok = _NOMOR_POS_PANJANG.match(nomor)
+    if cocok:
+        return "#" + cocok.group(1).upper()
+    return nomor
+
+
 def nama_peluang(sale, nomor, unit):
     pelanggan = str(sale.get("pelanggan") or "").strip()
-    dasar = f"{unit} {nomor}".strip()
+    dasar = f"{unit} {kode_pendek(nomor)}".strip()
     return (f"{pelanggan} - {dasar}" if pelanggan else f"Penjualan {dasar}")[:120]
 
 
