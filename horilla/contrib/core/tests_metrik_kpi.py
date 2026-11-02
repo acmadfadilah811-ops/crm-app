@@ -12,6 +12,8 @@ from login_history.models import post_login, post_logout
 from horilla.contrib.core.models.user import HorillaUser
 
 
+# Kartu dimuat lewat HTMX; EnsureSectionMiddleware mengalihkan GET biasa yang tanpa ?section=.
+HTMX = {"HTTP_HX_REQUEST": "true"}
 URL_KARTU = reverse("dashboard:kpi_saya")  # /dashboard/kpi-saya/ (app dashboard dipasang dengan awalan dashboard/)
 
 
@@ -115,7 +117,7 @@ class KartuKpiSayaTests(TestCase):
             }],
         }
         with mock.patch("horilla.contrib.dashboard.views.kpi_saya.requests.get", return_value=self._respons(data=data)) as get:
-            res = self.client.get(URL_KARTU)
+            res = self.client.get(URL_KARTU, **HTMX)
         self.assertEqual(res.status_code, 200)
         isi = res.content.decode()
         self.assertIn("Target November", isi)
@@ -124,9 +126,9 @@ class KartuKpiSayaTests(TestCase):
 
     def test_karyawan_hr_tidak_ditemukan(self):
         with mock.patch("horilla.contrib.dashboard.views.kpi_saya.requests.get", return_value=self._respons(404)):
-            res = self.client.get(URL_KARTU)
+            res = self.client.get(URL_KARTU, **HTMX)
         self.assertIn("belum terhubung", res.content.decode())
 
     def test_butuh_login(self):
         self.client.logout()
-        self.assertNotEqual(self.client.get(URL_KARTU).status_code, 200)
+        self.assertNotEqual(self.client.get(URL_KARTU, **HTMX).status_code, 200)
