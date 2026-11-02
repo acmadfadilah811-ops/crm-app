@@ -316,6 +316,8 @@ class BintangBridgePeluangJelasTests(BintangBridgeSaleTests):
         })
         opp = Opportunity.objects.get(bintang_sale_id="possale:77")
         self.assertEqual(opp.name, "Penjualan ERP #AB12CD")
+        # Dibuat sebelum sumber "Kasir / Toko" ada: setara peluang lama yang bersumber "Lainnya".
+        Opportunity.objects.filter(pk=opp.pk).update(lead_source="other")
         self.assertEqual(opp.stage_id, self.stage_won.id)
         # Kirim ulang dengan rincian (total berbeda sengaja: nilai Won tidak boleh berubah).
         self._post({
@@ -329,6 +331,7 @@ class BintangBridgePeluangJelasTests(BintangBridgeSaleTests):
         opp.refresh_from_db()
         self.assertEqual(opp.name, "Dinda Foto - StarFoto #AB12CD")
         self.assertEqual(opp.next_step, "Lunas - tidak ada tagihan tersisa")
+        self.assertEqual(opp.lead_source, "kasir")
         self.assertIn("- Cetak Foto 4R x 9 = Rp. 90.000", opp.description)
         self.assertEqual(float(opp.amount), 90000.0)
         self.assertEqual(opp.stage_id, self.stage_won.id)

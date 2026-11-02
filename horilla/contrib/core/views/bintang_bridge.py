@@ -300,6 +300,9 @@ class BintangBridgeSaleView(APIView):
             opportunity.name = ringkasan['name']
             opportunity.description = ringkasan['description']
             opportunity.next_step = ringkasan['next_step']
+            # Peluang lama dibuat sebelum sumber "Kasir / Toko" ada (bawaan "Lainnya"); isi saat dijelaskan ulang.
+            if opportunity.lead_source in (None, '', 'other'):
+                opportunity.lead_source = 'kasir'
             if ringkasan.get('quantity') is not None:
                 opportunity.quantity = ringkasan['quantity']
             opportunity.save()
