@@ -15,7 +15,9 @@ ZOOM_API_TIMEOUT = (5, 15)
 
 
 def _get_redirect_uri(request):
-    return request.build_absolute_uri("/meeting/zoom/callback/")
+    from . import public_absolute_uri
+
+    return public_absolute_uri(request, "/meeting/zoom/callback/")
 
 
 def get_or_create_config(user, company=None):
