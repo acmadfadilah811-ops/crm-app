@@ -18,6 +18,7 @@ from datetime import datetime, timedelta
 from datetime import timezone as dt_timezone
 
 # Third-party imports (Django)
+from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db import IntegrityError
@@ -48,6 +49,27 @@ from .service import (
 logger = logging.getLogger(__name__)
 
 _SETTINGS_TEMPLATE = "google_calendar/google_calendar_settings.html"
+
+
+def _public_absolute_uri(request, url_name):
+    """
+    Alamat lengkap publik untuk sebuah URL bernama (callback OAuth, webhook).
+
+    CRM berjalan di belakang proxy HTTPS dan Django tidak memakai X-Forwarded-Proto,
+    sehingga request.build_absolute_uri() menghasilkan http://. Google menolak itu dengan
+    redirect_uri_mismatch karena yang didaftarkan di klien OAuth adalah https://.
+    Skema dinaikkan ke https bila proxy menandainya, atau bila host-nya domain publik
+    (bukan localhost / alamat lokal) dan DEBUG mati.
+    """
+    uri = request.build_absolute_uri(reverse(url_name))
+    if not uri.startswith("http://"):
+        return uri
+    host = request.get_host().split(":")[0].lower()
+    forwarded = request.headers.get("X-Forwarded-Proto", "").split(",")[0].strip().lower()
+    lokal = host in ("localhost", "0.0.0.0") or host.startswith("127.") or host.endswith(".local")
+    if forwarded == "https" or (not lokal and not settings.DEBUG):
+        return "https://" + uri[len("http://"):]
+    return uri
 
 
 def _get_or_create_config(user):
@@ -88,9 +110,7 @@ class GoogleCalendarSettingsView(LoginRequiredMixin, View):
 
         config = _get_or_create_config(request.user)
         # Compute the exact redirect URI the user should register in Google Cloud Console
-        suggested_redirect_uri = request.build_absolute_uri(
-            reverse_lazy("calendar:google_calendar_callback")
-        )
+        suggested_redirect_uri = _public_absolute_uri(request, "calendar:google_calendar_callback")
         if form is None:
             form = GoogleCredentialsUploadForm(
                 initial={"redirect_uri": config.redirect_uri or suggested_redirect_uri}
@@ -99,9 +119,7 @@ class GoogleCalendarSettingsView(LoginRequiredMixin, View):
             sync_direction_form = GoogleSyncDirectionForm(instance=config)
 
         # Derive webhook URL from the current request — works with dev tunnels without SITE_URL.
-        webhook_url = request.build_absolute_uri(
-            reverse("calendar:google_calendar_webhook")
-        )
+        webhook_url = _public_absolute_uri(request, "calendar:google_calendar_webhook")
         can_register_webhook = webhook_url.startswith("https://")
         watch_active = bool(
             config.watch_channel_id
@@ -239,9 +257,7 @@ class GoogleCalendarAuthorizeView(LoginRequiredMixin, View):
 
         # Use the stored redirect_uri; fall back to the auto-computed one so
         # the flow still works even if the user skipped filling in the field.
-        redirect_uri = config.redirect_uri or request.build_absolute_uri(
-            reverse_lazy("calendar:google_calendar_callback")
-        )
+        redirect_uri = config.redirect_uri or _public_absolute_uri(request, "calendar:google_calendar_callback")
 
         oauth = OAuth2Session(
             client_id=config.get_client_id(),
@@ -304,9 +320,7 @@ class GoogleCalendarCallbackView(View):
         authorization_response = request.build_absolute_uri()
 
         # The redirect_uri in fetch_token MUST match what was used in the authorize step
-        redirect_uri = config.redirect_uri or request.build_absolute_uri(
-            reverse_lazy("calendar:google_calendar_callback")
-        )
+        redirect_uri = config.redirect_uri or _public_absolute_uri(request, "calendar:google_calendar_callback")
 
         oauth = OAuth2Session(
             client_id=config.get_client_id(),
@@ -350,9 +364,7 @@ class GoogleCalendarCallbackView(View):
         # Derive the webhook URL from the current request so dev tunnels work without SITE_URL.
         # Never let watch failure break the OAuth flow — polling is the fallback.
         try:
-            webhook_url = request.build_absolute_uri(
-                reverse("calendar:google_calendar_webhook")
-            )
+            webhook_url = _public_absolute_uri(request, "calendar:google_calendar_webhook")
             create_watch_channel(config, webhook_url=webhook_url)
         except Exception as exc:
             logger.warning(
@@ -450,9 +462,7 @@ class GoogleCalendarRegisterWebhookView(LoginRequiredMixin, View):
             logger.warning("stop_watch_channel failed for %s: %s", config.user, exc)
 
         try:
-            webhook_url = request.build_absolute_uri(
-                reverse("calendar:google_calendar_webhook")
-            )
+            webhook_url = _public_absolute_uri(request, "calendar:google_calendar_webhook")
             result = create_watch_channel(config, webhook_url=webhook_url)
             if result:
                 messages.success(
@@ -603,9 +613,7 @@ class GoogleCalendarWebhookView(View):
             )
             config_pk = config.pk
             # Capture webhook URL now (request not available inside the thread)
-            webhook_url_for_renewal = request.build_absolute_uri(
-                reverse("calendar:google_calendar_webhook")
-            )
+            webhook_url_for_renewal = _public_absolute_uri(request, "calendar:google_calendar_webhook")
 
             def _do_sync():
                 from horilla.contrib.activity.models import Activity
