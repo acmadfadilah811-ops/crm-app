@@ -18,7 +18,6 @@ from datetime import datetime, timedelta
 from datetime import timezone as dt_timezone
 
 # Third-party imports (Django)
-from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db import IntegrityError
@@ -59,7 +58,7 @@ def _public_absolute_uri(request, url_name):
     sehingga request.build_absolute_uri() menghasilkan http://. Google menolak itu dengan
     redirect_uri_mismatch karena yang didaftarkan di klien OAuth adalah https://.
     Skema dinaikkan ke https bila proxy menandainya, atau bila host-nya domain publik
-    (bukan localhost / alamat lokal) dan DEBUG mati.
+    (bukan localhost / alamat lokal). Terowongan pengembangan (ngrok dan sejenisnya) juga https.
     """
     uri = request.build_absolute_uri(reverse(url_name))
     if not uri.startswith("http://"):
@@ -67,9 +66,28 @@ def _public_absolute_uri(request, url_name):
     host = request.get_host().split(":")[0].lower()
     forwarded = request.headers.get("X-Forwarded-Proto", "").split(",")[0].strip().lower()
     lokal = host in ("localhost", "0.0.0.0") or host.startswith("127.") or host.endswith(".local")
-    if forwarded == "https" or (not lokal and not settings.DEBUG):
+    if forwarded == "https" or not lokal:
         return "https://" + uri[len("http://"):]
     return uri
+
+
+def _redirect_uri_for(config, request):
+    """
+    Alamat pengalihan OAuth yang dikirim ke Google dan ke penukaran token (harus identik).
+
+    Alamat tersimpan di config.redirect_uri diutamakan, KECUALI bila itu versi http:// lama dari
+    alamat publik yang sama (form unggah kredensial versi lama menyimpan alamat http itu).
+    """
+    publik = _public_absolute_uri(request, "calendar:google_calendar_callback")
+    tersimpan = config.redirect_uri
+    if (
+        tersimpan
+        and tersimpan.startswith("http://")
+        and publik.startswith("https://")
+        and tersimpan[len("http://"):] == publik[len("https://"):]
+    ):
+        return publik
+    return tersimpan or publik
 
 
 def _get_or_create_config(user):
@@ -257,7 +275,7 @@ class GoogleCalendarAuthorizeView(LoginRequiredMixin, View):
 
         # Use the stored redirect_uri; fall back to the auto-computed one so
         # the flow still works even if the user skipped filling in the field.
-        redirect_uri = config.redirect_uri or _public_absolute_uri(request, "calendar:google_calendar_callback")
+        redirect_uri = _redirect_uri_for(config, request)
 
         oauth = OAuth2Session(
             client_id=config.get_client_id(),
@@ -320,7 +338,7 @@ class GoogleCalendarCallbackView(View):
         authorization_response = request.build_absolute_uri()
 
         # The redirect_uri in fetch_token MUST match what was used in the authorize step
-        redirect_uri = config.redirect_uri or _public_absolute_uri(request, "calendar:google_calendar_callback")
+        redirect_uri = _redirect_uri_for(config, request)
 
         oauth = OAuth2Session(
             client_id=config.get_client_id(),

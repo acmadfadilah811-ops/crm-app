@@ -2,7 +2,7 @@
 
 from django.test import RequestFactory, SimpleTestCase, override_settings
 
-from horilla.contrib.calendar.google_calendar.views import _public_absolute_uri
+from horilla.contrib.calendar.google_calendar.views import _public_absolute_uri, _redirect_uri_for
 from horilla.contrib.calendar.models import GoogleCalendarConfig
 
 PILIHAN_PENGGUNA = {"web": {"client_id": "id-pengguna", "client_secret": "rahasia-pengguna"}}
@@ -62,5 +62,18 @@ class AlamatPublikGoogleTests(SimpleTestCase):
         self.assertTrue(self._alamat("localhost:8000").startswith("http://localhost:8000/"))
 
     @override_settings(DEBUG=True)
-    def test_mode_debug_di_domain_publik_tetap_http(self):
-        self.assertTrue(self._alamat("dev.example.com").startswith("http://"))
+    def test_mode_debug_di_domain_publik_tetap_https(self):
+        self.assertTrue(self._alamat("dev.example.com").startswith("https://"))
+
+    def test_alamat_http_lama_tersimpan_dinaikkan(self):
+        request = RequestFactory().get("/", HTTP_HOST="crm.starphotoadvertising.com")
+        cfg = GoogleCalendarConfig(redirect_uri="http://crm.starphotoadvertising.com/calendar/google-calendar/callback/")
+        self.assertEqual(
+            _redirect_uri_for(cfg, request),
+            "https://crm.starphotoadvertising.com/calendar/google-calendar/callback/",
+        )
+
+    def test_alamat_tersimpan_milik_pengguna_lain_tetap_dipakai(self):
+        request = RequestFactory().get("/", HTTP_HOST="crm.starphotoadvertising.com")
+        cfg = GoogleCalendarConfig(redirect_uri="https://lain.example.com/callback/")
+        self.assertEqual(_redirect_uri_for(cfg, request), "https://lain.example.com/callback/")
