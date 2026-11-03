@@ -8,7 +8,9 @@ __release_date__ = ""
 __description__ = _(
     "Core system providing authentication, configuration, utilities, and platform-level services."
 )
-__icon__ = "assets/icons/logo.png"
+# Ikon kartu "Core System" di Pengaturan > Tentang Sistem: sebelumnya logo gorila Horilla,
+# diganti logo bintang yang sama dengan logo dalam aplikasi (lihat horilla_crm/__branding__.py).
+__icon__ = "assets/img/favicon-star.png"
 
 __1_13_8__ = _(
     "Generics: granted (non-owner) record access across list, detail, kanban, search, and "
