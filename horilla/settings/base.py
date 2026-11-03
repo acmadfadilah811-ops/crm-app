@@ -48,6 +48,10 @@ CSRF_TRUSTED_ORIGINS = env("CSRF_TRUSTED_ORIGINS")
 CSRF_FAILURE_VIEW = "horilla.contrib.core.views.error_pages.csrf_failure"
 # Public-facing HTTPS URL for Google Calendar webhook push notifications.
 SITE_URL = env("SITE_URL")
+# Kredensial OAuth Google bersama untuk Google Kalender (2026-11-03). Bila keduanya diisi, pengguna
+# tinggal klik "Hubungkan akun Google" tanpa mengunggah client_secret_*.json sendiri.
+GOOGLE_CALENDAR_CLIENT_ID = env("GOOGLE_CALENDAR_CLIENT_ID", default="")
+GOOGLE_CALENDAR_CLIENT_SECRET = env("GOOGLE_CALENDAR_CLIENT_SECRET", default="")
 
 # -----------------------------------------------------------------------------
 #  Installed Apps Organization

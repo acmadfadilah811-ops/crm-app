@@ -317,17 +317,33 @@ class GoogleCalendarConfig(HorillaCoreModel):
     def __str__(self):
         return f"{self.user} — {self.google_email or 'not connected'}"
 
+    @staticmethod
+    def shared_credentials_block():
+        """
+        Kredensial OAuth Google milik perusahaan (satu klien untuk semua pengguna).
+
+        Diisi sekali oleh admin lewat GOOGLE_CALENDAR_CLIENT_ID dan GOOGLE_CALENDAR_CLIENT_SECRET
+        di berkas .env server. Dengan ini pengguna tidak perlu membuat proyek Google Cloud dan
+        mengunggah client_secret_*.json sendiri: cukup klik "Hubungkan akun Google".
+        """
+        client_id = (getattr(settings, "GOOGLE_CALENDAR_CLIENT_ID", "") or "").strip()
+        client_secret = (getattr(settings, "GOOGLE_CALENDAR_CLIENT_SECRET", "") or "").strip()
+        if client_id and client_secret:
+            return {"client_id": client_id, "client_secret": client_secret}
+        return {}
+
     def is_configured(self):
-        """True if the user has uploaded their credentials JSON."""
-        return bool(self.credentials_json)
+        """True bila pengguna mengunggah kredensial sendiri atau perusahaan menyediakan kredensial bersama."""
+        return bool(self.credentials_json) or bool(self.shared_credentials_block())
 
     def is_connected(self):
         """True if the user has completed OAuth and holds an access token."""
         return bool(self.token and self.token.get("access_token"))
 
     def _web_block(self):
+        # Kredensial unggahan pengguna diutamakan; bila tidak ada, pakai kredensial bersama perusahaan.
         creds = self.credentials_json or {}
-        return creds.get("web") or creds.get("installed") or {}
+        return creds.get("web") or creds.get("installed") or self.shared_credentials_block()
 
     def get_client_id(self):
         """OAuth client identifier from uploaded credentials."""
